@@ -2,9 +2,9 @@
 
 Small script to extract detailed system data based on user-agent string
 
-Author	: Faisalman <<fyzlman@gmail.com>>
-Source	: http://github.com/faisalman/sniff-js
-License	: GPL2
+* Author	: Faisalman <<fyzlman@gmail.com>>
+* Source	: http://github.com/faisalman/sniff-js
+* License	: GPL2
 
 ## Features
 
