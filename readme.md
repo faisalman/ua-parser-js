@@ -1,9 +1,9 @@
-# Sniff-js
+# ua-parser-js
 
 Small script to extract detailed system data based on user-agent string
 
 * Author	: Faisalman <<fyzlman@gmail.com>>
-* Source	: http://github.com/faisalman/sniff-js
+* Source	: http://github.com/faisalman/ua-parser-js
 * License	: GPL2
 
 ## Features
@@ -13,19 +13,19 @@ Get detailed type and version of web browser, layout engine, and operating syste
 ## Example
 
 ```html
-<script type="text/javascript" src="sniff.js"></script>
+<script type="text/javascript" src="ua-parser.js"></script>
 <script type="text/javascript">
 ```
 ```js
-var s = new sniff();
-var browser = s.getBrowser();
+var parser  = new uaparser(); // by default it takes ua string from current window.navigator
+var browser = parser.getBrowser();
 console.log(browser); // will print object contains current browser info
 
 // testing custom user-agent string
-s.ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
-browser = s.getBrowser();
+parser.ua   = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
+browser     = parser.getBrowser();
 console.log(browser.name); // will print "Chromium"
-console.log(s.getOS()); // will print object {name: "Ubuntu", version: "11.10"}
+console.log(parser.getOS()); // will print object {name: "Ubuntu", version: "11.10"}
 ```
 ```html
 </script>
