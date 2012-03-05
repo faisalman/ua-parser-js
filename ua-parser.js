@@ -152,7 +152,7 @@ function uaparser(uastring){
             /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
             ], [['name', /.+/g, 'iOS'], ['version', /_/g, '.']], [
             
-            /(mac)\s([\w\s\.]+)/i,                                              // Mac
+            /(mac\sos)\sx\s([\w\s\.]+)/i,                                       // Mac OS
                                         
             // Other
             /(unix|minix|beos)[\/\s]?()*/i
