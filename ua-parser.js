@@ -52,7 +52,7 @@ function uaparser(uastring){
     };
 
     var winMap  = function(){
-        switch(arguments[1]){
+        switch(arguments[1].toLowerCase()){
             case 'nt 5.0':
                 return '2000';
             case 'nt 5.1':
