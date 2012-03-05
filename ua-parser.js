@@ -121,7 +121,7 @@ function uaparser(uastring){
         return regxMap(this.ua, [
 
             // Windows based
-            /(windows)\s?([\w\.\s]+)*/i,                                        // Windows
+            /(windows)\s+([\w\.\s]+)*/i,                                        // Windows
             ], ['name', ['version', /(nt\s[\d\.]+)/gi, winMap]], [
             
             // Mobile/Embedded OS
