@@ -7,7 +7,7 @@
  * Licensed under GPL2 http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-function uaparser(){
+function uaparser(uastring){
 
     // regexp mapper
     var regxMap = function(ua){
@@ -69,7 +69,7 @@ function uaparser(){
         };
     };
     
-    this.ua = window.navigator.userAgent;
+    this.ua = uastring || window.navigator.userAgent;
     
     this.getBrowser = function(){
     
