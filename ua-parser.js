@@ -122,7 +122,7 @@ function uaparser(uastring){
 
             // Windows based
             /(windows)\s?([\w\.\s]+)*/i,                                        // Windows
-            ], ['name', ['version', /(nt\s[\d\.]+)/gi, this.winMap]], [
+            ], ['name', ['version', /(nt\s[\d\.]+)/gi, winMap]], [
             
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
