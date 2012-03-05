@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <title>UA-Parser.js</title>
+    <meta name="author" content="Faisalman" />
+    <meta name="description" content="Small script to extract system info (browser, engine, os) from user-agent string" />
+    <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font: 14px/20px Helvetica, Ubuntu, Arial, sans-serif;
+        background: #f0f0f0;
+      }
+      body {
+        background: #fff;
+        margin: 0 auto;
+        padding: 40px 20px;
+        width: 960px;
+        text-align: center;
+      }
+      header, section, footer {
+        padding: 40px 0 0;
+      }
+      pre {
+        margin: 0 0 20px;
+        padding: 10px;
+        background: #ccc;
+        white-space: pre-wrap;
+        overflow: auto;
+      }
+      table {
+        border-spacing: 0;
+        margin: auto;
+        width: 100%;
+      }
+      th, td {
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        min-width: 100px;
+        padding: 20px;
+        text-align: center;
+      }
+      tr:first-child th:first-child {
+        border: 0;
+      }
+      tr:last-child th, tr:last-child td {
+        border-bottom: 1px solid #ccc;
+      }
+      th:last-child, td:last-child {
+        border-right: 1px solid #ccc;
+      }
+      select, input {
+        width: 100%;
+      }
+      p {
+        margin: 10px 0;
+      }
+    </style>
+    <script src="ua-parser.js"></script>
+    <script src="ua-list-example.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>UA-Parser.js - JavaScript-based User-Agent Parser</h1>
+    </header>
+    <section>
+      <pre>
+      </pre>
+      <table>
+        <tr>
+          <th></th>
+          <th>Browser</th>
+          <th>Engine</th>
+          <th>OS</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+          <th>Version</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <select>
+        <option>Pick a user-agent string to be tested</option>
+      </select>
+      <p>or Enter your user-agent string here to be tested:</p>
+      <input type="text" />
+    </section>
+    <footer>
+      <p>
+        UA-Parser.js &copy; 2012 Faisalman - GPLv2 @ 
+        <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a>
+      </p>
+    </footer>
+    <script>
+      var pre = document.getElementsByTagName('pre')[0];
+      var sel = document.getElementsByTagName('select')[0];
+      var txt = document.getElementsByTagName('input')[0];
+      for(var i = 0; i < uaExampleList.length; i++){
+        var opt = document.createElement('option');
+        opt.innerText = uaExampleList[i];
+        sel.appendChild(opt);
+      }
+      var fillTable = function(uastring){
+        var parser = new uaparser(uastring);
+        var browser = parser.getBrowser();
+        var engine = parser.getEngine();
+        var os = parser.getOS();
+        var tbl = document.getElementsByTagName('td');
+        tbl[0].innerText = browser.name;
+        tbl[1].innerText = engine.name;
+        tbl[2].innerText = os.name;
+        tbl[3].innerText = browser.release;
+        tbl[4].innerText = engine.version;
+        tbl[5].innerText = os.version;
+        pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : parser.ua) + '</strong>';
+      }
+      fillTable();
+      sel.addEventListener('change', function(){
+        fillTable(sel.children[sel.selectedIndex].value);
+      });
+      txt.addEventListener('keydown', function(e){
+        if(e.keyCode == 13){
+          fillTable(this.value);
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>
