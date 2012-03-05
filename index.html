@@ -24,6 +24,9 @@
       header, section, footer {
         padding: 40px 0 0;
       }
+      h1 {
+        margin-bottom: 10px;
+      }
       pre {
         margin: 0 0 20px;
         padding: 10px;
@@ -43,9 +46,6 @@
         padding: 20px;
         text-align: center;
       }
-      tr:first-child th:first-child {
-        border: 0;
-      }
       tr:last-child th, tr:last-child td {
         border-bottom: 1px solid #ccc;
       }
@@ -64,25 +64,23 @@
   </head>
   <body>
     <header>
-      <h1>UA-Parser.js - JavaScript-based User-Agent Parser</h1>
+      <h1>UA-Parser.js</h1>
+      <h2>JavaScript-based User-Agent Parser</h2>
     </header>
     <section>
       <pre>
       </pre>
       <table>
         <tr>
-          <th></th>
           <th>Browser</th>
           <th>Engine</th>
           <th>OS</th>
         </tr>
         <tr>
-          <th>Name</th>
           <td></td>
           <td></td>
           <td></td>
         </tr>
-          <th>Version</th>
           <td></td>
           <td></td>
           <td></td>
@@ -123,7 +121,7 @@
         tbl[3].innerText = browser.release;
         tbl[4].innerText = engine.version;
         tbl[5].innerText = os.version;
-        pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : parser.ua) + '</strong>';
+        pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + '</strong>';
       }
       fillTable();
       sel.addEventListener('change', function(){
