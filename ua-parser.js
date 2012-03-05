@@ -154,7 +154,7 @@ function uaparser(uastring){
             /(mac)\s([\w\s\.]+)/i,                                              // Mac
                                         
             // Other
-            /(unix|minix)[\/\s]?()*/i
+            /(unix|minix|beos)[\/\s]?()*/i
             ], ['name', 'version']);
     };
 };
