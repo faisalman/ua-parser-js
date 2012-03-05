@@ -5,6 +5,7 @@
     <meta name="author" content="Faisalman" />
     <meta name="description" content="Small script to extract system info (browser, engine, os) from user-agent string" />
     <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <style>
       * {
         margin: 0;
@@ -17,16 +18,20 @@
       body {
         background: #fff;
         margin: 0 auto;
-        padding: 20px 20px;
+        padding: 50px 20px 20px;
         width: 960px;
         text-align: center;
       }
       header, section, footer {
-        padding: 40px 0 0;
+        padding: 50px 0 0;
         position: relative;
       }
       h1 {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+        font-size: 4em;
+      }
+      h1, h2, th, .ua {
+        font-family: 'Dancing Script', Helvetica, Ubuntu, Arial, sans-serif;
       }
       pre {
         margin: 0 0 20px;
@@ -39,6 +44,9 @@
         border-spacing: 0;
         margin: auto;
         width: 100%;
+      }
+      th {
+        font-size: 2em;
       }
       th, td {
         border-left: 1px solid #ccc;
@@ -56,11 +64,20 @@
       select, input {
         width: 100%;
       }
+      input {
+        border: 1px solid #ccc;
+        height: 30px;
+        box-shadow: inset 0 0 10px #ccc;
+      }
       hr {
+        border: 0;
         margin: 20px 0;
       }
       p {
         margin: 10px 0;
+      }
+      .ua {
+        font-size: 1.5em;
       }
     </style>
     <script src="ua-parser.js"></script>
@@ -92,22 +109,19 @@
       </table>
     </section>
     <section>
+      <p><span class="ua">Select</span> a user-agent string to be tested:</p>
       <select>
-        <option>Pick a user-agent string to be tested</option>
+        <option>Pick one</option>
       </select>
-      <p>or Enter your user-agent string here to be tested:</p>
+      <p>or <span class="ua">Enter</span> your user-agent string here to be tested:</p>
       <input type="text" />
     </section>
     <footer>
-      <g:plusone size="medium"></g:plusone>
-      <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
       <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlmn">Tweet</a>
       <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-      <a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php" style="position:absolute;top:40px;">Share</a>
-      <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
       <hr />
       <p>
-        UA-Parser.js &copy; 2012 Faisalman - GPLv2 @ 
+        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Download / Fork @
         <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a>
       </p>
     </footer>
@@ -132,7 +146,7 @@
         tbl[3].innerText = browser.release;
         tbl[4].innerText = engine.version;
         tbl[5].innerText = os.version;
-        pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + '</strong>';
+        pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</strong>';
       }
       fillTable();
       sel.addEventListener('change', function(){
