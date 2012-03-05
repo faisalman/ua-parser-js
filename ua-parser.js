@@ -108,7 +108,8 @@ function uaparser(uastring){
         
         return regxMap(this.ua, [
 
-            /(presto|[aple]*webkit|trident)\/([\w\.]+)/i,                       // Presto/Webkit/Trident
+            /(presto)\/([\w\.]+)/i,                                             // Presto
+            /([aple]*webkit|trident)\/([\w\.]+)/i,                              // Webkit/Trident
             /(khtml)\/([\w\.]+)/i                                               // KHTML
             ], ['name', 'version'], [
             
