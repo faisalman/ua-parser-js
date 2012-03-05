@@ -122,12 +122,13 @@ function uaparser(uastring){
         return regxMap(this.ua, [
 
             // Windows based
-            /(windows)\s+([\w\.\s]+)*/i,                                        // Windows
+            /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
             ], ['name', ['version', /(nt\s[\d\.]+)/gi, winMap]], [
             
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
-            /(android|symbianos|symbos|webos|palm\os|qnx)[\/\s]?([\w\.]+)*/i,   // Android/Symbian/WebOS/Palm/QNX
+            /(android|symbianos|symbos|webos|palm\os|qnx|bada|rim\stablet\sos)[\/\s]?([\w\.]+)*/i,   
+                                                                                // Android/Symbian/WebOS/Palm/QNX/Bada/RIM
             /(nintendo)\s([wids]+)/i,                                           // Nintendo Wii/DS
 
             // GNU/Linux based
