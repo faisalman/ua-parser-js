@@ -3,7 +3,7 @@
   <head>
     <title>UA-Parser.js - JavaScript-based User-Agent Parser</title>
     <meta name="author" content="Faisalman" />
-    <meta name="description" content="Small script to extract system info (browser, engine, os) from user-agent string" />
+    <meta name="description" content="A small, quick & dirty script, which aims to extract a long piece of information about the details of the system contained in a user-agent string, into some small yet valuable pieces of commonly needed information such as the name of the browser & operating system along with the version" />
     <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
     <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <style>
@@ -11,9 +11,10 @@
         margin: 0;
         padding: 0;
       }
-      html {
-        font: 14px/20px Helvetica, Ubuntu, Arial, sans-serif;
+      html, input, select {
+        font: 14px/20px Georgia, Helvetica, Ubuntu, Arial, sans-serif;
         background: #f0f0f0;
+        color: #333;
       }
       body {
         background: #fff;
@@ -23,7 +24,7 @@
         text-align: center;
       }
       header, section, footer {
-        padding: 50px 0 0;
+        padding: 20px 0 0;
         position: relative;
       }
       h1 {
@@ -32,6 +33,13 @@
       }
       h1, h2, th, .ua {
         font-family: 'Dancing Script', Helvetica, Ubuntu, Arial, sans-serif;
+      }
+      .share {
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        top: 60px;
+        right: 0;
       }
       pre {
         margin: 0 0 20px;
@@ -61,7 +69,11 @@
       th:last-child, td:last-child {
         border-right: 1px solid #ccc;
       }
-      select, input {
+      td {
+        color: red;
+      }
+      select, input, .grey {
+        color: #777;
         width: 100%;
       }
       input {
@@ -70,7 +82,6 @@
         box-shadow: inset 0 0 10px #ccc;
       }
       hr {
-        border: 0;
         margin: 20px 0;
       }
       p {
@@ -87,6 +98,12 @@
     <header>
       <h1>UA-Parser.js</h1>
       <h2>JavaScript-based User-Agent Parser</h2>
+      <hr />
+      <p class="grey">A small, quick &amp; dirty script, which aims to extract a long piece of information about the details of the system contained in a user-agent string, into some small yet valuable pieces of commonly needed information such as the name of the browser & operating system along with the version</p>
+      <p class="share">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlman">Tweet</a>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+      </p>
     </header>
     <section>
       <pre>
@@ -113,15 +130,13 @@
       <select>
         <option>Pick one</option>
       </select>
-      <p>or <span class="ua">Enter</span> your user-agent string here to be tested:</p>
+      <p>or <span class="ua">Enter</span> any user-agent string you want to test here:</p>
       <input type="text" />
     </section>
     <footer>
-      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlman">Tweet</a>
-      <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
       <hr />
       <p>
-        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Download / Fork @
+        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Licensed under GPLv2. Download / Fork @
         <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a>
       </p>
     </footer>
