@@ -1,10 +1,11 @@
-# ua-parser-js
+# UA-Parser.js
 
-Small script to extract detailed system data based on user-agent string
+JavaScript-based user-agent parser
 
 * Author	: Faisalman <<fyzlman@gmail.com>>
+* Home	    : http://faisalman.github.com/ua-parser-js
 * Source	: http://github.com/faisalman/ua-parser-js
-* License	: GPL2
+* License	: GPLv2
 
 ## Features
 
@@ -16,16 +17,19 @@ Get detailed type and version of web browser, layout engine, and operating syste
 <script type="text/javascript" src="ua-parser.js"></script>
 <script type="text/javascript">
 
-    var parser  = new uaparser(); // by default it takes ua string from current window.navigator
+    var parser = new uaparser(); // by default it takes ua string from current window.navigator
+    console.log(parser.getBrowser()); // this will print an object contains current browser info
+
+    // let's test a custom user-agent string as an example
+    parser.ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
     
     var browser = parser.getBrowser();
-    console.log(browser); // will print object contains current browser info
-
-    // testing custom user-agent string
-    parser.ua   = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
-    browser     = parser.getBrowser();
-    console.log(browser.name); // "Chromium"
-    console.log(parser.getOS()); // {name: "Ubuntu", version: "11.10"}
+    var engine = parser.getEngine();
+    var os = parser.getOS();
+    
+    console.log(browser); // {name: "Chromium", version: "15.0.874.106"}
+    console.log(engine); // {name: "AppleWebKit", version: "535.2"}
+    console.log(os); // {name: "Ubuntu", version: "11.10"}
     
 </script>
 ```

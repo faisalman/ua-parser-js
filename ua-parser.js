@@ -1,11 +1,9 @@
-/**
- * ua-parser-js v0.1
- * Small script to extract detailed system data based on user-agent string
- * http://github.com/faisalman/ua-parser-js
- *
- * Copyright © 2012 Faisalman <fyzlman@gmail.com>
- * Licensed under GPL2 http://www.gnu.org/licenses/gpl-2.0.html
- */
+// UA-Parser.js v0.1.0
+// JavaScript-based user-agent parser
+// https://github.com/faisalman/ua-parser-js
+//
+// Copyright © 2012 Faisalman
+// Licensed under GPLv2
 
 function uaparser(uastring){
 
