@@ -13,10 +13,10 @@ function uaparser(uastring){
         for(j = 1; j < arguments.length; j += 2){
             var rx  = arguments[j],
                 asc = arguments[j+1],
-                k, l, m, n, o, p;                     
-            for(l = 0; l < rx.length; l++){                            
+                k, l, m, n, o, p;
+            for(l = 0; l < rx.length; l++){
                 m = rx[l].exec(ua);
-                //console.log(m);                      
+                //console.log(m);
                 if(!!m){
                     k = {};
                     o = 1;
@@ -41,7 +41,7 @@ function uaparser(uastring){
                     if(asc.hasOwnProperty(l)){
                         k[asc[l]] = 'unknown';
                     }
-                };                        
+                };
                 i = k;
             }
             if(p) break;
@@ -66,11 +66,11 @@ function uaparser(uastring){
                 return arguments[1];
         };
     };
-    
+
     this.ua = uastring || window.navigator.userAgent;
-    
+
     this.getBrowser = function(){
-    
+
         return regxMap(this.ua, [
 
             // Mixed
@@ -83,75 +83,80 @@ function uaparser(uastring){
             /(opera).*\/((\d+)?[\w\.]+)/i,                                      // Opera
 
             // Trident based
-            /(avant\sbrowser|iemobile)[\/\s]?((\d+)?[\w\.]+)/i,                 // Avant/IEMobile
+            /(avant\sbrowser|iemobile|slimbrowser)[\/\s]?((\d+)?[\w\.]*)/i,     // Avant/IEMobile/SlimBrowser
             /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
-                                        
+
             // Webkit/KHTML based
             /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
-            /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin            
+            /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
+            ], ['name', 'release', 'version'][
+            /android.+(crmo)\/((\d+)?[\w\.]+)/i,                                // Chrome for Android
+            ], [['name', /.+/g, 'Chrome'], 'release', 'version'][
             /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
-            
+
             // Gecko based
             /(iceweasel|camino|fennec|maemo|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,  // Iceweasel/Camino/Fennec/Maemo/Minimo
-            /(firefox|seamonkey|netscape|navigator)\/((\d+)?[\w\.]+)/i,         // Firefox/SeaMonkey/Netscape
+            /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape|swiftfox)\/((\d+)?[\w\.]+)/i,
+                                                                                // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe/SwiftFox
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
-            
+
             // Other
-            /(lynx)\/?((\d+)?[\w\.]+)/i,                                        // Lynx
+            /(lynx|dillo|icab)[\/\s]?((\d+)?[\w\.]+)/i,                         // Lynx/Dillo/iCab
             ], ['name', 'release', 'version']);  
     };
-        
+
     this.getEngine = function(){
-        
+
         return regxMap(this.ua, [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /([aple]*webkit|trident)\/([\w\.]+)/i,                              // Webkit/Trident
             /(khtml)\/([\w\.]+)/i                                               // KHTML
             ], ['name', 'version'], [
-            
+
             /rv\:([\w\.]+).*(gecko)/i                                           // Gecko
             ], ['version', 'name']);
     };
-        
+
     this.getOS = function(){ 
-        
+
         return regxMap(this.ua, [
 
             // Windows based
             /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
             ], ['name', ['version', /(nt\s[\d\.]+)/gi, winMap]], [
-            
+
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
-            /(android|symbianos|symbos|webos|palm\os|qnx|bada|rim\stablet\sos)[\/\s]?([\w\.]+)*/i,   
+            /(android|symbianos|symbos|webos|palm\os|qnx|bada|rim\stablet\sos)[\/\s-]?([\w\.]+)*/i,
                                                                                 // Android/Symbian/WebOS/Palm/QNX/Bada/RIM
-            /(nintendo)\s([wids]+)/i,                                           // Nintendo Wii/DS
+            /(nintendo|playstation)\s([wids3portable]+)/i,                      // Nintendo/Playstation
 
             // GNU/Linux based
             /(mint)[\s\(]?(\w+)*/i,                                             // Mint
-            /(joli|ubuntu|debian|suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat)[\/\s]?([\w\.-]+)*/i,                  
+            /(joli|ubuntu|debian|suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat)[\/\s]?([\w\.-]+)*/i,
                                                                                 // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
                                                                                 // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat
             /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
             ], ['name', 'version'], [
-            
+
             /cros\s([\w\.\s]+)/i                                                // Chromium OS
             ], [['name', 'Chromium OS'], 'version'],[
 
             /sunos\s?([\w\.\s]+)*/i                                             // Solaris
             ], [['name', 'Solaris'], 'version'], [
-            
+
             // BSD based
             /\s(\w*bsd|dragonfly)\s?([\w\.]+)*/i,                               // FreeBSD/NetBSD/OpenBSD/DragonFly
             ], ['name', 'version'],[
-            
+
             /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
             ], [['name', /.+/g, 'iOS'], ['version', /_/g, '.']], [
-            
-            /(mac\sos)\sx\s([\w\s\.]+)/i,                                       // Mac OS
-                                        
+
+            /(mac\sos|macintosh)\sx\s([\w\s\.]+)/i,                             // Mac OS
+            ], ['name', ['version', /_/g, '.']], [
+
             // Other
             /(unix|minix|beos)[\/\s]?()*/i
             ], ['name', 'version']);
