@@ -89,9 +89,9 @@ function uaparser(uastring){
             // Webkit/KHTML based
             /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
             /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
-            ], ['name', 'release', 'version'][
+            ], ['name', 'release', 'version'], [
             /android.+(crmo)\/((\d+)?[\w\.]+)/i,                                // Chrome for Android
-            ], [['name', /.+/g, 'Chrome'], 'release', 'version'][
+            ], [['name', /.+/g, 'Chrome'], 'release', 'version'], [
             /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
@@ -135,9 +135,9 @@ function uaparser(uastring){
 
             // GNU/Linux based
             /(mint)[\s\(]?(\w+)*/i,                                             // Mint
-            /(joli|ubuntu|debian|suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat)[\/\s]?([\w\.-]+)*/i,
+            /(joli|ubuntu|debian|suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,
                                                                                 // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
-                                                                                // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat
+                                                                                // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk
             /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
             ], ['name', 'version'], [
 
