@@ -134,8 +134,8 @@ function uaparser(uastring){
             /(nintendo|playstation)\s([wids3portable]+)/i,                      // Nintendo/Playstation
 
             // GNU/Linux based
-            /(mint)[\s\(]?(\w+)*/i,                                             // Mint
-            /(joli|ubuntu|debian|suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,
+            /(mint)[\/\s\(]?(\w+)*/i,                                           // Mint
+            /(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,
                                                                                 // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
                                                                                 // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk
             /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
@@ -144,6 +144,7 @@ function uaparser(uastring){
             /cros\s([\w\.\s]+)/i                                                // Chromium OS
             ], [['name', 'Chromium OS'], 'version'],[
 
+            // Solaris
             /sunos\s?([\w\.\s]+)*/i                                             // Solaris
             ], [['name', 'Solaris'], 'version'], [
 
