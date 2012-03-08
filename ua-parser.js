@@ -97,8 +97,8 @@ function uaparser(uastring){
 
             // Gecko based
             /(iceweasel|camino|fennec|maemo|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,  // Iceweasel/Camino/Fennec/Maemo/Minimo
-            /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape|swiftfox)\/((\d+)?[\w\.]+)/i,
-                                                                                // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe/SwiftFox
+            /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape)\/((\d+)?[\w\.]+)/i,
+                                                                                // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
@@ -154,11 +154,11 @@ function uaparser(uastring){
             /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
             ], [['name', /.+/g, 'iOS'], ['version', /_/g, '.']], [
 
-            /(mac\sos|macintosh)\sx\s([\w\s\.]+)/i,                             // Mac OS
+            /(mac\sos)\sx\s([\w\s\.]+)/i,                                       // Mac OS
             ], ['name', ['version', /_/g, '.']], [
 
             // Other
-            /(unix|minix|beos)[\/\s]?()*/i
+            /(macintosh|unix|minix|beos)[\/\s]?()*/i
             ], ['name', 'version']);
     };
 };
