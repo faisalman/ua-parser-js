@@ -1,5 +1,5 @@
 // UA-Parser.js v0.1.0
-// JavaScript-based user-agent parser
+// Lightweight JavaScript-based user-agent parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012 Faisalman
@@ -49,22 +49,24 @@ function uaparser(uastring){
         return i;
     };
 
-    var winMap  = function(){
-        switch(arguments[1].toLowerCase()){
-            case 'nt 5.0':
-                return '2000';
-            case 'nt 5.1':
-            case 'nt 5.2':
-                return 'XP';
-            case 'nt 6.0':
-                return 'Vista';
-            case 'nt 6.1':
-                return '7';
-            case 'nt 6.2':
-                return '8';
-            default:
-                return arguments[1];
-        };
+    var mapper  = {
+        win : function(){
+            switch(arguments[1].toLowerCase()){
+                case 'nt 5.0':
+                    return '2000';
+                case 'nt 5.1':
+                case 'nt 5.2':
+                    return 'XP';
+                case 'nt 6.0':
+                    return 'Vista';
+                case 'nt 6.1':
+                    return '7';
+                case 'nt 6.2':
+                    return '8';
+                default:
+                    return arguments[1];
+            };
+        }
     };
 
     this.ua = uastring || window.navigator.userAgent;
@@ -125,7 +127,7 @@ function uaparser(uastring){
 
             // Windows based
             /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
-            ], ['name', ['version', /(nt\s[\d\.]+)/gi, winMap]], [
+            ], ['name', ['version', /(nt\s[\d\.]+)/gi, mapper.win]], [
 
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
