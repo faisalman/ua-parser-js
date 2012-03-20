@@ -17,8 +17,27 @@ Get detailed type and version of web browser, layout engine, and operating syste
 <script type="text/javascript" src="ua-parser.js"></script>
 <script type="text/javascript">
 
-    var parser = new uaparser(); // by default it takes ua string from current window.navigator
-    console.log(parser.getBrowser()); // this will print an object contains current browser info
+    var parser = new uaparser(); // if no string given as parameter, by default it takes ua string from current window.navigator
+    
+    console.log(parser);
+    /*
+        /// this will print an object structured like this:
+        {
+            browser: {
+                name: "",
+                major: "",
+                version: ""
+            },
+            engine: {
+                name: "",
+                version: ""
+            },
+            os: {
+                name: "",
+                version: ""
+            }
+        }
+    */
 
     // let's test a custom user-agent string as an example
     parser.ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
@@ -27,7 +46,7 @@ Get detailed type and version of web browser, layout engine, and operating syste
     var engine = parser.getEngine();
     var os = parser.getOS();
     
-    console.log(browser); // {name: "Chromium", version: "15.0.874.106"}
+    console.log(browser); // {name: "Chromium", major: "15", version: "15.0.874.106"}
     console.log(engine); // {name: "AppleWebKit", version: "535.2"}
     console.log(os); // {name: "Ubuntu", version: "11.10"}
     

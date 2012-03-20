@@ -91,9 +91,9 @@ function uaparser (uastring) {
             // Webkit/KHTML based
             /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
             /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
-            ], ['name', 'release', 'version'], [
+            ], ['name', 'version', 'major'], [
             /android.+(crmo)\/((\d+)?[\w\.]+)/i,                                // Chrome for Android
-            ], [['name', /.+/g, 'Chrome'], 'release', 'version'], [
+            ], [['name', /.+/g, 'Chrome'], 'version', 'major'], [
             /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
@@ -105,7 +105,7 @@ function uaparser (uastring) {
 
             // Other
             /(lynx|dillo|icab)[\/\s]?((\d+)?[\w\.]+)/i,                         // Lynx/Dillo/iCab
-            ], ['name', 'release', 'version']);  
+            ], ['name', 'version', 'major']);  
     };
 
     this.getEngine = function() {
