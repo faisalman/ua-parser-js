@@ -3,7 +3,7 @@
   <head>
     <title>UA-Parser.js - JavaScript-based User-Agent Parser</title>
     <meta name="author" content="Faisalman" />
-    <meta name="description" content="A small, quick & dirty script, which aims to extract a long piece of information about the details of the system contained in a user-agent string, into some small yet valuable pieces of commonly needed information such as the name of the browser & operating system along with the version" />
+    <meta name="description" content="Lightweight JavaScript-based user-agent parser" />
     <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
     <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <style>
@@ -136,7 +136,7 @@
     <footer>
       <hr />
       <p>
-        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Licensed under GPLv2. Download / Fork @
+        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Licensed under GPLv2. Download & Fork @
         <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a>
       </p>
     </footer>
@@ -158,7 +158,7 @@
         tbl[0].innerText = browser.name;
         tbl[1].innerText = engine.name;
         tbl[2].innerText = os.name;
-        tbl[3].innerText = browser.release;
+        tbl[3].innerText = browser.version;
         tbl[4].innerText = engine.version;
         tbl[5].innerText = os.version;
         pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</strong>';
