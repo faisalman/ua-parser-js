@@ -1,81 +1,83 @@
-// UA-Parser.js v0.1.0
-// JavaScript-based user-agent parser
+// UA-Parser.js v0.1.1
+// Lightweight JavaScript-based user-agent parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012 Faisalman
 // Licensed under GPLv2
 
-function uaparser(uastring){
+function uaparser (uastring) {
 
     // regexp mapper
-    var regxMap = function(ua){
-        var i, j;
-        for(j = 1; j < arguments.length; j += 2){
-            var rx  = arguments[j],
-                asc = arguments[j+1],
-                k, l, m, n, o, p;
-            for(l = 0; l < rx.length; l++){
-                m = rx[l].exec(ua);
-                //console.log(m);
-                if(!!m){
-                    k = {};
-                    o = 1;
-                    for(n = 0; n < asc.length; n++){
-                        if(typeof asc[n] === 'object' && asc[n].length === 2){
-                            k[asc[n][0]] = asc[n][1];
-                            o -= 1;
-                        } else if(typeof asc[n] === 'object' && asc[n].length === 3){
-                            k[asc[n][0]] = (!!m[n+o]) ? m[n+o].replace(asc[n][1], asc[n][2]) : 'unknown';
+    var regxMap = function (ua) {
+        var result;
+        var i, j, k, l;
+        for (i = 1; i < arguments.length; i += 2) {
+            var regex = arguments[i];
+            var props = arguments[i + 1];
+            var isMatch = false;
+            for (j = 0; j < regex.length; j++) {
+                var match = regex[j].exec(ua);
+                //console.log(match);
+                if (!!match) {
+                    result = {};
+                    l = 1;
+                    for (k = 0; k < props.length; k++) {
+                        if (typeof props[k] === 'object' && props[k].length === 2) {
+                            result[props[k][0]] = props[k][1];
+                            l -= 1;
+                        } else if (typeof props[k] === 'object' && props[k].length === 3) {
+                            result[props[k][0]] = (!!match[k + l]) ? match[k + l].replace(props[k][1], props[k][2]) : 'unknown';
                         } else {
-                            k[asc[n]] = (!!m[n+o]) ? m[n+o] : 'unknown';
+                            result[props[k]] = (!!match[k + l]) ? match[k + l] : 'unknown';
                         }
                     };
-                    i = k;
-                    p = true;
+                    isMatch = true;
                     break;
                 }
             };
-            if(!p){
-                k = {};
-                for(l in asc){
-                    if(asc.hasOwnProperty(l)){
-                        k[asc[l]] = 'unknown';
+            if (!isMatch) {
+                result = {};
+                for (j in props) {
+                    if (props.hasOwnProperty(j)) {
+                    result[props[j]] = 'unknown';
                     }
                 };
-                i = k;
+            } else {
+                break;
             }
-            if(p) break;
         };
-        return i;
+        return result;
     };
 
-    var winMap  = function(){
-        switch(arguments[1].toLowerCase()){
-            case 'nt 5.0':
-                return '2000';
-            case 'nt 5.1':
-            case 'nt 5.2':
-                return 'XP';
-            case 'nt 6.0':
-                return 'Vista';
-            case 'nt 6.1':
-                return '7';
-            case 'nt 6.2':
-                return '8';
-            default:
-                return arguments[1];
-        };
+    var mapper = {
+        win: function (str, match) {
+            switch (match.toLowerCase()) {
+                case 'nt 5.0':
+                    return '2000';
+                case 'nt 5.1':
+                case 'nt 5.2':
+                    return 'XP';
+                case 'nt 6.0':
+                    return 'Vista';
+                case 'nt 6.1':
+                    return '7';
+                case 'nt 6.2':
+                    return '8';
+                default:
+                    return match;
+            };
+        }
     };
 
     this.ua = uastring || window.navigator.userAgent;
 
-    this.getBrowser = function(){
+    this.getBrowser = function() {
 
         return regxMap(this.ua, [
 
             // Mixed
             /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunascape|maxthon|netfront|jasmine)[\/\s]?((\d+)?[\w\.]+)/i,      // Lunascape/Maxthon/Netfront/Jasmine
+            /(lunpropsape|maxthon|netfront|jasmine)[\/\s]?((\d+)?[\w\.]+)/i,    // Lunpropsape/Maxthon/Netfront/Jasmine
             
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
@@ -89,9 +91,9 @@ function uaparser(uastring){
             // Webkit/KHTML based
             /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
             /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
-            ], ['name', 'release', 'version'], [
+            ], ['name', 'version', 'major'], [
             /android.+(crmo)\/((\d+)?[\w\.]+)/i,                                // Chrome for Android
-            ], [['name', /.+/g, 'Chrome'], 'release', 'version'], [
+            ], [['name', /.+/g, 'Chrome'], 'version', 'major'], [
             /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
@@ -103,10 +105,10 @@ function uaparser(uastring){
 
             // Other
             /(lynx|dillo|icab)[\/\s]?((\d+)?[\w\.]+)/i,                         // Lynx/Dillo/iCab
-            ], ['name', 'release', 'version']);  
+            ], ['name', 'version', 'major']);  
     };
 
-    this.getEngine = function(){
+    this.getEngine = function() {
 
         return regxMap(this.ua, [
 
@@ -119,13 +121,13 @@ function uaparser(uastring){
             ], ['version', 'name']);
     };
 
-    this.getOS = function(){ 
+    this.getOS = function() { 
 
         return regxMap(this.ua, [
 
             // Windows based
             /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
-            ], ['name', ['version', /(nt\s[\d\.]+)/gi, winMap]], [
+            ], ['name', ['version', /(nt\s[\d\.]+)/gi, mapper.win]], [
 
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry

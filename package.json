@@ -7,13 +7,13 @@
       "email"     : "fyzlman@gmail.com",
       "url"       : "http://faisalman.com"
   },
-  "description" : "a simple user-agent string parser",
+  "description" : "Lightweight JavaScript-based user-agent parser",
   "keywords"    : [
     "user-agent",
     "parser",
     "browser"
   ],
-  "homepage"    : "https://faisalman.github.com/ua-parser-js",
+  "homepage"    : "http://faisalman.github.com/ua-parser-js",
   "contributors": [
     {
       "name"    : "Faisal Salman",
