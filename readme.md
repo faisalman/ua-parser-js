@@ -3,7 +3,7 @@
 JavaScript-based user-agent parser
 
 * Author	: Faisalman <<fyzlman@gmail.com>>
-* Home	    : http://faisalman.github.com/ua-parser-js
+* Home      : http://faisalman.github.com/ua-parser-js
 * Source	: https://github.com/faisalman/ua-parser-js
 * License	: GPLv2
 

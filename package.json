@@ -1,7 +1,7 @@
 {
   "title"       : "UA-Parser.js",
   "name"        : "ua-parser-js",
-  "version"     : "0.1.0",
+  "version"     : "0.1.2",
   "author"      : {
       "name"      : "Faisal Salman",
       "email"     : "fyzlman@gmail.com",
