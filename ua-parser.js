@@ -5,7 +5,9 @@
 // Copyright © 2012 Faisalman
 // Licensed under GPLv2
 
-function uaparser (uastring) {
+function UAParser (uastring) {
+
+    var ua = uastring || window.navigator.userAgent;
 
     // regexp mapper
     var regxMap = function (ua) {
@@ -69,15 +71,13 @@ function uaparser (uastring) {
         }
     };
 
-    this.ua = uastring || window.navigator.userAgent;
+    this.getBrowser = function(uastring) {
 
-    this.getBrowser = function() {
-
-        return regxMap(this.ua, [
+        return regxMap(uastring || ua, [
 
             // Mixed
             /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunpropsape|maxthon|netfront|jasmine)[\/\s]?((\d+)?[\w\.]+)/i,    // Lunpropsape/Maxthon/Netfront/Jasmine
+            /(lunascape|maxthon|netfront|jasmine)[\/\s]?((\d+)?[\w\.]+)/i,      // Lunascape/Maxthon/Netfront/Jasmine
             
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
@@ -108,9 +108,9 @@ function uaparser (uastring) {
             ], ['name', 'version', 'major']);  
     };
 
-    this.getEngine = function() {
+    this.getEngine = function(uastring) {
 
-        return regxMap(this.ua, [
+        return regxMap(uastring || ua, [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /([aple]*webkit|trident)\/([\w\.]+)/i,                              // Webkit/Trident
@@ -121,9 +121,9 @@ function uaparser (uastring) {
             ], ['version', 'name']);
     };
 
-    this.getOS = function() { 
+    this.getOS = function(uastring) { 
 
-        return regxMap(this.ua, [
+        return regxMap(uastring || ua, [
 
             // Windows based
             /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
@@ -164,4 +164,15 @@ function uaparser (uastring) {
             /(macintosh|unix|minix|beos)[\/\s]?()*/i
             ], ['name', 'version']);
     };
+    
+    this.setUA = function (uastring) {
+        ua = uastring || ua;
+        return this.result = {
+            browser : this.getBrowser(),
+            engine  : this.getEngine(),
+            os      : this.getOS()
+        };
+    };
+    
+    this.setUA(ua);
 };
