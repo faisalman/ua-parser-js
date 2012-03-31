@@ -4,12 +4,19 @@ JavaScript-based user-agent parser
 
 * Author	: Faisalman <<fyzlman@gmail.com>>
 * Home	    : http://faisalman.github.com/ua-parser-js
-* Source	: http://github.com/faisalman/ua-parser-js
+* Source	: https://github.com/faisalman/ua-parser-js
 * License	: GPLv2
 
 ## Features
 
 Get detailed type and version of web browser, layout engine, and operating system.
+
+## Methods
+
+* `getBrowser([uastring])`
+* `getEngine([uastring])`
+* `getOS([uastring])`
+* `setUA(uastring)`
 
 ## Example
 
@@ -17,16 +24,16 @@ Get detailed type and version of web browser, layout engine, and operating syste
 <script type="text/javascript" src="ua-parser.js"></script>
 <script type="text/javascript">
 
-    var parser = new uaparser(); // if no string given as parameter, by default it takes ua string from current window.navigator
+    var p = new UAParser();     // if no string given as parameter, by default it takes ua string from current browser's window.navigator
     
-    console.log(parser);
+    console.log(p.result);
     /*
         /// this will print an object structured like this:
         {
             browser: {
                 name: "",
-                major: "",
-                version: ""
+                version: "",
+                major: ""
             },
             engine: {
                 name: "",
@@ -40,15 +47,11 @@ Get detailed type and version of web browser, layout engine, and operating syste
     */
 
     // let's test a custom user-agent string as an example
-    parser.ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
+    p.setUA("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2");
     
-    var browser = parser.getBrowser();
-    var engine = parser.getEngine();
-    var os = parser.getOS();
-    
-    console.log(browser); // {name: "Chromium", major: "15", version: "15.0.874.106"}
-    console.log(engine); // {name: "AppleWebKit", version: "535.2"}
-    console.log(os); // {name: "Ubuntu", version: "11.10"}
+    console.log(p.result.browser);  // {name: "Chromium", major: "15", version: "15.0.874.106"}
+    console.log(p.result.engine);   // {name: "AppleWebKit", version: "535.2"}
+    console.log(p.result.os);       // {name: "Ubuntu", version: "11.10"}
     
 </script>
 ```
