@@ -1,4 +1,4 @@
-// UA-Parser.js v0.1.2
+// UA-Parser.js v0.2.0
 // Lightweight JavaScript-based user-agent parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -16,7 +16,7 @@ function UAParser (uastring) {
         for (i = 1; i < arguments.length; i += 2) {
             var regex = arguments[i];
             var props = arguments[i + 1];
-            var isMatch = false;
+            var isMatchFound = false;
             for (j = 0; j < regex.length; j++) {
                 var match = regex[j].exec(ua);
                 //console.log(match);
@@ -28,50 +28,56 @@ function UAParser (uastring) {
                             result[props[k][0]] = props[k][1];
                             l -= 1;
                         } else if (typeof props[k] === 'object' && props[k].length === 3) {
-                            result[props[k][0]] = (!!match[k + l]) ? match[k + l].replace(props[k][1], props[k][2]) : 'unknown';
+                            result[props[k][0]] = (!!match[k + l]) ? match[k + l].replace(props[k][1], props[k][2]) : undefined;
                         } else {
-                            result[props[k]] = (!!match[k + l]) ? match[k + l] : 'unknown';
+                            result[props[k]] = (!!match[k + l]) ? match[k + l] : undefined;
                         }
-                    };
-                    isMatch = true;
+                    }
+                    isMatchFound = true;
                     break;
                 }
-            };
-            if (!isMatch) {
-                result = {};
-                for (j in props) {
-                    if (props.hasOwnProperty(j)) {
-                    result[props[j]] = 'unknown';
-                    }
-                };
-            } else {
-                break;
             }
-        };
+            if (!isMatchFound) {
+                result = {};
+                for (k in props) {
+                    if (props.hasOwnProperty(k)) {
+                        if (typeof props[k] == 'object') {
+                            result[props[k][0]] = undefined;
+                        } else {
+                            result[props[k]] = undefined;
+                        }
+                    }
+                }
+            } else {
+                return result;
+            }
+        }
         return result;
     };
 
     var mapper = {
-        win: function (str, match) {
-            switch (match.toLowerCase()) {
-                case 'nt 5.0':
-                    return '2000';
-                case 'nt 5.1':
-                case 'nt 5.2':
-                    return 'XP';
-                case 'nt 6.0':
-                    return 'Vista';
-                case 'nt 6.1':
-                    return '7';
-                case 'nt 6.2':
-                    return '8';
-                default:
-                    return match;
-            };
+        os : {        
+            win: function (str, match) {
+                switch (match.toLowerCase()) {
+                    case 'nt 5.0':
+                        return '2000';
+                    case 'nt 5.1':
+                    case 'nt 5.2':
+                        return 'XP';
+                    case 'nt 6.0':
+                        return 'Vista';
+                    case 'nt 6.1':
+                        return '7';
+                    case 'nt 6.2':
+                        return '8';
+                    default:
+                        return match;
+                };
+            }
         }
     };
 
-    this.getBrowser = function(uastring) {
+    this.getBrowser = function (uastring) {
 
         return regxMap(uastring || ua, [
 
@@ -92,8 +98,8 @@ function UAParser (uastring) {
             /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
             /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
             ], ['name', 'version', 'major'], [
-            /android.+(crmo)\/((\d+)?[\w\.]+)/i,                                // Chrome for Android
-            ], [['name', /.+/g, 'Chrome'], 'version', 'major'], [
+            /android.+crmo\/((\d+)?[\w\.]+)/i,                                  // Chrome for Android
+            ], [['name', 'Chrome'], 'version', 'major'], [
             /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
@@ -108,7 +114,7 @@ function UAParser (uastring) {
             ], ['name', 'version', 'major']);  
     };
 
-    this.getEngine = function(uastring) {
+    this.getEngine = function (uastring) {
 
         return regxMap(uastring || ua, [
 
@@ -121,13 +127,13 @@ function UAParser (uastring) {
             ], ['version', 'name']);
     };
 
-    this.getOS = function(uastring) { 
+    this.getOS = function (uastring) { 
 
         return regxMap(uastring || ua, [
 
             // Windows based
             /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
-            ], ['name', ['version', /(nt\s[\d\.]+)/gi, mapper.win]], [
+            ], ['name', ['version', /(nt\s[\d\.]+)/gi, mapper.os.win]], [
 
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
@@ -164,15 +170,47 @@ function UAParser (uastring) {
             /(macintosh|unix|minix|beos)[\/\s]?()*/i
             ], ['name', 'version']);
     };
-    
+
+    this.getDevice = function (uastring) { 
+
+        return regxMap(uastring || ua, [
+
+            /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
+            /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
+            /(blackberry|benq|nokia|palm(?=\-)|sonyericsson)[\s-]?([\w-]+)*/i,  // BenQ/Nokia/Palm/Sony-Ericsson
+            /(hp)\s([\w\s]+)/i,                                                 // HP iPAQ
+            /(hp).+(touchpad)/i,                                                // HP TouchPad
+            /(kindle)\/([\w\.]+)/i,                                             // Kindle
+            /(lg)[e;\s-]+(\w+)*/i,                                              // LG
+            /(nintendo|playstation)\s([wids3portable]+)/i                       // Nintendo/Playstation
+            ], ['name', 'version'], [
+            
+            /(htc)[;_\s-]+([\w\s]+(?=\))|[\w]+)*/i,                             // HTC
+            /(zte)-([\w]+)*/i
+            ], ['name', ['version', /_/g, ' ']], [
+                        
+            /\s(milestone|mz601|droid[2x]?|xoom)[globa\s]*\sbuild\//i,          // Motorola
+            /mot[\s-]?(\w+)*/i
+            ], [['name', 'Motorola'], 'version'], [
+            
+            /(s[cgp]h-\w+|gt-\w+|galaxy\snexus)/i,                              // Samsung
+            /sam[sung]*[\s-]*(\w+-?[\w-]*)*/i,
+            /sec-(sgh\w+)/i
+            ], [['name', 'Samsung'], 'version'], [
+
+            /sie-(\w+)*/i                                                       // Siemens
+            ], [['name', 'Siemens'], 'version']);
+    };
+
     this.setUA = function (uastring) {
         ua = uastring || ua;
         return this.result = {
             browser : this.getBrowser(),
             engine  : this.getEngine(),
-            os      : this.getOS()
+            os      : this.getOS(),
+            device  : this.getDevice()
         };
     };
-    
+
     this.setUA(ua);
 };
