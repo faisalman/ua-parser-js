@@ -177,7 +177,8 @@ function UAParser (uastring) {
 
             /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|nokia|palm(?=\-)|sonyericsson)[\s-]?([\w-]+)*/i,  // BenQ/Nokia/Palm/Sony-Ericsson
+            /(blackberry|benq|nokia|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte)[\s_-]?([\w-]+)*/i,  
+                                                                                // BenQ/Nokia/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE
             /(hp)\s([\w\s]+)/i,                                                 // HP iPAQ
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
@@ -197,6 +198,9 @@ function UAParser (uastring) {
             /sam[sung]*[\s-]*(\w+-?[\w-]*)*/i,
             /sec-(sgh\w+)/i
             ], [['name', 'Samsung'], 'version'], [
+            
+            /(transfo[prime\s]{4,10}\s\w+|(?:android).*eeepc)/i                 // Asus
+            ], [['name', 'Asus'], 'version'], [
 
             /sie-(\w+)*/i                                                       // Siemens
             ], [['name', 'Siemens'], 'version']);
