@@ -98,7 +98,7 @@ function UAParser (uastring) {
             /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
             /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
             ], ['name', 'version', 'major'], [
-            /android.+crmo\/((\d+)?[\w\.]+)/i,                                  // Chrome for Android
+            /(?:android.+crmo|crios)\/((\d+)?[\w\.]+)/i,                        // Chrome for Android/iOS
             ], [['name', 'Chrome'], 'version', 'major'], [
             /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
