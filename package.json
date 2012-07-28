@@ -1,7 +1,7 @@
 {
   "title"       : "UA-Parser.js",
   "name"        : "ua-parser-js",
-  "version"     : "0.1.2",
+  "version"     : "0.3.0",
   "author"      : {
       "name"      : "Faisal Salman",
       "email"     : "fyzlman@gmail.com",
@@ -11,7 +11,10 @@
   "keywords"    : [
     "user-agent",
     "parser",
-    "browser"
+    "browser",
+    "engine",
+    "os",
+    "device"
   ],
   "homepage"    : "http://faisalman.github.com/ua-parser-js",
   "contributors": [
