@@ -2,7 +2,7 @@
 
 JavaScript-based user-agent parser
 
-* Author	: Faisalman <<fyzlman@gmail.com>>
+* Author    : Faisalman <<fyzlman@gmail.com>>
 * Home      : http://faisalman.github.com/ua-parser-js
 * Source	: https://github.com/faisalman/ua-parser-js
 * License	: GPLv2 & MIT
@@ -14,6 +14,7 @@ Get detailed type and version of web browser, layout engine, operating system, a
 ## Methods
 
 * `getBrowser([uastring])`
+* `getDevice([uastring])`
 * `getEngine([uastring])`
 * `getOS([uastring])`
 * `getDevice([uastring])`
@@ -38,6 +39,10 @@ Get detailed type and version of web browser, layout engine, operating system, a
                 name: "",
                 version: "",
                 major: ""
+            },
+            device: {
+                name: "",
+                version: ""
             },
             engine: {
                 name: "",

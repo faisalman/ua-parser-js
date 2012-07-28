@@ -99,7 +99,7 @@
                 /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
                 /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
                 ], ['name', 'version', 'major'], [
-                /android.+crmo\/((\d+)?[\w\.]+)/i,                                  // Chrome for Android
+                /(?:android.+crmo|crios)\/((\d+)?[\w\.]+)/i,                        // Chrome for Android/iOS
                 ], [['name', 'Chrome'], 'version', 'major'], [
                 /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
                 /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
@@ -178,7 +178,8 @@
 
                 /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
                 /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-                /(blackberry|benq|nokia|palm(?=\-)|sonyericsson)[\s-]?([\w-]+)*/i,  // BenQ/Nokia/Palm/Sony-Ericsson
+                /(blackberry|benq|nokia|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte)[\s_-]?([\w-]+)*/i,  
+                                                                                    // BenQ/Nokia/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE
                 /(hp)\s([\w\s]+)/i,                                                 // HP iPAQ
                 /(hp).+(touchpad)/i,                                                // HP TouchPad
                 /(kindle)\/([\w\.]+)/i,                                             // Kindle
@@ -198,6 +199,9 @@
                 /sam[sung]*[\s-]*(\w+-?[\w-]*)*/i,
                 /sec-(sgh\w+)/i
                 ], [['name', 'Samsung'], 'version'], [
+                
+                /(transfo[prime\s]{4,10}\s\w+|(?:android).*eeepc)/i                 // Asus
+                ], [['name', 'Asus'], 'version'], [
 
                 /sie-(\w+)*/i                                                       // Siemens
                 ], [['name', 'Siemens'], 'version']);
