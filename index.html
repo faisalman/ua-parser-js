@@ -99,7 +99,6 @@
       <h1>UA-Parser.js</h1>
       <h2>JavaScript-based User-Agent Parser</h2>
       <hr />
-      <p class="grey">A small, quick &amp; dirty script, which aims to extract a long piece of information about the details of the system contained in a user-agent string, into some small yet valuable pieces of commonly needed information such as the name of the browser & operating system along with the version</p>
       <p class="share">
         <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlman">Tweet</a>
         <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
@@ -113,12 +112,15 @@
           <th>Browser</th>
           <th>Engine</th>
           <th>OS</th>
+          <th>Device</th>
         </tr>
         <tr>
           <td></td>
           <td></td>
           <td></td>
+          <td></td>
         </tr>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -136,7 +138,7 @@
     <footer>
       <hr />
       <p>
-        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Licensed under GPLv2. Download & Fork @
+        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Licensed under GPLv2 & MIT. Download & Fork @
         <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a>
       </p>
     </footer>
@@ -150,17 +152,20 @@
         sel.appendChild(opt);
       }
       var fillTable = function(uastring){
-        var parser = new uaparser(uastring);
+        var parser = UAParser.setUA(uastring);
         var browser = parser.getBrowser();
         var engine = parser.getEngine();
         var os = parser.getOS();
+        var device = parser.getDevice();
         var tbl = document.getElementsByTagName('td');
         tbl[0].innerText = browser.name;
         tbl[1].innerText = engine.name;
         tbl[2].innerText = os.name;
-        tbl[3].innerText = browser.version;
-        tbl[4].innerText = engine.version;
-        tbl[5].innerText = os.version;
+        tbl[3].innerText = device.name;
+        tbl[4].innerText = browser.version;
+        tbl[5].innerText = engine.version;
+        tbl[6].innerText = os.version;
+        tbl[7].innerText = device.version;
         pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</strong>';
       }
       fillTable();
