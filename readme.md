@@ -17,7 +17,6 @@ Get detailed type and version of web browser, layout engine, operating system, a
 * `getDevice([uastring])`
 * `getEngine([uastring])`
 * `getOS([uastring])`
-* `getDevice([uastring])`
 * `setUA(uastring)`
 
 ## Properties
