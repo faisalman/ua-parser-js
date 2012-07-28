@@ -39,10 +39,6 @@ Get detailed type and version of web browser, layout engine, operating system, a
                 version: "",
                 major: ""
             },
-            device: {
-                name: "",
-                version: ""
-            },
             engine: {
                 name: "",
                 version: ""
@@ -79,11 +75,11 @@ var parser = require('ua-parser');
 var ua1 = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
 var ua2 = 'Midori/0.2 (X11; Linux; U; cs-cz) WebKit/531.2+';
 
-parser.setUA(ua1).getDevice().name; // prints "PlayBook"
-parser.getOS()                      // prints {name: "RIM Tablet OS", version: "1.0.0"}
-parser.getOS(ua2)                   // prints {name: "Linux", version: undefined}
-parser.getOS()                      // prints {name: "RIM Tablet OS", version: "1.0.0"}
-parser.getEngine().name;            // prints "AppleWebKit"
+parser.setUA(ua1).getDevice().name; // "PlayBook"
+parser.getOS()                      // {name: "RIM Tablet OS", version: "1.0.0"}
+parser.getOS(ua2)                   // {name: "Linux", version: undefined}
+parser.getOS()                      // {name: "RIM Tablet OS", version: "1.0.0"}
+parser.getEngine().name;            // "AppleWebKit"
 ```
 
 ## License
