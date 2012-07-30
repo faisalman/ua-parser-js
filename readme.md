@@ -1,11 +1,11 @@
 # UA-Parser.js
 
-JavaScript-based user-agent parser
+Lightweight JavaScript-based user-agent parser
 
 * Author    : Faisalman <<fyzlman@gmail.com>>
 * Home      : http://faisalman.github.com/ua-parser-js
-* Source	: https://github.com/faisalman/ua-parser-js
-* License	: GPLv2 & MIT
+* Source    : https://github.com/faisalman/ua-parser-js
+* License   : GPLv2 & MIT
 
 ## Features
 
@@ -63,7 +63,7 @@ Get detailed type and version of web browser, layout engine, operating system, a
     console.log(UAParser.result.os);       // {name: "Ubuntu", version: "11.10"}
     
     // let's take another test please
-    UAParser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getOS().name; // prints "OpenBSD"
+    console.log(UAParser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getOS().name); // "OpenBSD"
 </script>
 ```
 
