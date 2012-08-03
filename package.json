@@ -3,7 +3,7 @@
   "name": "ua-parser-js",
   "version": "0.3.1",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
-  "description": "Lightweight JavaScript-based user-agent parser",
+  "description": "Light-weight JavaScript-based all-in-one user-agent parser",
   "keywords": [
     "user agent",
     "parser",

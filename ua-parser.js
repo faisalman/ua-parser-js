@@ -1,14 +1,14 @@
 // UA-Parser.js v0.3.1
-// Lightweight JavaScript-based user-agent parser
+// Light-weight JavaScript-based all-in-one user-agent parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012 Faisalman
 // Licensed under GPLv2 & MIT
 
-(function () {
-    function UAParser (undefined) {
+(function (undefined) {
+    var parser = function UAParser (uastring) {
 
-        var ua = typeof window !== 'undefined' ? window.navigator.userAgent : "";
+        var ua = uastring || typeof window !== 'undefined' ? window.navigator.userAgent : "";
 
         // regexp mapper
         var regxMap = function (ua) {
@@ -228,9 +228,7 @@
 
         this.setUA(ua);
     };
-    
-    var parser = new UAParser();
-    
+        
     // check whether script is running inside node.js export as module
     if (typeof exports !== 'undefined' && this.toString() !== '[object DOMWindow]') {
         if (typeof module !== 'undefined' && module.exports) {
