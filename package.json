@@ -1,43 +1,46 @@
 {
-  "title"       : "UA-Parser.js",
-  "name"        : "ua-parser-js",
-  "version"     : "0.3.0",
-  "author"      : {
-      "name"      : "Faisal Salman",
-      "email"     : "fyzlman@gmail.com",
-      "url"       : "http://faisalman.com"
-  },
-  "description" : "Lightweight JavaScript-based user-agent parser",
-  "keywords"    : [
-    "user-agent",
+  "title": "UA-Parser.js",
+  "name": "ua-parser-js",
+  "version": "0.3.1",
+  "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
+  "description": "Light-weight JavaScript-based all-in-one user-agent parser",
+  "keywords": [
+    "user agent",
     "parser",
     "browser",
     "engine",
     "os",
     "device"
   ],
-  "homepage"    : "http://faisalman.github.com/ua-parser-js",
+  "homepage": "http://github.com/faisalman/ua-parser-js",
   "contributors": [
-    {
-      "name"    : "Faisal Salman",
-      "email"   : "fyzlman@gmail.com"
-    }
+    "Faisal Salman <fyzlman@gmail.com>"
   ],
-  "main"        : "ua-parser.js",
+  "main": "ua-parser",
   "repositories": [
     {
-      "type"    : "git",
-      "url"     : "https://github.com/faisalman/ua-parser-js.git"
+      "type": "git",
+      "url": "https://github.com/faisalman/ua-parser-js.git"
     }
   ],
-  "licenses"    : [
+  "licenses": [
     {
-      "type"    : "GPLv2",
-      "url"     : "http://www.gnu.org/licenses/gpl-2.0.html" 
+      "type": "GPLv2",
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
     },
     {
-      "type"    : "MIT",
-      "url"     : "http://www.opensource.org/licenses/mit-license.php" 
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
     }
-  ]
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "directories": {
+    "lib": "."
+  },
+  "files": [
+    ""
+  ],
+  "repository": "git://github.com/faisalman/ua-parser-js.git"
 }

@@ -1,12 +1,12 @@
-// UA-Parser.js v0.3.0
-// Lightweight JavaScript-based user-agent parser
+// UA-Parser.js v0.3.1
+// Light-weight JavaScript-based all-in-one user-agent parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012 Faisalman
 // Licensed under GPLv2 & MIT
 
-(function () {
-    function UAParser (uastring) {
+(function (undefined) {
+    var parser = function UAParser (uastring) {
 
         var ua = uastring || typeof window !== 'undefined' ? window.navigator.userAgent : "";
 
@@ -97,7 +97,8 @@
 
                 // Webkit/KHTML based
                 /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
-                /(chrome|omniweb|arora|dolfin)\/((\d+)?[\w\.]+)/i,                  // Chrome/OmniWeb/Arora/Dolphin
+                /(chrome|omniweb|arora|dolfin|[tizenaok]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
+                                                                                    // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
                 ], ['name', 'version', 'major'], [
                 /(?:android.+crmo|crios)\/((\d+)?[\w\.]+)/i,                        // Chrome for Android/iOS
                 ], [['name', 'Chrome'], 'version', 'major'], [
@@ -105,7 +106,8 @@
                 /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
                 // Gecko based
-                /(iceweasel|camino|fennec|maemo|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,  // Iceweasel/Camino/Fennec/Maemo/Minimo
+                /(iceweasel|camino|fennec|maemo\sbrowser|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,  
+                                                                                    // Iceweasel/Camino/Fennec/Maemo/Minimo
                 /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape)\/((\d+)?[\w\.]+)/i,
                                                                                     // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe
                 /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
@@ -138,8 +140,9 @@
 
                 // Mobile/Embedded OS
                 /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
-                /(android|symbianos|symbos|webos|palm\os|qnx|bada|rim\stablet\sos)[\/\s-]?([\w\.]+)*/i,
-                                                                                    // Android/Symbian/WebOS/Palm/QNX/Bada/RIM
+                /(tizen)\/([\w\.]+)/i,                                              // Tizen
+                /(android|symbianos|symbos|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i,
+                                                                                    // Android/Symbian/WebOS/Palm/QNX/Bada/RIM/MeeGo
                 /(nintendo|playstation)\s([wids3portable]+)/i,                      // Nintendo/Playstation
 
                 // GNU/Linux based
@@ -168,7 +171,8 @@
                 ], ['name', ['version', /_/g, '.']], [
 
                 // Other
-                /(macintosh|unix|minix|beos)[\/\s]?()*/i
+                /(haiku)\s(\w+)/i,                                                  // Haiku
+                /(macintosh|unix|minix|beos)[\/\s]?()*/i                            // UNIX/Minix/BeOS
                 ], ['name', 'version']);
         };
 
@@ -178,8 +182,8 @@
 
                 /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
                 /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-                /(blackberry|benq|nokia|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte)[\s_-]?([\w-]+)*/i,  
-                                                                                    // BenQ/Nokia/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE
+                /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte)[\s_-]?([\w-]+)*/i,  
+                                                                                    // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE
                 /(hp)\s([\w\s]+)/i,                                                 // HP iPAQ
                 /(hp).+(touchpad)/i,                                                // HP TouchPad
                 /(kindle)\/([\w\.]+)/i,                                             // Kindle
@@ -204,7 +208,11 @@
                 ], [['name', 'Asus'], 'version'], [
 
                 /sie-(\w+)*/i                                                       // Siemens
-                ], [['name', 'Siemens'], 'version']);
+                ], [['name', 'Siemens'], 'version'], [
+                
+                /(?=maemo|nokia).*(n900|lumia\s\d+)/i,                              // Nokia
+                /nokia[\s_-]?([\w-]+)*/i
+                ], [['name', 'Nokia'], 'version']);
         };
 
         this.setUA = function (uastring) {
@@ -220,9 +228,7 @@
 
         this.setUA(ua);
     };
-    
-    var parser = new UAParser();
-    
+        
     // check whether script is running inside node.js export as module
     if (typeof exports !== 'undefined' && this.toString() !== '[object DOMWindow]') {
         if (typeof module !== 'undefined' && module.exports) {
