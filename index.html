@@ -146,13 +146,14 @@
       var pre = document.getElementsByTagName('pre')[0];
       var sel = document.getElementsByTagName('select')[0];
       var txt = document.getElementsByTagName('input')[0];
+	  var parser = new UAParser();
       for(var i = 0; i < uaExampleList.length; i++){
         var opt = document.createElement('option');
         opt.innerText = uaExampleList[i];
         sel.appendChild(opt);
       }
       var fillTable = function(uastring){
-        var parser = UAParser.setUA(uastring);
+        parser.setUA(uastring);
         var browser = parser.getBrowser();
         var engine = parser.getEngine();
         var os = parser.getOS();
