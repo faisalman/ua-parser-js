@@ -1,19 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <title>UA-Parser.js - JavaScript-based User-Agent Parser</title>
+    <title>UA-Parser.js - Lightweight JavaScript-based User Agent String Parser</title>
     <meta name="author" content="Faisalman" />
-    <meta name="description" content="Lightweight JavaScript-based user-agent parser" />
+    <meta name="description" content="UA-Parser.js is a lightweight JavaScript-based user-agent string parser library" />
     <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
-    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Varela|Varela+Round' rel='stylesheet' type='text/css'>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
       html, input, select {
-        font: 14px/20px Georgia, Helvetica, Ubuntu, Arial, sans-serif;
-        background: #f0f0f0;
+        font: 14px/20px Varela, Georgia, Helvetica, Ubuntu, Arial, sans-serif;
         color: #333;
       }
       body {
@@ -27,12 +26,16 @@
         padding: 20px 0 0;
         position: relative;
       }
+	  h1 a {
+		text-decoration: none;
+		color: #333;
+	  }
       h1 {
         margin-bottom: 30px;
         font-size: 4em;
       }
       h1, h2, th, .ua {
-        font-family: 'Dancing Script', Helvetica, Ubuntu, Arial, sans-serif;
+        font-family: 'Varela Round', Helvetica, Ubuntu, Arial, sans-serif;
       }
       .share {
         position: absolute;
@@ -44,7 +47,7 @@
       pre {
         margin: 0 0 20px;
         padding: 10px;
-        background: #ccc;
+        background: #f0f0f0;
         white-space: pre-wrap;
         overflow: auto;
       }
@@ -57,8 +60,8 @@
         font-size: 2em;
       }
       th, td {
-        border-left: 1px solid #ccc;
-        border-top: 1px solid #ccc;
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
         min-width: 100px;
         padding: 20px;
         text-align: center;
@@ -67,7 +70,7 @@
         border-bottom: 1px solid #ccc;
       }
       th:last-child, td:last-child {
-        border-right: 1px solid #ccc;
+        border-right: 1px solid #fff;
       }
       td {
         color: red;
@@ -76,17 +79,21 @@
         color: #777;
         width: 100%;
       }
-      input {
+      select, input {
         border: 1px solid #ccc;
         height: 30px;
         box-shadow: inset 0 0 10px #ccc;
       }
       hr {
+		border: 0;
         margin: 20px 0;
       }
       p {
         margin: 10px 0;
       }
+	  pre, code {
+		font-family: 'Ubuntu Mono', monospace;
+	  }
       .ua {
         font-size: 1.5em;
       }
@@ -96,8 +103,8 @@
   </head>
   <body>
     <header>
-      <h1>UA-Parser.js</h1>
-      <h2>JavaScript-based User-Agent Parser</h2>
+      <h1><a href="">UA-Parser.js</a></h1>
+      <h2>Lightweight JavaScript-based User-Agent String Parser</h2>
       <hr />
       <p class="share">
         <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlman">Tweet</a>
@@ -128,18 +135,20 @@
       </table>
     </section>
     <section>
-      <p><span class="ua">Select</span> a user-agent string to be tested:</p>
+      <p>Wanna test other UA string? Select a user-agent string to be tested:</p>
       <select>
         <option>Pick one</option>
       </select>
-      <p>or <span class="ua">Enter</span> any user-agent string you want to test here:</p>
+      <p>Wanna test more? Enter any user-agent string you want to test here:</p>
       <input type="text" />
     </section>
     <footer>
       <hr />
       <p>
-        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. Licensed under GPLv2 & MIT. Download & Fork @
-        <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a>
+        <span class="ua">UA-Parser.js</span> &copy; 2012 Faisalman. <br/>
+		Dual licensed under GPLv2 & MIT license<br/>
+        Source: <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a><br/>
+		Node.js package: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a>
       </p>
     </footer>
     <script>
@@ -147,9 +156,18 @@
       var sel = document.getElementsByTagName('select')[0];
       var txt = document.getElementsByTagName('input')[0];
 	  var parser = new UAParser();
+	  var fill = function(el, prop){
+		if(prop !== undefined){
+			el.innerHTML = prop;
+			el.style.color = "red";
+		} else {
+			el.innerHTML = "No data";
+			el.style.color = "#aaa";
+		}
+	  }
       for(var i = 0; i < uaExampleList.length; i++){
         var opt = document.createElement('option');
-        opt.innerText = uaExampleList[i];
+        opt.innerHTML = uaExampleList[i];
         sel.appendChild(opt);
       }
       var fillTable = function(uastring){
@@ -159,15 +177,15 @@
         var os = parser.getOS();
         var device = parser.getDevice();
         var tbl = document.getElementsByTagName('td');
-        tbl[0].innerText = browser.name;
-        tbl[1].innerText = engine.name;
-        tbl[2].innerText = os.name;
-        tbl[3].innerText = device.name;
-        tbl[4].innerText = browser.version;
-        tbl[5].innerText = engine.version;
-        tbl[6].innerText = os.version;
-        tbl[7].innerText = device.version;
-        pre.innerHTML = 'Result for <strong>' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</strong>';
+        fill(tbl[0], browser.name);
+        fill(tbl[1], engine.name);
+        fill(tbl[2], os.name);
+        fill(tbl[3], device.name);
+        fill(tbl[4], browser.version);
+        fill(tbl[5], engine.version);
+        fill(tbl[6], os.version);
+        fill(tbl[7], device.version);
+        pre.innerHTML = 'Result for <span style="color:red">' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</span>';
       }
       fillTable();
       sel.addEventListener('change', function(){
