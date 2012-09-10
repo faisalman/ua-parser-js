@@ -3,7 +3,7 @@
   "name": "ua-parser-js",
   "version": "0.3.1",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
-  "description": "Light-weight JavaScript-based all-in-one user-agent parser",
+  "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
     "user agent",
     "parser",
@@ -23,6 +23,11 @@
       "url": "https://github.com/faisalman/ua-parser-js.git"
     }
   ],
+  "repository" :
+  {
+    "type": "git",
+    "url": "https://github.com/faisalman/ua-parser-js.git"
+  },
   "licenses": [
     {
       "type": "GPLv2",
