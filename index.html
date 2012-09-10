@@ -127,6 +127,12 @@
           <td></td>
           <td></td>
         </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
           <td></td>
           <td></td>
           <td></td>
@@ -135,11 +141,11 @@
       </table>
     </section>
     <section>
-      <p>Wanna test other UA string? Select a user-agent string to be tested:</p>
+      <p>How well this parse other user-agent string? try select a string to be parsed:</p>
       <select>
         <option>Pick one</option>
       </select>
-      <p>Wanna test more? Enter any user-agent string you want to test here:</p>
+      <p>Want more? try enter any user-agent string you want to parse here:</p>
       <input type="text" />
     </section>
     <footer>
@@ -157,14 +163,34 @@
       var txt = document.getElementsByTagName('input')[0];
 	  var parser = new UAParser();
 	  var fill = function(el, prop){
-		if(prop !== undefined){
+		if(typeof prop === 'object'){
+		    el.innerHTML = '';
+		    el.appendChild(prop);
+		} else if(typeof prop === 'string'){
 			el.innerHTML = prop;
 			el.style.color = "red";
 		} else {
 			el.innerHTML = "No data";
 			el.style.color = "#aaa";
 		}
-	  }
+	  };
+	  var imgMap = function(prop, arr){
+        var img = document.createElement('img');
+        img.src = 'images/undefined.png';
+	    for(var i in arr){
+	        if(arr.hasOwnProperty(i)){
+	            var isobj = typeof arr[i] === 'object';
+                var r = isobj ? new RegExp(arr[i][0], 'i') : new RegExp(arr[i], 'i');
+                if(r.test(prop['name'])){
+                    img.src = 'images/'+(isobj?arr[i][1]:arr[i])+'.png';
+                    return img;
+                } else if(prop['name'] !== undefined){
+                    img.src = 'images/check.png';
+                }
+	        }
+	    }
+	    return img;
+	  };
       for(var i = 0; i < uaExampleList.length; i++){
         var opt = document.createElement('option');
         opt.innerHTML = uaExampleList[i];
@@ -177,14 +203,16 @@
         var os = parser.getOS();
         var device = parser.getDevice();
         var tbl = document.getElementsByTagName('td');
-        fill(tbl[0], browser.name);
-        fill(tbl[1], engine.name);
-        fill(tbl[2], os.name);
-        fill(tbl[3], device.name);
-        fill(tbl[4], browser.version);
-        fill(tbl[5], engine.version);
-        fill(tbl[6], os.version);
-        fill(tbl[7], device.version);
+        var prop = [
+            imgMap(browser, ['ie', 'chrom', 'konqueror', 'safari', 'opera', 'firefox', ['fennec', 'firefox'], 'mozilla']),
+            imgMap(engine, [['trident', 'ie'], ['webkit', 'safari'], ['khtml', 'konqueror'], ['presto', 'opera'], ['gecko', 'mozilla']]),
+            imgMap(os, ['meego', 'symbian', 'android', 'blackberry', 'bada', 'windows', 'chromium', 'mac', 'freebsd', 'bsd', 'ubuntu', 'gentoo', 'fedora', 'mandriva', 'redhat', 'suse', 'debian', 'slackware', 'arch', 'linux', 'solaris', ['ios', 'mac'], ['rim', 'blackberry']]),
+            imgMap(device, [['undefined', 'pc'], 'ipad', ['tablet', 'ipad'], ['playbook', 'ipad'], ['\\w+', 'phone']]),
+            browser.name,       engine.name,    os.name,    device.name,
+            browser.version,    engine.version, os.version, device.version];
+        for(var i = 0; i < prop.length; i++){
+            fill(tbl[i], prop[i]);
+        }
         pre.innerHTML = 'Result for <span style="color:red">' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</span>';
       }
       fillTable();
