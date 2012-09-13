@@ -8,7 +8,7 @@
 (function (undefined) {
     var parser = function UAParser (uastring) {
 
-        var ua = uastring || typeof window !== 'undefined' ? window.navigator.userAgent : "";
+        var ua = uastring || (typeof window !== 'undefined' ? window.navigator.userAgent : "");
 
         // regexp mapper
         var regxMap = function (ua) {
@@ -46,29 +46,28 @@
         };
 
         var mapper = {
-            os : {        
-                win: function (str, match) {
-                    switch (match.toLowerCase()) {
-                        case '4.90':
-                            return 'ME';
-                        case 'nt3.51':
-                            return 'NT 3.11';
-                        case 'nt4.0':
-                            return 'NT 4.0';
-                        case 'nt 5.0':
-                            return '2000';
-                        case 'nt 5.1':
-                        case 'nt 5.2':
-                            return 'XP';
-                        case 'nt 6.0':
-                            return 'Vista';
-                        case 'nt 6.1':
-                            return '7';
-                        case 'nt 6.2':
-                            return '8';
-                        default:
-                            return match;
-                    };
+            check: function(str, map){
+                for (var i = 0; i < map.length; i++) {
+                    if (str.toLowerCase().indexOf(map[i][0]) !== -1) {
+                        return map[i][1];
+                    }
+                }
+                return str;
+            },
+            os : {
+                win: function (match, str1) {
+                    var map = [
+                        ['4.90',     'ME'],
+                        ['nt3.51',   'NT 3.11'],
+                        ['nt4.0',    'NT 4.0'],
+                        ['nt 5.0',   '2000'],
+                        ['nt 5.1',   'XP'],
+                        ['nt 5.2',   'XP'],
+                        ['nt 6.0',   'Vista'],
+                        ['nt 6.1',   '7'],
+                        ['nt 6.2',   '8'],
+                    ];
+                    return mapper.check(str1, map);
                 }
             }
         };
@@ -130,7 +129,7 @@
             return regxMap(uastring || ua, [
 
                 // Windows based
-                /(windows\sphone\sos|windows)\s?([nt\d\.\s]+\d)*/i                  // Windows
+                /(windows\sphone\sos|windows)\s?([nt\d\.\s]+\d)/i                   // Windows
                 ], ['name', ['version', /(.+)/gi, mapper.os.win]], [
                 /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
                 ], [['name', 'Windows'], ['version', /(.+)/gi, mapper.os.win]], [
