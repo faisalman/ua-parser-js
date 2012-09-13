@@ -1,4 +1,4 @@
-// UA-Parser.js v0.3.2
+// UA-Parser.JS v0.3.3
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -12,10 +12,10 @@
 
         // regexp mapper
         var regxMap = function (ua) {
-            var result = {}, i, j, k, l;
+            var result = {}, i, j, k, l, m;
             for (i = 1; i < arguments.length; i += 2) {
-                var regex = arguments[i],       // odd sequence (2,4,6,..)
-                    props = arguments[i + 1];   // even sequence (3,5,7,..)
+                var regex = arguments[i],                   // odd sequence (2,4,6,..)
+                    props = arguments[i + 1];               // even sequence (3,5,7,..)
                 for (k = 0; k < props.length; k++) {
                     if (typeof props[k] == 'object') {
                         result[props[k][0]] = undefined;
@@ -24,17 +24,17 @@
                     }
                 }
                 for (j = 0; j < regex.length; j++) {
-                    var match = regex[j].exec(ua);
-                    if (!!match) {
+                    m = regex[j].exec(ua);
+                    if (!!m) {
                         l = 1;
                         for (k = 0; k < props.length; k++) {
                             if (typeof props[k] === 'object' && props[k].length === 2) {
                                 result[props[k][0]] = props[k][1];
                                 l -= 1;
                             } else if (typeof props[k] === 'object' && props[k].length === 3) {
-                                result[props[k][0]] = (!!match[k + l]) ? match[k + l].replace(props[k][1], props[k][2]) : undefined;
+                                result[props[k][0]] = (!!m[k + l]) ? m[k + l].replace(props[k][1], props[k][2]) : undefined;
                             } else {
-                                result[props[k]] = (!!match[k + l]) ? match[k + l] : undefined;
+                                result[props[k]] = (!!m[k + l]) ? m[k + l] : undefined;
                             }
                         }
                         break;
