@@ -1,6 +1,6 @@
-# UA-Parser.js
+# UA-Parser.JS
 
-Light-weight JavaScript-based all-in-one user-agent parser
+Lightweight JavaScript-based User-Agent string parser
 
 * Author    : Faisalman <<fyzlman@gmail.com>>
 * Home      : http://faisalman.github.com/ua-parser-js
@@ -9,14 +9,15 @@ Light-weight JavaScript-based all-in-one user-agent parser
 
 ## Features
 
-Get detailed type and version of web browser, layout engine, operating system, and device.
+Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string.
 
 ## Methods
 
-* `getBrowser([uastring])`
-* `getDevice([uastring])`
-* `getEngine([uastring])`
-* `getOS([uastring])`
+* `getBrowser()`
+* `getDevice()`
+* `getEngine()`
+* `getOS()`
+* `getUA()`
 * `setUA(uastring)`
 
 ## Properties
@@ -31,7 +32,7 @@ Get detailed type and version of web browser, layout engine, operating system, a
     
 	var parser = new UAParser();
 	
-    // by default it takes ua string from current browser's window.navigator
+    // by default it takes ua string from current browser's window.navigator.userAgent
     console.log(parser.result);
     /*
         /// this will print an object structured like this:
@@ -77,23 +78,23 @@ var parser = new UAParser();
 var ua1 = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
 var ua2 = 'Midori/0.2 (X11; Linux; U; cs-cz) WebKit/531.2+';
 
-parser.setUA(ua1).getDevice().name; // "PlayBook"
-parser.getOS()                      // {name: "RIM Tablet OS", version: "1.0.0"}
-parser.getOS(ua2)                   // {name: "Linux", version: undefined}
-parser.getOS()                      // {name: "RIM Tablet OS", version: "1.0.0"}
-parser.getEngine().name;            // "AppleWebKit"
+console.log(parser.setUA(ua1).getDevice().name);    // "PlayBook"
+console.log(parser.getOS())                         // {name: "RIM Tablet OS", version: "1.0.0"}
+console.log(parser.getOS(ua2))                      // {name: "Linux", version: undefined}
+console.log(parser.getOS())                         // {name: "RIM Tablet OS", version: "1.0.0"}
+console.log(parser.getEngine().name);               // "AppleWebKit"
 ```
 
 ## License
 
 Copyright © 2012 Faisalman <<fyzlman@gmail.com>>
 
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
+Permission is hereby granted, free of charge, to any person obtaining a copy of 
+this software and associated documentation files (the "Software"), to deal in 
+the Software without restriction, including without limitation the rights to use, 
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the 
+Software, and to permit persons to whom the Software is furnished to do so, 
+subject to the following conditions:
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Software.
