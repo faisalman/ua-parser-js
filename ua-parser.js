@@ -56,9 +56,17 @@
         var mapper = {
         
             check : function(str, map){
-                for (var i = 0; i < map.length; i++) {
-                    if (str.toLowerCase().indexOf(map[i][0]) !== -1) {
-                        return map[i][1];
+                for (var i in map){
+                    if (map.hasOwnProperty(i)) {
+                        if (typeof map[i] === 'object' && map[i].length > 0) {
+                            for (var j = 0; j < map[i].length; j++) {
+                                if (str.toLowerCase().indexOf(map[i][j]) !== -1) {
+                                    return i;
+                                }
+                            }
+                        } else if (str.toLowerCase().indexOf(map[i]) !== -1) {
+                            return i;
+                        }
                     }
                 }
                 return str;
@@ -66,18 +74,16 @@
             
             os : {
                 win : function (match, str1) {
-                    var map = [
-                        ['4.90',     'ME'],
-                        ['nt3.51',   'NT 3.11'],
-                        ['nt4.0',    'NT 4.0'],
-                        ['nt 5.0',   '2000'],
-                        ['nt 5.1',   'XP'],
-                        ['nt 5.2',   'XP'],
-                        ['nt 6.0',   'Vista'],
-                        ['nt 6.1',   '7'],
-                        ['nt 6.2',   '8'],
-                    ];
-                    return mapper.check(str1, map);
+                    return mapper.check(str1, {
+                        'ME'        : '4.90',
+                        'NT 3.11'   : 'nt3.51',
+                        'NT 4.0'    : 'nt4.0',
+                        '2000'      : 'nt 5.0',
+                        'XP'        : ['nt 5.1', 'nt 5.2'],
+                        'Vista'     : 'nt 6.0',
+                        '7'         : 'nt 6.1',
+                        '8'         : 'nt 6.2'
+                    });
                 }
             }
         };
