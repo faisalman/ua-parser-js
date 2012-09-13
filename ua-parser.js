@@ -12,10 +12,16 @@
 
         // regexp mapper
         var regxMap = function (ua) {
+            
             var result = {}, i, j, k, l, m;
+            
+            // loop through all regexes maps
             for (i = 1; i < arguments.length; i += 2) {
+            
                 var regex = arguments[i],                   // odd sequence (2,4,6,..)
                     props = arguments[i + 1];               // even sequence (3,5,7,..)
+                
+                // build object barebones
                 for (k = 0; k < props.length; k++) {
                     if (typeof props[k] == 'object') {
                         result[props[k][0]] = undefined;
@@ -23,30 +29,33 @@
                         result[props[k]] = undefined;
                     }
                 }
+                
+                // try matching uastring with regexes
                 for (j = 0; j < regex.length; j++) {
-                    m = regex[j].exec(ua);
-                    if (!!m) {
-                        l = 1;
+                    l = regex[j].exec(ua);
+                    if (!!l) {
                         for (k = 0; k < props.length; k++) {
+                            m = l[k + 1];
                             if (typeof props[k] === 'object' && props[k].length === 2) {
                                 result[props[k][0]] = props[k][1];
-                                l -= 1;
                             } else if (typeof props[k] === 'object' && props[k].length === 3) {
-                                result[props[k][0]] = (!!m[k + l]) ? m[k + l].replace(props[k][1], props[k][2]) : undefined;
+                                result[props[k][0]] = m ? m.replace(props[k][1], props[k][2]) : undefined;
                             } else {
-                                result[props[k]] = (!!m[k + l]) ? m[k + l] : undefined;
+                                result[props[k]] = m ? m : undefined;
                             }
                         }
                         break;
                     }
                 }
-                if(!!l) break; // break the loop if match found
+                
+                if(!!l) break; // break the loop immediately if match found
             }
             return result;
         };
 
         var mapper = {
-            check: function(str, map){
+        
+            check : function(str, map){
                 for (var i = 0; i < map.length; i++) {
                     if (str.toLowerCase().indexOf(map[i][0]) !== -1) {
                         return map[i][1];
@@ -54,8 +63,9 @@
                 }
                 return str;
             },
+            
             os : {
-                win: function (match, str1) {
+                win : function (match, str1) {
                     var map = [
                         ['4.90',     'ME'],
                         ['nt3.51',   'NT 3.11'],
@@ -83,8 +93,9 @@
                 // Presto based
                 /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
                 /(opera\smobi)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mobile
-                /(opera).*\/((\d+)?[\w\.]+)/i,                                      // Opera
-
+                /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera
+                /(opera)[\/\s]+((\d+)?[\w\.]+)/i,
+                
                 // Trident based
                 /(avant\sbrowser|iemobile|slimbrowser)[\/\s]?((\d+)?[\w\.]*)/i,     // Avant/IEMobile/SlimBrowser
                 /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
@@ -94,7 +105,7 @@
                 /(chrome|omniweb|arora|dolfin|[tizenaok]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
                                                                                     // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
                 ], ['name', 'version', 'major'], [
-                /(?:android.+crmo|crios)\/((\d+)?[\w\.]+)/i,                        // Chrome for Android/iOS
+                /(?:android.+(crmo|crios))\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
                 ], [['name', 'Chrome'], 'version', 'major'], [
                 /(mobile\ssafari|safari|konqueror)\/((\d+)?[\w\.]+)/i,              // Safari/Konqueror
                 /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
@@ -149,11 +160,11 @@
                 /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
                 ], ['name', 'version'], [
 
-                /cros\s([\w\.\s]+\d)/i                                              // Chromium OS
+                /(cros)\s([\w\.\s]+\d)/i                                            // Chromium OS
                 ], [['name', 'Chromium OS'], 'version'],[
 
                 // Solaris
-                /sunos\s?([\w\.\s]+\d)*/i                                           // Solaris
+                /(sunos)\s?([\w\.\s]+\d)*/i                                         // Solaris
                 ], [['name', 'Solaris'], 'version'], [
 
                 // BSD based
@@ -191,23 +202,23 @@
                 /(zte)-([\w]+)*/i
                 ], ['name', ['version', /_/g, ' ']], [
                             
-                /\s(milestone|mz601|droid[2x]?|xoom)[globa\s]*\sbuild\//i,          // Motorola
-                /mot[\s-]?(\w+)*/i
+                /\s((milestone|mz601|droid[2x]?|xoom))[globa\s]*\sbuild\//i,        // Motorola
+                /(mot)[\s-]?(\w+)*/i
                 ], [['name', 'Motorola'], 'version'], [
                 
-                /(s[cgp]h-\w+|gt-\w+|galaxy\snexus)/i,                              // Samsung
-                /sam[sung]*[\s-]*(\w+-?[\w-]*)*/i,
-                /sec-(sgh\w+)/i
+                /((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,                            // Samsung
+                /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
+                /sec-((sgh\w+))/i
                 ], [['name', 'Samsung'], 'version'], [
                 
-                /(transfo[prime\s]{4,10}\s\w+|(?:android).*eeepc)/i                 // Asus
+                /((transfo[prime\s]{4,10}\s\w+|(?:android.*)eeepc))/i               // Asus
                 ], [['name', 'Asus'], 'version'], [
 
-                /sie-(\w+)*/i                                                       // Siemens
+                /(sie)-(\w+)*/i                                                     // Siemens
                 ], [['name', 'Siemens'], 'version'], [
                 
-                /(?=maemo|nokia).*(n900|lumia\s\d+)/i,                              // Nokia
-                /nokia[\s_-]?([\w-]+)*/i
+                /(maemo|nokia).*(n900|lumia\s\d+)/i,                                // Nokia
+                /(nokia)[\s_-]?([\w-]+)*/i
                 ], [['name', 'Nokia'], 'version']);
         };
         
