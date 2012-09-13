@@ -1,28 +1,31 @@
-// UA-Parser.js v0.3.1
-// Light-weight JavaScript-based all-in-one user-agent parser
+// UA-Parser.js v0.3.2
+// Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012 Faisalman
-// Licensed under GPLv2 & MIT
+// Dual licensed under GPLv2 & MIT
 
 (function (undefined) {
     var parser = function UAParser (uastring) {
 
-        var ua = uastring || typeof window !== 'undefined' ? window.navigator.userAgent : "";
+        var ua = uastring || (typeof window !== 'undefined' ? window.navigator.userAgent : "");
 
         // regexp mapper
         var regxMap = function (ua) {
-            var result;
-            var i, j, k, l;
+            var result = {}, i, j, k, l;
             for (i = 1; i < arguments.length; i += 2) {
-                var regex = arguments[i];
-                var props = arguments[i + 1];
-                var isMatchFound = false;
+                var regex = arguments[i],       // odd sequence (2,4,6,..)
+                    props = arguments[i + 1];   // even sequence (3,5,7,..)
+                for (k = 0; k < props.length; k++) {
+                    if (typeof props[k] == 'object') {
+                        result[props[k][0]] = undefined;
+                    } else {
+                        result[props[k]] = undefined;
+                    }
+                }
                 for (j = 0; j < regex.length; j++) {
                     var match = regex[j].exec(ua);
-                    //console.log(match);
                     if (!!match) {
-                        result = {};
                         l = 1;
                         for (k = 0; k < props.length; k++) {
                             if (typeof props[k] === 'object' && props[k].length === 2) {
@@ -34,46 +37,37 @@
                                 result[props[k]] = (!!match[k + l]) ? match[k + l] : undefined;
                             }
                         }
-                        isMatchFound = true;
                         break;
                     }
                 }
-                if (!isMatchFound) {
-                    result = {};
-                    for (k in props) {
-                        if (props.hasOwnProperty(k)) {
-                            if (typeof props[k] == 'object') {
-                                result[props[k][0]] = undefined;
-                            } else {
-                                result[props[k]] = undefined;
-                            }
-                        }
-                    }
-                } else {
-                    return result;
-                }
+                if(!!l) break; // break the loop if match found
             }
             return result;
         };
 
         var mapper = {
-            os : {        
-                win: function (str, match) {
-                    switch (match.toLowerCase()) {
-                        case 'nt 5.0':
-                            return '2000';
-                        case 'nt 5.1':
-                        case 'nt 5.2':
-                            return 'XP';
-                        case 'nt 6.0':
-                            return 'Vista';
-                        case 'nt 6.1':
-                            return '7';
-                        case 'nt 6.2':
-                            return '8';
-                        default:
-                            return match;
-                    };
+            check: function(str, map){
+                for (var i = 0; i < map.length; i++) {
+                    if (str.toLowerCase().indexOf(map[i][0]) !== -1) {
+                        return map[i][1];
+                    }
+                }
+                return str;
+            },
+            os : {
+                win: function (match, str1) {
+                    var map = [
+                        ['4.90',     'ME'],
+                        ['nt3.51',   'NT 3.11'],
+                        ['nt4.0',    'NT 4.0'],
+                        ['nt 5.0',   '2000'],
+                        ['nt 5.1',   'XP'],
+                        ['nt 5.2',   'XP'],
+                        ['nt 6.0',   'Vista'],
+                        ['nt 6.1',   '7'],
+                        ['nt 6.2',   '8'],
+                    ];
+                    return mapper.check(str1, map);
                 }
             }
         };
@@ -96,7 +90,7 @@
                 /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
 
                 // Webkit/KHTML based
-                /(chromium|flock|rockmelt|midori|epiphany)\/((\d+)?[\w\.]+)/i,      // Chromium/Flock/RockMelt/Midori/Epiphany
+                /(chromium|flock|rockmelt|midori|epiphany|silk)\/((\d+)?[\w\.]+)/i, // Chromium/Flock/RockMelt/Midori/Epiphany
                 /(chrome|omniweb|arora|dolfin|[tizenaok]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
                                                                                     // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
                 ], ['name', 'version', 'major'], [
@@ -135,9 +129,11 @@
             return regxMap(uastring || ua, [
 
                 // Windows based
-                /(windows\sphone\sos|windows)\s+([\w\.\s]+)*/i,                     // Windows
-                ], ['name', ['version', /(nt\s[\d\.]+)/gi, mapper.os.win]], [
-
+                /(windows\sphone\sos|windows)\s?([nt\d\.\s]+\d)/i                   // Windows
+                ], ['name', ['version', /(.+)/gi, mapper.os.win]], [
+                /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
+                ], [['name', 'Windows'], ['version', /(.+)/gi, mapper.os.win]], [
+                
                 // Mobile/Embedded OS
                 /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
                 /(tizen)\/([\w\.]+)/i,                                              // Tizen
@@ -153,11 +149,11 @@
                 /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
                 ], ['name', 'version'], [
 
-                /cros\s([\w\.\s]+)/i                                                // Chromium OS
+                /cros\s([\w\.\s]+\d)/i                                              // Chromium OS
                 ], [['name', 'Chromium OS'], 'version'],[
 
                 // Solaris
-                /sunos\s?([\w\.\s]+)*/i                                             // Solaris
+                /sunos\s?([\w\.\s]+\d)*/i                                           // Solaris
                 ], [['name', 'Solaris'], 'version'], [
 
                 // BSD based
@@ -167,7 +163,7 @@
                 /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
                 ], [['name', /.+/g, 'iOS'], ['version', /_/g, '.']], [
 
-                /(mac\sos)\sx\s([\w\s\.]+)/i,                                       // Mac OS
+                /(mac\sos\sx)\s([\w\s\.]+\w)/i,                                     // Mac OS
                 ], ['name', ['version', /_/g, '.']], [
 
                 // Other
@@ -184,7 +180,7 @@
                 /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
                 /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte)[\s_-]?([\w-]+)*/i,  
                                                                                     // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE
-                /(hp)\s([\w\s]+)/i,                                                 // HP iPAQ
+                /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
                 /(hp).+(touchpad)/i,                                                // HP TouchPad
                 /(kindle)\/([\w\.]+)/i,                                             // Kindle
                 /(lg)[e;\s-]+(\w+)*/i,                                              // LG
@@ -214,9 +210,13 @@
                 /nokia[\s_-]?([\w-]+)*/i
                 ], [['name', 'Nokia'], 'version']);
         };
+        
+        this.getUA = function() {
+            return ua;
+        };
 
         this.setUA = function (uastring) {
-            ua = uastring || ua;
+            ua = uastring;
             this.result = {
                 browser : this.getBrowser(),
                 engine  : this.getEngine(),
