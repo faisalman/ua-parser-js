@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>UA-Parser.js - Lightweight JavaScript-based User Agent String Parser</title>
+    <meta charset="utf-8">
     <meta name="author" content="Faisalman" />
     <meta name="description" content="UA-Parser.js is a lightweight JavaScript-based user-agent string parser library" />
     <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
@@ -12,7 +13,7 @@
         padding: 0;
       }
       html, input, select {
-        font: 14px/20px Varela, Georgia, Helvetica, Ubuntu, Arial, sans-serif;
+        font: 14px/20px Varela, Helvetica, Georgia, Ubuntu, Arial, sans-serif;
         color: #333;
       }
       body {
@@ -35,7 +36,7 @@
         font-size: 4em;
       }
       h1, h2, th, .ua {
-        font-family: 'Varela Round', Helvetica, Ubuntu, Arial, sans-serif;
+        font-family: 'Varela Round', Helvetica, Georgia, Ubuntu, Arial, sans-serif;
       }
       .share {
         position: absolute;
@@ -197,7 +198,7 @@
         sel.appendChild(opt);
       }
       var fillTable = function(uastring){
-        parser.setUA(uastring);
+        if(uastring) parser.setUA(uastring);
         var browser = parser.getBrowser();
         var engine = parser.getEngine();
         var os = parser.getOS();
@@ -213,7 +214,7 @@
         for(var i = 0; i < prop.length; i++){
             fill(tbl[i], prop[i]);
         }
-        pre.innerHTML = 'Result for <span style="color:red">' + (uastring ? uastring.replace(/</g,'&lt;') : 'your browser\'s user-agent string') + ' :</span>';
+        pre.innerHTML = 'Result for <span style="color:red">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (your browser User-Agent string)') + ' :</span>';
       }
       fillTable();
       sel.addEventListener('change', function(){
