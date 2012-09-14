@@ -11,15 +11,15 @@
         var ua = uastring || (typeof window !== 'undefined' ? window.navigator.userAgent : "");
 
         // regexp mapper
-        var regxMap = function (ua) {
+        var regxMap = function (args) {
             
             var result = {}, i, j, k, l, m;
             
             // loop through all regexes maps
-            for (i = 1; i < arguments.length; i += 2) {
+            for (i = 0; i < arguments.length; i += 2) {
             
-                var regex = arguments[i],                   // odd sequence (2,4,6,..)
-                    props = arguments[i + 1];               // even sequence (3,5,7,..)
+                var regex = arguments[i],                   // odd sequence (0,2,4,..)
+                    props = arguments[i + 1];               // even sequence (1,3,5,..)
                 
                 // build object barebones
                 for (k = 0; k < props.length; k++) {
@@ -88,9 +88,9 @@
             }
         };
 
-        this.getBrowser = function (uastring) {
+        this.getBrowser = function () {
 
-            return regxMap(uastring || ua, [
+            return regxMap([
 
                 // Mixed
                 /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
@@ -128,9 +128,9 @@
                 ], ['name', 'version', 'major']);  
         };
 
-        this.getEngine = function (uastring) {
+        this.getEngine = function () {
 
-            return regxMap(uastring || ua, [
+            return regxMap([
 
                 /(presto)\/([\w\.]+)/i,                                             // Presto
                 /([aple]*webkit|trident)\/([\w\.]+)/i,                              // Webkit/Trident
@@ -141,9 +141,9 @@
                 ], ['version', 'name']);
         };
 
-        this.getOS = function (uastring) { 
+        this.getOS = function () { 
 
-            return regxMap(uastring || ua, [
+            return regxMap([
 
                 // Windows based
                 /(windows\sphone\sos|windows)\s?([nt\d\.\s]+\d)/i                   // Windows
@@ -189,9 +189,9 @@
                 ], ['name', 'version']);
         };
 
-        this.getDevice = function (uastring) { 
+        this.getDevice = function () { 
 
-            return regxMap(uastring || ua, [
+            return regxMap([
 
                 /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
                 /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
