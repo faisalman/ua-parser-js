@@ -17,12 +17,9 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 * `getDevice()`
 * `getEngine()`
 * `getOS()`
+* `getResult()`
 * `getUA()`
 * `setUA(uastring)`
-
-## Properties
-
-* `result`
 
 ## Example
 
@@ -33,7 +30,7 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 	var parser = new UAParser();
 	
     // by default it takes ua string from current browser's window.navigator.userAgent
-    console.log(parser.result);
+    console.log(parser.getResult());
     /*
         /// this will print an object structured like this:
         {
@@ -61,9 +58,9 @@ Extract detailed type of web browser, layout engine, operating system, and devic
     var uastr = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
     parser.setUA(uastr);
     
-    console.log(parser.result.browser);  // {name: "Chromium", major: "15", version: "15.0.874.106"}
-    console.log(parser.result.engine);   // {name: "AppleWebKit", version: "535.2"}
-    console.log(parser.result.os);       // {name: "Ubuntu", version: "11.10"}
+    console.log(parser.getResult().browser);    // {name: "Chromium", major: "15", version: "15.0.874.106"}
+    console.log(parser.getResult().engine);     // {name: "AppleWebKit", version: "535.2"}
+    console.log(parser.getResult().os);         // {name: "Ubuntu", version: "11.10"}
     
     // let's take another test please
     console.log(parser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getOS().name); // "OpenBSD"

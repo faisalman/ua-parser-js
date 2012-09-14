@@ -232,14 +232,17 @@
             return ua;
         };
 
-        this.setUA = function (uastring) {
-            ua = uastring;
-            this.result = {
+        this.getResult = function() {
+            return {
                 browser : this.getBrowser(),
                 engine  : this.getEngine(),
                 os      : this.getOS(),
                 device  : this.getDevice()
             };
+        };
+
+        this.setUA = function (uastring) {
+            ua = uastring;
             return this;
         };
 
