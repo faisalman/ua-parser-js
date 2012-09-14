@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.3.4
+// UA-Parser.JS v0.3.5
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -9,7 +9,7 @@
 
     var regexMapper = function (ua, args) {
         
-        var result = {}, i, j, k, l, m;
+        var result, i, j, k, l, m;
         
         // loop through all regexes maps
         for (i = 1; i < arguments.length; i += 2) {
@@ -18,11 +18,17 @@
                 props = arguments[i + 1];   // odd sequence (2,4,6,..)
             
             // build object barebones
-            for (k = 0; k < props.length; k++) {
-                if (typeof props[k] === 'object') {
-                    result[props[k][0]] = undefined;
-                } else {
-                    result[props[k]] = undefined;
+            if (typeof result === 'undefined') {
+                result = {};
+                for (k = 0; k < props.length; k++) {
+                    if (typeof props[k] === 'object') {
+                        result[props[k][0]] = undefined;
+                    } else {
+                        result[props[k]] = undefined;
+                    }
+                }
+                if (ua.toString() === '') {
+                    return result;
                 }
             }
             
@@ -217,7 +223,7 @@
                 /sec-((sgh\w+))/i
                 ], [['name', 'Samsung'], 'version'], [
                 
-                /((transfo[prime\s]{4,10}\s\w+|(?:android.*)eeepc))/i               // Asus
+                /((transfo[prime\s]{4,10}\s\w+))|(?:android.*)((eeepc))/i           // Asus
                 ], [['name', 'Asus'], 'version'], [
 
                 /(sie)-(\w+)*/i                                                     // Siemens
