@@ -169,13 +169,13 @@
 		    el.appendChild(prop);
 		} else if(typeof prop === 'string'){
 			el.innerHTML = prop;
-			el.style.color = "red";
+			el.style.color = "green";
 		} else {
 			el.innerHTML = "No data";
-			el.style.color = "#aaa";
+			el.style.color = "#ccc";
 		}
 	  };
-	  var imgMap = function(prop, arr){
+	  var imgMap = function(prop, key, arr){
         var img = document.createElement('img');
         img.src = 'images/undefined.png';
 	    for(var i in arr){
@@ -205,16 +205,16 @@
         var device = parser.getDevice();
         var tbl = document.getElementsByTagName('td');
         var prop = [
-            imgMap(browser, ['ie', 'chrom', 'konqueror', 'safari', 'opera', 'firefox', ['fennec', 'firefox'], 'mozilla']),
-            imgMap(engine, [['trident', 'ie'], ['webkit', 'safari'], ['khtml', 'konqueror'], ['presto', 'opera'], ['gecko', 'mozilla']]),
-            imgMap(os, ['meego', 'symbian', 'android', 'blackberry', 'bada', 'windows', 'chromium', 'mac', 'freebsd', 'bsd', 'ubuntu', 'gentoo', 'fedora', 'mandriva', 'redhat', 'suse', 'debian', 'slackware', 'arch', 'linux', 'solaris', ['ios', 'mac'], ['rim', 'blackberry']]),
-            imgMap(device, [['undefined', 'pc'], 'ipad', ['tablet', 'ipad'], ['playbook', 'ipad'], ['\\w+', 'phone']]),
+            imgMap(browser, 'name', ['ie', 'chrome', 'chromium', 'konqueror', 'safari', 'opera', 'firefox', ['fennec', 'firefox'], 'mozilla', 'midori', 'arora', 'camino', 'iceweasel', 'dolfin', 'rockmelt', 'flock']),
+            imgMap(engine, 'name', [['trident', 'ie'], ['webkit', 'safari'], ['khtml', 'konqueror'], ['presto', 'opera'], ['gecko', 'mozilla']]),
+            imgMap(os, 'name', ['meego', 'symbian', 'android', 'blackberry', 'bada', ['windows phone os', 'winphone'], 'windows', 'chromium', 'mac', 'freebsd', 'bsd', 'kubuntu', 'xubuntu', 'lubuntu', 'ubuntu', 'gentoo', 'fedora', 'mandriva', 'redhat', 'suse', 'debian', 'slackware', 'arch', 'linux', 'solaris', 'webos', 'ios', 'centos', 'pclinuxos', ['ios', 'mac'], ['rim', 'blackberry']]),
+            imgMap(device, 'name', [['undefined', 'pc'], 'ipad', ['tablet', 'ipad'], ['playbook', 'ipad'], ['\\w+', 'phone']]),
             browser.name,       engine.name,    os.name,    device.name,
             browser.version,    engine.version, os.version, device.version];
         for(var i = 0; i < prop.length; i++){
             fill(tbl[i], prop[i]);
         }
-        pre.innerHTML = 'Result for <span style="color:red">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (your browser User-Agent string)') + ' :</span>';
+        pre.innerHTML = 'Result for <span style="color:green">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (your browser User-Agent string)') + ' :</span>';
       }
       fillTable();
       sel.addEventListener('change', function(){
