@@ -17,7 +17,7 @@
             var regex = arguments[i],       // even sequence (1,3,5,..)
                 props = arguments[i + 1];   // odd sequence (2,4,6,..)
             
-            // build object barebones
+            // construct object barebones
             if (typeof result === 'undefined') {
                 result = {};
                 for (k = 0; k < props.length; k++) {
@@ -54,29 +54,28 @@
         }
         return result;
     };
-
-    var maps = {
     
-        check : function (str, map) {
-            for (var i in map) {
-                if (map.hasOwnProperty(i)) {
-                    if (typeof map[i] === 'object' && map[i].length > 0) {
-                        for (var j = 0; j < map[i].length; j++) {
-                            if (str.toLowerCase().indexOf(map[i][j]) !== -1) {
-                                return i;
-                            }
+    var strMapper = function (str, map) {
+        for (var i in map) {
+            if (map.hasOwnProperty(i)) {
+                if (typeof map[i] === 'object' && map[i].length > 0) {
+                    for (var j = 0; j < map[i].length; j++) {
+                        if (str.toLowerCase().indexOf(map[i][j]) !== -1) {
+                            return i;
                         }
-                    } else if (str.toLowerCase().indexOf(map[i]) !== -1) {
-                        return i;
                     }
+                } else if (str.toLowerCase().indexOf(map[i]) !== -1) {
+                    return i;
                 }
             }
-            return str;
-        },
-        
+        }
+        return str;
+    };
+
+    var maps = {        
         os : {
             win : function (match, str1) {
-                return maps.check(str1, {
+                return strMapper(str1, {
                     'ME'        : '4.90',
                     'NT 3.11'   : 'nt3.51',
                     'NT 4.0'    : 'nt4.0',
