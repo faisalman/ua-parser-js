@@ -70,16 +70,13 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 ## Using node.js
 
 ```js
-var UAParser = require('ua-parser');
-var parser = new UAParser();
-var ua1 = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
-var ua2 = 'Midori/0.2 (X11; Linux; U; cs-cz) WebKit/531.2+';
+var UAParser    = require('ua-parser');
+var parser      = new UAParser();
+var uaString    = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
 
-console.log(parser.setUA(ua1).getDevice().name);    // "PlayBook"
-console.log(parser.getOS())                         // {name: "RIM Tablet OS", version: "1.0.0"}
-console.log(parser.getOS(ua2))                      // {name: "Linux", version: undefined}
-console.log(parser.getOS())                         // {name: "RIM Tablet OS", version: "1.0.0"}
-console.log(parser.getEngine().name);               // "AppleWebKit"
+console.log(parser.setUA(uaString).getDevice().name);   // "PlayBook"
+console.log(parser.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
+console.log(parser.getEngine().name);                   // "AppleWebKit"
 ```
 
 ## License

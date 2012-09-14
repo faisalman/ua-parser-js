@@ -19,7 +19,7 @@
             
             // build object barebones
             for (k = 0; k < props.length; k++) {
-                if (typeof props[k] == 'object') {
+                if (typeof props[k] === 'object') {
                     result[props[k][0]] = undefined;
                 } else {
                     result[props[k]] = undefined;
@@ -51,8 +51,8 @@
 
     var maps = {
     
-        check : function(str, map){
-            for (var i in map){
+        check : function (str, map) {
+            for (var i in map) {
                 if (map.hasOwnProperty(i)) {
                     if (typeof map[i] === 'object' && map[i].length > 0) {
                         for (var j = 0; j < map[i].length; j++) {
