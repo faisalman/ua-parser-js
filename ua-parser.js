@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.3.3
+// UA-Parser.JS v0.3.4
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -6,91 +6,91 @@
 // Dual licensed under GPLv2 & MIT
 
 (function (undefined) {
-    var parser = function UAParser (uastring) {
+
+    var regexMapper = function (ua, args) {
+        
+        var result = {}, i, j, k, l, m;
+        
+        // loop through all regexes maps
+        for (i = 1; i < arguments.length; i += 2) {
+        
+            var regex = arguments[i],       // even sequence (1,3,5,..)
+                props = arguments[i + 1];   // odd sequence (2,4,6,..)
+            
+            // build object barebones
+            for (k = 0; k < props.length; k++) {
+                if (typeof props[k] == 'object') {
+                    result[props[k][0]] = undefined;
+                } else {
+                    result[props[k]] = undefined;
+                }
+            }
+            
+            // try matching uastring with regexes
+            for (j = 0; j < regex.length; j++) {
+                l = regex[j].exec(ua);
+                if (!!l) {
+                    for (k = 0; k < props.length; k++) {
+                        m = l[k + 1];
+                        if (typeof props[k] === 'object' && props[k].length === 2) {
+                            result[props[k][0]] = props[k][1];
+                        } else if (typeof props[k] === 'object' && props[k].length === 3) {
+                            result[props[k][0]] = m ? m.replace(props[k][1], props[k][2]) : undefined;
+                        } else {
+                            result[props[k]] = m ? m : undefined;
+                        }
+                    }
+                    break;
+                }
+            }
+            
+            if(!!l) break; // break the loop immediately if match found
+        }
+        return result;
+    };
+
+    var maps = {
+    
+        check : function(str, map){
+            for (var i in map){
+                if (map.hasOwnProperty(i)) {
+                    if (typeof map[i] === 'object' && map[i].length > 0) {
+                        for (var j = 0; j < map[i].length; j++) {
+                            if (str.toLowerCase().indexOf(map[i][j]) !== -1) {
+                                return i;
+                            }
+                        }
+                    } else if (str.toLowerCase().indexOf(map[i]) !== -1) {
+                        return i;
+                    }
+                }
+            }
+            return str;
+        },
+        
+        os : {
+            win : function (match, str1) {
+                return maps.check(str1, {
+                    'ME'        : '4.90',
+                    'NT 3.11'   : 'nt3.51',
+                    'NT 4.0'    : 'nt4.0',
+                    '2000'      : 'nt 5.0',
+                    'XP'        : ['nt 5.1', 'nt 5.2'],
+                    'Vista'     : 'nt 6.0',
+                    '7'         : 'nt 6.1',
+                    '8'         : 'nt 6.2'
+                });
+            }
+        }
+    };
+
+    var UAParser = function UAParser (uastring) {
 
         var ua = uastring || (typeof window !== 'undefined' ? window.navigator.userAgent : "");
 
-        // regexp mapper
-        var regxMap = function (args) {
-            
-            var result = {}, i, j, k, l, m;
-            
-            // loop through all regexes maps
-            for (i = 0; i < arguments.length; i += 2) {
-            
-                var regex = arguments[i],                   // odd sequence (0,2,4,..)
-                    props = arguments[i + 1];               // even sequence (1,3,5,..)
-                
-                // build object barebones
-                for (k = 0; k < props.length; k++) {
-                    if (typeof props[k] == 'object') {
-                        result[props[k][0]] = undefined;
-                    } else {
-                        result[props[k]] = undefined;
-                    }
-                }
-                
-                // try matching uastring with regexes
-                for (j = 0; j < regex.length; j++) {
-                    l = regex[j].exec(ua);
-                    if (!!l) {
-                        for (k = 0; k < props.length; k++) {
-                            m = l[k + 1];
-                            if (typeof props[k] === 'object' && props[k].length === 2) {
-                                result[props[k][0]] = props[k][1];
-                            } else if (typeof props[k] === 'object' && props[k].length === 3) {
-                                result[props[k][0]] = m ? m.replace(props[k][1], props[k][2]) : undefined;
-                            } else {
-                                result[props[k]] = m ? m : undefined;
-                            }
-                        }
-                        break;
-                    }
-                }
-                
-                if(!!l) break; // break the loop immediately if match found
-            }
-            return result;
-        };
-
-        var mapper = {
-        
-            check : function(str, map){
-                for (var i in map){
-                    if (map.hasOwnProperty(i)) {
-                        if (typeof map[i] === 'object' && map[i].length > 0) {
-                            for (var j = 0; j < map[i].length; j++) {
-                                if (str.toLowerCase().indexOf(map[i][j]) !== -1) {
-                                    return i;
-                                }
-                            }
-                        } else if (str.toLowerCase().indexOf(map[i]) !== -1) {
-                            return i;
-                        }
-                    }
-                }
-                return str;
-            },
-            
-            os : {
-                win : function (match, str1) {
-                    return mapper.check(str1, {
-                        'ME'        : '4.90',
-                        'NT 3.11'   : 'nt3.51',
-                        'NT 4.0'    : 'nt4.0',
-                        '2000'      : 'nt 5.0',
-                        'XP'        : ['nt 5.1', 'nt 5.2'],
-                        'Vista'     : 'nt 6.0',
-                        '7'         : 'nt 6.1',
-                        '8'         : 'nt 6.2'
-                    });
-                }
-            }
-        };
-
         this.getBrowser = function () {
 
-            return regxMap([
+            return regexMapper(ua, [
 
                 // Mixed
                 /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
@@ -130,7 +130,7 @@
 
         this.getEngine = function () {
 
-            return regxMap([
+            return regexMapper(ua, [
 
                 /(presto)\/([\w\.]+)/i,                                             // Presto
                 /([aple]*webkit|trident)\/([\w\.]+)/i,                              // Webkit/Trident
@@ -143,13 +143,13 @@
 
         this.getOS = function () { 
 
-            return regxMap([
+            return regexMapper(ua, [
 
                 // Windows based
                 /(windows\sphone\sos|windows)\s?([nt\d\.\s]+\d)/i                   // Windows
-                ], ['name', ['version', /(.+)/gi, mapper.os.win]], [
+                ], ['name', ['version', /(.+)/gi, maps.os.win]], [
                 /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
-                ], [['name', 'Windows'], ['version', /(.+)/gi, mapper.os.win]], [
+                ], [['name', 'Windows'], ['version', /(.+)/gi, maps.os.win]], [
                 
                 // Mobile/Embedded OS
                 /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
@@ -191,7 +191,7 @@
 
         this.getDevice = function () { 
 
-            return regxMap([
+            return regexMapper(ua, [
 
                 /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
                 /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
@@ -252,10 +252,10 @@
     // check whether script is running inside node.js export as module
     if (typeof exports !== 'undefined' && this.toString() !== '[object DOMWindow]') {
         if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = parser;
+            exports = module.exports = UAParser;
         }
-        exports.UAParser = parser;
+        exports.UAParser = UAParser;
     } else {
-        this['UAParser'] = parser;
+        this['UAParser'] = UAParser;
     }
 })();
