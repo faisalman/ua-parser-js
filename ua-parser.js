@@ -7,6 +7,8 @@
 
 (function (undefined) {
 
+    'use strict';
+
     var mapper = {
     
         regex : function () {
@@ -278,6 +280,6 @@
         }
         exports.UAParser = UAParser;
     } else {
-        this['UAParser'] = UAParser;
+        window['UAParser'] = UAParser;
     }
 })();
