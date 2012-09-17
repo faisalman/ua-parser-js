@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.0
+// UA-Parser.JS v0.4.1
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -45,7 +45,11 @@
                             if (typeof props[k] === 'object' && props[k].length === 2) {
                                 result[props[k][0]] = props[k][1];
                             } else if (typeof props[k] === 'object' && props[k].length === 3) {
-                                result[props[k][0]] = m ? m.replace(props[k][1], props[k][2]) : undefined;
+                                if (typeof props[k][1] === 'function') {
+                                    result[props[k][0]] = m ? props[k][1].call(this, m, props[k][2]) : undefined;
+                                } else {
+                                    result[props[k][0]] = m ? m.replace(props[k][1], props[k][2]) : undefined;
+                                }
                             } else {
                                 result[props[k]] = m ? m : undefined;
                             }
@@ -81,17 +85,15 @@
     var maps = {
         os : {
             windows : {
-                version : function (match, str1) {
-                    return mapper.string(str1, {
-                        'ME'        : '4.90',
-                        'NT 3.11'   : 'nt3.51',
-                        'NT 4.0'    : 'nt4.0',
-                        '2000'      : 'nt 5.0',
-                        'XP'        : ['nt 5.1', 'nt 5.2'],
-                        'Vista'     : 'nt 6.0',
-                        '7'         : 'nt 6.1',
-                        '8'         : 'nt 6.2'
-                    });
+                version : {
+                    'ME'        : '4.90',
+                    'NT 3.11'   : 'nt3.51',
+                    'NT 4.0'    : 'nt4.0',
+                    '2000'      : 'nt 5.0',
+                    'XP'        : ['nt 5.1', 'nt 5.2'],
+                    'Vista'     : 'nt 6.0',
+                    '7'         : 'nt 6.1',
+                    '8'         : 'nt 6.2'
                 }
             }
         }
@@ -192,9 +194,9 @@
 
             // Windows based
             /(windows\sphone\sos|windows)\s?([ntce\d\.\s]+\d)/i                 // Windows
-            ], ['name', ['version', /(.+)/gi, maps.os.windows.version]], [
+            ], ['name', ['version', mapper.string, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
-            ], [['name', 'Windows'], ['version', /(.+)/gi, maps.os.windows.version]], [
+            ], [['name', 'Windows'], ['version', mapper.string, maps.os.windows.version]], [
             
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
@@ -223,7 +225,7 @@
             ], ['name', 'version'],[
 
             /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
-            ], [['name', /.+/g, 'iOS'], ['version', /_/g, '.']], [
+            ], [['name', 'iOS'], ['version', /_/g, '.']], [
 
             /(mac\sos\sx)\s([\w\s\.]+\w)/i,                                     // Mac OS
             ], ['name', ['version', /_/g, '.']], [
