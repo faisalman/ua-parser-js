@@ -103,7 +103,8 @@
 
             // Mixed
             /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunascape|maxthon|netfront|jasmine)[\/\s]?((\d+)?[\w\.]+)/i,      // Lunascape/Maxthon/Netfront/Jasmine
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)/i,
+                                                                                // Lunascape/Maxthon/Netfront/Jasmine/Blazer
             
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
@@ -116,7 +117,8 @@
             /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based
-            /(chromium|flock|rockmelt|midori|epiphany|silk)\/((\d+)?[\w\.]+)/i, // Chromium/Flock/RockMelt/Midori/Epiphany
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|series60|bolt)\/((\d+)?[\w\.]+)/i, 
+                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/S60/Bolt
             /(chrome|omniweb|arora|dolfin|[tizenaok]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
             ], ['name', 'version', 'major'], [
@@ -133,7 +135,8 @@
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
-            /(lynx|dillo|icab)[\/\s]?((\d+)?[\w\.]+)/i,                         // Lynx/Dillo/iCab
+            /(lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,                   // Lynx/Dillo/iCab/Doris
+            /(gobrowser)\/?[\d\.]*/i                                            // GoBrowser
             ], ['name', 'version', 'major']
         ],
         
@@ -141,8 +144,8 @@
 
             /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte)[\s_-]?([\w-]+)*/i,  
-                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte|huawei)[\s_-]?([\w-]+)*/i,  
+                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE/Huawei
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
@@ -188,7 +191,7 @@
         os : [[
 
             // Windows based
-            /(windows\sphone\sos|windows)\s?([nt\d\.\s]+\d)/i                   // Windows
+            /(windows\sphone\sos|windows)\s?([ntce\d\.\s]+\d)/i                 // Windows
             ], ['name', ['version', /(.+)/gi, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
             ], [['name', 'Windows'], ['version', /(.+)/gi, maps.os.windows.version]], [
