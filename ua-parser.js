@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.1
+// UA-Parser.JS v0.4.2
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -8,7 +8,7 @@
 (function (undefined) {
 
     'use strict';
-
+    
     var mapper = {
     
         regex : function () {
@@ -69,11 +69,11 @@
                 if (map.hasOwnProperty(i)) {
                     if (typeof map[i] === 'object' && map[i].length > 0) {
                         for (var j = 0; j < map[i].length; j++) {
-                            if (str.toLowerCase().indexOf(map[i][j]) !== -1) {
+                            if (str.toLowerCase().indexOf(map[i][j].toLowerCase()) !== -1) {
                                 return i;
                             }
                         }
-                    } else if (str.toLowerCase().indexOf(map[i]) !== -1) {
+                    } else if (str.toLowerCase().indexOf(map[i].toLowerCase()) !== -1) {
                         return i;
                     }
                 }
@@ -87,13 +87,13 @@
             windows : {
                 version : {
                     'ME'        : '4.90',
-                    'NT 3.11'   : 'nt3.51',
-                    'NT 4.0'    : 'nt4.0',
-                    '2000'      : 'nt 5.0',
-                    'XP'        : ['nt 5.1', 'nt 5.2'],
-                    'Vista'     : 'nt 6.0',
-                    '7'         : 'nt 6.1',
-                    '8'         : 'nt 6.2'
+                    'NT 3.11'   : 'NT3.51',
+                    'NT 4.0'    : 'NT4.0',
+                    '2000'      : 'NT 5.0',
+                    'XP'        : ['NT 5.1', 'NT 5.2'],
+                    'Vista'     : 'NT 6.0',
+                    '7'         : 'NT 6.1',
+                    '8'         : 'NT 6.2'
                 }
             }
         }
@@ -111,8 +111,8 @@
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
             /(opera\smobi)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mobile
-            /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera
-            /(opera)[\/\s]+((\d+)?[\w\.]+)/i,
+            /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
+            /(opera)[\/\s]+((\d+)?[\w\.]+)/i,                                   // Opera < 9.80
             
             // Trident based
             /(avant\sbrowser|iemobile|slimbrowser)[\/\s]?((\d+)?[\w\.]*)/i,     // Avant/IEMobile/SlimBrowser
@@ -121,7 +121,7 @@
             // Webkit/KHTML based
             /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|series60|bolt)\/((\d+)?[\w\.]+)/i, 
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/S60/Bolt
-            /(chrome|omniweb|arora|dolfin|[tizenaok]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
+            /(chrome|omniweb|arora|dolfin|[tizenoka]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
             ], ['name', 'version', 'major'], [
             /(?:android.+(crmo|crios))\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
@@ -145,38 +145,60 @@
         device : [[
 
             /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
-            /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte|huawei)[\s_-]?([\w-]+)*/i,  
-                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE/Huawei
-            /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
-            /(lg)[e;\s-]+(\w+)*/i,                                              // LG
-            /(nintendo|playstation)\s([wids3portable]+)/i                       // Nintendo/Playstation
-            ], ['name', 'version'], [
+            /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
+            /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
+            ], ['name', 'version', ['type', 'Tablet']], [
+
+            /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte|huawei|meizu)[\s_-]?([\w-]+)*/i,  
+                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE/Huawei/Meizu
+            /(hp)\s([\w\s]+\w)/i                                                // HP iPAQ
+            ], ['name', 'version', ['type', 'Mobile']], [
             
-            /(htc)[;_\s-]+([\w\s]+(?=\))|[\w]+)*/i,                             // HTC
-            /(zte)-([\w]+)*/i
-            ], ['name', ['version', /_/g, ' ']], [
+            /(sony)\s(tablet\s[ps])/i                                           // Sony
+            ], ['name', 'version', ['type', 'Tablet']], [
+            
+            /(nintendo|playstation)\s([wids3portablev]+)/i                      // Nintendo/Playstation
+            ], ['name', 'version', ['type', 'Console']], [
+            
+            /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
+            /(zte)-(\w+)*/i
+            ], ['name', ['version', /_/g, ' '], ['type', 'Mobile']], [
                         
-            /\s((milestone|mz601|droid[2x]?|xoom))[globa\s]*\sbuild\//i,        // Motorola
+            /\s((milestone|droid[2x]?))[globa\s]*\sbuild\//i,                   // Motorola
             /(mot)[\s-]?(\w+)*/i
-            ], [['name', 'Motorola'], 'version'], [
-            
-            /((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,                            // Samsung
+            ], [['name', 'Motorola'], 'version', ['type', 'Mobile']], [            
+            /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
+            ], [['name', 'Motorola'], 'version', ['type', 'Tablet']], [
+                                                                                // Samsung
+            /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9))/i
+            ], [['name', 'Samsung'], 'version', ['type', 'Tablet']], [
+            /((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
-            ], [['name', 'Samsung'], 'version'], [
+            ], [['name', 'Samsung'], 'version', ['type', 'Mobile']], [
             
-            /((transfo[prime\s]{4,10}\s\w+))|(?:android.*)((eeepc))/i           // Asus
-            ], [['name', 'Asus'], 'version'], [
+            /(asus)-?(\w+)/i                                                    // Asus
+            ], ['name', 'version', ['type', 'Mobile']], [
+            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+))/i
+            ], [['name', 'Asus'], 'version', ['type', 'Tablet']], [
 
             /(sie)-(\w+)*/i                                                     // Siemens
-            ], [['name', 'Siemens'], 'version'], [
+            ], [['name', 'Siemens'], 'version', ['type', 'Mobile']], [
             
             /(maemo|nokia).*(n900|lumia\s\d+)/i,                                // Nokia
             /(nokia)[\s_-]?([\w-]+)*/i
-            ], [['name', 'Nokia'], 'version']            
+            ], [['name', 'Nokia'], 'version', ['type', 'Mobile']], [
+            
+            /android\s3\.[\s\w-;]{10}((a\d{3}))/i                               // Acer
+            ], [['name', 'Acer'], 'version', ['type', 'Tablet']], [
+            
+            /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
+            ], [['name', 'LG'], 'version', ['type', 'Tablet']], [
+            /(lg)[e;\s-]+(\w+)*/i
+            ], [['name', 'LG'], 'version', ['type', 'Mobile']]
         ],
         
         engine : [[

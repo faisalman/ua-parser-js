@@ -63,7 +63,8 @@ Extract detailed type of web browser, layout engine, operating system, and devic
     console.log(parser.getResult().os);         // {name: "Ubuntu", version: "11.10"}
     
     // let's take another test please
-    console.log(parser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getOS().name); // "OpenBSD"
+    console.log(parser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getBrowser().name); // "Konqueror"
+    console.log(parser.getOS());                // {name: "OpenBSD", version: undefined}
 </script>
 ```
 
