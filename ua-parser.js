@@ -103,16 +103,16 @@
 
         browser : [[
 
-            // Mixed
-            /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)/i,
-                                                                                // Lunascape/Maxthon/Netfront/Jasmine/Blazer
-            
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
             /(opera\smobi)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mobile
             /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
             /(opera)[\/\s]+((\d+)?[\w\.]+)/i,                                   // Opera < 9.80
+            
+            // Mixed
+            /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)/i,
+                                                                                // Lunascape/Maxthon/Netfront/Jasmine/Blazer
             
             // Trident based
             /(avant\sbrowser|iemobile|slimbrowser)[\/\s]?((\d+)?[\w\.]*)/i,     // Avant/IEMobile/SlimBrowser
@@ -144,16 +144,17 @@
         
         device : [[
 
-            /\(((ip[honead]+|playbook));/i,                                     // iPod/iPhone/iPad/PlayBook
+            /\(((ipad|playbook));/i,                                            // iPad/PlayBook
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
             ], ['vendor', 'model', ['type', 'Tablet']], [
 
+            /\(((ip[honed]+));/i,                                               // iPod/iPhone
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|huawei|meizu)[\s_-]?([\w-]+)*/i,  
-                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/Huawei/Meizu
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola)[\s_-]?([\w-]+)*/i,  
+                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Huawei/Meizu/Motorola
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], ['vendor', 'model', ['type', 'Mobile']], [
@@ -195,14 +196,14 @@
             
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
             ], [['vendor', 'LG'], 'model', ['type', 'Tablet']], [
-            /(lg)[e;\s-]+(\w+)*/i
+            /(lg)[e;\s-\/]+(\w+)*/i
             ], [['vendor', 'LG'], 'model', ['type', 'Mobile']]
         ],
         
         engine : [[
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /([aple]*webkit|trident)\/([\w\.]+)/i,                              // Webkit/Trident
+            /([aple]*webkit|trident|netfront)\/([\w\.]+)/i,                     // Webkit/Trident/NetFront
             /(khtml)\/([\w\.]+)/i                                               // KHTML
             ], ['name', 'version'], [
 
@@ -213,7 +214,7 @@
         os : [[
 
             // Windows based
-            /(windows\sphone\sos|windows)\s?([ntce\d\.\s]+\d)/i                 // Windows
+            /(windows\sphone\sos|windows\s?[mobile]*)[\s\/]?([ntce\d\.\s]+\w)/i // Windows
             ], ['name', ['version', mapper.string, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
             ], [['name', 'Windows'], ['version', mapper.string, maps.os.windows.version]], [
@@ -221,8 +222,12 @@
             // Mobile/Embedded OS
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
             /(tizen)\/([\w\.]+)/i,                                              // Tizen
-            /(android|symbianos|symbos|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i,
-                                                                                // Android/Symbian/WebOS/Palm/QNX/Bada/RIM/MeeGo
+            /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i
+                                                                                // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo
+            ], ['name', 'version'], [
+            /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i                 // Symbian
+            ], [['name', 'Symbian'], 'version'],[
+            
             /(nintendo|playstation)\s([wids3portable]+)/i,                      // Nintendo/Playstation
 
             // GNU/Linux based
@@ -233,7 +238,7 @@
             /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
             ], ['name', 'version'], [
 
-            /(cros)\s([\w\.\s]+\d)/i                                            // Chromium OS
+            /(cros)\s[\w]+\s([\w\.]+\w)/i                                       // Chromium OS
             ], [['name', 'Chromium OS'], 'version'],[
 
             // Solaris
