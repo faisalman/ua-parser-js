@@ -104,7 +104,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="">UA-Parser.js</a></h1>
+      <h1><a href="">UA-Parser.JS</a></h1>
       <h2>Lightweight JavaScript-based User-Agent String Parser</h2>
       <hr />
       <p class="share">
@@ -182,10 +182,10 @@
 	        if(arr.hasOwnProperty(i)){
 	            var isobj = typeof arr[i] === 'object';
                 var r = isobj ? new RegExp(arr[i][0], 'i') : new RegExp(arr[i], 'i');
-                if(r.test(prop['name'])){
+                if(r.test(prop[key])){
                     img.src = 'images/'+(isobj?arr[i][1]:arr[i])+'.png';
                     return img;
-                } else if(prop['name'] !== undefined){
+                } else if(prop[key] !== undefined){
                     img.src = 'images/check.png';
                 }
 	        }
@@ -208,9 +208,9 @@
             imgMap(browser, 'name', ['ie', 'chrome', 'chromium', 'konqueror', 'safari', 'opera', 'firefox', ['fennec', 'firefox'], 'mozilla', 'midori', 'arora', 'camino', 'iceweasel', 'dolfin', 'rockmelt', 'flock']),
             imgMap(engine, 'name', [['trident', 'ie'], ['webkit', 'safari'], ['khtml', 'konqueror'], ['presto', 'opera'], ['gecko', 'mozilla']]),
             imgMap(os, 'name', ['meego', 'symbian', 'android', 'blackberry', 'bada', ['windows phone os', 'winphone'], 'windows', 'chromium', 'mac', 'freebsd', 'bsd', 'kubuntu', 'xubuntu', 'lubuntu', 'ubuntu', 'gentoo', 'fedora', 'mandriva', 'redhat', 'suse', 'debian', 'slackware', 'arch', 'linux', 'solaris', 'webos', 'ios', 'centos', 'pclinuxos', ['ios', 'mac'], ['rim', 'blackberry']]),
-            imgMap(device, 'name', [['undefined', 'pc'], 'ipad', ['tablet', 'ipad'], ['playbook', 'ipad'], ['\\w+', 'phone']]),
-            browser.name,       engine.name,    os.name,    device.name,
-            browser.version,    engine.version, os.version, device.version];
+            imgMap(device, 'type', [['undefined', 'pc'], ['tablet', 'ipad'], ['mobile', 'phone']]),
+            browser.name,       engine.name,    os.name,    device.vendor,
+            browser.version,    engine.version, os.version, device.model];
         for(var i = 0; i < prop.length; i++){
             fill(tbl[i], prop[i]);
         }
