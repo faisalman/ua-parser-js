@@ -48,8 +48,9 @@ Extract detailed type of web browser, layout engine, operating system, and devic
                 version: ""
             },
             device: {
-                name: "",
-                version: ""
+                model: "",
+                type: "",
+                vendor: ""
             }
         }
     */
@@ -59,12 +60,14 @@ Extract detailed type of web browser, layout engine, operating system, and devic
     parser.setUA(uastr);
     
     console.log(parser.getResult().browser);    // {name: "Chromium", major: "15", version: "15.0.874.106"}
+    console.log(parser.getResult().device);     // {model: undefined, type: undefined, vendor: undefined}
     console.log(parser.getResult().engine);     // {name: "AppleWebKit", version: "535.2"}
     console.log(parser.getResult().os);         // {name: "Ubuntu", version: "11.10"}
     
     // let's take another test please
     console.log(parser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getBrowser().name); // "Konqueror"
     console.log(parser.getOS());                // {name: "OpenBSD", version: undefined}
+    console.log(parser.getEngine());            // {name: "KHTML", version: "4.1.4"}
 </script>
 ```
 
@@ -75,7 +78,7 @@ var UAParser    = require('ua-parser');
 var parser      = new UAParser();
 var uaString    = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
 
-console.log(parser.setUA(uaString).getDevice().name);   // "PlayBook"
+console.log(parser.setUA(uaString).getDevice().model);  // "PlayBook"
 console.log(parser.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
 console.log(parser.getEngine().name);                   // "AppleWebKit"
 ```

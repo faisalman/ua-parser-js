@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.2
+// UA-Parser.JS v0.4.3
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -154,7 +154,7 @@
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|huawei|meizu)[\s_-]?([\w-]+)*/i,  
                                                                                 // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/Huawei/Meizu
-            /(hp)\s([\w\s]+\w)/i                                                // HP iPAQ
+            /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], ['vendor', 'model', ['type', 'Mobile']], [
             
