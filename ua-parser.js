@@ -144,61 +144,59 @@
         
         device : [[
 
-            /\((ip[honead]+|playbook);/i,                                       // iPod/iPhone/iPad/PlayBook
+            /\(((ip[honead]+|playbook));/i,                                     // iPod/iPhone/iPad/PlayBook
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
-            ], ['name', 'version', ['type', 'Tablet']], [
+            ], ['vendor', 'model', ['type', 'Tablet']], [
 
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|zte|huawei|meizu)[\s_-]?([\w-]+)*/i,  
-                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/ZTE/Huawei/Meizu
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|nexus|huawei|meizu)[\s_-]?([\w-]+)*/i,  
+                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Nexus/Huawei/Meizu
             /(hp)\s([\w\s]+\w)/i                                                // HP iPAQ
-            ], ['name', 'version', ['type', 'Mobile']], [
+            /(asus)-?(\w+)/i                                                    // Asus
+            ], ['vendor', 'model', ['type', 'Mobile']], [
             
-            /(sony)\s(tablet\s[ps])/i                                           // Sony
-            ], ['name', 'version', ['type', 'Tablet']], [
+            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+))/i       // Asus Tablets
+            ], [['vendor', 'Asus'], 'model', ['type', 'Tablet']], [
+            
+            /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
+            ], ['vendor', 'model', ['type', 'Tablet']], [
             
             /(nintendo|playstation)\s([wids3portablev]+)/i                      // Nintendo/Playstation
-            ], ['name', 'version', ['type', 'Console']], [
+            ], ['vendor', 'model', ['type', 'Console']], [
             
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
-            /(zte)-(\w+)*/i
-            ], ['name', ['version', /_/g, ' '], ['type', 'Mobile']], [
+            /(zte)-(\w+)*/i                                                     // ZTE
+            ], ['vendor', ['model', /_/g, ' '], ['type', 'Mobile']], [
                         
             /\s((milestone|droid[2x]?))[globa\s]*\sbuild\//i,                   // Motorola
             /(mot)[\s-]?(\w+)*/i
-            ], [['name', 'Motorola'], 'version', ['type', 'Mobile']], [            
+            ], [['vendor', 'Motorola'], 'model', ['type', 'Mobile']], [            
             /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
-            ], [['name', 'Motorola'], 'version', ['type', 'Tablet']], [
-                                                                                // Samsung
+            ], [['vendor', 'Motorola'], 'model', ['type', 'Tablet']], [
+            
             /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9))/i
-            ], [['name', 'Samsung'], 'version', ['type', 'Tablet']], [
+            ], [['vendor', 'Samsung'], 'model', ['type', 'Tablet']], [          // Samsung
             /((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
-            ], [['name', 'Samsung'], 'version', ['type', 'Mobile']], [
-            
-            /(asus)-?(\w+)/i                                                    // Asus
-            ], ['name', 'version', ['type', 'Mobile']], [
-            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+))/i
-            ], [['name', 'Asus'], 'version', ['type', 'Tablet']], [
-
+            ], [['vendor', 'Samsung'], 'model', ['type', 'Mobile']], [
             /(sie)-(\w+)*/i                                                     // Siemens
-            ], [['name', 'Siemens'], 'version', ['type', 'Mobile']], [
+            ], [['vendor', 'Siemens'], 'model', ['type', 'Mobile']], [
             
             /(maemo|nokia).*(n900|lumia\s\d+)/i,                                // Nokia
             /(nokia)[\s_-]?([\w-]+)*/i
-            ], [['name', 'Nokia'], 'version', ['type', 'Mobile']], [
+            ], [['vendor', 'Nokia'], 'model', ['type', 'Mobile']], [
             
             /android\s3\.[\s\w-;]{10}((a\d{3}))/i                               // Acer
-            ], [['name', 'Acer'], 'version', ['type', 'Tablet']], [
+            ], [['vendor', 'Acer'], 'model', ['type', 'Tablet']], [
             
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
-            ], [['name', 'LG'], 'version', ['type', 'Tablet']], [
+            ], [['vendor', 'LG'], 'model', ['type', 'Tablet']], [
             /(lg)[e;\s-]+(\w+)*/i
-            ], [['name', 'LG'], 'version', ['type', 'Mobile']]
+            ], [['vendor', 'LG'], 'model', ['type', 'Mobile']]
         ],
         
         engine : [[
