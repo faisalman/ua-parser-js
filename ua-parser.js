@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.3
+// UA-Parser.JS v0.4.4
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -45,7 +45,7 @@
                             if (typeof props[k] === 'object' && props[k].length === 2) {
                                 result[props[k][0]] = props[k][1];
                             } else if (typeof props[k] === 'object' && props[k].length === 3) {
-                                if (typeof props[k][1] === 'function') {
+                                if (typeof props[k][1] === 'function' && !(props[k][1].exec && props[k][1].test)) {
                                     result[props[k][0]] = m ? props[k][1].call(this, m, props[k][2]) : undefined;
                                 } else {
                                     result[props[k][0]] = m ? m.replace(props[k][1], props[k][2]) : undefined;
