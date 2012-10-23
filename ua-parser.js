@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.4
+// UA-Parser.JS v0.4.5
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -264,10 +264,10 @@
 
     var UAParser = function UAParser (uastring) {
 
-        var ua = uastring || (typeof window !== 'undefined' ? window.navigator.userAgent : "");
+        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : "");
 
         this.getBrowser = function () {
-            return mapper.regex.apply(this, regexes.browser);  
+            return mapper.regex.apply(this, regexes.browser);
         };
 
         this.getDevice = function () {
