@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.5
+// UA-Parser.JS v0.4.6
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -83,6 +83,23 @@
     };
 
     var maps = {
+        browser : {
+            oldsafari : {
+                major : {
+                    '1' : ['/85', '/125', '/312'],
+                    '2' : ['/412', '/416', '/417', '/419']
+                },
+                version : {
+                    '1.0'   : '/85',
+                    '1.2'   : '/125',
+                    '1.3'   : '/312',
+                    '2.0'   : '/412',
+                    '2.0.2' : '/416',
+                    '2.0.3' : '/417',
+                    '2.0.4' : '/419'
+                }
+            }
+        },
         os : {
             windows : {
                 version : {
@@ -124,10 +141,16 @@
             /(chrome|omniweb|arora|dolfin|[tizenoka]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
             ], ['name', 'version', 'major'], [
+            
             /(?:android.+(crmo|crios))\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
             ], [['name', 'Chrome'], 'version', 'major'], [
+            
             /version\/((\d+)?[\w\.]+).+(mobile\s?safari|safari)/i               // Safari & Safari Mobile
-            ], [ 'version', 'major', 'name'], [
+            ], ['version', 'major', 'name'], [
+            
+            /applewebkit.+(mobile\s?safari|safari)((\/[\w\.]+))/i               // Safari < 3.0
+            ], ['name', ['major', mapper.string, maps.browser.oldsafari.major], ['version', mapper.string, maps.browser.oldsafari.version]], [
+            
             /(konqueror)\/((\d+)?[\w\.]+)/i,                                    // Konqueror
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
