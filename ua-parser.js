@@ -70,11 +70,11 @@
                     if (typeof map[i] === 'object' && map[i].length > 0) {
                         for (var j = 0; j < map[i].length; j++) {
                             if (str.toLowerCase().indexOf(map[i][j].toLowerCase()) !== -1) {
-                                return i;
+                                return (i.toString() === 'undefined') ? undefined : i;
                             }
                         }
                     } else if (str.toLowerCase().indexOf(map[i].toLowerCase()) !== -1) {
-                        return i;
+                        return (i.toString() === 'undefined') ? undefined : i;
                     }
                 }
             }
@@ -87,7 +87,8 @@
             oldsafari : {
                 major : {
                     '1' : ['/85', '/125', '/312'],
-                    '2' : ['/412', '/416', '/417', '/419']
+                    '2' : ['/412', '/416', '/417', '/419'],
+                    'undefined' : '/'
                 },
                 version : {
                     '1.0'   : '/85',
@@ -96,7 +97,8 @@
                     '2.0'   : '/412',
                     '2.0.2' : '/416',
                     '2.0.3' : '/417',
-                    '2.0.4' : '/419'
+                    '2.0.4' : '/419',
+                    'undefined' : '/'
                 }
             }
         },
