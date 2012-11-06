@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.6
+// UA-Parser.JS v0.4.7
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -134,7 +134,8 @@
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer
 
             // Trident based
-            /(avant\sbrowser|iemobile|slimbrowser)[\/\s]?((\d+)?[\w\.]*)/i,     // Avant/IEMobile/SlimBrowser
+            /(avant\sbrowser|iemobile|slimbrowser|baidubrowser)[\/\s]?((\d+)?[\w\.]*)/i,
+                                                                                // Avant/IEMobile/SlimBrowser/Baidu
             /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based
@@ -146,6 +147,9 @@
             
             /(dolfin)\/((\d+)?[\w\.]+)/i                                        // Dolphin
             ], [['name', 'Dolphin'], 'version', 'major'], [
+            
+            /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
+            ], [['name', 'Yandex'], 'version', 'major'], [
             
             /(?:android.+(crmo|crios))\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
             ], [['name', 'Chrome'], 'version', 'major'], [
@@ -167,6 +171,7 @@
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
+            /(ucbrowser)\/?((\d+)?[\w\.]+)/i,                                   // UCBrowser
             /(lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,                   // Lynx/Dillo/iCab/Doris
             /(gobrowser)\/?[\d\.]*/i                                            // GoBrowser
             ], ['name', 'version', 'major']
@@ -174,14 +179,18 @@
 
         device : [[
 
-            /\(((ipad|playbook));/i,                                            // iPad/PlayBook
+            /\((ipad|playbook);[\w\s\);-]+(rim|apple)/i                         // iPad/PlayBook
+            ], ['model', 'vendor', ['type', 'Tablet']], [
+            
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
             ], ['vendor', 'model', ['type', 'Tablet']], [
 
-            /\(((ip[honed]+));/i,                                               // iPod/iPhone
+            /\((ip[honed]+);.+(apple)/i                                         // iPod/iPhone
+            ], ['model', 'vendor', ['type', 'Mobile']], [
+            
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola)[\s_-]?([\w-]+)*/i,
                                                                                 // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Huawei/Meizu/Motorola
