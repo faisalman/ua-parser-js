@@ -138,7 +138,7 @@
             /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|series60|bolt)\/((\d+)?[\w\.]+)/i,
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|s60|series60|ovibrowser|bolt)\/((\d+)?[\w\.]+)/i,
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/S60/Bolt
             /(chrome|omniweb|arora|dolfin|[tizenoka]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Dolphin/Tizen/Nokia
