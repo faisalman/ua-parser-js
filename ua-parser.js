@@ -224,7 +224,10 @@
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
             ], [['vendor', 'LG'], 'model', ['type', 'Tablet']], [
             /(lg)[e;\s-\/]+(\w+)*/i
-            ], [['vendor', 'LG'], 'model', ['type', 'Mobile']]
+            ], [['vendor', 'LG'], 'model', ['type', 'Mobile']], [
+            
+            /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
+            ], ['type', 'vendor', 'model']
         ],
 
         engine : [[
