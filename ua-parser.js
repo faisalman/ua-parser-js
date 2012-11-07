@@ -164,16 +164,18 @@
             /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
 
             // Gecko based
-            /(iceweasel|camino|fennec|maemo\sbrowser|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,
-                                                                                // Iceweasel/Camino/Fennec/Maemo/Minimo
-            /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape)\/((\d+)?[\w\.]+)/i,
-                                                                                // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe
+            /(iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,
+                                                                                // Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo
+            /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.]+)/i,
+                                                                                // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
-            /(ucbrowser)\/?((\d+)?[\w\.]+)/i,                                   // UCBrowser
+            /(uc\s?browser)\/?((\d+)?[\w\.]+)/i,                                // UCBrowser
             /(lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,                   // Lynx/Dillo/iCab/Doris
-            /(gobrowser)\/?[\d\.]*/i                                            // GoBrowser
+            /(gobrowser)\/?[\d\.]*/i,                                           // GoBrowser
+            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                        
+                                                                                // Mosaic
             ], ['name', 'version', 'major']
         ],
 
@@ -284,7 +286,7 @@
             ], [['name', 'Chromium OS'], 'version'],[
 
             // Solaris
-            /(sunos)\s?([\w\.\s]+\d)*/i                                         // Solaris
+            /(sunos)\s?([\w\.]+\d)*/i                                           // Solaris
             ], [['name', 'Solaris'], 'version'], [
 
             // BSD based
