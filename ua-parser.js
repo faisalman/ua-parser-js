@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.7
+// UA-Parser.JS v0.4.8
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -301,7 +301,10 @@
 
             // Other
             /(haiku)\s(\w+)/i,                                                  // Haiku
-            /(macintosh|mac(?=_powerpc)|unix|minix|beos)[\/\s]?()*/i            // UNIX/Minix/BeOS
+            /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX                    
+            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|qnx|os\/2)[\/\s]?()*/i,
+                                                                                // Plan9/Minix/BeOS/QNX/OS2
+            /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], ['name', 'version']
         ]
     };
