@@ -141,7 +141,7 @@
             // Webkit/KHTML based
             /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|s60|series60|ovibrowser|bolt)\/((\d+)?[\w\.]+)/i,
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/S60/Bolt
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/((\d+)?[\w\.]+)/i,
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], ['name', 'version', 'major'], [
             
