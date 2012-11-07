@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.8
+// UA-Parser.JS v0.4.9
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -154,10 +154,10 @@
             /(?:android.+(crmo|crios))\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
             ], [['name', 'Chrome'], 'version', 'major'], [
             
-            /version\/((\d+)?[\w\.]+).+(mobile\s?safari|safari)/i               // Safari & Safari Mobile
+            /version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i              // Safari & Safari Mobile
             ], ['version', 'major', 'name'], [
             
-            /applewebkit.+(mobile\s?safari|safari)((\/[\w\.]+))/i               // Safari < 3.0
+            /applewebkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i              // Safari < 3.0
             ], ['name', ['major', mapper.string, maps.browser.oldsafari.major], ['version', mapper.string, maps.browser.oldsafari.version]], [
             
             /(konqueror)\/((\d+)?[\w\.]+)/i,                                    // Konqueror
@@ -199,6 +199,8 @@
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], ['vendor', 'model', ['type', 'Mobile']], [
+            /\((bb10);\s(\w+)/i                                                 // BlackBerry 10
+            ], [['vendor', 'BlackBerry'], 'model', ['type', 'Mobile']], [
 
             /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+))/i       // Asus Tablets
             ], [['vendor', 'Asus'], 'model', ['type', 'Tablet']], [
@@ -264,6 +266,8 @@
             ], [['name', 'Windows'], ['version', mapper.string, maps.os.windows.version]], [
 
             // Mobile/Embedded OS
+            /\((bb)(10);/i                                                      // BlackBerry 10
+            ], [['name', 'BlackBerry'], 'version'], [
             /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
             /(tizen)\/([\w\.]+)/i,                                              // Tizen
             /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i
