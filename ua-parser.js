@@ -294,12 +294,12 @@
             /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
             ], [['name', 'iOS'], ['version', /_/g, '.']], [
 
-            /(mac\sos\sx)\s([\w\s\.]+\w)/i,                                     // Mac OS
+            /(mac\sos\sx)\s?([\d\s\.]+\w)*/i,                                   // Mac OS
             ], ['name', ['version', /_/g, '.']], [
 
             // Other
             /(haiku)\s(\w+)/i,                                                  // Haiku
-            /(macintosh|unix|minix|beos)[\/\s]?()*/i                            // UNIX/Minix/BeOS
+            /(macintosh|mac(?=_powerpc)|unix|minix|beos)[\/\s]?()*/i            // UNIX/Minix/BeOS
             ], ['name', 'version']
         ]
     };
