@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.9
+// UA-Parser.JS v0.4.10
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -171,11 +171,10 @@
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
-            /(uc\s?browser)\/?((\d+)?[\w\.]+)/i,                                // UCBrowser
-            /(lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,                   // Lynx/Dillo/iCab/Doris
-            /(gobrowser)\/?[\d\.]*/i,                                           // GoBrowser
-            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                        
-                                                                                // Mosaic
+            /(uc\s?browser|polaris|lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,
+                                                                                // UCBrowser/Polaris/Lynx/Dillo/iCab/Doris
+            /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
+            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
             ], ['name', 'version', 'major']
         ],
 
@@ -250,7 +249,8 @@
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /([aple]*webkit|trident|netfront)\/([\w\.]+)/i,                     // Webkit/Trident/NetFront
-            /(khtml)\/([\w\.]+)/i                                               // KHTML
+            /(khtml)\/([\w\.]+)/i,                                              // KHTML
+            /(tasman)\s([\w\.]+)/i                                              // Tasman
             ], ['name', 'version'], [
 
             /rv\:([\w\.]+).*(gecko)/i                                           // Gecko
@@ -276,14 +276,15 @@
             /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i                 // Symbian
             ], [['name', 'Symbian'], 'version'],[
 
-            /(nintendo|playstation)\s([wids3portable]+)/i,                      // Nintendo/Playstation
+            /(nintendo|playstation)\s([wids3portablev]+)/i,                     // Nintendo/Playstation
 
             // GNU/Linux based
             /(mint)[\/\s\(]?(\w+)*/i,                                           // Mint
             /(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,
                                                                                 // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
                                                                                 // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk
-            /(gnu|linux)\s?([\w\.]+)*/i                                         // Other GNU/Linux
+            /(hurd|linux)\s?([\w\.]+)*/i,                                       // Hurd/Linux
+            /(gnu)\s?([\w\.]+)*/i                                               // GNU
             ], ['name', 'version'], [
 
             /(cros)\s[\w]+\s([\w\.]+\w)/i                                       // Chromium OS
@@ -306,8 +307,8 @@
             // Other
             /(haiku)\s(\w+)/i,                                                  // Haiku
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX                    
-            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|qnx|os\/2)[\/\s]?()*/i,
-                                                                                // Plan9/Minix/BeOS/QNX/OS2
+            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|qnx|os\/2|amigaos|morphos)/i,
+                                                                                // Plan9/Minix/BeOS/QNX/OS2/AmigaOS/MorphOS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], ['name', 'version']
         ]
