@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.10
+// UA-Parser.JS v0.4.11
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -112,7 +112,8 @@
                     'XP'        : ['NT 5.1', 'NT 5.2'],
                     'Vista'     : 'NT 6.0',
                     '7'         : 'NT 6.1',
-                    '8'         : 'NT 6.2'
+                    '8'         : 'NT 6.2',
+                    'RT'        : 'ARM'
                 }
             }
         }
@@ -260,7 +261,8 @@
         os : [[
 
             // Windows based
-            /(windows\sphone\sos|windows\s?[mobile]*)[\s\/]?([ntce\d\.\s]+\w)/i // Windows
+            /(windows)\snt\s6\.2;\s(arm)/i,                                     // Windows RT
+            /(windows\sphone\sos|windows\s?[mobile]*)[\s\/]?([ntce\d\.\s]+\w)/i
             ], ['name', ['version', mapper.string, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
             ], [['name', 'Windows'], ['version', mapper.string, maps.os.windows.version]], [
