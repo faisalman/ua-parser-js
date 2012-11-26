@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.11
+// UA-Parser.JS v0.4.12
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -303,7 +303,7 @@
             /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
             ], [['name', 'iOS'], ['version', /_/g, '.']], [
 
-            /(mac\sos\sx)\s?([\d\s\.]+\w)*/i,                                   // Mac OS
+            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,                                   // Mac OS
             ], ['name', ['version', /_/g, '.']], [
 
             // Other
