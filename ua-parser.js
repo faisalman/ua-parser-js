@@ -358,7 +358,7 @@
     };
 
     // check whether script is running inside node.js export as module
-    if (typeof exports !== 'undefined' && this.toString() !== '[object DOMWindow]') {
+    if (typeof exports !== 'undefined' && (!this || this.toString() !== '[object DOMWindow]')) {
         if (typeof module !== 'undefined' && module.exports) {
             exports = module.exports = UAParser;
         }
