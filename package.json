@@ -17,6 +17,12 @@
     "Faisal Salman <fyzlman@gmail.com>"
   ],
   "main": "ua-parser",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "devDependencies": {
+    "mocha": ">= 1.7.1"
+  },
   "repositories": [
     {
       "type": "git",
