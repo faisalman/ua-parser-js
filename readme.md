@@ -73,6 +73,10 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 
 ## Using node.js
 
+```sh
+npm install ua-parser-js
+```
+
 ```js
 var UAParser    = require('ua-parser');
 var parser      = new UAParser();

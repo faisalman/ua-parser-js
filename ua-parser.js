@@ -1,11 +1,11 @@
-// UA-Parser.JS v0.4.12
+// UA-Parser.JS v0.4.13
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012 Faisalman
 // Dual licensed under GPLv2 & MIT
 
-(function (undefined) {
+(function (global, undefined) {
 
     'use strict';
 
@@ -358,7 +358,7 @@
     };
 
     // check whether script is running inside node.js export as module
-    if (typeof exports !== 'undefined' && (!this || this.toString() !== '[object DOMWindow]')) {
+    if (typeof exports !== 'undefined' && !/\[object\s[DOM]*Window\]/.test(global.toString())) {
         if (typeof module !== 'undefined' && module.exports) {
             exports = module.exports = UAParser;
         }
@@ -366,4 +366,4 @@
     } else {
         window['UAParser'] = UAParser;
     }
-})();
+})(this);
