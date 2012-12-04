@@ -1,7 +1,7 @@
 {
   "title": "UA-Parser.JS",
   "name": "ua-parser-js",
-  "version": "0.4.13",
+  "version": "0.4.14",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -18,7 +18,7 @@
   ],
   "main": "ua-parser",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha -R spec"
   },
   "devDependencies": {
     "mocha": ">= 1.7.1"

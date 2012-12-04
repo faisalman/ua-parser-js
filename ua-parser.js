@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.13
+// UA-Parser.JS v0.4.14
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -152,7 +152,7 @@
             /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
             ], [['name', 'Yandex'], 'version', 'major'], [
             
-            /(?:android.+(crmo|crios))\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
+            /((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
             ], [['name', 'Chrome'], 'version', 'major'], [
             
             /version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i              // Safari & Safari Mobile
@@ -318,7 +318,7 @@
 
     var UAParser = function UAParser (uastring) {
 
-        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : "");
+        var ua = uastring || ((global && global.navigator && global.navigator.userAgent) ? global.navigator.userAgent : "");
 
         this.getBrowser = function () {
             return mapper.regex.apply(this, regexes.browser);
@@ -357,13 +357,15 @@
         this.setUA(ua);
     };
 
-    // check whether script is running inside node.js export as module
+    // check js environment    
     if (typeof exports !== 'undefined' && !/\[object\s[DOM]*Window\]/.test(global.toString())) {
+        // nodejs env
         if (typeof module !== 'undefined' && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
     } else {
-        window['UAParser'] = UAParser;
+        // browser env
+        global['UAParser'] = UAParser;
     }
 })(this);
