@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.14
+// UA-Parser.JS v0.4.15
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -125,13 +125,13 @@
 
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
-            /(opera\smobi)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mobile
+            /(opera\smobi).+version\/((\d+)?[\w\.-]+)/i,                        // Opera Mobile
             /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
             /(opera)[\/\s]+((\d+)?[\w\.]+)/i,                                   // Opera < 9.80
 
             // Mixed
             /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)/i,
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i,
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer
 
             // Trident based
@@ -162,13 +162,17 @@
             ], ['name', ['major', mapper.string, maps.browser.oldsafari.major], ['version', mapper.string, maps.browser.oldsafari.version]], [
             
             /(konqueror)\/((\d+)?[\w\.]+)/i,                                    // Konqueror
-            /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i,
+            /(applewebkit|khtml)\/((\d+)?[\w\.]+)/i
+            ], ['name', 'version', 'major'], [
 
             // Gecko based
+            /(navigator|netscape)\/((\d+)?[\w\.-]+)/i                           // Netscape
+            ], [['name', 'Netscape'], 'version', 'major'], [
+            /(swiftfox)/i,                                                      // Swiftfox
             /(iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,
                                                                                 // Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo
-            /(firefox|seamonkey|netscape|navigator|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.]+)/i,
-                                                                                // Firefox/SeaMonkey/Netscape/K-Meleon/IceCat/IceApe/Firebird/Phoenix
+            /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
+                                                                                // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
