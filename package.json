@@ -18,10 +18,12 @@
   ],
   "main": "ua-parser",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec"
+    "test": "./node_modules/mocha/bin/mocha -R spec",
+    "pretest": "./node_modules/uglify-js/bin/uglifyjs ua-parser.js > ua-parser.min.js"
   },
   "devDependencies": {
-    "mocha": ">= 1.7.1"
+    "mocha": ">= 1.7.1",
+    "uglify-js": ">= 1.3.4"
   },
   "repositories": [
     {
