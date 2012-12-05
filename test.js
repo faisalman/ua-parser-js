@@ -21,12 +21,39 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Baidu',
+        ua      : 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; baidubrowser 1.x)',
+        expect  : 
+        {
+            name    : 'baidubrowser',
+            version : '1.x'
+        }
+    },
+    {
+        desc    : 'Bolt',
+        ua      : 'Mozilla/5.0 (X11; 78; CentOS; US-en) AppleWebKit/527+ (KHTML, like Gecko) Bolt/0.862 Version/3.0 Safari/523.15',
+        expect  : 
+        {
+            name    : 'Bolt',
+            version : '0.862'
+        }
+    },
+    {
         desc    : 'Camino',
         ua      : 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10.4; en; rv:1.9.0.19) Gecko/2011091218 Camino/2.0.9 (like Firefox/3.0.19)',
         expect  : 
         {
             name    : 'Camino',
             version : '2.0.9'
+        }
+    },
+    {
+        desc    : 'Chimera',
+        ua      : 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; pl-PL; rv:1.0.1) Gecko/20021111 Chimera/0.6',
+        expect  : 
+        {
+            name    : 'Chimera',
+            version : '0.6'
         }
     },
     {
@@ -45,6 +72,15 @@ var browsers    = [
         {
             name    : 'Chrome',
             version : '19.0.1084.60'
+        }
+    },
+    {
+        desc    : 'Chromium',
+        ua      : 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.10 Chromium/16.0.912.21 Chrome/16.0.912.21 Safari/535.7',
+        expect  : 
+        {
+            name    : 'Chromium',
+            version : '16.0.912.21'
         }
     },
     {
@@ -75,12 +111,30 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Doris',
+        ua      : 'Doris/1.15 [en] (Symbian)',
+        expect  : 
+        {
+            name    : 'Doris',
+            version : '1.15'
+        }
+    },
+    {
         desc    : 'Epiphany',
         ua      : 'Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.7) Gecko/20040628 Epiphany/1.2.6',
         expect  : 
         {
             name    : 'Epiphany',
             version : '1.2.6'
+        }
+    },
+    {
+        desc    : 'Firebird',
+        ua      : 'Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.5) Gecko/20031007 Firebird/0.7',
+        expect  : 
+        {
+            name    : 'Firebird',
+            version : '0.7'
         }
     },
     {
@@ -111,7 +165,16 @@ var browsers    = [
         }
     },
     {
-        desc    : 'Iceape',
+        desc    : 'GoBrowser',
+        ua      : 'Nokia5700XpressMusic/GoBrowser/1.6.91',
+        expect  : 
+        {
+            name    : 'GoBrowser',
+            version : '1.6.91'
+        }
+    },
+    {
+        desc    : 'IceApe',
         ua      : 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.19) Gecko/20110817 Iceape/2.0.14',
         expect  : 
         {
@@ -165,6 +228,15 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Kindle Browser',
+        ua      : 'Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.5 (screen 600x800; rotate)',
+        expect  : 
+        {
+            name    : 'Kindle',
+            version : '2.5'
+        }
+    }, 
+    {
         desc    : 'Konqueror',
         ua      : 'Mozilla/5.0 (compatible; Konqueror/3.5; Linux; X11; x86_64) KHTML/3.5.6 (like Gecko) (Kubuntu)',
         expect  : 
@@ -192,6 +264,15 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Maemo Browser',
+        ua      : 'Mozilla/5.0 (X11; U; Linux armv7l; ru-RU; rv:1.9.2.3pre) Gecko/20100723 Firefox/3.5 Maemo Browser 1.7.4.8 RX-51 N900',
+        expect  : 
+        {
+            name    : 'Maemo Browser',
+            version : '1.7.4.8'
+        }
+    },
+    {
         desc    : 'Maxthon',
         ua      : 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; SV1; Maxthon; .NET CLR 1.1.4322)',
         expect  : 
@@ -216,6 +297,24 @@ var browsers    = [
         {
             name    : 'Minimo',
             version : '0.020'
+        }
+    },
+    {
+        desc    : 'Mobile Safari',
+        ua      : 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7',
+        expect  : 
+        {
+            name    : 'Mobile Safari',
+            version : '4.0.5'
+        }
+    },
+    {
+        desc    : 'Mosaic',
+        ua      : 'NCSA_Mosaic/2.6 (X11; SunOS 4.1.3 sun4m)',
+        expect  : 
+        {
+            name    : 'Mosaic',
+            version : '2.6'
         }
     },
     {
@@ -261,6 +360,15 @@ var browsers    = [
         {
             name    : 'Netscape',
             version : '8.0.1'
+        }
+    },
+    {
+        desc    : 'Nokia Browser',
+        ua      : 'Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/025.007; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.37 Mobile Safari/533.4 3gpp-gba',
+        expect  : 
+        {
+            name    : 'NokiaBrowser',
+            version : '7.3.1.37'
         }
     },
     {
@@ -318,12 +426,30 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Phoenix',
+        ua      : 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.2b) Gecko/20021029 Phoenix/0.4',
+        expect  : 
+        {
+            name    : 'Phoenix',
+            version : '0.4'
+        }
+    },
+    {
         desc    : 'Polaris',
         ua      : 'LG-LX600 Polaris/6.0 MMP/2.0 Profile/MIDP-2.1 Configuration/CLDC-1.1',
         expect  : 
         {
             name    : 'Polaris',
             version : '6.0'
+        }
+    },
+    {
+        desc    : 'RockMelt',
+        ua      : 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) RockMelt/0.8.36.78 Chrome/7.0.517.44 Safari/534.7',
+        expect  : 
+        {
+            name    : 'RockMelt',
+            version : '0.8.36.78'
         }
     },
     {
@@ -345,6 +471,24 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Silk Browser',
+        ua      : 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-84)',
+        expect  : 
+        {
+            name    : 'Silk',
+            version : '1.1.0-84'
+        }
+    },
+    {
+        desc    : 'Skyfire',
+        ua      : 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Safari/530.17 Skyfire/2.0',
+        expect  : 
+        {
+            name    : 'Skyfire',
+            version : '2.0'
+        }
+    },
+    {
         desc    : 'SlimBrowser',
         ua      : 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SlimBrowser)',
         expect  : 
@@ -360,6 +504,42 @@ var browsers    = [
         {
             name    : 'Swiftfox',
             version : undefined
+        }
+    },
+    {
+        desc    : 'Tizen Browser',
+        ua      : 'Mozilla/5.0 (Linux; U; Tizen/1.0 like Android; en-us; AppleWebKit/534.46 (KHTML, like Gecko) Tizen Browser/1.0 Mobile',
+        expect  : 
+        {
+            name    : 'Tizen Browser',
+            version : '1.0'
+        }
+    },
+    {
+        desc    : 'UC Browser on Samsung',
+        ua      : 'Mozilla/5.0 (Java; U; Pt-br; samsung-gt-s5620) UCBrowser8.2.1.144/69/352/UCWEB Mobile UNTRUSTED/1.0',
+        expect  : 
+        {
+            name    : 'UCBrowser',
+            version : '8.2.1.144'
+        }
+    },
+    {
+        desc    : 'UC Browser on Nokia',
+        ua      : 'Mozilla/5.0 (S60V3; U; en-in; NokiaN73)/UC Browser8.4.0.159/28/351/UCWEB Mobile',
+        expect  : 
+        {
+            name    : 'UC Browser',
+            version : '8.4.0.159'
+        }
+    },
+    {
+        desc    : 'Yandex',
+        ua      : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.5 (KHTML, like Gecko) YaBrowser/1.0.1084.5402 Chrome/19.0.1084.5402 Safari/536.5',
+        expect  : 
+        {
+            name    : 'Yandex',
+            version : '1.0.1084.5402'
         }
     }
 ];
