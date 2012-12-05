@@ -140,20 +140,25 @@
             /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|s60|series60|ovibrowser|bolt)\/((\d+)?[\w\.]+)/i,
-                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/S60/Bolt
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i,
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt)\/((\d+)?[\w\.-]+)/i
+                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt
+            ], ['name', 'version', 'major'], [
+            
+            /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
+            ], [['name', 'Yandex'], 'version', 'major'], [
+            
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], ['name', 'version', 'major'], [
             
             /(dolfin)\/((\d+)?[\w\.]+)/i                                        // Dolphin
             ], [['name', 'Dolphin'], 'version', 'major'], [
             
-            /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
-            ], [['name', 'Yandex'], 'version', 'major'], [
-            
-            /((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i,                      // Chrome for Android/iOS
+            /((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i                       // Chrome for Android/iOS
             ], [['name', 'Chrome'], 'version', 'major'], [
+            
+            /version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i                 // Mobile Safari
+            ], ['version', 'major', ['name', 'Mobile Safari']], [
             
             /version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i              // Safari & Safari Mobile
             ], ['version', 'major', 'name'], [
