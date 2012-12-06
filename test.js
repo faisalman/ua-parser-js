@@ -426,6 +426,15 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Opera Tablet',
+        ua      : 'Opera/9.80 (Windows NT 6.1; Opera Tablet/15165; U; en) Presto/2.8.149 Version/11.1',
+        expect  : 
+        {
+            name    : 'Opera Tablet',
+            version : '11.1'
+        }
+    },
+    {
         desc    : 'Phoenix',
         ua      : 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.2b) Gecko/20021029 Phoenix/0.4',
         expect  : 
@@ -541,8 +550,72 @@ var browsers    = [
             name    : 'Yandex',
             version : '1.0.1084.5402'
         }
-    }
-];
+    }];
+
+var engines = [
+    {
+        desc    : 'Gecko',
+        ua      : 'Mozilla/5.0 (X11; Linux x86_64; rv:2.0b9pre) Gecko/20110111 Firefox/4.0b9pre',
+        expect  :
+        {
+            name    : 'Gecko',
+            version : '2.0b9pre'
+        }
+    },
+    {
+        desc    : 'KHTML',
+        ua      : 'Mozilla/5.0 (compatible; Konqueror/4.5; FreeBSD) KHTML/4.5.4 (like Gecko)',
+        expect  :
+        {
+            name    : 'KHTML',
+            version : '4.5.4'
+        }
+    },
+    {
+        desc    : 'NetFront',
+        ua      : 'Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0',
+        expect  :
+        {
+            name    : 'NetFront',
+            version : '3.0'
+        }
+    },
+    {
+        desc    : 'Presto',
+        ua      : 'Opera/9.80 (Windows NT 6.1; Opera Tablet/15165; U; en) Presto/2.8.149 Version/11.1',
+        expect  :
+        {
+            name    : 'Presto',
+            version : '2.8.149'
+        }
+    },
+    {
+        desc    : 'Tasman',
+        ua      : 'Mozilla/4.0 (compatible; MSIE 6.0; PPC Mac OS X 10.4.7; Tasman 1.0)',
+        expect  :
+        {
+            name    : 'Tasman',
+            version : '1.0'
+        }
+    },
+    {
+        desc    : 'Trident',
+        ua      : 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0)',
+        expect  :
+        {
+            name    : 'Trident',
+            version : '6.0'
+        }
+    },
+    {
+        desc    : 'WebKit',
+        ua      : 'Mozilla/5.0 (Windows; U; Windows NT 6.1; sv-SE) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4',
+        expect  :
+        {
+            name    : 'WebKit',
+            version : '533.19.4'
+        }
+}];
     
 describe('getBrowser', function () {    
     
@@ -559,6 +632,28 @@ describe('getBrowser', function () {
                 });
                 
                 it('should return browser version: ' + expect.version, function () {
+                    assert.equal(result.version, expect.version);
+                });
+            });
+        });
+    }
+});
+
+describe('getEngine', function () {    
+    
+    for (var i in engines) {
+    
+        describe('[' + engines[i].desc + ']', function () {
+            describe('"' + engines[i].ua + '"', function () {
+            
+                var expect = engines[i].expect;
+                var result = parser.setUA(engines[i].ua).getEngine();
+                
+                it('should return engine name: ' + expect.name, function () {
+                    assert.equal(result.name, expect.name);
+                });
+                
+                it('should return engine version: ' + expect.version, function () {
                     assert.equal(result.version, expect.version);
                 });
             });
