@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.15
+// UA-Parser.JS v0.4.16
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -125,7 +125,7 @@
 
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
-            /(opera\smobi).+version\/((\d+)?[\w\.-]+)/i,                        // Opera Mobile
+            /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
             /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
             /(opera)[\/\s]+((\d+)?[\w\.]+)/i,                                   // Opera < 9.80
 
@@ -258,7 +258,7 @@
         engine : [[
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /([aple]*webkit|trident|netfront)\/([\w\.]+)/i,                     // Webkit/Trident/NetFront
+            /(webkit|trident|netfront)\/([\w\.]+)/i,                            // WebKit/Trident/NetFront
             /(khtml)\/([\w\.]+)/i,                                              // KHTML
             /(tasman)\s([\w\.]+)/i                                              // Tasman
             ], ['name', 'version'], [
