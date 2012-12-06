@@ -2,16 +2,18 @@
 
 Lightweight JavaScript-based User-Agent string parser
 
+[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png)](https://travis-ci.org/faisalman/ua-parser-js)
+
 * Author    : Faisalman <<fyzlman@gmail.com>>
 * Home      : http://faisalman.github.com/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 * License   : GPLv2 & MIT
 
-[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png)](https://travis-ci.org/faisalman/ua-parser-js)
-
 ## Features
 
 Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string.
+
+![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
 ## Methods
 
