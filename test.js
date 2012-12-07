@@ -8,7 +8,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Arora',
-            version : '0.2'
+            version : '0.2',
+            major   : '0'
         }
     },
     {
@@ -17,7 +18,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Avant Browser',
-            version : undefined
+            version : undefined,
+            major   : undefined
         }
     },
     {
@@ -26,7 +28,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'baidubrowser',
-            version : '1.x'
+            version : '1.x',
+            major   : '1'
         }
     },
     {
@@ -35,7 +38,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Bolt',
-            version : '0.862'
+            version : '0.862',
+            major   : '0'
         }
     },
     {
@@ -44,7 +48,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Camino',
-            version : '2.0.9'
+            version : '2.0.9',
+            major   : '2'
         }
     },
     {
@@ -53,7 +58,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Chimera',
-            version : '0.6'
+            version : '0.6',
+            major   : '0'
         }
     },
     {
@@ -62,7 +68,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Chrome',
-            version : '20.0.1090.0'
+            version : '20.0.1090.0',
+            major   : '20'
         }
     },
     {
@@ -71,7 +78,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Chrome',
-            version : '19.0.1084.60'
+            version : '19.0.1084.60',
+            major   : '19'
         }
     },
     {
@@ -80,7 +88,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Chromium',
-            version : '16.0.912.21'
+            version : '16.0.912.21',
+            major   : '16'
         }
     },
     {
@@ -89,7 +98,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Chrome',
-            version : '16.0.912.75'
+            version : '16.0.912.75',
+            major   : '16'
         }
     },
     {
@@ -98,7 +108,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Dillo',
-            version : '2.2'
+            version : '2.2',
+            major   : '2'
         }
     },
     {
@@ -107,7 +118,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Dolphin',
-            version : '2.0'
+            version : '2.0',
+            major   : '2'
         }
     },
     {
@@ -116,7 +128,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Doris',
-            version : '1.15'
+            version : '1.15',
+            major   : '1'
         }
     },
     {
@@ -125,7 +138,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Epiphany',
-            version : '1.2.6'
+            version : '1.2.6',
+            major   : '1'
         }
     },
     {
@@ -134,7 +148,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Firebird',
-            version : '0.7'
+            version : '0.7',
+            major   : '0'
         }
     },
     {
@@ -143,7 +158,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Firefox',
-            version : '15.0a2'
+            version : '15.0a2',
+            major   : '15'
         }
     },
     {
@@ -152,7 +168,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Fennec',
-            version : '1.0a1'
+            version : '1.0a1',
+            major   : '1'
         }
     },
     {
@@ -161,7 +178,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Flock',
-            version : '2.0'
+            version : '2.0',
+            major   : '2'
         }
     },
     {
@@ -170,7 +188,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'GoBrowser',
-            version : '1.6.91'
+            version : '1.6.91',
+            major   : '1'
         }
     },
     {
@@ -179,7 +198,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Iceape',
-            version : '2.0.14'
+            version : '2.0.14',
+            major   : '2'
         }
     },
     {
@@ -188,7 +208,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'IceCat',
-            version : '3.0.3-g1'
+            version : '3.0.3-g1',
+            major   : '3'
         }
     },
     {
@@ -197,7 +218,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Iceweasel',
-            version : '3.0.6'
+            version : '3.0.6',
+            major   : '3'
         }
     },
     {
@@ -206,7 +228,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'iCab',
-            version : '2.9.5'
+            version : '2.9.5',
+            major   : '2'
         }
     },
     {
@@ -215,7 +238,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'IEMobile',
-            version : '7.11'
+            version : '7.11',
+            major   : '7'
         }
     },
     {
@@ -224,7 +248,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'K-Meleon',
-            version : '0.8.2'
+            version : '0.8.2',
+            major   : '0'
         }
     },
     {
@@ -233,7 +258,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Kindle',
-            version : '2.5'
+            version : '2.5',
+            major   : '2'
         }
     }, 
     {
@@ -242,7 +268,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Konqueror',
-            version : '3.5'
+            version : '3.5',
+            major   : '3'
         }
     },
     {
@@ -251,7 +278,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Lunascape',
-            version : '5.1.4.5'
+            version : '5.1.4.5',
+            major   : '5'
         }
     },
     {
@@ -260,7 +288,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Lynx',
-            version : '2.8.5dev.16'
+            version : '2.8.5dev.16',
+            major   : '2'
         }
     },
     {
@@ -269,7 +298,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Maemo Browser',
-            version : '1.7.4.8'
+            version : '1.7.4.8',
+            major   : '1'
         }
     },
     {
@@ -278,7 +308,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Maxthon',
-            version : undefined
+            version : undefined,
+            major   : undefined
         }
     },
     {
@@ -287,7 +318,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Midori',
-            version : '0.2.2'
+            version : '0.2.2',
+            major   : '0'
         }
     },
     {
@@ -296,7 +328,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Minimo',
-            version : '0.020'
+            version : '0.020',
+            major   : '0'
         }
     },
     {
@@ -305,7 +338,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Mobile Safari',
-            version : '4.0.5'
+            version : '4.0.5',
+            major   : '4'
         }
     },
     {
@@ -314,7 +348,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Mosaic',
-            version : '2.6'
+            version : '2.6',
+            major   : '2'
         }
     },
     {
@@ -323,7 +358,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Mozilla',
-            version : '5.0'
+            version : '5.0',
+            major   : '5'
         }
     },
     {
@@ -332,7 +368,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'IE',
-            version : '5.0b1'
+            version : '5.0b1',
+            major   : '5'
         }
     },
     {
@@ -341,7 +378,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'NetFront',
-            version : '3.0'
+            version : '3.0',
+            major   : '3'
         }
     },
     {
@@ -350,7 +388,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Netscape',
-            version : '9.0'
+            version : '9.0',
+            major   : '9'
         }
     },
     {
@@ -359,7 +398,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Netscape',
-            version : '8.0.1'
+            version : '8.0.1',
+            major   : '8'
         }
     },
     {
@@ -368,7 +408,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'NokiaBrowser',
-            version : '7.3.1.37'
+            version : '7.3.1.37',
+            major   : '7'
         }
     },
     {
@@ -377,7 +418,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'OmniWeb',
-            version : '558.48'
+            version : '558.48',
+            major   : '558'
         }
     },
     {
@@ -386,7 +428,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Opera',
-            version : '10.10'
+            version : '10.10',
+            major   : '10'
         }
     },
     {
@@ -395,7 +438,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Opera',
-            version : '6.01'
+            version : '6.01',
+            major   : '6'
         }
     },
     {
@@ -404,7 +448,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Opera',
-            version : '8.5'
+            version : '8.5',
+            major   : '8'
         }
     },
     {
@@ -413,7 +458,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Opera Mobi',
-            version : '11.50'
+            version : '11.50',
+            major   : '11'
         }
     },
     {
@@ -422,7 +468,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Opera Mini',
-            version : '5.1.21214'
+            version : '5.1.21214',
+            major   : '5'
         }
     },
     {
@@ -431,7 +478,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Opera Tablet',
-            version : '11.1'
+            version : '11.1',
+            major   : '11'
         }
     },
     {
@@ -440,7 +488,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Phoenix',
-            version : '0.4'
+            version : '0.4',
+            major   : '0'
         }
     },
     {
@@ -449,7 +498,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Polaris',
-            version : '6.0'
+            version : '6.0',
+            major   : '6'
         }
     },
     {
@@ -458,7 +508,18 @@ var browsers    = [
         expect  : 
         {
             name    : 'RockMelt',
-            version : '0.8.36.78'
+            version : '0.8.36.78',
+            major   : '0'
+        }
+    },
+    {
+        desc    : 'Safari',
+        ua      : 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/533.17.8 (KHTML, like Gecko) Version/5.0.1 Safari/533.17.8',
+        expect  : 
+        {
+            name    : 'Safari',
+            version : '5.0.1',
+            major   : '5'
         }
     },
     {
@@ -467,7 +528,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Safari',
-            version : '2.0.4'
+            version : '2.0.4',
+            major   : '2'
         }
     },
     {
@@ -476,7 +538,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'SeaMonkey',
-            version : '2.0b1pre'
+            version : '2.0b1pre',
+            major   : '2'
         }
     },
     {
@@ -485,7 +548,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Silk',
-            version : '1.1.0-84'
+            version : '1.1.0-84',
+            major   : '1'
         }
     },
     {
@@ -494,7 +558,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Skyfire',
-            version : '2.0'
+            version : '2.0',
+            major   : '2'
         }
     },
     {
@@ -503,7 +568,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'SlimBrowser',
-            version : undefined
+            version : undefined,
+            major   : undefined
         }
     },
     {
@@ -512,7 +578,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Swiftfox',
-            version : undefined
+            version : undefined,
+            major   : undefined
         }
     },
     {
@@ -521,7 +588,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Tizen Browser',
-            version : '1.0'
+            version : '1.0',
+            major   : '1'
         }
     },
     {
@@ -530,7 +598,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'UCBrowser',
-            version : '8.2.1.144'
+            version : '8.2.1.144',
+            major   : '8'
         }
     },
     {
@@ -539,7 +608,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'UC Browser',
-            version : '8.4.0.159'
+            version : '8.4.0.159',
+            major   : '8'
         }
     },
     {
@@ -548,7 +618,8 @@ var browsers    = [
         expect  : 
         {
             name    : 'Yandex',
-            version : '1.0.1084.5402'
+            version : '1.0.1084.5402',
+            major   : '1'
         }
     }];
 
@@ -616,6 +687,548 @@ var engines = [
             version : '533.19.4'
         }
 }];
+
+var os = [
+    {
+        desc    : 'Windows 95',
+        ua      : 'Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : '95'
+        }
+    },
+    {
+        desc    : 'Windows 98',
+        ua      : 'Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : '98'
+        }
+    },
+    {
+        desc    : 'Windows ME',
+        ua      : 'Mozilla/5.0 (Windows; U; Win 9x 4.90) Gecko/20020502 CS 2000 7.0/7.0',
+        expect  :
+        {
+            name    : 'Windows',
+            version : 'ME'
+        }
+    },
+    {
+        desc    : 'Windows 2000',
+        ua      : 'Mozilla/3.0 (compatible; MSIE 3.0; Windows NT 5.0)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : '2000'
+        }
+    },
+    {
+        desc    : 'Windows XP',
+        ua      : 'Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 5.2)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : 'XP'
+        }
+    },
+    {
+        desc    : 'Windows Vista',
+        ua      : 'Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 6.0; fr-FR)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : 'Vista'
+        }
+    },
+    {
+        desc    : 'Windows 7',
+        ua      : 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : '7'
+        }
+    },
+    {
+        desc    : 'Windows 8',
+        ua      : 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; Win64; x64; Trident/6.0; .NET4.0E; .NET4.0C)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : '8'
+        }
+    },
+    {
+        desc    : 'Windows RT',
+        ua      : 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : 'RT'
+        }
+    },
+    {
+        desc    : 'Windows CE',
+        ua      : 'Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11)',
+        expect  :
+        {
+            name    : 'Windows',
+            version : 'CE'
+        }
+    },
+    {
+        desc    : 'Windows Mobile',
+        ua      : 'Mozilla/5.0 (ZTE-E_N72/N72V1.0.0B02;U;Windows Mobile/6.1;Profile/MIDP-2.0 Configuration/CLDC-1.1;320*240;CTC/2.0) IE/6.0 (compatible; MSIE 4.01; Windows CE; PPC)/UC Browser7.7.1.88',
+        expect  :
+        {
+            name    : 'Windows Mobile',
+            version : '6.1'
+        }
+    },
+    {
+        desc    : 'Windows Phone OS',
+        ua      : 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; DELL; Venue Pro)',
+        expect  :
+        {
+            name    : 'Windows Phone OS',
+            version : '7.0'
+        }
+    },
+    {
+        desc    : 'BlackBerry',
+        ua      : 'BlackBerry9300/5.0.0.912 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/378',
+        expect  :
+        {
+            name    : 'BlackBerry',
+            version : '5.0.0.912'
+        }
+    },
+    {
+        desc    : 'BlackBerry 10',
+        ua      : 'Mozilla/5.0 (BB10; Touch) AppleWebKit/537.3+ (KHTML, like Gecko) Version/10.0.9.386 Mobile Safari/537.3+',
+        expect  :
+        {
+            name    : 'BlackBerry',
+            version : '10'
+        }
+    },
+    {
+        desc    : 'Tizen',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Android',
+        ua      : 'Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; VM670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko)',
+        expect  :
+        {
+            name    : 'Android',
+            version : '2.2.2'
+        }
+    },
+    {
+        desc    : 'WebOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Palm OS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'QNX',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Bada',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'RIM Tablet OS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'MeeGo',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Symbian',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Nintendo',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'PlayStation',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Mint',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Joli',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Ubuntu',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Debian',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'OpenSUSE',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Gentoo',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Arch',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Slackware',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Fedora',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Mandriva',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'CentOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'PCLinuxOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'RedHat',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Zenwalk',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Hurd',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Linux',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'GNU',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Chromium OS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Solaris',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'FreeBSD',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'OpenBSD',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'NetBSD',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'DragonFly',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'iOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Mac OS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Haiku',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'AIX',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Plan9',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'Minix',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'BeOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'OS/2',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'AmigaOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'MorphOS',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : 'UNIX',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+    },
+    {
+        desc    : '',
+        ua      : '',
+        expect  :
+        {
+            name    : '',
+            version : ''
+        }
+}];
     
 describe('getBrowser', function () {    
     
@@ -633,6 +1246,10 @@ describe('getBrowser', function () {
                 
                 it('should return browser version: ' + expect.version, function () {
                     assert.equal(result.version, expect.version);
+                });
+                
+                it('should return browser major version: ' + expect.major, function () {
+                    assert.equal(result.major, expect.major);
                 });
             });
         });
@@ -658,5 +1275,30 @@ describe('getEngine', function () {
                 });
             });
         });
+    }
+});
+
+describe('getOS', function () {    
+    
+    for (var i in os) {
+    
+        if (os[i].ua) {
+
+            describe('[' + os[i].desc + ']', function () {
+                describe('"' + os[i].ua + '"', function () {
+                
+                    var expect = os[i].expect;
+                    var result = parser.setUA(os[i].ua).getOS();
+                    
+                    it('should return OS name: ' + expect.name, function () {
+                        assert.equal(result.name, expect.name);
+                    });
+                    
+                    it('should return OS version: ' + expect.version, function () {
+                        assert.equal(result.version, expect.version);
+                    });
+                });
+            });
+        }
     }
 });

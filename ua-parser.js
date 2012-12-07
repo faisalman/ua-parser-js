@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.16
+// UA-Parser.JS v0.4.17
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -178,7 +178,7 @@
                                                                                 // Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo
             /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
-            /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
+            /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
 
             // Other
             /(uc\s?browser|polaris|lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,
@@ -271,7 +271,7 @@
 
             // Windows based
             /(windows)\snt\s6\.2;\s(arm)/i,                                     // Windows RT
-            /(windows\sphone\sos|windows\s?[mobile]*)[\s\/]?([ntce\d\.\s]+\w)/i
+            /(windows\sphone\sos|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
             ], ['name', ['version', mapper.string, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
             ], [['name', 'Windows'], ['version', mapper.string, maps.os.windows.version]], [
@@ -279,7 +279,7 @@
             // Mobile/Embedded OS
             /\((bb)(10);/i                                                      // BlackBerry 10
             ], [['name', 'BlackBerry'], 'version'], [
-            /(blackberry).+version\/([\w\.]+)/i,                                // Blackberry
+            /(blackberry)\w*\/?([\w\.]+)*/i,                                    // Blackberry
             /(tizen)\/([\w\.]+)/i,                                              // Tizen
             /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i
                                                                                 // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo
@@ -318,8 +318,8 @@
             // Other
             /(haiku)\s(\w+)/i,                                                  // Haiku
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX                    
-            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|qnx|os\/2|amigaos|morphos)/i,
-                                                                                // Plan9/Minix/BeOS/QNX/OS2/AmigaOS/MorphOS
+            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos)/i,
+                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], ['name', 'version']
         ]
