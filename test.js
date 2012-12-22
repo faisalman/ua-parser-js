@@ -1122,12 +1122,21 @@ var os = [
         }
     },
     {
-        desc    : 'iOS',
-        ua      : '',
+        desc    : 'iOS with Chrome',
+        ua      : 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3',
         expect  :
         {
-            name    : '',
-            version : ''
+            name    : 'iOS',
+            version : '5.1.1'
+        }
+    },
+    {
+        desc    : 'iOS with Opera Mini',
+        ua      : 'Opera/9.80 (iPhone; Opera Mini/7.1.32694/27.1407; U; en) Presto/2.8.119 Version/11.10',
+        expect  :
+        {
+            name    : 'iOS',
+            version : undefined
         }
     },
     {

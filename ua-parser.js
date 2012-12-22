@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.4.18
+// UA-Parser.JS v0.5.0
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -329,7 +329,7 @@
             /\s(\w*bsd|dragonfly)\s?([\w\.]+)*/i,                               // FreeBSD/NetBSD/OpenBSD/DragonFly
             ], [NAME, VERSION],[
 
-            /(ip[honead]+).*os\s*([\w]+)*\slike\smac/i                          // iOS
+            /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i,            // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
             /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,                                   // Mac OS
