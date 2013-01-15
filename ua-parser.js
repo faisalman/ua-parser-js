@@ -326,13 +326,13 @@
             ], [[NAME, 'Solaris'], VERSION], [
 
             // BSD based
-            /\s(\w*bsd|dragonfly)\s?([\w\.]+)*/i,                               // FreeBSD/NetBSD/OpenBSD/DragonFly
+            /\s(\w*bsd|dragonfly)\s?([\w\.]+)*/i                                // FreeBSD/NetBSD/OpenBSD/DragonFly
             ], [NAME, VERSION],[
 
-            /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i,            // iOS
+            /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
-            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,                                   // Mac OS
+            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i                                    // Mac OS
             ], [NAME, [VERSION, /_/g, '.']], [
 
             // Other
