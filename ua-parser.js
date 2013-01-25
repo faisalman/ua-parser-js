@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.5.0
+// UA-Parser.JS v0.5.1
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -97,11 +97,9 @@
     };
 
     var maps = {
-    
-        browser : {
         
-            oldsafari : {
-            
+        browser : {        
+            oldsafari : {            
                 major : {
                     '1' : ['/85', '/125', '/312'],
                     '2' : ['/412', '/416', '/417', '/419'],
@@ -120,20 +118,16 @@
             }
         },
         
-        device : {
-        
-            htc : {
-            
+        device : {        
+            htc : {            
                 model : {
                     'Evo Shift 4G' : '7373KT'
                 }
             }
         },
         
-        os : {
-        
-            windows : {
-            
+        os : {        
+            windows : {            
                 version : {
                     'ME'        : '4.90',
                     'NT 3.11'   : 'NT3.51',
@@ -251,7 +245,7 @@
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
             
             /(sprint\sapa)(\w+)/i
-            ], [[VENDOR, 'HTC'], [MODEL, maps.device.htc.model], [TYPE, MOBILE]], [
+            ], [[VENDOR, 'HTC'], [MODEL, mapper.string, maps.device.htc.model], [TYPE, MOBILE]], [
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
             
             /(zte)-(\w+)*/i                                                     // ZTE

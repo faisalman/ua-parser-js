@@ -1238,6 +1238,17 @@ var os = [
             version : ''
         }
 }];
+var devices = [
+    {
+        desc    : 'HTC Evo Shift 4G',
+        ua      : 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0',
+        expect  :
+        {
+            vendor  : 'HTC',
+            model   : 'Evo Shift 4G',
+            type    : 'mobile'
+        }
+}];
     
 describe('getBrowser', function () {    
     
@@ -1305,6 +1316,35 @@ describe('getOS', function () {
                     
                     it('should return OS version: ' + expect.version, function () {
                         assert.equal(result.version, expect.version);
+                    });
+                });
+            });
+        }
+    }
+});
+
+describe('getDevice', function () {    
+    
+    for (var i in devices) {
+    
+        if (devices[i].ua) {
+
+            describe('[' + devices[i].desc + ']', function () {
+                describe('"' + devices[i].ua + '"', function () {
+                
+                    var expect = devices[i].expect;
+                    var result = parser.setUA(devices[i].ua).getDevice();
+                    
+                    it('should return device vendor: ' + expect.vendor, function () {
+                        assert.equal(result.vendor, expect.vendor);
+                    });
+                    
+                    it('should return device model: ' + expect.model, function () {
+                        assert.equal(result.model, expect.model);
+                    });
+                    
+                    it('should return device type: ' + expect.type, function () {
+                        assert.equal(result.type, expect.type);
                     });
                 });
             });
