@@ -120,6 +120,16 @@
             }
         },
         
+        device : {
+        
+            htc : {
+            
+                model : {
+                    'Evo Shift 4G' : '7373KT'
+                }
+            }
+        },
+        
         os : {
         
             windows : {
@@ -239,8 +249,11 @@
 
             /(nintendo|playstation)\s([wids3portablev]+)/i                      // Nintendo/Playstation
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
-
+            
+            /(sprint\sapa)(\w+)/i
+            ], [[VENDOR, 'HTC'], [MODEL, maps.device.htc.model], [TYPE, MOBILE]], [
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
+            
             /(zte)-(\w+)*/i                                                     // ZTE
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
