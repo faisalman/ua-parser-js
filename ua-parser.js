@@ -250,9 +250,10 @@
             /(sprint\s[a-z]+)(\w+)/i                                            // Sprint Phones
             ], [[VENDOR, mapper.string, maps.device.sprint.vendor], [MODEL, mapper.string, maps.device.sprint.model], [TYPE, MOBILE]], [
             
-            /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
-            
-            /(zte)-(\w+)*/i                                                     // ZTE
+            /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC            
+            /(zte)-(\w+)*/i,                                                    // ZTE
+            /(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|;\ssony)[_\s-]?([\w-]+)*/i
+                                                                                // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
             /\s((milestone|droid[2x]?))[globa\s]*\sbuild\//i,                   // Motorola
