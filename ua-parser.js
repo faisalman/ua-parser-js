@@ -119,9 +119,12 @@
         },
         
         device : {        
-            htc : {            
+            sprint : {
                 model : {
                     'Evo Shift 4G' : '7373KT'
+                },
+                vendor : {
+                    'HTC' : 'APA'
                 }
             }
         },
@@ -244,8 +247,9 @@
             /(nintendo|playstation)\s([wids3portablev]+)/i                      // Nintendo/Playstation
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
             
-            /(sprint\sapa)(\w+)/i
-            ], [[VENDOR, 'HTC'], [MODEL, mapper.string, maps.device.htc.model], [TYPE, MOBILE]], [
+            /(sprint\s[a-z]+)(\w+)/i                                            // Sprint Phones
+            ], [[VENDOR, mapper.string, maps.device.sprint.vendor], [MODEL, mapper.string, maps.device.sprint.model], [TYPE, MOBILE]], [
+            
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
             
             /(zte)-(\w+)*/i                                                     // ZTE
@@ -258,7 +262,7 @@
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
 
             /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9))/i
-            ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [          // Samsung
+            ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
             /((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
