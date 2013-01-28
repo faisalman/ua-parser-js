@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.5.1
+// UA-Parser.JS v0.5.2
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -12,13 +12,13 @@
     var EMPTY       = '',
         FUNC        = 'function',
         UNDEF       = 'undefined',
-        OBJ         = 'object',        
+        OBJ         = 'object',
         MAJOR       = 'major',
         MODEL       = 'model',
         NAME        = 'name',
         TYPE        = 'type',
         VENDOR      = 'vendor',
-        VERSION     = 'version',        
+        VERSION     = 'version',
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
         TABLET      = 'tablet';
@@ -318,7 +318,10 @@
             ], [NAME, VERSION], [
             /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i                 // Symbian
             ], [[NAME, 'Symbian'], VERSION],[
+            /mozilla.+\(mobile;.+gecko.+firefox/i                               // Firefox OS
+            ], [[NAME, 'Firefox OS'], VERSION], [
 
+            // Console
             /(nintendo|playstation)\s([wids3portablev]+)/i,                     // Nintendo/Playstation
 
             // GNU/Linux based

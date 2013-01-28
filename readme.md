@@ -65,7 +65,7 @@ Extract detailed type of web browser, layout engine, operating system, and devic
     
     console.log(parser.getResult().browser);    // {name: "Chromium", major: "15", version: "15.0.874.106"}
     console.log(parser.getResult().device);     // {model: undefined, type: undefined, vendor: undefined}
-    console.log(parser.getResult().engine);     // {name: "AppleWebKit", version: "535.2"}
+    console.log(parser.getResult().engine);     // {name: "WebKit", version: "535.2"}
     console.log(parser.getResult().os);         // {name: "Ubuntu", version: "11.10"}
     
     // let's take another test please
@@ -88,7 +88,7 @@ var uaString    = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWe
 
 console.log(parser.setUA(uaString).getDevice().model);  // "PlayBook"
 console.log(parser.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
-console.log(parser.getEngine().name);                   // "AppleWebKit"
+console.log(parser.getEngine().name);                   // "WebKit"
 ```
 
 ## License

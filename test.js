@@ -897,6 +897,15 @@ var os = [
         }
     },
     {
+        desc    : 'Firefox OS',
+        ua      : 'Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0',
+        expect  :
+        {
+            name    : 'Firefox OS',
+            version : undefined
+        }
+    },
+    {
         desc    : 'Nintendo',
         ua      : '',
         expect  :
