@@ -14,7 +14,10 @@
   ],
   "homepage": "http://github.com/faisalman/ua-parser-js",
   "contributors": [
-    "Faisal Salman <fyzlman@gmail.com>"
+    "Faisal Salman <fyzlman@gmail.com>",
+    "Christopher De Cairos <chris.decairos@gmail.com>",
+    "John Tantalo <john.tantalo@gmail.com>",
+    "Lee Treveil <leetreveil@gmail.com>"
   ],
   "main": "ua-parser",
   "scripts": {
