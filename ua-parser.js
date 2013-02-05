@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.5.2
+// UA-Parser.JS v0.5.3
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -168,12 +168,16 @@
             /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based
+            /(rekonq)((?:\/)[\w\.]+)*/i,                                        // Rekonq
             /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt)\/((\d+)?[\w\.-]+)/i
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt
             ], [NAME, VERSION, MAJOR], [
 
             /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
             ], [[NAME, 'Yandex'], VERSION, MAJOR], [
+
+            /(comodo_dragon)\/((\d+)?[\w\.]+)/i                                 // Comodo Dragon
+            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
@@ -202,16 +206,18 @@
             /(navigator|netscape)\/((\d+)?[\w\.-]+)/i                           // Netscape
             ], [[NAME, 'Netscape'], VERSION, MAJOR], [
             /(swiftfox)/i,                                                      // Swiftfox
-            /(iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo)[\/\s]?((\d+)?[\w\.\+]+)/i,
-                                                                                // Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo
+            /(iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,
+                                                                                // Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
             /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
 
             // Other
-            /(uc\s?browser|polaris|lynx|dillo|icab|doris)[\/\s]?((\d+)?[\w\.]+)/i,
-                                                                                // UCBrowser/Polaris/Lynx/Dillo/iCab/Doris
+            /(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?((\d+)?[\w\.]+)/i,
+                                                                                // UCBrowser/Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
+            /(links)\s\(((\d+)?[\w\.]+)/i,                                      // Links
             /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
+            /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
             /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
             ], [NAME, VERSION, MAJOR]
         ],
@@ -291,9 +297,11 @@
         engine : [[
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront)\/([\w\.]+)/i,                            // WebKit/Trident/NetFront
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,     // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m
             /(khtml)\/([\w\.]+)/i,                                              // KHTML
-            /(tasman)\s([\w\.]+)/i                                              // Tasman
+            /(tasman)\s([\w\.]+)/i,                                             // Tasman
+            /(links)\s\(([\w\.]+)/i,                                            // Links
+            /(icab)[\/\s]([2-3]\.[\d\.]+)/i                                     // iCab
             ], [NAME, VERSION], [
 
             /rv\:([\w\.]+).*(gecko)/i                                           // Gecko
@@ -354,8 +362,8 @@
             // Other
             /(haiku)\s(\w+)/i,                                                  // Haiku
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX
-            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos)/i,
-                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS
+            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos)/i,
+                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], [NAME, VERSION]
         ]
