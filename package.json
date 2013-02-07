@@ -1,11 +1,11 @@
 {
   "title": "UA-Parser.JS",
   "name": "ua-parser-js",
-  "version": "0.5.3",
+  "version": "0.5.11",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
-    "user agent",
+    "user-agent",
     "parser",
     "browser",
     "engine",

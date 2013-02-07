@@ -11,7 +11,7 @@ Lightweight JavaScript-based User-Agent string parser
 
 ## Features
 
-Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string.
+Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped).
 
 ![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
@@ -91,9 +91,31 @@ console.log(parser.getOS())                             // {name: "RIM Tablet OS
 console.log(parser.getEngine().name);                   // "WebKit"
 ```
 
+## Using jQuery
+
+If you're using jQuery, `$.ua` object will be created automatically based on container's user-agent. To change different user-agent use `$.setUA(uastring)`. In case you need, `UAParser` is still present in global though.
+
+```js
+// In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
+
+// Do some tests
+console.log($.ua.device);           // {vendor: "HTC", model: "Evo Shift 4G", type: "mobile"}
+console.log($.ua.os);               // {name: "Android", version: "2.3.4"}
+console.log($.ua.os.name);          // "Android"
+
+// reset to custom user-agent
+$.setUA('Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13');
+
+// Test again
+console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}
+console.log($.ua.engine.name);      // "Webkit"
+console.log($.ua.browser.version);  // "4.0"
+console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
+```
+
 ## License
 
-Copyright © 2012 Faisalman <<fyzlman@gmail.com>>
+Copyright © 2012-2013 Faisalman <<fyzlman@gmail.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 

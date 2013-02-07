@@ -1,8 +1,8 @@
-// UA-Parser.JS v0.5.3
+// UA-Parser.JS v0.5.11
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
-// Copyright © 2012 Faisalman
+// Copyright © 2012-2013 Faisalman
 // Dual licensed under GPLv2 & MIT
 
 (function (global, undefined) {
@@ -419,6 +419,13 @@
         exports.UAParser = UAParser;
     } else {
         // browser env
-        global['UAParser'] = UAParser;
+        global.UAParser = UAParser;
+        // jQuery specific
+        if (typeof global.jQuery !== UNDEF) {
+            global.jQuery.ua = new UAParser().getResult();
+            global.jQuery.setUA = function (uastring) {
+                global.jQuery.ua = new UAParser(uastring).getResult();
+            }
+        }
     }
 })(this);
