@@ -75,6 +75,17 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 </script>
 ```
 
+## Using requirejs
+
+If you're using requirejs, you can load UA-Parser like any other module.
+
+```js
+require(['ua-parser'], function(UAParser) {
+    var parser = new UAParser();
+    console.log(parser.getResult());
+});
+```
+
 ## Using node.js
 
 ```sh
