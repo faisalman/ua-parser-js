@@ -417,6 +417,11 @@
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
+    } else if (typeof define === 'function' && define.amd) {
+        // requirejs env
+        define(function() {
+            return UAParser;
+        });
     } else {
         // browser env
         global.UAParser = UAParser;
