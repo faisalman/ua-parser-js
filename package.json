@@ -1,7 +1,7 @@
 {
   "title": "UA-Parser.JS",
   "name": "ua-parser-js",
-  "version": "0.5.11",
+  "version": "0.5.12",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -17,6 +17,7 @@
     "Faisal Salman <fyzlman@gmail.com>",
     "Christopher De Cairos <chris.decairos@gmail.com>",
     "John Tantalo <john.tantalo@gmail.com>",
+    "Jon Buckley <jon@jbuckley.ca>",
     "Lee Treveil <leetreveil@gmail.com>"
   ],
   "main": "ua-parser",

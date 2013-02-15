@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.5.11
+// UA-Parser.JS v0.5.12
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -417,7 +417,7 @@
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
-    } else if (typeof define === 'function' && define.amd) {
+    } else if (typeof define === FUNC && define.amd) {
         // requirejs env
         define(function() {
             return UAParser;
