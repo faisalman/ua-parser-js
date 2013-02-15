@@ -104,7 +104,7 @@ console.log(parser.getEngine().name);                   // "WebKit"
 
 ## Using jQuery
 
-If you're using jQuery, `$.ua` object will be created automatically based on container's user-agent. To change different user-agent use `$.setUA(uastring)`. In case you need, `UAParser` is still present in global though.
+If you're using jQuery, `$.ua` object will be created automatically based on container's user-agent. Use `$.ua.get()` / `$.ua.set(uastring)` to get/set user-agent. In case you need, `UAParser` constructor is still present in global though.
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
@@ -113,9 +113,10 @@ If you're using jQuery, `$.ua` object will be created automatically based on con
 console.log($.ua.device);           // {vendor: "HTC", model: "Evo Shift 4G", type: "mobile"}
 console.log($.ua.os);               // {name: "Android", version: "2.3.4"}
 console.log($.ua.os.name);          // "Android"
+console.log($.ua.get());            // "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0"
 
 // reset to custom user-agent
-$.setUA('Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13');
+$.ua.set('Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13');
 
 // Test again
 console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}

@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.5.12
+// UA-Parser.JS v0.5.13
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -427,10 +427,18 @@
         global.UAParser = UAParser;
         // jQuery specific
         if (typeof global.jQuery !== UNDEF) {
-            global.jQuery.ua = new UAParser().getResult();
-            global.jQuery.setUA = function (uastring) {
-                global.jQuery.ua = new UAParser(uastring).getResult();
-            }
+            var parser = new UAParser();
+            global.jQuery.ua = parser.getResult();
+            global.jQuery.ua.get = function() {
+                return parser.getUA();
+            };
+            global.jQuery.ua.set = function(uastring) {
+                parser.setUA(uastring);
+                var result = parser.getResult();
+                for (var prop in result) {
+                    global.jQuery.ua[prop] = result[prop];
+                }
+            };
         }
     }
 })(this);
