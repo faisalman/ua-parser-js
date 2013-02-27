@@ -798,6 +798,15 @@ var os = [
         }
     },
     {
+        desc    : 'Windows Phone 8',
+        ua      : 'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; HTC; Windows Phone 8X by HTC)',
+        expect  :
+        {
+            name    : 'Windows Phone',
+            version : '8.0'
+        }
+    },
+    {
         desc    : 'BlackBerry',
         ua      : 'BlackBerry9300/5.0.0.912 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/378',
         expect  :
