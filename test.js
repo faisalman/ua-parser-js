@@ -463,6 +463,16 @@ var browsers    = [
         }
     },
     {
+        desc    : 'Opera Webkit',
+        ua      : 'Mozilla/5.0 AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.123 Mobile Safari/537.22 OPR/14.0.1025.52315',
+        expect  : 
+        {
+            name    : 'Opera',
+            version : '14.0.1025.52315',
+            major   : '14'
+        }
+    },
+    {
         desc    : 'Opera Mini',
         ua      : 'Opera/9.80 (J2ME/MIDP; Opera Mini/5.1.21214/19.916; U; en) Presto/2.5.25',
         expect  : 

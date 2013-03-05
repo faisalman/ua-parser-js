@@ -1,4 +1,4 @@
-// UA-Parser.JS v0.5.14
+// UA-Parser.JS v0.5.15
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -156,6 +156,11 @@
             /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
             /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
             /(opera)[\/\s]+((\d+)?[\w\.]+)/i,                                   // Opera < 9.80
+            
+            ], [NAME, VERSION, MAJOR], [
+
+            /\s(opr)\/((\d+)?[\w\.]+)/i                                         // Opera Webkit
+            ], [[NAME, 'Opera'], VERSION, MAJOR], [
 
             // Mixed
             /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
