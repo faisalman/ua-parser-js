@@ -2,7 +2,7 @@
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
-// Copyright © 2012-2013 Faisalman
+// Copyright © 2012-2013 Faisalman <fyzlman@gmail.com>
 // Dual licensed under GPLv2 & MIT
 
 (function (global, undefined) {
@@ -32,8 +32,8 @@
             // loop through all regexes maps
             for (i = 0; i < args.length; i += 2) {
 
-                var regex = args[i],       // odd sequence (0,2,4,..)
-                    props = args[i + 1];   // even sequence (1,3,5,..)
+                var regex = args[i],       // even sequence (0,2,4,..)
+                    props = args[i + 1];   // odd sequence (1,3,5,..)
 
                 // construct object barebones
                 if (typeof result === UNDEF) {
