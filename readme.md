@@ -1,6 +1,6 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser
+Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as Component package, Bower package, jQuery plugin, & AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png)](https://travis-ci.org/faisalman/ua-parser-js)
 
@@ -10,7 +10,7 @@ Lightweight JavaScript-based User-Agent string parser
 
 ## Features
 
-Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped).
+Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped). Written in vanilla js (which means it doesn't depends from any other library).
 
 ![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
@@ -134,7 +134,7 @@ $ bower install ua-parser-js
 
 ## Using jQuery
 
-If you're using jQuery, `$.ua` object will be created automatically based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. Getter / setter: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js (which means it doesn't depends from jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
