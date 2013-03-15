@@ -1,13 +1,18 @@
-// UA-Parser.JS v0.5.15
+// UAParser.js v0.5.20
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
 // Copyright © 2012-2013 Faisalman <fyzlman@gmail.com>
 // Dual licensed under GPLv2 & MIT
 
-(function (global, undefined) {
+(function (window, undefined) {
 
     'use strict';
+
+    //////////////
+    // Constants
+    /////////////
+
 
     var EMPTY       = '',
         FUNC        = 'function',
@@ -22,6 +27,12 @@
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
         TABLET      = 'tablet';
+
+
+    ///////////////
+    // Map helper
+    //////////////
+
 
     var mapper = {
 
@@ -96,6 +107,12 @@
         }
     };
 
+
+    ///////////////
+    // String map
+    //////////////
+
+
     var maps = {
 
         browser : {
@@ -147,6 +164,12 @@
         }
     };
 
+
+    //////////////
+    // Regex map
+    /////////////
+
+
     var regexes = {
 
         browser : [[
@@ -155,7 +178,7 @@
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
             /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
             /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
-            /(opera)[\/\s]+((\d+)?[\w\.]+)/i,                                   // Opera < 9.80
+            /(opera)[\/\s]+((\d+)?[\w\.]+)/i                                    // Opera < 9.80
             
             ], [NAME, VERSION, MAJOR], [
 
@@ -374,26 +397,31 @@
         ]
     };
 
+
+    /////////////////
+    // Constructor
+    ////////////////
+
+
     var UAParser = function UAParser (uastring) {
 
-        var ua = uastring || ((global && global.navigator && global.navigator.userAgent) ? global.navigator.userAgent : EMPTY);
+        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
 
+        if (!(this instanceof UAParser)) {
+            return new UAParser(uastring).getResult();
+        }
         this.getBrowser = function () {
             return mapper.regex.apply(this, regexes.browser);
         };
-
         this.getDevice = function () {
             return mapper.regex.apply(this, regexes.device);
         };
-
         this.getEngine = function () {
             return mapper.regex.apply(this, regexes.engine);
         };
-
         this.getOS = function () {
             return mapper.regex.apply(this, regexes.os);
         };
-
         this.getResult = function() {
             return {
                 browser : this.getBrowser(),
@@ -402,20 +430,23 @@
                 device  : this.getDevice()
             };
         };
-
         this.getUA = function() {
             return ua;
         };
-
         this.setUA = function (uastring) {
             ua = uastring;
             return this;
         };
-
         this.setUA(ua);
     };
 
-    // check js environment    
+
+    ///////////
+    // Export
+    //////////
+
+
+    // check js environment 
     if (typeof exports !== UNDEF && !/\[object\s[DOM]*Window\]/.test(global.toString())) {
         // nodejs env
         if (typeof module !== UNDEF && module.exports) {
@@ -429,21 +460,22 @@
         });
     } else {
         // browser env
-        global.UAParser = UAParser;
+        window.UAParser = UAParser;
         // jQuery specific
-        if (typeof global.jQuery !== UNDEF) {
+        if (typeof window.jQuery !== UNDEF) {
             var parser = new UAParser();
-            global.jQuery.ua = parser.getResult();
-            global.jQuery.ua.get = function() {
+            window.jQuery.ua = parser.getResult();
+            window.jQuery.ua.get = function() {
                 return parser.getUA();
             };
-            global.jQuery.ua.set = function(uastring) {
+            window.jQuery.ua.set = function(uastring) {
                 parser.setUA(uastring);
                 var result = parser.getResult();
                 for (var prop in result) {
-                    global.jQuery.ua[prop] = result[prop];
+                    window.jQuery.ua[prop] = result[prop];
                 }
             };
         }
     }
+
 })(this);

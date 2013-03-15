@@ -1,13 +1,12 @@
-# UA-Parser.JS
+# UAParser.js
 
 Lightweight JavaScript-based User-Agent string parser
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png)](https://travis-ci.org/faisalman/ua-parser-js)
 
 * Author    : Faisalman <<fyzlman@gmail.com>>
-* Home      : http://faisalman.github.com/ua-parser-js
+* Demo      : http://faisalman.github.com/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
-* License   : GPLv2 & MIT
 
 ## Features
 
@@ -18,21 +17,28 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 ## Methods
 
 * `getBrowser()`
+    * returns `{ name: '', major: '', version: '' }`
 * `getDevice()`
+    * returns `{ model: '', type: '', vendor: '' }`
 * `getEngine()`
+    * returns `{ name: '', version: '' }`
 * `getOS()`
+    * returns `{ name: '', version: '' }`
 * `getResult()`
+    * returns `{ browser: {}, device: {}, engine: {}, os: {} }`
 * `getUA()`
+    * returns UA string of current instance
 * `setUA(uastring)`
+    * set & parse UA string
 
 ## Example
 
 ```html
-<script type="text/javascript" src="ua-parser.js"></script>
+<script type="text/javascript" src="ua-parser.min.js"></script>
 <script type="text/javascript">
-    
+
 	var parser = new UAParser();
-	
+
     // by default it takes ua string from current browser's window.navigator.userAgent
     console.log(parser.getResult());
     /*
@@ -60,24 +66,34 @@ Extract detailed type of web browser, layout engine, operating system, and devic
     */
 
     // let's test a custom user-agent string as an example
-    var uastr = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
-    parser.setUA(uastr);
-    
-    console.log(parser.getResult().browser);    // {name: "Chromium", major: "15", version: "15.0.874.106"}
-    console.log(parser.getResult().device);     // {model: undefined, type: undefined, vendor: undefined}
-    console.log(parser.getResult().engine);     // {name: "WebKit", version: "535.2"}
-    console.log(parser.getResult().os);         // {name: "Ubuntu", version: "11.10"}
-    
-    // let's take another test please
-    console.log(parser.setUA("Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)").getBrowser().name); // "Konqueror"
-    console.log(parser.getOS());                // {name: "OpenBSD", version: undefined}
-    console.log(parser.getEngine());            // {name: "KHTML", version: "4.1.4"}
+    var uastring = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
+    parser.setUA(uastring);
+
+    var result = parser.getResult();
+    // this will also produce the same result (without instantiation):
+    // var result = UAParser(uastring);
+
+    console.log(result.browser);        // {name: "Chromium", major: "15", version: "15.0.874.106"}
+    console.log(result.device);         // {model: undefined, type: undefined, vendor: undefined}
+    console.log(result.os);             // {name: "Ubuntu", version: "11.10"}
+    console.log(result.os.version);     // "11.10"
+    console.log(result.engine.name);    // "WebKit"
+
+    // do some other tests
+    var uastring2 = "Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)";
+    console.log(parser.setUA(uastring2).getBrowser().name); // "Konqueror"
+    console.log(parser.getOS());                            // {name: "OpenBSD", version: undefined}
+    console.log(parser.getEngine());                        // {name: "KHTML", version: "4.1.4"}
+
+    var uastring3 = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
+    console.log(parser.setUA(uastring3).getDevice().model); // "PlayBook"
+    console.log(parser.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
+    console.log(parser.getBrowser().name);                  // "Safari"
+
 </script>
 ```
 
 ## Using requirejs
-
-If you're using requirejs, you can load UA-Parser like any other module.
 
 ```js
 require(['ua-parser'], function(UAParser) {
@@ -93,18 +109,32 @@ $ npm install ua-parser-js
 ```
 
 ```js
-var UAParser    = require('ua-parser');
-var parser      = new UAParser();
-var uaString    = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
+var UAParser = require('ua-parser');
+var parser = new UAParser();
+console.log(parser.getResult());
+```
 
-console.log(parser.setUA(uaString).getDevice().model);  // "PlayBook"
-console.log(parser.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
-console.log(parser.getEngine().name);                   // "WebKit"
+## Using component
+
+```sh
+$ component install faisalman/ua-parser-js
+```
+
+```js
+var UAParser = require('ua-parser-js');
+var parser = new UAParser();
+console.log(parser.getResult());
+```
+
+## Using bower
+
+```sh
+$ bower install ua-parser-js
 ```
 
 ## Using jQuery
 
-If you're using jQuery, `$.ua` object will be created automatically based on container's user-agent. Use `$.ua.get()` / `$.ua.set(uastring)` to get/set user-agent. In case you need, `UAParser` constructor is still present in global though.
+If you're using jQuery, `$.ua` object will be created automatically based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. Getter / setter: `$.ua.get()` / `$.ua.set(uastring)`. 
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
@@ -125,7 +155,25 @@ console.log($.ua.browser.version);  // "4.0"
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 ```
 
+## Development
+
+Install dependencies
+
+```sh
+$ npm install jshint
+$ npm install mocha
+$ npm install uglify-js
+```
+
+Verify, test, & minify script
+
+```sh
+$ ./build/build.sh
+```
+
 ## License
+
+Dual licensed under GPLv2 & MIT
 
 Copyright © 2012-2013 Faisalman <<fyzlman@gmail.com>>
 
