@@ -1,5 +1,5 @@
 var assert      = require('assert');
-var UAParser    = require('./ua-parser');
+var UAParser    = require('./../src/ua-parser');
 var parser      = new UAParser();
 var browsers    = [
     {
