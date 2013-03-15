@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "HTC Evo Shift 4G",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0",
+        "expect"  :
+        {
+            "vendor"  : "HTC",
+            "model"   : "Evo Shift 4G",
+            "type"    : "mobile"
+        }
+}]
