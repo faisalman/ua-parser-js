@@ -1,6 +1,6 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as Component package, Bower package, jQuery plugin, & AMD module
+Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as Component package, Bower package, jQuery.ua, & AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png)](https://travis-ci.org/faisalman/ua-parser-js)
 
@@ -10,7 +10,7 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 
 ## Features
 
-Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped). Written in vanilla js (which means it doesn't depends from any other library).
+Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
 ![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
@@ -18,22 +18,62 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 
 * `getBrowser()`
     * returns `{ name: '', major: '', version: '' }`
+
+```
+# Possible 'browser.name':
+Amaya, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, Chromium, Comodo Dragon, Conkeror, 
+Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, 
+Iceweasel, IE [Mobile], Jasmine, K-Meleon, Konqueror, Kindle, Links, Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, 
+[Mobile] Safari, Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], Phoenix, 
+Polaris, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, Tizen, UCBrowser, w3m, Yandex
+```
+
 * `getDevice()`
-    * returns `{ model: '', type: '', vendor: '' }`
+    * returns `{ model: '', type: '', vendor: '' }` 
+
+```
+# Possible 'device.type':
+console, mobile, tablet
+
+# Possible 'device.vendor':
+Acer, Alcatel, Apple, Asus, BenQ, BlackBerry, Dell, GeeksPhone, HP, HTC, Huawei, Lenovo, LG, Meizu, Motorola, Nexian, 
+Nintendo, Nokia, Palm, Panasonic, RIM, Samsung, Siemens, Sony-Ericsson, Sprint, ZTE
+```
+
 * `getEngine()`
     * returns `{ name: '', version: '' }`
+
+```
+# Possible 'engine.name'
+Amaya, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
+```
+
 * `getOS()`
     * returns `{ name: '', version: '' }`
+
+```
+# Possible 'os.name'
+AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, Fedora, Firefox OS, FreeBSD, Debian, 
+DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, Joli, Linux, Mac OS, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, 
+Nintendo, OpenBSD, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, RISC OS, Slackware, 
+Solaris, SUSE, Symbian, Tizen, Ubuntu, UNIX, WebOS, Windows [Phone/Mobile], Zenwalk
+```
+
 * `getResult()`
     * returns `{ browser: {}, device: {}, engine: {}, os: {} }`
+
 * `getUA()`
     * returns UA string of current instance
+
 * `setUA(uastring)`
     * set & parse UA string
 
 ## Example
 
 ```html
+<!doctype html>
+<html>
+<head>
 <script type="text/javascript" src="ua-parser.min.js"></script>
 <script type="text/javascript">
 
@@ -91,6 +131,10 @@ Extract detailed type of web browser, layout engine, operating system, and devic
     console.log(parser.getBrowser().name);                  // "Safari"
 
 </script>
+</head>
+<body>
+</body>
+</html>
 ```
 
 ## Using requirejs
@@ -132,9 +176,9 @@ console.log(parser.getResult());
 $ bower install ua-parser-js
 ```
 
-## Using jQuery
+## Using jQuery.ua
 
-Although written in vanilla js (which means it doesn't depends from jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js (which means it doesn't depends on jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
