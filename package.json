@@ -22,7 +22,7 @@
   ],
   "main": "ua-parser",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec"
+    "test": "./build/build.sh"
   },
   "devDependencies": {
     "jshint": ">= 1.1.0",

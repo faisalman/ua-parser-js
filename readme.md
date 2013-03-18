@@ -2,7 +2,7 @@
 
 Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as Component package, Bower package, jQuery.ua, & AMD module
 
-[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png)](https://travis-ci.org/faisalman/ua-parser-js)
+[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 
 * Author    : Faisalman <<fyzlman@gmail.com>>
 * Demo      : http://faisalman.github.com/ua-parser-js
@@ -26,6 +26,8 @@ Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, Firefox, Flock, GoBrowser, iC
 Iceweasel, IE [Mobile], Jasmine, K-Meleon, Konqueror, Kindle, Links, Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, 
 [Mobile] Safari, Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], Phoenix, 
 Polaris, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, Tizen, UCBrowser, w3m, Yandex
+
+# 'browser.version' & 'browser.major' determined dynamically
 ```
 
 * `getDevice()`
@@ -38,6 +40,8 @@ console, mobile, tablet
 # Possible 'device.vendor':
 Acer, Alcatel, Apple, Asus, BenQ, BlackBerry, Dell, GeeksPhone, HP, HTC, Huawei, Lenovo, LG, Meizu, Motorola, Nexian, 
 Nintendo, Nokia, Palm, Panasonic, RIM, Samsung, Siemens, Sony-Ericsson, Sprint, ZTE
+
+# 'device.model' determined dynamically
 ```
 
 * `getEngine()`
@@ -46,6 +50,8 @@ Nintendo, Nokia, Palm, Panasonic, RIM, Samsung, Siemens, Sony-Ericsson, Sprint, 
 ```
 # Possible 'engine.name'
 Amaya, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
+
+# 'engine.version' determined dynamically
 ```
 
 * `getOS()`
@@ -57,14 +63,14 @@ AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, Fedor
 DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, Joli, Linux, Mac OS, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, 
 Nintendo, OpenBSD, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, RISC OS, Slackware, 
 Solaris, SUSE, Symbian, Tizen, Ubuntu, UNIX, WebOS, Windows [Phone/Mobile], Zenwalk
+
+# 'os.version' determined dynamically
 ```
 
 * `getResult()`
     * returns `{ browser: {}, device: {}, engine: {}, os: {} }`
-
 * `getUA()`
     * returns UA string of current instance
-
 * `setUA(uastring)`
     * set & parse UA string
 
