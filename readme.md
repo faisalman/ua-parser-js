@@ -21,11 +21,13 @@ Extract detailed type of web browser, layout engine, operating system, and devic
 
 ```
 # Possible 'browser.name':
-Amaya, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, Chromium, Comodo Dragon, Conkeror, 
-Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, 
-Iceweasel, IE [Mobile], Jasmine, K-Meleon, Konqueror, Kindle, Links, Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, 
-[Mobile] Safari, Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], Phoenix, 
-Polaris, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, Tizen, UCBrowser, w3m, Yandex
+Amaya, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, Chromium, 
+Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, 
+Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, Iceweasel, 
+IE [Mobile], Jasmine, K-Meleon, Konqueror, Kindle, Links, Lunascape, Lynx, Maemo, 
+Maxthon, Midori, Minimo, [Mobile] Safari, Mosaic, Mozilla, Netfront, Netscape, 
+NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], Phoenix, Polaris, RockMelt, 
+Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, Tizen, UCBrowser, w3m, Yandex
 
 # 'browser.version' & 'browser.major' determined dynamically
 ```
@@ -38,8 +40,9 @@ Polaris, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, Tizen, UCBro
 console, mobile, tablet
 
 # Possible 'device.vendor':
-Acer, Alcatel, Apple, Asus, BenQ, BlackBerry, Dell, GeeksPhone, HP, HTC, Huawei, Lenovo, LG, Meizu, Motorola, Nexian, 
-Nintendo, Nokia, Palm, Panasonic, RIM, Samsung, Siemens, Sony-Ericsson, Sprint, ZTE
+Acer, Alcatel, Apple, Asus, BenQ, BlackBerry, Dell, GeeksPhone, HP, HTC, Huawei, 
+Lenovo, LG, Meizu, Motorola, Nexian, Nintendo, Nokia, Palm, Panasonic, 
+RIM, Samsung, Siemens, Sony-Ericsson, Sprint, ZTE
 
 # 'device.model' determined dynamically
 ```
@@ -49,7 +52,8 @@ Nintendo, Nokia, Palm, Panasonic, RIM, Samsung, Siemens, Sony-Ericsson, Sprint, 
 
 ```
 # Possible 'engine.name'
-Amaya, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
+Amaya, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, Tasman, 
+Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
@@ -59,10 +63,12 @@ Amaya, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, Tasman, Tride
 
 ```
 # Possible 'os.name'
-AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, Fedora, Firefox OS, FreeBSD, Debian, 
-DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, Joli, Linux, Mac OS, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, 
-Nintendo, OpenBSD, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, RISC OS, Slackware, 
-Solaris, SUSE, Symbian, Tizen, Ubuntu, UNIX, WebOS, Windows [Phone/Mobile], Zenwalk
+AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, 
+Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, 
+Joli, Linux, Mac OS, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, Nintendo, 
+OpenBSD, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, 
+RISC OS, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, UNIX, WebOS, 
+Windows [Phone/Mobile], Zenwalk
 
 # 'os.version' determined dynamically
 ```
@@ -143,7 +149,7 @@ Solaris, SUSE, Symbian, Tizen, Ubuntu, UNIX, WebOS, Windows [Phone/Mobile], Zenw
 </html>
 ```
 
-## Using requirejs
+### Using requirejs
 
 ```js
 require(['ua-parser'], function(UAParser) {
@@ -152,7 +158,7 @@ require(['ua-parser'], function(UAParser) {
 });
 ```
 
-## Using node.js
+### Using node.js
 
 ```sh
 $ npm install ua-parser-js
@@ -164,7 +170,7 @@ var parser = new UAParser();
 console.log(parser.getResult());
 ```
 
-## Using component
+### Using component
 
 ```sh
 $ component install faisalman/ua-parser-js
@@ -176,13 +182,13 @@ var parser = new UAParser();
 console.log(parser.getResult());
 ```
 
-## Using bower
+### Using bower
 
 ```sh
 $ bower install ua-parser-js
 ```
 
-## Using jQuery.ua
+### Using jQuery.ua
 
 Although written in vanilla js (which means it doesn't depends on jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
@@ -199,9 +205,9 @@ console.log($.ua.get());            // "Mozilla/5.0 (Linux; U; Android 2.3.4; en
 $.ua.set('Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13');
 
 // Test again
-console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}
+console.log($.ua.browser.name);     // "Safari"
 console.log($.ua.engine.name);      // "Webkit"
-console.log($.ua.browser.version);  // "4.0"
+console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 ```
 
