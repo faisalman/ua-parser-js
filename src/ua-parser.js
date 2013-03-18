@@ -1,4 +1,4 @@
-// UAParser.js v0.5.21
+// UAParser.js v0.5.22
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -39,7 +39,7 @@
         has : function (str1, str2) {
             return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
         },
-        isType : function (obj, str) {
+        is : function (obj, str) {
             return typeof obj === str;
         }
     };
@@ -55,19 +55,20 @@
         rgx : function () {
 
             // loop through all regexes maps
-            for (var result, i = 0, j, k, p, matches, match, args = arguments; i < args.length; i += 2) {
+            for (var result, i = 0, j, k, p, q, matches, match, args = arguments; i < args.length; i += 2) {
 
                 var regex = args[i],       // even sequence (0,2,4,..)
                     props = args[i + 1];   // odd sequence (1,3,5,..)
 
                 // construct object barebones
-                if (util.isType(result, UNDEF_TYPE)) {
+                if (util.is(result, UNDEF_TYPE)) {
                     result = {};
                     for (p in props) {
-                        if (util.isType(p, OBJ_TYPE)) {
-                            result[p[0]] = undefined;
+                        q = props[p];
+                        if (util.is(q, OBJ_TYPE)) {
+                            result[q[0]] = undefined;
                         } else {
-                            result[p] = undefined;
+                            result[q] = undefined;
                         }
                     }
                 }
@@ -77,24 +78,25 @@
                     matches = regex[j].exec(this.getUA());
                     if (!!matches) {
                         for (p in props) {
-                            match = matches[k + 1];
+                            match = matches[++k];
+                            q = props[p];
                             // check if given property is actually array
-                            if (util.isType(p, OBJ_TYPE)) {
-                                if (p.length == 2) {
+                            if (util.is(q, OBJ_TYPE)) {
+                                if (q.length == 2) {
                                     // assign given value, ignore regex match
-                                    result[p[0]] = p[1];
-                                } else if (p.length == 3) {
+                                    result[q[0]] = q[1];
+                                } else if (q.length == 3) {
                                     // check whether function or regex
-                                    if (util.isType(p[1], FUNC_TYPE) && !(p[1].exec && p[1].test)) {
+                                    if (util.is(q[1], FUNC_TYPE) && !(q[1].exec && q[1].test)) {
                                         // call function (usually string mapper)
-                                        result[p[0]] = match ? p[1].call(this, match, p[2]) : undefined;
+                                        result[q[0]] = match ? q[1].call(this, match, q[2]) : undefined;
                                     } else {
                                         // sanitize match using given regex
-                                        result[p[0]] = match ? match.replace(p[1], p[2]) : undefined;
+                                        result[q[0]] = match ? match.replace(q[1], q[2]) : undefined;
                                     }
                                 }
                             } else {
-                                result[p] = match ? match : undefined;
+                                result[q] = match ? match : undefined;
                             }
                         }
                         break;
@@ -110,9 +112,9 @@
 
             for (var i in map) {
                 // check if array
-                if (util.isType(map[i], OBJ_TYPE) && map[i].length > 0) {
+                if (util.is(map[i], OBJ_TYPE) && map[i].length > 0) {
                     for (var j in map[i]) {
-                        if (util.has(j, str)) {
+                        if (util.has(map[i][j], str)) {
                             return (i === UNKNOWN) ? undefined : i;
                         }
                     }
@@ -465,13 +467,13 @@
 
 
     // check js environment 
-    if (!util.isType(exports, UNDEF_TYPE)) {
+    if (!util.is(exports, UNDEF_TYPE)) {
         // nodejs env
-        if (!util.isType(module, UNDEF_TYPE) && module.exports) {
+        if (!util.is(module, UNDEF_TYPE) && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
-    } else if (util.isType(define, FUNC_TYPE) && define.amd) {
+    } else if (util.is(define, FUNC_TYPE) && define.amd) {
         // requirejs env
         define(function() {
             return UAParser;
@@ -480,7 +482,7 @@
         // browser env
         window.UAParser = UAParser;
         // jQuery specific (optional)
-        if (!util.isType(window.jQuery, UNDEF_TYPE)) {
+        if (!util.is(window.jQuery, UNDEF_TYPE)) {
             var $ = window.jQuery;
             var parser = new UAParser();
             $.ua = parser.getResult();
