@@ -165,7 +165,7 @@ $ npm install ua-parser-js
 ```
 
 ```js
-var UAParser = require('ua-parser');
+var UAParser = require('ua-parser-js');
 var parser = new UAParser();
 console.log(parser.getResult());
 ```
