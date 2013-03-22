@@ -1,4 +1,4 @@
-// UAParser.js v0.5.24
+// UAParser.js v0.5.25
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -334,6 +334,7 @@
 
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
+            /((nexus\s4))/i,
             /(lg)[e;\s-\/]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
 

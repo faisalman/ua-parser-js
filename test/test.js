@@ -31,6 +31,11 @@ var methods     = [
         properties  : ['name', 'version']
 }];
 
+describe('UAParser()', function () {
+    var ua = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
+    assert.deepEqual(UAParser(ua), new UAParser().setUA(ua).getResult());
+});
+
 for (var i in methods) {
     describe(methods[i]['title'], function () {
         for (var j in methods[i]['list']) {

@@ -190,7 +190,7 @@ $ bower install ua-parser-js
 
 ### Using jQuery.ua
 
-Although written in vanilla js (which means it doesn't depends on jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent. In case you need, `UAParser` constructor is still present in global though. To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js (which means it doesn't depends on jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
