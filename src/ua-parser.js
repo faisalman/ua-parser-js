@@ -471,14 +471,14 @@
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
-    } else if (typeof(define) === FUNC_TYPE && define.amd) {
-        // requirejs env
+    } else {
+        // browser env
+        window.UAParser = UAParser;        
+        // requirejs env (optional)
+        if (typeof(define) === FUNC_TYPE && define.amd) {
         define(function() {
             return UAParser;
         });
-    } else {
-        // browser env
-        window.UAParser = UAParser;
         // jQuery specific (optional)
         if (typeof(window.jQuery) !== UNDEF_TYPE) {
             var $ = window.jQuery;
