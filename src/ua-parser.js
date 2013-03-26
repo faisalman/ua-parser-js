@@ -476,9 +476,10 @@
         window.UAParser = UAParser;        
         // requirejs env (optional)
         if (typeof(define) === FUNC_TYPE && define.amd) {
-        define(function() {
-            return UAParser;
-        });
+            define(function() {
+                return UAParser;
+            });
+        }
         // jQuery specific (optional)
         if (typeof(window.jQuery) !== UNDEF_TYPE) {
             var $ = window.jQuery;
