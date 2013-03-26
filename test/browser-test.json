@@ -240,6 +240,16 @@
         }
     },
     {
+        "desc"    : "IE 11",
+        "ua"      : "Mozilla/5.0 (IE 11.0; Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
+        "expect"  : 
+        {
+            "name"    : "IE",
+            "version" : "11.0",
+            "major"   : "11"
+        }
+    },
+    {
         "desc"    : "K-Meleon",
         "ua"      : "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.5) Gecko/20031016 K-Meleon/0.8.2",
         "expect"  : 

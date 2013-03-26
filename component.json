@@ -1,6 +1,6 @@
 {
   "name": "ua-parser-js",
-  "version": "0.5.26",
+  "version": "0.5.27",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": ["user-agent", "parser", "browser", "engine", "os", "device"],
   "scripts": ["src/ua-parser.js"],
