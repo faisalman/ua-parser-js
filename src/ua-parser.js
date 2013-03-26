@@ -78,7 +78,7 @@
                             match = matches[++k];
                             q = props[p];
                             // check if given property is actually array
-                            if (typeof(q) === OBJ_TYPE) {
+                            if (typeof(q) === OBJ_TYPE && q.length > 0) {
                                 if (q.length == 2) {
                                     // assign given value, ignore regex match
                                     result[q[0]] = q[1];
@@ -306,7 +306,7 @@
 
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
             /(zte)-(\w+)*/i,                                                    // ZTE
-            /(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|;\ssony)[_\s-]?([\w-]+)*/i
+            /(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
