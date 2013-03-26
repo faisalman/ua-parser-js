@@ -1,4 +1,4 @@
-// UAParser.js v0.5.26
+// UAParser.js v0.5.27
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -209,7 +209,7 @@
             // Trident based
             /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i,
                                                                                 // Avant/IEMobile/SlimBrowser/Baidu
-            /ms(ie)\s((\d+)?[\w\.]+)/i,                                         // Internet Explorer
+            /(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i,                                  // Internet Explorer
 
             // Webkit/KHTML based
             /(rekonq)((?:\/)[\w\.]+)*/i,                                        // Rekonq
@@ -448,7 +448,7 @@
                 device  : this.getDevice()
             };
         };
-        this.getUA = function() {
+        this.getUA = function () {
             return ua;
         };
         this.setUA = function (uastring) {
@@ -476,7 +476,7 @@
         window.UAParser = UAParser;        
         // requirejs env (optional)
         if (typeof(define) === FUNC_TYPE && define.amd) {
-            define(function() {
+            define(function () {
                 return UAParser;
             });
         }
@@ -488,7 +488,7 @@
             $.ua.get = function() {
                 return parser.getUA();
             };
-            $.ua.set = function(uastring) {
+            $.ua.set = function (uastring) {
                 parser.setUA(uastring);
                 var result = parser.getResult();
                 for (var prop in result) {
