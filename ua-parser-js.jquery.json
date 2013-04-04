@@ -1,7 +1,7 @@
 {
     "title": "UAParser.js",
     "name": "ua-parser-js",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Lightweight JavaScript-based user-agent string parser",
     "keywords": [
         "user-agent",
@@ -9,7 +9,8 @@
         "browser",
         "engine",
         "os",
-        "device"
+        "device",
+        "cpu"
     ],
     "homepage": "https://faisalman.github.com/ua-parser-js",
     "author": {

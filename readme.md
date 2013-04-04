@@ -10,7 +10,7 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 
 ## Features
 
-Extract detailed type of web browser, layout engine, operating system, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
+Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
 ![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
@@ -78,11 +78,11 @@ Windows [Phone/Mobile], Zenwalk
 
 ```
 # Possible 'cpu.architecture'
-68k, amd64, arm, ia32, ia64, irix, mips, pa-risc, ppc, sparc
+68k, amd64, arm, ia32, ia64, irix, irix64, mips, mips64, pa-risc, ppc, sparc, sparc64
 ```
 
 * `getResult()`
-    * returns `{ browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 * `getUA()`
     * returns UA string of current instance
 * `setUA(uastring)`
@@ -104,6 +104,7 @@ Windows [Phone/Mobile], Zenwalk
     /*
         /// this will print an object structured like this:
         {
+            ua: "",
             browser: {
                 name: "",
                 version: "",

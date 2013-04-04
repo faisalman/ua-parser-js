@@ -1,4 +1,4 @@
-// UAParser.js v0.6.0
+// UAParser.js v0.6.1
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -479,6 +479,7 @@
         };
         this.getResult = function() {
             return {
+                ua      : this.getUA(),
                 browser : this.getBrowser(),
                 engine  : this.getEngine(),
                 os      : this.getOS(),
