@@ -149,15 +149,6 @@ Windows [Phone/Mobile], Zenwalk
 </html>
 ```
 
-### Using requirejs
-
-```js
-require(['ua-parser'], function(UAParser) {
-    var parser = new UAParser();
-    console.log(parser.getResult());
-});
-```
-
 ### Using node.js
 
 ```sh
@@ -167,7 +158,17 @@ $ npm install ua-parser-js
 ```js
 var UAParser = require('ua-parser-js');
 var parser = new UAParser();
-console.log(parser.getResult());
+var ua = request.headers['user-agent'];     // user-agent header from an HTTP request
+console.log(parser.setUA(ua).getResult());
+```
+
+### Using requirejs
+
+```js
+require(['ua-parser'], function(UAParser) {
+    var parser = new UAParser();
+    console.log(parser.getResult());
+});
 ```
 
 ### Using component
@@ -190,7 +191,7 @@ $ bower install ua-parser-js
 
 ### Using jQuery.ua
 
-Although written in vanilla js (which means it doesn't depends on jQuery), if you're using jQuery, this library will automatically detect and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
