@@ -48,6 +48,14 @@
         }
     },
     {
+        "desc"    : "Pocket PC",
+        "ua"      : "Opera/9.7 (Windows Mobile; PPC; Opera Mobi/35166; U; en) Presto/2.2.1",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
         "desc"    : "Mac PowerPC",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 4.5; Mac_PowerPC)",
         "expect"  :

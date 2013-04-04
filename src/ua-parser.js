@@ -285,6 +285,10 @@
             /((?:i[346]|x)86)[;\)]/i                                            // IA32
             ], [[ARCHITECTURE, 'ia32']], [
 
+            // PocketPC mistakenly identified as PowerPC
+            /windows\s(ce|mobile);\sppc;/i
+            ], [[ARCHITECTURE, 'arm']], [
+
             /((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i                           // PowerPC
             ], [[ARCHITECTURE, /ower/, '', util.lowerize]], [
 
