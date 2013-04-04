@@ -1,6 +1,7 @@
 var assert      = require('assert');
 var UAParser    = require('./../src/ua-parser');
 var browsers    = require('./browser-test.json');
+var cpus        = require('./cpu-test.json');
 var devices     = require('./device-test.json');
 var engines     = require('./engine-test.json');
 var os          = require('./os-test.json');
@@ -11,6 +12,12 @@ var methods     = [
         label       : 'browser',
         list        : browsers,
         properties  : ['name', 'major', 'version']
+    },
+    {
+        title       : 'getCPU',
+        label       : 'cpu',
+        list        : cpus,
+        properties  : ['architecture']
     },
     {
         title       : 'getDevice',

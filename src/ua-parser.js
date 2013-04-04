@@ -1,4 +1,4 @@
-// UAParser.js v0.5.27
+// UAParser.js v0.6.0
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -100,6 +100,8 @@
                                         // sanitize match using given regex
                                         result[q[0]] = match ? match.replace(q[1], q[2]) : undefined;
                                     }
+                                } else if (q.length == 4) {
+                                        result[q[0]] = match ? q[3].call(this, match.replace(q[1], q[2])) : undefined;
                                 }
                             } else {
                                 result[q] = match ? match : undefined;
@@ -276,6 +278,7 @@
         ],
 
         cpu : [[
+
             /(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i                     // AMD64
             ], [[ARCHITECTURE, 'amd64']], [
 
@@ -283,7 +286,7 @@
             ], [[ARCHITECTURE, 'ia32']], [
 
             /((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i                           // PowerPC
-            ], [[ARCHITECTURE, /ower/, '']], [
+            ], [[ARCHITECTURE, /ower/, '', util.lowerize]], [
 
             /(sun4\w)[;\)]/i                                                    // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
