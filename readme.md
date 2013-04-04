@@ -73,8 +73,16 @@ Windows [Phone/Mobile], Zenwalk
 # 'os.version' determined dynamically
 ```
 
+* `getCPU()`
+    * returns `{ architecture: '' }`
+
+```
+# Possible 'cpu.architecture'
+68k, amd64, arm, ia32, ia64, irix, mips, pa-risc, ppc, sparc
+```
+
 * `getResult()`
-    * returns `{ browser: {}, device: {}, engine: {}, os: {} }`
+    * returns `{ browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 * `getUA()`
     * returns UA string of current instance
 * `setUA(uastring)`
@@ -113,6 +121,9 @@ Windows [Phone/Mobile], Zenwalk
                 model: "",
                 type: "",
                 vendor: ""
+            },
+            cpu: {
+                architecture: ""
             }
         }
     */
@@ -130,6 +141,7 @@ Windows [Phone/Mobile], Zenwalk
     console.log(result.os);             // {name: "Ubuntu", version: "11.10"}
     console.log(result.os.version);     // "11.10"
     console.log(result.engine.name);    // "WebKit"
+    console.log(result.cpu.architecture);   // "amd64"
 
     // do some other tests
     var uastring2 = "Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)";
