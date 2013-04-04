@@ -25,6 +25,7 @@
         TYPE        = 'type',
         VENDOR      = 'vendor',
         VERSION     = 'version',
+        ARCHITECTURE= 'architecture',
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
         TABLET      = 'tablet';
@@ -38,6 +39,9 @@
     var util = {
         has : function (str1, str2) {
             return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
+        },
+        lowerize : function (str) {
+            return str.toLowerCase();
         }
     };
 
@@ -80,8 +84,13 @@
                             // check if given property is actually array
                             if (typeof(q) === OBJ_TYPE && q.length > 0) {
                                 if (q.length == 2) {
-                                    // assign given value, ignore regex match
-                                    result[q[0]] = q[1];
+                                    if (typeof(q[1]) == FUNC_TYPE) {
+                                        // assign modified match
+                                        result[q[0]] = q[1].call(this, match);
+                                    } else {
+                                        // assign given value, ignore regex match
+                                        result[q[0]] = q[1];
+                                    }
                                 } else if (q.length == 3) {
                                     // check whether function or regex
                                     if (typeof(q[1]) === FUNC_TYPE && !(q[1].exec && q[1].test)) {
@@ -266,6 +275,24 @@
             ], [NAME, VERSION, MAJOR]
         ],
 
+        cpu : [[
+            /(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i                     // AMD64
+            ], [[ARCHITECTURE, 'amd64']], [
+
+            /((?:i[346]|x)86)[;\)]/i                                            // IA32
+            ], [[ARCHITECTURE, 'ia32']], [
+
+            /((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i                           // PowerPC
+            ], [[ARCHITECTURE, /ower/, '']], [
+
+            /(sun4\w)[;\)]/i                                                    // SPARC
+            ], [[ARCHITECTURE, 'sparc']], [
+
+            /(ia64(?=;)|68k(?=\))|arm(?=v\d+;)|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
+                                                                                // IA64, 68K, ARM, IRIX, MIPS, SPARC, PA-RISC
+            ], [ARCHITECTURE, util.lowerize]
+        ],
+
         device : [[
 
             /\((ipad|playbook);[\w\s\);-]+(rim|apple)/i                         // iPad/PlayBook
@@ -431,6 +458,9 @@
         this.getBrowser = function () {
             return mapper.rgx.apply(this, regexes.browser);
         };
+        this.getCPU = function () {
+            return mapper.rgx.apply(this, regexes.cpu);
+        };
         this.getDevice = function () {
             return mapper.rgx.apply(this, regexes.device);
         };
@@ -445,7 +475,8 @@
                 browser : this.getBrowser(),
                 engine  : this.getEngine(),
                 os      : this.getOS(),
-                device  : this.getDevice()
+                device  : this.getDevice(),
+                cpu     : this.getCPU()
             };
         };
         this.getUA = function () {
