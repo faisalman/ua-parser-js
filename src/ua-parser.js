@@ -121,7 +121,7 @@
             for (var i in map) {
                 // check if array
                 if (typeof(map[i]) === OBJ_TYPE && map[i].length > 0) {
-                    for (var j in map[i]) {
+                    for (var j = 0; j < map[i].length; j++) {
                         if (util.has(map[i][j], str)) {
                             return (i === UNKNOWN) ? undefined : i;
                         }
