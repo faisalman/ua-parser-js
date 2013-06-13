@@ -344,7 +344,8 @@
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
-            /\s((milestone|droid[2x]?))[globa\s]*\sbuild\//i,                   // Motorola
+                                                                                // Motorola
+            /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[globa\s]*\s‌​‌​build\//i,
             /(mot)[\s-]?(\w+)*/i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
             /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
