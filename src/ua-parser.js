@@ -224,8 +224,8 @@
 
             // Webkit/KHTML based
             /(rekonq)((?:\/)[\w\.]+)*/i,                                        // Rekonq
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt)\/((\d+)?[\w\.-]+)/i
-                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/((\d+)?[\w\.-]+)/i
+                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
             ], [NAME, VERSION, MAJOR], [
 
             /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
@@ -261,15 +261,15 @@
             /(navigator|netscape)\/((\d+)?[\w\.-]+)/i                           // Netscape
             ], [[NAME, 'Netscape'], VERSION, MAJOR], [
             /(swiftfox)/i,                                                      // Swiftfox
-            /(iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,
-                                                                                // Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
+            /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,
+                                                                                // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
             /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
 
             // Other
-            /(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?((\d+)?[\w\.]+)/i,
-                                                                                // UCBrowser/Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
+            /(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i,
+                                                                                // UCBrowser/Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/QQBrowser
             /(links)\s\(((\d+)?[\w\.]+)/i,                                      // Links
             /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
             /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
