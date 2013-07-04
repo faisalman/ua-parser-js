@@ -240,8 +240,18 @@
         }
     },
     {
-        "desc"    : "IE 11",
+        "desc"    : "IE 11 with IE token",
         "ua"      : "Mozilla/5.0 (IE 11.0; Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
+        "expect"  : 
+        {
+            "name"    : "IE",
+            "version" : "11.0",
+            "major"   : "11"
+        }
+    },
+    {
+        "desc"    : "IE 11 without IE token",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko",
         "expect"  : 
         {
             "name"    : "IE",

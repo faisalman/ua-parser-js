@@ -228,6 +228,9 @@
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
             ], [NAME, VERSION, MAJOR], [
 
+            /(trident).+rv\:((\d+)?[\w\.]+).+like\sgecko/i                      // IE11
+            ], [[NAME, 'IE'], VERSION, MAJOR], [
+
             /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
             ], [[NAME, 'Yandex'], VERSION, MAJOR], [
 
