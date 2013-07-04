@@ -345,7 +345,7 @@
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
                                                                                 // Motorola
-            /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[globa\s]*\s‌​‌​build\//i,
+            /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[\w\s]+build\//i,
             /(mot)[\s-]?(\w+)*/i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
             /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
