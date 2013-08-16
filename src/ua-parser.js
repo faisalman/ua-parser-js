@@ -78,7 +78,7 @@
                 for (j = k = 0; j < regex.length; j++) {
                     matches = regex[j].exec(this.getUA());
                     if (!!matches) {
-                        for (p in props) {
+                        for (p = 0; p < props.length; p++) {
                             match = matches[++k];
                             q = props[p];
                             // check if given property is actually array
