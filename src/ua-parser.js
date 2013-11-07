@@ -315,7 +315,7 @@
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /\((ip[honed]+);.+(apple)/i                                         // iPod/iPhone
+            /\((ip[honed|\s\w*]+);.+(apple)/i                                         // iPod/iPhone
             ], [MODEL, VENDOR, [TYPE, MOBILE]], [
 
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
