@@ -376,7 +376,10 @@
             /((nexus\s4))/i,
             /(lg)[e;\s-\/]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
-
+                
+             /android.+((IdeaTab[A-Za-z0-9\-\s]+))/i                               // Lenovo
+            ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
+                
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [TYPE, VENDOR, MODEL]
         ],
