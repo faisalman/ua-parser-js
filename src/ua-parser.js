@@ -248,6 +248,9 @@
             /((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i                       // Chrome for Android/iOS
             ], [[NAME, 'Chrome'], VERSION, MAJOR], [
 
+            /((?:android.+))version\/((\d+)?[\w\.]+)\smobile\ssafari/i          // Android Browser
+            ], [[NAME, 'Android Browser'], VERSION, MAJOR], [
+
             /version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i                 // Mobile Safari
             ], [VERSION, MAJOR, [NAME, 'Mobile Safari']], [
 
