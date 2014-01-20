@@ -1,4 +1,4 @@
-// UAParser.js v0.6.2
+// UAParser.js v0.6.16
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
@@ -373,12 +373,11 @@
 
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
-            /((nexus\s4))/i,
-            /((nexus\s5))/i,
+            /((nexus\s[45]))/i,
             /(lg)[e;\s-\/]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
                 
-             /android.+((IdeaTab[A-Za-z0-9\-\s]+))/i                               // Lenovo
+             /android.+((ideatab[a-z0-9\-\s]+))/i                               // Lenovo
             ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
                 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
