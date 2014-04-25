@@ -86,4 +86,21 @@
         {
             "architecture"  : "sparc"
         }
-}]
+    },
+    {
+        "desc"    : "QuickTime",
+        "ua"      : "QuickTime/7.5.6 (qtver=7.5.6;cpu=IA32;os=Mac 10.5.8)",
+        "expect"  : 
+        {
+            "architecture"  : "ia32"
+        }
+    },
+    {
+        "desc"    : "XBMC",
+        "ua"      : "XBMC/12.0 Git:20130127-fb595f2 (Windows NT 6.1;WOW64;Win64;x64; http://www.xbmc.org)",
+        "expect"  : 
+        {
+            "architecture"  : "amd64"
+        }
+    }
+]
