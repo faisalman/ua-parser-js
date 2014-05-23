@@ -50,13 +50,13 @@ for (var i in methods) {
                 describe('[' + methods[i]['list'][j].desc + ']', function () {
                     describe('"' + methods[i]['list'][j].ua + '"', function () {                
                         var expect = methods[i]['list'][j].expect;
-                        var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];                    
-                        for (var k in methods[i]['properties']) {
-                            var m = methods[i]['properties'][k];
+                        var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];  
+
+                        methods[i]['properties'].forEach(function(m) {
                             it('should return ' + methods[i]['label'] + ' ' + m + ': ' + expect[m], function () {
                                 assert.equal(result[m], expect[m] != 'undefined' ? expect[m] : undefined);
                             });
-                        }
+                        });
                     });
                 });
             }
