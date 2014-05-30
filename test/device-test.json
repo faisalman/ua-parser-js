@@ -58,5 +58,45 @@
             "model"   : "iPod touch",
             "type"    : "mobile"
         }
+    },
+    {
+        "desc"    : "KTB-iPhone",
+        "ua"      : "APP-BE/1.0 (iPhone; Apple; CPU iPhone OS 7_0 like Mac OS X)",
+        "expect"  :
+        {
+            "vendor"  : "Apple",
+            "model"   : "iPhone",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"    : "KTB-iPod Touch",
+        "ua"      : "APP-BE/1.0 (iPod touch; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
+        "expect"  :
+        {
+            "vendor"  : "Apple",
+            "model"   : "iPod touch",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"    : "KTB-iPad",
+        "ua"      : "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
+        "expect"  :
+        {
+            "vendor"  : "Apple",
+            "model"   : "iPad",
+            "type"    : "tablet"
+        }
+    },
+    {
+        "desc"    : "KTB-Nexus 5",
+        "ua"      : "APP-My App/1.0 (Linux; Android 4.2.1; Nexus 5 Build/JOP40D)",
+        "expect"  :
+        {
+            "vendor"  : "LG",
+            "model"   : "Nexus 5",
+            "type"    : "mobile"
+        }
     }
 ]

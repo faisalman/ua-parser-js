@@ -648,4 +648,15 @@
             "version" : "1.0.1084.5402",
             "major"   : "1"
         }
-    }]
+    },
+    {
+        "desc"    : "BE-Test",
+        "ua"      : "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
+        "expect"  :
+        {
+            "name"    : "BE Test",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    }
+]
