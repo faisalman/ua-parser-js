@@ -53,9 +53,11 @@ for (var i in methods) {
                         var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];                    
                         for (var k in methods[i]['properties']) {
                             var m = methods[i]['properties'][k];
-                            it('should return ' + methods[i]['label'] + ' ' + m + ': ' + expect[m], function () {
-                                assert.equal(result[m], expect[m] != 'undefined' ? expect[m] : undefined);
-                            });
+                            (function(result, expected) {
+                                it('should return ' + methods[i]['label'] + ' ' + m + ': ' + expect[m], function () {
+                                    assert.equal(result, expected);
+                                });
+                            })(result[m], expect[m] != 'undefined' ? expect[m] : undefined);
                         }
                     });
                 });
