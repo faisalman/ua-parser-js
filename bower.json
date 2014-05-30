@@ -1,0 +1,26 @@
+{
+    "name": "ua-parser",
+    "version": "0.6.16",
+    "authors": [
+        "Faisal Salman <fyzlman@gmail.com>"
+    ],
+    "private": false,
+    "main": "src/ua-parser.js",
+    "ignore": [
+        "build",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "contributors": [
+        "Faisal Salman <fyzlman@gmail.com>",
+        "Christopher De Cairos <chris.decairos@gmail.com>",
+        "John Tantalo <john.tantalo@gmail.com>",
+        "Jon Buckley <jon@jbuckley.ca>",
+        "Lee Treveil <leetreveil@gmail.com>"
+    ],
+    "dependencies": {
+
+    }
+}
