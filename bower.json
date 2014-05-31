@@ -1,6 +1,6 @@
 {
-    "name": "ua-parser",
-    "version": "0.6.16",
+    "name": "ua-parser-js",
+    "version": "0.6.3-ktb",
     "authors": [
         "Faisal Salman <fyzlman@gmail.com>"
     ],
