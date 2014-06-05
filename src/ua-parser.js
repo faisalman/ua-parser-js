@@ -326,8 +326,8 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
             /\((bb10);\s(\w+)/i                                                 // BlackBerry 10
             ], [[VENDOR, 'BlackBerry'], MODEL, [TYPE, MOBILE]], [
-
-            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+))/i       // Asus Tablets
+                                                                                // Asus Tablets
+            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7))/i
             ], [[VENDOR, 'Asus'], MODEL, [TYPE, TABLET]], [
 
             /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
@@ -355,7 +355,7 @@
             /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
 
-            /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9))/i
+            /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
             /((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
