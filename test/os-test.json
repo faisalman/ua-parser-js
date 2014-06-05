@@ -469,11 +469,11 @@
     },
     {
         "desc"    : "Mac OS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Mac OS X",
+            "version" : "10.6.8"
         }
     },
     {
@@ -558,6 +558,15 @@
         }
     },
     {
+        "desc"    : "iTunes Windows Vista",
+        "ua"      : "iTunes/10.7 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 1 (Build 6001)) AppleWebKit/536.26.9",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "Vista"
+        }
+    },
+    {
         "desc"    : "",
         "ua"      : "",
         "expect"  :
@@ -565,4 +574,5 @@
             "name"    : "",
             "version" : ""
         }
-}]
+    }
+]
