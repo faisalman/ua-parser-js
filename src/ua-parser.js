@@ -39,7 +39,9 @@
 
     var util = {
         has : function (str1, str2) {
+          if (typeof str1 === "string") {
             return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
+          }
         },
         lowerize : function (str) {
             return str.toLowerCase();
