@@ -61,4 +61,24 @@
             "name"    : "WebKit",
             "version" : "533.19.4"
         }
-}]
+    },
+    {
+        "desc"    : "KTA Mobile App",
+        "ua"      : "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
+        "expect"  :
+        {
+            "name"    : "Mobile-App",
+            "version" : "1.0"
+        }
+    },
+    {
+        "desc"    : "KTB-Nexus 5",
+        "ua"      : "APP-My App/1.0 (Linux; Android 4.2.1; Nexus 5 Build/JOP40D)",
+        "expect"  :
+        {
+            "name"    : "Mobile-App",
+            "version" : "1.0"
+        }
+    }
+
+]
