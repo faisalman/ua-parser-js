@@ -1,6 +1,5 @@
 node_modules/
 npm-debug.log
-<<<<<<< HEAD
 ### vim ###
 .*.s[a-w][a-z]
 *.un~
@@ -21,6 +20,4 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-=======
 .idea
->>>>>>> baf4bb99b4ef92c71419931e8fd334e34c051e52

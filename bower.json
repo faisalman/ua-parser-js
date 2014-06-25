@@ -1,6 +1,6 @@
 {
     "name": "ua-parser-js",
-    "version": "0.6.3-ktb",
+    "version": "0.7.0",
     "authors": [
         "Faisal Salman <fyzlman@gmail.com>"
     ],
@@ -15,10 +15,23 @@
     ],
     "contributors": [
         "Faisal Salman <fyzlman@gmail.com>",
+        "Benjamin Bertrand <bertrand.design@gmail.com>",
         "Christopher De Cairos <chris.decairos@gmail.com>",
+        "Davit Barbakadze <jayarjo@gmail.com>",
+        "Dmitry Tyschenko <dtyschenko@gmail.com>",
+        "Douglas Li <doug@knotch.it>",
+        "Erik Hesselink <hesselink@gmail.com>",
+        "Fabian Becker <halfdan@xnorfz.de>",
+        "Jackpoll <jackpoll123456@gmail.com>",
+        "Jake Mc <startswithaj@users.noreply.github.com>",
         "John Tantalo <john.tantalo@gmail.com>",
+        "John Yanarella <jmy@codecatalyst.com>",
         "Jon Buckley <jon@jbuckley.ca>",
-        "Lee Treveil <leetreveil@gmail.com>"
+        "Lee Treveil <leetreveil@gmail.com>",
+        "Leonardo <leofiore@libero.it>",
+        "Michael Hess <mhess@connectify.me>",
+        "Ross Noble <rosshnoble@gmail.com>",
+        "Sandro Sonntag <sandro.sonntag@adorsys.de>"
     ],
     "dependencies": {
 
