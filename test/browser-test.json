@@ -674,7 +674,7 @@
         "ua"      : "AppleTV/3.0.2 (Macintosh; Intel Mac OS X 10.4.7) AppleWebKit/528.18",
         "expect"  : 
         {
-            "name"    : "AppleWebKit",
+            "name"    : "WebKit",
             "version" : "528.18",
             "major"   : "528"
         }
@@ -784,7 +784,7 @@
         "ua"      : "FLRP/2.5 CFNetwork/609.1.4 Darwin/13.0.0",
         "expect"  : 
         {
-            "name"    : "FLRP",
+            "name"    : "Flip Player",
             "version" : "2.5",
             "major"   : "2"
         }

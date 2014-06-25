@@ -290,7 +290,7 @@
             /(coremedia) v((\d+)[\w\._]+)/i
             ], [NAME, VERSION, MAJOR], [
 
-            /(aqualung|lyssna|bsplayer)\/([\w\.-]+)/i                           // Aqualung/Lyssna/BSPlayer
+            /(aqualung|lyssna|bsplayer)\/((\d+)?[\w\.-]+)/i                     // Aqualung/Lyssna/BSPlayer
             ], [NAME, VERSION], [
 
             /(ares|ossproxy)\s((\d+)[\w\.-]+)/i                                 // Ares/OSSProxy
@@ -306,7 +306,7 @@
             /(nexplayer)\s((\d+)[\w\.-]+)/i                                     // Nexplayer
             ], [NAME, VERSION, MAJOR], [
 
-            /(flrp)\/((\d+)[\w\.-]+)/i                                            // Flip Player
+            /(flrp)\/((\d+)[\w\.-]+)/i                                          // Flip Player
             ], [[NAME, 'Flip Player'], VERSION, MAJOR], [
 
             /(fstream|nativehost|queryseekspider|ia-archiver|facebookexternalhit)/i
@@ -330,8 +330,7 @@
                                                                                 // MPlayer SVN
             ], [NAME, VERSION], [
 
-            /(mplayer)(?:\s|\/)((\d+)[\w\.-]+)/i,                               // MPlayer
-            /(mplayer) unknown-((\d+)[\w\.\-]+)/i                               // MPlayer UNKNOWN
+            /(mplayer)(?:\s|\/|[unkow-]+)((\d+)[\w\.-]+)/i,                     // MPlayer
             ], [NAME, VERSION, MAJOR], [
 
             /(mplayer)/i,                                                       // MPlayer (no other info)
@@ -493,17 +492,16 @@
             /android\s3\.[\s\w-;]{10}((a\d{3}))/i                               // Acer
             ], [[VENDOR, 'Acer'], MODEL, [TYPE, TABLET]], [
 
-            /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
+            /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
-            /((nexus\s[45]))/i,
+            /(lg) netcast\.tv/i                                                 // LG SmartTV
+            ], [VENDOR, [TYPE, SMARTTV]], [
+            /((nexus\s[45]))/i,                                                 // LG
             /(lg)[e;\s-\/]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
                 
              /android.+((ideatab[a-z0-9\-\s]+))/i                               // Lenovo
             ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
-                
-            /(lg) netcast\.tv/i                                                 // LG SmartTV
-            ], [VENDOR, [TYPE, SMARTTV]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [TYPE, VENDOR, MODEL]

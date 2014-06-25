@@ -205,7 +205,7 @@
         "expect"  : 
         {
             "vendor"  : "Apple",
-            "model"   : "iPhone",
+            "model"   : "iPhone 4S",
             "type"    : "mobile"
         }
     },
