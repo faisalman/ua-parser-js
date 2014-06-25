@@ -429,6 +429,9 @@
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
+            /(kf[A-z]+)\sbuild\/[\w\.]+.*silk\//i,                              // Kindle Fire HD
+            ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
             /\((ip[honed|\s\w*]+);.+(apple)/i                                   // iPod/iPhone
             ], [MODEL, VENDOR, [TYPE, MOBILE]], [
             /\((ip[honed|\s\w*]+);/i                                            // iPod/iPhone
