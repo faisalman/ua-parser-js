@@ -323,14 +323,14 @@
             /(lavf)((\d+)[\d\.]+)/i                                             // Lavf (FFMPEG)
             ], [NAME, VERSION, MAJOR], [
 
-            /(htc_one_s)\/((\d+)[\d\.]+)/i,                                     // HTC One S
+            /(htc_one_s)\/((\d+)[\d\.]+)/i                                      // HTC One S
             ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
 
-            /(mplayer)(?:\s|\/)(?:(?:sherpya-){0,1}svn)(?:-|\s)(r\d+(?:-\d+[\w\.-]+){0,1})/i,
+            /(mplayer)(?:\s|\/)(?:(?:sherpya-){0,1}svn)(?:-|\s)(r\d+(?:-\d+[\w\.-]+){0,1})/i
                                                                                 // MPlayer SVN
             ], [NAME, VERSION], [
 
-            /(mplayer)(?:\s|\/|[unkow-]+)((\d+)[\w\.-]+)/i,                     // MPlayer
+            /(mplayer)(?:\s|\/|[unkow-]+)((\d+)[\w\.-]+)/i                      // MPlayer
             ], [NAME, VERSION, MAJOR], [
 
             /(mplayer)/i,                                                       // MPlayer (no other info)
@@ -375,7 +375,7 @@
             /(windows-media-player)\/((\d+)[\w\.-]+)/i
             ], [[NAME, /-/g, ' '], VERSION, MAJOR], [
 
-            /windows\/((\d+)[\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ (home media server)/i,
+            /windows\/((\d+)[\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ (home media server)/i
                                                                                 // Windows Media Server
             ], [VERSION, MAJOR, [NAME, 'Windows']], [
 
@@ -431,7 +431,7 @@
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /(kf[A-z]+)\sbuild\/[\w\.]+.*silk\//i,                              // Kindle Fire HD
+            /(kf[A-z]+)\sbuild\/[\w\.]+.*silk\//i                               // Kindle Fire HD
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
 
             /\((ip[honed|\s\w*]+);.+(apple)/i                                   // iPod/iPhone
@@ -524,7 +524,7 @@
         os : [[
 
             // Windows based
-            /microsoft\s(windows)\s(vista|xp)/i,                                // Windows (iTunes)
+            /microsoft\s(windows)\s(vista|xp)/i                                 // Windows (iTunes)
             ], [NAME, VERSION], [
             /(windows)\snt\s6\.2;\s(arm)/i,                                     // Windows RT
             /(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
