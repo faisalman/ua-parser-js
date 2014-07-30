@@ -657,9 +657,9 @@
                 return UAParser;
             });
         }
-        // jQuery specific (optional)
-        if (typeof(window.jQuery) !== UNDEF_TYPE) {
-            var $ = window.jQuery;
+        // jQuery/Zepto specific (optional)
+        var $ = window.jQuery || window.Zepto;
+        if (typeof($) !== UNDEF_TYPE) {
             var parser = new UAParser();
             $.ua = parser.getResult();
             $.ua.get = function() {
