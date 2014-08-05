@@ -217,15 +217,22 @@
         pre.innerHTML = 'Result for <span style="color:green">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (your browser User-Agent string)') + ' :</span>';
       }
       fillTable();
-      sel.addEventListener('change', function(){
+      var select = function(){
         fillTable(sel.children[sel.selectedIndex].value);
-      });
-      txt.addEventListener('keydown', function(e){
+      };
+      var enter = function(e){
         if(e.keyCode == 13){
           fillTable(this.value);
           return false;
         }
-      });
+      };
+      if (window.addEventListener) {
+          sel.addEventListener('change', select);
+          txt.addEventListener('keydown', enter);
+      } else {
+          sel.attachEvent('onchange', select);
+          txt.attachEvent('onkeydown', enter);
+      }
     </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
