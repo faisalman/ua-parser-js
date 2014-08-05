@@ -411,7 +411,7 @@
 
             /(ia64(?=;)|68k(?=\))|arm(?=v\d+;)|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
                                                                                 // IA64, 68K, ARM, IRIX, MIPS, SPARC, PA-RISC
-            ], [ARCHITECTURE, util.lowerize]
+            ], [[ARCHITECTURE, util.lowerize]]
         ],
 
         device : [[
