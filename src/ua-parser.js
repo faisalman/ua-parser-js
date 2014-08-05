@@ -510,7 +510,7 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
-            ], [TYPE, VENDOR, MODEL]
+            ], [[TYPE, util.lowerize], VENDOR, MODEL]
         ],
 
         engine : [[
