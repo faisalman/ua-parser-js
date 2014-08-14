@@ -548,7 +548,9 @@
             /linux;.+(sailfish);/i                                              // Sailfish OS
             ], [NAME, VERSION], [
             /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i                 // Symbian
-            ], [[NAME, 'Symbian'], VERSION],[
+            ], [[NAME, 'Symbian'], VERSION], [
+            /\((series40);/i                                                    // Series 40
+            ], [NAME], [
             /mozilla.+\(mobile;.+gecko.+firefox/i                               // Firefox OS
             ], [[NAME, 'Firefox OS'], VERSION], [
 
