@@ -205,7 +205,7 @@
 
         browser : [[
 
-            /APP-([\w\s-\d]+)\/((\d+)?[\w\.]+)/i                                     // KTA App
+            /APP-([\w\s\d-]+)\/((\d+)?[\w\.]+)/i                                     // KTA App
             ], [NAME, VERSION, MAJOR], [
 
             // Presto based
@@ -500,7 +500,7 @@
             /(lg) netcast\.tv/i                                                 // LG SmartTV
             ], [VENDOR, [TYPE, SMARTTV]], [
             /((nexus\s[45]))/i,                                                 // LG
-            /(lg)[e;\s-\/]+(\w+)*/i
+            /(lg)[e;\s\/-]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
                 
              /android.+((ideatab[a-z0-9\-\s]+))/i                               // Lenovo
@@ -511,7 +511,7 @@
         ],
 
         engine : [[
-            /APP-([\w\s-\d]+)\/((\d+)?[\w\.]+)/i                                     // KTA App
+            /APP-([\w\s\d-]+)\/((\d+)?[\w\.]+)/i                                     // KTA App
             ], [[NAME, 'Mobile-App'], VERSION], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
