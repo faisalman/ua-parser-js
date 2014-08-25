@@ -480,7 +480,7 @@
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
 
             /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i,
-            /SM-T((\w+))/i
+            /((SM-T\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
             /((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-n900))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
