@@ -43,14 +43,23 @@ describe('UAParser()', function () {
     assert.deepEqual(UAParser(ua), new UAParser().setUA(ua).getResult());
 });
 
+describe('Injected Browser', function () {
+    var uaString = 'ownbrowser/1.3';
+    var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.NAME, UAParser.VERSION, UAParser.MAJOR]];
+    var parser = new UAParser(uaString, {browser: ownBrowser});
+    assert.equal(parser.getBrowser().name, 'ownbrowser');
+    assert.equal(parser.getBrowser().major, '1');
+    assert.equal(parser.getBrowser().version, '1.3');
+});
+
 for (var i in methods) {
     describe(methods[i]['title'], function () {
         for (var j in methods[i]['list']) {
             if (!!methods[i]['list'][j].ua) {
                 describe('[' + methods[i]['list'][j].desc + ']', function () {
-                    describe('"' + methods[i]['list'][j].ua + '"', function () {                
+                    describe('"' + methods[i]['list'][j].ua + '"', function () {
                         var expect = methods[i]['list'][j].expect;
-                        var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];  
+                        var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];
 
                         methods[i]['properties'].forEach(function(m) {
                             it('should return ' + methods[i]['label'] + ' ' + m + ': ' + expect[m], function () {
