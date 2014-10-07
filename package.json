@@ -32,7 +32,8 @@
     "Leonardo <leofiore@libero.it>",
     "Michael Hess <mhess@connectify.me>",
     "Ross Noble <rosshnoble@gmail.com>",
-    "Sandro Sonntag <sandro.sonntag@adorsys.de>"
+    "Sandro Sonntag <sandro.sonntag@adorsys.de>",
+    "Max Maurer <max@max-maurer.de>"
   ],
   "main": "src/ua-parser.js",
   "scripts": {

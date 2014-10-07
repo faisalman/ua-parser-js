@@ -600,19 +600,39 @@
         ]
     };
 
+    /**
+     * Extends the regex array with another regex array from a given input array
+     * @param  {object} extensions extension objects that contains an array under the given paramName
+     * @param  {string} paramName  key of the extensions object that should be used if given.
+     */
+    function extend(extensions, paramName) {
+        if (!extensions || !extensions[paramName] || extensions[paramName].length%2!==0) {
+            return;
+        }
+        regexes[paramName] = regexes[paramName].concat(extensions[paramName]);
+    }
+
 
     /////////////////
     // Constructor
     ////////////////
 
 
-    var UAParser = function (uastring) {
+    var UAParser = function (uastring, extensions) {
 
         var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
 
         if (!(this instanceof UAParser)) {
-            return new UAParser(uastring).getResult();
+            return new UAParser(uastring, extensions).getResult();
         }
+
+        // extend regexes
+        extend(extensions, 'browser');
+        extend(extensions, 'cpu');
+        extend(extensions, 'device');
+        extend(extensions, 'engine');
+        extend(extensions, 'os');
+
         this.getBrowser = function () {
             return mapper.rgx.apply(this, regexes.browser);
         };
@@ -648,6 +668,12 @@
         this.setUA(ua);
     };
 
+    UAParser.NAME = NAME;
+    UAParser.VERSION = VERSION;
+    UAParser.VENDOR = VENDOR;
+    UAParser.TYPE = TYPE;
+    UAParser.ARCHITECTURE = ARCHITECTURE;
+    UAParser.MAJOR = MAJOR;
 
     ///////////
     // Export
