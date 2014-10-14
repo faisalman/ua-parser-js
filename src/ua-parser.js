@@ -1,8 +1,8 @@
-// UAParser.js v0.7.0
+// UAParser.js v0.7.1
 // Lightweight JavaScript-based User-Agent string parser
 // https://github.com/faisalman/ua-parser-js
 //
-// Copyright © 2012-2013 Faisalman <fyzlman@gmail.com>
+// Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
 // Dual licensed under GPLv2 & MIT
 
 (function (window, undefined) {
@@ -14,7 +14,8 @@
     /////////////
 
 
-    var EMPTY       = '',
+    var LIBVERSION  = '0.7.1',
+        EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
         UNDEF_TYPE  = 'undefined',
@@ -668,12 +669,32 @@
         this.setUA(ua);
     };
 
-    UAParser.NAME = NAME;
-    UAParser.VERSION = VERSION;
-    UAParser.VENDOR = VENDOR;
-    UAParser.TYPE = TYPE;
-    UAParser.ARCHITECTURE = ARCHITECTURE;
-    UAParser.MAJOR = MAJOR;
+    UAParser.VERSION = LIBVERSION;
+    UAParser.BROWSER = {
+        NAME    : NAME,
+        MAJOR   : MAJOR,
+        VERSION : VERSION  
+    };
+    UAParser.CPU = {
+        ARCHITECTURE : ARCHITECTURE
+    };
+    UAParser.DEVICE = {
+        MODEL   : MODEL,
+        VENDOR  : VENDOR,
+        TYPE    : TYPE,
+        CONSOLE : CONSOLE,
+        MOBILE  : MOBILE,
+        SMARTTV : SMARTTV,
+        TABLET  : TABLET
+    };
+    UAParser.ENGINE = {
+        NAME    : NAME,
+        VERSION : VERSION
+    };
+    UAParser.OS = {
+        NAME    : NAME,
+        VERSION : VERSION  
+    };
 
 
     ///////////

@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -17,23 +17,28 @@
   "contributors": [
     "Faisal Salman <fyzlman@gmail.com>",
     "Benjamin Bertrand <bertrand.design@gmail.com>",
+    "Carl C Von Lewin <carlchristianlewin@gmail.com>",
     "Christopher De Cairos <chris.decairos@gmail.com>",
     "Davit Barbakadze <jayarjo@gmail.com>",
     "Dmitry Tyschenko <dtyschenko@gmail.com>",
     "Douglas Li <doug@knotch.it>",
+    "Dumitru Uzun <duzun@mail.ru>",
     "Erik Hesselink <hesselink@gmail.com>",
     "Fabian Becker <halfdan@xnorfz.de>",
+    "Hendrik Helwich <h.helwich@iplabs.de>",
     "Jackpoll <jackpoll123456@gmail.com>",
     "Jake Mc <startswithaj@users.noreply.github.com>",
     "John Tantalo <john.tantalo@gmail.com>",
     "John Yanarella <jmy@codecatalyst.com>",
     "Jon Buckley <jon@jbuckley.ca>",
+    "Kendall Buchanan <kendall@kendagriff.com>",
     "Lee Treveil <leetreveil@gmail.com>",
     "Leonardo <leofiore@libero.it>",
+    "Max Maurer <maxemanuel.maurer@gmail.com>",
     "Michael Hess <mhess@connectify.me>",
+    "OtakuSiD <otakusid@gmail.com>",
     "Ross Noble <rosshnoble@gmail.com>",
-    "Sandro Sonntag <sandro.sonntag@adorsys.de>",
-    "Max Maurer <max@max-maurer.de>"
+    "Sandro Sonntag <sandro.sonntag@adorsys.de>"
   ],
   "main": "src/ua-parser.js",
   "scripts": {

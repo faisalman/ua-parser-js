@@ -10,7 +10,7 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 
 ## Features
 
-Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
+Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
 ![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
@@ -38,12 +38,12 @@ Tizen, UCBrowser, w3m, Yandex
 
 ```
 # Possible 'device.type':
-console, mobile, tablet
+console, mobile, tablet, smarttv
 
 # Possible 'device.vendor':
-Acer, Alcatel, Apple, Asus, BenQ, BlackBerry, Dell, GeeksPhone, HP, HTC, Huawei, 
-Lenovo, LG, Meizu, Motorola, Nexian, Nintendo, Nokia, Palm, Panasonic, 
-RIM, Samsung, Siemens, Sony-Ericsson, Sprint, ZTE
+Acer, Alcatel, Amazon, Apple, Asus, BenQ, BlackBerry, Dell, GeeksPhone, 
+HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Motorola, Nexian, Nintendo, Nokia, 
+Palm, Panasonic, Polytron, RIM, Samsung, Siemens, Sony-Ericsson, Sprint, ZTE
 
 # 'device.model' determined dynamically
 ```
@@ -68,8 +68,8 @@ AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
 Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, 
 Joli, Linux, Mac OS, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, Nintendo, 
 OpenBSD, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, 
-RISC OS, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, UNIX, WebOS, 
-Windows [Phone/Mobile], Zenwalk
+RISC OS, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, 
+UNIX, WebOS, Windows [Phone/Mobile], Zenwalk
 
 # 'os.version' determined dynamically
 ```
@@ -84,8 +84,10 @@ Windows [Phone/Mobile], Zenwalk
 
 * `getResult()`
     * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+
 * `getUA()`
     * returns UA string of current instance
+
 * `setUA(uastring)`
     * set & parse UA string
 
@@ -167,12 +169,12 @@ Windows [Phone/Mobile], Zenwalk
 
 * `UAParser(uastring[, extensions])`
 
-To extend the limited regex patterns, started in v0.7.1 you can now pass your own regex matching rules.
+Pass your own regexes to extend the limited matching rules.
 
 ```js
 // Example:
 var uaString = 'ownbrowser/1.3';
-var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.NAME, UAParser.VERSION, UAParser.MAJOR]];
+var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
 var parser = new UAParser(uaString, {browser: ownBrowser});
 console.log(parser.getBrowser());   // {name: "ownbrowser", major: "1", version: "1.3"}
 ```

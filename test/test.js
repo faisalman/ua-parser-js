@@ -45,7 +45,7 @@ describe('UAParser()', function () {
 
 describe('Injected Browser', function () {
     var uaString = 'ownbrowser/1.3';
-    var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.NAME, UAParser.VERSION, UAParser.MAJOR]];
+    var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
     var parser = new UAParser(uaString, {browser: ownBrowser});
     assert.equal(parser.getBrowser().name, 'ownbrowser');
     assert.equal(parser.getBrowser().major, '1');
