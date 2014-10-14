@@ -38,6 +38,14 @@
 
 
     var util = {
+        extend : function (regexes, extensions) {
+            for (var i in extensions) {
+                if ("browser cpu device engine os".indexOf(i) !== -1 && extensions[i].length % 2 == 0) {
+                    regexes[i] = regexes[i].concat(extensions[i]);
+                }
+            }
+            return regexes;
+        },
         has : function (str1, str2) {
           if (typeof str1 === "string") {
             return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
@@ -600,18 +608,6 @@
         ]
     };
 
-    /**
-     * Extends the regex array with another regex array from a given input array
-     * @param  {object} extensions extension objects that contains an array under the given paramName
-     * @param  {string} paramName  key of the extensions object that should be used if given.
-     */
-    function extend(extensions, paramName) {
-        if (!extensions || !extensions[paramName] || extensions[paramName].length%2!==0) {
-            return;
-        }
-        regexes[paramName] = regexes[paramName].concat(extensions[paramName]);
-    }
-
 
     /////////////////
     // Constructor
@@ -620,33 +616,27 @@
 
     var UAParser = function (uastring, extensions) {
 
-        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
-
         if (!(this instanceof UAParser)) {
             return new UAParser(uastring, extensions).getResult();
         }
 
-        // extend regexes
-        extend(extensions, 'browser');
-        extend(extensions, 'cpu');
-        extend(extensions, 'device');
-        extend(extensions, 'engine');
-        extend(extensions, 'os');
+        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+        var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
 
         this.getBrowser = function () {
-            return mapper.rgx.apply(this, regexes.browser);
+            return mapper.rgx.apply(this, rgxmap.browser);
         };
         this.getCPU = function () {
-            return mapper.rgx.apply(this, regexes.cpu);
+            return mapper.rgx.apply(this, rgxmap.cpu);
         };
         this.getDevice = function () {
-            return mapper.rgx.apply(this, regexes.device);
+            return mapper.rgx.apply(this, rgxmap.device);
         };
         this.getEngine = function () {
-            return mapper.rgx.apply(this, regexes.engine);
+            return mapper.rgx.apply(this, rgxmap.engine);
         };
         this.getOS = function () {
-            return mapper.rgx.apply(this, regexes.os);
+            return mapper.rgx.apply(this, rgxmap.os);
         };
         this.getResult = function() {
             return {
@@ -674,6 +664,7 @@
     UAParser.TYPE = TYPE;
     UAParser.ARCHITECTURE = ARCHITECTURE;
     UAParser.MAJOR = MAJOR;
+
 
     ///////////
     // Export
