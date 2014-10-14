@@ -166,6 +166,11 @@
         },
 
         device : {
+            amazon : {
+                model : {
+                    'Fire Phone' : ['SD', 'KF']
+                }
+            },
             sprint : {
                 model : {
                     'Evo Shift 4G' : '7373KT'
@@ -411,7 +416,7 @@
 
             /(ia64(?=;)|68k(?=\))|arm(?=v\d+;)|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
                                                                                 // IA64, 68K, ARM, IRIX, MIPS, SPARC, PA-RISC
-            ], [ARCHITECTURE, util.lowerize]
+            ], [[ARCHITECTURE, util.lowerize]]
         ],
 
         device : [[
@@ -433,6 +438,8 @@
 
             /(kf[A-z]+)\sbuild\/[\w\.]+.*silk\//i                               // Kindle Fire HD
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+            /(sd|kf)[0349hijorstuw]+\sbuild\/[\w\.]+.*silk\//i                  // Fire Phone
+            ], [[MODEL, mapper.str, maps.device.amazon.model], [VENDOR, 'Amazon'], [TYPE, MOBILE]], [
 
             /\((ip[honed|\s\w*]+);.+(apple)/i                                   // iPod/iPhone
             ], [MODEL, VENDOR, [TYPE, MOBILE]], [
@@ -440,8 +447,8 @@
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, MOBILE]], [
 
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola)[\s_-]?([\w-]+)*/i,
-                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Huawei/Meizu/Motorola
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola|polytron)[\s_-]?([\w-]+)*/i,
+                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Huawei/Meizu/Motorola/Polytron
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
@@ -503,11 +510,14 @@
             /(lg)[e;\s\/-]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
                 
-             /android.+((ideatab[a-z0-9\-\s]+))/i                               // Lenovo
+            /android.+((ideatab[a-z0-9\-\s]+))/i                                // Lenovo
             ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
+                
+            /linux;.+((jolla));/i                                               // Jolla
+            ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
-            ], [TYPE, VENDOR, MODEL]
+            ], [[TYPE, util.lowerize], VENDOR, MODEL]
         ],
 
         engine : [[
@@ -540,11 +550,14 @@
             ], [[NAME, 'BlackBerry'], VERSION], [
             /(blackberry)\w*\/?([\w\.]+)*/i,                                    // Blackberry
             /(tizen)\/([\w\.]+)/i,                                              // Tizen
-            /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i
+            /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i,
                                                                                 // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo
+            /linux;.+(sailfish);/i                                              // Sailfish OS
             ], [NAME, VERSION], [
             /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i                 // Symbian
-            ], [[NAME, 'Symbian'], VERSION],[
+            ], [[NAME, 'Symbian'], VERSION], [
+            /\((series40);/i                                                    // Series 40
+            ], [NAME], [
             /mozilla.+\(mobile;.+gecko.+firefox/i                               // Firefox OS
             ], [[NAME, 'Firefox OS'], VERSION], [
 
@@ -587,19 +600,39 @@
         ]
     };
 
+    /**
+     * Extends the regex array with another regex array from a given input array
+     * @param  {object} extensions extension objects that contains an array under the given paramName
+     * @param  {string} paramName  key of the extensions object that should be used if given.
+     */
+    function extend(extensions, paramName) {
+        if (!extensions || !extensions[paramName] || extensions[paramName].length%2!==0) {
+            return;
+        }
+        regexes[paramName] = regexes[paramName].concat(extensions[paramName]);
+    }
+
 
     /////////////////
     // Constructor
     ////////////////
 
 
-    var UAParser = function (uastring) {
+    var UAParser = function (uastring, extensions) {
 
         var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
 
         if (!(this instanceof UAParser)) {
-            return new UAParser(uastring).getResult();
+            return new UAParser(uastring, extensions).getResult();
         }
+
+        // extend regexes
+        extend(extensions, 'browser');
+        extend(extensions, 'cpu');
+        extend(extensions, 'device');
+        extend(extensions, 'engine');
+        extend(extensions, 'os');
+
         this.getBrowser = function () {
             return mapper.rgx.apply(this, regexes.browser);
         };
@@ -635,6 +668,12 @@
         this.setUA(ua);
     };
 
+    UAParser.NAME = NAME;
+    UAParser.VERSION = VERSION;
+    UAParser.VENDOR = VENDOR;
+    UAParser.TYPE = TYPE;
+    UAParser.ARCHITECTURE = ARCHITECTURE;
+    UAParser.MAJOR = MAJOR;
 
     ///////////
     // Export
