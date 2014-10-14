@@ -1,16 +1,16 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as Component package, Bower package, jQuery.ua, & AMD module
+Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component package, Bower package, & AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 
-* Author    : Faisalman <<fyzlman@gmail.com>>
-* Demo      : http://faisalman.github.com/ua-parser-js
+* Author    : Faisal Salman <<fyzlman@gmail.com>>
+* Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
 ## Features
 
-Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device purely from user-agent string with relatively lightweight footprint (~7KB minified / ~3KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
+Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
 ![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
 
@@ -163,6 +163,20 @@ Windows [Phone/Mobile], Zenwalk
 </html>
 ```
 
+### Extending regex patterns
+
+* `UAParser(uastring[, extensions])`
+
+To extend the limited regex patterns, started in v0.7.1 you can now pass your own regex matching rules.
+
+```js
+// Example:
+var uaString = 'ownbrowser/1.3';
+var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.NAME, UAParser.VERSION, UAParser.MAJOR]];
+var parser = new UAParser(uaString, {browser: ownBrowser});
+console.log(parser.getBrowser());   // {name: "ownbrowser", major: "1", version: "1.3"}
+```
+
 ### Using node.js
 
 ```sh
@@ -203,9 +217,9 @@ console.log(parser.getResult());
 $ bower install ua-parser-js
 ```
 
-### Using jQuery.ua
+### Using jQuery/Zepto ($.ua)
 
-Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
@@ -228,25 +242,20 @@ console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 
 ## Development
 
-Install dependencies
-
-```sh
-$ npm install jshint
-$ npm install mocha
-$ npm install uglify-js
-```
-
 Verify, test, & minify script
 
 ```sh
-$ ./build/build.sh
+$ npm test
 ```
+
+Then submit a pull request to https://github.com/faisalman/ua-parser-js under `develop` branch.
+
 
 ## License
 
 Dual licensed under GPLv2 & MIT
 
-Copyright © 2012-2013 Faisalman <<fyzlman@gmail.com>>
+Copyright © 2012-2014 Faisal Salman <<fyzlman@gmail.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
