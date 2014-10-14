@@ -40,7 +40,7 @@
     var util = {
         extend : function (regexes, extensions) {
             for (var i in extensions) {
-                if ("browser cpu device engine os".indexOf(i) !== -1 && extensions[i].length % 2 == 0) {
+                if ("browser cpu device engine os".indexOf(i) !== -1 && extensions[i].length % 2 === 0) {
                     regexes[i] = regexes[i].concat(extensions[i]);
                 }
             }
@@ -297,7 +297,13 @@
             /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
             /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
             /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION, MAJOR]
+
+            /* /////////////////////
+            // Media players BEGIN
+            ////////////////////////
+
+            , [
 
             /(apple(?:coremedia|))\/((\d+)[\w\._]+)/i,                          // Generic Apple CoreMedia
             /(coremedia) v((\d+)[\w\._]+)/i
@@ -398,6 +404,10 @@
             /(rad.io)\s((\d+)[\d\.]+)/i,                                        // Rad.io
             /(radio.(?:de|at|fr))\s((\d+)[\d\.]+)/i
             ], [[NAME, 'rad.io'], VERSION, MAJOR]
+
+            //////////////////////
+            // Media players END
+            ////////////////////*/
 
         ],
 
