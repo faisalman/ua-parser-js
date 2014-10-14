@@ -41,7 +41,7 @@
         extend : function (regexes, extensions) {
             for (var i in extensions) {
                 if ("browser cpu device engine os".indexOf(i) !== -1 && extensions[i].length % 2 === 0) {
-                    regexes[i] = regexes[i].concat(extensions[i]);
+                    regexes[i] = extensions[i].concat(regexes[i]);
                 }
             }
             return regexes;
