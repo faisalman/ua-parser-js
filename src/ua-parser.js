@@ -219,9 +219,6 @@
 
         browser : [[
 
-            /APP-([\w\s\d-]+)\/((\d+)?[\w\.]+)/i                                     // KTA App
-            ], [NAME, VERSION, MAJOR], [
-
             // Presto based
             /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
             /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
@@ -540,8 +537,6 @@
         ],
 
         engine : [[
-            /APP-([\w\s\d-]+)\/((\d+)?[\w\.]+)/i                                     // KTA App
-            ], [[NAME, 'Mobile-App'], VERSION], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,     // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m

@@ -60,152 +60,12 @@
         }
     },
     {
-        "desc"    : "AppleCoreMedia",
-        "ua"      : "AppleCoreMedia/1.0.0.10A403 (iPad; U; CPU OS 6_0 like Mac OS X; it_it)",
-        "expect"  : 
-        {
-            "vendor"  : "Apple",
-            "model"   : "iPad",
-            "type"    : "tablet"
-        }
-    },
-    {
-        "desc"    : "AppleTV",
-        "ua"      : "AppleTV/3.0.2 (Macintosh; Intel Mac OS X 10.4.7) AppleWebKit/528.18",
-        "expect"  : 
-        {
-            "vendor"  : "Apple",
-            "model"   : "Apple TV",
-            "type"    : "undefined"
-        }
-    },
-    {
-        "desc"    : "AppleTV",
-        "ua"      : "AppleCoreMedia/1.0.0.11B511d (Apple TV; U; CPU OS 7_0_3 like Mac OS X; es_es)",
-        "expect"  : 
-        {
-            "vendor"  : "Apple",
-            "model"   : "Apple TV",
-            "type"    : "undefined"
-        }
-    },
-    {
-        "desc"    : "Dalvik",
-        "ua"      : "Dalvik/1.2.0 (Linux; U; Android 2.2.1; GT-S5830L Build/FROYO)",
-        "expect"  : 
-        {
-            "vendor"  : "Samsung",
-            "model"   : "GT-S5830L",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "GStreamer",
-        "ua"      : "GStreamer souphttpsrc (compatible; LG NetCast.TV-2012) libsoup/2.34.2",
-        "expect"  : 
-        {
-            "vendor"  : "LG",
-            "model"   : "undefined",
-            "type"    : "smarttv"
-        }
-    },
-    {
-        "desc"    : "HTC Streaming Player",
-        "ua"      : "HTC Streaming Player htc_asia_wwe / 1.0 / endeavoru / 4.1.1",
-        "expect"  : 
-        {
-            "vendor"  : "HTC",
-            "model"   : "undefined",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "HTC One S",
-        "ua"      : "HTC_One_S/3.16.111.10",
-        "expect"  : 
-        {
-            "vendor"  : "HTC",
-            "model"   : "One S",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "LG Player",
-        "ua"      : "LG Player 1.0; Android",
-        "expect"  : 
-        {
-            "vendor"  : "LG",
-            "model"   : "undefined",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "NexPlayer",
-        "ua"      : "LG-P700/V10k-DEC-12-2012 Player/NexPlayer 4.0 for Android",
-        "expect"  : 
-        {
-            "vendor"  : "LG",
-            "model"   : "P700",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "LG Player",
-        "ua"      : "LGE400/V10b Player/LG Player 1.0",
-        "expect"  : 
-        {
-            "vendor"  : "LG",
-            "model"   : "E400",
-            "type"    : "mobile"
-        }
-    },
-    {
         "desc"    : "Nokia3xx",
         "ua"      : "Nokia303/14.87 CLDC-1.1",
         "expect"  : 
         {
             "vendor"  : "Nokia",
             "model"   : "303",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "KTB-iPhone",
-        "ua"      : "APP-BE/1.0 (iPhone; Apple; CPU iPhone OS 7_0 like Mac OS X)",
-        "expect"  :
-        {
-            "vendor"  : "Apple",
-            "model"   : "iPhone",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "stagefright",
-        "ua"      : "Samsung GT-I9070 stagefright/1.1 (Linux;Android 2.3.6)",
-        "expect"  : 
-        {
-            "vendor"  : "Samsung",
-            "model"   : "GT-I9070",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "KTB-iPod Touch",
-        "ua"      : "APP-BE/1.0 (iPod touch; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
-        "expect"  :
-        {
-            "vendor"  : "Apple",
-            "model"   : "iPod touch",
-            "type"    : "mobile"
-        }
-    },
-    {
-        "desc"    : "rad.io",
-        "ua"      : "rad.io 1.18.1 rv:593 (iPhone 4S; iPhone OS 7.0.4; it_IT)",
-        "expect"  : 
-        {
-            "vendor"  : "Apple",
-            "model"   : "iPhone 4S",
             "type"    : "mobile"
         }
     },
@@ -217,26 +77,6 @@
             "vendor"  : "Amazon",
             "model"   : "KFTT",
             "type"    : "tablet"
-        }
-    },
-    {
-        "desc"    : "KTB-iPad",
-        "ua"      : "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
-        "expect"  :
-        {
-            "vendor"  : "Apple",
-            "model"   : "iPad",
-            "type"    : "tablet"
-        }
-    },
-    {
-        "desc"    : "KTB-Nexus 5",
-        "ua"      : "APP-My App/1.0 (Linux; Android 4.2.1; Nexus 5 Build/JOP40D)",
-        "expect"  :
-        {
-            "vendor"  : "LG",
-            "model"   : "Nexus 5",
-            "type"    : "mobile"
         }
     }
 ]
