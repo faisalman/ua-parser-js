@@ -253,10 +253,12 @@
             ], [[NAME, 'Yandex'], VERSION, MAJOR], [
 
             /(comodo_dragon)\/((\d+)?[\w\.]+)/i                                 // Comodo Dragon
-            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
+            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [ 
 
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
+            /(uc\s?browser|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i
+                                                                                //UCBrowser/QQBrowser
             ], [NAME, VERSION, MAJOR], [
 
             /(dolfin)\/((\d+)?[\w\.]+)/i                                        // Dolphin
@@ -289,8 +291,8 @@
             /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
 
             // Other
-            /(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i,
-                                                                                // UCBrowser/Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/QQBrowser
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?((\d+)?[\w\.]+)/i,
+                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
             /(links)\s\(((\d+)?[\w\.]+)/i,                                      // Links
             /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
             /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
@@ -502,7 +504,8 @@
             /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
 
-            /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i
+            /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i,
+            /((SM-T\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
             /((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-n900))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,

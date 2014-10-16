@@ -78,5 +78,35 @@
             "model"   : "KFTT",
             "type"    : "tablet"
         }
+    },
+    {
+        "desc"    : "Samsung SM-T231",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-T231 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-T231",
+            "type"    : "tablet"
+        }
+    },
+    {
+        "desc"    : "Samsung SM-T700",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-T700 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-T700",
+            "type"    : "tablet"
+        }
+    },
+    {
+        "desc"    : "Samsung SM-T520",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-T520 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-T520",
+            "type"    : "tablet"
+        }
     }
 ]
