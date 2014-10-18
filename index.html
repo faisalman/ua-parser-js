@@ -6,36 +6,55 @@
     <meta name="author" content="Faisalman" />
     <meta name="description" content="UAParser.js Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery plugin & AMD module." />
     <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
-    <style>
+    <style>        
+      @import url("http://fonts.googleapis.com/css?family=Raleway");
       * {
         margin: 0;
         padding: 0;
+        font-family: Raleway, Helvetica, Ubuntu, Arial, Georgia, sans-serif;
       }
       html, input, select {
         font: 14px/20px Helvetica, Ubuntu, Arial, Georgia, sans-serif;
         color: #333;
       }
       body {
-        background: #fff;
+        background: #33A6B2;
         margin: 0 auto;
-        padding: 50px 20px 20px;
         width: 960px;
         text-align: center;
       }
       header, section, footer {
-        padding: 20px 0 0;
+        padding: 50px;
         position: relative;
+      }
+      header {
+          padding: 100px 50px 50px;
+          background-color: #196674;
+          color: #fff;
+      }
+      section {
+          background-color: #F0F0F0;
+      }
+      section.test {
+        background-color: #218777;
+      }
+      footer {
+        background-color: #33332D;
+		color: #fff;
+      }
+      footer a {
+		color: #fff;
       }
 	  h1 a {
 		text-decoration: none;
-		color: #333;
+		color: #fff;
 	  }
       h1 {
         margin-bottom: 30px;
         font-size: 4em;
       }
-      h1, h2, th, .ua {
-        font-family: Helvetica, Ubuntu, Arial, Georgia, sans-serif;
+      h2 {
+        font-size: 1.2em;
       }
       .share {
         position: absolute;
@@ -45,44 +64,39 @@
         right: 0;
       }
       pre {
-        margin: 0 0 20px;
+        font-size: 1em;
         padding: 10px;
-        background: #f0f0f0;
         white-space: pre-wrap;
         overflow: auto;
+        line-height: 2em;
       }
       table {
+        margin: 50px 0;
         border-spacing: 0;
-        margin: auto;
         width: 100%;
       }
       th {
         font-size: 2em;
       }
       th, td {
-        border-left: 1px solid #fff;
-        border-top: 1px solid #fff;
         min-width: 100px;
         padding: 20px;
         text-align: center;
       }
-      tr:last-child th, tr:last-child td {
-        border-bottom: 1px solid #ccc;
-      }
-      th:last-child, td:last-child {
-        border-right: 1px solid #fff;
-      }
       td {
-        color: red;
+        font-size: 1.2em;
+        color: #333;
       }
       select, input, .grey {
         color: #777;
-        width: 100%;
+        width: 95%;
       }
       select, input {
+        background-color: #fff;
         border: 1px solid #ccc;
-        height: 30px;
-        box-shadow: inset 0 0 10px #ccc;
+        height: 40px;
+        padding: 0 10px;
+        margin: 10px;
       }
       hr {
 		border: 0;
@@ -90,12 +104,17 @@
       }
       p {
         margin: 10px 0;
+        font-size: 1em;
+        line-height: 1.5em;
       }
-	  pre, code {
-		font-family: 'Ubuntu Mono', monospace;
-	  }
       .ua {
         font-size: 1.5em;
+      }
+      .uastring {
+        background-color: #33332D;
+        color: #f0f0f0;
+        font-weight: bold;
+        padding: 5px 10px;
       }
     </style>
     <script src="src/ua-parser.js"></script>
@@ -103,15 +122,10 @@
   </head>
   <body>
     <header>
-      <h1><a href="">UAParser.js</a></h1>
+      <h1><a href="https://faisalman.github.io/ua-parser-js">UAParser.js</a></h1>
       <h2>Lightweight JavaScript-based User-Agent String Parser</h2>
-      <hr />
-      <p class="share">
-        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlman">Tweet</a>
-        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-      </p>
     </header>
-    <section>
+    <section class="result">
       <pre>
       </pre>
       <table>
@@ -140,22 +154,21 @@
         </tr>
       </table>
     </section>
-    <section>
-      <p>How well this parse other user-agent string? try select a string to be parsed:</p>
+    <section class="test">
+      <p>Pick one user agent to be tested:</p>
       <select>
         <option>Pick one</option>
       </select>
-      <p>Want more? try enter any user-agent string you want to parse here:</p>
+      <p>Or enter any user-agent string you want to test here:</p>
       <input type="text" />
     </section>
     <footer>
-      <hr />
       <p>
-        <span class="ua">UAParser.js</span> &copy; 2012-2013 Faisalman. <br/>
-		Dual licensed under GPLv2 & MIT license<br/>
-        Source: <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a><br/>
-		Node.js package: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a><br/>
-		$.ua: <a href="http://plugins.jquery.com/ua-parser-js/">http://plugins.jquery.com/ua-parser-js/</a>
+        <span class="ua">UAParser.js</span> &copy; 2012-2014 Faisal Salman. <br/>
+        Dual licensed under GPLv2 & MIT license<br/>
+        Source &amp; Docs: <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a><br/>
+        Node.js package: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a><br/>
+        $.ua: <a href="http://plugins.jquery.com/ua-parser-js/">http://plugins.jquery.com/ua-parser-js/</a>
       </p>
     </footer>
     <script>
@@ -169,27 +182,31 @@
 		    el.appendChild(prop);
 		} else if(typeof prop === 'string'){
 			el.innerHTML = prop;
-			el.style.color = "green";
 		} else {
-			el.innerHTML = "No data";
-			el.style.color = "#ccc";
+			el.innerHTML = "-";
 		}
 	  };
-	  var imgMap = function(prop, key, arr){
+	  var imgMap = function(prop, dir, key, arr){
         var img = document.createElement('img');
         img.src = 'images/undefined.png';
+        img.width = 64;
+        img.height = 64;
 	    for(var i in arr){
 	        if(arr.hasOwnProperty(i)){
 	            var isobj = typeof arr[i] === 'object';
                 var r = isobj ? new RegExp(arr[i][0], 'i') : new RegExp(arr[i], 'i');
-                if(r.test(prop[key])){
-                    img.src = 'images/'+(isobj?arr[i][1]:arr[i])+'.png';
+                if(r.test(prop[key]) && dir!='engine'){
+                    img.src = 'images/'+dir+'/'+(isobj?arr[i][1]:arr[i])+'.png';
                     return img;
                 } else if(prop[key] !== undefined){
                     img.src = 'images/check.png';
                 }
 	        }
 	    }
+        img.onerror = function() {
+            this.src = 'images/check.png';
+            this.onerror = null;
+        };
 	    return img;
 	  };
       for(var i = 0; i < uaExampleList.length; i++){
@@ -205,16 +222,16 @@
         var device = parser.getDevice();
         var tbl = document.getElementsByTagName('td');
         var prop = [
-            imgMap(browser, 'name', ['ie', 'chrome', 'chromium', 'konqueror', 'safari', 'opera', 'firefox', ['fennec', 'firefox'], 'mozilla', 'midori', 'arora', 'camino', 'iceweasel', 'dolfin', 'rockmelt', 'flock']),
-            imgMap(engine, 'name', [['trident', 'ie'], ['webkit', 'safari'], ['khtml', 'konqueror'], ['presto', 'opera'], ['gecko', 'mozilla']]),
-            imgMap(os, 'name', ['meego', 'symbian', 'android', 'blackberry', 'bada', ['windows phone os', 'winphone'], 'windows', 'chromium', 'mac', 'freebsd', 'bsd', 'kubuntu', 'xubuntu', 'lubuntu', 'ubuntu', 'gentoo', 'fedora', 'mandriva', 'redhat', 'suse', 'debian', 'slackware', 'arch', 'linux', 'solaris', 'webos', 'ios', 'centos', 'pclinuxos', ['ios', 'mac'], ['rim', 'blackberry']]),
-            imgMap(device, 'type', [['undefined', 'pc'], ['tablet', 'ipad'], ['mobile', 'phone']]),
+            imgMap(browser, 'browser', 'name', [['ie', 'internet-explorer-tile'], 'chrome', 'chromium', 'konqueror', 'safari', 'opera', 'firefox', 'fennec', 'mozilla', 'midori', 'arora', 'camino', 'iceweasel', 'flock', 'avant', 'baidu', 'dolphin', 'epiphany', ['icab', 'icab-mobile'], 'iceape', 'icecat', ['lunascape', 'ilunascape-android'], 'maxthon', ['netscape', 'netscape_4-6'], 'netsurf', 'omniweb', ['qqbrowser', 'qq'], 'rockmelt', 'rekonq', 'seamonkey', ['silk', 'silk_1'], ['skyfire', 'skyfire-ios'], ['ucbrowser', 'uc'], ['uc browser', 'uc'], 'yandex']),
+            imgMap(engine, 'engine', 'name', [['trident', 'ie'], ['webkit', 'safari'], ['khtml', 'konqueror'], ['presto', 'opera'], ['gecko', 'mozilla']]),
+            imgMap(os, 'os', 'name', ['meego', 'symbian', 'android', 'blackberry', 'bada', ['windows phone os', 'winphone'], 'windows', 'chromium', 'mac', 'freebsd', 'bsd', 'kubuntu', 'xubuntu', 'lubuntu', 'ubuntu', 'gentoo', 'fedora', 'mandriva', 'redhat', 'suse', 'debian', 'slackware', 'arch', 'linux', 'solaris', 'webos', 'centos', 'pclinuxos', ['ios', 'mac'], ['rim', 'blackberry'], 'qnx', 'gnu', 'playstation', 'wii', 'xbox', 'unix']),
+            imgMap(device, 'device', 'type', [['undefined', 'pc'], 'console', 'tablet', ['mobile', 'phone'], ['smarttv', 'tv']]),
             browser.name,       engine.name,    os.name,    device.vendor,
             browser.version,    engine.version, os.version, device.model];
         for(var i = 0; i < prop.length; i++){
             fill(tbl[i], prop[i]);
         }
-        pre.innerHTML = 'Result for <span style="color:green">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (your browser User-Agent string)') + ' :</span>';
+        pre.innerHTML = 'Result for <span class="uastring">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (User-Agent string of your browser)') + '</span> :';
       }
       fillTable();
       var select = function(){

@@ -4,3 +4,4 @@ http://iconfinder.com
 http://iconarchive.com
 http://wikimedia.org
 http://distrowatch.com
+https://github.com/alrra/browser-logos
