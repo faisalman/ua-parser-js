@@ -477,6 +477,7 @@
             /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
+            /[\s\(;](xbox|ouya)[\s\);]/i,                                       // Xbox/Ouya
             /(nintendo)\s([wids3u]+)/i                                          // Nintendo
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
 
