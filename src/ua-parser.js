@@ -446,6 +446,7 @@
             /(apple\s{0,1}tv)/i                                                 // Apple TV
             ], [[MODEL, 'Apple TV'], [VENDOR, 'Apple']], [
 
+            /(archos)\s(gamepad2?)/i,                                           // Archos
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
@@ -477,18 +478,21 @@
             /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /[\s\(;](xbox|ouya)[\s\);]/i,                                       // Xbox/Ouya
+            /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3u]+)/i                                          // Nintendo
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
 
-            /((playstation)\s[3portablevi]+)/i                                  // Playstation
+            /android.+;\s(shield)\sbuild/i                                      // Nvidia
+            ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
+
+            /((playstation\s[3portablevi]+))/i                                  // Playstation
             ], [[VENDOR, 'Sony'], MODEL, [TYPE, CONSOLE]], [
 
             /(sprint\s(\w+))/i                                                  // Sprint Phones
             ], [[VENDOR, mapper.str, maps.device.sprint.vendor], [MODEL, mapper.str, maps.device.sprint.model], [TYPE, MOBILE]], [
 
-            /(Lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i                         // Lenovo tablets
-            ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
+            /(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i                         // Lenovo tablets
+            ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
             /(zte)-(\w+)*/i,                                                    // ZTE
@@ -496,12 +500,17 @@
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
+            /[\s\(;](xbox(?:\sone)?)[\s\);]/i                                   // Microsoft Xbox
+            ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, CONSOLE]], [
+            /(kin\.[onetw]{3})/i                                                // Microsoft Kin
+            ], [[MODEL, /\./g, ' '], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
+
                                                                                 // Motorola
             /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[\w\s]+build\//i,
             /(mot)[\s-]?(\w+)*/i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
-            /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
-            ], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
+            /android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
+            ], [MODEL, [VENDOR, 'Motorola'], [TYPE, TABLET]], [
 
             /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
@@ -509,6 +518,10 @@
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, MOBILE]], [
+            /(samsung);smarttv/i
+            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+            /\(dtv[\);].+(aquos)/i                                              // Sharp
+            ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
             /(sie)-(\w+)*/i                                                     // Siemens
             ], [[VENDOR, 'Siemens'], MODEL, [TYPE, MOBILE]], [
 
@@ -516,13 +529,13 @@
             /(nokia)[\s_-]?([\w-]+)*/i
             ], [[VENDOR, 'Nokia'], MODEL, [TYPE, MOBILE]], [
 
-            /android\s3\.[\s\w-;]{10}((a\d{3}))/i                               // Acer
-            ], [[VENDOR, 'Acer'], MODEL, [TYPE, TABLET]], [
+            /android\s3\.[\s\w-;]{10}(a\d{3})/i                                 // Acer
+            ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
-            ], [VENDOR, [TYPE, SMARTTV]], [
+            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
             /((nexus\s[45]))/i,                                                 // LG
             /(lg)[e;\s\/-]+(\w+)*/i
             ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
