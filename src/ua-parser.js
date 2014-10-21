@@ -67,8 +67,10 @@
 
         rgx : function () {
 
+            var result, i = 0, j, k, p, q, matches, match, args = arguments;
+
             // loop through all regexes maps
-            for (var result, i = 0, j, k, p, q, matches, match, args = arguments; i < args.length; i += 2) {
+            while (i < args.length && !matches) {
 
                 var regex = args[i],       // even sequence (0,2,4,..)
                     props = args[i + 1];   // odd sequence (1,3,5,..)
@@ -87,8 +89,9 @@
                 }
 
                 // try matching uastring with regexes
-                for (j = k = 0; j < regex.length; j++) {
-                    matches = regex[j].exec(this.getUA());
+                j = k = 0;
+                while (j < regex.length && !matches) {
+                    matches = regex[j++].exec(this.getUA());
                     if (!!matches) {
                         for (p = 0; p < props.length; p++) {
                             match = matches[++k];
@@ -119,11 +122,9 @@
                                 result[q] = match ? match : undefined;
                             }
                         }
-                        break;
                     }
                 }
-
-                if(!!matches) break; // break the loop immediately if match found
+                i += 2;
             }
             return result;
         },
