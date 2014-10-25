@@ -470,11 +470,11 @@
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
-            /\((bb10);\s(\w+)/i                                                 // BlackBerry 10
-            ], [[VENDOR, 'BlackBerry'], MODEL, [TYPE, MOBILE]], [
+            /\(bb10;\s(\w+)/i                                                   // BlackBerry 10
+            ], [MODEL, [VENDOR, 'BlackBerry'], [TYPE, MOBILE]], [
                                                                                 // Asus Tablets
-            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7))/i
-            ], [[VENDOR, 'Asus'], MODEL, [TYPE, TABLET]], [
+            /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i
+            ], [MODEL, [VENDOR, 'Asus'], [TYPE, TABLET]], [
 
             /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
@@ -486,8 +486,8 @@
             /android.+;\s(shield)\sbuild/i                                      // Nvidia
             ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
 
-            /((playstation\s[3portablevi]+))/i                                  // Playstation
-            ], [[VENDOR, 'Sony'], MODEL, [TYPE, CONSOLE]], [
+            /(playstation\s[3portablevi]+)/i                                    // Playstation
+            ], [MODEL, [VENDOR, 'Sony'], [TYPE, CONSOLE]], [
 
             /(sprint\s(\w+))/i                                                  // Sprint Phones
             ], [[VENDOR, mapper.str, maps.device.sprint.vendor], [MODEL, mapper.str, maps.device.sprint.model], [TYPE, MOBILE]], [
@@ -523,8 +523,8 @@
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
             /\(dtv[\);].+(aquos)/i                                              // Sharp
             ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
-            /(sie)-(\w+)*/i                                                     // Siemens
-            ], [[VENDOR, 'Siemens'], MODEL, [TYPE, MOBILE]], [
+            /sie-(\w+)*/i                                                       // Siemens
+            ], [MODEL, [VENDOR, 'Siemens'], [TYPE, MOBILE]], [
 
             /(maemo|nokia).*(n900|lumia\s\d+)/i,                                // Nokia
             /(nokia)[\s_-]?([\w-]+)*/i
@@ -537,12 +537,12 @@
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
-            /((nexus\s[45]))/i,                                                 // LG
-            /(lg)[e;\s\/-]+(\w+)*/i
-            ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
+            /(nexus\s[45])/i,                                                   // LG
+            /lg[e;\s\/-]+(\w+)*/i
+            ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
                 
-            /android.+((ideatab[a-z0-9\-\s]+))/i                                // Lenovo
-            ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
+            /android.+(ideatab[a-z0-9\-\s]+)/i                                  // Lenovo
+            ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
                 
             /linux;.+((jolla));/i                                               // Jolla
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
