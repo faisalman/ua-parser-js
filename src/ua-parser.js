@@ -548,6 +548,12 @@
                 
             /linux;.+((jolla));/i                                               // Jolla
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
+                
+            /((pebble))app\/[\d\.]+\s/i                                         // Pebble
+            ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
+                
+            /android.+;\s(glass)\s\d/i                                          // Google Glass
+            ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
