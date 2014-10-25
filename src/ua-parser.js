@@ -30,7 +30,9 @@
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
         TABLET      = 'tablet',
-        SMARTTV     = 'smarttv';
+        SMARTTV     = 'smarttv',
+        WEARABLE    = 'wearable',
+        EMBEDDED    = 'embedded';
 
 
     ///////////
@@ -696,7 +698,9 @@
         CONSOLE : CONSOLE,
         MOBILE  : MOBILE,
         SMARTTV : SMARTTV,
-        TABLET  : TABLET
+        TABLET  : TABLET,
+        WEARABLE: WEARABLE,
+        EMBEDDED: EMBEDDED
     };
     UAParser.ENGINE = {
         NAME    : NAME,
