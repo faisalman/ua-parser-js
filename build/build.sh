@@ -33,5 +33,5 @@ echo "Running test..."
 $MOCHA_DIR -R nyan test/test.js
 
 echo "Minifying script..."
-$UGLIFY_DIR src/ua-parser.js > src/ua-parser.min.js
+$UGLIFY_DIR src/ua-parser.js > dist/ua-parser.min.js
 echo "OK"
