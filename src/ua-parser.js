@@ -296,7 +296,8 @@
             /(links)\s\(((\d+)?[\w\.]+)/i,                                      // Links
             /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
             /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
-            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
+            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i,                                    // Mosaic
+            /(CaptiveNetworkSupport\/((\d+)?[\w\.]+).+?(wispr))/i                //captiveNetworkSupport
             ], [NAME, VERSION, MAJOR]
 
             /* /////////////////////
