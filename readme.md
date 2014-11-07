@@ -2,7 +2,7 @@
 
 Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component package, Bower package, & AMD module
 
-[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.png?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
+[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 
 * Author    : Faisal Salman <<fyzlman@gmail.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
