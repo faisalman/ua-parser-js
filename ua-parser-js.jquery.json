@@ -1,7 +1,7 @@
 {
     "title": "UAParser.js",
     "name": "ua-parser-js",
-    "version": "0.7.1",
+    "version": "0.7.2",
     "description": "Lightweight JavaScript-based user-agent string parser",
     "keywords": [
         "user-agent",
@@ -28,5 +28,5 @@
     ],
     "bugs": "https://github.com/faisalman/ua-parser-js/issues",
     "docs": "https://github.com/faisalman/ua-parser-js",
-    "download": "https://raw.github.com/faisalman/ua-parser-js/master/src/ua-parser.min.js"
+    "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.min.js"
 }
