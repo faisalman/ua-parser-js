@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "jshint": "~1.1.0",
-    "mocha": "~1.7.1",
+    "mocha": "~1.8.0",
     "uglify-js": "~1.3.4"
   },
   "repository" : {
