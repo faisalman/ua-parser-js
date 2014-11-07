@@ -1,9 +1,11 @@
-// UAParser.js v0.7.1
-// Lightweight JavaScript-based User-Agent string parser
-// https://github.com/faisalman/ua-parser-js
-//
-// Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
-// Dual licensed under GPLv2 & MIT
+/**
+ * UAParser.js v0.7.2
+ * Lightweight JavaScript-based User-Agent string parser
+ * https://github.com/faisalman/ua-parser-js
+ * 
+ * Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
+ * Dual licensed under GPLv2 & MIT
+ */
 
 (function (window, undefined) {
 
@@ -14,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.1',
+    var LIBVERSION  = '0.7.2',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -30,7 +32,9 @@
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
         TABLET      = 'tablet',
-        SMARTTV     = 'smarttv';
+        SMARTTV     = 'smarttv',
+        WEARABLE    = 'wearable',
+        EMBEDDED    = 'embedded';
 
 
     ///////////
@@ -67,8 +71,10 @@
 
         rgx : function () {
 
+            var result, i = 0, j, k, p, q, matches, match, args = arguments;
+
             // loop through all regexes maps
-            for (var result, i = 0, j, k, p, q, matches, match, args = arguments; i < args.length; i += 2) {
+            while (i < args.length && !matches) {
 
                 var regex = args[i],       // even sequence (0,2,4,..)
                     props = args[i + 1];   // odd sequence (1,3,5,..)
@@ -87,8 +93,9 @@
                 }
 
                 // try matching uastring with regexes
-                for (j = k = 0; j < regex.length; j++) {
-                    matches = regex[j].exec(this.getUA());
+                j = k = 0;
+                while (j < regex.length && !matches) {
+                    matches = regex[j++].exec(this.getUA());
                     if (!!matches) {
                         for (p = 0; p < props.length; p++) {
                             match = matches[++k];
@@ -119,11 +126,9 @@
                                 result[q] = match ? match : undefined;
                             }
                         }
-                        break;
                     }
                 }
-
-                if(!!matches) break; // break the loop immediately if match found
+                i += 2;
             }
             return result;
         },
@@ -203,6 +208,7 @@
                     '7'         : 'NT 6.1',
                     '8'         : 'NT 6.2',
                     '8.1'       : 'NT 6.3',
+                    '10'        : 'NT 6.4',
                     'RT'        : 'ARM'
                 }
             }
@@ -432,8 +438,8 @@
             /(sun4\w)[;\)]/i                                                    // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
 
-            /(ia64(?=;)|68k(?=\))|arm(?=v\d+;)|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
-                                                                                // IA64, 68K, ARM, IRIX, MIPS, SPARC, PA-RISC
+            /((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+;))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
+                                                                                // IA64, 68K, ARM/64, AVR/32, IRIX/64, MIPS/64, SPARC/64, PA-RISC
             ], [[ARCHITECTURE, util.lowerize]]
         ],
 
@@ -448,6 +454,7 @@
             /(apple\s{0,1}tv)/i                                                 // Apple TV
             ], [[MODEL, 'Apple TV'], [VENDOR, 'Apple']], [
 
+            /(archos)\s(gamepad2?)/i,                                           // Archos
             /(hp).+(touchpad)/i,                                                // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
@@ -470,26 +477,30 @@
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
-            /\((bb10);\s(\w+)/i                                                 // BlackBerry 10
-            ], [[VENDOR, 'BlackBerry'], MODEL, [TYPE, MOBILE]], [
+            /\(bb10;\s(\w+)/i                                                   // BlackBerry 10
+            ], [MODEL, [VENDOR, 'BlackBerry'], [TYPE, MOBILE]], [
                                                                                 // Asus Tablets
-            /android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7))/i
-            ], [[VENDOR, 'Asus'], MODEL, [TYPE, TABLET]], [
+            /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i
+            ], [MODEL, [VENDOR, 'Asus'], [TYPE, TABLET]], [
 
             /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
+            /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3u]+)/i                                          // Nintendo
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
 
-            /((playstation)\s[3portablevi]+)/i                                  // Playstation
-            ], [[VENDOR, 'Sony'], MODEL, [TYPE, CONSOLE]], [
+            /android.+;\s(shield)\sbuild/i                                      // Nvidia
+            ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
+
+            /(playstation\s[3portablevi]+)/i                                    // Playstation
+            ], [MODEL, [VENDOR, 'Sony'], [TYPE, CONSOLE]], [
 
             /(sprint\s(\w+))/i                                                  // Sprint Phones
             ], [[VENDOR, mapper.str, maps.device.sprint.vendor], [MODEL, mapper.str, maps.device.sprint.model], [TYPE, MOBILE]], [
 
-            /(Lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i                         // Lenovo tablets
-            ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
+            /(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i                         // Lenovo tablets
+            ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
             /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
             /(zte)-(\w+)*/i,                                                    // ZTE
@@ -497,12 +508,17 @@
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
+            /[\s\(;](xbox(?:\sone)?)[\s\);]/i                                   // Microsoft Xbox
+            ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, CONSOLE]], [
+            /(kin\.[onetw]{3})/i                                                // Microsoft Kin
+            ], [[MODEL, /\./g, ' '], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
+
                                                                                 // Motorola
             /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[\w\s]+build\//i,
             /(mot)[\s-]?(\w+)*/i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
-            /android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
-            ], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
+            /android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
+            ], [MODEL, [VENDOR, 'Motorola'], [TYPE, TABLET]], [
 
             /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i,
             /((SM-T\w+))/i
@@ -511,29 +527,39 @@
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, MOBILE]], [
-            /(sie)-(\w+)*/i                                                     // Siemens
-            ], [[VENDOR, 'Siemens'], MODEL, [TYPE, MOBILE]], [
+            /(samsung);smarttv/i
+            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+            /\(dtv[\);].+(aquos)/i                                              // Sharp
+            ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
+            /sie-(\w+)*/i                                                       // Siemens
+            ], [MODEL, [VENDOR, 'Siemens'], [TYPE, MOBILE]], [
 
             /(maemo|nokia).*(n900|lumia\s\d+)/i,                                // Nokia
             /(nokia)[\s_-]?([\w-]+)*/i
             ], [[VENDOR, 'Nokia'], MODEL, [TYPE, MOBILE]], [
 
-            /android\s3\.[\s\w-;]{10}((a\d{3}))/i                               // Acer
-            ], [[VENDOR, 'Acer'], MODEL, [TYPE, TABLET]], [
+            /android\s3\.[\s\w-;]{10}(a\d{3})/i                                 // Acer
+            ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
             /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
-            ], [VENDOR, [TYPE, SMARTTV]], [
-            /((nexus\s[45]))/i,                                                 // LG
-            /(lg)[e;\s\/-]+(\w+)*/i
-            ], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
+            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+            /(nexus\s[45])/i,                                                   // LG
+            /lg[e;\s\/-]+(\w+)*/i
+            ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
                 
-            /android.+((ideatab[a-z0-9\-\s]+))/i                                // Lenovo
-            ], [[VENDOR, 'Lenovo'], MODEL, [TYPE, TABLET]], [
+            /android.+(ideatab[a-z0-9\-\s]+)/i                                  // Lenovo
+            ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
                 
             /linux;.+((jolla));/i                                               // Jolla
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
+                
+            /((pebble))app\/[\d\.]+\s/i                                         // Pebble
+            ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
+                
+            /android.+;\s(glass)\s\d/i                                          // Google Glass
+            ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
@@ -566,9 +592,9 @@
             /\((bb)(10);/i                                                      // BlackBerry 10
             ], [[NAME, 'BlackBerry'], VERSION], [
             /(blackberry)\w*\/?([\w\.]+)*/i,                                    // Blackberry
-            /(tizen)\/([\w\.]+)/i,                                              // Tizen
-            /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i,
-                                                                                // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo
+            /(tizen)[\/\s]([\w\.]+)/i,                                          // Tizen
+            /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego|contiki)[\/\s-]?([\w\.]+)*/i,
+                                                                                // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo/Contiki
             /linux;.+(sailfish);/i                                              // Sailfish OS
             ], [NAME, VERSION], [
             /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i                 // Symbian
@@ -583,9 +609,10 @@
 
             // GNU/Linux based
             /(mint)[\/\s\(]?(\w+)*/i,                                           // Mint
-            /(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,
+            /(mageia|vectorlinux)[;\s]/i,                                       // Mageia/VectorLinux
+            /(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?([\w\.-]+)*/i,
                                                                                 // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
-                                                                                // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk
+                                                                                // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus
             /(hurd|linux)\s?([\w\.]+)*/i,                                       // Hurd/Linux
             /(gnu)\s?([\w\.]+)*/i                                               // GNU
             ], [NAME, VERSION], [
@@ -608,10 +635,11 @@
             ], [NAME, [VERSION, /_/g, '.']], [
 
             // Other
+            /((?:open)?solaris)[\/\s-]?([\w\.]+)*/i,                            // Solaris
             /(haiku)\s(\w+)/i,                                                  // Haiku
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX
-            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos)/i,
-                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS
+            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
+                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], [NAME, VERSION]
         ]
@@ -683,7 +711,9 @@
         CONSOLE : CONSOLE,
         MOBILE  : MOBILE,
         SMARTTV : SMARTTV,
-        TABLET  : TABLET
+        TABLET  : TABLET,
+        WEARABLE: WEARABLE,
+        EMBEDDED: EMBEDDED
     };
     UAParser.ENGINE = {
         NAME    : NAME,
