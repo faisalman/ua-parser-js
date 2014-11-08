@@ -631,14 +631,15 @@
             /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
+            /(macintosh|mac(?=_powerpc)/i,
             /(mac\sos\sx)\s?([\w\s\.]+\w)*/i                                    // Mac OS
-            ], [NAME, [VERSION, /_/g, '.']], [
+            ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
             // Other
             /((?:open)?solaris)[\/\s-]?([\w\.]+)*/i,                            // Solaris
             /(haiku)\s(\w+)/i,                                                  // Haiku
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX
-            /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
+            /plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
                                                                                 // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], [NAME, VERSION]
