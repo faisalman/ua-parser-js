@@ -472,7 +472,7 @@
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36",
         "expect"  :
         {
-            "name"    : "Mac OS X",
+            "name"    : "Mac OS",
             "version" : "10.6.8"
         }
     },

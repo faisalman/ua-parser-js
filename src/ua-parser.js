@@ -1,5 +1,5 @@
 /**
- * UAParser.js v0.7.2
+ * UAParser.js v0.7.3
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  * 
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.2',
+    var LIBVERSION  = '0.7.3',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -631,15 +631,15 @@
             /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
-            /(macintosh|mac(?=_powerpc)/i,
-            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i                                    // Mac OS
+            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i, 
+            /(macintosh|mac(?=_powerpc)\s)/i                                    // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
             // Other
             /((?:open)?solaris)[\/\s-]?([\w\.]+)*/i,                            // Solaris
             /(haiku)\s(\w+)/i,                                                  // Haiku
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX
-            /plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
+            /(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
                                                                                 // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
             ], [NAME, VERSION]
