@@ -22,6 +22,7 @@
         FUNC_TYPE   = 'function',
         UNDEF_TYPE  = 'undefined',
         OBJ_TYPE    = 'object',
+        STR_TYPE    = 'string',
         MAJOR       = 'major',
         MODEL       = 'model',
         NAME        = 'name',
@@ -58,6 +59,9 @@
         },
         lowerize : function (str) {
             return str.toLowerCase();
+        },
+        major : function (version) {
+            return typeof(version) === STR_TYPE ? version.split(".")[0] : undefined;
         }
     };
 
@@ -161,11 +165,6 @@
 
         browser : {
             oldsafari : {
-                major : {
-                    '1' : ['/8', '/1', '/3'],
-                    '2' : '/4',
-                    '?' : '/'
-                },
                 version : {
                     '1.0'   : '/8',
                     '1.2'   : '/1',
@@ -226,84 +225,84 @@
         browser : [[
 
             // Presto based
-            /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
-            /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
-            /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
-            /(opera)[\/\s]+((\d+)?[\w\.]+)/i                                    // Opera < 9.80
+            /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini
+            /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,                      // Opera Mobi/Tablet
+            /(opera).+version\/([\w\.]+)/i,                                     // Opera > 9.80
+            /(opera)[\/\s]+([\w\.]+)/i                                          // Opera < 9.80
 
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
-            /\s(opr)\/((\d+)?[\w\.]+)/i                                         // Opera Webkit
-            ], [[NAME, 'Opera'], VERSION, MAJOR], [
+            /\s(opr)\/([\w\.]+)/i                                               // Opera Webkit
+            ], [[NAME, 'Opera'], VERSION], [
 
             // Mixed
-            /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i,
+            /(kindle)\/([\w\.]+)/i,                                             // Kindle
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]+)*/i,
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer
 
             // Trident based
-            /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i,
+            /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,
                                                                                 // Avant/IEMobile/SlimBrowser/Baidu
-            /(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i,                                  // Internet Explorer
+            /(?:ms|\()(ie)\s([\w\.]+)/i,                                        // Internet Explorer
 
             // Webkit/KHTML based
-            /(rekonq)((?:\/)[\w\.]+)*/i,                                        // Rekonq
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/((\d+)?[\w\.-]+)/i
+            /(rekonq)\/([\w\.]+)*/i,                                            // Rekonq
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/([\w\.-]+)/i
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
-            /(trident).+rv[:\s]((\d+)?[\w\.]+).+like\sgecko/i                   // IE11
-            ], [[NAME, 'IE'], VERSION, MAJOR], [
+            /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
+            ], [[NAME, 'IE'], VERSION], [
 
-            /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
-            ], [[NAME, 'Yandex'], VERSION, MAJOR], [
+            /(yabrowser)\/([\w\.]+)/i                                           // Yandex
+            ], [[NAME, 'Yandex'], VERSION], [
 
-            /(comodo_dragon)\/((\d+)?[\w\.]+)/i                                 // Comodo Dragon
-            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [ 
+            /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
+            ], [[NAME, /_/g, ' '], VERSION], [ 
 
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i,
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
-            /(uc\s?browser|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i
+            /(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i
                                                                                 //UCBrowser/QQBrowser
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
-            /(dolfin)\/((\d+)?[\w\.]+)/i                                        // Dolphin
-            ], [[NAME, 'Dolphin'], VERSION, MAJOR], [
+            /(dolfin)\/([\w\.]+)/i                                              // Dolphin
+            ], [[NAME, 'Dolphin'], VERSION], [
 
-            /((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i                       // Chrome for Android/iOS
-            ], [[NAME, 'Chrome'], VERSION, MAJOR], [
+            /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
+            ], [[NAME, 'Chrome'], VERSION], [
 
-            /version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i                 // Mobile Safari
-            ], [VERSION, MAJOR, [NAME, 'Mobile Safari']], [
+            /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
+            ], [VERSION, [NAME, 'Mobile Safari']], [
 
-            /version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i              // Safari & Safari Mobile
-            ], [VERSION, MAJOR, NAME], [
+            /version\/([\w\.]+).+?(mobile\s?safari|safari)/i                    // Safari & Safari Mobile
+            ], [VERSION, NAME], [
 
-            /webkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i                   // Safari < 3.0
-            ], [NAME, [MAJOR, mapper.str, maps.browser.oldsafari.major], [VERSION, mapper.str, maps.browser.oldsafari.version]], [
+            /webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i                     // Safari < 3.0
+            ], [NAME, [VERSION, mapper.str, maps.browser.oldsafari.version]], [
 
-            /(konqueror)\/((\d+)?[\w\.]+)/i,                                    // Konqueror
-            /(webkit|khtml)\/((\d+)?[\w\.]+)/i
-            ], [NAME, VERSION, MAJOR], [
+            /(konqueror)\/([\w\.]+)/i,                                          // Konqueror
+            /(webkit|khtml)\/([\w\.]+)/i
+            ], [NAME, VERSION], [
 
             // Gecko based
-            /(navigator|netscape)\/((\d+)?[\w\.-]+)/i                           // Netscape
-            ], [[NAME, 'Netscape'], VERSION, MAJOR], [
+            /(navigator|netscape)\/([\w\.-]+)/i                                 // Netscape
+            ], [[NAME, 'Netscape'], VERSION], [
             /(swiftfox)/i,                                                      // Swiftfox
-            /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,
+            /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,
                                                                                 // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
-            /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
+            /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/([\w\.-]+)/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
-            /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
+            /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?((\d+)?[\w\.]+)/i,
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?([\w\.]+)/i,
                                                                                 // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
-            /(links)\s\(((\d+)?[\w\.]+)/i,                                      // Links
-            /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
-            /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
-            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
-            ], [NAME, VERSION, MAJOR]
+            /(links)\s\(([\w\.]+)/i,                                            // Links
+            /(gobrowser)\/?([\w\.]+)*/i,                                        // GoBrowser
+            /(ice\s?browser)\/v?([\w\._]+)/i,                                   // ICE Browser
+            /(mosaic)[\/\s]([\w\.]+)/i                                          // Mosaic
+            ], [NAME, VERSION]
 
             /* /////////////////////
             // Media players BEGIN
@@ -313,13 +312,13 @@
 
             /(apple(?:coremedia|))\/((\d+)[\w\._]+)/i,                          // Generic Apple CoreMedia
             /(coremedia) v((\d+)[\w\._]+)/i
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(aqualung|lyssna|bsplayer)\/((\d+)?[\w\.-]+)/i                     // Aqualung/Lyssna/BSPlayer
             ], [NAME, VERSION], [
 
             /(ares|ossproxy)\s((\d+)[\w\.-]+)/i                                 // Ares/OSSProxy
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(audacious|audimusicstream|amarok|bass|core|dalvik|gnomemplayer|music on console|nsplayer|psp-internetradioplayer|videos)\/((\d+)[\w\.-]+)/i,
                                                                                 // Audacious/AudiMusicStream/Amarok/BASS/OpenCORE/Dalvik/GnomeMplayer/MoC
@@ -327,12 +326,12 @@
             /(clementine|music player daemon)\s((\d+)[\w\.-]+)/i,               // Clementine/MPD
             /(lg player|nexplayer)\s((\d+)[\d\.]+)/i,
             /player\/(nexplayer|lg player)\s((\d+)[\w\.-]+)/i                   // NexPlayer/LG Player
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
             /(nexplayer)\s((\d+)[\w\.-]+)/i                                     // Nexplayer
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(flrp)\/((\d+)[\w\.-]+)/i                                          // Flip Player
-            ], [[NAME, 'Flip Player'], VERSION, MAJOR], [
+            ], [[NAME, 'Flip Player'], VERSION], [
 
             /(fstream|nativehost|queryseekspider|ia-archiver|facebookexternalhit)/i
                                                                                 // FStream/NativeHost/QuerySeekSpider/IA Archiver/facebookexternalhit
@@ -340,23 +339,23 @@
 
             /(gstreamer) souphttpsrc (?:\([^\)]+\)){0,1} libsoup\/((\d+)[\w\.-]+)/i
                                                                                 // Gstreamer
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(htc streaming player)\s[\w_]+\s\/\s((\d+)[\d\.]+)/i,              // HTC Streaming Player
             /(java|python-urllib|python-requests|wget|libcurl)\/((\d+)[\w\.-_]+)/i,
                                                                                 // Java/urllib/requests/wget/cURL
             /(lavf)((\d+)[\d\.]+)/i                                             // Lavf (FFMPEG)
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(htc_one_s)\/((\d+)[\d\.]+)/i                                      // HTC One S
-            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
+            ], [[NAME, /_/g, ' '], VERSION], [
 
             /(mplayer)(?:\s|\/)(?:(?:sherpya-){0,1}svn)(?:-|\s)(r\d+(?:-\d+[\w\.-]+){0,1})/i
                                                                                 // MPlayer SVN
             ], [NAME, VERSION], [
 
             /(mplayer)(?:\s|\/|[unkow-]+)((\d+)[\w\.-]+)/i                      // MPlayer
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(mplayer)/i,                                                       // MPlayer (no other info)
             /(yourmuze)/i,                                                      // YourMuze
@@ -364,18 +363,18 @@
             ], [NAME], [
 
             /(nero (?:home|scout))\/((\d+)[\w\.-]+)/i                           // Nero Home/Nero Scout
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(nokia\d+)\/((\d+)[\w\.-]+)/i                                      // Nokia
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /\s(songbird)\/((\d+)[\w\.-]+)/i                                    // Songbird/Philips-Songbird
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(winamp)3 version ((\d+)[\w\.-]+)/i,                               // Winamp
             /(winamp)\s((\d+)[\w\.-]+)/i,
             /(winamp)mpeg\/((\d+)[\w\.-]+)/i
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(ocms-bot|tapinradio|tunein radio|unknown|winamp|inlight radio)/i  // OCMS-bot/tap in radio/tunein/unknown/winamp (no other info)
                                                                                 // inlight radio
@@ -384,32 +383,32 @@
             /(quicktime|rma|radioapp|radioclientapplication|soundtap|totem|stagefright|streamium)\/((\d+)[\w\.-]+)/i
                                                                                 // QuickTime/RealMedia/RadioApp/RadioClientApplication/
                                                                                 // SoundTap/Totem/Stagefright/Streamium
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(smp)((\d+)[\d\.]+)/i                                              // SMP
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(vlc) media player - version ((\d+)[\w\.]+)/i,                     // VLC Videolan
             /(vlc)\/((\d+)[\w\.-]+)/i,
             /(xbmc|gvfs|xine|xmms|irapp)\/((\d+)[\w\.-]+)/i,                    // XBMC/gvfs/Xine/XMMS/irapp
             /(foobar2000)\/((\d+)[\d\.]+)/i,                                    // Foobar2000
             /(itunes)\/((\d+)[\d\.]+)/i                                         // iTunes
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(wmplayer)\/((\d+)[\w\.-]+)/i,                                     // Windows Media Player
             /(windows-media-player)\/((\d+)[\w\.-]+)/i
-            ], [[NAME, /-/g, ' '], VERSION, MAJOR], [
+            ], [[NAME, /-/g, ' '], VERSION], [
 
             /windows\/((\d+)[\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ (home media server)/i
                                                                                 // Windows Media Server
-            ], [VERSION, MAJOR, [NAME, 'Windows']], [
+            ], [VERSION, [NAME, 'Windows']], [
 
             /(com\.riseupradioalarm)\/((\d+)[\d\.]*)/i                          // RiseUP Radio Alarm
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(rad.io)\s((\d+)[\d\.]+)/i,                                        // Rad.io
             /(radio.(?:de|at|fr))\s((\d+)[\d\.]+)/i
-            ], [[NAME, 'rad.io'], VERSION, MAJOR]
+            ], [[NAME, 'rad.io'], VERSION]
 
             //////////////////////
             // Media players END
@@ -662,7 +661,9 @@
         var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
 
         this.getBrowser = function () {
-            return mapper.rgx.apply(this, rgxmap.browser);
+            var browser = mapper.rgx.apply(this, rgxmap.browser);
+            browser.major = util.major(browser.version);
+            return browser;
         };
         this.getCPU = function () {
             return mapper.rgx.apply(this, rgxmap.cpu);
