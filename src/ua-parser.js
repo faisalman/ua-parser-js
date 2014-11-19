@@ -516,6 +516,7 @@
                                                                                 // Motorola
             /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[\w\s]+build\//i,
             /(mot)[\s-]?(\w+)*/i
+            /XT\d{3,4} build\//i
             ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
             /android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, TABLET]], [
