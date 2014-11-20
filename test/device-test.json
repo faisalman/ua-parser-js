@@ -60,6 +60,16 @@
         }
     },
     {
+        "desc"    : "Moto X",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 4.2; xx-xx; XT1058 Build/13.9.0Q2.X-70-GHOST-ATT_LE-2) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect"  :
+        {
+            "vendor"  : "Motorola",
+            "model"   : "XT1058",
+            "type"    : "mobile"
+        }
+    },
+    {
         "desc"    : "Nokia3xx",
         "ua"      : "Nokia303/14.87 CLDC-1.1",
         "expect"  : 

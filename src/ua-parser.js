@@ -55,6 +55,8 @@
         has : function (str1, str2) {
           if (typeof str1 === "string") {
             return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
+          } else {
+            return false;
           }
         },
         lowerize : function (str) {
@@ -513,10 +515,10 @@
             ], [[MODEL, /\./g, ' '], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
 
                                                                                 // Motorola
-            /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[\w\s]+build\//i,
-            /(mot)[\s-]?(\w+)*/i,
-            /XT\d{3,4} build\//i
-            ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
+            /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?)[\w\s]+build\//i,
+            /mot[\s-]?(\w+)*/i,
+            /(XT\d{3,4}) build\//i
+            ], [MODEL, [VENDOR, 'Motorola'], [TYPE, MOBILE]], [
             /android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, TABLET]], [
 
@@ -696,6 +698,7 @@
             return this;
         };
         this.setUA(ua);
+        return this;
     };
 
     UAParser.VERSION = LIBVERSION;
