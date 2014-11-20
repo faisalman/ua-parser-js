@@ -2,7 +2,7 @@
  * UAParser.js v0.7.3
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
- * 
+ *
  * Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
  * Dual licensed under GPLv2 & MIT
  */
@@ -259,7 +259,7 @@
             ], [[NAME, 'Yandex'], VERSION, MAJOR], [
 
             /(comodo_dragon)\/((\d+)?[\w\.]+)/i                                 // Comodo Dragon
-            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [ 
+            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
@@ -548,16 +548,16 @@
             /(nexus\s[45])/i,                                                   // LG
             /lg[e;\s\/-]+(\w+)*/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
-                
+
             /android.+(ideatab[a-z0-9\-\s]+)/i                                  // Lenovo
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
-                
+
             /linux;.+((jolla));/i                                               // Jolla
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
-                
+
             /((pebble))app\/[\d\.]+\s/i                                         // Pebble
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
-                
+
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
@@ -631,7 +631,7 @@
             /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
-            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i, 
+            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,
             /(macintosh|mac(?=_powerpc)\s)/i                                    // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
@@ -700,7 +700,7 @@
     UAParser.BROWSER = {
         NAME    : NAME,
         MAJOR   : MAJOR,
-        VERSION : VERSION  
+        VERSION : VERSION
     };
     UAParser.CPU = {
         ARCHITECTURE : ARCHITECTURE
@@ -722,7 +722,7 @@
     };
     UAParser.OS = {
         NAME    : NAME,
-        VERSION : VERSION  
+        VERSION : VERSION
     };
 
 
@@ -739,30 +739,37 @@
         }
         exports.UAParser = UAParser;
     } else {
-        // browser env
-        window.UAParser = UAParser;
-        // requirejs env (optional)
+        // requirejs env
         if (typeof(define) === FUNC_TYPE && define.amd) {
             define(function () {
                 return UAParser;
             });
         }
-        // jQuery/Zepto specific (optional)
-        var $ = window.jQuery || window.Zepto;
-        if (typeof($) !== UNDEF_TYPE) {
-            var parser = new UAParser();
-            $.ua = parser.getResult();
-            $.ua.get = function() {
-                return parser.getUA();
-            };
-            $.ua.set = function (uastring) {
-                parser.setUA(uastring);
-                var result = parser.getResult();
-                for (var prop in result) {
-                    $.ua[prop] = result[prop];
-                }
-            };
+        else {
+            // browser env
+            window.UAParser = UAParser;
         }
+    }
+
+    // jQuery/Zepto specific (optional)
+    // Note: 
+    //   In AMD env the global scope should be kept clean, but jQuery is an exception.
+    //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
+    //   and we should catch that.
+    var $ = window.jQuery || window.Zepto;
+    if (typeof($) !== UNDEF_TYPE) {
+        var parser = new UAParser();
+        $.ua = parser.getResult();
+        $.ua.get = function() {
+            return parser.getUA();
+        };
+        $.ua.set = function (uastring) {
+            parser.setUA(uastring);
+            var result = parser.getResult();
+            for (var prop in result) {
+                $.ua[prop] = result[prop];
+            }
+        };
     }
 
 })(this);
