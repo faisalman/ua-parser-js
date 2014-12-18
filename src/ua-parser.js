@@ -484,8 +484,14 @@
             /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i
             ], [MODEL, [VENDOR, 'Asus'], [TYPE, TABLET]], [
 
-            /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
-            ], [VENDOR, MODEL, [TYPE, TABLET]], [
+            /(sony)\s(tablet\s[ps])\sbuild\//i                                  // Sony Tablets
+            ], [VENDOR, [MODEL, 'Xperia Tablet'], [TYPE, TABLET]], [
+
+            /(sony)?(?:sgp.+)\sbuild\//i                                        // Sony Tablets
+            ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Tablet'], [TYPE, TABLET]], [
+
+            /(?:sony)?(?:(?:(?:c|d)\d{4})|(?:so[-l].+))\sbuild\//i              // Sony Phones
+            ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Phone'], [TYPE, MOBILE]], [
 
             /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3u]+)/i                                          // Nintendo
