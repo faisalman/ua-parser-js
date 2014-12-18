@@ -72,7 +72,7 @@
     {
         "desc"    : "Nokia3xx",
         "ua"      : "Nokia303/14.87 CLDC-1.1",
-        "expect"  : 
+        "expect"  :
         {
             "vendor"  : "Nokia",
             "model"   : "303",
