@@ -160,16 +160,6 @@
         }
     },
     {
-        "desc": "Sony SO-02F (Xperia Z1)",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.4; SonySO-02F Build/14.3.B.0.288) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
-        "expect"  :
-        {
-            "vendor"  : "Sony",
-            "model"   : "Xperia Phone",
-            "type"    : "mobile"
-        }
-    },
-    {
         "desc": " Sony SGP521 (Xperia Z2 Tablet)",
         "ua": "Mozilla/5.0 (Linux; Android 4.4; SGP521 Build/17.1.A.0.432) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
         "expect"  :
