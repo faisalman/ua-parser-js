@@ -2,7 +2,7 @@
  * UAParser.js v0.7.3
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
- * 
+ *
  * Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
  * Dual licensed under GPLv2 & MIT
  */
@@ -260,7 +260,7 @@
             ], [[NAME, 'Yandex'], VERSION], [
 
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
-            ], [[NAME, /_/g, ' '], VERSION], [ 
+            ], [[NAME, /_/g, ' '], VERSION], [
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
@@ -484,8 +484,11 @@
             /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i
             ], [MODEL, [VENDOR, 'Asus'], [TYPE, TABLET]], [
 
-            /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
-            ], [VENDOR, MODEL, [TYPE, TABLET]], [
+            /(sony)\s(tablet\s[ps])\sbuild\//i,                                  // Sony
+            /(sony)?(?:sgp.+)\sbuild\//i
+            ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Tablet'], [TYPE, TABLET]], [
+            /(?:sony)?(?:(?:(?:c|d)\d{4})|(?:so[-l].+))\sbuild\//i
+            ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Phone'], [TYPE, MOBILE]], [
 
             /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3u]+)/i                                          // Nintendo
@@ -550,16 +553,16 @@
             /(nexus\s[45])/i,                                                   // LG
             /lg[e;\s\/-]+(\w+)*/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
-                
+
             /android.+(ideatab[a-z0-9\-\s]+)/i                                  // Lenovo
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
-                
+
             /linux;.+((jolla));/i                                               // Jolla
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
-                
+
             /((pebble))app\/[\d\.]+\s/i                                         // Pebble
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
-                
+
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
@@ -633,7 +636,7 @@
             /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
-            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i, 
+            /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,
             /(macintosh|mac(?=_powerpc)\s)/i                                    // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
@@ -705,7 +708,7 @@
     UAParser.BROWSER = {
         NAME    : NAME,
         MAJOR   : MAJOR,
-        VERSION : VERSION  
+        VERSION : VERSION
     };
     UAParser.CPU = {
         ARCHITECTURE : ARCHITECTURE
@@ -727,7 +730,7 @@
     };
     UAParser.OS = {
         NAME    : NAME,
-        VERSION : VERSION  
+        VERSION : VERSION
     };
 
 

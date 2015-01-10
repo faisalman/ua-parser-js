@@ -72,7 +72,7 @@
     {
         "desc"    : "Nokia3xx",
         "ua"      : "Nokia303/14.87 CLDC-1.1",
-        "expect"  : 
+        "expect"  :
         {
             "vendor"  : "Nokia",
             "model"   : "303",
@@ -116,6 +116,76 @@
         {
             "vendor"  : "Samsung",
             "model"   : "SM-T520",
+            "type"    : "tablet"
+        }
+    },
+    {
+        "desc"    : "Sony C5303 (Xperia SP)",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.3; C5303 Build/12.1.A.1.205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.93 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Phone",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc": " Sony SO-02F (Xperia Z1 F)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; SO-02F Build/14.1.H.2.119) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Phone",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc": "Sony D6653 (Xperia Z3)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; D6653 Build/23.0.A.0.376) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Phone",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia SOL25 (ZL2)",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4; SOL25 Build/17.1.1.C.1.64) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Phone",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc": " Sony SGP521 (Xperia Z2 Tablet)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; SGP521 Build/17.1.A.0.432) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Tablet",
+            "type"    : "tablet"
+        }
+    },
+    {
+        "desc": "Sony Tablet S",
+        "ua": "Mozilla/5.0 (Linux; U; Android 3.1; Sony Tablet S Build/THMAS10000) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Tablet",
+            "type"    : "tablet"
+        }
+    },
+    {
+        "desc": "Sony Tablet Z LTE",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.1; SonySGP321 Build/10.2.C.0.143) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect"  :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Tablet",
             "type"    : "tablet"
         }
     }
