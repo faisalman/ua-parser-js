@@ -572,6 +572,9 @@
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
+            /android.+((?:hm|mi|2013023)[\s\-_]*(?:note|one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi
+            ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
+
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
         ],
