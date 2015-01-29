@@ -80,11 +80,11 @@
                     props = args[i + 1];   // odd sequence (1,3,5,..)
 
                 // construct object barebones
-                if (typeof(result) === UNDEF_TYPE) {
+                if (typeof result === UNDEF_TYPE) {
                     result = {};
                     for (p in props) {
                         q = props[p];
-                        if (typeof(q) === OBJ_TYPE) {
+                        if (typeof q === OBJ_TYPE) {
                             result[q[0]] = undefined;
                         } else {
                             result[q] = undefined;
@@ -101,9 +101,9 @@
                             match = matches[++k];
                             q = props[p];
                             // check if given property is actually array
-                            if (typeof(q) === OBJ_TYPE && q.length > 0) {
+                            if (typeof q === OBJ_TYPE && q.length > 0) {
                                 if (q.length == 2) {
-                                    if (typeof(q[1]) == FUNC_TYPE) {
+                                    if (typeof q[1] == FUNC_TYPE) {
                                         // assign modified match
                                         result[q[0]] = q[1].call(this, match);
                                     } else {
@@ -112,7 +112,7 @@
                                     }
                                 } else if (q.length == 3) {
                                     // check whether function or regex
-                                    if (typeof(q[1]) === FUNC_TYPE && !(q[1].exec && q[1].test)) {
+                                    if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) {
                                         // call function (usually string mapper)
                                         result[q[0]] = match ? q[1].call(this, match, q[2]) : undefined;
                                     } else {
@@ -137,7 +137,7 @@
 
             for (var i in map) {
                 // check if array
-                if (typeof(map[i]) === OBJ_TYPE && map[i].length > 0) {
+                if (typeof map[i] === OBJ_TYPE && map[i].length > 0) {
                     for (var j = 0; j < map[i].length; j++) {
                         if (util.has(map[i][j], str)) {
                             return (i === UNKNOWN) ? undefined : i;
@@ -735,15 +735,15 @@
 
 
     // check js environment
-    if (typeof(exports) !== UNDEF_TYPE) {
+    if (typeof exports !== UNDEF_TYPE) {
         // nodejs env
-        if (typeof(module) !== UNDEF_TYPE && module.exports) {
+        if (typeof module !== UNDEF_TYPE && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
     } else {
         // requirejs env
-        if (typeof(define) === FUNC_TYPE && define.amd) {
+        if (typeof define === FUNC_TYPE && define.amd) {
             define(function () {
                 return UAParser;
             });
@@ -760,7 +760,7 @@
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
     var $ = window.jQuery || window.Zepto;
-    if (typeof($) !== UNDEF_TYPE) {
+    if (typeof $ !== UNDEF_TYPE) {
         var parser = new UAParser();
         $.ua = parser.getResult();
         $.ua.get = function() {
