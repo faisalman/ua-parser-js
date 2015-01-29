@@ -265,7 +265,7 @@
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             /(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i
-                                                                                //UCBrowser/QQBrowser
+                                                                                // UCBrowser/QQBrowser
             ], [NAME, VERSION], [
 
             /(dolfin)\/([\w\.]+)/i                                              // Dolphin
@@ -273,6 +273,12 @@
 
             /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
             ], [[NAME, 'Chrome'], VERSION], [
+
+            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
+            ], [VERSION, [NAME, 'MIUI Browser']], [
+
+            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
+            ], [VERSION, [NAME, 'Android Browser']], [
 
             /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
             ], [VERSION, [NAME, 'Mobile Safari']], [
@@ -565,6 +571,9 @@
 
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
+
+            /android.+((?:hm|mi|2013023)[\s\-_]*(?:note|one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi
+            ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]

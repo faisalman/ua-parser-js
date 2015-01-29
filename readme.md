@@ -21,13 +21,13 @@ Extract detailed type of web browser, layout engine, operating system, cpu archi
 
 ```
 # Possible 'browser.name':
-Amaya, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, Chromium, 
-Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, 
+Amaya, Android Browser, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, 
+Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, 
 Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, IceDragon, 
 Iceweasel, IE [Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, Links, 
-Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, [Mobile] Safari, Mosaic, Mozilla, 
-Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], Phoenix, 
-Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, 
+Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
+Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
+Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, 
 Tizen, UCBrowser, w3m, Yandex
 
 # 'browser.version' & 'browser.major' determined dynamically
