@@ -249,7 +249,7 @@
 
             // Webkit/KHTML based
             /(rekonq)\/([\w\.]+)*/i,                                            // Rekonq
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/([\w\.-]+)/i
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi)\/([\w\.-]+)/i
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
             ], [NAME, VERSION], [
 
