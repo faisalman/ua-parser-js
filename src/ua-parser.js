@@ -280,6 +280,9 @@
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
+            /FBAV\/((\d+)?[\w\.]+);/i                                           // Facebook App for iOS
+            ], [VERSION, MAJOR, [NAME, 'Facebook']], [
+
             /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
             ], [VERSION, [NAME, 'Mobile Safari']], [
 
