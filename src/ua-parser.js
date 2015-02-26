@@ -615,9 +615,6 @@
             /(ADVAN S4A)/i                                                      // Advan Vandroid S4A
             ], [[MODEL, 'Vandroid S4A'], [VENDOR, 'Advan'], [TYPE, MOBILE]], [
 
-            /(MI\s3W)/i                                                         // Xiaomi MI 3
-            ], [[MODEL, 'MI 3'], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
-            
             /(V972M)/i                                                          // ZTE V972M
             ], [MODEL, [VENDOR, 'ZTE'], [TYPE, MOBILE]], [
 
