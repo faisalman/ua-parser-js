@@ -249,7 +249,7 @@
 
             // Webkit/KHTML based
             /(rekonq)\/([\w\.]+)*/i,                                            // Rekonq
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/([\w\.-]+)/i
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi)\/([\w\.-]+)/i
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
             ], [NAME, VERSION], [
 
@@ -594,7 +594,9 @@
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
-            /android.+((?:hm|mi|2013023)[\s\-_]*(?:note|one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi
+            /android.+(\w+)\s+build\/hm\1/i,                                        // Xiaomi Hongmi 'numeric' models
+            /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,                   // Xiaomi Hongmi
+            /android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
             
             /(R1001)/i                                                          // Oppo R1001
@@ -629,6 +631,7 @@
             
             /(mobiistar touch LAI 512)/i                                        // mobiistar touch LAI 512
             ], [[MODEL, 'Touch LAI 512'], [VENDOR, 'mobiistar'], [TYPE, MOBILE]], [
+
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]

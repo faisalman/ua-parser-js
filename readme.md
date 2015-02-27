@@ -28,7 +28,7 @@ Iceweasel, IE [Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, Links,
 Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
 Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
 Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, 
-Tizen, UCBrowser, w3m, Yandex
+Tizen, UCBrowser, Vivaldi, w3m, Yandex
 
 # 'browser.version' & 'browser.major' determined dynamically
 ```
