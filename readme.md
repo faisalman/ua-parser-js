@@ -1,6 +1,6 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component package, Bower package, & AMD module
+Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component package, Bower package, Meteor package, & AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 
@@ -221,6 +221,12 @@ console.log(parser.getResult());
 $ bower install ua-parser-js
 ```
 
+### Using meteor
+
+```sh
+$ meteor add faisalman:ua-parser-js
+```
+
 ### Using jQuery/Zepto ($.ua)
 
 Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
@@ -259,7 +265,7 @@ Then submit a pull request to https://github.com/faisalman/ua-parser-js under `d
 
 Dual licensed under GPLv2 & MIT
 
-Copyright © 2012-2014 Faisal Salman <<fyzlman@gmail.com>>
+Copyright © 2012-2015 Faisal Salman <<fyzlman@gmail.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 

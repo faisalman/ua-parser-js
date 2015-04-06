@@ -6,6 +6,7 @@ npm-debug.log
 Session.vim
 .netrwhist
 *~
+.versions
 
 ### OSX ###
 .DS_Store

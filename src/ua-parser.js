@@ -1,9 +1,9 @@
 /**
- * UAParser.js v0.7.4
+ * UAParser.js v0.7.5
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
- * Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
+ * Copyright © 2012-2015 Faisal Salman <fyzlman@gmail.com>
  * Dual licensed under GPLv2 & MIT
  */
 
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.4',
+    var LIBVERSION  = '0.7.5',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -734,10 +734,10 @@
     ////////////////
 
 
-    var UAParser = function (uastring, extensions) {
+    var _UAParser = function (uastring, extensions) {
 
-        if (!(this instanceof UAParser)) {
-            return new UAParser(uastring, extensions).getResult();
+        if (!(this instanceof _UAParser)) {
+            return new _UAParser(uastring, extensions).getResult();
         }
 
         var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
@@ -781,16 +781,16 @@
         return this;
     };
 
-    UAParser.VERSION = LIBVERSION;
-    UAParser.BROWSER = {
+    _UAParser.VERSION = LIBVERSION;
+    _UAParser.BROWSER = {
         NAME    : NAME,
         MAJOR   : MAJOR,
         VERSION : VERSION
     };
-    UAParser.CPU = {
+    _UAParser.CPU = {
         ARCHITECTURE : ARCHITECTURE
     };
-    UAParser.DEVICE = {
+    _UAParser.DEVICE = {
         MODEL   : MODEL,
         VENDOR  : VENDOR,
         TYPE    : TYPE,
@@ -801,11 +801,11 @@
         WEARABLE: WEARABLE,
         EMBEDDED: EMBEDDED
     };
-    UAParser.ENGINE = {
+    _UAParser.ENGINE = {
         NAME    : NAME,
         VERSION : VERSION
     };
-    UAParser.OS = {
+    _UAParser.OS = {
         NAME    : NAME,
         VERSION : VERSION
     };
@@ -818,12 +818,17 @@
 
     // check js environment
     if (typeof(exports) !== UNDEF_TYPE) {
+        var UAParser = _UAParser;
         // nodejs env
         if (typeof(module) !== UNDEF_TYPE && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
+    } else if (typeof(Package) !== UNDEF_TYPE) {
+        // meteor
+        UAParser = _UAParser;
     } else {
+        var UAParser = _UAParser;
         // browser env
         window.UAParser = UAParser;
         // requirejs env (optional)
