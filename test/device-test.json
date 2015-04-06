@@ -130,9 +130,9 @@
         }
     },
     {
-        "desc": " Sony SO-02F (Xperia Z1 F)",
-        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; SO-02F Build/14.1.H.2.119) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
-        "expect"  :
+        "desc"      : "Sony SO-02F (Xperia Z1 F)",
+        "ua"        : "Mozilla/5.0 (Linux; Android 4.2.2; SO-02F Build/14.1.H.2.119) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+        "expect"    :
         {
             "vendor"  : "Sony",
             "model"   : "Xperia Phone",
@@ -140,9 +140,9 @@
         }
     },
     {
-        "desc": "Sony D6653 (Xperia Z3)",
-        "ua": "Mozilla/5.0 (Linux; Android 4.4; D6653 Build/23.0.A.0.376) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Mobile Safari/537.36",
-        "expect"  :
+        "desc"      : "Sony D6653 (Xperia Z3)",
+        "ua"        : "Mozilla/5.0 (Linux; Android 4.4; D6653 Build/23.0.A.0.376) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Mobile Safari/537.36",
+        "expect"    :
         {
             "vendor"  : "Sony",
             "model"   : "Xperia Phone",
@@ -150,9 +150,9 @@
         }
     },
     {
-        "desc": "Sony Xperia SOL25 (ZL2)",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.4; SOL25 Build/17.1.1.C.1.64) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
-        "expect"  :
+        "desc"      : "Sony Xperia SOL25 (ZL2)",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 4.4; SOL25 Build/17.1.1.C.1.64) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect"    :
         {
             "vendor"  : "Sony",
             "model"   : "Xperia Phone",
@@ -160,9 +160,9 @@
         }
     },
     {
-        "desc": " Sony SGP521 (Xperia Z2 Tablet)",
-        "ua": "Mozilla/5.0 (Linux; Android 4.4; SGP521 Build/17.1.A.0.432) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
-        "expect"  :
+        "desc"      : "Sony SGP521 (Xperia Z2 Tablet)",
+        "ua"        : "Mozilla/5.0 (Linux; Android 4.4; SGP521 Build/17.1.A.0.432) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
+        "expect"    :
         {
             "vendor"  : "Sony",
             "model"   : "Xperia Tablet",
@@ -170,9 +170,9 @@
         }
     },
     {
-        "desc": "Sony Tablet S",
-        "ua": "Mozilla/5.0 (Linux; U; Android 3.1; Sony Tablet S Build/THMAS10000) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
-        "expect"  :
+        "desc"      : "Sony Tablet S",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 3.1; Sony Tablet S Build/THMAS10000) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
+        "expect"    :
         {
             "vendor"  : "Sony",
             "model"   : "Xperia Tablet",
@@ -180,9 +180,9 @@
         }
     },
     {
-        "desc": "Sony Tablet Z LTE",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.1; SonySGP321 Build/10.2.C.0.143) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
-        "expect"  :
+        "desc"      : "Sony Tablet Z LTE",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 4.1; SonySGP321 Build/10.2.C.0.143) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect"    :
         {
             "vendor"  : "Sony",
             "model"   : "Xperia Tablet",
@@ -190,9 +190,9 @@
         }
     },
     {
-        "desc": "Xiaomi 2013023",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; en-US; 2013023 Build/HM2013023) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/10.0.1.512 U3/0.8.0 Mobile Safari/533.1",
-        "expect"  :
+        "desc"      : "Xiaomi 2013023",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 4.2.2; en-US; 2013023 Build/HM2013023) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/10.0.1.512 U3/0.8.0 Mobile Safari/533.1",
+        "expect"    :
         {
             "vendor"  : "Xiaomi",
             "model"   : "2013023",
@@ -200,9 +200,9 @@
         }
     },
     {
-        "desc": "Xiaomi Hongmi Note 1W",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-CN; HM NOTE 1W Build/JDQ39) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.7.9.439 U3/0.8.0 Mobile Safari/533.1",
-        "expect"  :
+        "desc"      : "Xiaomi Hongmi Note 1W",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-CN; HM NOTE 1W Build/JDQ39) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.7.9.439 U3/0.8.0 Mobile Safari/533.1",
+        "expect"    :
         {
             "vendor"  : "Xiaomi",
             "model"   : "HM NOTE 1W",
@@ -210,9 +210,9 @@
         }
     },
     {
-        "desc": "Xiaomi Mi 3C",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.3; zh-CN; MI 3C Build/JLS36C) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.7.9.439 U3/0.8.0 Mobile Safari/533.1",
-        "expect"  :
+        "desc"      : "Xiaomi Mi 3C",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 4.3; zh-CN; MI 3C Build/JLS36C) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.7.9.439 U3/0.8.0 Mobile Safari/533.1",
+        "expect"    :
         {
             "vendor"  : "Xiaomi",
             "model"   : "MI 3C",
@@ -220,9 +220,9 @@
         }
     },
     {
-        "desc": "Xiaomi Mi One Plus",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; MI-ONE Plus Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
-        "expect"  :
+        "desc"      : "Xiaomi Mi One Plus",
+        "ua"        : "Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; MI-ONE Plus Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect"    :
         {
             "vendor"  : "Xiaomi",
             "model"   : "MI-ONE Plus",
