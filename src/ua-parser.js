@@ -1,5 +1,5 @@
 /**
- * UAParser.js v0.7.5
+ * UAParser.js v0.7.6
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,14 +16,14 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.5',
+    var LIBVERSION  = '0.7.6',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
         UNDEF_TYPE  = 'undefined',
         OBJ_TYPE    = 'object',
         STR_TYPE    = 'string',
-        MAJOR       = 'major',
+        MAJOR       = 'major', // deprecated
         MODEL       = 'model',
         NAME        = 'name',
         TYPE        = 'type',
@@ -86,11 +86,11 @@
                     props = args[i + 1];   // odd sequence (1,3,5,..)
 
                 // construct object barebones
-                if (typeof(result) === UNDEF_TYPE) {
+                if (typeof result === UNDEF_TYPE) {
                     result = {};
                     for (p in props) {
                         q = props[p];
-                        if (typeof(q) === OBJ_TYPE) {
+                        if (typeof q === OBJ_TYPE) {
                             result[q[0]] = undefined;
                         } else {
                             result[q] = undefined;
@@ -107,9 +107,9 @@
                             match = matches[++k];
                             q = props[p];
                             // check if given property is actually array
-                            if (typeof(q) === OBJ_TYPE && q.length > 0) {
+                            if (typeof q === OBJ_TYPE && q.length > 0) {
                                 if (q.length == 2) {
-                                    if (typeof(q[1]) == FUNC_TYPE) {
+                                    if (typeof q[1] == FUNC_TYPE) {
                                         // assign modified match
                                         result[q[0]] = q[1].call(this, match);
                                     } else {
@@ -118,7 +118,7 @@
                                     }
                                 } else if (q.length == 3) {
                                     // check whether function or regex
-                                    if (typeof(q[1]) === FUNC_TYPE && !(q[1].exec && q[1].test)) {
+                                    if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) {
                                         // call function (usually string mapper)
                                         result[q[0]] = match ? q[1].call(this, match, q[2]) : undefined;
                                     } else {
@@ -143,7 +143,7 @@
 
             for (var i in map) {
                 // check if array
-                if (typeof(map[i]) === OBJ_TYPE && map[i].length > 0) {
+                if (typeof map[i] === OBJ_TYPE && map[i].length > 0) {
                     for (var j = 0; j < map[i].length; j++) {
                         if (util.has(map[i][j], str)) {
                             return (i === UNKNOWN) ? undefined : i;
@@ -280,8 +280,8 @@
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
-            /FBAV\/((\d+)?[\w\.]+);/i                                           // Facebook App for iOS
-            ], [VERSION, MAJOR, [NAME, 'Facebook']], [
+            /FBAV\/([\w\.]+);/i                                                 // Facebook App for iOS
+            ], [VERSION, [NAME, 'Facebook']], [
 
             /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
             ], [VERSION, [NAME, 'Mobile Safari']], [
@@ -520,6 +520,9 @@
             /(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
+                
+            /(nexus\s9)/i                                                       // HTC Nexus 9
+            ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
 
             /[\s\(;](xbox(?:\sone)?)[\s\);]/i                                   // Microsoft Xbox
             ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, CONSOLE]], [
@@ -553,10 +556,10 @@
             /(nokia)[\s_-]?([\w-]+)*/i
             ], [[VENDOR, 'Nokia'], MODEL, [TYPE, MOBILE]], [
 
-            /android\s3\.[\s\w-;]{10}(a\d{3})/i                                 // Acer
+            /android\s3\.[\s\w;-]{10}(a\d{3})/i                                 // Acer
             ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
-            /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
+            /android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
@@ -734,10 +737,10 @@
     ////////////////
 
 
-    var _UAParser = function (uastring, extensions) {
+    var UAParser = function (uastring, extensions) {
 
-        if (!(this instanceof _UAParser)) {
-            return new _UAParser(uastring, extensions).getResult();
+        if (!(this instanceof UAParser)) {
+            return new UAParser(uastring, extensions).getResult();
         }
 
         var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
@@ -781,16 +784,16 @@
         return this;
     };
 
-    _UAParser.VERSION = LIBVERSION;
-    _UAParser.BROWSER = {
+    UAParser.VERSION = LIBVERSION;
+    UAParser.BROWSER = {
         NAME    : NAME,
-        MAJOR   : MAJOR,
+        MAJOR   : MAJOR, // deprecated
         VERSION : VERSION
     };
-    _UAParser.CPU = {
+    UAParser.CPU = {
         ARCHITECTURE : ARCHITECTURE
     };
-    _UAParser.DEVICE = {
+    UAParser.DEVICE = {
         MODEL   : MODEL,
         VENDOR  : VENDOR,
         TYPE    : TYPE,
@@ -801,11 +804,11 @@
         WEARABLE: WEARABLE,
         EMBEDDED: EMBEDDED
     };
-    _UAParser.ENGINE = {
+    UAParser.ENGINE = {
         NAME    : NAME,
         VERSION : VERSION
     };
-    _UAParser.OS = {
+    UAParser.OS = {
         NAME    : NAME,
         VERSION : VERSION
     };
@@ -818,41 +821,42 @@
 
     // check js environment
     if (typeof(exports) !== UNDEF_TYPE) {
-        var UAParser = _UAParser;
         // nodejs env
-        if (typeof(module) !== UNDEF_TYPE && module.exports) {
+        if (typeof module !== UNDEF_TYPE && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
-    } else if (typeof(Package) !== UNDEF_TYPE) {
-        // meteor
-        UAParser = _UAParser;
     } else {
-        var UAParser = _UAParser;
-        // browser env
-        window.UAParser = UAParser;
         // requirejs env (optional)
         if (typeof(define) === FUNC_TYPE && define.amd) {
             define(function () {
                 return UAParser;
             });
+        } else {
+            // browser env
+            window.UAParser = UAParser;
         }
-        // jQuery/Zepto specific (optional)
-        var $ = window.jQuery || window.Zepto;
-        if (typeof($) !== UNDEF_TYPE) {
-            var parser = new UAParser();
-            $.ua = parser.getResult();
-            $.ua.get = function() {
-                return parser.getUA();
-            };
-            $.ua.set = function (uastring) {
-                parser.setUA(uastring);
-                var result = parser.getResult();
-                for (var prop in result) {
-                    $.ua[prop] = result[prop];
-                }
-            };
-        }
+    }
+
+    // jQuery/Zepto specific (optional)
+    // Note: 
+    //   In AMD env the global scope should be kept clean, but jQuery is an exception.
+    //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
+    //   and we should catch that.
+    var $ = window.jQuery || window.Zepto;
+    if (typeof $ !== UNDEF_TYPE) {
+        var parser = new UAParser();
+        $.ua = parser.getResult();
+        $.ua.get = function() {
+            return parser.getUA();
+        };
+        $.ua.set = function (uastring) {
+            parser.setUA(uastring);
+            var result = parser.getResult();
+            for (var prop in result) {
+                $.ua[prop] = result[prop];
+            }
+        };
     }
 
 })(this);
