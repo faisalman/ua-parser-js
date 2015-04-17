@@ -254,6 +254,7 @@
             ], [NAME, VERSION], [
 
             /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
+            /(Edge)\/((\d+)?[\w\.]+)/i                                          // IE12
             ], [[NAME, 'IE'], VERSION], [
 
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
