@@ -1,9 +1,9 @@
 /**
- * UAParser.js v0.7.3
+ * UAParser.js v0.7.6
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
- * Copyright © 2012-2014 Faisal Salman <fyzlman@gmail.com>
+ * Copyright © 2012-2015 Faisal Salman <fyzlman@gmail.com>
  * Dual licensed under GPLv2 & MIT
  */
 
@@ -16,13 +16,14 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.3',
+    var LIBVERSION  = '0.7.6',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
         UNDEF_TYPE  = 'undefined',
         OBJ_TYPE    = 'object',
-        MAJOR       = 'major',
+        STR_TYPE    = 'string',
+        MAJOR       = 'major', // deprecated
         MODEL       = 'model',
         NAME        = 'name',
         TYPE        = 'type',
@@ -54,10 +55,15 @@
         has : function (str1, str2) {
           if (typeof str1 === "string") {
             return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
+          } else {
+            return false;
           }
         },
         lowerize : function (str) {
             return str.toLowerCase();
+        },
+        major : function (version) {
+            return typeof(version) === STR_TYPE ? version.split(".")[0] : undefined;
         }
     };
 
@@ -80,11 +86,11 @@
                     props = args[i + 1];   // odd sequence (1,3,5,..)
 
                 // construct object barebones
-                if (typeof(result) === UNDEF_TYPE) {
+                if (typeof result === UNDEF_TYPE) {
                     result = {};
                     for (p in props) {
                         q = props[p];
-                        if (typeof(q) === OBJ_TYPE) {
+                        if (typeof q === OBJ_TYPE) {
                             result[q[0]] = undefined;
                         } else {
                             result[q] = undefined;
@@ -101,9 +107,9 @@
                             match = matches[++k];
                             q = props[p];
                             // check if given property is actually array
-                            if (typeof(q) === OBJ_TYPE && q.length > 0) {
+                            if (typeof q === OBJ_TYPE && q.length > 0) {
                                 if (q.length == 2) {
-                                    if (typeof(q[1]) == FUNC_TYPE) {
+                                    if (typeof q[1] == FUNC_TYPE) {
                                         // assign modified match
                                         result[q[0]] = q[1].call(this, match);
                                     } else {
@@ -112,7 +118,7 @@
                                     }
                                 } else if (q.length == 3) {
                                     // check whether function or regex
-                                    if (typeof(q[1]) === FUNC_TYPE && !(q[1].exec && q[1].test)) {
+                                    if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) {
                                         // call function (usually string mapper)
                                         result[q[0]] = match ? q[1].call(this, match, q[2]) : undefined;
                                     } else {
@@ -137,7 +143,7 @@
 
             for (var i in map) {
                 // check if array
-                if (typeof(map[i]) === OBJ_TYPE && map[i].length > 0) {
+                if (typeof map[i] === OBJ_TYPE && map[i].length > 0) {
                     for (var j = 0; j < map[i].length; j++) {
                         if (util.has(map[i][j], str)) {
                             return (i === UNKNOWN) ? undefined : i;
@@ -161,11 +167,6 @@
 
         browser : {
             oldsafari : {
-                major : {
-                    '1' : ['/8', '/1', '/3'],
-                    '2' : '/4',
-                    '?' : '/'
-                },
                 version : {
                     '1.0'   : '/8',
                     '1.2'   : '/1',
@@ -208,7 +209,7 @@
                     '7'         : 'NT 6.1',
                     '8'         : 'NT 6.2',
                     '8.1'       : 'NT 6.3',
-                    '10'        : 'NT 6.4',
+                    '10'        : ['NT 6.4', 'NT 10.0'],
                     'RT'        : 'ARM'
                 }
             }
@@ -226,84 +227,93 @@
         browser : [[
 
             // Presto based
-            /(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
-            /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
-            /(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
-            /(opera)[\/\s]+((\d+)?[\w\.]+)/i                                    // Opera < 9.80
+            /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini
+            /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,                      // Opera Mobi/Tablet
+            /(opera).+version\/([\w\.]+)/i,                                     // Opera > 9.80
+            /(opera)[\/\s]+([\w\.]+)/i                                          // Opera < 9.80
 
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
-            /\s(opr)\/((\d+)?[\w\.]+)/i                                         // Opera Webkit
-            ], [[NAME, 'Opera'], VERSION, MAJOR], [
+            /\s(opr)\/([\w\.]+)/i                                               // Opera Webkit
+            ], [[NAME, 'Opera'], VERSION], [
 
             // Mixed
-            /(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i,
+            /(kindle)\/([\w\.]+)/i,                                             // Kindle
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]+)*/i,
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer
 
             // Trident based
-            /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i,
+            /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,
                                                                                 // Avant/IEMobile/SlimBrowser/Baidu
-            /(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i,                                  // Internet Explorer
+            /(?:ms|\()(ie)\s([\w\.]+)/i,                                        // Internet Explorer
 
             // Webkit/KHTML based
-            /(rekonq)((?:\/)[\w\.]+)*/i,                                        // Rekonq
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/((\d+)?[\w\.-]+)/i
+            /(rekonq)\/([\w\.]+)*/i,                                            // Rekonq
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi)\/([\w\.-]+)/i
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
-            /(trident).+rv[:\s]((\d+)?[\w\.]+).+like\sgecko/i                   // IE11
-            ], [[NAME, 'IE'], VERSION, MAJOR], [
+            /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
+            ], [[NAME, 'IE'], VERSION], [
 
-            /(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
-            ], [[NAME, 'Yandex'], VERSION, MAJOR], [
+            /(yabrowser)\/([\w\.]+)/i                                           // Yandex
+            ], [[NAME, 'Yandex'], VERSION], [
 
-            /(comodo_dragon)\/((\d+)?[\w\.]+)/i                                 // Comodo Dragon
-            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
+            /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
+            ], [[NAME, /_/g, ' '], VERSION], [
 
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i,
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
-            /(uc\s?browser|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i
-                                                                                //UCBrowser/QQBrowser
-            ], [NAME, VERSION, MAJOR], [
+            /(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i
+                                                                                // UCBrowser/QQBrowser
+            ], [NAME, VERSION], [
 
-            /(dolfin)\/((\d+)?[\w\.]+)/i                                        // Dolphin
-            ], [[NAME, 'Dolphin'], VERSION, MAJOR], [
+            /(dolfin)\/([\w\.]+)/i                                              // Dolphin
+            ], [[NAME, 'Dolphin'], VERSION], [
 
-            /((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i                       // Chrome for Android/iOS
-            ], [[NAME, 'Chrome'], VERSION, MAJOR], [
+            /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
+            ], [[NAME, 'Chrome'], VERSION], [
 
-            /version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i                 // Mobile Safari
-            ], [VERSION, MAJOR, [NAME, 'Mobile Safari']], [
+            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
+            ], [VERSION, [NAME, 'MIUI Browser']], [
 
-            /version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i              // Safari & Safari Mobile
-            ], [VERSION, MAJOR, NAME], [
+            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
+            ], [VERSION, [NAME, 'Android Browser']], [
 
-            /webkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i                   // Safari < 3.0
-            ], [NAME, [MAJOR, mapper.str, maps.browser.oldsafari.major], [VERSION, mapper.str, maps.browser.oldsafari.version]], [
+            /FBAV\/([\w\.]+);/i                                                 // Facebook App for iOS
+            ], [VERSION, [NAME, 'Facebook']], [
 
-            /(konqueror)\/((\d+)?[\w\.]+)/i,                                    // Konqueror
-            /(webkit|khtml)\/((\d+)?[\w\.]+)/i
-            ], [NAME, VERSION, MAJOR], [
+            /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
+            ], [VERSION, [NAME, 'Mobile Safari']], [
+
+            /version\/([\w\.]+).+?(mobile\s?safari|safari)/i                    // Safari & Safari Mobile
+            ], [VERSION, NAME], [
+
+            /webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i                     // Safari < 3.0
+            ], [NAME, [VERSION, mapper.str, maps.browser.oldsafari.version]], [
+
+            /(konqueror)\/([\w\.]+)/i,                                          // Konqueror
+            /(webkit|khtml)\/([\w\.]+)/i
+            ], [NAME, VERSION], [
 
             // Gecko based
-            /(navigator|netscape)\/((\d+)?[\w\.-]+)/i                           // Netscape
-            ], [[NAME, 'Netscape'], VERSION, MAJOR], [
+            /(navigator|netscape)\/([\w\.-]+)/i                                 // Netscape
+            ], [[NAME, 'Netscape'], VERSION], [
             /(swiftfox)/i,                                                      // Swiftfox
-            /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,
+            /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,
                                                                                 // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
-            /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
+            /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/([\w\.-]+)/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
-            /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
+            /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?((\d+)?[\w\.]+)/i,
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?([\w\.]+)/i,
                                                                                 // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
-            /(links)\s\(((\d+)?[\w\.]+)/i,                                      // Links
-            /(gobrowser)\/?((\d+)?[\w\.]+)*/i,                                  // GoBrowser
-            /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,                             // ICE Browser
-            /(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
-            ], [NAME, VERSION, MAJOR]
+            /(links)\s\(([\w\.]+)/i,                                            // Links
+            /(gobrowser)\/?([\w\.]+)*/i,                                        // GoBrowser
+            /(ice\s?browser)\/v?([\w\._]+)/i,                                   // ICE Browser
+            /(mosaic)[\/\s]([\w\.]+)/i                                          // Mosaic
+            ], [NAME, VERSION]
 
             /* /////////////////////
             // Media players BEGIN
@@ -313,13 +323,13 @@
 
             /(apple(?:coremedia|))\/((\d+)[\w\._]+)/i,                          // Generic Apple CoreMedia
             /(coremedia) v((\d+)[\w\._]+)/i
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(aqualung|lyssna|bsplayer)\/((\d+)?[\w\.-]+)/i                     // Aqualung/Lyssna/BSPlayer
             ], [NAME, VERSION], [
 
             /(ares|ossproxy)\s((\d+)[\w\.-]+)/i                                 // Ares/OSSProxy
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(audacious|audimusicstream|amarok|bass|core|dalvik|gnomemplayer|music on console|nsplayer|psp-internetradioplayer|videos)\/((\d+)[\w\.-]+)/i,
                                                                                 // Audacious/AudiMusicStream/Amarok/BASS/OpenCORE/Dalvik/GnomeMplayer/MoC
@@ -327,12 +337,12 @@
             /(clementine|music player daemon)\s((\d+)[\w\.-]+)/i,               // Clementine/MPD
             /(lg player|nexplayer)\s((\d+)[\d\.]+)/i,
             /player\/(nexplayer|lg player)\s((\d+)[\w\.-]+)/i                   // NexPlayer/LG Player
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
             /(nexplayer)\s((\d+)[\w\.-]+)/i                                     // Nexplayer
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(flrp)\/((\d+)[\w\.-]+)/i                                          // Flip Player
-            ], [[NAME, 'Flip Player'], VERSION, MAJOR], [
+            ], [[NAME, 'Flip Player'], VERSION], [
 
             /(fstream|nativehost|queryseekspider|ia-archiver|facebookexternalhit)/i
                                                                                 // FStream/NativeHost/QuerySeekSpider/IA Archiver/facebookexternalhit
@@ -340,23 +350,23 @@
 
             /(gstreamer) souphttpsrc (?:\([^\)]+\)){0,1} libsoup\/((\d+)[\w\.-]+)/i
                                                                                 // Gstreamer
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(htc streaming player)\s[\w_]+\s\/\s((\d+)[\d\.]+)/i,              // HTC Streaming Player
             /(java|python-urllib|python-requests|wget|libcurl)\/((\d+)[\w\.-_]+)/i,
                                                                                 // Java/urllib/requests/wget/cURL
             /(lavf)((\d+)[\d\.]+)/i                                             // Lavf (FFMPEG)
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(htc_one_s)\/((\d+)[\d\.]+)/i                                      // HTC One S
-            ], [[NAME, /_/g, ' '], VERSION, MAJOR], [
+            ], [[NAME, /_/g, ' '], VERSION], [
 
             /(mplayer)(?:\s|\/)(?:(?:sherpya-){0,1}svn)(?:-|\s)(r\d+(?:-\d+[\w\.-]+){0,1})/i
                                                                                 // MPlayer SVN
             ], [NAME, VERSION], [
 
             /(mplayer)(?:\s|\/|[unkow-]+)((\d+)[\w\.-]+)/i                      // MPlayer
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(mplayer)/i,                                                       // MPlayer (no other info)
             /(yourmuze)/i,                                                      // YourMuze
@@ -364,18 +374,18 @@
             ], [NAME], [
 
             /(nero (?:home|scout))\/((\d+)[\w\.-]+)/i                           // Nero Home/Nero Scout
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(nokia\d+)\/((\d+)[\w\.-]+)/i                                      // Nokia
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /\s(songbird)\/((\d+)[\w\.-]+)/i                                    // Songbird/Philips-Songbird
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(winamp)3 version ((\d+)[\w\.-]+)/i,                               // Winamp
             /(winamp)\s((\d+)[\w\.-]+)/i,
             /(winamp)mpeg\/((\d+)[\w\.-]+)/i
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(ocms-bot|tapinradio|tunein radio|unknown|winamp|inlight radio)/i  // OCMS-bot/tap in radio/tunein/unknown/winamp (no other info)
                                                                                 // inlight radio
@@ -384,32 +394,32 @@
             /(quicktime|rma|radioapp|radioclientapplication|soundtap|totem|stagefright|streamium)\/((\d+)[\w\.-]+)/i
                                                                                 // QuickTime/RealMedia/RadioApp/RadioClientApplication/
                                                                                 // SoundTap/Totem/Stagefright/Streamium
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(smp)((\d+)[\d\.]+)/i                                              // SMP
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(vlc) media player - version ((\d+)[\w\.]+)/i,                     // VLC Videolan
             /(vlc)\/((\d+)[\w\.-]+)/i,
             /(xbmc|gvfs|xine|xmms|irapp)\/((\d+)[\w\.-]+)/i,                    // XBMC/gvfs/Xine/XMMS/irapp
             /(foobar2000)\/((\d+)[\d\.]+)/i,                                    // Foobar2000
             /(itunes)\/((\d+)[\d\.]+)/i                                         // iTunes
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(wmplayer)\/((\d+)[\w\.-]+)/i,                                     // Windows Media Player
             /(windows-media-player)\/((\d+)[\w\.-]+)/i
-            ], [[NAME, /-/g, ' '], VERSION, MAJOR], [
+            ], [[NAME, /-/g, ' '], VERSION], [
 
             /windows\/((\d+)[\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ (home media server)/i
                                                                                 // Windows Media Server
-            ], [VERSION, MAJOR, [NAME, 'Windows']], [
+            ], [VERSION, [NAME, 'Windows']], [
 
             /(com\.riseupradioalarm)\/((\d+)[\d\.]*)/i                          // RiseUP Radio Alarm
-            ], [NAME, VERSION, MAJOR], [
+            ], [NAME, VERSION], [
 
             /(rad.io)\s((\d+)[\d\.]+)/i,                                        // Rad.io
             /(radio.(?:de|at|fr))\s((\d+)[\d\.]+)/i
-            ], [[NAME, 'rad.io'], VERSION, MAJOR]
+            ], [[NAME, 'rad.io'], VERSION]
 
             //////////////////////
             // Media players END
@@ -483,8 +493,11 @@
             /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i
             ], [MODEL, [VENDOR, 'Asus'], [TYPE, TABLET]], [
 
-            /(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
-            ], [VENDOR, MODEL, [TYPE, TABLET]], [
+            /(sony)\s(tablet\s[ps])\sbuild\//i,                                  // Sony
+            /(sony)?(?:sgp.+)\sbuild\//i
+            ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Tablet'], [TYPE, TABLET]], [
+            /(?:sony)?(?:(?:(?:c|d)\d{4})|(?:so[-l].+))\sbuild\//i
+            ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Phone'], [TYPE, MOBILE]], [
 
             /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3u]+)/i                                          // Nintendo
@@ -508,7 +521,7 @@
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
                 
-            /(nexus\s9)/i,                                                      // HTC Nexus 9
+            /(nexus\s9)/i                                                       // HTC Nexus 9
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
 
             /[\s\(;](xbox(?:\sone)?)[\s\);]/i                                   // Microsoft Xbox
@@ -517,9 +530,10 @@
             ], [[MODEL, /\./g, ' '], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
 
                                                                                 // Motorola
-            /\s((milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?))[\w\s]+build\//i,
-            /(mot)[\s-]?(\w+)*/i
-            ], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
+            /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?)[\w\s]+build\//i,
+            /mot[\s-]?(\w+)*/i,
+            /(XT\d{3,4}) build\//i
+            ], [MODEL, [VENDOR, 'Motorola'], [TYPE, MOBILE]], [
             /android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, TABLET]], [
 
@@ -532,6 +546,7 @@
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, MOBILE]], [
             /(samsung);smarttv/i
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+
             /\(dtv[\);].+(aquos)/i                                              // Sharp
             ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
             /sie-(\w+)*/i                                                       // Siemens
@@ -541,10 +556,10 @@
             /(nokia)[\s_-]?([\w-]+)*/i
             ], [[VENDOR, 'Nokia'], MODEL, [TYPE, MOBILE]], [
 
-            /android\s3\.[\s\w-;]{10}(a\d{3})/i                                 // Acer
+            /android\s3\.[\s\w;-]{10}(a\d{3})/i                                 // Acer
             ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
-            /android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
+            /android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
@@ -564,8 +579,75 @@
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
+            /android.+(\w+)\s+build\/hm\1/i,                                        // Xiaomi Hongmi 'numeric' models
+            /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,                   // Xiaomi Hongmi
+            /android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi Mi
+            ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
+
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
+
+            /*//////////////////////////
+            // TODO: move to string map
+            ////////////////////////////
+
+            /(C6603)/i                                                          // Sony Xperia Z C6603
+            ], [[MODEL, 'Xperia Z C6603'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
+            /(C6903)/i                                                          // Sony Xperia Z 1
+            ], [[MODEL, 'Xperia Z 1'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
+
+            /(SM-G900[F|H])/i                                                   // Samsung Galaxy S5
+            ], [[MODEL, 'Galaxy S5'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+            /(SM-G7102)/i                                                       // Samsung Galaxy Grand 2
+            ], [[MODEL, 'Galaxy Grand 2'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+            /(SM-G530H)/i                                                       // Samsung Galaxy Grand Prime
+            ], [[MODEL, 'Galaxy Grand Prime'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+            /(SM-G313HZ)/i                                                      // Samsung Galaxy V
+            ], [[MODEL, 'Galaxy V'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+            /(SM-T805)/i                                                        // Samsung Galaxy Tab S 10.5
+            ], [[MODEL, 'Galaxy Tab S 10.5'], [VENDOR, 'Samsung'], [TYPE, TABLET]], [
+            /(SM-G800F)/i                                                       // Samsung Galaxy S5 Mini
+            ], [[MODEL, 'Galaxy S5 Mini'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+            /(SM-T311)/i                                                        // Samsung Galaxy Tab 3 8.0
+            ], [[MODEL, 'Galaxy Tab 3 8.0'], [VENDOR, 'Samsung'], [TYPE, TABLET]], [
+
+            /(R1001)/i                                                          // Oppo R1001
+            ], [MODEL, [VENDOR, 'OPPO'], [TYPE, MOBILE]], [
+            /(X9006)/i                                                          // Oppo Find 7a
+            ], [[MODEL, 'Find 7a'], [VENDOR, 'Oppo'], [TYPE, MOBILE]], [
+            /(R2001)/i                                                          // Oppo YOYO R2001
+            ], [[MODEL, 'Yoyo R2001'], [VENDOR, 'Oppo'], [TYPE, MOBILE]], [
+            /(R815)/i                                                           // Oppo Clover R815
+            ], [[MODEL, 'Clover R815'], [VENDOR, 'Oppo'], [TYPE, MOBILE]], [
+             /(U707)/i                                                          // Oppo Find Way S
+            ], [[MODEL, 'Find Way S'], [VENDOR, 'Oppo'], [TYPE, MOBILE]], [
+
+            /(T3C)/i                                                            // Advan Vandroid T3C
+            ], [MODEL, [VENDOR, 'Advan'], [TYPE, TABLET]], [
+            /(ADVAN T1J\+)/i                                                    // Advan Vandroid T1J+
+            ], [[MODEL, 'Vandroid T1J+'], [VENDOR, 'Advan'], [TYPE, TABLET]], [
+            /(ADVAN S4A)/i                                                      // Advan Vandroid S4A
+            ], [[MODEL, 'Vandroid S4A'], [VENDOR, 'Advan'], [TYPE, MOBILE]], [
+
+            /(V972M)/i                                                          // ZTE V972M
+            ], [MODEL, [VENDOR, 'ZTE'], [TYPE, MOBILE]], [
+
+            /(i-mobile)\s(IQ\s[\d\.]+)/i                                        // i-mobile IQ
+            ], [VENDOR, MODEL, [TYPE, MOBILE]], [
+            /(IQ6.3)/i                                                          // i-mobile IQ IQ 6.3
+            ], [[MODEL, 'IQ 6.3'], [VENDOR, 'i-mobile'], [TYPE, MOBILE]], [
+            /(i-mobile)\s(i-style\s[\d\.]+)/i                                   // i-mobile i-STYLE
+            ], [VENDOR, MODEL, [TYPE, MOBILE]], [
+            /(i-STYLE2.1)/i                                                     // i-mobile i-STYLE 2.1
+            ], [[MODEL, 'i-STYLE 2.1'], [VENDOR, 'i-mobile'], [TYPE, MOBILE]], [
+            
+            /(mobiistar touch LAI 512)/i                                        // mobiistar touch LAI 512
+            ], [[MODEL, 'Touch LAI 512'], [VENDOR, 'mobiistar'], [TYPE, MOBILE]], [
+
+            /////////////
+            // END TODO
+            ///////////*/
+
         ],
 
         engine : [[
@@ -665,7 +747,9 @@
         var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
 
         this.getBrowser = function () {
-            return mapper.rgx.apply(this, rgxmap.browser);
+            var browser = mapper.rgx.apply(this, rgxmap.browser);
+            browser.major = util.major(browser.version);
+            return browser;
         };
         this.getCPU = function () {
             return mapper.rgx.apply(this, rgxmap.cpu);
@@ -697,12 +781,13 @@
             return this;
         };
         this.setUA(ua);
+        return this;
     };
 
     UAParser.VERSION = LIBVERSION;
     UAParser.BROWSER = {
         NAME    : NAME,
-        MAJOR   : MAJOR,
+        MAJOR   : MAJOR, // deprecated
         VERSION : VERSION
     };
     UAParser.CPU = {
@@ -737,18 +822,17 @@
     // check js environment
     if (typeof(exports) !== UNDEF_TYPE) {
         // nodejs env
-        if (typeof(module) !== UNDEF_TYPE && module.exports) {
+        if (typeof module !== UNDEF_TYPE && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
     } else {
-        // requirejs env
+        // requirejs env (optional)
         if (typeof(define) === FUNC_TYPE && define.amd) {
             define(function () {
                 return UAParser;
             });
-        }
-        else {
+        } else {
             // browser env
             window.UAParser = UAParser;
         }
@@ -760,7 +844,7 @@
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
     var $ = window.jQuery || window.Zepto;
-    if (typeof($) !== UNDEF_TYPE) {
+    if (typeof $ !== UNDEF_TYPE) {
         var parser = new UAParser();
         $.ua = parser.getResult();
         $.ua.get = function() {

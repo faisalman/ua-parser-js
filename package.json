@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.3",
+  "version": "0.7.6",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -22,7 +22,7 @@
     "Davit Barbakadze <jayarjo@gmail.com>",
     "Dmitry Tyschenko <dtyschenko@gmail.com>",
     "Douglas Li <doug@knotch.it>",
-    "Dumitru Uzun <duzun@mail.ru>",
+    "Dumitru Uzun <contact@duzun.me>",
     "Erik Hesselink <hesselink@gmail.com>",
     "Fabian Becker <halfdan@xnorfz.de>",
     "Hendrik Helwich <h.helwich@iplabs.de>",

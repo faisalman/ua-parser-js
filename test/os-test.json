@@ -72,6 +72,15 @@
         }
     },
     {
+        "desc"    : "Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "10"
+        }
+    },
+    {
         "desc"    : "Windows RT",
         "ua"      : "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)",
         "expect"  :
