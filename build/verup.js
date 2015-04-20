@@ -15,7 +15,7 @@
  *
  *
  * @author Dumitru Uzun (DUzun.Me)
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 var path = require('path');
@@ -68,6 +68,7 @@ if ( over ) {
     var buf = JSON.stringify(packo, null, 2);
 
     if ( buf && over != nver ) {
+        buf += "\n";
         fs.writeFileSync(packFile, buf);
     }
 
@@ -82,6 +83,9 @@ if ( over ) {
                 var packo = JSON.parse(cnt);
                 packo.version = nver;
                 buf = JSON.stringify(packo, null, 2);
+                if ( buf ) {
+                    buf += "\n";
+                }
             } break;
 
             default: {
