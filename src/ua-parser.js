@@ -1,5 +1,5 @@
 /**
- * UAParser.js v0.7.6
+ * UAParser.js v0.7.7
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.6',
+    var LIBVERSION  = '0.7.7',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -253,7 +253,7 @@
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
             ], [NAME, VERSION], [
 
-            /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
+            /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i,                        // IE11
             /(Edge)\/((\d+)?[\w\.]+)/i                                          // IE12
             ], [[NAME, 'IE'], VERSION], [
 
