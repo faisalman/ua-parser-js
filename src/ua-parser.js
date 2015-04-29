@@ -270,6 +270,10 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
+            /((?:android.+)crmo|crios)\/([\w\.]+)/i,
+            /android.+chrome\/([\w\.]+)\s+(?:mobile\s?safari)/i                 // Chrome for Android/iOS
+            ], [[NAME, 'Chrome Mobile'], VERSION], [
+
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             /(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i
@@ -278,9 +282,6 @@
 
             /(dolfin)\/([\w\.]+)/i                                              // Dolphin
             ], [[NAME, 'Dolphin'], VERSION], [
-
-            /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
-            ], [[NAME, 'Chrome'], VERSION], [
 
             /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
             ], [VERSION, [NAME, 'MIUI Browser']], [
