@@ -1,3 +1,6 @@
+/* jshint eqeqeq: false, forin: false */
+/* global define */
+
 /**
  * UAParser.js v0.7.7
  * Lightweight JavaScript-based User-Agent string parser
