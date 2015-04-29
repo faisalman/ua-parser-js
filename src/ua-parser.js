@@ -725,8 +725,11 @@
             /\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i                   // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
             ], [[NAME, 'Linux'], VERSION],[
 
-            /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
-            ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
+            /(iphone)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i                  // iOS
+            ], [[NAME, 'iPhone'], [VERSION, /_/g, '.']], [
+
+            /(ipad)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i                    // iOS
+            ], [[NAME, 'iPad'], [VERSION, /_/g, '.']], [
 
             /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,
             /(macintosh|mac(?=_powerpc)\s)/i                                    // Mac OS
