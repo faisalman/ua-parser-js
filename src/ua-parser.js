@@ -177,6 +177,10 @@
                     '2.0.4' : '/419',
                     '?'     : '/'
                 }
+            },
+            name : {
+                'Opera Mobile' : 'Opera Mobi',
+                'IE Mobile'    : 'IEMobile'
             }
         },
 
@@ -211,6 +215,9 @@
                     '8.1'       : 'NT 6.3',
                     '10'        : ['NT 6.4', 'NT 10.0'],
                     'RT'        : 'ARM'
+                },
+                name : {
+                    'Windows Phone' : 'Windows Phone OS',
                 }
             }
         }
@@ -232,7 +239,7 @@
             /(opera).+version\/([\w\.]+)/i,                                     // Opera > 9.80
             /(opera)[\/\s]+([\w\.]+)/i                                          // Opera < 9.80
 
-            ], [NAME, VERSION], [
+            ], [[NAME, mapper.str, maps.browser.name], VERSION], [
 
             /\s(opr)\/([\w\.]+)/i                                               // Opera Webkit
             ], [[NAME, 'Opera'], VERSION], [
@@ -251,7 +258,7 @@
             /(rekonq)\/([\w\.]+)*/i,                                            // Rekonq
             /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi)\/([\w\.-]+)/i
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
-            ], [NAME, VERSION], [
+            ], [[NAME, mapper.str, maps.browser.name], VERSION], [
 
             /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i,                        // IE11
             /(Edge)\/((\d+)?[\w\.]+)/i                                          // IE12
@@ -670,7 +677,7 @@
             ], [NAME, VERSION], [
             /(windows)\snt\s6\.2;\s(arm)/i,                                     // Windows RT
             /(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
-            ], [NAME, [VERSION, mapper.str, maps.os.windows.version]], [
+            ], [[NAME, mapper.str, maps.os.windows.name], [VERSION, mapper.str, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
             ], [[NAME, 'Windows'], [VERSION, mapper.str, maps.os.windows.version]], [
 
@@ -701,7 +708,7 @@
                                                                                 // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus
             /(hurd|linux)\s?([\w\.]+)*/i,                                       // Hurd/Linux
             /(gnu)\s?([\w\.]+)*/i                                               // GNU
-            ], [NAME, VERSION], [
+            ], [[NAME, 'Linux'], VERSION], [
 
             /(cros)\s[\w]+\s([\w\.]+\w)/i                                       // Chromium OS
             ], [[NAME, 'Chromium OS'], VERSION],[
@@ -712,14 +719,14 @@
 
             // BSD based
             /\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i                   // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
-            ], [NAME, VERSION],[
+            ], [[NAME, 'Linux'], VERSION],[
 
             /(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
             ], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
 
             /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,
             /(macintosh|mac(?=_powerpc)\s)/i                                    // Mac OS
-            ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
+            ], [[NAME, 'Mac'], [VERSION, /_/g, '.']], [
 
             // Other
             /((?:open)?solaris)[\/\s-]?([\w\.]+)*/i,                            // Solaris
