@@ -305,6 +305,9 @@
             /(webkit|khtml)\/([\w\.]+)/i
             ], [NAME, VERSION], [
 
+            /(blackberry)\\s?\/([\w\.]+)/i                                      // Blackberry
+            ], [[NAME, "BlackBerry"], VERSION], [
+
             // Gecko based
             /(navigator|netscape)\/([\w\.-]+)/i                                 // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
