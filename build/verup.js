@@ -15,32 +15,43 @@
  *
  *
  * @author Dumitru Uzun (DUzun.Me)
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 var path = require('path');
 var fs   = require('fs');
 
-var _root = path.join(__dirname, '..');
-var files = [
-    'ua-parser-js.jquery.json',
-    'component.json',
-    'bower.json',
-    'package.js',
-    'src/ua-parser.js'
-];
+var packFile = findPackage(__dirname);
 
-var ver_reg = [
-    /^((?:\$|@|(\s*(?:var|,)?\s+))(?:LIBVERSION|version)[\s\:='"]+)([0-9]+(?:\.[0-9]+){2,2})/
-  , /^(\s?\*.*v)([0-9]+(?:\.[0-9]+){2,2})/
-];
+if ( !packFile ) {
+    console.log('package.json file not found');
+    process.exist(1);
+}
 
-var packFile = path.join(_root, 'package.json');
+var _root = path.dirname(packFile);
 var packo = require(packFile);
 
 if ( !packo ) {
     console.error('Can\'t read package.json file');
     process.exit(1);
+}
+
+var _verup = packo.verup;
+
+if ( !_verup ) {
+    console.log('package.json doesn\'t have a `verup` property defined');
+    process.exist(1);
+}
+
+var files = _verup.files;
+
+var ver_reg = [
+    /^((?:\$|@|(\s*(?:var|,)?\s+))version[\s\:='"]+)([0-9]+(?:\.[0-9]+){2,2})/
+  , /^(\s?\*.*v)([0-9]+(?:\.[0-9]+){2,2})/
+];
+
+if ( _verup.regs ) {
+    ver_reg = _verup.regs.map(function (r) { return new RegExp(r); });
 }
 
 var over = packo.version;
@@ -56,7 +67,7 @@ if ( over ) {
     while(bump.length && !(b = parseInt(bump.pop())));
     l = bump.length;
 
-// console.log({b:b,nver:nver,over:over,l:l,bump:bump})
+    // console.log({b:b,nver:nver,over:over,l:l,bump:bump})
     nver[l] = +nver[l] + b;
     bump.forEach(function (v,i) { nver[i] = v; });
 
@@ -109,4 +120,17 @@ if ( over ) {
         }
     });
 
+}
+
+
+/// Find package.json file in closest folder from `dir` and up.
+function findPackage(dir) {
+    var d = dir || '.', f;
+    do {
+        f = path.join(d, 'package.json');
+        if ( fs.existsSync(f) ) return f;
+        dir = d;
+        d = path.join(d, '..');
+    } while (d != dir && dir.slice(0,2) != '..');
+    return false;
 }
