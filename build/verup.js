@@ -15,13 +15,43 @@
  *
  *
  * @author Dumitru Uzun (DUzun.Me)
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 var path = require('path');
 var fs   = require('fs');
 
-var packFile = findPackage(__dirname);
+var ver_reg = [
+    /^((?:\$|(\s*\*\s*@)|(\s*(?:var|,)?\s+))version[\s\:='"]+)([0-9]+(?:\.[0-9]+){2,2})/
+  , /^(\s?\*.*v)([0-9]+(?:\.[0-9]+){2,2})/
+];
+
+/// bump should be 1 for revision, 1.0 for minor and 1.0.0 for major version
+var bump = '1'; // bump by
+
+/// Project name to bump (search it's package.json folder)
+var name = '';
+
+var _a = 'b';
+process.argv.forEach(function (v, i) {
+    if ( i < 2 ) return;
+    if ( v.slice(0,1) == '-' && isNaN(parseFloat(v)) ) {
+        _a = v.slice(1);
+    }
+    else {
+        switch(_a) {
+            case 'b': {
+                bump = v;
+            } break;
+            case 'n': {
+                name = v;
+            } break;
+        }
+        _a = 'b';
+    }
+});
+
+var packFile = findPackage(__dirname, name);
 
 if ( !packFile ) {
     console.log('package.json file not found');
@@ -45,23 +75,14 @@ if ( !_verup ) {
 
 var files = _verup.files;
 
-var ver_reg = [
-    /^((?:\$|@|(\s*(?:var|,)?\s+))version[\s\:='"]+)([0-9]+(?:\.[0-9]+){2,2})/
-  , /^(\s?\*.*v)([0-9]+(?:\.[0-9]+){2,2})/
-];
-
 if ( _verup.regs ) {
     ver_reg = _verup.regs.map(function (r) { return new RegExp(r); });
 }
 
 var over = packo.version;
-
-/*
- * bump should be 1 for revision, 1.0 for minor and 1.0.0 for major version
- */
-var bump = (process.argv[2] || '1').split('.').reverse();
-
 if ( over ) {
+    bump = bump.split('.').reverse();
+
     var nver = over.split('.').reverse();
     var b, l;
     while(bump.length && !(b = parseInt(bump.pop())));
@@ -115,7 +136,7 @@ if ( over ) {
             }
         }
         if ( buf && buf != cnt ) {
-            console.log("\t" + fn.replace(_root, ''));
+            console.log("\t" + fn.replace(_root, '').replace(/^[\\/]+/, ''));
             fs.writeFileSync(fn, buf);
         }
     });
@@ -124,11 +145,28 @@ if ( over ) {
 
 
 /// Find package.json file in closest folder from `dir` and up.
-function findPackage(dir) {
+function findPackage(dir, packageName) {
     var d = dir || '.', f;
     do {
         f = path.join(d, 'package.json');
-        if ( fs.existsSync(f) ) return f;
+        if ( fs.existsSync(f) ) {
+
+            var p = require(f);
+            // Look for a specific project name
+            if ( packageName ) {
+                if ( p ) {
+                    if ( p.name == packageName ) {
+                        return f;
+                    }
+                }
+            }
+            // Look for any project except this one (verup)
+            else {
+                if ( !p || p.name != 'verup' ) {
+                    return f;
+                }
+            }
+        }
         dir = d;
         d = path.join(d, '..');
     } while (d != dir && dir.slice(0,2) != '..');
