@@ -1,6 +1,6 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component package, Bower package, Meteor package, & AMD module
+Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component/Bower/Meteor package, & RequireJS/AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 
@@ -30,7 +30,7 @@ Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/T
 Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, 
 Tizen, UCBrowser, Vivaldi, w3m, Yandex
 
-# 'browser.version' & 'browser.major' determined dynamically
+# 'browser.version' determined dynamically
 ```
 
 * `getDevice()`
@@ -112,8 +112,7 @@ ppc, sparc, sparc64
             ua: "",
             browser: {
                 name: "",
-                version: "",
-                major: ""
+                version: ""
             },
             engine: {
                 name: "",
@@ -142,7 +141,7 @@ ppc, sparc, sparc64
     // this will also produce the same result (without instantiation):
     // var result = UAParser(uastring);
 
-    console.log(result.browser);        // {name: "Chromium", major: "15", version: "15.0.874.106"}
+    console.log(result.browser);        // {name: "Chromium", version: "15.0.874.106"}
     console.log(result.device);         // {model: undefined, type: undefined, vendor: undefined}
     console.log(result.os);             // {name: "Ubuntu", version: "11.10"}
     console.log(result.os.version);     // "11.10"
@@ -165,20 +164,6 @@ ppc, sparc, sparc64
 <body>
 </body>
 </html>
-```
-
-### Extending regex patterns
-
-* `UAParser(uastring[, extensions])`
-
-Pass your own regexes to extend the limited matching rules.
-
-```js
-// Example:
-var uaString = 'ownbrowser/1.3';
-var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
-var parser = new UAParser(uaString, {browser: ownBrowser});
-console.log(parser.getBrowser());   // {name: "ownbrowser", major: "1", version: "1.3"}
 ```
 
 ### Using node.js
@@ -250,12 +235,27 @@ console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type:
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 ```
 
+### Extending regex patterns
+
+* `UAParser(uastring[, extensions])`
+
+Pass your own regexes to extend the limited matching rules.
+
+```js
+// Example:
+var uaString = 'ownbrowser/1.3';
+var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
+var parser = new UAParser(uaString, {browser: ownBrowser});
+console.log(parser.getBrowser());   // {name: "ownbrowser", major: "1", version: "1.3"}
+```
+
 ## Development
 
 Verify, test, & minify script
 
 ```sh
-$ npm test
+$ npm run test
+$ npm run build
 ```
 
 Then submit a pull request to https://github.com/faisalman/ua-parser-js under `develop` branch.

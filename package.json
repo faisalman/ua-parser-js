@@ -42,7 +42,8 @@
   ],
   "main": "src/ua-parser.js",
   "scripts": {
-    "test": "./build/build.sh",
+    "build":  "uglifyjs src/ua-parser.js > dist/ua-parser.min.js --comments '/UAParser\\.js/' && uglifyjs src/ua-parser.js > dist/ua-parser.pack.js --comments '/UAParser\\.js/' --compress --mangle",
+    "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
     "verup": "node ./build/verup.js"
   },
   "devDependencies": {
