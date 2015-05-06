@@ -1,5 +1,5 @@
 /**
- * UAParser.js v0.7.7
+ * UAParser.js v0.7.8
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.7',
+    var LIBVERSION  = '0.7.8',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -652,6 +652,9 @@
         ],
 
         engine : [[
+
+            /windows.+\sedge\/([\w\.]+)/i                                       // EdgeHTML
+            ], [VERSION, [NAME, 'EdgeHTML']], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,     // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m
