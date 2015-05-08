@@ -253,9 +253,11 @@
                                                                                 // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron
             ], [NAME, VERSION], [
 
-            /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i,                        // IE11
-            /(Edge)\/((\d+)?[\w\.]+)/i                                          // IE12
+            /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
             ], [[NAME, 'IE'], VERSION], [
+
+            /(edge)\/((\d+)?[\w\.]+)/i                                          // Microsoft Edge
+            ], [NAME, VERSION], [
 
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
             ], [[NAME, 'Yandex'], VERSION], [
