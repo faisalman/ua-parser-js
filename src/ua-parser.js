@@ -312,8 +312,8 @@
             /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,                          // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?([\w\.]+)/i,
-                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir)[\/\s]?([\w\.]+)/i,
+                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir
             /(links)\s\(([\w\.]+)/i,                                            // Links
             /(gobrowser)\/?([\w\.]+)*/i,                                        // GoBrowser
             /(ice\s?browser)\/v?([\w\._]+)/i,                                   // ICE Browser
