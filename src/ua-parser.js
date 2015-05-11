@@ -302,6 +302,8 @@
             // Gecko based
             /(navigator|netscape)\/([\w\.-]+)/i                                 // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
+            /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
+            ], [VERSION, [NAME, 'Firefox']], [
             /(swiftfox)/i,                                                      // Swiftfox
             /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,
                                                                                 // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
