@@ -44,7 +44,8 @@
   "scripts": {
     "build": "uglifyjs src/ua-parser.js > dist/ua-parser.min.js --comments '/UAParser\\.js/' && uglifyjs src/ua-parser.js > dist/ua-parser.pack.js --comments '/UAParser\\.js/' --compress --mangle",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
-    "verup": "node ./build/verup.js"
+    "verup": "node ./node_modules/verup",
+    "version": "node ./node_modules/verup 0"
   },
   "verup": {
     "files": [
@@ -62,7 +63,8 @@
   "devDependencies": {
     "jshint": "~1.1.0",
     "mocha": "~1.8.0",
-    "uglify-js": "~1.3.4"
+    "uglify-js": "~1.3.4",
+    "verup": "^1.3.x"
   },
   "repository": {
     "type": "git",
