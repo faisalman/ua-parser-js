@@ -1,5 +1,5 @@
 /**
- * UAParser.js v0.7.8
+ * UAParser.js v0.7.9
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.8',
+    var LIBVERSION  = '0.7.9',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
