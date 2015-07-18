@@ -3,6 +3,7 @@
 Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component/Bower/Meteor package, & RequireJS/AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
+[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
 
 * Author    : Faisal Salman <<fyzlman@gmail.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
@@ -17,7 +18,7 @@ Extract detailed type of web browser, layout engine, operating system, cpu archi
 ## Methods
 
 * `getBrowser()`
-    * returns `{ name: '', major: '', version: '' }`
+    * returns `{ name: '', version: '' }`
 
 ```
 # Possible 'browser.name':
@@ -173,10 +174,18 @@ $ npm install ua-parser-js
 ```
 
 ```js
-var UAParser = require('ua-parser-js');
-var parser = new UAParser();
-var ua = request.headers['user-agent'];     // user-agent header from an HTTP request
-console.log(parser.setUA(ua).getResult());
+var http = require('http');
+var parser = require('ua-parser-js');
+
+http.createServer(function (req, res) {
+    // get user-agent header
+    var ua = parser(req.headers['user-agent']);
+    // write the result as response
+    res.end(JSON.stringify(ua, null, '  '));
+})
+.listen(1337, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:1337/');
 ```
 
 ### Using requirejs
@@ -192,12 +201,6 @@ require(['ua-parser'], function(UAParser) {
 
 ```sh
 $ component install faisalman/ua-parser-js
-```
-
-```js
-var UAParser = require('ua-parser-js');
-var parser = new UAParser();
-console.log(parser.getResult());
 ```
 
 ### Using bower
@@ -244,9 +247,9 @@ Pass your own regexes to extend the limited matching rules.
 ```js
 // Example:
 var uaString = 'ownbrowser/1.3';
-var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
+var ownBrowser = [[/(ownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
 var parser = new UAParser(uaString, {browser: ownBrowser});
-console.log(parser.getBrowser());   // {name: "ownbrowser", major: "1", version: "1.3"}
+console.log(parser.getBrowser());   // {name: "ownbrowser", version: "1.3"}
 ```
 
 ## Development
