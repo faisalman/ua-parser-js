@@ -590,7 +590,10 @@
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
 
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
-            ], [[TYPE, util.lowerize], VENDOR, MODEL]
+            ], [[TYPE, util.lowerize], VENDOR, MODEL], [
+
+            /android.+SM-G920I.+/i
+                ], [[MODEL, "Galaxy S6"], [VENDOR, "Samsung"], [TYPE, MOBILE]]
 
             /*//////////////////////////
             // TODO: move to string map
