@@ -130,6 +130,16 @@
         }
     },
     {
+        "desc"      : "Samsing Galaxy S6",
+        "ua"        : "Mozilla/5.0 (Linux; Android 5.0.2; SM-G920I build/lrx22g) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.92 Mobile Safari/537.36",
+        "expect"    :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "Galaxy S6",
+            "type"    : "mobile"
+        }
+    },
+    {
         "desc"    : "Sony C5303 (Xperia SP)",
         "ua"      : "Mozilla/5.0 (Linux; Android 4.3; C5303 Build/12.1.A.1.205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.93 Mobile Safari/537.36",
         "expect"  :

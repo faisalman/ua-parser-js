@@ -601,5 +601,14 @@
             "name"    : "Android",
             "version" : "4.2.1"
         }
+    },
+    {
+        "desc"    : "Samsing Galaxy S6",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; SM-G920I build/lrx22g) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.92 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Android",
+            "version" : "5.0.2"
+        }
     }
 ]
