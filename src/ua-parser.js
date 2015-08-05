@@ -267,9 +267,15 @@
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
-            /(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i
-                                                                                // UCBrowser/QQBrowser
+            /(qqbrowser)[\/\s]?([\w\.]+)/i
+                                                                                // QQBrowser
             ], [NAME, VERSION], [
+
+            /(uc\s?browser)[\/\s]?([\w\.]+)/i,
+            /ucweb.+(ucbrowser)[\/\s]?([\w\.]+)/i,
+            /JUC.+(ucweb)[\/\s]?([\w\.]+)/i
+                                                                                // UCBrowser
+            ], [[NAME, 'UCBrowser'], VERSION], [
 
             /(dolfin)\/([\w\.]+)/i                                              // Dolphin
             ], [[NAME, 'Dolphin'], VERSION], [
