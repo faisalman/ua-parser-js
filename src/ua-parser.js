@@ -589,6 +589,11 @@
             /android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
 
+            /(SM-G920.)/i                                                       // Samsung Galaxy S6
+            ], [[MODEL, 'Galaxy S6'], [VENDOR, 'Samsung'], [TYPE, MOBILE]],[
+            /(SM-G925.)/i                                                       // Samsung Galaxy S6 Edge
+            ], [[MODEL, 'Galaxy S6 Edge'], [VENDOR, 'Samsung'], [TYPE, MOBILE]],[
+
             /(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
 
