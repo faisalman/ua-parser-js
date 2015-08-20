@@ -130,6 +130,26 @@
         }
     },
     {
+        "desc"    : "Samsung S6",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-G920I Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "Galaxy S6",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"    : "Samsung S6 Edge",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-G925I Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "Galaxy S6 Edge",
+            "type"    : "mobile"
+        }
+    },
+    {
         "desc"    : "Sony C5303 (Xperia SP)",
         "ua"      : "Mozilla/5.0 (Linux; Android 4.3; C5303 Build/12.1.A.1.205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.93 Mobile Safari/537.36",
         "expect"  :
