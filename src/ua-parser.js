@@ -543,7 +543,8 @@
                                                                                 // Motorola
             /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?)[\w\s]+build\//i,
             /mot[\s-]?(\w+)*/i,
-            /(XT\d{3,4}) build\//i
+            /(XT\d{3,4}) build\//i,
+            /(nexus\s[6])/i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, MOBILE]], [
             /android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, TABLET]], [
@@ -574,7 +575,7 @@
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
-            /(nexus\s[45])/i,                                                   // LG
+            /(nexus\s[456])/i,                                                   // LG
             /lg[e;\s\/-]+(\w+)*/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
 
