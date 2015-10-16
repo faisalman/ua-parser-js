@@ -575,7 +575,7 @@
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
             /(lg) netcast\.tv/i                                                 // LG SmartTV
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
-            /(nexus\s[456])/i,                                                   // LG
+            /(nexus\s[45])/i,                                                   // LG
             /lg[e;\s\/-]+(\w+)*/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
 
