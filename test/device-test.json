@@ -248,5 +248,15 @@
             "model"   : "MI-ONE Plus",
             "type"    : "mobile"
         }
+    },
+    {
+        "desc"      : "PlayStation 4",
+        "ua"        : "Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",
+        "expect"    :
+        {
+            "vendor"  : "Sony",
+            "model"   : "PlayStation 4",
+            "type"    : "console"
+        }
     }
 ]
