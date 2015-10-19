@@ -258,5 +258,15 @@
             "model"   : "PlayStation 4",
             "type"    : "console"
         }
+    },
+    {
+        "desc"      : "Samsung S5",
+        "ua"        : "Mozilla/5.0 (Linux; Android 5.0; SM-G900F Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.78 Mobile Safari/537.36",
+        "expect"    :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "Galaxy S5",
+            "type"    : "mobile"
+        }
     }
 ]

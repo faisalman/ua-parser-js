@@ -556,6 +556,8 @@
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, MOBILE]], [
+            /(SM-G900[F|H|K|L|S|M|A|T|W8])/i
+            ], [[VENDOR, 'Samsung'], [MODEL, 'Galaxy S5'], [TYPE, MOBILE]], [
             /(samsung);smarttv/i
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
 
@@ -608,8 +610,6 @@
             /(C6903)/i                                                          // Sony Xperia Z 1
             ], [[MODEL, 'Xperia Z 1'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
 
-            /(SM-G900[F|H])/i                                                   // Samsung Galaxy S5
-            ], [[MODEL, 'Galaxy S5'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
             /(SM-G7102)/i                                                       // Samsung Galaxy Grand 2
             ], [[MODEL, 'Galaxy Grand 2'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
             /(SM-G530H)/i                                                       // Samsung Galaxy Grand Prime
