@@ -89,11 +89,13 @@
                 if (typeof result === UNDEF_TYPE) {
                     result = {};
                     for (p in props) {
-                        q = props[p];
-                        if (typeof q === OBJ_TYPE) {
-                            result[q[0]] = undefined;
-                        } else {
-                            result[q] = undefined;
+                        if (props.hasOwnProperty(p)){
+                            q = props[p];
+                            if (typeof q === OBJ_TYPE) {
+                                result[q[0]] = undefined;
+                            } else {
+                                result[q] = undefined;
+                            }
                         }
                     }
                 }
