@@ -13,7 +13,7 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 
 Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
-![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
+![It's over 9000](http://vignette4.wikia.nocookie.net/dragonball/images/4/4b/VegetaItsOver9000-02.png/revision/latest?cb=20100724145819)
 
 ## Methods
 
