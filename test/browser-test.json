@@ -728,5 +728,15 @@
             "version" : "43.8",
             "major"   : "43"
         }
+    },
+    {
+        "desc"    : "Firefox iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) FxiOS/1.1 Mobile/13B143 Safari/601.1.46",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "1.1",
+            "major"   : "1"
+        }
     }
 ]
