@@ -7,6 +7,5 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.export("UAParser");
   api.addFiles("src/ua-parser.js");
 });
