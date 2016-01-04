@@ -6,6 +6,7 @@ Package.describe({
   documentation: 'readme.md'
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
   api.addFiles("src/ua-parser.js");
+  api.export("UAParser");
 });
