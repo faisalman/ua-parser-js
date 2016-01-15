@@ -1,8 +1,9 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component package, Bower package, Meteor package, & AMD module
+Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component/Bower/Meteor package, & RequireJS/AMD module
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
+[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
 
 * Author    : Faisal Salman <<fyzlman@gmail.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
@@ -12,25 +13,25 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 
 Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
-![It's over 9000](https://pbs.twimg.com/media/A9LpEG6CIAA5VrT.jpg)
+![It's over 9000](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/over9000.jpg)
 
 ## Methods
 
 * `getBrowser()`
-    * returns `{ name: '', major: '', version: '' }`
+    * returns `{ name: '', version: '' }`
 
 ```
 # Possible 'browser.name':
 Amaya, Android Browser, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, 
-Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Epiphany, Fennec, Firebird, 
-Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, IceDragon, 
+Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Edge, Epiphany, Fennec,
+Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, IceDragon, 
 Iceweasel, IE [Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, Links, 
 Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
 Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
-Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser, Swiftfox, 
-Tizen, UCBrowser, Vivaldi, w3m, Yandex
+PhantomJS, Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser,
+Swiftfox, Tizen, UCBrowser, Vivaldi, w3m, Yandex
 
-# 'browser.version' & 'browser.major' determined dynamically
+# 'browser.version' determined dynamically
 ```
 
 * `getDevice()`
@@ -54,8 +55,8 @@ Siemens, Sony-Ericsson, Sprint, Xbox, ZTE
 
 ```
 # Possible 'engine.name'
-Amaya, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, Tasman, 
-Trident, w3m, WebKit
+Amaya, EdgeHTML, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, 
+Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
@@ -112,8 +113,7 @@ ppc, sparc, sparc64
             ua: "",
             browser: {
                 name: "",
-                version: "",
-                major: ""
+                version: ""
             },
             engine: {
                 name: "",
@@ -142,7 +142,7 @@ ppc, sparc, sparc64
     // this will also produce the same result (without instantiation):
     // var result = UAParser(uastring);
 
-    console.log(result.browser);        // {name: "Chromium", major: "15", version: "15.0.874.106"}
+    console.log(result.browser);        // {name: "Chromium", version: "15.0.874.106"}
     console.log(result.device);         // {model: undefined, type: undefined, vendor: undefined}
     console.log(result.os);             // {name: "Ubuntu", version: "11.10"}
     console.log(result.os.version);     // "11.10"
@@ -167,20 +167,6 @@ ppc, sparc, sparc64
 </html>
 ```
 
-### Extending regex patterns
-
-* `UAParser(uastring[, extensions])`
-
-Pass your own regexes to extend the limited matching rules.
-
-```js
-// Example:
-var uaString = 'ownbrowser/1.3';
-var ownBrowser = [[/(ownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
-var parser = new UAParser(uaString, {browser: ownBrowser});
-console.log(parser.getBrowser());   // {name: "ownbrowser", major: "1", version: "1.3"}
-```
-
 ### Using node.js
 
 ```sh
@@ -188,10 +174,18 @@ $ npm install ua-parser-js
 ```
 
 ```js
-var UAParser = require('ua-parser-js');
-var parser = new UAParser();
-var ua = request.headers['user-agent'];     // user-agent header from an HTTP request
-console.log(parser.setUA(ua).getResult());
+var http = require('http');
+var parser = require('ua-parser-js');
+
+http.createServer(function (req, res) {
+    // get user-agent header
+    var ua = parser(req.headers['user-agent']);
+    // write the result as response
+    res.end(JSON.stringify(ua, null, '  '));
+})
+.listen(1337, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:1337/');
 ```
 
 ### Using requirejs
@@ -207,12 +201,6 @@ require(['ua-parser'], function(UAParser) {
 
 ```sh
 $ component install faisalman/ua-parser-js
-```
-
-```js
-var UAParser = require('ua-parser-js');
-var parser = new UAParser();
-console.log(parser.getResult());
 ```
 
 ### Using bower
@@ -250,12 +238,27 @@ console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type:
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 ```
 
+### Extending regex patterns
+
+* `UAParser(uastring[, extensions])`
+
+Pass your own regexes to extend the limited matching rules.
+
+```js
+// Example:
+var uaString = 'ownbrowser/1.3';
+var ownBrowser = [[/(ownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
+var parser = new UAParser(uaString, {browser: ownBrowser});
+console.log(parser.getBrowser());   // {name: "ownbrowser", version: "1.3"}
+```
+
 ## Development
 
 Verify, test, & minify script
 
 ```sh
-$ npm test
+$ npm run test
+$ npm run build
 ```
 
 Then submit a pull request to https://github.com/faisalman/ua-parser-js under `develop` branch.
