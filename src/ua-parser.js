@@ -232,7 +232,8 @@
             /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini
             /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,                      // Opera Mobi/Tablet
             /(opera).+version\/([\w\.]+)/i,                                     // Opera > 9.80
-            /(opera)[\/\s]+([\w\.]+)/i                                          // Opera < 9.80
+            /(opera)[\/\s]+([\w\.]+)/i,                                         // Opera < 9.80
+            /(opios)\/([\w\.-]+)/i                                              // Opera Mini on iOS
 
             ], [NAME, VERSION], [
 
@@ -267,6 +268,14 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
+            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
+            ], [VERSION, [NAME, 'MIUI Browser']], [
+
+            /android.+samsungbrowser\/([\w\.]+)/i,
+            /android.+version\/([\w\.]+)/i,
+            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
+            ], [VERSION, [NAME, 'Android Browser']], [
+
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             /(qqbrowser)[\/\s]?([\w\.]+)/i
@@ -284,12 +293,6 @@
 
             /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
             ], [[NAME, 'Chrome'], VERSION], [
-
-            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
-            ], [VERSION, [NAME, 'MIUI Browser']], [
-
-            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
-            ], [VERSION, [NAME, 'Android Browser']], [
 
             /FBAV\/([\w\.]+);/i                                                 // Facebook App for iOS
             ], [VERSION, [NAME, 'Facebook']], [
@@ -534,7 +537,7 @@
             /(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
-                
+
             /(nexus\s9)/i                                                       // HTC Nexus 9
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
 
@@ -655,7 +658,7 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
             /(i-STYLE2.1)/i                                                     // i-mobile i-STYLE 2.1
             ], [[MODEL, 'i-STYLE 2.1'], [VENDOR, 'i-mobile'], [TYPE, MOBILE]], [
-            
+
             /(mobiistar touch LAI 512)/i                                        // mobiistar touch LAI 512
             ], [[MODEL, 'Touch LAI 512'], [VENDOR, 'mobiistar'], [TYPE, MOBILE]], [
 
@@ -857,7 +860,7 @@
     }
 
     // jQuery/Zepto specific (optional)
-    // Note: 
+    // Note:
     //   In AMD env the global scope should be kept clean, but jQuery is an exception.
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
