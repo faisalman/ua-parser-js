@@ -100,6 +100,16 @@
         }
     },
     {
+        "desc"    : "Philips SmartTV",
+        "ua"      : "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
+        "expect"  :
+        {
+            "vendor"  : "Philips",
+            "model"   : "",
+            "type"    : "smarttv"
+        }
+    },
+    {
         "desc"    : "Kindle Fire HD",
         "ua"      : "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
         "expect"  :
@@ -137,6 +147,36 @@
             "vendor"  : "Samsung",
             "model"   : "SM-T520",
             "type"    : "tablet"
+        }
+    },
+    {
+        "desc"    : "Samsung SmartTV2011",
+        "ua"      : "HbbTV/1.1.1 (;;;;;) Maple;2011",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SmartTV2011",
+            "type"    : "smarttv"
+        }
+    },
+    {
+        "desc"    : "Samsung SmartTV2012",
+        "ua"      : "HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SmartTV2012",
+            "type"    : "smarttv"
+        }
+    },
+    {
+        "desc"    : "Samsung SmartTV2014",
+        "ua"      : "HbbTV/1.1.1 (;Samsung;SmartTV2014;T-NT14UDEUC-1060.4;;) WebKit",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SmartTV2014",
+            "type"    : "smarttv"
         }
     },
     {
