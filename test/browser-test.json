@@ -758,5 +758,15 @@
             "version" : "1.1",
             "major"   : "1"
         }
+    },
+    {
+        "desc"   : "Spotify on OS X",
+        "ua"     : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Spotify/1.0.26.132 Safari/537.36",
+        "expect" :
+        {
+            "name"    : "Spotify",
+            "version" : "1.0.26.132",
+            "major"   : "1"
+        }
     }
 ]
