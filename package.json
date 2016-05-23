@@ -70,16 +70,7 @@
     "type": "git",
     "url": "https://github.com/faisalman/ua-parser-js.git"
   },
-  "licenses": [
-    {
-      "type": "GPLv2",
-      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
-    },
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/mit-license.php"
-    }
-  ],
+  "license": "(GPL-2.0 OR MIT)",
   "engines": {
     "node": "*"
   },
