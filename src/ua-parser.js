@@ -48,12 +48,15 @@
 
     var util = {
         extend : function (regexes, extensions) {
-            for (var i in extensions) {
-                if ("browser cpu device engine os".indexOf(i) !== -1 && extensions[i].length % 2 === 0) {
-                    regexes[i] = extensions[i].concat(regexes[i]);
+            var margedRegexes = {};
+            for (var i in regexes) {
+                if (extensions[i] && extensions[i].length % 2 === 0) {
+                    margedRegexes[i] = extensions[i].concat(regexes[i]);
+                } else {
+                    margedRegexes[i] = regexes[i];
                 }
             }
-            return regexes;
+            return margedRegexes;
         },
         has : function (str1, str2) {
           if (typeof str1 === "string") {
@@ -818,7 +821,6 @@
             ua = uastring;
             return this;
         };
-        this.setUA(ua);
         return this;
     };
 
@@ -867,7 +869,7 @@
     } else {
         // requirejs env (optional)
         if (typeof(define) === FUNC_TYPE && define.amd) {
-            define(function () {
+            define("ua-parser-js", [], function () {
                 return UAParser;
             });
         } else {
