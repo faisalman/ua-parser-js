@@ -188,7 +188,8 @@
             },
             name : {
                 'Opera Mobile' : 'Opera Mobi',
-                'IE Mobile'    : 'IEMobile'
+                'IE Mobile'    : 'IEMobile',
+                'IEMobile'     : 'IEMobile',
             }
         },
 
