@@ -4,6 +4,7 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
+[![CDNJS](https://img.shields.io/cdnjs/v/UAParser.js.svg)](https://cdnjs.com/libraries/UAParser.js)
 
 * Author    : Faisal Salman <<fyzlman@gmail.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
