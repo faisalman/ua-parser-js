@@ -604,8 +604,8 @@
             /android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
 
-            /\s(tablet)[;\/\s]/i,                                               // Unidentifiable Tablet
-            /\s(mobile)[;\/\s]/i                                                // Unidentifiable Mobile
+            /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
+            /\s(mobile)[;\/]/i                                                  // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
 
             /*//////////////////////////
