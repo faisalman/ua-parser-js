@@ -283,7 +283,7 @@
             ], [[NAME, /_/g, ' '], VERSION], [
 
             /((?:android.+)crmo|crios)\/([\w\.]+)/i,
-            /android.+chrome\/([\w\.]+)\s+(?:mobile\s?safari)/i                 // Chrome for Android/iOS
+            /android.+(chrome)\/([\w\.]+)\s+(?:mobile\s?safari)/i               // Chrome for Android/iOS
             ], [[NAME, 'Chrome Mobile'], VERSION], [
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
