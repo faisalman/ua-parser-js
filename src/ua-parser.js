@@ -272,10 +272,13 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
-                                                                                // Chrome/OmniWeb/Arora/Tizen/Nokia
-            /(qqbrowser)[\/\s]?([\w\.]+)/i
-                                                                                // QQBrowser
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i      // Chrome/OmniWeb/Arora/Tizen/Nokia
+            ], [NAME, VERSION], [
+
+            /(MicroMessenger)\/([\w\.]+)/i                                      // WeChat
+            ], [[NAME, 'WeChat'], VERSION], [
+
+            /(qqbrowser)[\/\s]?([\w\.]+)/i                                      // QQBrowser
             ], [NAME, VERSION], [
 
             /(uc\s?browser)[\/\s]?([\w\.]+)/i,
