@@ -269,7 +269,7 @@ Then submit a pull request to https://github.com/faisalman/ua-parser-js under `d
 
 Dual licensed under GPLv2 & MIT
 
-Copyright © 2012-2015 Faisal Salman <<fyzlman@gmail.com>>
+Copyright © 2012-2016 Faisal Salman <<fyzlman@gmail.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
