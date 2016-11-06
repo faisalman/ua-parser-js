@@ -268,5 +268,56 @@
             "model"   : "Galaxy Nexus",
             "type"    : "mobile"
         }
+    },
+    {
+        "desc"      : "Samsung Galaxy S5",
+        "ua"        : "Mozilla/5.0 (Linux; Android 5.0; SM-G900F Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.78 Mobile Safari/537.36",
+        "expect"    :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-G900F",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"    : "Samsung Galaxy S6",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-G920I Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-G920I",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"    : "Samsung Galaxy S6 Edge",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-G925I Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-G925I",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"    : "Samsung Galaxy Note 5 Chrome",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; SM-N920C Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.91 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-N920C",
+            "type"    : "mobile"
+        }
+    }
+,
+    {
+        "desc"    : "Samsung Galaxy Note 5 Samsung Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; SAMSUNG SM-N920C Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-N920C",
+            "type"    : "mobile"
+        }
     }
 ]
