@@ -865,7 +865,7 @@
     } else {
         // requirejs env (optional)
         if (typeof(define) === FUNC_TYPE && define.amd) {
-            define("ua-parser-js", [], function () {
+            define(function () {
                 return UAParser;
             });
         } else {
