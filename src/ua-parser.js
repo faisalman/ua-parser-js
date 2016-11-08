@@ -556,6 +556,9 @@
             /(nexus\s9)/i                                                       // HTC Nexus 9
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
 
+            /(microsoft);\s(lumia[\s\w]+)/i                                     // Microsoft Lumia
+            ], [VENDOR, MODEL, [TYPE, MOBILE]], [
+
             /[\s\(;](xbox(?:\sone)?)[\s\);]/i                                   // Microsoft Xbox
             ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, CONSOLE]], [
             /(kin\.[onetw]{3})/i                                                // Microsoft Kin
@@ -618,7 +621,7 @@
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
 
             /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
-            /\s(mobile)[;\/]/i                                                  // Unidentifiable Mobile
+            /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
 
             /*//////////////////////////
