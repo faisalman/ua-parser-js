@@ -276,7 +276,7 @@
             ], [[NAME, /_/g, ' '], VERSION], [
 
             /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
-            ], [NAME, [VERSION, /(.+)/, 'WebView $1']], [
+            ], [[NAME, /(.+)/, '$1 WebView'], VERSION], [
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i      // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [

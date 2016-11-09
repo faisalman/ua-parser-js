@@ -94,8 +94,8 @@
         "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.65 Mobile Safari/537.36",
         "expect"  :
         {
-            "name"    : "Chrome",
-            "version" : "WebView 43.0.2357.65",
+            "name"    : "Chrome WebView",
+            "version" : "43.0.2357.65",
             "major"   : "43"
         }
     },
@@ -167,6 +167,16 @@
             "name"    : "Epiphany",
             "version" : "1.2.6",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Facebook in-App Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]",
+        "expect"  :
+        {
+            "name"    : "Chrome WebView",
+            "version" : "43.0.2357.121",
+            "major"   : "43"
         }
     },
     {
