@@ -247,10 +247,10 @@ Pass your own regexes to extend the limited matching rules.
 
 ```js
 // Example:
-var uaString = 'ownbrowser/1.3';
-var ownBrowser = [[/(ownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
-var parser = new UAParser(uaString, {browser: ownBrowser});
-console.log(parser.getBrowser());   // {name: "ownbrowser", version: "1.3"}
+var uaString = 'MyOwnBrowser/1.3';
+var myOwnRegex = [[/(myownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
+var parser = new UAParser(uaString, { browser: myOwnRegex });
+console.log(parser.getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
 ```
 
 ## Development

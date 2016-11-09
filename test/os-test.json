@@ -145,11 +145,11 @@
     },
     {
         "desc"    : "Tizen",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) Version/2.3 Mobile Safari/537.3",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Tizen",
+            "version" : "2.3"
         }
     },
     {
