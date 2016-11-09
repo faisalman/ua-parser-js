@@ -280,11 +280,20 @@
     },
     {
         "desc"    : "Ubuntu",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.22+ (KHTML, like Gecko) Chromium/17.0.963.56 Chrome/17.0.963.56 Safari/535.22+ Ubuntu/12.04 (3.4.1-0ubuntu1) Epiphany/3.4.1",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Ubuntu",
+            "version" : "12.04"
+        }
+    },
+    {
+        "desc"    : "Ubuntu",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/31.0.1650.63 Chrome/31.0.1650.63 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Ubuntu",
+            "version" : "undefined"
         }
     },
     {
