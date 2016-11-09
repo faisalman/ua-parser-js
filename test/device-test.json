@@ -200,6 +200,16 @@
         }
     },
     {
+        "desc"    : "Samsung SmartTV",
+        "ua"      : "Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "undefined",
+            "type"    : "smarttv"
+        }
+    },
+    {
         "desc"    : "Sony C5303 (Xperia SP)",
         "ua"      : "Mozilla/5.0 (Linux; Android 4.3; C5303 Build/12.1.A.1.205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.93 Mobile Safari/537.36",
         "expect"  :
