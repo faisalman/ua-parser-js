@@ -713,7 +713,8 @@
             /microsoft\s(windows)\s(vista|xp)/i                                 // Windows (iTunes)
             ], [NAME, VERSION], [
             /(windows)\snt\s6\.2;\s(arm)/i,                                     // Windows RT
-            /(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
+            /(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s]+\w)*/i,                  // Windows Phone
+            /(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
             ], [NAME, [VERSION, mapper.str, maps.os.windows.version]], [
             /(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
             ], [[NAME, 'Windows'], [VERSION, mapper.str, maps.os.windows.version]], [
