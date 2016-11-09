@@ -1,9 +1,9 @@
 /**
- * UAParser.js v0.7.10
+ * UAParser.js v0.7.11
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
- * Copyright © 2012-2015 Faisal Salman <fyzlman@gmail.com>
+ * Copyright © 2012-2016 Faisal Salman <fyzlman@gmail.com>
  * Dual licensed under GPLv2 & MIT
  */
 
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.10',
+    var LIBVERSION  = '0.7.11',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -45,12 +45,15 @@
 
     var util = {
         extend : function (regexes, extensions) {
-            for (var i in extensions) {
-                if ("browser cpu device engine os".indexOf(i) !== -1 && extensions[i].length % 2 === 0) {
-                    regexes[i] = extensions[i].concat(regexes[i]);
+            var margedRegexes = {};
+            for (var i in regexes) {
+                if (extensions[i] && extensions[i].length % 2 === 0) {
+                    margedRegexes[i] = extensions[i].concat(regexes[i]);
+                } else {
+                    margedRegexes[i] = regexes[i];
                 }
             }
-            return regexes;
+            return margedRegexes;
         },
         has : function (str1, str2) {
           if (typeof str1 === "string") {
@@ -63,7 +66,10 @@
             return str.toLowerCase();
         },
         major : function (version) {
-            return typeof(version) === STR_TYPE ? version.split(".")[0] : undefined;
+            return typeof(version) === STR_TYPE ? version.replace(/[^\d\.]/g,'').split(".")[0] : undefined;
+        },
+        trim : function (str) {
+          return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
         }
     };
 
@@ -233,8 +239,10 @@
             /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,                      // Opera Mobi/Tablet
             /(opera).+version\/([\w\.]+)/i,                                     // Opera > 9.80
             /(opera)[\/\s]+([\w\.]+)/i                                          // Opera < 9.80
-
             ], [NAME, VERSION], [
+
+            /(OPiOS)[\/\s]+([\w\.]+)/i                                          // Opera mini on iphone >= 8.0
+            ], [[NAME, 'Opera Mini'], VERSION], [
 
             /\s(opr)\/([\w\.]+)/i                                               // Opera Webkit
             ], [[NAME, 'Opera'], VERSION], [
@@ -267,10 +275,16 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
-                                                                                // Chrome/OmniWeb/Arora/Tizen/Nokia
-            /(qqbrowser)[\/\s]?([\w\.]+)/i
-                                                                                // QQBrowser
+            /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
+            ], [NAME, [VERSION, /(.+)/, 'WebView $1']], [
+
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i      // Chrome/OmniWeb/Arora/Tizen/Nokia
+            ], [NAME, VERSION], [
+
+            /(MicroMessenger)\/([\w\.]+)/i                                      // WeChat
+            ], [[NAME, 'WeChat'], VERSION], [
+
+            /(qqbrowser)[\/\s]?([\w\.]+)/i                                      // QQBrowser
             ], [NAME, VERSION], [
 
             /(uc\s?browser)[\/\s]?([\w\.]+)/i,
@@ -469,6 +483,9 @@
 
         device : [[
 
+            /hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i            // HbbTV devices
+            ], [[VENDOR, util.trim], [MODEL, util.trim], [TYPE, SMARTTV]], [
+
             /\((ipad|playbook);[\w\s\);-]+(rim|apple)/i                         // iPad/PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
 
@@ -480,6 +497,7 @@
 
             /(archos)\s(gamepad2?)/i,                                           // Archos
             /(hp).+(touchpad)/i,                                                // HP TouchPad
+            /(hp).+(tablet)/i,                                                  // HP Tablet
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
@@ -534,9 +552,12 @@
             /(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i
                                                                                 // Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
-                
+
             /(nexus\s9)/i                                                       // HTC Nexus 9
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
+
+            /(microsoft);\s(lumia[\s\w]+)/i                                     // Microsoft Lumia
+            ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /[\s\(;](xbox(?:\sone)?)[\s\);]/i                                   // Microsoft Xbox
             ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, CONSOLE]], [
@@ -555,12 +576,12 @@
             /android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i,
             /((SM-T\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
-            /((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-n900))/i,
+            /((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-\w[\w\d]+))/i,
             /(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,
             /sec-((sgh\w+))/i
             ], [[VENDOR, 'Samsung'], MODEL, [TYPE, MOBILE]], [
-            /(samsung);smarttv/i
-            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+            /hbbtv.+maple;(\d+)/i
+            ], [[MODEL, /^/, 'SmartTV'], [VENDOR, 'Samsung'], [TYPE, SMARTTV]], [
 
             /\(dtv[\);].+(aquos)/i                                              // Sharp
             ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
@@ -599,8 +620,8 @@
             /android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i    // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
 
-            /\s(tablet)[;\/\s]/i,                                               // Unidentifiable Tablet
-            /\s(mobile)[;\/\s]/i                                                // Unidentifiable Mobile
+            /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
+            /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
 
             /*//////////////////////////
@@ -656,7 +677,7 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
             /(i-STYLE2.1)/i                                                     // i-mobile i-STYLE 2.1
             ], [[MODEL, 'i-STYLE 2.1'], [VENDOR, 'i-mobile'], [TYPE, MOBILE]], [
-            
+
             /(mobiistar touch LAI 512)/i                                        // mobiistar touch LAI 512
             ], [[MODEL, 'Touch LAI 512'], [VENDOR, 'mobiistar'], [TYPE, MOBILE]], [
 
@@ -799,7 +820,6 @@
             ua = uastring;
             return this;
         };
-        this.setUA(ua);
         return this;
     };
 
@@ -858,7 +878,7 @@
     }
 
     // jQuery/Zepto specific (optional)
-    // Note: 
+    // Note:
     //   In AMD env the global scope should be kept clean, but jQuery is an exception.
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
