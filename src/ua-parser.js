@@ -241,7 +241,7 @@
             /(opera)[\/\s]+([\w\.]+)/i                                          // Opera < 9.80
             ], [NAME, VERSION], [
 
-            /(OPiOS)[\/\s]+([\w\.]+)/i                                          // Opera mini on iphone >= 8.0
+            /(opios)[\/\s]+([\w\.]+)/i                                          // Opera mini on iphone >= 8.0
             ], [[NAME, 'Opera Mini'], VERSION], [
 
             /\s(opr)\/([\w\.]+)/i                                               // Opera Webkit
@@ -275,16 +275,23 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
-            /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
-            ], [[NAME, /(.+)/, '$1 WebView'], VERSION], [
-
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i      // Chrome/OmniWeb/Arora/Tizen/Nokia
-            ], [NAME, VERSION], [
-
             /(MicroMessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
 
-            /(qqbrowser)[\/\s]?([\w\.]+)/i                                      // QQBrowser
+            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
+            ], [VERSION, [NAME, 'MIUI Browser']], [
+
+            /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
+            ], [[NAME, /(.+)/, '$1 WebView'], VERSION], [
+
+            /android.+samsungbrowser\/([\w\.]+)/i,
+            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i        // Android Browser
+            ], [VERSION, [NAME, 'Android Browser']], [
+
+            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,
+                                                                                // Chrome/OmniWeb/Arora/Tizen/Nokia
+            /(qqbrowser)[\/\s]?([\w\.]+)/i
+                                                                                // QQBrowser
             ], [NAME, VERSION], [
 
             /(uc\s?browser)[\/\s]?([\w\.]+)/i,
@@ -298,12 +305,6 @@
 
             /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
             ], [[NAME, 'Chrome'], VERSION], [
-
-            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
-            ], [VERSION, [NAME, 'MIUI Browser']], [
-
-            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
-            ], [VERSION, [NAME, 'Android Browser']], [
 
             /FBAV\/([\w\.]+);/i                                                 // Facebook App for iOS
             ], [VERSION, [NAME, 'Facebook']], [
