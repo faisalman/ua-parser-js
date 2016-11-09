@@ -10,13 +10,15 @@ Lightweight JavaScript-based User-Agent string parser. Supports browser & node.j
 * Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
-## Features
+
+# Features
 
 Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
 
 ![It's over 9000](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/over9000.jpg)
 
-## Methods
+
+# Methods
 
 * `getBrowser()`
     * returns `{ name: '', version: '' }`
@@ -95,7 +97,8 @@ ppc, sparc, sparc64
 * `setUA(uastring)`
     * set & parse UA string
 
-## Example
+
+# Example
 
 ```html
 <!doctype html>
@@ -168,7 +171,7 @@ ppc, sparc, sparc64
 </html>
 ```
 
-### Using node.js
+## Using node.js
 
 ```sh
 $ npm install ua-parser-js
@@ -189,7 +192,7 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
 ```
 
-### Using requirejs
+## Using requirejs
 
 ```js
 require(['ua-parser-js'], function(UAParser) {
@@ -198,25 +201,25 @@ require(['ua-parser-js'], function(UAParser) {
 });
 ```
 
-### Using component
+## Using component
 
 ```sh
 $ component install faisalman/ua-parser-js
 ```
 
-### Using bower
+## Using bower
 
 ```sh
 $ bower install ua-parser-js
 ```
 
-### Using meteor
+## Using meteor
 
 ```sh
 $ meteor add faisalman:ua-parser-js
 ```
 
-### Using jQuery/Zepto ($.ua)
+## Using jQuery/Zepto ($.ua)
 
 Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
@@ -239,7 +242,7 @@ console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type:
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 ```
 
-### Extending regex patterns
+## Extending regex patterns
 
 * `UAParser(uastring[, extensions])`
 
@@ -253,19 +256,34 @@ var parser = new UAParser(uaString, { browser: myOwnRegex });
 console.log(parser.getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
 ```
 
-## Development
 
-Verify, test, & minify script
+# Development
+
+## Contribute
+
+* Fork and clone this repository
+* Make some changes as required
+* Write a unit test to showcase your feature
+* Run the test suites to make sure the changes you made didn't break anything
 
 ```sh
 $ npm run test
+```
+
+* Commit and push to your own repository
+* Submit a pull request to this repository under `develop` branch
+* Profit?
+
+## Build
+
+Build a minified & packed script
+
+```sh
 $ npm run build
 ```
 
-Then submit a pull request to https://github.com/faisalman/ua-parser-js under `develop` branch.
 
-
-## License
+# License
 
 Dual licensed under GPLv2 & MIT
 

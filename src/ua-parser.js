@@ -275,10 +275,10 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
-            /(MicroMessenger)\/([\w\.]+)/i                                      // WeChat
+            /(micromessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
 
-            /XiaoMi\/MiuiBrowser\/([\w\.]+)/i                                   // MIUI Browser
+            /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
             ], [VERSION, [NAME, 'MIUI Browser']], [
 
             /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
@@ -296,7 +296,7 @@
 
             /(uc\s?browser)[\/\s]?([\w\.]+)/i,
             /ucweb.+(ucbrowser)[\/\s]?([\w\.]+)/i,
-            /JUC.+(ucweb)[\/\s]?([\w\.]+)/i
+            /juc.+(ucweb)[\/\s]?([\w\.]+)/i
                                                                                 // UCBrowser
             ], [[NAME, 'UCBrowser'], VERSION], [
 
@@ -306,7 +306,7 @@
             /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
             ], [[NAME, 'Chrome'], VERSION], [
 
-            /FBAV\/([\w\.]+);/i                                                 // Facebook App for iOS
+            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS
             ], [VERSION, [NAME, 'Facebook']], [
 
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
