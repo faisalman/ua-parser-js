@@ -10,6 +10,16 @@
         }
     },
     {
+        "desc"    : "Asus Padfone",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.1.1; PadFone 2 Build/JRO03L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.117 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Asus",
+            "model"   : "PadFone",
+            "type"    : "tablet"
+        }
+    },
+    {
         "desc"    : "Desktop (IE11 with Tablet string)",
         "ua"      : "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect"  :
@@ -262,6 +272,16 @@
     {
         "desc"      : "Sony Xperia SOL25 (ZL2)",
         "ua"        : "Mozilla/5.0 (Linux; U; Android 4.4; SOL25 Build/17.1.1.C.1.64) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect"    :
+        {
+            "vendor"  : "Sony",
+            "model"   : "Xperia Phone",
+            "type"    : "mobile"
+        }
+    },
+    {
+        "desc"      : "Sony Xperia SP",
+        "ua"        : "Mozilla/5.0 (Linux; Android 4.3; C5302 Build/12.1.A.1.201) AppleWebkit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
         "expect"    :
         {
             "vendor"  : "Sony",
