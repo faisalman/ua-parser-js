@@ -1,5 +1,15 @@
 [
     {
+        "desc"    : "Asus Nexus 7",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 7 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Asus",
+            "model"   : "Nexus 7",
+            "type"    : "tablet"
+        }
+    },
+    {
         "desc"    : "Desktop (IE11 with Tablet string)",
         "ua"      : "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect"  :
@@ -27,6 +37,16 @@
             "vendor"  : "HTC",
             "model"   : "Nexus 9",
             "type"    : "tablet"
+        }
+    },
+    {
+        "desc"    : "iPod",
+        "ua"      : "Mozilla/5.0 (iPod touch; CPU iPhone OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53",
+        "expect"  :
+        {
+            "vendor"  : "Apple",
+            "model"   : "iPod touch",
+            "type"    : "mobile"
         }
     },
     {
