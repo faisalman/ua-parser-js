@@ -90,6 +90,16 @@
         }
     },
     {
+        "desc"    : "Motorola Moto X",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.4; XT1097 Build/KXE21.187-38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.109 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Motorola",
+            "model"   : "XT1097",
+            "type"    : "mobile"
+        }
+    },
+    {
         "desc"    : "Motorola Nexus 6",
         "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.20 Mobile Safari/537.36",
         "expect"  :
