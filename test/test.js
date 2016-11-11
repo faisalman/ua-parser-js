@@ -1,4 +1,5 @@
 var assert      = require('assert');
+var requirejs   = require('requirejs');
 var UAParser    = require('./../src/ua-parser');
 var browsers    = require('./browser-test.json');
 var cpus        = require('./cpu-test.json');
@@ -71,4 +72,20 @@ describe('Extending Regex', function () {
     assert.equal(parser.getBrowser().name, 'MyOwnBrowser');
     assert.equal(parser.getBrowser().version, '1.3');
     assert.equal(parser.getBrowser().major, '1');
+});
+
+describe('Using Require.js', function () {
+    it('should loaded automatically', function(done) {
+        requirejs.config({
+            baseUrl : 'dist',
+            paths   : {
+                'ua-parser-js' : 'ua-parser.min'
+            }
+        });
+        requirejs(['ua-parser-js'], function(ua) {
+            var parser = new ua('Dillo/1.0');
+            assert.deepEqual(parser.getBrowser().name, 'Dillo');
+            done();
+        });
+    });
 });

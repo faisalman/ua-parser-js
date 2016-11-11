@@ -195,7 +195,14 @@ console.log('Server running at http://127.0.0.1:1337/');
 ## Using requirejs
 
 ```js
-require(['ua-parser-js'], function(UAParser) {
+requirejs.config({
+    baseUrl : 'js/lib', // path to your script directory
+    paths   : {
+        'ua-parser-js' : 'ua-parser.min'
+    }
+});
+
+requirejs(['ua-parser-js'], function(UAParser) {
     var parser = new UAParser();
     console.log(parser.getResult());
 });
