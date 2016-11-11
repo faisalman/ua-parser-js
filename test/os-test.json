@@ -514,11 +514,11 @@
     },
     {
         "desc"    : "Haiku",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Haiku R1 x86) AppleWebKit/602.1.1 (KHTML, like Gecko) WebPositive/1.2 Version/8.0 Safari/602.1.1",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Haiku",
+            "version" : "R1"
         }
     },
     {
