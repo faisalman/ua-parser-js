@@ -1,21 +1,17 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component/Bower/Meteor package, & RequireJS/AMD module
+<img align="left" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A not-so-lightweight-anymore JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Component/Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently.
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
-[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
+[![NPM](https://img.shields.io/npm/v/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
+[![Bower](https://img.shields.io/bower/v/ua-parser-js.svg)](https://bower.io/)
 [![CDNJS](https://img.shields.io/cdnjs/v/UAParser.js.svg)](https://cdnjs.com/libraries/UAParser.js)
+[![Gratipay](https://img.shields.io/gratipay/team/UAParser.js.svg)](https://gratipay.com/UAParser.js)
+[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
 
 * Author    : Faisal Salman <<fyzlman@gmail.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
-
-
-# Features
-
-Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
-
-![It's over 9000](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/over9000.jpg)
 
 
 # Methods
