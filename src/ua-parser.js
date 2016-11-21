@@ -83,33 +83,26 @@
 
         rgx : function () {
 
-            var result, i = 0, j, k, p, q, matches, match, args = arguments;
+            var result = {}, i = 0, j, k, p, q, matches, match, args = arguments;
+
+            // construct object barebones
+            for (p = 0; p < args[1].length; p++) {
+                q = args[1][p];
+                result[typeof q === OBJ_TYPE ? q[0] : q] = undefined;
+            }
 
             // loop through all regexes maps
             while (i < args.length && !matches) {
 
                 var regex = args[i],       // even sequence (0,2,4,..)
                     props = args[i + 1];   // odd sequence (1,3,5,..)
-
-                // construct object barebones
-                if (typeof result === UNDEF_TYPE) {
-                    result = {};
-                    for (p in props) {
-                        if (props.hasOwnProperty(p)){
-                            q = props[p];
-                            if (typeof q === OBJ_TYPE) {
-                                result[q[0]] = undefined;
-                            } else {
-                                result[q] = undefined;
-                            }
-                        }
-                    }
-                }
+                j = k = 0;
 
                 // try matching uastring with regexes
-                j = k = 0;
                 while (j < regex.length && !matches) {
+
                     matches = regex[j++].exec(this.getUA());
+
                     if (!!matches) {
                         for (p = 0; p < props.length; p++) {
                             match = matches[++k];
