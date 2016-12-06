@@ -1,6 +1,6 @@
 # UAParser.js
 
-<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A not-so-lightweight-anymore JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently.
+<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently. However, it's not recommended to use this library as browser detection since the result may not accurate than using feature detection.
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 [![NPM](https://img.shields.io/npm/v/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
@@ -13,6 +13,13 @@
 * Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
+# Constructor
+
+* `new UAParser([uastring][,extensions])`
+    * returns new instance
+
+* `UAParser([uastring][,extensions])`
+    * returns result object
 
 # Methods
 
@@ -237,6 +244,10 @@ console.log($.ua.browser.name);     // "Safari"
 console.log($.ua.engine.name);      // "Webkit"
 console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
+
+// Add class to <body> tag
+// <body class="ua-browser-safari ua-devicetype-tablet">
+$('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.device.type);
 ```
 
 ## Extending regex patterns
@@ -247,7 +258,7 @@ Pass your own regexes to extend the limited matching rules.
 
 ```js
 // Example:
-var uaString = 'MyOwnBrowser/1.3';
+var uaString = 'Mozilla/5.0 MyOwnBrowser/1.3';
 var myOwnRegex = [[/(myownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
 var parser = new UAParser(uaString, { browser: myOwnRegex });
 console.log(parser.getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
@@ -261,15 +272,10 @@ console.log(parser.getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
 * Fork and clone this repository
 * Make some changes as required
 * Write a unit test to showcase your feature
-* Run the test suites to make sure the changes you made didn't break anything
-
-```sh
-$ npm run test
-```
-
+* Run the test suites to make sure the changes you made didn't break anything `$ npm run test`
 * Commit and push to your own repository
 * Submit a pull request to this repository under `develop` branch
-* Profit?
+* Profit? $$$
 
 ## Build
 
