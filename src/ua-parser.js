@@ -817,7 +817,7 @@
         this.getOS = function () {
             return mapper.rgx.apply(this, rgxmap.os);
         };
-        this.getResult = function() {
+        this.getResult = function () {
             return {
                 ua      : this.getUA(),
                 browser : this.getBrowser(),
@@ -900,7 +900,7 @@
     if (typeof $ !== UNDEF_TYPE) {
         var parser = new UAParser();
         $.ua = parser.getResult();
-        $.ua.get = function() {
+        $.ua.get = function () {
             return parser.getUA();
         };
         $.ua.set = function (uastring) {
