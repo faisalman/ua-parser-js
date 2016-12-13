@@ -303,7 +303,7 @@
             ], [VERSION, [NAME, 'Facebook']], [
 
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
-            ], [VERSION, [NAME, 'Firefox']], [
+        ], [VERSION, [NAME, 'iOS Firefox']], [
 
             /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
             ], [VERSION, [NAME, 'Mobile Safari']], [

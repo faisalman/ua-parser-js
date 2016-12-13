@@ -834,9 +834,19 @@
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) FxiOS/1.1 Mobile/13B143 Safari/601.1.46",
         "expect"  :
         {
-            "name"    : "Firefox",
+            "name"    : "iOS Firefox",
             "version" : "1.1",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Firefox iOS on iPad",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) FxiOS/5.3 Mobile/14A456 Safari/602.1.50",
+        "expect"  :
+        {
+            "name"    : "iOS Firefox",
+            "version" : "5.3",
+            "major"   : "5"
         }
     }
 ]
