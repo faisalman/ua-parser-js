@@ -180,6 +180,16 @@
         }
     },
     {
+        "desc"    : "OPPO R7s",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; OPPO R7s Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.1 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "OPPO",
+            "model"   : "R7s",
+            "type"    : "mobile"
+        }
+    },
+    {
         "desc"    : "Philips SmartTV",
         "ua"      : "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect"  :
