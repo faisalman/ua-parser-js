@@ -619,6 +619,9 @@
             /android.+;\s(oppo)\s?([\w\s]+)\sbuild/i                            // OPPO
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
+            /crkey/i                                                            // Google Chromecast
+            ], [[MODEL, 'Chromecast'], [VENDOR, 'Google']], [
+
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
