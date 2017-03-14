@@ -513,4 +513,15 @@
             "type"    : "mobile"
         }
     }
+,
+    {
+        "desc"    : "LG Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; VK700 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.84 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "LG",
+            "model"   : "VK700",
+            "type"    : "tablet"
+        }
+    }
 ]
