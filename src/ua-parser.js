@@ -691,7 +691,7 @@
             /android.+[;\/]\s*TU_(1491)\s+build/i                               // Rotor Tablets
             ], [MODEL, [VENDOR, 'Rotor'], [TYPE, TABLET]], [
 
-            /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
+            /\s(tablet|tab)[;\/]/i,                                             // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL], [
 
