@@ -765,4 +765,15 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Rotor Tablet",
+        "ua"      : "mozilla/5.0 (linux; android 5.0.1; tu_1491 build/lrx22c) applewebkit/537.36 (khtml, like gecko) chrome/43.0.2357.93 safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Rotor",
+            "model"   : "1491",
+            "type"    : "tablet"
+        }
+    }
 ]
