@@ -710,4 +710,15 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Dragon Touch Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.0.4; DT9138B Build/IMM76D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.72 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Dragon Touch",
+            "model"   : "9138B",
+            "type"    : "tablet"
+        }
+    }
 ]
