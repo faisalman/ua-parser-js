@@ -657,6 +657,12 @@
             /android.+[;\/]\s*(zte)?.+(k\d{2})\s+build/i                        // ZTE K Series Tablet
             ], [[VENDOR, 'ZTE'], MODEL, [TYPE, TABLET]], [
 
+            /android.+[;\/]\s*(gen\d{3})\s+build.*49h/i                         // Swiss GEN Mobile
+            ], [MODEL, [VENDOR, 'Swiss'], [TYPE, MOBILE]], [
+
+            /android.+[;\/]\s*(zur\d{3})\s+build/i                              // Swiss ZUR Tablet
+            ], [MODEL, [VENDOR, 'Swiss'], [TYPE, TABLET]], [
+
             /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL], [

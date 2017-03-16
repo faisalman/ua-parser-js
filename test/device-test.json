@@ -677,4 +677,26 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Swizz GEN610",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; GEN610 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Swiss",
+            "model"   : "GEN610",
+            "type"    : "mobile"
+        }
+    }
+,
+    {
+        "desc"    : "Swizz ZUR700",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; ZUR700 Build/KVT49L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Swiss",
+            "model"   : "ZUR700",
+            "type"    : "tablet"
+        }
+    }
 ]
