@@ -567,4 +567,37 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Verizon Quanta Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; QMV7B Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Verizon",
+            "model"   : "QMV7B",
+            "type"    : "tablet"
+        }
+    }
+,
+    {
+        "desc"    : "Verizon Ellipsis 8 Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; QTAQZ3 Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Verizon",
+            "model"   : "QTAQZ3",
+            "type"    : "tablet"
+        }
+    }
+,
+    {
+        "desc"    : "Verizon Ellipsis 8HD Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; QTASUN1 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Verizon",
+            "model"   : "QTASUN1",
+            "type"    : "tablet"
+        }
+    }
 ]
