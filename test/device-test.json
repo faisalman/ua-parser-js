@@ -600,4 +600,26 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Dell Venue 8 Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; Venue 8 3830 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Dell",
+            "model"   : "Venue 8 3830",
+            "type"    : "tablet"
+        }
+    }
+,
+    {
+        "desc"    : "Dell Venue 7 Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; Venue 7 3730 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Dell",
+            "model"   : "Venue 7 3730",
+            "type"    : "tablet"
+        }
+    }
 ]
