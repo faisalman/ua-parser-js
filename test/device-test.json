@@ -787,4 +787,15 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Trinity Tablets",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0.1; Trinity T101 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Trinity",
+            "model"   : "T101",
+            "type"    : "tablet"
+        }
+    }
 ]
