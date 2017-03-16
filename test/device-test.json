@@ -732,4 +732,15 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Voice Xtreme V75",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 4.2.1; en-us; V75 Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect"  :
+        {
+            "vendor"  : "Voice",
+            "model"   : "V75",
+            "type"    : "mobile"
+        }
+    }
 ]
