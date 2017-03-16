@@ -651,6 +651,8 @@
             /android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build/i     // Barnes & Noble Tablet
             ], [[VENDOR, 'Barnes & Noble'], MODEL, [TYPE, TABLET]], [
 
+            /android.+[;\/]\s+(TM\d{3}.*\b)\s+build/i                           // Barnes & Noble Tablet
+            ], [MODEL, [VENDOR, 'NuVision'], [TYPE, TABLET]], [
 
             /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
