@@ -699,4 +699,15 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Zeki TB782b Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 4.0.4; en-US; TB782B Build/IMM76D) AppleWebKit/534.31 (KHTML, like Gecko) UCBrowser/9.0.2.299 U3/0.8.0 Mobile Safari/534.31",
+        "expect"  :
+        {
+            "vendor"  : "Zeki",
+            "model"   : "TB782B",
+            "type"    : "tablet"
+        }
+    }
 ]
