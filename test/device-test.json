@@ -754,4 +754,15 @@
             "type"    : "mobile"
         }
     }
+,
+    {
+        "desc"    : "Envizen Tablet V100MD",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 4.1.1; en-us; V100MD Build/V100MD.20130816) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect"  :
+        {
+            "vendor"  : "Envizen",
+            "model"   : "V100MD",
+            "type"    : "tablet"
+        }
+    }
 ]
