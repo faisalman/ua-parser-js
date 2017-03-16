@@ -524,6 +524,17 @@
         }
     }
 ,
+
+    {
+        "desc"    : "Generic Android Device",
+        "ua"      : "Mozilla/5.0  (Linux; U; Android 6.0.1; i980 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Generic",
+            "model"   : "Android 6.0.1"
+        }
+    }
+,
     {
         "desc"    : "LG VK Series Tablet",
         "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; VK700 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.84 Safari/537.36",
