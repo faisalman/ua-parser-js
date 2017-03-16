@@ -853,4 +853,15 @@
             "type"    : "tablet"
         }
     }
+,
+    {
+        "desc"    : "Gigaset Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 4.2.2; Gigaset QV830 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "Gigaset",
+            "model"   : "QV830",
+            "type"    : "tablet"
+        }
+    }
 ]
