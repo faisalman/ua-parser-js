@@ -670,6 +670,9 @@
             /android.+[;\/]\s+(Dragon[\-\s]+Touch\s+|DT)(.+)\s+build/i          // Dragon Touch Tablet
             ], [[VENDOR, 'Dragon Touch'], MODEL, [TYPE, TABLET]], [
 
+            /android.+[;\/]\s*(NS-?.+)\s+build/i                                // Insignia Tablets
+            ], [MODEL, [VENDOR, 'Insignia'], [TYPE, TABLET]], [
+
             /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL], [

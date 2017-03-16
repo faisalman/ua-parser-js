@@ -712,12 +712,23 @@
     }
 ,
     {
-        "desc"    : "Dragon Touch Tablet",
-        "ua"      : "Mozilla/5.0 (Linux; Android 4.0.4; DT9138B Build/IMM76D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.72 Mobile Safari/537.36",
+    "desc"    : "Dragon Touch Tablet",
+    "ua"      : "Mozilla/5.0 (Linux; Android 4.0.4; DT9138B Build/IMM76D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.72 Mobile Safari/537.36",
+    "expect"  :
+    {
+    "vendor"  : "Dragon Touch",
+    "model"   : "9138B",
+    "type"    : "tablet"
+    }
+    }
+,
+    {
+        "desc"    : "Insignia Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 6.0.1; NS-P08A7100 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Safari/537.36",
         "expect"  :
         {
-            "vendor"  : "Dragon Touch",
-            "model"   : "9138B",
+            "vendor"  : "Insignia",
+            "model"   : "NS-P08A7100",
             "type"    : "tablet"
         }
     }
