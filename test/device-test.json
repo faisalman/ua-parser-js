@@ -743,4 +743,15 @@
             "type"    : "mobile"
         }
     }
+,
+    {
+        "desc"    : "LvTel V11",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; V11 Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "LvTel",
+            "model"   : "V11",
+            "type"    : "mobile"
+        }
+    }
 ]
