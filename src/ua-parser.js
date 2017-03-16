@@ -682,6 +682,9 @@
             /android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i          // Envizen Tablets
             ], [MODEL, [VENDOR, 'Envizen'], [TYPE, TABLET]], [
 
+            /android.+[;\/]\s*(Trio[\s\-]*.*)\s+build/i                         // MachSpeed Tablets
+            ], [MODEL, [VENDOR, 'MachSpeed'], [TYPE, TABLET]], [
+
             /android.+[;\/]\s*TU_(1491)\s+build/i                               // Rotor Tablets
             ], [MODEL, [VENDOR, 'Rotor'], [TYPE, TABLET]], [
 
