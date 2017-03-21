@@ -620,6 +620,16 @@
         }
     },
     {
+        "desc"    : "Opera Coast",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_2 like Mac OS X; en) AppleWebKit/601.1.46 (KHTML, like Gecko) Coast/5.04.110603 Mobile/13F69 Safari/7534.48.3",
+        "expect"  :
+        {
+            "name"    : "Opera Coast",
+            "version" : "5.04.110603",
+            "major"   : "5"
+        }
+    },
+    {
         "desc"    : "PhantomJS",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34",
         "expect"  :
@@ -747,6 +757,16 @@
             "name"    : "Tizen Browser",
             "version" : "1.0",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "UC Browser",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; Lenovo P2a42 Build/MMB29M) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.2.0.915 U3/0.8.0 Mobile Safari/534.30",
+        "expect"  :
+        {
+            "name"    : "UCBrowser",
+            "version" : "11.2.0.915",
+            "major"   : "11"
         }
     },
     {
