@@ -83,7 +83,7 @@
 
         rgx : function (ua, arrays) {
 
-            //var result = {}, 
+            //var result = {},
             var i = 0, j, k, p, q, matches, match;//, args = arguments;
 
             /*// construct object barebones
@@ -266,6 +266,9 @@
 
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
             ], [[NAME, 'Yandex'], VERSION], [
+
+            /(puffin)\/([\w\.]+)/i                                              // Puffin
+            ], [[NAME, 'Puffin'], VERSION], [
 
             /(uc\s?browser)[\/\s]?([\w\.]+)/i,
             /ucweb.+(ucbrowser)[\/\s]?([\w\.]+)/i,

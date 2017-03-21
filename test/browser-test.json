@@ -850,6 +850,16 @@
         }
     },
     {
+        "desc"    : "Puffin",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo P2a42 Build/MMB29M; en-us) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Puffin/6.0.8.15804AP",
+        "expect"  :
+        {
+            "name"    : "Puffin",
+            "version" : "6.0.8.15804AP",
+            "major"   : "6"
+        }
+    },
+    {
         "desc"    : "Microsoft Edge",
         "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0",
         "expect"  :
