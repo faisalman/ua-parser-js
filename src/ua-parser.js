@@ -631,6 +631,9 @@
             /android.+a000(1)\s+build/i                                         // OnePlus
             ], [MODEL, [VENDOR, 'OnePlus'], [TYPE, MOBILE]], [
 
+            /mozilla\/5\.0\s\(linux;\s(?:U;\s)?android\s\d\.\d(?:\.\d)?;\s(?:[a-z]{2}-[a-z]{2};\s)?([a-z\-_0-9\s]+)\sBuild/i
+            ], [MODEL], [
+
             /\s(tablet)[;\/]/i,                                                 // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL]
