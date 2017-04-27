@@ -513,4 +513,37 @@
             "type"    : "mobile"
         }
     }
+,
+    {
+        "desc"    : "LG Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; VK700 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.84 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "LG",
+            "model"   : "VK700",
+            "type"    : "tablet"
+        }
+    }
+,
+    {
+        "desc"    : "RCA Voyager III Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; RCT6973W43 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "RCA",
+            "model"   : "RCT6973W43",
+            "type"    : "tablet"
+        }
+    }
+,
+    {
+        "desc"    : "RCA Voyager II Tablet",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0; RCT6773W22B Build/LRX21M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "expect"  :
+        {
+            "vendor"  : "RCA",
+            "model"   : "RCT6773W22B",
+            "type"    : "tablet"
+        }
+    }
 ]
