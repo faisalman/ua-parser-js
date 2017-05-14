@@ -83,7 +83,7 @@
 
         rgx : function (ua, arrays) {
 
-            //var result = {}, 
+            //var result = {},
             var i = 0, j, k, p, q, matches, match;//, args = arguments;
 
             /*// construct object barebones
@@ -267,6 +267,16 @@
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
             ], [[NAME, 'Yandex'], VERSION], [
 
+            /(puffin)\/([\w\.]+)/i                                              // Puffin
+            ], [[NAME, 'Puffin'], VERSION], [
+
+            /(uc\s?browser)[\/\s]?([\w\.]+)/i,
+            /ucweb.+(ucbrowser)[\/\s]?([\w\.]+)/i,
+            /juc.+(ucweb)[\/\s]?([\w\.]+)/i,
+            /(ucbrowser)\/([\w\.]+)/i
+                                                                                // UCBrowser
+            ], [[NAME, 'UCBrowser'], VERSION], [
+
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
@@ -290,17 +300,14 @@
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [
 
-            /(uc\s?browser)[\/\s]?([\w\.]+)/i,
-            /ucweb.+(ucbrowser)[\/\s]?([\w\.]+)/i,
-            /juc.+(ucweb)[\/\s]?([\w\.]+)/i
-                                                                                // UCBrowser
-            ], [[NAME, 'UCBrowser'], VERSION], [
-
             /(dolfin)\/([\w\.]+)/i                                              // Dolphin
             ], [[NAME, 'Dolphin'], VERSION], [
 
             /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
             ], [[NAME, 'Chrome'], VERSION], [
+
+            /(coast)\/([\w\.]+)/i                                               // Opera Coast
+            ], [[NAME, 'Opera Coast'], VERSION], [
 
             /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS
             ], [VERSION, [NAME, 'Facebook']], [
