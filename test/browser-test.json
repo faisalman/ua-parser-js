@@ -779,7 +779,6 @@
             "major"   : "11"
         }
     },
-
     {
         "desc": "WeChat on iOS",
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_4_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H321 MicroMessenger/6.3.6 NetType/WIFI Language/zh_CN",
