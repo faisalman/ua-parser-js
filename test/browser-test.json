@@ -770,7 +770,7 @@
         }
     },
     {
-        "desc"    : "UC Browser J2ME 2",
+        "desc"    : "UC Browser on Lenovo",
         "ua"      : "Mozilla/5.0 (Linux; U; Android 6.0; en-US; Lenovo TB3-730X Build/MRA58K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.2.8.945 U3/0.8.0 Mobile Safari/534.30",
         "expect"  :
         {
