@@ -289,6 +289,9 @@
             /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
             ], [VERSION, [NAME, 'MIUI Browser']], [
 
+            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android
+            ], [VERSION, [NAME, 'Facebook']], [
+
             /(headlesschrome) ([\w\.]+)/i                                       // Chrome Headless
             ], [VERSION, [NAME, 'Chrome Headless']], [
 
@@ -311,9 +314,6 @@
 
             /(coast)\/([\w\.]+)/i                                               // Opera Coast
             ], [[NAME, 'Opera Coast'], VERSION], [
-
-            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS
-            ], [VERSION, [NAME, 'Facebook']], [
 
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
             ], [VERSION, [NAME, 'Firefox']], [
