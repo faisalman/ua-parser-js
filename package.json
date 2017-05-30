@@ -43,6 +43,7 @@
     "John Tantalo <john.tantalo@gmail.com>",
     "John Yanarella <jmy@codecatalyst.com>",
     "Jon Buckley <jon@jbuckley.ca>",
+    "Jonathan Schatz <jon@divisionbyzero.com>",
     "Kendall Buchanan <kendall@kendagriff.com>",
     "Lee Treveil <leetreveil@gmail.com>",
     "leonardo <leofiore@libero.it>",
@@ -96,8 +97,8 @@
     ]
   },
   "devDependencies": {
-    "jshint": "~1.1.0",
-    "mocha": "~1.8.0",
+    "jshint": "^2.9.4",
+    "mocha": "^3.4.2",
     "requirejs": "^2.3.2",
     "uglify-js": "~2.7.5",
     "verup": "^1.3.x"

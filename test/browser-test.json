@@ -220,13 +220,23 @@
         }
     },
     {
-        "desc"    : "Facebook in-App Browser",
+        "desc"    : "Facebook in-App Browser Android",
         "ua"      : "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]",
         "expect"  :
         {
             "name"    : "Chrome WebView",
             "version" : "43.0.2357.121",
             "major"   : "43"
+        }
+    },
+    {
+        "desc"    : "Facebook in-App Browser IOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E304 [FBAN/FBIOS;FBAV/90.0.0.51.69;FBBV/56254015;FBDV/iPhone7,1;FBMD/iPhone;FBSN/iOS;FBSV/10.3.1;FBSS/3;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5;FBRV/0]",
+        "expect"  :
+        {
+            "name"    : "Safari WebView",
+            "version" : "10.3.1",
+            "major"   : "10"
         }
     },
     {
@@ -457,6 +467,16 @@
             "name"    : "Mobile Safari",
             "version" : "4.0.5",
             "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "Mobile Safari",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0 like Mac OS X) AppleWebKit/602.1.38 (KHTML, like Gecko) Version/10.0 Mobile/14A5297c Safari/602.1",
+        "expect"  :
+        {
+            "name"    : "Mobile Safari",
+            "version" : "10.0",
+            "major"   : "10"
         }
     },
     {
