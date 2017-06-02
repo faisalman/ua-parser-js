@@ -1,15 +1,16 @@
 # UAParser.js
 
-<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A not-so-lightweight-anymore JavaScript-based User-Agent string parser. Can be used either in-browser (client-side) or in a node.js (server-side) environment. Also available as a jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify the web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from the user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently.
+<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently. However, it's not recommended to use this library as browser detection since the result may not accurate than using feature detection.
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
+[![NPM downloads](https://img.shields.io/npm/dw/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
 [![NPM](https://img.shields.io/npm/v/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
 [![Bower](https://img.shields.io/bower/v/ua-parser-js.svg)](https://bower.io/)
 [![CDNJS](https://img.shields.io/cdnjs/v/UAParser.js.svg)](https://cdnjs.com/libraries/UAParser.js)
 [![Gratipay](https://img.shields.io/gratipay/team/UAParser.js.svg)](https://gratipay.com/UAParser.js)
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
 
-* Author    : Faisal Salman <<fyzlman@gmail.com>>
+* Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
