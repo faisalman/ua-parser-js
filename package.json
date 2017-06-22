@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.12",
+  "version": "0.7.13",
   "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -85,7 +85,6 @@
   "verup": {
     "files": [
       "ua-parser-js.jquery.json",
-      "component.json",
       "bower.json",
       "package.js",
       "src/ua-parser.js"
