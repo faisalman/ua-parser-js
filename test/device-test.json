@@ -220,6 +220,16 @@
         }
     },
     {
+        "desc"    : "Samsung SM-C5000",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; SM-C5000 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.81 Mobile Safari/537.36 wkbrowser 4.1.35 3065",
+        "expect"  :
+        {
+            "vendor"  : "Samsung",
+            "model"   : "SM-C5000",
+            "type"    : "mobile"
+        }
+    },
+    {
         "desc"    : "Samsung SM-T231",
         "ua"      : "Mozilla/5.0 (Linux; Android 4.4.2; SM-T231 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
         "expect"  :
@@ -295,7 +305,7 @@
         "expect"  :
         {
             "vendor"  : "Sony",
-            "model"   : "Xperia Phone",
+            "model"   : "C5303",
             "type"    : "mobile"
         }
     },
@@ -305,7 +315,7 @@
         "expect"    :
         {
             "vendor"  : "Sony",
-            "model"   : "Xperia Phone",
+            "model"   : "SO-02F",
             "type"    : "mobile"
         }
     },
@@ -315,7 +325,7 @@
         "expect"    :
         {
             "vendor"  : "Sony",
-            "model"   : "Xperia Phone",
+            "model"   : "D6653",
             "type"    : "mobile"
         }
     },
@@ -325,7 +335,7 @@
         "expect"    :
         {
             "vendor"  : "Sony",
-            "model"   : "Xperia Phone",
+            "model"   : "SOL25",
             "type"    : "mobile"
         }
     },
@@ -335,7 +345,7 @@
         "expect"    :
         {
             "vendor"  : "Sony",
-            "model"   : "Xperia Phone",
+            "model"   : "C5302",
             "type"    : "mobile"
         }
     },
