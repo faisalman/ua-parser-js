@@ -550,6 +550,16 @@
         }
     },
     {
+        "desc"    : "Oculus Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G920I Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/3.4.9 SamsungBrowser/4.0 Chrome/57.0.2987.146 Mobile VR Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Oculus Browser",
+            "version" : "3.4.9",
+            "major"   : "3"
+        }
+    },
+    {
         "desc"    : "OmniWeb",
         "ua"      : "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US) AppleWebKit/85 (KHTML, like Gecko) OmniWeb/v558.48",
         "expect"  :
