@@ -293,7 +293,10 @@
             ], [VERSION, [NAME, 'Chrome Headless']], [
 
             /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
-            ], [[NAME, /(.+)/, '$1 WebView'], VERSION], [
+            ], [[NAME, 'Chrome WebView'], VERSION], [
+
+            /(chrome)\/([\w\.]+) Mobile/i                                      // Chrome Mobile
+            ], [[NAME, 'Chrome Mobile'], VERSION], [
 
             /((?:oculus|samsung)browser)\/([\w\.]+)/i
             ], [[NAME, /(.+(?:g|us))(.+)/, '$1 $2'], VERSION], [                // Oculus / Samsung Browser
@@ -313,6 +316,9 @@
 
             /(coast)\/([\w\.]+)/i                                               // Opera Coast
             ], [[NAME, 'Opera Coast'], VERSION], [
+                
+            /(?:mobile|tablet);.*(firefox)\/([\w\.-]+)/i                        // Firefox Mobile
+            ], [[NAME, 'Firefox Mobile'], VERSION], [
 
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
             ], [VERSION, [NAME, 'Firefox']], [
