@@ -64,7 +64,7 @@
         "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.0 Chrome/38.0.2125.102 Mobile Safari/537.36",
         "expect"  :
         {
-            "name"    : "Android Browser",
+            "name"    : "Samsung Browser",
             "version" : "3.0",
             "major"   : "3"
         }
@@ -717,6 +717,16 @@
             "name"    : "Safari",
             "version" : "2.0.4",
             "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Samsung Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; SAMSUNG-SM-G925A Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Samsung Browser",
+            "version" : "4.0",
+            "major"   : "4"
         }
     },
     {

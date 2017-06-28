@@ -298,7 +298,9 @@
             /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
             ], [[NAME, /(.+)/, '$1 WebView'], VERSION], [
 
-            /android.+samsungbrowser\/([\w\.]+)/i,
+            /android.+(samsungbrowser)\/([\w\.]+)/i
+            ], [[NAME, /(.+g)(.+)/, '$1 $2'], VERSION], [                       // Samsung Browser
+
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i        // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
