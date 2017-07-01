@@ -818,6 +818,11 @@
 
     var UAParser = function (uastring, extensions) {
 
+        if (typeof uastring === 'object') {
+            extensions = uastring;
+            uastring = undefined;
+        }
+
         if (!(this instanceof UAParser)) {
             return new UAParser(uastring, extensions).getResult();
         }

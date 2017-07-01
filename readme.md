@@ -253,16 +253,16 @@ $('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.
 
 ## Extending regex patterns
 
-* `UAParser(uastring[, extensions])`
+* `UAParser([uastring,] extensions)`
 
 Pass your own regexes to extend the limited matching rules.
 
 ```js
 // Example:
-var uaString = 'Mozilla/5.0 MyOwnBrowser/1.3';
 var myOwnRegex = [[/(myownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
-var parser = new UAParser(uaString, { browser: myOwnRegex });
-console.log(parser.getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
+var myParser = new UAParser({ browser: myOwnRegex });
+var uaString = 'Mozilla/5.0 MyOwnBrowser/1.3';
+console.log(myParser.setUA(uaString).getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
 ```
 
 
