@@ -924,7 +924,7 @@
             define(function () {
                 return UAParser;
             });
-        } else {
+        } else if (window) {
             // browser env
             window.UAParser = UAParser;
         }
@@ -935,7 +935,7 @@
     //   In AMD env the global scope should be kept clean, but jQuery is an exception.
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
-    var $ = window.jQuery || window.Zepto;
+    var $ = window && (window.jQuery || window.Zepto);
     if (typeof $ !== UNDEF_TYPE) {
         var parser = new UAParser();
         $.ua = parser.getResult();
