@@ -83,7 +83,7 @@
 
         rgx : function (ua, arrays) {
 
-            //var result = {}, 
+            //var result = {},
             var i = 0, j, k, p, q, matches, match;//, args = arguments;
 
             /*// construct object barebones
@@ -272,6 +272,9 @@
 
             /(micromessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
+
+            /(QQ)\/([\d\.]+)/i                                                  // QQ, aka ShouQ
+            ], [NAME, VERSION], [
 
             /m?(qqbrowser)[\/\s]?([\w\.]+)/i                                    // QQBrowser
             ], [NAME, VERSION], [
