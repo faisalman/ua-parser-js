@@ -934,9 +934,39 @@
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) FxiOS/1.1 Mobile/13B143 Safari/601.1.46",
         "expect"  :
         {
-            "name"    : "Firefox",
+            "name"    : "Firefox Mobile",
             "version" : "1.1",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Chrome Mobile",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chrome Mobile",
+            "version" : "58.0.3029.83",
+            "major"   : "58"
+        }
+    },
+    {
+        "desc"    : "Firefox Mobile",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W) AppleWebKit/537.36 (KHTML, like Gecko) FxiOS/7.5b3349 Mobile/14F89 Safari/603.2.4",
+        "expect"  :
+        {
+            "name"    : "Firefox Mobile",
+            "version" : "7.5b3349",
+            "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "Firefox Mobile",
+        "ua"      : "Mozilla/5.0 (Android 5.0; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0",
+        "expect"  :
+        {
+            "name"    : "Firefox Mobile",
+            "version" : "41.0",
+            "major"   : "41"
         }
     }
 ]
