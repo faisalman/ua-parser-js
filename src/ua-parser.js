@@ -228,6 +228,8 @@
     var regexes = {
 
         browser : [[
+            /(spotify)\/([\w.]+)/i                                              //Spotify
+            ], [NAME, VERSION], [
 
             // Presto based
             /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini
