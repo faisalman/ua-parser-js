@@ -287,6 +287,13 @@ $ npm run build
 ```
 
 
+# Donate
+
+Do you use & like UAParser.js but you don’t find a way to show some love? If yes, please consider donating to support this project. Otherwise, no worries, regardless of whether there is support or not, I will keep maintaining this project. Still, if you buy me a cup of coffee I would be more than happy though :)
+
+[![Support via Pledgie](https://pledgie.com/campaigns/34252.png?skin_name=chrome)](https://pledgie.com/campaigns/34252)
+
+
 # License
 
 Dual licensed under GPLv2 & MIT
