@@ -2,7 +2,7 @@
   "title": "UAParser.js",
   "name": "ua-parser-js",
   "version": "0.7.13",
-  "author": "Faisal Salman <fyzlman@gmail.com> (http://faisalman.com)",
+  "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
     "user-agent",
@@ -11,7 +11,9 @@
     "engine",
     "os",
     "device",
-    "cpu"
+    "cpu",
+    "jquery-plugin",
+    "ecosystem:jquery"
   ],
   "homepage": "http://github.com/faisalman/ua-parser-js",
   "contributors": [
@@ -84,7 +86,6 @@
   },
   "verup": {
     "files": [
-      "ua-parser-js.jquery.json",
       "bower.json",
       "package.js",
       "src/ua-parser.js"
@@ -113,5 +114,8 @@
     "dist": "dist",
     "src": "src",
     "test": "test"
-  }
+  },
+  "bugs": "https://github.com/faisalman/ua-parser-js/issues",
+  "demo": "https://faisalman.github.io/ua-parser-js",
+  "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.min.js"
 }
