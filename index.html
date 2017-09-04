@@ -123,17 +123,17 @@
   <body>
     <header>
       <h1><a href="https://faisalman.github.io/ua-parser-js">UAParser.js</a></h1>
-      <h2>Lightweight JavaScript-based User-Agent String Parser</h2>
+      <h2 trans-key="description">Lightweight JavaScript-based User-Agent String Parser</h2>
     </header>
     <section class="result">
       <pre>
       </pre>
       <table>
         <tr>
-          <th>Browser</th>
-          <th>Engine</th>
-          <th>OS</th>
-          <th>Device</th>
+          <th trans-key="browser">Browser</th>
+          <th trans-key="engine">Engine</th>
+          <th trans-key="os">OS</th>
+          <th trans-key="device">Device</th>
         </tr>
         <tr>
           <td></td>
@@ -155,20 +155,25 @@
       </table>
     </section>
     <section class="test">
-      <p>Pick one user agent to be tested:</p>
+      <p trans-key="pick_one_label">Pick one user agent to be tested:</p>
       <select>
-        <option>Pick one</option>
+        <option trans-key="pick_one_text">Pick one</option>
       </select>
-      <p>Or enter any user-agent string you want to test here:</p>
+      <p trans-key="enter_user_agent_string">Or enter any user-agent string you want to test here:</p>
       <input type="text" />
     </section>
     <footer>
       <p>
         <span class="ua">UAParser.js</span> &copy; 2012-2014 Faisal Salman. <br/>
-        Dual licensed under GPLv2 & MIT license<br/>
-        Source &amp; Docs: <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a><br/>
-        Node.js package: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a><br/>
-        $.ua: <a href="http://plugins.jquery.com/ua-parser-js/">http://plugins.jquery.com/ua-parser-js/</a>
+        <span trans-key="license">Dual licensed under GPLv2 & MIT license</span><br/>
+        <span trans-key="source_and_docs">Source &amp; Docs</span>: <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a><br/>
+        <span trans-key="nodejs_package">Node.js package</span>: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a><br/>
+        <span trans-key="jquery">$.ua</span>: <a href="http://plugins.jquery.com/ua-parser-js/">http://plugins.jquery.com/ua-parser-js/</a>
+      </p>
+
+      <p>
+        <a href="?lang=en">English</a> |
+        <a href="?lang=fr">Français</a>
       </p>
     </footer>
     <script>
@@ -231,7 +236,7 @@
         for(var i = 0; i < prop.length; i++){
             fill(tbl[i], prop[i]);
         }
-        pre.innerHTML = 'Result for <span class="uastring">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (User-Agent string of your browser)') + '</span> :';
+        pre.innerHTML = trans('result_for') + ' <span class="uastring">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (' + trans('user_agent_string') + ')') + '</span> :';
       }
       fillTable();
       var select = function(){
@@ -250,6 +255,67 @@
           sel.attachEvent('onchange', select);
           txt.attachEvent('onkeydown', enter);
       }
+
+      var forEach = function (array, callback, scope) {
+          for (var i = 0; i < array.length; i++) {
+              callback.call(scope, i, array[i]); // passes back stuff we need
+          }
+      };
+
+
+      function getTranslations() {
+        var translations = {
+            en: {
+                result_for: 'Result for',
+                user_agent_string: 'User-Agent string of your browser',
+            },
+            fr: {
+                description: 'Parseur léger de chaine "User-Agent" en JavaScript',
+                result_for: 'Résultat pour',
+                user_agent_string: 'Chaine "User-Agent"',
+                browser: 'Navigateur',
+                engine: 'Moteur',
+                os: 'Système d\'exploitation',
+                device: 'Appareil',
+                enter_user_agent_string: 'Entrez une chaine de "User-Agent" à tester:',
+                pick_one_label: 'Sélectionner un "User-Agent" à tester',
+                pick_one_text: 'Sélectionner',
+                license: 'Double license GPLv2 & MIT',
+                source_and_docs: 'Source et doc',
+                nodejs_package: 'Package Node.js',
+            }
+        };
+
+        return translations;
+      }
+
+      function trans(key) {
+          const queryLang = location.search.match(/lang=([a-z]+)/);
+          var locale = queryLang || navigator.language || navigator.userLanguage; 
+          var translations = getTranslations();
+
+          if (!translations) {
+              return null;
+          }
+
+          if (!translations[locale]) {
+              locale = 'en';
+          }
+
+          var localeTranslations = translations[locale];
+          return localeTranslations && localeTranslations[key];
+      }
+
+      var transKeys = document.querySelectorAll('[trans-key]');
+
+      forEach(transKeys, function (index, value) {
+        var transKey = value.getAttribute('trans-key');
+        var translatedText = trans(transKey);
+
+        if (translatedText) {
+          value.innerHTML = translatedText;
+        }
+      });
     </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
