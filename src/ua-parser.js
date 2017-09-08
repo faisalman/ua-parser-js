@@ -520,8 +520,8 @@
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, MOBILE]], [
 
             /(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[\s_-]?([\w-]+)*/i,
-                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|mz|motorola|polytron)[\s_-]?([\w-]+)*/i,
+                                                                                // BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/MZ (Meizu)/Motorola/Polytron
             /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
             /(asus)-?(\w+)/i                                                    // Asus
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
