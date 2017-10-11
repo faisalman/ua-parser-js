@@ -958,5 +958,15 @@
             "version" : "6.5.8.2910",
             "major"   : "6"
         }
+    },
+    {
+        "desc"    : "GSA on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) GSA/30.1.161623614 Mobile/14F89 Safari/602.1",
+        "expect"  :
+        {
+            "name"    : "GSA",
+            "version" : "30.1.161623614",
+            "major"   : "30"
+        }
     }
 ]
