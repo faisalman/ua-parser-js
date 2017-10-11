@@ -212,6 +212,12 @@ requirejs(['ua-parser-js'], function(UAParser) {
 });
 ```
 
+## Using CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
+```
+
 ## Using bower
 
 ```sh
