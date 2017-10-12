@@ -145,8 +145,8 @@
             "expect"  :
         {
            "name"    : "Chrome Headless",
-           "version" : "HeadlessChrome",
-           "major"   : ""
+           "version" : "undefined",
+           "major"   : "undefined"
         }
     },
     {
