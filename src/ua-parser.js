@@ -1,5 +1,5 @@
 /**
- * UAParser.js v0.7.16
+ * UAParser.js v0.7.17
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.16',
+    var LIBVERSION  = '0.7.17',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -1006,7 +1006,8 @@
         if (typeof module !== UNDEF_TYPE && module.exports) {
             exports = module.exports = UAParser;
         }
-        // TODO: test!!!
+        // TODO: test!!!!!!!!
+        /*
         if (require && require.main === module && process) {
             // cli
             var jsonize = function (arr) {
@@ -1033,6 +1034,7 @@
                 });
             }
         }
+        */
         exports.UAParser = UAParser;
     } else {
         // requirejs env (optional)
