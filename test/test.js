@@ -65,6 +65,21 @@ for (var i in methods) {
     });
 }
 
+describe('Returns', function () {
+    it('getResult() should returns JSON', function(done) {
+        assert.deepEqual(new UAParser('').getResult(), 
+            {
+                ua : '',
+                browser: { name: undefined, version: undefined, major: undefined },
+                cpu: { architecture: undefined },
+                device: { vendor: undefined, model: undefined, type: undefined },
+                engine: { name: undefined, version: undefined},
+                os: { name: undefined, version: undefined }
+        });
+        done();
+    });
+});
+
 describe('Extending Regex', function () {
     var uaString = 'Mozilla/5.0 MyOwnBrowser/1.3';
     var myOwnBrowser = [[/(myownbrowser)\/((\d+)?[\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, UAParser.BROWSER.MAJOR]];
