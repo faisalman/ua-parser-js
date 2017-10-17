@@ -815,5 +815,14 @@
             "model": "MI PAD 2",
             "type": "tablet"
         }
+    },
+    {
+        "desc": "Roku Digital Video Player",
+        "ua": "Roku/DVP-5.0 (025.00E08043A)",
+        "expect": {
+            "vendor": "Roku",
+            "model": "02",
+            "type": "smarttv"
+        }
     }
 ]
