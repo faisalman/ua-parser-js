@@ -314,7 +314,7 @@ Do you use & like UAParser.js but you don’t find a way to show some love? If y
 
 # License
 
-Dual licensed under GPLv2 & MIT
+Dual licensed under GPLv2 or MIT
 
 Copyright © 2012-2016 Faisal Salman <<fyzlman@gmail.com>>
 
