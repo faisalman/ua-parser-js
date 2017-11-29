@@ -240,6 +240,16 @@
         }
     },
     {
+        "desc"    : "Waterfox",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.2.2 Waterfox/55.2.2",
+        "expect"  :
+        {
+            "name"    : "Waterfox",
+            "version" : "55.2.2",
+            "major"   : "55"
+        }
+    },
+    {
         "desc"    : "PaleMoon",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:52.9) Gecko/20100101 Goanna/3.4 Firefox/52.9 PaleMoon/27.6.1",
         "expect"  :
