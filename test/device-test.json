@@ -815,5 +815,14 @@
             "model": "MI PAD 2",
             "type": "tablet"
         }
+    },
+    {
+        "desc": "MI 5",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; MI 5 Build/MXB48T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI 5",
+            "type": "mobile"
+        }
     }
 ]
