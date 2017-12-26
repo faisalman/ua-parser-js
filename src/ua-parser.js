@@ -661,7 +661,8 @@
             /android.+;\s(m[1-5]\snote)\sbuild/i                                // Meizu Tablet
             ], [MODEL, [VENDOR, 'Meizu'], [TYPE, TABLET]], [
 
-            /android.+a000(1)\s+build/i                                         // OnePlus
+            /android.+a000(1)\s+build/i,                                        // OnePlus
+            /android.+oneplus\s(a\d{4})\s+build/i
             ], [MODEL, [VENDOR, 'OnePlus'], [TYPE, MOBILE]], [
 
             /android.+[;\/]\s*(RCT[\d\w]+)\s+build/i                            // RCA Tablets
