@@ -637,5 +637,14 @@
             "name"    : "Android",
             "version" : "4.2.1"
         }
+    },
+    {
+        "desc"    : "Roku Digital Video Player",
+        "ua"      : "Roku/DVP-5.0 (025.00E08043A)",
+        "expect"  :
+        {
+            "name"    : "Roku",
+            "version" : "5.0"
+        }
     }
 ]

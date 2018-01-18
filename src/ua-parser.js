@@ -734,7 +734,10 @@
             ], [[TYPE, util.lowerize], VENDOR, MODEL], [
 
             /(android.+)[;\/].+build/i                                          // Generic Android Device
-            ], [MODEL, [VENDOR, 'Generic']]
+            ], [MODEL, [VENDOR, 'Generic']],[
+
+            /roku\/dvp\-.*\s\((\d{2}).*\)/i                                     // Roku
+            ], [MODEL, [VENDOR, 'Roku'], [TYPE, SMARTTV]]
 
 
         /*//////////////////////////
@@ -873,7 +876,10 @@
             /(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
                                                                                 // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS
             /(unix)\s?([\w\.]+)*/i                                              // UNIX
-            ], [NAME, VERSION]
+            ], [NAME, VERSION],[
+
+            /roku\/dvp\-(.*)\s/i                                                // Roku
+            ], [VERSION, [NAME, 'Roku']]
         ]
     };
 
