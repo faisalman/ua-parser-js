@@ -261,7 +261,7 @@
             /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
             ], [[NAME, 'IE'], VERSION], [
 
-            /(edge|edgeios|edgea)\/((\d+)?[\w\.]+)/i                            // Microsoft Edge
+            /(edge|edgios|edgea)\/((\d+)?[\w\.]+)/i                            // Microsoft Edge
             ], [NAME, VERSION], [
 
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
