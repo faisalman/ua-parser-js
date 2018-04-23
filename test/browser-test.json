@@ -1008,5 +1008,15 @@
             "version" : "30.1.161623614",
             "major"   : "30"
         }
+    },
+    {
+        "desc"    : "QQBrowserLite",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0.1 Safari/602.2.14 QQBrowserLite/1.1.0",
+        "expect"  :
+        {
+            "name"    : "QQBrowserLite",
+            "version" : "1.1.0",
+            "major"   : "1"
+        }
     }
 ]
