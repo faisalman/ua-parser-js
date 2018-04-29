@@ -1008,5 +1008,41 @@
             "version" : "30.1.161623614",
             "major"   : "30"
         }
+    },
+    {
+        "desc"    : "Sogou Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0",
+        "expect"  :
+        {
+            "name"    : "MetaSr"
+        }
+    },
+    {
+        "desc"    : "LieBao Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.154 Safari/537.36 LBBROWSER",
+        "expect"  :
+        {
+            "name"    : "LBBROWSER"
+        }
+    },
+    {
+        "desc"    : "BaiDu Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 BIDUBrowser/8.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "BIDUBrowser",
+            "version" : "8.7",
+            "major"   : "8"
+        }
+    },
+    {
+        "desc"    : "2345 Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.2.1.17116",
+        "expect"  :
+        {
+            "name"    : "2345Explorer",
+            "version" : "9.2.1.17116",
+            "major"   : "9"
+        }
     }
 ]
