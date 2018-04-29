@@ -280,6 +280,9 @@
             /(micromessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
 
+            /(qqbrowserlite)\/([\w\.]+)/i                                       // QQBrowserLite
+            ], [NAME, VERSION], [
+
             /(QQ)\/([\d\.]+)/i                                                  // QQ, aka ShouQ
             ], [NAME, VERSION], [
 
