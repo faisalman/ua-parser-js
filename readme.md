@@ -7,8 +7,6 @@
 [![NPM](https://img.shields.io/npm/v/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
 [![Bower](https://img.shields.io/bower/v/ua-parser-js.svg)](https://bower.io/)
 [![CDNJS](https://img.shields.io/cdnjs/v/UAParser.js.svg)](https://cdnjs.com/libraries/UAParser.js)
-[![Gratipay](https://img.shields.io/gratipay/team/UAParser.js.svg)](https://gratipay.com/UAParser.js)
-[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
 
 * Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
@@ -310,14 +308,14 @@ $ npm run build
 
 Do you use & like UAParser.js but you don’t find a way to show some love? If yes, please consider donating to support this project. Otherwise, no worries, regardless of whether there is support or not, I will keep maintaining this project. Still, if you buy me a cup of coffee I would be more than happy though :)
 
-[![Support via Pledgie](https://pledgie.com/campaigns/34252.png?skin_name=chrome)](https://pledgie.com/campaigns/34252)
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/faisalman/)
 
 
 # License
 
 Dual licensed under GPLv2 or MIT
 
-Copyright © 2012-2016 Faisal Salman <<fyzlman@gmail.com>>
+Copyright © 2012-2018 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
