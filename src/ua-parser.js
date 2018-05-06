@@ -536,6 +536,8 @@
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
             /(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i                         // Fire Phone
             ], [[MODEL, mapper.str, maps.device.amazon.model], [VENDOR, 'Amazon'], [TYPE, MOBILE]], [
+            /android.+aft([bms])\sbuild/i                                       // Fire TV
+            ], [MODEL, [VENDOR, 'Amazon'], [TYPE, SMARTTV]], [
 
             /\((ip[honed|\s\w*]+);.+(apple)/i                                   // iPod/iPhone
             ], [MODEL, VENDOR, [TYPE, MOBILE]], [
