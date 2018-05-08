@@ -555,7 +555,15 @@
             "type": "mobile"
         }
     },
-
+    {
+        "desc": "Google Pixel 2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 Build/OPM1.171019.013) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 2",
+            "type": "mobile"
+        }
+    },
     {
         "desc": "Generic Android Device",
         "ua": "Mozilla/5.0  (Linux; U; Android 6.0.1; i980 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
