@@ -323,6 +323,9 @@
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i        // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
+            /(electron)[\/]?(([\w\.]+))?/i                                      // Electron
+            ], [NAME, VERSION], [
+
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [
@@ -898,6 +901,24 @@
         ]
     };
 
+    var electronUA = function () {
+        // Renderer process
+        if (typeof window !== 'undefined' && typeof window.process === 'object' && window.process.type === 'renderer') {
+            return 'electron';
+        }
+
+        // Main process
+        if (typeof process !== 'undefined' && typeof process.versions === 'object' && !!process.versions.electron) {
+            return 'electron'+'/'+process.versions.electron;
+        }
+
+        // Detect the user agent when the `nodeIntegration` option is set to true
+        if (typeof navigator === 'object' && typeof navigator.userAgent === 'string' && navigator.userAgent.indexOf('Electron') >= 0) {
+            return 'electron';
+        }
+
+        return;
+    };
 
     /////////////////
     // Constructor
@@ -929,7 +950,7 @@
             return new UAParser(uastring, extensions).getResult();
         }
 
-        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+        var ua = uastring || electronUA() || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
         var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
         //var browser = new Browser();
         //var cpu = new CPU();
@@ -1091,5 +1112,4 @@
             }
         };
     }
-
 })(typeof window === 'object' ? window : this);
