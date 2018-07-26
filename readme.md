@@ -27,15 +27,19 @@
 
 ```
 # Possible 'browser.name':
-Amaya, Android Browser, Arora, Avant, Baidu, Blazer, Bolt, Bowser, Camino, Chimera, 
-Chrome [WebView], Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Edge, 
-Epiphany, Fennec, Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, 
-IceCat, IceDragon, Iceweasel, IE[Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, 
-Links, Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
-Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
-PhantomJS, Phoenix, Polaris, QQBrowser, QQBrowserLite, Quark, RockMelt, Silk, Skyfire, 
-SeaMonkey, Sleipnir, SlimBrowser, Swiftfox, Tizen, UCBrowser, Vivaldi, w3m, Waterfox, 
-WeChat, Yandex
+2345Explorer, Amaya, Android Browser, Arora, Avant, BIDUBrowser, Baidu,
+Basilisk, Blazer, Bolt, Bowser, Camino, Chimera, Chrome Headless,
+Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo, Dolphin, Doris, Edge,
+Epiphany, Facebook, Fennec, Firebird, Firefox, Flock, GSA, GoBrowser,
+ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceape, Iceweasel,
+Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror, LBBROWSER Line, Links,
+Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, MetaSr Midori,
+Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape,
+NokiaBrowser, Oculus Browser, OmniWeb, Opera Coast, Opera Mini, Opera Mobi,
+Opera Tablet, Opera, PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ,
+QQBrowser, QQBrowserLite, Quark, RockMelt, Safari, Samsung Browser, SeaMonkey,
+Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser,
+Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m
 
 # 'browser.version' determined dynamically
 ```
