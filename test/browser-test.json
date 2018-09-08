@@ -1074,5 +1074,25 @@
             "version" : "1.1.0",
             "major"   : "1"
         }
+    },
+    {
+        "desc"    : "Electron",
+        "ua"      : "electron/2.0.5",
+        "expect"  :
+        {
+            "name"    : "electron",
+            "version" : "2.0.5",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Electron",
+        "ua"      : "electron",
+        "expect"  :
+        {
+            "name"    : "electron",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
     }
 ]
