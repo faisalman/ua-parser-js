@@ -138,7 +138,7 @@
         "ua"        : "Mozilla/5.0 (X11; Linux; Android 5.1; MZ-M3s Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrom/45.0.2454.94 Mobile Safari/537.36",
         "expect"    :
         {
-            "vendor"  : "MZ",
+            "vendor"  : "Meizu",
             "model"   : "M3s",
             "type"    : "mobile"
         }
