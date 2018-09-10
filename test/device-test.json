@@ -26,6 +26,15 @@
         }
     },
     {
+        "desc": "Essential PH-1",
+        "ua": "Mozilla/5.0 (Linux; Android 9; PH-1 Build/PPR1.180905.036) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Essential",
+            "model": "PH-1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "HTC Evo Shift 4G",
         "ua": "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0",
         "expect": {

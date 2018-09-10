@@ -739,6 +739,9 @@
             /android.+[;\/]\s*(LVTEL\-)?(V1[12])\s+build/i                     // LvTel Phones
             ], [[VENDOR, 'LvTel'], MODEL, [TYPE, MOBILE]], [
 
+            /android.+;\s(PH-1)\s/i
+            ], [MODEL, [VENDOR, 'Essential'], [TYPE, MOBILE]], [                // Essential PH-1
+
             /android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i          // Envizen Tablets
             ], [MODEL, [VENDOR, 'Envizen'], [TYPE, TABLET]], [
 
