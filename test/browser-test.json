@@ -980,6 +980,26 @@
         }
     },
     {
+        "desc"    : "Microsoft Edge on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 EdgiOS/42.1.1.0 Mobile/15F79 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "42.1.1.0",
+            "major"   : "42"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.0.0; G8441 Build/47.1.A.12.270) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.123 Mobile Safari/537.36 EdgA/42.0.0.2529",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "42.0.0.2529",
+            "major"   : "42"
+        }
+    },
+    {
         "desc"    : "Iridium",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Iridium/43.8 Safari/537.36 Chrome/43.0.2357.132",
         "expect"  :
