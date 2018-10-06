@@ -1,6 +1,6 @@
 # UAParser.js
 
-<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently. However, it's not recommended to use this library as browser detection since the result may not be more accurate than using feature detection.
+<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~17KB when minified / ~6KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently. However, it's not recommended to use this library as browser detection since the result may not be more accurate than using feature detection.
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
 [![NPM downloads](https://img.shields.io/npm/dw/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
@@ -27,15 +27,19 @@
 
 ```
 # Possible 'browser.name':
-Amaya, Android Browser, Arora, Avant, Baidu, Blazer, Bolt, Bowser, Camino, Chimera, 
-Chrome [WebView], Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Edge, 
-Epiphany, Fennec, Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, 
-IceCat, IceDragon, Iceweasel, IE[Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, 
-Links, Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
-Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
-PhantomJS, Phoenix, Polaris, QQBrowser, QQBrowserLite, Quark, RockMelt, Silk, Skyfire, 
-SeaMonkey, Sleipnir, SlimBrowser, Swiftfox, Tizen, UCBrowser, Vivaldi, w3m, Waterfox, 
-WeChat, Yandex
+2345Explorer, Amaya, Android Browser, Arora, Avant, BIDUBrowser, Baidu,
+Basilisk, Blazer, Bolt, Bowser, Camino, Chimera, Chrome Headless,
+Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo, Dolphin, Doris, Edge,
+Epiphany, Facebook, Fennec, Firebird, Firefox, Flock, GSA, GoBrowser,
+ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceape, Iceweasel,
+Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror, LBBROWSER Line, Links,
+Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, MetaSr Midori,
+Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape,
+NokiaBrowser, Oculus Browser, OmniWeb, Opera Coast, Opera Mini, Opera Mobi,
+Opera Tablet, Opera, PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ,
+QQBrowser, QQBrowserLite, Quark, RockMelt, Safari, Samsung Browser, SeaMonkey,
+Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser,
+Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m
 
 # 'browser.version' determined dynamically
 ```

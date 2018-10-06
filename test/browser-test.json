@@ -1051,7 +1051,7 @@
         "expect"  :
         {
             "name"    : "BIDUBrowser",
-            "version" : "8.7",
+            "version" : "8.7", 
             "major"   : "8"
         }
     },
@@ -1073,6 +1073,16 @@
             "name"    : "QQBrowserLite",
             "version" : "1.1.0",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Brave Browser",
+        "ua"      : "Brave/4.5.16 CFNetwork/893.13.1 Darwin/17.3.0 (x86_64)",
+        "expect"  :
+        {
+            "name"    : "Brave",
+            "version" : "4.5.16",
+            "major"   : "4"
         }
     }
 ]
