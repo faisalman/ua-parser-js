@@ -261,7 +261,7 @@
             /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
             ], [[NAME, 'IE'], VERSION], [
 
-            /(edge|edgios|edgea)\/((\d+)?[\w\.]+)/i                             // Microsoft Edge
+            /(edge|edgios|edga)\/((\d+)?[\w\.]+)/i                              // Microsoft Edge
             ], [[NAME, 'Edge'], VERSION], [
 
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
@@ -270,8 +270,13 @@
             /(puffin)\/([\w\.]+)/i                                              // Puffin
             ], [[NAME, 'Puffin'], VERSION], [
 
-            /((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i
-                                                                                // UCBrowser
+            /(focus)\/([\w\.]+)/i                                               // Firefox Focus
+            ], [[NAME, 'Firefox Focus'], VERSION], [
+
+            /(opt)\/([\w\.]+)/i                                                 // Opera Touch
+            ], [[NAME, 'Opera Touch'], VERSION], [
+
+            /((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i         // UCBrowser
             ], [[NAME, 'UCBrowser'], VERSION], [
 
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
