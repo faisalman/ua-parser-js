@@ -320,6 +320,15 @@
         }
     },
     {
+        "desc": "Firefox Focus",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/6.1.1 Chrome/68.0.3440.91 Mobile Safari/537.36",
+        "expect": {
+            "name": "Firefox Focus",
+            "version": "6.1.1",
+            "major": "6"
+        }
+    },
+    {
         "desc"    : "Flock",
         "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008100716 Firefox/3.0.3 Flock/2.0",
         "expect"  :
@@ -720,6 +729,16 @@
         }
     },
     {
+        "desc"    : "Opera Touch",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; Lenovo P2a42 Build/NRD90N) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36 OPT/1.10.33",
+        "expect"  :
+        {
+            "name"    : "Opera Touch",
+            "version" : "1.10.33",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "PhantomJS",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34",
         "expect"  :
@@ -1071,7 +1090,7 @@
         "expect"  :
         {
             "name"    : "BIDUBrowser",
-            "version" : "8.7",
+            "version" : "8.7", 
             "major"   : "8"
         }
     },
@@ -1093,6 +1112,16 @@
             "name"    : "QQBrowserLite",
             "version" : "1.1.0",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Brave Browser",
+        "ua"      : "Brave/4.5.16 CFNetwork/893.13.1 Darwin/17.3.0 (x86_64)",
+        "expect"  :
+        {
+            "name"    : "Brave",
+            "version" : "4.5.16",
+            "major"   : "4"
         }
     }
 ]
