@@ -39,7 +39,7 @@ NokiaBrowser, Oculus Browser, OmniWeb, Opera Coast, Opera Mini, Opera Mobi,
 Opera Tablet, Opera, PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ,
 QQBrowser, QQBrowserLite, Quark, RockMelt, Safari, Samsung Browser, SeaMonkey,
 Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser,
-Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m
+Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
 
 # 'browser.version' determined dynamically
 ```
@@ -52,10 +52,10 @@ Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m
 console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
-Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, GeeksPhone, 
-Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, 
-Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm, Panasonic, Pebble, Polytron, RIM, 
-Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE
+Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, Essential,
+GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola,
+Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm, Panasonic, Pebble, Polytron,
+RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -81,7 +81,7 @@ Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Gentoo, GNU, Haiku, Hurd, iOS,
 Joli, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, 
 Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, PCLinuxOS, Plan9, Playstation, QNX, RedHat, 
 RIM Tablet OS, RISC OS, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, 
-Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk
+Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
