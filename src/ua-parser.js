@@ -674,7 +674,7 @@
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
-            /android.+;\s(pixel c)\s/i                                          // Google Pixel C
+            /android.+;\s(pixel c)[\s)]/i                                       // Google Pixel C
             ], [MODEL, [VENDOR, 'Google'], [TYPE, TABLET]], [
 
             /android.+;\s(pixel( [23])?( xl)?)\s/i                              // Google Pixel
