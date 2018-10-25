@@ -677,7 +677,7 @@
             /android.+;\s(pixel c)\s/i                                          // Google Pixel C
             ], [MODEL, [VENDOR, 'Google'], [TYPE, TABLET]], [
 
-            /android.+;\s(pixel [xl2]{1,2}|pixel)\s/i                           // Google Pixel
+            /android.+;\s(pixel( [23])?( xl)?)\s/i                              // Google Pixel
             ], [MODEL, [VENDOR, 'Google'], [TYPE, MOBILE]], [
 
             /android.+;\s(\w+)\s+build\/hm\1/i,                                 // Xiaomi Hongmi 'numeric' models

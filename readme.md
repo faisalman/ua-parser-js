@@ -25,7 +25,7 @@
 * `getBrowser()`
     * returns `{ name: '', version: '' }`
 
-```
+```sh
 # Possible 'browser.name':
 2345Explorer, Amaya, Android Browser, Arora, Avant, BIDUBrowser, Baidu,
 Basilisk, Blazer, Bolt, Bowser, Camino, Chimera, Chrome Headless,
@@ -47,7 +47,7 @@ Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m
 * `getDevice()`
     * returns `{ model: '', type: '', vendor: '' }` 
 
-```
+```sh
 # Possible 'device.type':
 console, mobile, tablet, smarttv, wearable, embedded
 
@@ -63,7 +63,7 @@ Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE
 * `getEngine()`
     * returns `{ name: '', version: '' }`
 
-```
+```sh
 # Possible 'engine.name'
 Amaya, EdgeHTML, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, 
 Tasman, Trident, w3m, WebKit
@@ -74,7 +74,7 @@ Tasman, Trident, w3m, WebKit
 * `getOS()`
     * returns `{ name: '', version: '' }`
 
-```
+```sh
 # Possible 'os.name'
 AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, Contiki,
 Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, 
@@ -89,7 +89,7 @@ Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk
 * `getCPU()`
     * returns `{ architecture: '' }`
 
-```
+```sh
 # Possible 'cpu.architecture'
 68k, amd64, arm[64], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
@@ -231,6 +231,14 @@ $ bower install ua-parser-js
 
 ```sh
 $ meteor add faisalman:ua-parser-js
+```
+
+## Using TypeScript
+
+```sh
+$ npm install --save @types/ua-parser-js
+# Download TS type definition from DefinitelyTyped repository:
+# https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ua-parser-js
 ```
 
 ## Using CLI
