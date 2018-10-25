@@ -433,11 +433,20 @@
     },
     {
         "desc"    : "Chromium OS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Chromium OS",
+            "version" : "10575.58.0"
+        }
+    },
+    {
+        "desc"    : "Fuchsia",
+        "ua"      : "Mozilla/5.0 (X11; Fuchsia x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3557.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Fuchsia",
+            "version" : "undefined"
         }
     },
     {
