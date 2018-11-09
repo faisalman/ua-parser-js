@@ -343,6 +343,15 @@
         }
     },
     {
+        "desc": "Sony G8141 (Xperia XZ Premium)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; G8141) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "G8141",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sony C5303 (Xperia SP)",
         "ua": "Mozilla/5.0 (Linux; Android 4.3; C5303 Build/12.1.A.1.205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.93 Mobile Safari/537.36",
         "expect": {
