@@ -17,6 +17,15 @@
         }
     },
     {
+        "desc": "Asus ZenPad 10",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; P00C Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Safari/537.36",
+        "expect": {
+            "vendor": "Asus",
+            "model": "P00C",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Desktop (IE11 with Tablet string)",
         "ua": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect": {
