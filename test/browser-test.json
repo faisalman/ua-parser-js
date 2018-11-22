@@ -290,6 +290,16 @@
         }
     },
     {
+        "desc"    : "Falkon",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Falkon/3.0.0 Chrome/61.0.3163.140 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Falkon",
+            "version" : "3.0.0",
+            "major"   : "3"
+        }
+    },
+    {
         "desc"    : "Firebird",
         "ua"      : "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.5) Gecko/20031007 Firebird/0.7",
         "expect"  :
@@ -786,6 +796,16 @@
             "name"    : "QQBrowser",
             "version" : "7.1",
             "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "QupZilla",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) QupZilla/1.8.9 Safari/538.1",
+        "expect"  :
+        {
+            "name"    : "QupZilla",
+            "version" : "1.8.9",
+            "major"   : "1"
         }
     },
     {
