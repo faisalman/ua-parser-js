@@ -30,16 +30,16 @@
 2345Explorer, Amaya, Android Browser, Arora, Avant, BIDUBrowser, Baidu,
 Basilisk, Blazer, Bolt, Bowser, Camino, Chimera, Chrome Headless,
 Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo, Dolphin, Doris, Edge,
-Epiphany, Facebook, Fennec, Firebird, Firefox, Flock, GSA, GoBrowser,
+Epiphany, Facebook, Falkon, Fennec, Firebird, Firefox, Flock, GSA, GoBrowser,
 ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceape, Iceweasel,
 Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror, LBBROWSER Line, Links,
 Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, MetaSr Midori,
 Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape,
 NokiaBrowser, Oculus Browser, OmniWeb, Opera Coast, Opera Mini, Opera Mobi,
 Opera Tablet, Opera, PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ,
-QQBrowser, QQBrowserLite, Quark, RockMelt, Safari, Samsung Browser, SeaMonkey,
-Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser,
-Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
+QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, Samsung Browser, 
+SeaMonkey, Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser,
+UCBrowser, Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
 
 # 'browser.version' determined dynamically
 ```
@@ -65,8 +65,8 @@ RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
 
 ```sh
 # Possible 'engine.name'
-Amaya, EdgeHTML, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, 
-Tasman, Trident, w3m, WebKit
+Amaya, Blink, EdgeHTML, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront, NetSurf,
+Presto, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
