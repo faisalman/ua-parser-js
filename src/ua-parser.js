@@ -525,7 +525,7 @@
 
         device : [[
 
-            /\((ipad|playbook);[\w\s\);-]+(rim|apple)/i                         // iPad/PlayBook
+            /\((ipad|playbook);[\w\s\),;-]+(rim|apple)/i                        // iPad/PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
 
             /applecoremedia\/[\w\.]+ \((ipad)/                                  // iPad
