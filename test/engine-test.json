@@ -27,6 +27,15 @@
         }
     },
     {
+        "desc"    : "Goanna",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.1; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0",
+        "expect"  :
+        {
+            "name"    : "Goanna",
+            "version" : "2.2"
+        }
+    },
+    {
         "desc"    : "KHTML",
         "ua"      : "Mozilla/5.0 (compatible; Konqueror/4.5; FreeBSD) KHTML/4.5.4 (like Gecko)",
         "expect"  :
