@@ -1,5 +1,5 @@
 /*!
- * UAParser.js v0.7.18
+ * UAParser.js v0.7.19
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.18',
+    var LIBVERSION  = '0.7.19',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -254,14 +254,17 @@
 
             // Webkit/KHTML based
             /(rekonq)\/([\w\.]*)/i,                                             // Rekonq
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark)\/([\w\.-]+)/i
-                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser
+            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon)\/([\w\.-]+)/i
+                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
             ], [NAME, VERSION], [
+
+            /(konqueror)\/([\w\.]+)/i                                           // Konqueror
+            ], [[NAME, 'Konqueror'], VERSION], [
 
             /(trident).+rv[:\s]([\w\.]+).+like\sgecko/i                         // IE11
             ], [[NAME, 'IE'], VERSION], [
 
-            /(edge|edgios|edgea)\/((\d+)?[\w\.]+)/i                             // Microsoft Edge
+            /(edge|edgios|edga)\/((\d+)?[\w\.]+)/i                              // Microsoft Edge
             ], [[NAME, 'Edge'], VERSION], [
 
             /(yabrowser)\/([\w\.]+)/i                                           // Yandex
@@ -270,8 +273,13 @@
             /(puffin)\/([\w\.]+)/i                                              // Puffin
             ], [[NAME, 'Puffin'], VERSION], [
 
-            /((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i
-                                                                                // UCBrowser
+            /(focus)\/([\w\.]+)/i                                               // Firefox Focus
+            ], [[NAME, 'Firefox Focus'], VERSION], [
+
+            /(opt)\/([\w\.]+)/i                                                 // Opera Touch
+            ], [[NAME, 'Opera Touch'], VERSION], [
+
+            /((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i         // UCBrowser
             ], [[NAME, 'UCBrowser'], VERSION], [
 
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
@@ -279,6 +287,9 @@
 
             /(micromessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
+
+            /(brave)\/([\w\.]+)/i                                              // Brave browser
+            ], [[NAME, 'Brave'], VERSION], [
 
             /(qqbrowserlite)\/([\w\.]+)/i                                       // QQBrowserLite
             ], [NAME, VERSION], [
@@ -306,6 +317,10 @@
 
             /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android
             ], [VERSION, [NAME, 'Facebook']], [
+
+            /safari\s(line)\/([\w\.]+)/i,                                       // Line App for iOS
+            /android.+(line)\/([\w\.]+)\/iab/i                                  // Line App for Android
+            ], [NAME, VERSION], [
 
             /headlesschrome(?:\/([\w\.]+)|\s)/i                                 // Chrome Headless
             ], [VERSION, [NAME, 'Chrome Headless']], [
@@ -347,7 +362,6 @@
             /webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i                     // Safari < 3.0
             ], [NAME, [VERSION, mapper.str, maps.browser.oldsafari.version]], [
 
-            /(konqueror)\/([\w\.]+)/i,                                          // Konqueror
             /(webkit|khtml)\/([\w\.]+)/i
             ], [NAME, VERSION], [
 
@@ -504,14 +518,14 @@
             /(sun4\w)[;\)]/i                                                    // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
 
-            /((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+;))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
+            /((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+[;l]))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
                                                                                 // IA64, 68K, ARM/64, AVR/32, IRIX/64, MIPS/64, SPARC/64, PA-RISC
             ], [[ARCHITECTURE, util.lowerize]]
         ],
 
         device : [[
 
-            /\((ipad|playbook);[\w\s\);-]+(rim|apple)/i                         // iPad/PlayBook
+            /\((ipad|playbook);[\w\s\),;-]+(rim|apple)/i                        // iPad/PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
 
             /applecoremedia\/[\w\.]+ \((ipad)/                                  // iPad
@@ -532,6 +546,8 @@
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
             /(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i                         // Fire Phone
             ], [[MODEL, mapper.str, maps.device.amazon.model], [VENDOR, 'Amazon'], [TYPE, MOBILE]], [
+            /android.+aft([bms])\sbuild/i                                       // Fire TV
+            ], [MODEL, [VENDOR, 'Amazon'], [TYPE, SMARTTV]], [
 
             /\((ip[honed|\s\w*]+);.+(apple)/i                                   // iPod/iPhone
             ], [MODEL, VENDOR, [TYPE, MOBILE]], [
@@ -547,13 +563,13 @@
             /\(bb10;\s(\w+)/i                                                   // BlackBerry 10
             ], [MODEL, [VENDOR, 'BlackBerry'], [TYPE, MOBILE]], [
                                                                                 // Asus Tablets
-            /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7|padfone)/i
+            /android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7|padfone|p00c)/i
             ], [MODEL, [VENDOR, 'Asus'], [TYPE, TABLET]], [
 
             /(sony)\s(tablet\s[ps])\sbuild\//i,                                  // Sony
             /(sony)?(?:sgp.+)\sbuild\//i
             ], [[VENDOR, 'Sony'], [MODEL, 'Xperia Tablet'], [TYPE, TABLET]], [
-            /android.+\s([c-g]\d{4}|so[-l]\w+)\sbuild\//i
+            /android.+\s([c-g]\d{4}|so[-l]\w+)(?=\sbuild\/|\).+chrome\/(?![1-6]{0,1}\d\.))/i
             ], [MODEL, [VENDOR, 'Sony'], [TYPE, MOBILE]], [
 
             /\s(ouya)\s/i,                                                      // Ouya
@@ -572,7 +588,7 @@
             /(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i                         // Lenovo tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
+            /(htc)[;_\s-]+([\w\s]+(?=\)|\sbuild)|\w+)/i,                        // HTC
             /(zte)-(\w*)/i,                                                     // ZTE
             /(alcatel|geeksphone|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i
                                                                                 // Alcatel/GeeksPhone/Lenovo/Nexian/Panasonic/Sony
@@ -628,7 +644,7 @@
             /(nokia)[\s_-]?([\w-]*)/i
             ], [[VENDOR, 'Nokia'], MODEL, [TYPE, MOBILE]], [
 
-            /android\s3\.[\s\w;-]{10}(a\d{3})/i                                 // Acer
+            /android[x\d\.\s;]+\s([ab][1-7]\-?[0178a]\d\d?)/i                   // Acer
             ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
             /android.+([vl]k\-?\d{3})\s+build/i                                 // LG Tablet
@@ -660,10 +676,10 @@
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
 
-            /android.+;\s(pixel c)\s/i                                          // Google Pixel C
+            /android.+;\s(pixel c)[\s)]/i                                       // Google Pixel C
             ], [MODEL, [VENDOR, 'Google'], [TYPE, TABLET]], [
 
-            /android.+;\s(pixel xl|pixel)\s/i                                   // Google Pixel
+            /android.+;\s(pixel( [23])?( xl)?)\s/i                              // Google Pixel
             ], [MODEL, [VENDOR, 'Google'], [TYPE, MOBILE]], [
 
             /android.+;\s(\w+)\s+build\/hm\1/i,                                 // Xiaomi Hongmi 'numeric' models
@@ -675,6 +691,8 @@
             ],[[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, TABLET]], [
             /android.+;\s(m[1-5]\snote)\sbuild/i                                // Meizu Tablet
             ], [MODEL, [VENDOR, 'Meizu'], [TYPE, TABLET]], [
+            /(mz)-([\w-]{2,})/i                                                 // Meizu Phone
+            ], [[VENDOR, 'Meizu'], MODEL, [TYPE, MOBILE]], [
 
             /android.+a000(1)\s+build/i,                                        // OnePlus
             /android.+oneplus\s(a\d{4})\s+build/i
@@ -722,6 +740,9 @@
 
             /android.+[;\/]\s*(LVTEL\-)?(V1[12])\s+build/i                     // LvTel Phones
             ], [[VENDOR, 'LvTel'], MODEL, [TYPE, MOBILE]], [
+
+            /android.+;\s(PH-1)\s/i
+            ], [MODEL, [VENDOR, 'Essential'], [TYPE, MOBILE]], [                // Essential PH-1
 
             /android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i          // Envizen Tablets
             ], [MODEL, [VENDOR, 'Envizen'], [TYPE, TABLET]], [
@@ -809,8 +830,12 @@
             /windows.+\sedge\/([\w\.]+)/i                                       // EdgeHTML
             ], [VERSION, [NAME, 'EdgeHTML']], [
 
+            /webkit\/537\.36.+chrome\/(?!27)/i                                  // Blink
+            ], [[NAME, 'Blink']], [
+
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,     // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,     
+                                                                                // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
             /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
             /(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab
             ], [NAME, VERSION], [
@@ -885,8 +910,8 @@
             // Other
             /((?:open)?solaris)[\/\s-]?([\w\.]*)/i,                             // Solaris
             /(aix)\s((\d)(?=\.|\)|\s)[\w\.])*/i,                                // AIX
-            /(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,
-                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS
+            /(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms|fuchsia)/i,
+                                                                                // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS/Fuchsia
             /(unix)\s?([\w\.]*)/i                                               // UNIX
             ], [NAME, VERSION]
         ]
@@ -1071,7 +1096,7 @@
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
     var $ = window && (window.jQuery || window.Zepto);
-    if (typeof $ !== UNDEF_TYPE) {
+    if (typeof $ !== UNDEF_TYPE && !$.ua) {
         var parser = new UAParser();
         $.ua = parser.getResult();
         $.ua.get = function () {
