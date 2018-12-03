@@ -293,7 +293,7 @@
         "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
         "expect": {
             "vendor": "Amazon",
-            "model": "KFTT",
+            "model": "Kindle Fire HD 7 (2012)",
             "type": "tablet"
         }
     },
@@ -563,7 +563,7 @@
         "ua": "Mozilla/5.0 (Linux; Android 5.0; SM-G900F Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.78 Mobile Safari/537.36",
         "expect": {
             "vendor": "Samsung",
-            "model": "SM-G900F",
+            "model": "Galaxy S5",
             "type": "mobile"
         }
     },
@@ -948,7 +948,7 @@
         "ua": "Mozilla/5.0 (Linux; U; Android 4.4.3; en-us; KFSAWI Build/KTU84M) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.66 like Chrome/39.0.2171.93 Safari/537.36",
         "expect": {
             "vendor": "Amazon",
-            "model": "KFSAWI",
+            "model": "Kindle Fire HDX 8.9 (2014)",
             "type": "tablet"
         }
     },
@@ -985,6 +985,105 @@
         "expect": {
             "vendor": "Xiaomi",
             "model": "MI PAD 2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SM-G892A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "Galaxy S8",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Amazon 4K Fire TV",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; AFTS Build/LMY47O) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/41.99900.2250.0242 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "4K Fire TV",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S7 Edge",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "Galaxy S7 Edge",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S6 Edge Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 5.11; SM-G928X Build/LMY47X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36]",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "Galaxy S6 Edge Plus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia XZ (G8231)",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; G8231 Build/41.2.A.0.219; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia XZ",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia Z5",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; E6653 Build/32.2.A.0.253) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Z5",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Microsoft Lumia 650",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Lumia 650",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Microsoft Lumia 550",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; RM-1127_16056) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.10536",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Lumia 550",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab S3",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SM-T827R4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "Galaxy Tab S3",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Amazon Kindle Fire HDX (2013)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.3; KFTHWI Build/KTU84M) AppleWebKit/537.36 (KHTML, like Gecko) Silk/47.1.79 like Chrome/47.0.2526.80 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "Kindle Fire HDX (2013)",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Sony Xperia Z4",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; SGP771 Build/32.2.A.0.253; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Z4",
             "type": "tablet"
         }
     }

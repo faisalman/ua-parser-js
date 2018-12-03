@@ -525,6 +525,159 @@
 
         device : [[
 
+            /(KFKAWI)/i	// Amazon Tablets
+            ], [[MODEL, 'Kindle Fire HD 8 (2018)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFSUWI)/i
+            ], [[MODEL, 'Kindle Fire HD 10 (2017)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFAUWI)/i
+            ], [[MODEL, 'Kindle Fire (2017)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFDOWI)/i
+            ], [[MODEL, 'Kindle Fire HD 8 (2017)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFGIWI)/i
+            ], [[MODEL, 'Kindle Fire HD 8 (2016)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFFOWI)/i
+            ], [[MODEL, 'Kindle Fire (2015)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFMEWI)/i
+            ], [[MODEL, 'Kindle Fire HD 8 (2015)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFTBWI)/i
+            ], [[MODEL, 'Kindle Fire HD 10 (2015)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFARWI)/i
+            ], [[MODEL, 'Kindle Fire HD 6 (2014)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFASWI)/i
+            ], [[MODEL, 'Kindle Fire HD 7 (2014'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFSAWI)/i
+            ], [[MODEL, 'Kindle Fire HDX 8.9 (2014)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFSAWA)/i
+            ], [[MODEL, 'Kindle Fire HDX 8.9 (2014)(WAN)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFAPWI)/i
+            ], [[MODEL, 'Kindle Fire HDX 8.9 (2013)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFAPWA)/i
+            ], [[MODEL, 'Kindle Fire HDX 8.9 (2013)(WAN)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFTHWI)/i
+            ], [[MODEL, 'Kindle Fire HDX (2013)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFTHWA)/i
+            ], [[MODEL, 'Kindle Fire HDX (2013)(WAN)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFSOWI)/i
+            ], [[MODEL, 'Kindle Fire HD (2013)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFJWI)/i
+            ], [[MODEL, 'Kindle Fire HD 8.9 (2012)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFJWA)/i
+            ], [[MODEL, 'Kindle Fire HD 8.9 (2012)(WAN)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFTT)/i
+            ], [[MODEL, 'Kindle Fire HD 7 (2012)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(KFOT)/i
+            ], [[MODEL, 'Kindle Fire (2012)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(Kindle Fire)/i
+            ], [[MODEL, 'Kindle Fire (2011)'], [VENDOR, 'Amazon'], [TYPE, TABLET]], [
+
+            /(SM-G892A)/i
+            ], [[MODEL, 'Galaxy S8'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-930VC)/i
+            ], [[MODEL, 'Galaxy S7'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G935S)/i
+            ], [[MODEL, 'Galaxy S7 Edge'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G920V)/i
+            ], [[MODEL, 'Galaxy S6'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G928X)/i
+            ], [[MODEL, 'Galaxy S6 Edge Plus'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G900[F|H])/i
+            ], [[MODEL, 'Galaxy S5'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G800F)/i
+            ], [[MODEL, 'Galaxy S5 Mini'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G7102)/i
+            ], [[MODEL, 'Galaxy Grand 2'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G530H)/i
+            ], [[MODEL, 'Galaxy Grand Prime'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(SM-G313HZ)/i
+            ], [[MODEL, 'Galaxy V'], [VENDOR, 'Samsung'], [TYPE, MOBILE]], [
+
+            /(Nexus 6P)/i
+            ], [[MODEL, 'Nexus 6P'], [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
+
+            /(G8231)/i
+            ], [[MODEL, 'Xperia XZ'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
+
+            /(E6653)/i
+            ], [[MODEL, 'Xperia Z5'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
+
+            /(C6903)/i
+            ], [[MODEL, 'Xperia Z1'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
+
+            /(C6603)/i
+            ], [[MODEL, 'Xperia Z'], [VENDOR, 'Sony'], [TYPE, MOBILE]], [
+
+            /(ADVAN S4A)/i // Advan Vandroid S4A
+            ], [[MODEL, 'Vandroid S4A'], [VENDOR, 'Advan'], [TYPE, MOBILE]], [
+
+            /(V972M)/i // ZTE LEO S1
+            ], [[MODEL, 'Leo S1'], [VENDOR, 'ZTE'], [TYPE, MOBILE]], [
+
+            /(IQ6.3)/i // i-mobile IQ 6.3
+            ], [[MODEL, 'IQ 6.3'], [VENDOR, 'i-mobile'], [TYPE, MOBILE]], [
+
+            /(RM-1152)/i
+            ], [[MODEL, 'Lumia 650'], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
+
+            /(RM-1127_16056)/i
+            ], [[MODEL, 'Lumia 550'], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
+
+            /(SM-T827R4)/i
+            ], [[MODEL, 'Galaxy Tab S3'], [VENDOR, 'Samsung'], [TYPE, TABLET]], [
+
+            /(SM-T805)/i
+            ], [[MODEL, 'Galaxy Tab S 10.5'], [VENDOR, 'Samsung'], [TYPE, TABLET]], [
+
+            /(SM-T550)/i
+            ], [[MODEL, 'Galaxy Tab A'], [VENDOR, 'Samsung'], [TYPE, TABLET]], [
+
+            /(SM-T311)/i
+            ], [[MODEL, 'Galaxy Tab 3 8.0'], [VENDOR, 'Samsung'], [TYPE, TABLET]], [
+
+            /(T3C)/i // Advan Vandroid T3C
+            ], [[MODEL, 'Vandroid T3C'], [VENDOR, 'Advan'], [TYPE, TABLET]], [
+
+            /(ADVAN T1J\+)/i // Advan Vandroid T1J+
+            ], [[MODEL, 'Vandroid T1J+'], [VENDOR, 'Advan'], [TYPE, TABLET]], [
+
+            /(SGP771)/i
+            ], [[MODEL, 'Xperia Z4'], [VENDOR, 'Sony'], [TYPE, TABLET]], [
+
+            /(LG-V410)/i
+            ], [[MODEL, 'G Pad 7.0'], [VENDOR, 'LG'], [TYPE, TABLET]], [
+
+            /(AFTS)/i
+            ], [[MODEL, '4K Fire TV'], [VENDOR, 'Amazon'], [TYPE, SMARTTV]], [
+
             /\((ipad|playbook);[\w\s\),;-]+(rim|apple)/i                        // iPad/PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
 
