@@ -110,6 +110,10 @@ ATI, Intel, NVIDIA, Qualcomm, SiS
 * `getUA()`
     * returns UA string of current instance
 
+* `setRenderer(rendererstr)`
+    * set Renderer string to parse
+    * returns current instance
+
 * `setUA(uastring)`
     * set UA string to parse
     * returns current instance

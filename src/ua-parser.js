@@ -1053,6 +1053,10 @@
     UAParser.CPU = {
         ARCHITECTURE : ARCHITECTURE
     };
+    UAParser.GPU = {
+        MODEL   : MODEL,
+        VENDOR  : VENDOR
+    };
     UAParser.DEVICE = {
         MODEL   : MODEL,
         VENDOR  : VENDOR,
