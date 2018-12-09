@@ -1,0 +1,56 @@
+[
+    {
+        "desc"    : "Intel",
+        "renderer": "Intel HD Graphics 4000 OpenGL Engine",
+        "expect"  :
+        {
+            "vendor"  : "Intel",
+            "model"   : "HD Graphics 4000"
+        }
+    },
+    {
+        "desc"    : "Intel",
+        "renderer": "Intel Iris Pro OpenGL Engine",
+        "expect"  :
+        {
+            "vendor"  : "Intel",
+            "model"   : "Iris Pro"
+        }
+    },
+    {
+        "desc"    : "Intel",
+        "renderer": "Intel GMA X3100 OpenGL Engine",
+        "expect"  :
+        {
+            "vendor"  : "Intel",
+            "model"   : "GMA X3100"
+        }
+    },
+    {
+        "desc"    : "ATI",
+        "renderer": "ATI Radeon HD 6750M OpenGL Engine",
+        "expect"  :
+        {
+            "vendor"  : "ATI",
+            "model"   : "Radeon HD 6750M"
+        }
+    },
+    {
+        "desc"    : "NVIDIA",
+        "renderer": "NVIDIA GeForce GT 650M OpenGL Engine",
+        "expect"  :
+        {
+            "vendor"  : "NVIDIA",
+            "model"   : "GeForce GT 650M"
+        }
+    },
+    {
+        "desc"    : "Qualcomm",
+        "renderer": "Adreno (TM) 320",
+        "expect"  :
+        {
+            "vendor"  : "Qualcomm",
+            "model"   : "Adreno 320"
+        }
+    }
+]

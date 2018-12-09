@@ -847,6 +847,20 @@
             ], [VERSION, NAME]
         ],
 
+        gpu : [[
+
+            /(intel).*\b(hd\sgraphics\s\d{4}|iris(?:\spro)|gma\s\w+)/i,         // Intel
+            /(nvidia)\s(geforce\s(?:gtx?\s)\d\w+|quadro)/i,                     // NVIDIA
+            /(sis)\s(\w+)/i                                                     // SiS
+            ], [VENDOR, MODEL], [
+
+            /\b(radeon\shd\s\w{4,5})/i                                          // ATI
+            ], [MODEL, [VENDOR, 'ATI']], [
+
+            /(adreno\s(?:\(TM\)\s)\w+)/i                                        // Qualcomm
+            ], [[MODEL, /\(TM\)\s/, ''], [VENDOR, 'Qualcomm']]
+        ],
+
         os : [[
 
             // Windows based
@@ -959,6 +973,14 @@
         //var engine = new Engine();
         //var os = new OS();
 
+        var renderer;
+        // browser only
+        if (window && window.document) {
+            var canvas = document.createElement('canvas');
+            var gl = canvas.getContext ? canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl') : undefined;
+            renderer = gl && gl.getParameter && getExtension && gl.getExtension('WEBGL_debug_renderer_info') ? gl.getParameter(gl.getExtension('WEBGL_debug_renderer_info').UNMASKED_RENDERER_WEBGL) : undefined;
+        }
+
         this.getBrowser = function () {
             var browser = { name: undefined, version: undefined };
             mapper.rgx.call(browser, ua, rgxmap.browser);
@@ -980,6 +1002,13 @@
             mapper.rgx.call(engine, ua, rgxmap.engine);
             return engine;
         };
+        this.getGPU = function () {
+            var gpu = { vendor: undefined, model: undefined };
+            if (renderer) {
+                mapper.rgx.call(gpu, renderer, rgxmap.gpu);
+            }
+            return gpu;
+        };
         this.getOS = function () {
             var os = { name: undefined, version: undefined };
             mapper.rgx.call(os, ua, rgxmap.os);
@@ -992,11 +1021,16 @@
                 engine  : this.getEngine(),
                 os      : this.getOS(),
                 device  : this.getDevice(),
-                cpu     : this.getCPU()
+                cpu     : this.getCPU(),
+                gpu     : this.getGPU()
             };
         };
         this.getUA = function () {
             return ua;
+        };
+        this.setRenderer = function (rendererstr) {
+            renderer = rendererstr;
+            return this;
         };
         this.setUA = function (uastring) {
             ua = uastring;

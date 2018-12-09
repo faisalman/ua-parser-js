@@ -5,6 +5,7 @@ var browsers    = require('./browser-test.json');
 var cpus        = require('./cpu-test.json');
 var devices     = require('./device-test.json');
 var engines     = require('./engine-test.json');
+var gpus        = require('./gpu-test.json');
 var os          = require('./os-test.json');
 var parser      = new UAParser();
 var methods     = [
@@ -33,6 +34,12 @@ var methods     = [
         properties  : ['name', 'version']
     },
     {
+        title       : 'getGPU',
+        label       : 'gpu',
+        list        : gpus,
+        properties  : ['model', 'vendor']
+    },
+    {
         title       : 'getOS',
         label       : 'os',
         list        : os,
@@ -43,7 +50,7 @@ describe('UAParser()', function () {
     var ua = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
     assert.deepEqual(UAParser(ua), new UAParser().setUA(ua).getResult());
 });
-
+/*
 for (var i in methods) {
     describe(methods[i]['title'], function () {
         for (var j in methods[i]['list']) {
@@ -63,7 +70,22 @@ for (var i in methods) {
             }
         }
     });
-}
+}*/
+
+describe('getGPU', function () {
+    for (var i in gpus) {
+        describe(`[${gpus[i].desc}] "${gpus[i].renderer}"`, function () {
+            var gpu = parser.setRenderer(gpus[i].renderer).getGPU();
+            var expect = gpus[i].expect;
+            it(`should return vendor: ${expect.vendor}`, function(){
+                assert.equal(gpu.vendor, expect.vendor != 'undefined' ? expect.vendor : undefined);
+            })
+            it(`should return model: ${expect.model}`, function(){
+                assert.equal(gpu.model, expect.model != 'undefined' ? expect.model : undefined);
+            })
+        });
+    }
+});
 
 describe('Returns', function () {
     it('getResult() should returns JSON', function(done) {
@@ -74,6 +96,7 @@ describe('Returns', function () {
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},
+                gpu: { vendor: undefined, model: undefined},
                 os: { name: undefined, version: undefined }
         });
         done();
