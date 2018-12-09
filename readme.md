@@ -18,7 +18,7 @@
     * returns new instance
 
 * `UAParser([uastring][,extensions])`
-    * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+    * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, gpu: {}, os: {} }`
 
 # Methods
 
@@ -94,6 +94,16 @@ Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 68k, amd64, arm[64], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
+* `getGPU()`
+    * returns `{ vendor: '', model: '' }`
+
+```sh
+# Possible 'gpu.vendor'
+ATI, Intel, NVIDIA, Qualcomm, SiS
+
+# 'gpu.model' determined dynamically
+```
+
 * `getResult()`
     * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
@@ -141,6 +151,10 @@ Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
             },
             cpu: {
                 architecture: ""
+            },
+            gpu: {
+                vendor: "",
+                model: ""
             }
         }
     */
