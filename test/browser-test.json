@@ -878,5 +878,15 @@
             "version" : "6.5.8.2910",
             "major"   : "6"
         }
+    },
+    {
+        "desc"    : "QQ on Android",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.901.400 QQBrowser/9.0.2524.400",
+        "expect"  :
+        {
+            "name"    : "WeChat(Win) Desktop",
+            "version" : "3.43.901.400",
+            "major"   : "3"
+        }
     }
 ]
