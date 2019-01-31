@@ -1120,7 +1120,7 @@
         "expect"  :
         {
             "name"    : "BIDUBrowser",
-            "version" : "8.7", 
+            "version" : "8.7",
             "major"   : "8"
         }
     },
@@ -1152,6 +1152,26 @@
             "name"    : "Brave",
             "version" : "4.5.16",
             "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "Ghost OSS",
+        "ua"      : "Ghost/2.12.0 (https://github.com/TryGhost/Ghost)",
+        "expect"  :
+        {
+            "name"    : "Ghost",
+            "version" : "2.12.0",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Ghost Pro",
+        "ua"      : "Ghost/2.13.1+moya (https://github.com/TryGhost/Ghost)",
+        "expect"  :
+        {
+            "name"    : "Ghost",
+            "version" : "2.13.1",
+            "major"   : "2"
         }
     }
 ]

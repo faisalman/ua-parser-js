@@ -309,7 +309,7 @@
             /(MetaSr)[\/\s]?([\w\.]+)/i                                         // SouGouBrowser
             ], [NAME], [
 
-            /(LBBROWSER)/i                                      // LieBao Browser
+            /(LBBROWSER)/i                                                      // LieBao Browser
             ], [NAME], [
 
             /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
@@ -382,7 +382,8 @@
             /(links)\s\(([\w\.]+)/i,                                            // Links
             /(gobrowser)\/?([\w\.]*)/i,                                         // GoBrowser
             /(ice\s?browser)\/v?([\w\._]+)/i,                                   // ICE Browser
-            /(mosaic)[\/\s]([\w\.]+)/i                                          // Mosaic
+            /(mosaic)[\/\s]([\w\.]+)/i,                                         // Mosaic
+            /(ghost)[\/\s]([\w\.]+)/i                                           // Ghost Webhooks
             ], [NAME, VERSION]
 
             /* /////////////////////
@@ -837,7 +838,7 @@
             ], [[NAME, 'Blink']], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,     
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
                                                                                 // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
             /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
             /(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab
