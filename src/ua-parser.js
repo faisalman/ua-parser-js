@@ -225,7 +225,7 @@
                     'RT'        : 'ARM'
                 },
                 name : {
-                    'Windows Phone' : 'Windows Phone OS',
+                    'Windows Phone' : 'Windows Phone OS'
                 }
             }
         }
