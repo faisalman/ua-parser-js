@@ -108,11 +108,20 @@
         }
     },
     {
+        "desc"    : "Windows Phone",
+        "ua"      : "Opera/9.80 (Windows Phone; Opera Mini/7.6.8/35.7518; U; ru) Presto/2.8.119 Version/11.10",
+        "expect"  :
+        {
+            "name"    : "Windows Phone",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "Windows Phone OS",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; DELL; Venue Pro)",
         "expect"  :
         {
-            "name"    : "Windows Phone OS",
+            "name"    : "Windows Phone",
             "version" : "7.0"
         }
     },
@@ -145,11 +154,11 @@
     },
     {
         "desc"    : "Tizen",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) Version/2.3 Mobile Safari/537.3",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Tizen",
+            "version" : "2.3"
         }
     },
     {
@@ -256,7 +265,7 @@
         "ua"      : "Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",
         "expect"  :
         {
-            "name"    : "PlayStation",
+            "name"    : "Linux",
             "version" : "4"
         }
     },
@@ -280,11 +289,20 @@
     },
     {
         "desc"    : "Ubuntu",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.22+ (KHTML, like Gecko) Chromium/17.0.963.56 Chrome/17.0.963.56 Safari/535.22+ Ubuntu/12.04 (3.4.1-0ubuntu1) Epiphany/3.4.1",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Linux",
+            "version" : "12.04"
+        }
+    },
+    {
+        "desc"    : "Ubuntu",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/31.0.1650.63 Chrome/31.0.1650.63 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Linux",
+            "version" : "undefined"
         }
     },
     {
@@ -415,11 +433,20 @@
     },
     {
         "desc"    : "Chromium OS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Chromium OS",
+            "version" : "10575.58.0"
+        }
+    },
+    {
+        "desc"    : "Fuchsia",
+        "ua"      : "Mozilla/5.0 (X11; Fuchsia x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3557.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Fuchsia",
+            "version" : "undefined"
         }
     },
     {
@@ -468,11 +495,20 @@
         }
     },
     {
+        "desc"    : "iOS in App",
+        "ua"      : "AppName/version CFNetwork/version Darwin/version",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "iOS with Chrome",
         "ua"      : "Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
         "expect"  :
         {
-            "name"    : "iOS",
+            "name"    : "iPhone",
             "version" : "5.1.1"
         }
     },
@@ -481,7 +517,7 @@
         "ua"      : "Opera/9.80 (iPhone; Opera Mini/7.1.32694/27.1407; U; en) Presto/2.8.119 Version/11.10",
         "expect"  :
         {
-            "name"    : "iOS",
+            "name"    : "iPhone",
             "version" : "undefined"
         }
     },
@@ -490,17 +526,17 @@
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36",
         "expect"  :
         {
-            "name"    : "Mac OS",
+            "name"    : "Mac",
             "version" : "10.6.8"
         }
     },
     {
         "desc"    : "Haiku",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Haiku R1 x86) AppleWebKit/602.1.1 (KHTML, like Gecko) WebPositive/1.2 Version/8.0 Safari/602.1.1",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Haiku",
+            "version" : "R1"
         }
     },
     {
@@ -598,7 +634,7 @@
         "ua"      : "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
         "expect"  :
         {
-            "name"    : "iOS",
+            "name"    : "iPhone",
             "version" : "7.0.2"
         }
     },

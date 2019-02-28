@@ -1,35 +1,45 @@
 # UAParser.js
 
-Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Component/Bower/Meteor package, & RequireJS/AMD module
+<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~17KB when minified / ~6KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently. However, it's not recommended to use this library as browser detection since the result may not be more accurate than using feature detection.
 
 [![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
-[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub)
+[![NPM downloads](https://img.shields.io/npm/dw/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
+[![NPM](https://img.shields.io/npm/v/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
+[![Bower](https://img.shields.io/bower/v/ua-parser-js.svg)](https://bower.io/)
+[![CDNJS](https://img.shields.io/cdnjs/v/UAParser.js.svg)](https://cdnjs.com/libraries/UAParser.js)
 
-* Author    : Faisal Salman <<fyzlman@gmail.com>>
+* Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
-## Features
+# Constructor
 
-Extract detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model purely from user-agent string with relatively lightweight footprint (~11KB minified / ~4KB gzipped). Written in vanilla js, which means it doesn't depends on any other library.
+* `new UAParser([uastring][,extensions])`
+    * returns new instance
 
-![It's over 9000](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/over9000.jpg)
+* `UAParser([uastring][,extensions])`
+    * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
-## Methods
+# Methods
 
 * `getBrowser()`
     * returns `{ name: '', version: '' }`
 
-```
+```sh
 # Possible 'browser.name':
-Amaya, Android Browser, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, 
-Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Edge, Epiphany, Fennec,
-Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, IceDragon, 
-Iceweasel, IE [Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, Links, 
-Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
-Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
-PhantomJS, Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser,
-Swiftfox, Tizen, UCBrowser, Vivaldi, w3m, Yandex
+2345Explorer, Amaya, Android Browser, Arora, Avant, BIDUBrowser, Baidu,
+Basilisk, Blazer, Bolt, Bowser, Camino, Chimera, Chrome Headless,
+Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo, Dolphin, Doris, Edge,
+Epiphany, Facebook, Falkon, Fennec, Firebird, Firefox, Flock, GSA, GoBrowser,
+ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceape, Iceweasel,
+Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror, LBBROWSER Line, Links,
+Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, MetaSr Midori,
+Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape,
+NokiaBrowser, Oculus Browser, OmniWeb, Opera Coast, Opera Mini, Opera Mobi,
+Opera Tablet, Opera, PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ,
+QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, Samsung Browser, 
+SeaMonkey, Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser,
+UCBrowser, Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
 
 # 'browser.version' determined dynamically
 ```
@@ -37,15 +47,15 @@ Swiftfox, Tizen, UCBrowser, Vivaldi, w3m, Yandex
 * `getDevice()`
     * returns `{ model: '', type: '', vendor: '' }` 
 
-```
+```sh
 # Possible 'device.type':
 console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
-Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, GeeksPhone, 
-Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, 
-Nintendo, Nokia, Nvidia, Ouya, Palm, Panasonic, Polytron, RIM, Samsung, Sharp, 
-Siemens, Sony-Ericsson, Sprint, Xbox, ZTE
+Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, Essential,
+GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola,
+Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm, Panasonic, Pebble, Polytron,
+RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -53,10 +63,10 @@ Siemens, Sony-Ericsson, Sprint, Xbox, ZTE
 * `getEngine()`
     * returns `{ name: '', version: '' }`
 
-```
+```sh
 # Possible 'engine.name'
-Amaya, EdgeHTML, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, 
-Tasman, Trident, w3m, WebKit
+Amaya, Blink, EdgeHTML, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront, NetSurf,
+Presto, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
@@ -64,14 +74,14 @@ Tasman, Trident, w3m, WebKit
 * `getOS()`
     * returns `{ name: '', version: '' }`
 
-```
+```sh
 # Possible 'os.name'
 AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, Contiki,
-Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, 
+Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Fuchsia, Gentoo, GNU, Haiku, Hurd, iOS, 
 Joli, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, 
-Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, 
+Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, PCLinuxOS, Plan9, Playstation, QNX, RedHat, 
 RIM Tablet OS, RISC OS, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, 
-Ubuntu, UNIX, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk
+Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
@@ -79,10 +89,9 @@ Ubuntu, UNIX, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk
 * `getCPU()`
     * returns `{ architecture: '' }`
 
-```
+```sh
 # Possible 'cpu.architecture'
-68k, amd64, arm, arm64, avr, ia32, ia64, irix, irix64, mips, mips64, pa-risc, 
-ppc, sparc, sparc64
+68k, amd64, arm[64], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
 * `getResult()`
@@ -92,9 +101,11 @@ ppc, sparc, sparc64
     * returns UA string of current instance
 
 * `setUA(uastring)`
-    * set & parse UA string
+    * set UA string to parse
+    * returns current instance
 
-## Example
+
+# Example
 
 ```html
 <!doctype html>
@@ -167,7 +178,7 @@ ppc, sparc, sparc64
 </html>
 ```
 
-### Using node.js
+## Using node.js
 
 ```sh
 $ npm install ua-parser-js
@@ -188,34 +199,61 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
 ```
 
-### Using requirejs
+## Using requirejs
 
 ```js
-require(['ua-parser'], function(UAParser) {
+requirejs.config({
+    baseUrl : 'js/lib', // path to your script directory
+    paths   : {
+        'ua-parser-js' : 'ua-parser.min'
+    }
+});
+
+requirejs(['ua-parser-js'], function(UAParser) {
     var parser = new UAParser();
     console.log(parser.getResult());
 });
 ```
 
-### Using component
+## Using CDN
 
-```sh
-$ component install faisalman/ua-parser-js
+```html
+<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
 ```
 
-### Using bower
+## Using bower
 
 ```sh
 $ bower install ua-parser-js
 ```
 
-### Using meteor
+## Using meteor
 
 ```sh
 $ meteor add faisalman:ua-parser-js
 ```
 
-### Using jQuery/Zepto ($.ua)
+## Using TypeScript
+
+```sh
+$ npm install --save @types/ua-parser-js
+# Download TS type definition from DefinitelyTyped repository:
+# https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ua-parser-js
+```
+
+## Using CLI
+
+```sh
+$ node ua-parser.min.js "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)"
+# multiple args
+$ node ua-parser.min.js "Opera/1.2" "Opera/3.4"
+# piped args
+$ echo "Opera/1.2" | node ua-parser.min.js
+# log file
+$ cat ua.log | node ua-parser.min.js
+```
+
+## Using jQuery/Zepto ($.ua)
 
 Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
 
@@ -236,39 +274,60 @@ console.log($.ua.browser.name);     // "Safari"
 console.log($.ua.engine.name);      // "Webkit"
 console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}
 console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
+
+// Add class to <body> tag
+// <body class="ua-browser-safari ua-devicetype-tablet">
+$('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.device.type);
 ```
 
-### Extending regex patterns
+## Extending regex patterns
 
-* `UAParser(uastring[, extensions])`
+* `UAParser([uastring,] extensions)`
 
 Pass your own regexes to extend the limited matching rules.
 
 ```js
 // Example:
-var uaString = 'ownbrowser/1.3';
-var ownBrowser = [[/(ownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
-var parser = new UAParser(uaString, {browser: ownBrowser});
-console.log(parser.getBrowser());   // {name: "ownbrowser", version: "1.3"}
+var myOwnRegex = [[/(myownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
+var myParser = new UAParser({ browser: myOwnRegex });
+var uaString = 'Mozilla/5.0 MyOwnBrowser/1.3';
+console.log(myParser.setUA(uaString).getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
 ```
 
-## Development
 
-Verify, test, & minify script
+# Development
+
+## Contribute
+
+* Fork and clone this repository
+* Make some changes as required
+* Write a unit test to showcase your feature
+* Run the test suites to make sure the changes you made didn't break anything `$ npm run test`
+* Commit and push to your own repository
+* Submit a pull request to this repository under `develop` branch
+* Profit? $$$
+
+## Build
+
+Build a minified & packed script
 
 ```sh
-$ npm run test
 $ npm run build
 ```
 
-Then submit a pull request to https://github.com/faisalman/ua-parser-js under `develop` branch.
+
+# Donate
+
+Do you use & like UAParser.js but you don’t find a way to show some love? If yes, please consider donating to support this project. Otherwise, no worries, regardless of whether there is support or not, I will keep maintaining this project. Still, if you buy me a cup of coffee I would be more than happy though :)
+
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/faisalman/)
 
 
-## License
+# License
 
-Dual licensed under GPLv2 & MIT
+Dual licensed under GPLv2 or MIT
 
-Copyright © 2012-2015 Faisal Salman <<fyzlman@gmail.com>>
+Copyright © 2012-2018 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
@@ -279,3 +338,11 @@ subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all 
 copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

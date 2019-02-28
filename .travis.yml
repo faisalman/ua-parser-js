@@ -1,7 +1,7 @@
 language: node_js
 node_js:
     - stable
-    - "0.10"
+    - lts/*
 
 notifications:
   email: false

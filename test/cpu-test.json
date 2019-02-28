@@ -48,6 +48,14 @@
         }
     },
     {
+        "desc"    : "ARMv7",
+        "ua"      : "Mozilla/5.0 (X11; CrOS armv7l 9765.85.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.123 Safari/537.36",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
         "desc"    : "Pocket PC",
         "ua"      : "Opera/9.7 (Windows Mobile; PPC; Opera Mobi/35166; U; en) Presto/2.2.1",
         "expect"  :
