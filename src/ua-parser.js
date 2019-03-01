@@ -334,6 +334,9 @@
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i        // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
+            /(sailfishbrowser)\/([\w\.]+)/i                                     // Sailfish Browser
+            ], [[NAME, 'Sailfish Browser'], VERSION], [
+
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i
                                                                                 // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [
@@ -864,9 +867,8 @@
             ], [[NAME, 'BlackBerry'], VERSION], [
             /(blackberry)\w*\/?([\w\.]*)/i,                                     // Blackberry
             /(tizen)[\/\s]([\w\.]+)/i,                                          // Tizen
-            /(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|contiki)[\/\s-]?([\w\.]*)/i,
-                                                                                // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo/Contiki
-            /linux;.+(sailfish);/i                                              // Sailfish OS
+            /(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|sailfish|contiki)[\/\s-]?([\w\.]*)/i
+                                                                                // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo/Contiki/Sailfish OS
             ], [NAME, VERSION], [
             /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i                  // Symbian
             ], [[NAME, 'Symbian'], VERSION], [
