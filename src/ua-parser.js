@@ -987,7 +987,6 @@ function parse(userAgent, window) {
         };
         this.getResult = function () {
             return {
-                ua      : this.getUA(),
                 browser : this.getBrowser(),
                 engine  : this.getEngine(),
                 os      : this.getOS(),
