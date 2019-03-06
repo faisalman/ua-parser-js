@@ -7,7 +7,7 @@
  * Dual licensed under GPLv2 or MIT
  */
 
-(function (window, undefined) {
+function parse(userAgent, window) {
 
     'use strict';
 
@@ -837,7 +837,7 @@
             ], [[NAME, 'Blink']], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,     
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
                                                                                 // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
             /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
             /(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab
@@ -1113,5 +1113,5 @@
             }
         };
     }
-
-})(typeof window === 'object' ? window : this);
+    return new UAParser(userAgent).getResult();
+}
