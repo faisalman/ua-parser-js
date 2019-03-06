@@ -1114,3 +1114,11 @@ function parse(userAgent, window) {
     }
     return new UAParser(userAgent).getResult();
 }
+
+if (typeof(exports) !== 'undefined') {
+    // nodejs env
+    if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = parse;
+    }
+    exports.parse = parse;
+}
