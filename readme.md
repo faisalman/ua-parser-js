@@ -241,18 +241,6 @@ $ npm install --save @types/ua-parser-js
 # https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ua-parser-js
 ```
 
-## Using CLI
-
-```sh
-$ node ua-parser.min.js "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)"
-# multiple args
-$ node ua-parser.min.js "Opera/1.2" "Opera/3.4"
-# piped args
-$ echo "Opera/1.2" | node ua-parser.min.js
-# log file
-$ cat ua.log | node ua-parser.min.js
-```
-
 ## Using jQuery/Zepto ($.ua)
 
 Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
