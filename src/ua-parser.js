@@ -924,22 +924,6 @@
     /////////////////
     // Constructor
     ////////////////
-    /*
-    var Browser = function (name, version) {
-        this[NAME] = name;
-        this[VERSION] = version;
-    };
-    var CPU = function (arch) {
-        this[ARCHITECTURE] = arch;
-    };
-    var Device = function (vendor, model, type) {
-        this[VENDOR] = vendor;
-        this[MODEL] = model;
-        this[TYPE] = type;
-    };
-    var Engine = Browser;
-    var OS = Browser;
-    */
     var UAParser = function (uastring, extensions) {
 
         if (typeof uastring === 'object') {
@@ -953,11 +937,6 @@
 
         var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
         var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
-        //var browser = new Browser();
-        //var cpu = new CPU();
-        //var device = new Device();
-        //var engine = new Engine();
-        //var os = new OS();
 
         this.getBrowser = function () {
             var browser = { name: undefined, version: undefined };
@@ -1000,11 +979,6 @@
         };
         this.setUA = function (uastring) {
             ua = uastring;
-            //browser = new Browser();
-            //cpu = new CPU();
-            //device = new Device();
-            //engine = new Engine();
-            //os = new OS();
             return this;
         };
         return this;
