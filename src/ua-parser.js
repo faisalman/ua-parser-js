@@ -1088,7 +1088,7 @@
         exports.UAParser = UAParser;
     } else {
         // requirejs env (optional)
-        if (typeof(define) === FUNC_TYPE && define.amd) {
+        if (typeof(define) === 'function' && define.amd) {
             define(function () {
                 return UAParser;
             });
