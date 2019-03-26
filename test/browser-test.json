@@ -60,6 +60,16 @@
         }
     },
     {
+        "desc"    : "Sailfish Browser",
+        "ua"      : "Mozilla/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:45.0) Gecko/45.0 Firefox/45.0 SailfishBrowser/1.0",
+        "expect"  :
+        {
+            "name"    : "Sailfish Browser",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Arora",
         "ua"      : "Mozilla/5.0 (Windows; U; Windows NT 5.1; de-CH) AppleWebKit/523.15 (KHTML, like Gecko, Safari/419.3) Arora/0.2",
         "expect"  :
