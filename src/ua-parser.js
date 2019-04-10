@@ -273,6 +273,9 @@
             /(Avast)\/([\w\.]+)/i                                               // Avast Secure Browser
             ], [[NAME, 'Avast Secure Browser'], VERSION], [
 
+            /(AVG)\/([\w\.]+)/i                                                 // Avast Secure Browser
+            ], [[NAME, 'AVG Secure Browser'], VERSION], [
+
             /(puffin)\/([\w\.]+)/i                                              // Puffin
             ], [[NAME, 'Puffin'], VERSION], [
 
