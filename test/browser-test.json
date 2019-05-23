@@ -1059,6 +1059,16 @@
         }
     },
     {
+        "desc"    : "Microsoft Edge Chromium",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.48 Safari/537.36 Edg/74.1.96.24",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "74.1.96.24",
+            "major"   : "74"
+        }
+    },
+    {
         "desc"    : "Iridium",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Iridium/43.8 Safari/537.36 Chrome/43.0.2357.132",
         "expect"  :
