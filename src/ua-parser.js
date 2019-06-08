@@ -471,13 +471,10 @@
             /(sprint\s(\w+))/i                                                  // Sprint Phones
             ], [[VENDOR, mapper.str, maps.device.sprint.vendor], [MODEL, mapper.str, maps.device.sprint.model], [TYPE, MOBILE]], [
 
-            /(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i                         // Lenovo tablets
-            ], [VENDOR, MODEL, [TYPE, TABLET]], [
-
             /(htc)[;_\s-]+([\w\s]+(?=\)|\sbuild)|\w+)/i,                        // HTC
             /(zte)-(\w*)/i,                                                     // ZTE
-            /(alcatel|geeksphone|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i
-                                                                                // Alcatel/GeeksPhone/Lenovo/Nexian/Panasonic/Sony
+            /(alcatel|geeksphone|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i
+                                                                                // Alcatel/GeeksPhone/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
             /(nexus\s9)/i                                                       // HTC Nexus 9
@@ -544,8 +541,12 @@
             /android.+lg(\-?[\d\w]+)\s+build/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
 
+            /(lenovo)\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+))/i             // Lenovo tablets
+            ], [VENDOR, MODEL, [TYPE, TABLET]], [
             /android.+(ideatab[a-z0-9\-\s]+)/i                                  // Lenovo
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
+            /(lenovo)[_\s-]?([\w-]+)/i
+            ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /linux;.+((jolla));/i                                               // Jolla
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
