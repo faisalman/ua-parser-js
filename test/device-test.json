@@ -134,6 +134,15 @@
         }
     },
     {
+        "desc": "Lenovo Tab 2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A7",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "LG Nexus 4",
         "ua": "Mozilla/5.0 (Linux; Android 4.2.1; Nexus 4 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19",
         "expect": {
@@ -157,7 +166,7 @@
         "expect": {
             "vendor": "Meizu",
             "model": "M5 Note",
-            "type": "tablet"
+            "type": "mobile"
         }
     },
     {
@@ -523,6 +532,15 @@
         }
     },
     {
+        "desc": "Xiaomi Mi A1",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; Mi A1 Build/OPR1.170623.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Mi A1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi Mi Note",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.4; MI NOTE LTE Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36",
         "expect": {
@@ -555,6 +573,15 @@
         "expect": {
             "vendor": "Samsung",
             "model": "Galaxy Nexus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy C9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; SAMSUNG SM-C900F Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.2 Chrome/44.0.2403.133 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-C900F",
             "type": "mobile"
         }
     },
@@ -648,6 +675,15 @@
         }
     },
     {
+        "desc": "Google Pixel XL",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Pixel XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel XL",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Google Pixel 2",
         "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 Build/OPM1.171019.013) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Safari/537.36",
         "expect": {
@@ -666,6 +702,15 @@
         }
     },
     {
+        "desc": "Google Pixel 2 XL",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Pixel 2 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 2 XL",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Google Pixel 3",
         "ua": "Mozilla/5.0 (Linux; Android 9; Pixel 3 Build/PD1A.180720.030) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36",
         "expect": {
@@ -677,6 +722,15 @@
     {
         "desc": "Google Pixel 3 XL",
         "ua": "Mozilla/5.0 (Linux; Android 9; Pixel 3 XL Build/PD1A.180720.030) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 3 XL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 3 XL",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Pixel 3 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
         "expect": {
             "vendor": "Google",
             "model": "Pixel 3 XL",

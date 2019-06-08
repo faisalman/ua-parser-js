@@ -171,6 +171,15 @@
         }
     },
     {
+        "desc"    : "Sailfish",
+        "ua"      : "Mozilla/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:45.0) Gecko/45.0 Firefox/45.0 SailfishBrowser/1.0",
+        "expect"  :
+        {
+            "name"    : "Sailfish",
+            "version" : "3.0"
+        }
+    },
+    {
         "desc"    : "WebOS",
         "ua"      : "",
         "expect"  :

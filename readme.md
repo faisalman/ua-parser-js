@@ -259,18 +259,6 @@ $ npm install --save @types/ua-parser-js
 # https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ua-parser-js
 ```
 
-## Using CLI
-
-```sh
-$ node ua-parser.min.js "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)"
-# multiple args
-$ node ua-parser.min.js "Opera/1.2" "Opera/3.4"
-# piped args
-$ echo "Opera/1.2" | node ua-parser.min.js
-# log file
-$ cat ua.log | node ua-parser.min.js
-```
-
 ## Using jQuery/Zepto ($.ua)
 
 Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
@@ -343,18 +331,18 @@ Do you use & like UAParser.js but you don’t find a way to show some love? If y
 
 # License
 
-Dual licensed under GPLv2 or MIT
+MIT License
 
-Copyright © 2012-2018 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2012-2019 Faisal Salman <<f@faisalman.com>>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of 
-this software and associated documentation files (the "Software"), to deal in 
-the Software without restriction, including without limitation the rights to use, 
-copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the 
-Software, and to permit persons to whom the Software is furnished to do so, 
-subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all 
+The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
