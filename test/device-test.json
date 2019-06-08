@@ -523,6 +523,15 @@
         }
     },
     {
+        "desc": "Xiaomi Mi A1",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; Mi A1 Build/OPR1.170623.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Mi A1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi Mi Note",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.4; MI NOTE LTE Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36",
         "expect": {
