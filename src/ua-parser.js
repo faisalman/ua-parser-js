@@ -575,9 +575,9 @@
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
             /android.+(mi[\s\-_]*(?:pad)(?:[\s_]*[\w\s]+))\s+build/i            // Mi Pad tablets
             ],[[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, TABLET]], [
-            /android.+;\s(m[1-5]\snote)\sbuild/i                                // Meizu Tablet
-            ], [MODEL, [VENDOR, 'Meizu'], [TYPE, TABLET]], [
-            /(mz)-([\w-]{2,})/i                                                 // Meizu Phone
+            /android.+;\s(m[1-5]\snote)\sbuild/i                                // Meizu
+            ], [MODEL, [VENDOR, 'Meizu'], [TYPE, MOBILE]], [
+            /(mz)-([\w-]{2,})/i
             ], [[VENDOR, 'Meizu'], MODEL, [TYPE, MOBILE]], [
 
             /android.+a000(1)\s+build/i,                                        // OnePlus
