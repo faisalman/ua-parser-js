@@ -568,6 +568,15 @@
         }
     },
     {
+        "desc": "Samsung Galaxy C9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; SAMSUNG SM-C900F Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.2 Chrome/44.0.2403.133 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-C900F",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Samsung Galaxy S5",
         "ua": "Mozilla/5.0 (Linux; Android 5.0; SM-G900F Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.78 Mobile Safari/537.36",
         "expect": {
