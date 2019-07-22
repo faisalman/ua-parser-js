@@ -1059,5 +1059,14 @@
             "model": "ANE-LX1",
             "type": "mobile"
         }
-    }
+    },
+    {
+      "desc": "Huawei P20",
+      "ua": "Mozilla/5.0 (Linux; Android 8.1.0; EML-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "EML-L29",
+          "type": "mobile"
+      }
+  }
 ]
