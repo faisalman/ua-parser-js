@@ -270,6 +270,15 @@
             /(opt)\/([\w\.]+)/i                                                 // Opera Touch
             ], [[NAME, 'Opera Touch'], VERSION], [
 
+            /AliApp\((AP)\/([\w\.]+)/i                                      // Alipay  AliApp(AP/4.6.40)
+            ], [[NAME, 'Alipay'], VERSION], [
+
+            /(DingTalk)\/([\w\.]+)/i                                      // DingTalk AliApp(DingTalk/4.6.40)
+            ], [[NAME, 'DingTalk'], VERSION], [
+
+            /AliApp\((TB)\/([\w\.]+)/i                                      // TB AliApp(TB/6.6.4)
+            ], [[NAME, 'TaoBao'], VERSION], [
+
             /((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i         // UCBrowser
             ], [[NAME, 'UCBrowser'], VERSION], [
 
