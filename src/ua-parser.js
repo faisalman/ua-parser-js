@@ -291,6 +291,9 @@
             /(micromessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
 
+            /(weibo)__([\w\.]+)__/i                                             // Weibo 
+            ], [[NAME, 'Weibo'], VERSION], [
+
             /(brave)\/([\w\.]+)/i                                              // Brave browser
             ], [[NAME, 'Brave'], VERSION], [
 
