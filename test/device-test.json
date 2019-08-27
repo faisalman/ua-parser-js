@@ -1041,5 +1041,32 @@
             "model": "MI PAD 2",
             "type": "tablet"
         }
-    }
+    },
+    {
+        "desc": "Huawei P30 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; VOG-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "VOG-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P20 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ANE-LX1",
+            "type": "mobile"
+        }
+    },
+    {
+      "desc": "Huawei P20",
+      "ua": "Mozilla/5.0 (Linux; Android 8.1.0; EML-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "EML-L29",
+          "type": "mobile"
+      }
+  }
 ]
