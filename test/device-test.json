@@ -635,7 +635,8 @@
         "ua": "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.84 Safari/537.36 CrKey/1.22.79313",
         "expect": {
             "vendor": "Google",
-            "model": "Chromecast"
+            "model": "Chromecast",
+            "type": "smarttv"
         }
     },
     {
