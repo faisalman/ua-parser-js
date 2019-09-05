@@ -424,7 +424,7 @@
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, TABLET]], [
 
             /(apple\s{0,1}tv)/i                                                 // Apple TV
-            ], [[MODEL, 'Apple TV'], [VENDOR, 'Apple']], [
+            ], [[MODEL, 'Apple TV'], [VENDOR, 'Apple'], [TYPE, SMARTTV]], [
 
             /(archos)\s(gamepad2?)/i,                                           // Archos
             /(hp).+(touchpad)/i,                                                // HP TouchPad
@@ -564,7 +564,7 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /crkey/i                                                            // Google Chromecast
-            ], [[MODEL, 'Chromecast'], [VENDOR, 'Google']], [
+            ], [[MODEL, 'Chromecast'], [VENDOR, 'Google'], [TYPE, SMARTTV]], [
 
             /android.+;\s(glass)\s\d/i                                          // Google Glass
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
