@@ -239,8 +239,9 @@
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer
 
             // Trident based
-            /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,
-                                                                                // Avant/IEMobile/SlimBrowser/Baidu
+            /(avant\s|iemobile|slim)(?:browser)?[\/\s]?([\w\.]*)/i,
+                                                                                // Avant/IEMobile/SlimBrowser
+            /(bidubrowser|baidubrowser)[\/\s]?([\w\.]+)/i,                      // Baidu Browser
             /(?:ms|\()(ie)\s([\w\.]+)/i,                                        // Internet Explorer
 
             // Webkit/KHTML based
@@ -294,7 +295,7 @@
             /m?(qqbrowser)[\/\s]?([\w\.]+)/i                                    // QQBrowser
             ], [NAME, VERSION], [
 
-            /(BIDUBrowser)[\/\s]?([\w\.]+)/i                                    // Baidu Browser
+            /(baiduboxapp)[\/\s]?([\w\.]+)/i                                    // Baidu App
             ], [NAME, VERSION], [
 
             /(2345Explorer)[\/\s]?([\w\.]+)/i                                   // 2345 Browser
