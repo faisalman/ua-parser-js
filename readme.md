@@ -23,7 +23,7 @@
 # Methods
 
 * `getBrowser()`
-    * returns `{ name: '', version: '' }`
+    * returns `{ name: '', version: '', major: '' }`
 
 ```sh
 # Possible 'browser.name':
@@ -42,6 +42,8 @@ SeaMonkey, Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser,
 UCBrowser, Vivaldi, Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
 
 # 'browser.version' determined dynamically
+
+# 'browser.major' is the major version number determined dynamically
 ```
 
 * `getDevice()`
