@@ -1150,5 +1150,50 @@
         "model": "LYA-L09",
         "type": "mobile"
     }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-AL00",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-AL10",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L0C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-L0C",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-L29",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-TL00",
+        "type": "mobile"
+    }
   }
 ]
