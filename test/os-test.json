@@ -549,6 +549,15 @@
         }
     },
     {
+        "desc"    : "KaiOS",
+        "ua"      : "Mozilla/5.0 (Mobile; Nokia_8110_4G; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5",
+        "expect"  :
+        {
+            "name"    : "KAIOS",
+            "version" : "2.5"
+        }
+    },
+    {
         "desc"    : "AIX",
         "ua"      : "",
         "expect"  :
