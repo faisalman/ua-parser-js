@@ -237,7 +237,6 @@
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i,
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer
-
             // Trident based
             /(avant\s|iemobile|slim)(?:browser)?[\/\s]?([\w\.]*)/i,
                                                                                 // Avant/IEMobile/SlimBrowser
@@ -289,7 +288,7 @@
             /(micromessenger)\/([\w\.]+)/i                                      // WeChat
             ], [[NAME, 'WeChat'], VERSION], [
 
-            /(brave)\/([\w\.]+)/i                                              // Brave browser
+            /(brave)\/([\w\.]+)/i                                               // Brave browser
             ], [[NAME, 'Brave'], VERSION], [
 
             /(qqbrowserlite)\/([\w\.]+)/i                                       // QQBrowserLite
@@ -310,7 +309,7 @@
             /(MetaSr)[\/\s]?([\w\.]+)/i                                         // SouGouBrowser
             ], [NAME], [
 
-            /(LBBROWSER)/i                                      // LieBao Browser
+            /(LBBROWSER)/i                                                      // LieBao Browser
             ], [NAME], [
 
             /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
@@ -493,6 +492,9 @@
             /d\/huawei([\w\s-]+)[;\)]/i,
             /(nexus\s6p|vog-l29|ane-lx1|eml-l29)/i                              // Huawei
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
+
+            /android.+(bah2?-a?[lw]\d{2})/i                                     // Huawei MediaPad
+            ], [MODEL, [VENDOR, 'Huawei'], [TYPE, TABLET]], [
 
             /(microsoft);\s(lumia[\s\w]+)/i                                     // Microsoft Lumia
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [

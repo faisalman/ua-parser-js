@@ -1062,6 +1062,15 @@
         }
     },
     {
+        "desc": "HUAWEI MediaPad M3 Lite 10",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; BAH-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH-L09",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Huawei P30 Pro",
         "ua": "Mozilla/5.0 (Linux; Android 9; VOG-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
