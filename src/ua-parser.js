@@ -593,8 +593,7 @@
             ], [[VENDOR, 'Meizu'], MODEL, [TYPE, MOBILE]], [
 
             /android.+a000(1)\s+build/i,                                        // OnePlus
-            /android.+oneplus\s(a\d{4})\s+build/i,
-            /android.+oneplus\s(a\d{4})/i
+            /android.+oneplus\s(a\d{4})[\s)]/i
             ], [MODEL, [VENDOR, 'OnePlus'], [TYPE, MOBILE]], [
 
             /android.+[;\/]\s*(RCT[\d\w]+)\s+build/i                            // RCA Tablets
