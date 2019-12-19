@@ -757,6 +757,42 @@
         }
     },
     {
+        "desc": "Google Pixel 3a",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 3a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 3a",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 3a XL",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 3a XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 3a XL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4 XL",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 4 XL",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Generic Android Device",
         "ua": "Mozilla/5.0  (Linux; U; Android 6.0.1; i980 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
         "expect": {
