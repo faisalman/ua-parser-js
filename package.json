@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.20",
+  "version": "0.7.21",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
