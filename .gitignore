@@ -1,5 +1,8 @@
 node_modules/
 npm-debug.log
+
+.vscode
+
 ### vim ###
 .*.s[a-w][a-z]
 *.un~

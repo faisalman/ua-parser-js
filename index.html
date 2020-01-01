@@ -4,43 +4,43 @@
     <title>UAParser.js - Lightweight JavaScript-based User Agent String Parser</title>
     <meta charset="utf-8">
     <meta name="author" content="Faisalman" />
-    <meta name="description" content="UAParser.js Lightweight JavaScript-based User-Agent string parser. Supports browser & node.js environment. Also available as jQuery plugin & AMD module." />
-    <meta name="keywords" content="user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
+    <meta name="description" content="UAParser.js - JavaScript library to detect browser, engine, OS, CPU, and device type/model from userAgent string. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, RequireJS/AMD module, & CLI tool." />
+    <meta name="keywords" content="browser detection, user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
     <style>        
-      @import url("https://fonts.googleapis.com/css?family=Kalam");
+      @import url("https://fonts.googleapis.com/css?family=Lekton");
       * {
         margin: 0;
         padding: 0;
-        font-family: Kalam, Helvetica, Ubuntu, Arial, Georgia, sans-serif;
+        font-family: "Lekton", Helvetica, Ubuntu, Arial, Georgia, sans-serif;
       }
       html, input, select {
         font: 14px/20px Helvetica, Ubuntu, Arial, Georgia, sans-serif;
         color: #333;
       }
       body {
-        background: #548796;
+        background: #000;
         margin: 0 auto;
         width: 960px;
-        text-align: center;
       }
       header, section, footer {
-        padding: 50px;
         position: relative;
       }
       header {
-          padding: 100px 50px 50px;
-          background-color: #2A4149;
+          padding: 50px 0 20px 0;
+          background-color: #000;
           color: #fff;
       }
       section {
-          background-color: #E3F0C6;
+          background-color: #fff;
       }
       section.test {
-        background-color: #ACCBB5;
+        color: #fff;
+        background-color: #000;
       }
       footer {
-        background-color: #FE6B44;
-		color: #fff;
+        background-color: #000;
+		    color: #fff;
+        padding: 20px 0;
       }
       footer a {
 		color: #fff;
@@ -71,7 +71,6 @@
         line-height: 2em;
       }
       table {
-        margin: 50px 0;
         border-spacing: 0;
         width: 100%;
       }
@@ -79,8 +78,7 @@
         font-size: 2em;
       }
       th, td {
-        min-width: 100px;
-        padding: 20px;
+        padding: 20px 0;
         text-align: center;
       }
       td {
@@ -95,8 +93,7 @@
         background-color: #fff;
         border: 1px solid #ccc;
         height: 40px;
-        padding: 0 10px;
-        margin: 10px;
+        width: 100%;
       }
       hr {
 		border: 0;
@@ -117,13 +114,13 @@
         padding: 5px 10px;
       }
     </style>
-    <script src="src/ua-parser.js"></script>
+    <script src="src/ua-parser-demo.js"></script>
     <script src="ua-list-example.js"></script>
   </head>
   <body>
     <header>
       <h1><a href="https://faisalman.github.io/ua-parser-js">UAParser.js</a></h1>
-      <h2 trans-key="description">Lightweight JavaScript-based User-Agent String Parser</h2>
+      <h2 trans-key="description">JavaScript-based User-Agent String Parser</h2>
     </header>
     <section class="result">
       <pre>
@@ -157,18 +154,17 @@
     <section class="test">
       <p trans-key="pick_one_label">Pick one user agent to be tested:</p>
       <select>
-        <option trans-key="pick_one_text">Pick one</option>
+        <option trans-key="pick_one_text">Pick one example</option>
       </select>
       <p trans-key="enter_user_agent_string">Or enter any user-agent string you want to test here:</p>
       <input type="text" />
     </section>
     <footer>
       <p>
-        <span class="ua">UAParser.js</span> &copy; 2012-2014 Faisal Salman. <br/>
-        <span trans-key="license">Dual licensed under GPLv2 & MIT license</span><br/>
+        <span class="ua">UAParser.js</span> &copy; 2012-2020 Faisal Salman. <br/>
+        <span trans-key="license">Dual licensed under MIT license</span><br/>
         <span trans-key="source_and_docs">Source &amp; Docs</span>: <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a><br/>
-        <span trans-key="nodejs_package">Node.js package</span>: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a><br/>
-        <span trans-key="jquery">$.ua</span>: <a href="http://plugins.jquery.com/ua-parser-js/">http://plugins.jquery.com/ua-parser-js/</a>
+        <span trans-key="nodejs_package">NPM package</span>: <a href="https://npmjs.org/package/ua-parser-js">https://npmjs.org/package/ua-parser-js</a><br/>
       </p>
 
       <p>
@@ -267,7 +263,7 @@
         var translations = {
             en: {
                 result_for: 'Result for',
-                user_agent_string: 'User-Agent string of your browser',
+                user_agent_string: 'your browser',
             },
             fr: {
                 description: 'Parseur léger de chaine "User-Agent" en JavaScript',
