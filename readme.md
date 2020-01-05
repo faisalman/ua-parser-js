@@ -113,8 +113,8 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
 <!doctype html>
 <html>
 <head>
-<script type="text/javascript" src="ua-parser.min.js"></script>
-<script type="text/javascript">
+<script src="ua-parser.min.js"></script>
+<script>
 
     var parser = new UAParser();
 
