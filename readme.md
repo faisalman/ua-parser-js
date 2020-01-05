@@ -113,10 +113,10 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
 <!doctype html>
 <html>
 <head>
-<script type="text/javascript" src="ua-parser.min.js"></script>
-<script type="text/javascript">
+<script src="ua-parser.min.js"></script>
+<script>
 
-	var parser = new UAParser();
+    var parser = new UAParser();
 
     // by default it takes ua string from current browser's window.navigator.userAgent
     console.log(parser.getResult());
