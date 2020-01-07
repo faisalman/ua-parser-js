@@ -27,26 +27,26 @@
 
 ```sh
 # Possible 'browser.name':
-2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG, 
-BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera, 
-Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo, 
-Dolphin, Doris, Edge, Epiphany, Facebook, Falkon, Fennec, Firebird, Firefox, 
-Flock, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, 
-Iceape, Iceweasel, Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror, 
-LBBROWSER Line, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, 
-Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, 
-NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser, OmniWeb, 
-Opera Coast, Opera Mini, Opera Mobi, Opera Tablet, Opera, PaleMoon, PhantomJS, 
-Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, 
-RockMelt, Safari, Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, 
-Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser, Vivaldi, 
-Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
+2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
+BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
+Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
+Dolphin, Doris, Edge, Epiphany, Facebook, Falkon, Fennec, Firebird, Firefox,
+Flock, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon,
+Iceape, Iceweasel, Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror,
+LBBROWSER Line, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo,
+Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront,
+NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser, OmniWeb,
+Opera Coast, Opera Mini, Opera Mobi, Opera Tablet, Opera, PaleMoon, PhantomJS,
+Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla,
+RockMelt, Safari, Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire,
+Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser, Vivaldi,
+Waterfox, WeChat, Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```
 
 * `getDevice()`
-    * returns `{ model: '', type: '', vendor: '' }` 
+    * returns `{ model: '', type: '', vendor: '' }`
 
 ```sh
 # Possible 'device.type':
@@ -66,7 +66,7 @@ RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
 
 ```sh
 # Possible 'engine.name'
-Amaya, Blink, EdgeHTML, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront, 
+Amaya, Blink, EdgeHTML, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront,
 NetSurf, Presto, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
@@ -77,12 +77,12 @@ NetSurf, Presto, Tasman, Trident, w3m, WebKit
 
 ```sh
 # Possible 'os.name'
-AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, 
-Contiki, Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Fuchsia, Gentoo, GNU, 
-Haiku, Hurd, iOS, Joli, KaiOS, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo, 
-Minix, Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, 
-PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, RISC OS, Sailfish, 
-Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, 
+AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
+Contiki, Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Fuchsia, Gentoo, GNU,
+Haiku, Hurd, iOS, Joli, KaiOS, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo,
+Minix, Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD,
+PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, RISC OS, Sailfish,
+Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux,
 WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
@@ -245,7 +245,7 @@ $ npm install --save @types/ua-parser-js
 
 ## Using jQuery/Zepto ($.ua)
 
-Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`.
 
 ```js
 // In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
