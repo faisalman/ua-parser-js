@@ -291,6 +291,9 @@
             /(brave)\/([\w\.]+)/i                                               // Brave browser
             ], [[NAME, 'Brave'], VERSION], [
 
+            /(whale)\/([\w\.]+)/i                                               // Whale browser
+            ], [[NAME, 'Whale'], VERSION], [
+
             /(qqbrowserlite)\/([\w\.]+)/i                                       // QQBrowserLite
             ], [NAME, VERSION], [
 
@@ -583,7 +586,7 @@
 
             /android.+;\s(\w+)\s+build\/hm\1/i,                                 // Xiaomi Hongmi 'numeric' models
             /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,               // Xiaomi Hongmi
-            /android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i,    
+            /android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i,
                                                                                 // Xiaomi Mi
             /android.+(redmi[\s\-_]*(?:note)?(?:[\s_]*[\w\s]+))\s+build/i       // Redmi Phones
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
@@ -685,7 +688,7 @@
             ], [VERSION, [NAME, 'Blink']], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,     
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
                                                                                 // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
             /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
             /(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab
