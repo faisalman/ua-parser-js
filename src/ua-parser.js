@@ -668,6 +668,14 @@
             /android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i                      // Gigaset Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
+                                                                                // Android Phones from Unidentified Vendors
+            /android .+?;\s([^;]+?)(?:\sbuild.+?)?\) applewebkit.+?\smobile\ssafari/i
+            ], [MODEL, [TYPE, MOBILE]], [
+
+                                                                                // Android Tablets from Unidentified Vendors
+            /android .+?;\s([^;]+?)(?:\sbuild.+?)?\) applewebkit.+?(?!\smobile)\ssafari/i
+            ], [MODEL, [TYPE, TABLET]], [
+
             /\s(tablet|tab)[;\/]/i,                                             // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL], [
