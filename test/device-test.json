@@ -794,10 +794,42 @@
     },
     {
         "desc": "Generic Android Device",
-        "ua": "Mozilla/5.0  (Linux; U; Android 6.0.1; i980 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; i980 Build/MRA58K)",
         "expect": {
             "vendor": "Generic",
             "model": "Android 6.0.1"
+        }
+    },
+    {
+        "desc": "Android Phone Unidentified Vendor (docomo F-04K)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; F-04K Build/V15R060P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",
+        "expect": {
+            "model": "F-04K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Android Phone Unidentified Vendor (docomo SH-02M)",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SH-02M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "model": "SH-02M",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Android Tablet Unidentified Vendor (docomo F-02K)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; F-02K Build/V44R059G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Safari/537.36",
+        "expect": {
+            "model": "F-02K",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Android Tablet Unidentified Vendor (docomo d-02K)",
+        "ua": "Mozilla/5.0 (Linux; Android 9; d-02K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Safari/537.36",
+        "expect": {
+            "model": "d-02K",
+            "type": "tablet"
         }
     },
     {
