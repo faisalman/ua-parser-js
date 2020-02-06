@@ -287,7 +287,7 @@
 
       function trans(key) {
           var matchLang = location.search.match(/lang=([a-z]+)/);
-	  var queryLang = matchLang ? matchLang[1] : null;
+          var queryLang = matchLang ? matchLang[1] : null;
           var locale = queryLang || navigator.language || navigator.userLanguage; 
           var translations = getTranslations();
 
