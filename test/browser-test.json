@@ -160,6 +160,16 @@
         }
     },
     {
+        "desc"    : "CCleaner Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 CCleaner/80.0.3765.152",
+        "expect"  :
+        {
+            "name"    : "CCleaner Browser",
+            "version" : "80.0.3765.152",
+            "major"   : "80"
+        }
+    },
+    {
         "desc"    : "Chimera",
         "ua"      : "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; pl-PL; rv:1.0.1) Gecko/20021111 Chimera/0.6",
         "expect"  :

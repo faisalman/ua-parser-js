@@ -267,6 +267,9 @@
             /(AVG)\/([\w\.]+)/i                                                 // AVG Secure Browser
             ], [[NAME, 'AVG Secure Browser'], VERSION], [
 
+            /(CCleaner)\/([\w\.]+)/i                                            // CCleaner Browser
+            ], [[NAME, 'CCleaner Browser'], VERSION], [
+
             /(puffin)\/([\w\.]+)/i                                              // Puffin
             ], [[NAME, 'Puffin'], VERSION], [
 
