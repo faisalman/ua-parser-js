@@ -171,10 +171,6 @@
                     '2.0.4' : '/419',
                     '?'     : '/'
                 }
-            },
-            name : {
-                'Opera Mobile' : 'Opera Mobi',
-                'IE Mobile'    : 'IEMobile'
             }
         },
 
@@ -209,9 +205,6 @@
                     '8.1'       : 'NT 6.3',
                     '10'        : ['NT 6.4', 'NT 10.0'],
                     'RT'        : 'ARM'
-                },
-                name : {
-                    'Windows Phone' : 'Windows Phone OS'
                 }
             }
         }
@@ -338,6 +331,10 @@
             /((?:oculus|samsung)browser)\/([\w\.]+)/i
             ], [[NAME, /(.+(?:g|us))(.+)/, '$1 $2'], VERSION], [                // Oculus / Samsung Browser
 
+            /((?:android.+)crmo|crios)\/([\w\.]+)/i,                            // Chrome for Android/iOS
+            /android.+(chrome)\/([\w\.]+)\s+(?:mobile\s?safari)/i
+            ], [[NAME, 'Chrome Mobile'], VERSION], [
+
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i        // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
@@ -353,9 +350,6 @@
 
             /(qihu|qhbrowser|qihoobrowser|360browser)/i                         // 360
             ], [[NAME, '360 Browser']], [
-
-            /((?:android.+)crmo|crios)\/([\w\.]+)/i                             // Chrome for Android/iOS
-            ], [[NAME, 'Chrome Mobile'], VERSION], [
 
             /(coast)\/([\w\.]+)/i                                               // Opera Coast
             ], [[NAME, 'Opera Coast'], VERSION], [
