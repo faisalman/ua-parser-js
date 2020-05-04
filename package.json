@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "@amplitude/ua-parser-js",
-  "version": "0.7.20",
+  "version": "0.7.21",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -116,7 +116,7 @@
   },
   "devDependencies": {
     "jshint": "~1.1.0",
-    "mocha": "~1.8.0",
+    "mocha": "~7.0.0",
     "requirejs": "^2.3.2",
     "uglify-js": "~2.7.5",
     "verup": "^1.3.x"
@@ -125,7 +125,7 @@
     "type": "git",
     "url": "https://github.com/amplitude/ua-parser-js.git"
   },
-  "license": "(GPL-2.0 OR MIT)",
+  "license": "MIT",
   "engines": {
     "node": "*"
   },

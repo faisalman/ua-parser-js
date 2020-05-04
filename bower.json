@@ -1,8 +1,8 @@
 {
   "name": "ua-parser-js",
-  "version": "0.7.19",
+  "version": "0.7.21",
   "authors": [
-    "Faisal Salman <fyzlman@gmail.com>"
+    "Faisal Salman <f@faisalman.com>"
   ],
   "private": false,
   "main": "src/ua-parser.js",
