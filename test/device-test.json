@@ -757,11 +757,79 @@
         }
     },
     {
+        "desc": "Google Pixel 3a",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 3a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 3a",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 3a XL",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 3a XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 3a XL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4 XL",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 4 XL",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Generic Android Device",
-        "ua": "Mozilla/5.0  (Linux; U; Android 6.0.1; i980 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; i980 Build/MRA58K)",
         "expect": {
             "vendor": "Generic",
             "model": "Android 6.0.1"
+        }
+    },
+    {
+        "desc": "Android Phone Unidentified Vendor (docomo F-04K)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; F-04K Build/V15R060P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",
+        "expect": {
+            "model": "F-04K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Android Phone Unidentified Vendor (docomo SH-02M)",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SH-02M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "model": "SH-02M",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Android Tablet Unidentified Vendor (docomo F-02K)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; F-02K Build/V44R059G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Safari/537.36",
+        "expect": {
+            "model": "F-02K",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Android Tablet Unidentified Vendor (docomo d-02K)",
+        "ua": "Mozilla/5.0 (Linux; Android 9; d-02K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Safari/537.36",
+        "expect": {
+            "model": "d-02K",
+            "type": "tablet"
         }
     },
     {
@@ -1096,14 +1164,68 @@
           "model": "EML-L29",
           "type": "mobile"
       }
-    },
-    {
-      "desc": "Huawei P30",
-      "ua": "Mozilla/5.0 (Linux; Android 9; ELE-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.90 Mobile Safari/537.36",
-      "expect": {
-          "vendor": "Huawei",
-          "model": "ELE-L29",
-          "type": "mobile"
-      }
+  },
+  {
+    "desc": "Huawei P20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; CLT-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "CLT-L29",
+        "type": "mobile"
     }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-L09",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-AL00",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-AL10",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L0C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-L0C",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-L29",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Huawei Mate 20 Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "LYA-TL00",
+        "type": "mobile"
+    }
+  }
 ]

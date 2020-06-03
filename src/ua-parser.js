@@ -291,6 +291,9 @@
             /(brave)\/([\w\.]+)/i                                               // Brave browser
             ], [[NAME, 'Brave'], VERSION], [
 
+            /(whale)\/([\w\.]+)/i                                               // Whale browser
+            ], [[NAME, 'Whale'], VERSION], [
+
             /(qqbrowserlite)\/([\w\.]+)/i                                       // QQBrowserLite
             ], [NAME, VERSION], [
 
@@ -492,8 +495,9 @@
             /(nexus\s9)/i                                                       // HTC Nexus 9
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
 
-            /d\/huawei([\w\s-]+)[;\)]/i,
-            /(nexus\s6p|vog-l29|ane-lx1|eml-l29|ele-l29)/i                              // Huawei
+            /d\/huawei([\w\s-]+)[;\)]/i,                                        // Huawei
+            /android.+\s(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?)/i
+
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
 
             /android.+(bah2?-a?[lw]\d{2})/i                                     // Huawei MediaPad
@@ -581,12 +585,12 @@
             /android.+;\s(pixel c)[\s)]/i                                       // Google Pixel C
             ], [MODEL, [VENDOR, 'Google'], [TYPE, TABLET]], [
 
-            /android.+;\s(pixel( [23])?( xl)?)[\s)]/i                              // Google Pixel
+            /android.+;\s(pixel( [2-9]a?)?( xl)?)[\s)]/i                        // Google Pixel
             ], [MODEL, [VENDOR, 'Google'], [TYPE, MOBILE]], [
 
             /android.+;\s(\w+)\s+build\/hm\1/i,                                 // Xiaomi Hongmi 'numeric' models
             /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,               // Xiaomi Hongmi
-            /android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i,    
+            /android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i,
                                                                                 // Xiaomi Mi
             /android.+(redmi[\s\-_]*(?:note)?(?:[\s_]*[\w\s]+))\s+build/i       // Redmi Phones
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
@@ -667,6 +671,12 @@
 
             /android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i                      // Gigaset Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
+                                                                                // Android Phones from Unidentified Vendors
+            /android .+?; ([^;]+?)(?: build|\) applewebkit).+? mobile safari/i
+            ], [MODEL, [TYPE, MOBILE]], [
+                                                                                // Android Tablets from Unidentified Vendors
+            /android .+?;\s([^;]+?)(?: build|\) applewebkit).+?(?! mobile) safari/i
+            ], [MODEL, [TYPE, TABLET]], [
 
             /\s(tablet|tab)[;\/]/i,                                             // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
@@ -688,7 +698,7 @@
             ], [VERSION, [NAME, 'Blink']], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,     
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
                                                                                 // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
             /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
             /(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab

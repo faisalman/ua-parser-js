@@ -94,7 +94,8 @@
     "Sylvain Gizard <sylvain.gizard@gmail.com>",
     "szchenghuang <szchenghuang@gmail.com>",
     "Vadim Kurachevsky <vadim@hmvs.org>",
-    "Yun Young-jin <yupmin@yupmin-office-macmini.local>"
+    "Yun Young-jin <yupmin@yupmin-office-macmini.local>",
+    "Insanehong <insae.hong@navercorp.com>"
   ],
   "main": "src/ua-parser.js",
   "scripts": {
