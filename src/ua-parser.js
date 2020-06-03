@@ -315,8 +315,11 @@
             /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
             ], [VERSION, [NAME, 'MIUI Browser']], [
 
-            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android
+            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android with version
             ], [VERSION, [NAME, 'Facebook']], [
+            
+            /FBAN\/FBIOS|FB_IAB\/FB4A/i                                         // Facebook App for iOS & Android without version
+            ], [[NAME, 'Facebook']], [
 
             /safari\s(line)\/([\w\.]+)/i,                                       // Line App for iOS
             /android.+(line)\/([\w\.]+)\/iab/i                                  // Line App for Android
