@@ -6,7 +6,7 @@
     <meta name="author" content="Faisalman" />
     <meta name="description" content="UAParser.js - JavaScript library to detect browser, engine, OS, CPU, and device type/model from userAgent string. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, RequireJS/AMD module, & CLI tool." />
     <meta name="keywords" content="browser detection, user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
-    <style>        
+    <style>
       @import url("https://fonts.googleapis.com/css?family=Lekton");
       * {
         margin: 0;
@@ -234,7 +234,14 @@
         }
         pre.innerHTML = trans('result_for') + ' <span class="uastring">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (' + trans('user_agent_string') + ')') + '</span> :';
       }
-      fillTable();
+      const urlUserAgent = parseUrlParams().ua;
+      if (urlUserAgent) {
+        const userAgent = decodeURI(urlUserAgent);
+        txt.value = userAgent;
+        fillTable(userAgent);
+      } else {
+        fillTable();
+      }
       var select = function(){
         fillTable(sel.children[sel.selectedIndex].value);
       };
@@ -288,7 +295,7 @@
       function trans(key) {
           var matchLang = location.search.match(/lang=([a-z]+)/);
           var queryLang = matchLang ? matchLang[1] : null;
-          var locale = queryLang || navigator.language || navigator.userLanguage; 
+          var locale = queryLang || navigator.language || navigator.userLanguage;
           var translations = getTranslations();
 
           if (!translations) {
@@ -313,16 +320,20 @@
           value.innerHTML = translatedText;
         }
       });
-    </script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3767301-5']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+
+      function parseUrlParams() {
+        const paramString = location.search.split('?')[1];
+        if (paramString) {
+          const params = paramString.split('&');
+          const obj = params.reduce((acc, cur, i) => {
+            const [key, value] = cur.includes('=') ? cur.split('=') : [cur, null]
+            acc[key] = value
+            return acc
+          }, {})
+          return obj
+        }
+        return {}
+      }
     </script>
   </body>
 </html>
