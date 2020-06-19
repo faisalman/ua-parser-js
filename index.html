@@ -6,7 +6,7 @@
     <meta name="author" content="Faisalman" />
     <meta name="description" content="UAParser.js - JavaScript library to detect browser, engine, OS, CPU, and device type/model from userAgent string. Supports browser & node.js environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, RequireJS/AMD module, & CLI tool." />
     <meta name="keywords" content="browser detection, user agent, parser, javascript, detect, details, new, browser, engine, mobile, device, operating system" />
-    <style>
+    <style>        
       @import url("https://fonts.googleapis.com/css?family=Lekton");
       * {
         margin: 0;
@@ -295,7 +295,7 @@
       function trans(key) {
           var matchLang = location.search.match(/lang=([a-z]+)/);
           var queryLang = matchLang ? matchLang[1] : null;
-          var locale = queryLang || navigator.language || navigator.userLanguage;
+          var locale = queryLang || navigator.language || navigator.userLanguage; 
           var translations = getTranslations();
 
           if (!translations) {
