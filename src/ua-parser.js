@@ -474,7 +474,7 @@
             /android.+;\s(shield)\sbuild/i                                      // Nvidia
             ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
 
-            /(playstation\s[34portablevi]+)/i                                   // Playstation
+            /(playstation\s[345portablevi]+)/i                                   // Playstation
             ], [MODEL, [VENDOR, 'Sony'], [TYPE, CONSOLE]], [
 
             /(sprint\s(\w+))/i                                                  // Sprint Phones
@@ -723,7 +723,7 @@
             ], [[NAME, 'Firefox OS'], VERSION], [
 
             // Console
-            /(nintendo|playstation)\s([wids34portablevu]+)/i,                   // Nintendo/Playstation
+            /(nintendo|playstation)\s([wids345portablevu]+)/i,                   // Nintendo/Playstation
 
             // GNU/Linux based
             /(mint)[\/\s\(]?(\w*)/i,                                            // Mint

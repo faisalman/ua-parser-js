@@ -586,6 +586,15 @@
         }
     },
     {
+        "desc": "PlayStation 5",
+        "ua": "Mozilla/5.0 (Playstation; Playstation 5/1.05) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Playstation 5",
+            "type": "console"
+        }
+    },
+    {
         "desc": "Galaxy Nexus",
         "ua": "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19",
         "expect": {
