@@ -129,6 +129,9 @@
   "engines": {
     "node": "*"
   },
+  "files": [
+    "types.d.ts"
+  ],
   "directories": {
     "dist": "dist",
     "src": "src",
