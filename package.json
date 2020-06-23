@@ -134,6 +134,7 @@
     "src": "src",
     "test": "test"
   },
+  "typings": "types.d.ts",
   "bugs": "https://github.com/faisalman/ua-parser-js/issues",
   "demo": "https://faisalman.github.io/ua-parser-js",
   "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.min.js"
