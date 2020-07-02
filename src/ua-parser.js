@@ -490,7 +490,7 @@
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
 
             /d\/huawei([\w\s-]+)[;\)]/i,
-            /(nexus\s6p|vog-l29|ane-lx1|eml-l29|ele-l29)/i                              // Huawei
+            /(nexus\s6p|vog-l29|ane-lx1|eml-l29|ele-l29|MT7-TL10|CRR-UL20|NXT-AL10|MHA-AL00|LON-AL00|ALP-AL00|BLA-AL00|NEO-AL00|HMA-|LYA-|EVR-|TAS-|LIO-|TAH-AN00|GRA-UL10|EVA-AL00|VIE-AL10|VTR-AL00|VKY-AL00|EML-AL00|CLT-AL01|ELE-|VOG-|ANA-AN00|ELS-|CAZ-AL10|WAS-AL00|BAC-AL00|PIC-AL00|HWI-AL00|ANE-AL00|INE-AL00|PAR-AL00|VCE-|MAR-|SEA-|GLK-|SPN-|WLZ-|JNY-AL10|NTS-AL00|TNY-|SCL-AL00|PLK-AL10|ATH-AL00|FRD-AL00|PRA-AL00|STF-AL00|LLD-TL10|COL-AL10|HRY-AL00|LRA-AL00|HRY-|YAL-|BMH-AN10|EBG-|YAL-AL50|CDY-AN90|LLD-AL20|COR-AL00|ASK-AL00|KSA-AL10|AKA-AL10|AQM-AL10|JSN-|ARE-|HLK-|RVL-AL09|KNT-AL20|DUK-AL20|JMM-AL00|BKL-AL00|PCT-|OXF-|RIO-UL00|MLA-UL00|BAH2-|JDN2-|CMR-|SHT-|SCM-|VRD-|MRX-|BZT-|MON-|BZK-|BZA-|BG2-|KOB-|AGS-|HDN-|HDL-|AGS2-|JDN2-|Y635-TL00|GEM-703L|EDI-AL10|JNY-)/i                              // Huawei
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
 
             /android.+(bah2?-a?[lw]\d{2})/i                                     // Huawei MediaPad
