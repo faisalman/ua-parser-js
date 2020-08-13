@@ -318,8 +318,11 @@
             /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
             ], [VERSION, [NAME, 'MIUI Browser']], [
 
-            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android
+            /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android with version
             ], [VERSION, [NAME, 'Facebook']], [
+            
+            /FBAN\/FBIOS|FB_IAB\/FB4A/i                                         // Facebook App for iOS & Android without version
+            ], [[NAME, 'Facebook']], [
 
             /safari\s(line)\/([\w\.]+)/i,                                       // Line App for iOS
             /android.+(line)\/([\w\.]+)\/iab/i                                  // Line App for Android
@@ -494,6 +497,7 @@
 
             /d\/huawei([\w\s-]+)[;\)]/i,                                        // Huawei
             /android.+\s(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?)/i
+
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
 
             /android.+(bah2?-a?[lw]\d{2})/i                                     // Huawei MediaPad
