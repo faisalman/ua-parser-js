@@ -234,7 +234,14 @@
         }
         pre.innerHTML = trans('result_for') + ' <span class="uastring">' + (uastring ? uastring.replace(/</g,'&lt;') : navigator.userAgent + '</span><span> (' + trans('user_agent_string') + ')') + '</span> :';
       }
-      fillTable();
+      const urlUserAgent = parseUrlParams().ua;
+      if (urlUserAgent) {
+        const userAgent = decodeURI(urlUserAgent);
+        txt.value = userAgent;
+        fillTable(userAgent);
+      } else {
+        fillTable();
+      }
       var select = function(){
         fillTable(sel.children[sel.selectedIndex].value);
       };
@@ -313,6 +320,20 @@
           value.innerHTML = translatedText;
         }
       });
+
+      function parseUrlParams() {
+        const paramString = location.search.split('?')[1];
+        if (paramString) {
+          const params = paramString.split('&');
+          const obj = params.reduce((acc, cur, i) => {
+            const [key, value] = cur.includes('=') ? cur.split('=') : [cur, null];
+            acc[key] = value;
+            return acc;
+          }, {});
+          return obj;
+        }
+        return {};
+      }
     </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
