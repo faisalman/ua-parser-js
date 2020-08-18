@@ -252,6 +252,15 @@
         }
     },
     {
+        "desc"    : "Google Chromecast",
+        "ua"      : "Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.81 Safari/537.36 CrKey/1.42.183786",
+        "expect"  :
+        {
+            "name"    : "Chromecast",
+            "version" : "1.42.183786"
+        }
+    },
+    {
         "desc"    : "Nintendo",
         "ua"      : "",
         "expect"  :
