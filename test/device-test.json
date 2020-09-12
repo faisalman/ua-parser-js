@@ -595,6 +595,69 @@
         }
     },
     {
+        "desc": "Xiaomi MI PAD 2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; MI PAD 2 Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Safari/537.36 [FB_IAB/FB4A;FBAV/137.0.0.24.91;]",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 4 PLUS",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; MI PAD 4 PLUS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 4 PLUS",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Redmi 4A",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Redmi 4A Build/MMB29M; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi 4A",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi Redmi K30 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Redmi K30 5G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi K30 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi Redmi K30 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Redmi K30 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi K30 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi Redmi Note 3",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Redmi Note 3 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi Note 3",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi Redmi Note 9 Pro Max",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Redmi Note 9 Pro Max) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi Note 9 Pro Max",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "PlayStation 4",
         "ua": "Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",
         "expect": {
@@ -1126,24 +1189,6 @@
         "expect": {
             "vendor": "Gigaset",
             "model": "QV830",
-            "type": "tablet"
-        }
-    },
-    {
-        "desc": "Redmi Note 3",
-        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Redmi Note 3 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Mobile Safari/537.36",
-        "expect": {
-            "vendor": "Xiaomi",
-            "model": "Redmi Note 3",
-            "type": "mobile"
-        }
-    },
-    {
-        "desc": "MI PAD 2",
-        "ua": "Mozilla/5.0 (Linux; Android 5.1; MI PAD 2 Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Safari/537.36 [FB_IAB/FB4A;FBAV/137.0.0.24.91;]",
-        "expect": {
-            "vendor": "Xiaomi",
-            "model": "MI PAD 2",
             "type": "tablet"
         }
     },
