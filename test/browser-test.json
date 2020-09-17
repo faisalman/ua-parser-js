@@ -370,6 +370,16 @@
         }
     },
     {
+        "desc"    : "Firefox-based browser",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0 AppName/1.0",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "80.0",
+            "major"   : "80"
+        }
+    },
+    {
         "desc"    : "Fennec",
         "ua"      : "Mozilla/5.0 (X11; U; Linux armv61; en-US; rv:1.9.1b2pre) Gecko/20081015 Fennec/1.0a1",
         "expect"  :
