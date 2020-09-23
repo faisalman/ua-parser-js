@@ -593,7 +593,7 @@
             /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,               // Xiaomi Hongmi
             /android.+(redmi[\s\-_]*(?:note|k)?(?:[\s_]?[\w\s]+))(?:\s+build|\))/i,      
                                                                                 // Xiaomi Redmi
-            /(?!.*pad)android.+;\s(mi[\s\-]+[\d\w\s]*)(?:\)|\s+build)/i    
+            /(?!.*pad)android.+;\s(mi[\d\s\-]+[\d\w\s]*)(?:\)|\s+build)/i    
                                                                                 // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
             /android.+(mi[\s\-_]*(?:pad)(?:[\s_]?[\w\s]+))(?:\s+build|\))/i     // Mi Pad tablets
