@@ -554,8 +554,9 @@
             ], [MODEL, [VENDOR, 'LG'], [TYPE, TABLET]], [
             /android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i                     // LG Tablet
             ], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
-            /(lg) netcast\.tv/i                                                 // LG SmartTV
-            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+            /linux;\snetcast.+smarttv/i,                                        // LG SmartTV
+            /lg\snetcast\.tv-201\d/i
+            ], [[VENDOR, 'LG'], MODEL, [TYPE, SMARTTV]], [
             /(nexus\s[45])/i,                                                   // LG
             /lg[e;\s\/-]+(\w*)/i,
             /android.+lg(\-?[\d\w]+)\s+build/i
