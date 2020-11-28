@@ -351,6 +351,16 @@
     },
     {
         "desc"    : "Firefox",
+        "ua"      : "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.2.17) Gecko/20110420 Firefox/3.6.17 (.NET CLR 3.5.21022)",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "3.6.17",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "Firefox",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20120716 Firefox/15.0a2",
         "expect"  :
         {
