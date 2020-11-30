@@ -1,5 +1,5 @@
 /*!
- * UAParser.js v0.7.21
+ * UAParser.js v0.7.22
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.21',
+    var LIBVERSION  = '0.7.22',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -660,7 +660,7 @@
             /android.+[;\/]\s*(Le[\s\-]+Pan)[\s\-]+(\w{1,9})\s+build/i          // Le Pan Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /android.+[;\/]\s*(Trio[\s\-]*.*)\s+build/i                         // MachSpeed Tablets
+            /android.+[;\/]\s*(Trio[\s\w\-\.]+)\s+build/i                       // MachSpeed Tablets
             ], [MODEL, [VENDOR, 'MachSpeed'], [TYPE, TABLET]], [
 
             /android.+[;\/]\s*(Trinity)[\-\s]*(T\d{3})\s+build/i                // Trinity Tablets
