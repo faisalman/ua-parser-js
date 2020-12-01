@@ -1,5 +1,5 @@
 /*!
- * UAParser.js v0.7.21
+ * UAParser.js v0.7.22
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.21',
+    var LIBVERSION  = '0.7.22',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -444,9 +444,9 @@
             /(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /(kf[A-z]+)\sbuild\/.+silk\//i                                      // Kindle Fire HD
+            /(kf[A-z]+)(\sbuild\/|\)).+silk\//i                                 // Kindle Fire HD
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
-            /(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i                         // Fire Phone
+            /(sd|kf)[0349hijorstuw]+(\sbuild\/|\)).+silk\//i                    // Fire Phone
             ], [[MODEL, mapper.str, maps.device.amazon.model], [VENDOR, 'Amazon'], [TYPE, MOBILE]], [
             /android.+aft([bms])\sbuild/i                                       // Fire TV
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, SMARTTV]], [
