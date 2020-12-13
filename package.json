@@ -15,7 +15,7 @@
     "jquery-plugin",
     "ecosystem:jquery"
   ],
-  "homepage": "http://github.com/faisalman/ua-parser-js",
+  "homepage": "https://github.com/faisalman/ua-parser-js",
   "contributors": [
     "Aamir Poonawalla <aamir@urx.com>",
     "Admas <mollases@users.noreply.github.com>",
