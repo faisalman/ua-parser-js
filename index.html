@@ -326,8 +326,17 @@
         if (paramString) {
           const params = paramString.split('&');
           return params.reduce(function(acc, cur) {
-            const [key, value] = cur.includes('=') ? cur.split('=') : [cur, null];
-            acc[key] = value;
+            //const [key, value] = cur.includes('=') ? cur.split('=') : [cur, null];
+            //acc[key] = value;
+
+            // IE11 compat
+            if (cur.includes('=')) {
+              const split = cur.split('=');
+              acc[split[0]] = split[1];
+            } else {
+              acc[cur] = null;
+            }
+
             return acc;
           }, {});
         }
