@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.19",
+  "version": "0.7.22",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -94,7 +94,8 @@
     "Sylvain Gizard <sylvain.gizard@gmail.com>",
     "szchenghuang <szchenghuang@gmail.com>",
     "Vadim Kurachevsky <vadim@hmvs.org>",
-    "Yun Young-jin <yupmin@yupmin-office-macmini.local>"
+    "Yun Young-jin <yupmin@yupmin-office-macmini.local>",
+    "Insanehong <insae.hong@navercorp.com>"
   ],
   "main": "src/ua-parser.js",
   "scripts": {
@@ -115,17 +116,17 @@
     ]
   },
   "devDependencies": {
-    "jshint": "~1.1.0",
-    "mocha": "~1.8.0",
+    "jshint": "~2.12.0",
+    "mocha": "~8.2.0",
     "requirejs": "^2.3.2",
-    "uglify-js": "~2.7.5",
+    "uglify-js": "~3.12.0",
     "verup": "^1.3.x"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/faisalman/ua-parser-js.git"
   },
-  "license": "(GPL-2.0 OR MIT)",
+  "license": "MIT",
   "engines": {
     "node": "*"
   },
