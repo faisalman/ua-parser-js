@@ -340,7 +340,10 @@
             /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i        // Android Browser
             ], [VERSION, [NAME, 'Android Browser']], [
 
-            /(sailfishbrowser)\/([\w\.]+)/i                                     // Sailfish Browser
+            /(coc_coc_browser)\/([\w\.]+)/i                                     // Coc Coc Browser
+            ], [[NAME, 'Coc Coc'], VERSION], [
+
+              /(sailfishbrowser)\/([\w\.]+)/i                                     // Sailfish Browser
             ], [[NAME, 'Sailfish Browser'], VERSION], [
 
             /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i

@@ -240,6 +240,16 @@
         }
     },
     {
+        "desc"    : "Coc Coc Browser",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/78.0.129 Chrome/72.0.3626.129 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Coc Coc",
+            "version" : "78.0.129",
+            "major"   : "78"
+        }
+    },
+    {
         "desc"    : "Dillo",
         "ua"      : "Dillo/2.2",
         "expect"  :
