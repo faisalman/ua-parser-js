@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.22",
+  "version": "0.7.23",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -15,7 +15,7 @@
     "jquery-plugin",
     "ecosystem:jquery"
   ],
-  "homepage": "http://github.com/faisalman/ua-parser-js",
+  "homepage": "https://github.com/faisalman/ua-parser-js",
   "contributors": [
     "Aamir Poonawalla <aamir@urx.com>",
     "Admas <mollases@users.noreply.github.com>",
