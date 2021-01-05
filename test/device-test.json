@@ -1220,6 +1220,15 @@
         }
     },
     {
+        "desc": "Amazon Fire TV",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; AFTT) AppleWebKit/537.36 (KHTML, like Gecko) Silk/86.3.20 like Chrome/86.0.4240.198 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "T",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Gigaset Tablet",
         "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Gigaset QV830 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
         "expect": {
