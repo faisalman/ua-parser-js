@@ -689,7 +689,10 @@
             ], [[TYPE, SMARTTV]], [
 
             /(android[\w\.\s\-]{0,9});.+build/i                                 // Generic Android Device
-            ], [MODEL, [VENDOR, 'Generic']]
+            ], [MODEL, [VENDOR, 'Generic']], [
+
+            /(phone)/i,
+            ], [[TYPE, MOBILE]]
         ],
 
         engine : [[
