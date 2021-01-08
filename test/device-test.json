@@ -1335,5 +1335,12 @@
         "model": "LYA-TL00",
         "type": "mobile"
     }
+  },
+  {
+    "desc": "FaceBook Mobile App",
+    "ua": "[FBAN/FBIOS;FBAV/283.0.0.44.117;FBBV/238386386;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/13.6.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/240127608]",
+    "expect": {
+        "type": "mobile"
+    }
   }
 ]
