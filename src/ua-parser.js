@@ -773,15 +773,9 @@
             /ip[honead]{2,4}(?:.*os\s([\w]+)\slike\smac|;\sopera)/i             // iOS
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
 
-<<<<<<< HEAD
             /(mac\sos\sx)\s?([\w\s\.]+\w)*/i,
             /(macintosh|mac(?=_powerpc)\s)/i                                    // macOS
             ], [[NAME, 'macOS'], [VERSION, /_/g, '.']], [
-=======
-            /(mac\sos\sx)\s?([\w\s\.]*)/i,
-            /(macintosh|mac(?=_powerpc)\s)/i                                    // Mac OS
-            ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
->>>>>>> original/master
 
             // Other
             /((?:open)?solaris)[\/\s-]?([\w\.]*)/i,                             // Solaris
