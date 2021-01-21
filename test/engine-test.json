@@ -1,5 +1,14 @@
 [
     {
+        "desc"    : "Blink",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G920I Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/3.4.9 SamsungBrowser/4.0 Chrome/57.0.2987.146 Mobile VR Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Blink",
+            "version" : "57.0.2987.146"
+        }
+    },
+    {
         "desc"    : "EdgeHTML",
         "ua"      : "Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0",
         "expect"  :
@@ -15,6 +24,15 @@
         {
             "name"    : "Gecko",
             "version" : "2.0b9pre"
+        }
+    },
+    {
+        "desc"    : "Goanna",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.1; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0",
+        "expect"  :
+        {
+            "name"    : "Goanna",
+            "version" : "2.2"
         }
     },
     {
@@ -69,6 +87,15 @@
         {
             "name"    : "WebKit",
             "version" : "533.19.4"
+        }
+    },
+    {
+        "desc"    : "WebKit",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/27.0.1453.110 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "WebKit",
+            "version" : "537.36"
         }
     }
 ]

@@ -171,6 +171,15 @@
         }
     },
     {
+        "desc"    : "Sailfish",
+        "ua"      : "Mozilla/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:45.0) Gecko/45.0 Firefox/45.0 SailfishBrowser/1.0",
+        "expect"  :
+        {
+            "name"    : "Sailfish",
+            "version" : "3.0"
+        }
+    },
+    {
         "desc"    : "WebOS",
         "ua"      : "",
         "expect"  :
@@ -240,6 +249,15 @@
         {
             "name"    : "Firefox OS",
             "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Google Chromecast",
+        "ua"      : "Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.81 Safari/537.36 CrKey/1.42.183786",
+        "expect"  :
+        {
+            "name"    : "Chromecast",
+            "version" : "1.42.183786"
         }
     },
     {
@@ -433,11 +451,20 @@
     },
     {
         "desc"    : "Chromium OS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Chromium OS",
+            "version" : "10575.58.0"
+        }
+    },
+    {
+        "desc"    : "Fuchsia",
+        "ua"      : "Mozilla/5.0 (X11; Fuchsia x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3557.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Fuchsia",
+            "version" : "undefined"
         }
     },
     {
@@ -486,6 +513,15 @@
         }
     },
     {
+        "desc"    : "iOS in App",
+        "ua"      : "AppName/version CFNetwork/version Darwin/version",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "iOS with Chrome",
         "ua"      : "Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
         "expect"  :
@@ -519,6 +555,15 @@
         {
             "name"    : "Haiku",
             "version" : "R1"
+        }
+    },
+    {
+        "desc"    : "KaiOS",
+        "ua"      : "Mozilla/5.0 (Mobile; Nokia_8110_4G; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5",
+        "expect"  :
+        {
+            "name"    : "KAIOS",
+            "version" : "2.5"
         }
     },
     {
