@@ -288,6 +288,42 @@
         }
     },
     {
+        "desc"    : "Xbox 360",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox 360) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Xbox",
+            "version" : "360"
+        }
+    },
+    {
+        "desc"    : "Xbox One",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19041",
+        "expect"  :
+        {
+            "name"    : "Xbox",
+            "version" : "One"
+        }
+    },
+    {
+        "desc"    : "Xbox X",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/20.02",
+        "expect"  :
+        {
+            "name"    : "Xbox",
+            "version" : "X"
+        }
+    },
+    {
+        "desc"    : "Xbox Series X",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox Series X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/20.02 ",
+        "expect"  :
+        {
+            "name"    : "Xbox",
+            "version" : "Series X"
+        }
+    },
+    {
         "desc"    : "Mint",
         "ua"      : "",
         "expect"  :
