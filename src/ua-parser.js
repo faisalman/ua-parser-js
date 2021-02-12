@@ -1,9 +1,9 @@
 /*!
- * UAParser.js v0.7.23
+ * UAParser.js v0.7.24
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
- * Copyright © 2012-2019 Faisal Salman <f@faisalman.com>
+ * Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
  * Licensed under MIT License
  */
 
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.23',
+    var LIBVERSION  = '0.7.24',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
