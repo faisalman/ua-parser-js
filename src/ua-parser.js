@@ -620,7 +620,7 @@
             /android.+[;\/]\s*(Q[T|M][\d\w]+)\s+build/i                         // Verizon Tablet
             ], [MODEL, [VENDOR, 'Verizon'], [TYPE, TABLET]], [
 
-            /android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build/i     // Barnes & Noble Tablet
+            /android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(\S(?:.*\S)?)\s+build/i     // Barnes & Noble Tablet
             ], [[VENDOR, 'Barnes & Noble'], MODEL, [TYPE, TABLET]], [
 
             /android.+[;\/]\s+(TM\d{3}.*\b)\s+build/i                           // Barnes & Noble Tablet
@@ -694,7 +694,7 @@
             /(android[\w\.\s\-]{0,9});.+build/i                                 // Generic Android Device
             ], [MODEL, [VENDOR, 'Generic']], [
 
-            /(phone)/i,
+            /(phone)/i
             ], [[TYPE, MOBILE]]
         ],
 
