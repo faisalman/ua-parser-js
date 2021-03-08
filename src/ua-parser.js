@@ -517,7 +517,8 @@
 
                                                                                 // Motorola
             /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)[\w\s]+build\//i,
-            /mot[\s-]?(\w*)/i,
+            /\smot[\s-](\w*)/i,
+            /(moto[\s\w\(\)]+(?=\sbuild|\)))/i,
             /(XT\d{3,4}) build\//i,
             /(nexus\s6)/i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, MOBILE]], [
