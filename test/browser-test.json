@@ -350,6 +350,16 @@
         }
     },
     {
+        "desc"    : "Instagram in-App Browser for iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 142.0.0.22.109 (iPhone12,5; iOS 14_1; en_US; en-US; scale=3.00; 1242x2688; 214888322) NW/1",
+        "expect"  :
+        {
+            "name"    : "Instagram",
+            "version" : "142.0.0.22.109",
+            "major"   : "142"
+        }
+    },
+    {
         "desc"    : "Falkon",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Falkon/3.0.0 Chrome/61.0.3163.140 Safari/537.36",
         "expect"  :
