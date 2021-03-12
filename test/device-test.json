@@ -1378,5 +1378,14 @@
     "expect": {
         "type": "mobile"
     }
+  },
+  {
+    "desc": "Issue #454",
+    "ua": "Mosamzilla/5.0 (Windows; U; Win98; en-US; rv:1.7.5) Gecko/20050603 Netscape/8.0.2",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "undefined"
+    }
   }
 ]
