@@ -550,6 +550,15 @@
         }
     },
     {
+        "desc": "Sony Xperia Z2 Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SGP561) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.99 Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Tablet",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Sony Tablet S",
         "ua": "Mozilla/5.0 (Linux; U; Android 3.1; Sony Tablet S Build/THMAS10000) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
         "expect": {
