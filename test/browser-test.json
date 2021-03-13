@@ -1219,6 +1219,16 @@
         }
     },
     {
+        "desc"    : "WeChat Desktop for Windows Built-in Browser major version in 4",
+        "ua"      : "mozilla/5.0 (windows nt 10.0; wow64) applewebkit/537.36 (khtml, like gecko) chrome/53.0.2785.116 safari/537.36 qbcore/4.0.1301.400 qqbrowser/9.0.2524.400 mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/81.0.4044.138 safari/537.36 nettype/wifi micromessenger/7.0.20.1781(0x6700143b) windowswechat",
+        "expect"  :
+        {
+            "name"    : "WeChat(Win) Desktop",
+            "version" : "4.0.1301.400",
+            "major"   : "4"
+        }
+    },
+    {
         "desc"    : "GSA on iOS",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) GSA/30.1.161623614 Mobile/14F89 Safari/602.1",
         "expect"  :
