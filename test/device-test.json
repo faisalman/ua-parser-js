@@ -1238,6 +1238,15 @@
         }
     },
     {
+        "desc": "Amazon Alexa Echo Show",
+        "ua": "AlexaWebMediaPlayer/1.0.200641.0 (Linux;Android 5.1.1)",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "Alexa",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Amazon Kindle Fire Tablet",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.4.3; en-us; KFSAWI Build/KTU84M) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.66 like Chrome/39.0.2171.93 Safari/537.36",
         "expect": {
