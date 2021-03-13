@@ -282,7 +282,7 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
 
-            /((?:windowswechat)? qbcore)\/([\w\.]+)(?:.+windowswechat)?/i,      // WeChat Desktop for Windows Built-in Browser
+            /((?:windowswechat)? qbcore)\/([\w\.]+).*(?:windowswechat)?/i,      // WeChat Desktop for Windows Built-in Browser
             ], [[NAME, 'WeChat(Win) Desktop'], VERSION], [
 
             /(micromessenger)\/([\w\.]+)/i                                      // WeChat
