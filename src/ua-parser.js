@@ -478,7 +478,7 @@
             ], [MODEL, [VENDOR, 'Sony'], [TYPE, MOBILE]], [
 
             /\s(ouya)\s/i,                                                      // Ouya
-            /(nintendo)\s([wids3u]+)/i                                          // Nintendo
+            /(nintendo)\s([wids3utch]+)/i                                       // Nintendo
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
 
             /android.+;\s(shield)\sbuild/i                                      // Nvidia
@@ -753,7 +753,7 @@
             ], [VERSION, [NAME, 'Chromecast']], [
 
             // Console
-            /(nintendo|playstation)\s([wids34portablevu]+)/i,                   // Nintendo/Playstation
+            /(nintendo|playstation)\s([wids34portablevuch]+)/i,                 // Nintendo/Playstation
 
             // GNU/Linux based
             /(mint)[\/\s\(]?(\w*)/i,                                            // Mint

@@ -261,12 +261,12 @@
         }
     },
     {
-        "desc"    : "Nintendo",
-        "ua"      : "",
+        "desc"    : "Nintendo Switch",
+        "ua"      : "Mozilla/5.0 (Nintendo Switch; WifiWebAuthApplet) AppleWebKit/606.4 (KHTML, like Gecko) NF/6.0.1.15.4 NintendoBrowser/5.1.0.20393",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Nintendo",
+            "version" : "Switch"
         }
     },
     {

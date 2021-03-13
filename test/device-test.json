@@ -730,6 +730,15 @@
         }
     },
     {
+        "desc": "Nintendo Switch",
+        "ua": "Mozilla/5.0 (Nintendo Switch; WifiWebAuthApplet) AppleWebKit/606.4 (KHTML, like Gecko) NF/6.0.1.15.4 NintendoBrowser/5.1.0.20393",
+        "expect": {
+            "vendor": "Nintendo",
+            "model": "Switch",
+            "type": "console"
+        }
+    },
+    {
         "desc": "Galaxy Nexus",
         "ua": "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19",
         "expect": {
