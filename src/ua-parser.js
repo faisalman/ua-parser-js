@@ -634,6 +634,9 @@
             /android.+;\s(k88)\sbuild/i                                         // ZTE K Series Tablet
             ], [MODEL, [VENDOR, 'ZTE'], [TYPE, TABLET]], [
 
+            /android.+;\s(nx\d{3}j)\sbuild/i                                    // ZTE Nubia
+            ], [MODEL, [VENDOR, 'ZTE'], [TYPE, MOBILE]], [
+
             /android.+[;\/]\s*(gen\d{3})\s+build.*49h/i                         // Swiss GEN Mobile
             ], [MODEL, [VENDOR, 'Swiss'], [TYPE, MOBILE]], [
 
@@ -650,7 +653,7 @@
             /android.+[;\/]\s*(NS-?\w{0,9})\sbuild/i                            // Insignia Tablets
             ], [MODEL, [VENDOR, 'Insignia'], [TYPE, TABLET]], [
 
-            /android.+[;\/]\s*((NX|Next)-?\w{0,9})\s+build/i                    // NextBook Tablets
+            /android.+[;\/]\s*((NXA|Next)-?\w{0,9})\s+build/i                   // NextBook Tablets
             ], [MODEL, [VENDOR, 'NextBook'], [TYPE, TABLET]], [
 
             /android.+[;\/]\s*(Xtreme\_)?(V(1[045]|2[015]|30|40|60|7[05]|90))\s+build/i
