@@ -1069,6 +1069,16 @@
         }
     },
     {
+        "desc": "WeChat on Android",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A366 Weibo (iPhone8,2__weibo__8.9.3__iphone__os12.0)",
+        "expect":
+        {
+            "name": "weibo",
+            "version": "8.9.3",
+            "major": "8"
+        }
+    },
+    {
         "desc"    : "Vivaldi",
         "ua"      : "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.89 Vivaldi/1.0.83.38 Safari/537.36",
         "expect"  :

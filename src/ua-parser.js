@@ -315,6 +315,9 @@
             /(LBBROWSER)/i                                                      // LieBao Browser
             ], [NAME], [
 
+            /(weibo)__([\d\.]+)/i                                               // Weibo
+            ], [NAME, VERSION], [
+
             /xiaomi\/miuibrowser\/([\w\.]+)/i                                   // MIUI Browser
             ], [VERSION, [NAME, 'MIUI Browser']], [
 
