@@ -820,7 +820,7 @@
             return new UAParser(uastring, extensions).getResult();
         }
 
-        var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+        var ua = uastring || ((typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
         var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
 
         this.getBrowser = function () {
@@ -916,7 +916,7 @@
             define(function () {
                 return UAParser;
             });
-        } else if (window) {
+        } else if (typeof window !== 'undefined') {
             // browser env
             window.UAParser = UAParser;
         }
@@ -927,7 +927,7 @@
     //   In AMD env the global scope should be kept clean, but jQuery is an exception.
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
-    var $ = window && (window.jQuery || window.Zepto);
+    var $ = typeof window !== 'undefined' && (window.jQuery || window.Zepto);
     if ($ && !$.ua) {
         var parser = new UAParser();
         $.ua = parser.getResult();
