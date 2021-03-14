@@ -603,7 +603,7 @@
             /android.+(hm[\s\-_]?note?[\s_]?(?:\d\w)?)\sbuild/i,                // Xiaomi Hongmi
             /android.+(redmi[\s\-_]?(?:note|k)?(?:[\s_]?[\w\s]+))(?:\sbuild|\))/i,      
                                                                                 // Xiaomi Redmi
-            /android.+(mi[\s\-_]?(?:a\d|one|one[\s_]plus|note lte)?[\s_]?(?:\d?\w?)[\s_]?(?:plus)?)\sbuild/i    
+            /android.+(mi[\s\-_]?(?:a\d|one|one[\s_]plus|note lte)?[\s_]?(?:\d?\w?)[\s_]?(?:plus)?)\sbuild/i
                                                                                 // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Xiaomi'], [TYPE, MOBILE]], [
             /android.+(mi[\s\-_]?(?:pad)(?:[\s_]?[\w\s]+))(?:\sbuild|\))/i     // Mi Pad tablets
@@ -686,6 +686,9 @@
 
             /android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i                      // Gigaset Tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
+
+            /[\s\/\(](android\stv|smart-?tv)[;\)\s]/i                           // SmartTV from Unidentified Vendors
+            ], [[TYPE, SMARTTV]], [
                                                                                 // Android Phones from Unidentified Vendors
             /android .+?; ([^;]+?)(?: build|\) applewebkit).+? mobile safari/i
             ], [MODEL, [TYPE, MOBILE]], [
@@ -696,9 +699,6 @@
             /\s(tablet|tab)[;\/]/i,                                             // Unidentifiable Tablet
             /\s(mobile)(?:[;\/]|\ssafari)/i                                     // Unidentifiable Mobile
             ], [[TYPE, util.lowerize], VENDOR, MODEL], [
-
-            /[\s\/\(](smart-?tv)[;\)]/i                                         // SmartTV
-            ], [[TYPE, SMARTTV]], [
 
             /(android[\w\.\s\-]{0,9});.+build/i                                 // Generic Android Device
             ], [MODEL, [VENDOR, 'Generic']], [
