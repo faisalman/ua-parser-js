@@ -307,6 +307,15 @@
         }
     },
     {
+        "desc": "Nokia 3.2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Nokia 3.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "3.2",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "OnePlus One",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.4; A0001 Build/KTU84Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36",
         "expect": {
