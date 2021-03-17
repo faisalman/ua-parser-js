@@ -550,6 +550,42 @@
         }
     },
     {
+        "desc": "Sony Xperia L4",
+        "ua": "Mozilla/5.0 (Linux; Android 9; XQ-AD51) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AD51",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia 1ii",
+        "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AT51) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AT51",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia 10ii",
+        "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AU52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AU52",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AQ52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.185 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AQ52",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sony SGP521 (Xperia Z2 Tablet)",
         "ua": "Mozilla/5.0 (Linux; Android 4.4; SGP521 Build/17.1.A.0.432) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
         "expect": {
