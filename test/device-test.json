@@ -775,6 +775,15 @@
         }
     },
     {
+        "desc": "PlayStation 5",
+        "ua": "Mozilla/5.0 (Playstation; Playstation 5/1.05) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Playstation 5",
+            "type": "console"
+        }
+    },
+    {
         "desc": "Nintendo Switch",
         "ua": "Mozilla/5.0 (Nintendo Switch; WifiWebAuthApplet) AppleWebKit/606.4 (KHTML, like Gecko) NF/6.0.1.15.4 NintendoBrowser/5.1.0.20393",
         "expect": {
