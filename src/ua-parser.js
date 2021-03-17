@@ -571,7 +571,7 @@
             /android.+lg(\-?[\d\w]+)\s+build/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
 
-            /(lenovo)\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+))/i             // Lenovo tablets
+            /(lenovo)\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+)|[\w-]+)/i      // Lenovo tablets
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
             /android.+(ideatab[a-z0-9\-\s]+)/i                                  // Lenovo
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
