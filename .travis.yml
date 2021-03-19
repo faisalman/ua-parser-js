@@ -14,3 +14,5 @@ cache:
         - node_modules
 
 sudo: false
+
+script: npm run test-ci

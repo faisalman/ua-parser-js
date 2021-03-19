@@ -101,6 +101,7 @@
   "scripts": {
     "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/UAParser\\.js/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/UAParser\\.js/' --compress --mangle",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
+    "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js",
     "verup": "node ./node_modules/verup",
     "version": "node ./node_modules/verup 0"
   },
