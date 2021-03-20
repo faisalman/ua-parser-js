@@ -35,7 +35,8 @@
         TABLET      = 'tablet',
         SMARTTV     = 'smarttv',
         WEARABLE    = 'wearable',
-        EMBEDDED    = 'embedded';
+        EMBEDDED    = 'embedded',
+        UA_MAX_LENGTH = 255;
 
 
     ///////////
@@ -56,11 +57,7 @@
             return mergedRegexes;
         },
         has : function (str1, str2) {
-          if (typeof str1 === "string") {
-            return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
-          } else {
-            return false;
-          }
+            return typeof str1 === STR_TYPE ? str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1 : false;
         },
         lowerize : function (str) {
             return str.toLowerCase();
@@ -68,8 +65,9 @@
         major : function (version) {
             return typeof(version) === STR_TYPE ? version.replace(/[^\d\.]/g,'').split(".")[0] : undefined;
         },
-        trim : function (str) {
-          return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+        trim : function (str, len) {
+            str = str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            return typeof(len) === UNDEF_TYPE ? str : str.substring(0, UA_MAX_LENGTH);
         }
     };
 
@@ -563,6 +561,13 @@
             /(kin\.[onetw]{3})/i                                                // Microsoft Kin
             ], [[MODEL, /\./g, ' '], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
 
+            /droid\s[\d\.]+;\s(cc6{3,4}|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i    // Zebra
+            ], [MODEL, [VENDOR, 'Zebra'], [TYPE, TABLET]], [
+            /droid\s[\d\.]+;\s(ec30|ps20|tc[2-8]\d[kx])\)/i
+            ], [MODEL, [VENDOR, 'Zebra'], [TYPE, MOBILE]], [
+            /droid\s[\d\.]+;\s(wt63?0{2,3})\)/i
+            ], [MODEL, [VENDOR, 'Zebra'], [TYPE, WEARABLE]], [
+
             // CONSOLES
             /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3utch]+)/i                                       // Nintendo
@@ -715,45 +720,45 @@
     /////////////////
     // Constructor
     ////////////////
-    var UAParser = function (uastring, extensions) {
+    var UAParser = function (ua, extensions) {
 
-        if (typeof uastring === 'object') {
-            extensions = uastring;
-            uastring = undefined;
+        if (typeof ua === 'object') {
+            extensions = ua;
+            ua = undefined;
         }
-
+    
         if (!(this instanceof UAParser)) {
-            return new UAParser(uastring, extensions).getResult();
+            return new UAParser(ua, extensions).getResult();
         }
-
-        var ua = uastring || ((typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
-        var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
-
+    
+        var _ua;
+        var _rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
+    
         this.getBrowser = function () {
-            var browser = { name: undefined, version: undefined };
-            mapper.rgx.call(browser, ua, rgxmap.browser);
-            browser.major = util.major(browser.version); // deprecated
-            return browser;
+            var _browser = { name: undefined, version: undefined };
+            mapper.rgx.call(_browser, _ua, _rgxmap.browser);
+            _browser.major = util.major(_browser.version); // deprecated
+            return _browser;
         };
         this.getCPU = function () {
-            var cpu = { architecture: undefined };
-            mapper.rgx.call(cpu, ua, rgxmap.cpu);
-            return cpu;
+            var _cpu = { architecture: undefined };
+            mapper.rgx.call(_cpu, _ua, _rgxmap.cpu);
+            return _cpu;
         };
         this.getDevice = function () {
-            var device = { vendor: undefined, model: undefined, type: undefined };
-            mapper.rgx.call(device, ua, rgxmap.device);
-            return device;
+            var _device = { vendor: undefined, model: undefined, type: undefined };
+            mapper.rgx.call(_device, _ua, _rgxmap.device);
+            return _device;
         };
         this.getEngine = function () {
-            var engine = { name: undefined, version: undefined };
-            mapper.rgx.call(engine, ua, rgxmap.engine);
-            return engine;
+            var _engine = { name: undefined, version: undefined };
+            mapper.rgx.call(_engine, _ua, _rgxmap.engine);
+            return _engine;
         };
         this.getOS = function () {
-            var os = { name: undefined, version: undefined };
-            mapper.rgx.call(os, ua, rgxmap.os);
-            return os;
+            var _os = { name: undefined, version: undefined };
+            mapper.rgx.call(_os, _ua, _rgxmap.os);
+            return _os;
         };
         this.getResult = function () {
             return {
@@ -766,12 +771,13 @@
             };
         };
         this.getUA = function () {
-            return ua;
+            return _ua;
         };
-        this.setUA = function (uastring) {
-            ua = uastring;
+        this.setUA = function (ua) {
+            _ua = ua.length > UA_MAX_LENGTH ? util.trim(ua, UA_MAX_LENGTH) : ua;
             return this;
         };
+        this.setUA(ua || ((typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY));
         return this;
     };
 

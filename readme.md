@@ -56,7 +56,7 @@ console, mobile, tablet, smarttv, wearable, embedded
 Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, Essential,
 GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola,
 Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm, Panasonic, Pebble, Polytron,
-RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
+RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
