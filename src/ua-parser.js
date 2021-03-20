@@ -563,6 +563,13 @@
             /(kin\.[onetw]{3})/i                                                // Microsoft Kin
             ], [[MODEL, /\./g, ' '], [VENDOR, 'Microsoft'], [TYPE, MOBILE]], [
 
+            /droid\s[\d\.]+;\s(cc6{3,4}|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i    // Zebra
+            ], [MODEL, [VENDOR, 'Zebra'], [TYPE, TABLET]], [
+            /droid\s[\d\.]+;\s(ec30|ps20|tc[2-8]\d[kx])\)/i
+            ], [MODEL, [VENDOR, 'Zebra'], [TYPE, MOBILE]], [
+            /droid\s[\d\.]+;\s(wt63?0{2,3})\)/i
+            ], [MODEL, [VENDOR, 'Zebra'], [TYPE, WEARABLE]], [
+
             // CONSOLES
             /\s(ouya)\s/i,                                                      // Ouya
             /(nintendo)\s([wids3utch]+)/i                                       // Nintendo
