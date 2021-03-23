@@ -516,9 +516,13 @@
             /(dell)\s(strea[kpr\s\d]*[\dko])/i,                                 // Dell Streak
             /droid.+[;\/]\s*(Le[\s\-]+Pan)[\s\-]+(\w{1,9})\s+build/i,           // Le Pan Tablets
             /droid.+[;\/]\s*(Trinity)[\-\s]*(T\d{3})\s+build/i,                 // Trinity Tablets
-            /droid.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i                        // Gigaset Tablets
+            /droid.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i,                       // Gigaset Tablets
+            /droid.+(vodafone)\s([\w\s]+)\)/i                                   // Vodafone
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
+            
+            /\s(U304AA)\sbuild/i                                                // AT&T
+            ], [MODEL, [VENDOR, 'AT&T'], [TYPE, MOBILE]], [
             /sie-(\w*)/i                                                        // Siemens
             ], [MODEL, [VENDOR, 'Siemens'], [TYPE, MOBILE]], [
             /droid.+[;\/]\s*(RCT[\d\w]+)\s+build/i                              // RCA Tablets
@@ -603,7 +607,7 @@
             ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
             /hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i            // HbbTV devices
             ], [[VENDOR, util.trim], [MODEL, util.trim], [TYPE, SMARTTV]], [
-            /[\s\/\(](android\stv|smart-?tv)[;\)\s]/i                           // SmartTV from Unidentified Vendors
+            /[\s\/\(](android\stv|smart[-\s]?tv)[;\)\s]/i                       // SmartTV from Unidentified Vendors
             ], [[TYPE, SMARTTV]], [
 
             // WEARABLES

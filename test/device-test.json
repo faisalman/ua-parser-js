@@ -1517,6 +1517,42 @@
     }
   },
   {
+    "desc": "Amazon Fire 7",
+    "ua": "Mozilla/5.0 (Linux; Android 5.1.1; KFAUWI) AppleWebKit/537.36 (KHTML, like Gecko) Silk/80.5.3 like Chrome/80.0.3987.162 Safari/537.36",
+    "expect": {
+        "vendor": "Amazon",
+        "model": "KFAUWI",
+        "type": "tablet"
+    }
+  },
+  {
+    "desc": "AT&T Radiant Core U304AA",
+    "ua": "Dalvik/2.1.0 (Linux; U; Android 9; U304AA Build/P00610)",
+    "expect": {
+        "vendor": "AT&T",
+        "model": "U304AA",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Vodafone Smart Tab 4G",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.4; Vodafone Smart Tab 4G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "expect": {
+        "vendor": "Vodafone",
+        "model": "Smart Tab 4G",
+        "type": "tablet"
+    }
+  },
+  {
+    "desc": "4ife 4K Smart TV Box",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; 4ife 4K Smart TV Box Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36 Vinebre",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "smarttv"
+    }
+  },
+  {
     "desc": "FaceBook Mobile App",
     "ua": "[FBAN/FBIOS;FBAV/283.0.0.44.117;FBBV/238386386;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/13.6.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/240127608]",
     "expect": {
