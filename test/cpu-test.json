@@ -40,7 +40,15 @@
         }
     },
     {
-        "desc"    : "ARMv6",
+        "desc"    : "ARM",
+        "ua"      : "Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
+        "desc"    : "ARMv61",
         "ua"      : "Mozilla/5.0 (X11; U; Linux armv61; en-US; rv:1.9.1b2pre) Gecko/20081015 Fennec/1.0a1",
         "expect"  :
         {
@@ -49,10 +57,42 @@
     },
     {
         "desc"    : "ARMv7",
+        "ua"      : "Mozilla/5.0 (Linux ARMv7) WebKitGTK+/3.4.9 vimprobable2",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
+        "desc"    : "ARMv7l",
+        "ua"      : "Mozilla/5.0 (SMART-TV; X11; Linux armv7l) AppleWebKit/537.42 (KHTML, like Gecko) Chromium/25.0.1349.2 Chrome/25.0.1349.2 Safari/537.42",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
+        "desc"    : "ARMv7l",
         "ua"      : "Mozilla/5.0 (X11; CrOS armv7l 9765.85.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.123 Safari/537.36",
         "expect"  :
         {
             "architecture"  : "arm"
+        }
+    },
+    {
+        "desc"    : "ARMv8",
+        "ua"      : "Mozilla/5.0 (X11; Linux armv8l; rv:45.0) Gecko/20100101 Firefox/45.0",
+        "expect"  :
+        {
+            "architecture"  : "arm64"
+        }
+    },
+    {
+        "desc"    : "AARCH64",
+        "ua"      : "Mozilla/5.0 (X11; CrOS aarch64 13310.93.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.133 Safari/537.36",
+        "expect"  :
+        {
+            "architecture"  : "arm64"
         }
     },
     {

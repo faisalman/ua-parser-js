@@ -93,7 +93,7 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 ```sh
 # Possible 'cpu.architecture'
-68k, amd64, arm[64], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
+68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
 * `getResult()`

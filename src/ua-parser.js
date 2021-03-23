@@ -357,6 +357,12 @@
             /((?:i[346]|x)86)[;\)]/i                                            // IA32
             ], [[ARCHITECTURE, 'ia32']], [
 
+            /\b(aarch64|armv?8e?l?)\b/i                                         // ARM64
+            ], [[ARCHITECTURE, 'arm64']], [
+
+            /\b(arm(?:v[67])?ht?n?[fl]p?)\b/i                                   // ARMHF
+            ], [[ARCHITECTURE, 'armhf']], [
+
             // PocketPC mistakenly identified as PowerPC
             /windows\s(ce|mobile);\sppc;/i
             ], [[ARCHITECTURE, 'arm']], [
@@ -367,7 +373,7 @@
             /(sun4\w)[;\)]/i                                                    // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
 
-            /((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+[;l]))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
+            /((?:avr32|ia64(?=;))|68k(?=\))|\barm(?:64|(?=v(?:[1-7]|[5-7]1)l?|;))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
                                                                                 // IA64, 68K, ARM/64, AVR/32, IRIX/64, MIPS/64, SPARC/64, PA-RISC
             ], [[ARCHITECTURE, util.lowerize]]
         ],
