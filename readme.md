@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png" width="128" height="128"> 
+    <img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png" width="256" height="256"> 
 </p>
 
 <p align="center">
@@ -10,36 +10,11 @@
 
 # UAParser.js
 
-JavaScript library with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side) to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
+JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
 
 * Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : http://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
-
-
-# Development
-
-## Sponsors
-
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/backers.svg?avatarHeight=64" height="80"/></a> <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/sponsors.svg?avatarHeight=64" height="80"/></a>
-
-<a href="https://www.paypal.me/faisalman/"><img src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" height="40"></a>
-
-## Contributors
-
-<a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
-</a>
-
-Made with [contributors-img](https://contrib.rocks).
-
-## How To Contribute
-
-* Fork and clone this repository
-* Make some changes as required
-* Write unit test to showcase its functionality
-* Run the test suites to make sure it's not breaking anything `$ npm test`
-* Submit a pull request under `develop` branch
 
 # Documentation
 
@@ -280,6 +255,30 @@ var myParser = new UAParser({ browser: myOwnListOfBrowsers });
 var myUA = 'Mozilla/5.0 MyBrowser/1.3';
 console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3"}
 ```
+
+# Development
+
+## Sponsors
+
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/backers.svg?avatarHeight=64" height="80"/></a> <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/sponsors.svg?avatarHeight=64" height="80"/></a>
+
+<a href="https://www.paypal.me/faisalman/"><img src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" height="40"></a>
+
+## Contributors
+
+<a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
+
+## How To Contribute
+
+* Fork and clone this repository
+* Make some changes as required
+* Write unit test to showcase its functionality
+* Run the test suites to make sure it's not breaking anything `$ npm test`
+* Submit a pull request under `develop` branch
 
 # License
 
