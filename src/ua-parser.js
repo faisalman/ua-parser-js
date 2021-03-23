@@ -297,6 +297,7 @@
             ], [VERSION, [NAME, 'Facebook']], [            
             /FBAN\/FBIOS|FB_IAB\/FB4A/i                                         // Facebook App for iOS & Android without version
             ], [[NAME, 'Facebook']], [
+            /\s(electron)\/([\w\.]+)\ssafari/i,                                 // Electron-based App
             /safari\s(line)\/([\w\.]+)/i,                                       // Line App for iOS
             /droid.+(line)\/([\w\.]+)\/iab/i                                    // Line App for Android
             ], [NAME, VERSION], [
