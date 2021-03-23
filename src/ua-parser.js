@@ -169,6 +169,17 @@
                     '2.0.4' : '/419',
                     '?'     : '/'
                 }
+            },
+            oldEdge : {
+                version : {
+                    '0.1'   : '12.',
+                    '21'    : '13.',
+                    '31'    : '14.',
+                    '39'    : '15.',
+                    '41'    : '16.',
+                    '42'    : '17.',
+                    '44'    : '18.'
+                }
             }
         },
 
@@ -221,7 +232,7 @@
             /(?:android.+crmo|crios)\/([\w\.]+)/i                               // Chrome for Android/iOS
             ], [VERSION, [NAME, 'Chrome']], [
             /(?:edge|edgios|edga|edg)\/((\d+)?[\w\.]+)/i                        // Microsoft Edge
-            ], [VERSION, [NAME, 'Edge']], [
+            ], [[VERSION, mapper.str, maps.browser.oldEdge.version], [NAME, 'Edge']], [
 
             // Presto based
             /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini

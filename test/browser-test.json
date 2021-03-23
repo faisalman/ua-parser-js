@@ -1109,13 +1109,33 @@
         }
     },
     {
-        "desc"    : "Microsoft Edge",
+        "desc"    : "Microsoft Edge 0.1",
         "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0",
         "expect"  :
         {
             "name"    : "Edge",
-            "version" : "12.0",
-            "major"   : "12"
+            "version" : "0.1",
+            "major"   : "0"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge 44",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "42",
+            "major"   : "42"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge 44",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "44",
+            "major"   : "44"
         }
     },
     {
