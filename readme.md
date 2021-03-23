@@ -3,9 +3,11 @@
 </p>
 
 <p align="center">
-<img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master">
-<img src="https://img.shields.io/npm/v/ua-parser-js.svg">
-<img src="https://img.shields.io/npm/dw/ua-parser-js.svg">
+<a href="https://travis-ci.org/faisalman/ua-parser-js"><img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master"></a>
+<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg"></a>
+<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js.svg"></a>
+<a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://data.jsdelivr.com/v1/package/npm/ua-parser-js/badge"></a>
+<a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg"></a>
 </p>
 
 # UAParser.js

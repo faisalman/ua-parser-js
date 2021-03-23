@@ -138,5 +138,15 @@
   },
   "bugs": "https://github.com/faisalman/ua-parser-js/issues",
   "demo": "https://faisalman.github.io/ua-parser-js",
-  "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.min.js"
+  "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.min.js",
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/ua-parser-js"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/faisalman"
+    }
+  ]
 }
