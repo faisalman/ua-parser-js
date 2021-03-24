@@ -181,11 +181,11 @@
     },
     {
         "desc"    : "WebOS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.5; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.83 Safari/534.6 TouchPad/1.0",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "WebOS",
+            "version" : "3.0.5"
         }
     },
     {
@@ -325,11 +325,29 @@
     },
     {
         "desc"    : "Mint",
-        "ua"      : "",
+        "ua"      : "Opera/9.80 (X11; Linux x86_64; Edition Linux Mint) Presto/2.12.388 Version/12.16",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Mint",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Opera/9.64 (X11; Linux i686; U; Linux Mint; nb) Presto/2.1.1",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.5) Gecko/2008121622 Linux Mint/6 (Felicia) Firefox/3.0.4",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "6"
         }
     },
     {
@@ -360,21 +378,75 @@
         }
     },
     {
-        "desc"    : "Debian",
-        "ua"      : "",
+        "desc"    : "Kubuntu",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/4.4; Linux 2.6.32-22-generic; X11; en_US) KHTML/4.4.3 (like Gecko) Kubuntu",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Kubuntu",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.7 (like Gecko) (Debian)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Debian GNU/Linux 8.1 (jessie)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.0 Maxthon/1.0.5.3 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "8.1"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "ELinks/0.12~pre5-4 (textmode; Debian; Linux 3.2.0-4-amd64 x86_64 192x47-2)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "w3m/0.5.3+debian-19",
+        "expect"  :
+        {
+            "name"    : "debian",
+            "version" : "19"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.3) Gecko/2008092814 (Debian-3.0.1-1)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "3.0.1-1"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/3.5; Linux 2.6.24.4; X11) KHTML/3.5.9 (like Gecko) (Debian package 4:3.5.9.dfsg.1-2+b1)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "OpenSUSE",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.17) Gecko/20110420 SUSE/3.6.17-0.2.1 Firefox/3.6.17",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "SUSE",
+            "version" : "3.6.17-0.2.1"
         }
     },
     {
@@ -388,11 +460,11 @@
     },
     {
         "desc"    : "Arch",
-        "ua"      : "",
+        "ua"      : "Uzbl (Webkit 1.1.10) (Arch Linux)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Arch",
+            "version" : "undefined"
         }
     },
     {
@@ -406,11 +478,29 @@
     },
     {
         "desc"    : "Fedora",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Fedora",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Fedora",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:2.0) Gecko/20110404 Fedora/16-dev Firefox/4.0",
+        "expect"  :
+        {
+            "name"    : "Fedora",
+            "version" : "16-dev"
+        }
+    },
+    {
+        "desc"    : "Fedora",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; sk; rv:1.9.0.4) Gecko/2008111217 Fedora/3.0.4-1.fc10 Firefox/3.0.4",
+        "expect"  :
+        {
+            "name"    : "Fedora",
+            "version" : "3.0.4-1.fc10"
         }
     },
     {
@@ -514,29 +604,29 @@
     },
     {
         "desc"    : "FreeBSD",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; FreeBSD x86_64; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.204 Safari/534.16",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "FreeBSD",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "OpenBSD",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; OpenBSD i386; en-US; rv:1.9.1) Gecko/20090702 Firefox/3.5",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "OpenBSD",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "NetBSD",
-        "ua"      : "",
+        "ua"      : "ELinks (0.4.3; NetBSD 3.0.2PATCH sparc64; 141x19)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "NetBSD",
+            "version" : "3.0.2PATCH"
         }
     },
     {
@@ -708,6 +798,15 @@
         {
             "name"    : "Android",
             "version" : "4.2.1"
+        }
+    },
+    {
+        "desc"    : "Solaris",
+        "ua"      : "NCSA Mosaic/1.0 (X11;SunOS 4.1.4 sun4m)",
+        "expect"  :
+        {
+            "name"    : "Solaris",
+            "version" : "4.1.4"
         }
     }
 ]

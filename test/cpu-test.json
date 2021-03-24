@@ -136,6 +136,14 @@
         }
     },
     {
+        "desc"    : "sparc64",
+        "ua"      : "ELinks (0.4.3; NetBSD 3.0.2PATCH sparc64; 141x19)",
+        "expect"  :
+        {
+            "architecture"  : "sparc64"
+        }
+    },
+    {
         "desc"    : "QuickTime",
         "ua"      : "QuickTime/7.5.6 (qtver=7.5.6;cpu=IA32;os=Mac 10.5.8)",
         "expect"  : 

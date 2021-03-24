@@ -676,14 +676,16 @@
             /(blackberry)\w*\/?([\w\.]*)/i,                                     // Blackberry
             /(tizen|kaios)[\/\s]([\w\.]+)/i                                     // Tizen/KaiOS
             ], [NAME, VERSION], [
-            /\((bb)(10);/i                                                      // BlackBerry 10
-            ], [[NAME, 'BlackBerry'], VERSION], [
-            /(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i                  // Symbian
-            ], [[NAME, 'Symbian'], VERSION], [
+            /\(bb(10);/i                                                        // BlackBerry 10
+            ], [VERSION, [NAME, 'BlackBerry']], [
+            /(?:symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i                // Symbian
+            ], [VERSION, [NAME, 'Symbian']], [
             /\((series40);/i                                                    // Series 40
             ], [NAME], [
             /mozilla.+\(mobile;.+gecko.+firefox/i                               // Firefox OS
-            ], [[NAME, 'Firefox OS'], VERSION], [
+            ], [[NAME, 'Firefox OS']], [
+            /\bhpwos\/([\w\.]+)/i                                               // WebOS
+            ], [VERSION, [NAME, 'WebOS']], [
 
             // Google Chromecast
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
@@ -694,9 +696,9 @@
             /(xbox);\s+xbox\s([^\);]+)/i,                                       // Microsoft Xbox (360, One, X, S, Series X, Series S)
 
             // GNU/Linux based
-            /(mint)[\/\s\(]?(\w*)/i,                                            // Mint
+            /(mint)[\/\s\(\)]?(\w*)/i,                                          // Mint
             /(mageia|vectorlinux)[;\s]/i,                                       // Mageia/VectorLinux
-            /(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|(?=\s)arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?(?!chrom)([\w\.-]*)/i,
+            /(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?=\slinux)|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)(?:\sgnu\/linux)?(?:\slinux)?[\/\s-]?(?!chrom|package)([\w\.-]*)/i,
                                                                                 // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
                                                                                 // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus
             /(hurd|linux)\s?([\w\.]*)/i,                                        // Hurd/Linux
@@ -711,7 +713,7 @@
             ], [[NAME, 'Solaris'], VERSION], [
 
             // BSD based
-            /\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]*)/i                    // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
+            /\s([frentopc-]{0,4}bsd|dragonfly)\s?(?!amd|[ix346]{1,2}86)([\w\.]*)/i                    // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
             ], [NAME, VERSION],[
 
             /(haiku)\s(\w+)/i                                                   // Haiku
@@ -742,9 +744,9 @@
             return new UAParser(ua, extensions).getResult();
         }
     
-        var _ua;
+        var _ua = ua || ((typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
         var _rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
-    
+
         this.getBrowser = function () {
             var _browser = { name: undefined, version: undefined };
             mapper.rgx.call(_browser, _ua, _rgxmap.browser);
@@ -788,7 +790,7 @@
             _ua = ua.length > UA_MAX_LENGTH ? util.trim(ua, UA_MAX_LENGTH) : ua;
             return this;
         };
-        this.setUA(ua || ((typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY));
+        this.setUA(_ua);
         return this;
     };
 
