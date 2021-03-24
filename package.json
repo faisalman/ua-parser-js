@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "0.7.24",
+  "version": "0.7.25",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Lightweight JavaScript-based user-agent string parser",
   "keywords": [
@@ -99,7 +99,7 @@
   ],
   "main": "src/ua-parser.js",
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/UAParser\\.js/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/UAParser\\.js/' --compress --mangle",
+    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments --compress --mangle",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
     "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js",
     "verup": "node ./node_modules/verup",
