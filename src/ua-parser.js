@@ -400,13 +400,14 @@
 
             // Huawei
             /d\/huawei([\w\s-]+)[;\)]/i,
-            /droid.+\s(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?)/i,
+            /droid.+\s(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?|ele-l\d\d)/i,
             /droid.+\s(\w{2,4}-[ATU][LN][01259][019])[;\)\s]/i
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
             /droid.+(bah2?-a?[lw]\d{2})/i                                       // Huawei MediaPad
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, TABLET]], [
 
             // Xiaomi
+            /\b(poco\s\w+)\b/i,
             /droid.+;\s(\w+)\s+build\/hm\1/i,                                   // Xiaomi Hongmi 'numeric' models
             /droid.+(hm[\s\-_]?note?[\s_]?(?:\d\w)?)\sbuild/i,                  // Xiaomi Hongmi
             /droid.+(redmi[\s\-_]?(?:note|k)?(?:[\s_]?[\w\s]+))(?:\sbuild|\))/i,// Xiaomi Redmi

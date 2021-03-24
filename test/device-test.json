@@ -415,12 +415,48 @@
         }
     },
     {
-        "desc": "Samsung Galaxy Note 8",
-        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; GT-N5100 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Safari/537.36",
+        "desc": "Samsung Galaxy A50",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-A505F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.105 Mobile Safari/537.36",
         "expect": {
             "vendor": "Samsung",
-            "model": "GT-N5100",
-            "type": "tablet"
+            "model": "SM-A505F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy A80",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-A805F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.112 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A805F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Fold",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-F900U Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.2 Chrome/67.0.3396.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-F900U",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S10E",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-G970F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-G970F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Note 10+",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-N976V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.89 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-N976V",
+            "type": "mobile"
         }
     },
     {
@@ -430,6 +466,15 @@
             "vendor": "Samsung",
             "model": "SM-C5000",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Note 8",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; GT-N5100 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "GT-N5100",
+            "type": "tablet"
         }
     },
     {
@@ -469,21 +514,21 @@
         }
     },
     {
-        "desc": "Samsung SmartTV2011",
-        "ua": "HbbTV/1.1.1 (;;;;;) Maple;2011",
-        "expect": {
-            "vendor": "Samsung",
-            "model": "SmartTV2011",
-            "type": "smarttv"
-        }
-    },
-    {
         "desc": "Samsung Note 10.1",
         "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-P605) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36",
         "expect": {
           "vendor": "Samsung",
           "model": "SM-P605",
           "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV2011",
+        "ua": "HbbTV/1.1.1 (;;;;;) Maple;2011",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2011",
+            "type": "smarttv"
         }
     },
     {
@@ -745,6 +790,15 @@
             "vendor": "Xiaomi",
             "model": "MI PAD 4 PLUS",
             "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi POCO X2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; POCO X2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "POCO X2",
+            "type": "mobile"
         }
     },
     {
@@ -1400,11 +1454,11 @@
         }
     },
     {
-        "desc": "Huawei P30 Pro",
-        "ua": "Mozilla/5.0 (Linux; Android 9; VOG-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "desc": "Huawei Mate 10 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0; BLA-L29 Build/HUAWEIBLA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3236.6 Mobile Safari/537.36",
         "expect": {
             "vendor": "Huawei",
-            "model": "VOG-L29",
+            "model": "BLA-L29",
             "type": "mobile"
         }
     },
@@ -1436,6 +1490,15 @@
     }
   },
   {
+    "desc": "Huawei Mate 20 X",
+    "ua": "Mozilla/5.0 (Linux; Android 9; EVR-L29 Build/HUAWEIEVR-L29; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Huawei",
+        "model": "EVR-L29",
+        "type": "mobile"
+    }
+  },
+  {
     "desc": "Huawei Mate 20 Pro",
     "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
     "expect": {
@@ -1454,31 +1517,22 @@
     }
   },
   {
-    "desc": "Huawei Mate 20 Pro",
-    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
-    "expect": {
-        "vendor": "Huawei",
-        "model": "LYA-AL10",
-        "type": "mobile"
-    }
+      "desc": "Huawei P30",
+      "ua": "Mozilla/5.0 (Linux; Android 9; ELE-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.90 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "ELE-L29",
+          "type": "mobile"
+      }
   },
   {
-    "desc": "Huawei Mate 20 Pro",
-    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L0C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
-    "expect": {
-        "vendor": "Huawei",
-        "model": "LYA-L0C",
-        "type": "mobile"
-    }
-  },
-  {
-    "desc": "Huawei Mate 20 Pro",
-    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
-    "expect": {
-        "vendor": "Huawei",
-        "model": "LYA-L29",
-        "type": "mobile"
-    }
+      "desc": "Huawei P30 Pro",
+      "ua": "Mozilla/5.0 (Linux; Android 9; VOG-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "VOG-L29",
+          "type": "mobile"
+      }
   },
   {
     "desc": "Huawei P40",
