@@ -401,7 +401,7 @@
             // Huawei
             /d\/huawei([\w\s-]+)[;\)]/i,
             /droid.+\s(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?)/i,
-            /droid.+\s((?:A(?:GS2?|KA|LP|N[AE]|QM|RE|SK|TH)|B(?:A(?:C|H2)|G2|KL|LA|MH|Z[AKT])|C(?:AZ|DY|LT|OL|[MOR]R)|DUK|E(?:BG|DI|L[ES]|ML|V[AR])|FRD|G(?:LK|RA)|H(?:D[LN]|MA|LK|RY|WI)|INE|J(?:DN2|MM|NY|SN)|K(?:NT|OB|SA)|L(?:IO|LD|ON|[RY]A)|M(?:AR|ED|[HL]A|ON|RX|T7)|N(?:EO|TS|XT)|OXF|P(?:AR|CT|IC|LK|RA)|R(?:IO|VL)|S(?:C[ML]|EA|HT|PN|TF)|T(?:A[HS]|NY)|V(?:[CI]E|KY|OG|RD)|W(?:AS|LZ)|Y(?:635|AL))-[ATU][LN][01259][019])[;\)\s]/i
+            /droid.+\s(\w{2,4}-[ATU][LN][01259][019])[;\)\s]/i
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
             /droid.+(bah2?-a?[lw]\d{2})/i                                       // Huawei MediaPad
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, TABLET]], [
