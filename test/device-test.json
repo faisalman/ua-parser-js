@@ -215,6 +215,15 @@
         }
     },
     {
+        "desc": "Microsoft Surface Duo",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 10; Surface Duo Build/2020.1014.61)",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Surface Duo",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Motorola Moto X",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.4; XT1097 Build/KXE21.187-38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.109 Mobile Safari/537.36",
         "expect": {

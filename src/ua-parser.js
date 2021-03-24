@@ -521,7 +521,8 @@
             /droid.+(vodafone)\s([\w\s]+)\)/i                                   // Vodafone
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            
+            /\s(surface\sduo)\s/i                                               // Surface Duo
+            ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, TABLET]], [
             /\s(U304AA)\sbuild/i                                                // AT&T
             ], [MODEL, [VENDOR, 'AT&T'], [TYPE, MOBILE]], [
             /sie-(\w*)/i                                                        // Siemens
