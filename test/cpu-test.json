@@ -166,5 +166,13 @@
         {
             "architecture"  : "amd64"
         }
+    },
+    {
+        "desc"    : "IRIX64",
+        "ua"      : "Mozilla/4.8C-SGI [en] (X11; U; IRIX64 6.5 IP27",
+        "expect"  : 
+        {
+            "architecture"  : "irix64"
+        }
     }
 ]
