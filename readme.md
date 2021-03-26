@@ -61,10 +61,10 @@ Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
-Acer, Alcatel, Amazon, Apple, Archos, Asus, AT&T, BenQ, BlackBerry, Dell,
+Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
 Essential, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu,
-Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm,
-Panasonic, Pebble, Polytron, RIM, Samsung, Sharp, Siemens, Sony[Ericsson],
+Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, OPPO, Ouya,
+Palm, Panasonic, Pebble, Polytron, RIM, Samsung, Sharp, Siemens, Sony[Ericsson],
 Sprint, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
