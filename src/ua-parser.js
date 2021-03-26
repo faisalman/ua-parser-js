@@ -406,6 +406,11 @@
             /;\s(\w+)\sbuild.+\soppo/i
             ], [MODEL, [VENDOR, 'OPPO'], [TYPE, MOBILE]], [
 
+            // Vivo
+            /\svivo\s(\w+)\sbuild/i,
+            /droid\s[\d\.]+;\s(v(?:1[89]|20)\d\d\w?[at])(?:\sbuild|;)/i
+            ], [MODEL, [VENDOR, 'Vivo'], [TYPE, MOBILE]], [
+
             // Motorola
             /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)[\w\s]+build\//i,
             /\smot[\s-](\w*)/i,

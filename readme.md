@@ -57,7 +57,7 @@ Acer, Alcatel, Amazon, Apple, Archos, Asus, AT&T, BenQ, BlackBerry, Dell,
 Essential, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu,
 Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm,
 Panasonic, Pebble, Polytron, RIM, Samsung, Sharp, Siemens, Sony[Ericsson],
-Sprint, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
+Sprint, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```

@@ -1792,5 +1792,50 @@
         "model": "undefined",
         "type": "console"
     }
+  },
+  {
+    "desc": "Vivo Y52s",
+    "ua": "Mozilla/5.0 (Linux; Android 10; V2057A Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 T7/12.10 SP-engine/2.28.0 baiduboxapp/12.10.0.10 (Baidu; P1 10) NABar/1.0",
+    "expect": {
+        "vendor": "Vivo",
+        "model": "V2057A",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Vivo X60",
+    "ua": "Mozilla/5.0 (Linux; Android 11; V2046A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36 VivoBrowser/8.8.71.0",
+    "expect": {
+        "vendor": "Vivo",
+        "model": "V2046A",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Vivo Y79A",
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.2; vivo Y79A Build/N2G47H; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36 VivoBrowser/9.0.14.0",
+    "expect": {
+        "vendor": "Vivo",
+        "model": "Y79A",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Vivo Y97",
+    "ua": "Mozilla/5.0 (Linux; Android 8.1.0; V1813T Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36 VivoBrowser/9.0.14.0",
+    "expect": {
+        "vendor": "Vivo",
+        "model": "V1813T",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Vivo iQOO Pro",
+    "ua": "Mozilla/5.0 (Linux; Android 11; V1916A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36 VivoBrowser/9.1.10.6",
+    "expect": {
+        "vendor": "Vivo",
+        "model": "V1916A",
+        "type": "mobile"
+    }
   }
 ]
