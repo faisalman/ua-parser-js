@@ -406,8 +406,12 @@
 
             // Vivo
             /\svivo\s(\w+)(?:\sbuild|\))/i,
-            /\s(v(?:1[89]|20)\d\d\w?[at])(?:\sbuild|;)/i
+            /\s(v[12]\d{3}\w?[at])(?:\sbuild|;)/i
             ], [MODEL, [VENDOR, 'Vivo'], [TYPE, MOBILE]], [
+            
+            // Realme
+            /\s(rmx[12]\d{3})(?:\sbuild|;)/i
+            ], [MODEL, [VENDOR, 'Realme'], [TYPE, MOBILE]], [
 
             // Motorola
             /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)\b[\w\s]+build\//i,
