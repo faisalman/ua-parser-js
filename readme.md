@@ -38,10 +38,10 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
-Dolphin, Doris, Edge, Epiphany, Facebook, Falkon, Fennec, Firebird, Firefox,
-Flock, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon,
-Iceape, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon, Kindle,
-Konqueror, LBBROWSER, Line, Links, Lunascape, Lynx, MIUI Browser,
+Dolphin, Doris, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, Firebird,
+Firefox, Flock, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, IceCat,
+IceDragon, Iceape, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon,
+Kindle, Konqueror, LBBROWSER, Line, Links, Lunascape, Lynx, MIUI Browser,
 Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic,
 Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser,
 OmniWeb, Opera Coast, Opera Mini, Opera Mobi, Opera Tablet, Opera, PaleMoon,
@@ -61,10 +61,11 @@ Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
-Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, Essential,
-GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola,
-Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm, Panasonic, Pebble, Polytron,
-RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
+Acer, Alcatel, Amazon, Apple, Archos, Asus, AT&T, BenQ, BlackBerry, Dell,
+Essential, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu,
+Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm,
+Panasonic, Pebble, Polytron, RIM, Samsung, Sharp, Siemens, Sony[Ericsson],
+Sprint, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -89,9 +90,9 @@ AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
 Contiki, Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Fuchsia, Gentoo, GNU,
 Haiku, Hurd, iOS, Joli, KaiOS, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo,
 Minix, Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD,
-PCLinuxOS, Plan9, PlayStation, QNX, RedHat, RIM Tablet OS, RISC OS, Sailfish,
-Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux,
-WebOS, Windows [Phone/Mobile], Zenwalk, ...
+PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, RISC OS,
+Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, 
+VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
@@ -101,7 +102,7 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 ```sh
 # Possible 'cpu.architecture'
-68k, amd64, arm[64], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
+68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
 * `getResult()`
