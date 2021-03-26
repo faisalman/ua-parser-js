@@ -1,3 +1,5 @@
+var fs          = require('fs');
+var safe        = require('safe-regex');
 var assert      = require('assert');
 var requirejs   = require('requirejs');
 var UAParser    = require('./../src/ua-parser');
@@ -122,3 +124,28 @@ describe('Using Require.js', function () {
         });
     });
 });
+
+describe('Testing regexes', function () {
+
+    var regexes;
+
+    // todo: use AST-based instead of grep
+    before('Read main js file', function (done) {
+        fs.readFile('src/ua-parser.js', 'utf8', function (err, data) {
+            regexes = data.match(/(\/.+\/[ig]+)(?=[,\s\n])/g);
+            done();
+        });
+    });
+
+    describe('Begin testing', function () {
+        it('all regexes in main file', function () {
+            regexes.forEach(function (regex) {
+                describe('Test against `safe-regex` : ' + regex, function () {
+                    it('should be safe from potentially vulnerable regex', function () {
+                        assert.strictEqual(safe(regex), true);
+                    });
+                });
+            });
+        });
+    });
+})
