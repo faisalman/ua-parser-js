@@ -204,7 +204,7 @@
 
             /\b(?:crmo|crios)\/([\w\.]+)/i                                      // Chrome for Android/iOS
             ], [VERSION, [NAME, 'Chrome']], [
-            /(?:edge|edgios|edga|edg)\/((\d+)?[\w\.]+)/i                        // Microsoft Edge
+            /(?:edge|edgios|edga|edg)\/([\w\.]+)/i                              // Microsoft Edge
             ], [VERSION, [NAME, 'Edge']], [
 
             // Presto based
@@ -442,7 +442,7 @@
             // Google
             /droid.+;\s(pixel c)[\s)]/i                                         // Google Pixel C
             ], [MODEL, [VENDOR, 'Google'], [TYPE, TABLET]], [
-            /droid.+;\s(pixel( [2-9]a?)?( xl)?)[\s)]/i                          // Google Pixel
+            /droid.+;\s(pixel[\s\daxl]{0,6})(?:\sbuild|\))/i                    // Google Pixel
             ], [MODEL, [VENDOR, 'Google'], [TYPE, MOBILE]], [
 
             // Sony
@@ -529,8 +529,8 @@
             ], [MODEL, [VENDOR, 'Dell'], [TYPE, TABLET]], [
             /[;\/]\s*(q[t|m][\d\w]+)\s+build/i                                  // Verizon Tablet
             ], [MODEL, [VENDOR, 'Verizon'], [TYPE, TABLET]], [
-            /[;\/]\s+(barnes[&\s]+noble\s+|bn[rt])(\S(?:.*\S)?)\s+build/i
-            ], [[VENDOR, 'Barnes & Noble'], MODEL, [TYPE, TABLET]], [
+            /[;\/]\s(?:barnes[&\s]+noble\s|bn[rt])([\w\s\+]*)\sbuild/i
+            ], [MODEL, [VENDOR, 'Barnes & Noble'], [TYPE, TABLET]], [
             /[;\/]\s+(tm\d{3}.*\b)\s+build/i                                    // Barnes & Noble Tablet
             ], [MODEL, [VENDOR, 'NuVision'], [TYPE, TABLET]], [
             /;\s(k88)\sbuild/i                                                  // ZTE K Series Tablet
