@@ -5,3 +5,6 @@ http://iconarchive.com
 http://wikimedia.org
 http://distrowatch.com
 https://github.com/alrra/browser-logos
+https://www.flaticon.com/
+https://logo.wine/
+https://icon-icons.com/
