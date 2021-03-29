@@ -448,7 +448,7 @@
 
             // Lenovo
             /(ideatab[\w\-\s]+)/i,
-            /lenovo\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+)|[\w-]+)/i        // Lenovo tablets
+            /lenovo\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+)|yt[\d\w-]{6}|tb[\d\w-]{6})/i        // Lenovo tablets
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
 
             // Nokia
