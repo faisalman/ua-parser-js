@@ -26,6 +26,15 @@
         }
     },
     {
+        "desc": "ASUS ZenPad Z8s",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; ASUS_P00J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Safari/537.36\n",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ASUS_P00J",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "ASUS ROG",
         "ua": "Mozilla/5.0 (Linux; Android 8.1; ZS600KL Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36",
         "expect": {
@@ -226,6 +235,15 @@
     {
         "desc": "iPad Air",
         "ua": "Mozilla/5.0 (iPad; CPU OS 12_4_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPad4,1;FBMD/iPad;FBSN/iOS;FBSV/12.4.5;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5;FBCR/]",
+        "expect": {
+            "vendor": "Apple",
+            "model": "iPad",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "iPad using Facebook Browser",
+        "ua": "Mozilla/5.0 (iPad; CPU OS 14_4_2 like Mac OS X) WebKit/8610 (KHTML, like Gecko) Mobile/18D70 [FBAN/FBIOS;FBDV/iPad7,11;FBMD/iPad;FBSN/iOS;FBSV/14.4.2;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5]",
         "expect": {
             "vendor": "Apple",
             "model": "iPad",
@@ -1927,6 +1945,24 @@
         "expect": {
             "vendor": "Huawei",
             "model": "AGS2-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGR-W09 Build/HUAWEIAGR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3-W09 Build/HUAWEIAGS3-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-W09",
             "type": "tablet"
         }
     },

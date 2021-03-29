@@ -391,13 +391,16 @@
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, MOBILE]], [
             /\((ipad);[\w\s\),;-]+(apple)/i                                     // iPad
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
-            /applecoremedia\/[\w\.]+\s\((ipad)/i
+            /applecoremedia\/[\w\.]+\s\((ipad)/i,
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, TABLET]], [
+            /(iPad;FBSN\/iOS)/i
+            ], [[MODEL, 'iPad'], [VENDOR, 'Apple'], [TYPE, TABLET]], [
 
             // Huawei
             /\b(bah2?-a?[lw]\d{2})/i,                                           // Huawei M Lite
             /\b(sht?-a?[lw]\d{2})/i,                                            // Huawei M
-            /\b(ags2?-a?[lw]\d{2})/i                                            // Huawei T
+            /\b(ags(2|3)?-a?[lw]\d{2})/i,                                       // Huawei T
+            /\b(agr-a?[lw]\d{2})/i                                              // Huawei T s
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, TABLET]], [
             /d\/huawei([\w\s-]+)[;\)]/i,
             /\b(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?|ele-l\d\d)/i,
@@ -490,7 +493,7 @@
             ], [MODEL, [VENDOR, 'BlackBerry'], [TYPE, MOBILE]], [
 
             // Asus
-            /\b(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus\s7|padfone|p00c)/i
+            /\b(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus\s7|padfone|p00c|asus_p00j)/i
             ], [MODEL, [VENDOR, 'ASUS'], [TYPE, TABLET]], [
             /\s(z[es]6[027][01][km][ls]|zenfone\s\d\w?)\b/i
             ], [MODEL, [VENDOR, 'ASUS'], [TYPE, MOBILE]], [
