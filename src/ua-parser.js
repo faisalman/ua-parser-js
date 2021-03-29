@@ -287,7 +287,7 @@
 
             // WebView
             /;fbav\/([\w\.]+);/i                                                // Facebook App for iOS & Android with version
-            ], [VERSION, [NAME, 'Facebook']], [            
+            ], [VERSION, [NAME, 'Facebook']], [
             /FBAN\/FBIOS|FB_IAB\/FB4A/i                                         // Facebook App for iOS & Android without version
             ], [[NAME, 'Facebook']], [
             /\s(electron)\/([\w\.]+)\ssafari/i,                                 // Electron-based App
@@ -373,13 +373,13 @@
         ],
 
         device : [[
-            
+
             //////////////////////
             // MOBILES & TABLETS
             /////////////////////
-            
+
             // Samsung
-            /\b(sch-i[89]0\d|shw-m380s|sm-p(?:605|610|587)|sm-t\w+|gt-p\d{4}|gt-n\d+|sgh-t8[56]9|nexus\s10)/i,
+            /\b(sch-i[89]0\d|shw-m380s|sm-p(?:605|610|587)|sm-t\w+|sm-p\w+|gt-p\d{4}|gt-n\d+|sgh-t8[56]9|nexus\s10)/i,
             ], [MODEL, [VENDOR, 'Samsung'], [TYPE, TABLET]], [
             /(s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-\w[\w\d]+)/i,
             /\ssamsung[\s-]([\w-]+)/i,
@@ -391,16 +391,21 @@
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, MOBILE]], [
             /\((ipad);[\w\s\),;-]+(apple)/i                                     // iPad
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
-            /applecoremedia\/[\w\.]+\s\((ipad)/i
+            /applecoremedia\/[\w\.]+\s\((ipad)/i,
             ], [MODEL, [VENDOR, 'Apple'], [TYPE, TABLET]], [
+            /(iPad;FBSN\/iOS)/i
+            ], [[MODEL, 'iPad'], [VENDOR, 'Apple'], [TYPE, TABLET]], [
 
             // Huawei
+            /\b(bah2?-a?[lw]\d{2})/i,                                           // Huawei M Lite
+            /\b(sht?-a?[lw]\d{2})/i,                                            // Huawei M
+            /\b(ags(2|3)?-a?[lw]\d{2})/i,                                       // Huawei T
+            /\b(agr-a?[lw]\d{2})/i                                              // Huawei T s
+            ], [MODEL, [VENDOR, 'Huawei'], [TYPE, TABLET]], [
             /d\/huawei([\w\s-]+)[;\)]/i,
             /\b(nexus\s6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?|ele-l\d\d)/i,
             /\b(\w{2,4}-[atu][ln][01259][019])[;\)\s]/i
             ], [MODEL, [VENDOR, 'Huawei'], [TYPE, MOBILE]], [
-            /\b(bah2?-a?[lw]\d{2})/i                                            // Huawei MediaPad
-            ], [MODEL, [VENDOR, 'Huawei'], [TYPE, TABLET]], [
 
             // Xiaomi
             /\b(poco[\s\w]+)(?:\sbuild|\))/i,                                                 // Xiaomi POCO
@@ -421,7 +426,7 @@
             /\svivo\s(\w+)(?:\sbuild|\))/i,
             /\s(v[12]\d{3}\w?[at])(?:\sbuild|;)/i
             ], [MODEL, [VENDOR, 'Vivo'], [TYPE, MOBILE]], [
-            
+
             // Realme
             /\s(rmx[12]\d{3})(?:\sbuild|;)/i
             ], [MODEL, [VENDOR, 'Realme'], [TYPE, MOBILE]], [
@@ -446,7 +451,7 @@
 
             // Lenovo
             /(ideatab[\w\-\s]+)/i,
-            /lenovo\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+)|[\w-]+)/i        // Lenovo tablets
+            /lenovo\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+)|yt[\d\w-]{6}|tb[\d\w-]{6})/i        // Lenovo tablets
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
 
             // Nokia
@@ -475,6 +480,7 @@
 
             // Amazon
             /(alexa)webm/i,
+            /(kf[a-z]{2}wi)(\sbuild\/|\))/i,                                    // Kindle Fire without Silk
             /(kf[a-z]+)(\sbuild\/|\)).+silk\//i                                 // Kindle Fire HD
             ], [MODEL, [VENDOR, 'Amazon'], [TYPE, TABLET]], [
             /(sd|kf)[0349hijorstuw]+(\sbuild\/|\)).+silk\//i                    // Fire Phone
@@ -485,9 +491,9 @@
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
             /\(bb10;\s(\w+)/i                                                   // BlackBerry 10
             ], [MODEL, [VENDOR, 'BlackBerry'], [TYPE, MOBILE]], [
-            
+
             // Asus
-            /\b(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus\s7|padfone|p00c)/i
+            /\b(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus\s7|padfone|p00c|asus_p00j)/i
             ], [MODEL, [VENDOR, 'ASUS'], [TYPE, TABLET]], [
             /\s(z[es]6[027][01][km][ls]|zenfone\s\d\w?)\b/i
             ], [MODEL, [VENDOR, 'ASUS'], [TYPE, MOBILE]], [
@@ -765,11 +771,11 @@
             extensions = ua;
             ua = undefined;
         }
-    
+
         if (!(this instanceof UAParser)) {
             return new UAParser(ua, extensions).getResult();
         }
-    
+
         var _ua = ua || ((typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
         var _rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
 

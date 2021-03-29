@@ -26,6 +26,15 @@
         }
     },
     {
+        "desc": "ASUS ZenPad Z8s",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; ASUS_P00J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Safari/537.36\n",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ASUS_P00J",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "ASUS ROG",
         "ua": "Mozilla/5.0 (Linux; Android 8.1; ZS600KL Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36",
         "expect": {
@@ -233,6 +242,15 @@
         }
     },
     {
+        "desc": "iPad using Facebook Browser",
+        "ua": "Mozilla/5.0 (iPad; CPU OS 14_4_2 like Mac OS X) WebKit/8610 (KHTML, like Gecko) Mobile/18D70 [FBAN/FBIOS;FBDV/iPad7,11;FBMD/iPad;FBSN/iOS;FBSV/14.4.2;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5]",
+        "expect": {
+            "vendor": "Apple",
+            "model": "iPad",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "iPod",
         "ua": "Mozilla/5.0 (iPod touch; CPU iPhone OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53",
         "expect": {
@@ -248,6 +266,15 @@
             "vendor": "Lenovo",
             "model": "TAB 2 A7",
             "type": "tablet"
+        }
+    },
+  {
+        "desc": "Lenovo Phone",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Lenovo PB2-650M Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/311.0.0.44.117;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "PB2-650M",
+            "type": "mobile"
         }
     },
     {
@@ -825,6 +852,15 @@
         "expect": {
             "vendor": "Samsung",
             "model": "SM-P610",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab A 9.7",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; SM-P550 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.90 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-P550",
             "type": "tablet"
         }
     },
@@ -1832,6 +1868,15 @@
         }
     },
     {
+        "desc": "Amazon Kindle Fire Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 9; KFMAWI Build/PS7312; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFMAWI",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Amazon Fire TV",
         "ua": "Mozilla/5.0 (Linux; Android 4.2.2; AFTB Build/JDQ39) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.173 Mobile Safari/537.22",
         "expect": {
@@ -1873,6 +1918,51 @@
         "expect": {
             "vendor": "Huawei",
             "model": "BAH-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; BAH2-W19 Build/HUAWEIBAH2-W19; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH2-W19",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SHT-AL09 Build/HUAWEISHT-AL09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SHT-AL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T5",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; AGS2-L09 Build/HUAWEIAGS2-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/84.0.4147.125 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS2-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGR-W09 Build/HUAWEIAGR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3-W09 Build/HUAWEIAGS3-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-W09",
             "type": "tablet"
         }
     },
