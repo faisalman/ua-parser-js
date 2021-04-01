@@ -18,6 +18,15 @@
         }
     },
     {
+        "desc"    : "Flow",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) EkiohFlow/5.7.4.30559 Flow/5.7.4 (like Gecko Firefox/53.0 rv:53.0)",
+        "expect"  :
+        {
+            "name"    : "Flow",
+            "version" : "5.7.4.30559"
+        }
+    },
+    {
         "desc"    : "Gecko",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:2.0b9pre) Gecko/20110111 Firefox/4.0b9pre",
         "expect"  :
