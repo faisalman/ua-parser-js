@@ -400,6 +400,16 @@
         }
     },
     {
+        "desc"    : "Firefox Reality",
+        "ua"      : "Mozilla/5.0 (Android 7.1.2; Mobile VR; rv:65.0) Gecko/65.0 Firefox/65.0",
+        "expect"  :
+        {
+            "name"    : "Firefox Reality",
+            "version" : "65.0",
+            "major"   : "65"
+        }
+    },
+    {
         "desc"    : "Firefox-based browser",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0 AppName/1.0",
         "expect"  :

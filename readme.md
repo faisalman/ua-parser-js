@@ -39,16 +39,16 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
 Dolphin, Doris, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, Firebird,
-Firefox, Flock, Flow, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, IceCat,
-IceDragon, Iceape, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon,
+Firefox [Reality], Flock, Flow, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, 
+IceCat, IceDragon, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon,
 Kindle, Konqueror, LBBROWSER, Line, Links, Lunascape, Lynx, MIUI Browser,
 Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic,
 Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser,
-OmniWeb, Opera Coast, Opera Mini, Opera Mobi, Opera Tablet, Opera, PaleMoon,
-PhantomJS, Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark,
-QupZilla, RockMelt, Safari, Sailfish Browser, Samsung Browser, SeaMonkey, Silk,
-Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser,
-Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
+OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, 
+Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
+Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
+SlimBrowser, Swiftfox, Tizen Browser, UCBrowser, Vivaldi, Waterfox, WeChat, Weibo,
+Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```

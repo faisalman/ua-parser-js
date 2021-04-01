@@ -321,6 +321,8 @@
             // Gecko based
             /(navigator|netscape)\/([\w\.-]+)/i                                 // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
+            /ile\svr;\srv:([\w\.]+)\).+firefox/i                                // Firefox Reality
+            ], [VERSION, [NAME, 'Firefox Reality']], [
             /ekiohf.+(flow)\/([\w\.]+)/i,                                       // Flow
             /(swiftfox)/i,                                                      // Swiftfox
             /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,
