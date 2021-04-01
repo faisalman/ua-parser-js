@@ -30,7 +30,7 @@
         "ua": "Mozilla/5.0 (Linux; Android 7.0; ASUS_P00J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Safari/537.36\n",
         "expect": {
             "vendor": "ASUS",
-            "model": "ASUS_P00J",
+            "model": "P00J",
             "type": "tablet"
         }
     },
@@ -434,6 +434,15 @@
     },
     {
         "desc": "iPhone SE",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
+        "expect": {
+            "vendor": "Apple",
+            "model": "iPhone",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "iPhone SE using Facebook App",
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
