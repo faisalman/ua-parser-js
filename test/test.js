@@ -46,6 +46,14 @@ describe('UAParser()', function () {
     assert.deepStrictEqual(UAParser(ua), new UAParser().setUA(ua).getResult());
 });
 
+describe('UAParser() constructor does not throw with undefined ua argument', function () {
+    assert.doesNotThrow(() => new UAParser(undefined).getResult());
+});
+
+describe('UAParser.setUA method does not throw with undefined ua argument', function () {
+    assert.doesNotThrow(() => new UAParser().setUA(undefined).getResult());
+});
+
 for (var i in methods) {
     describe(methods[i]['title'], function () {
         for (var j in methods[i]['list']) {

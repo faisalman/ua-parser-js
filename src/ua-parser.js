@@ -806,7 +806,7 @@
             return _ua;
         };
         this.setUA = function (ua) {
-            _ua = ua.length > UA_MAX_LENGTH ? util.trim(ua, UA_MAX_LENGTH) : ua;
+            _ua = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? util.trim(ua, UA_MAX_LENGTH) : ua;
             return this;
         };
         this.setUA(_ua);
