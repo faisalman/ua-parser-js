@@ -1,5 +1,5 @@
 /*!@license
- * UAParser.js v0.7.26
+ * UAParser.js v0.7.27
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.26',
+    var LIBVERSION  = '0.7.27',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
