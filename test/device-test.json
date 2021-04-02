@@ -161,6 +161,15 @@
         }
     },
     {
+        "desc": "Fairphone 1U",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; FP1U Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Fairphone",
+            "model": "FP1U",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "HTC Desire 820",
         "ua": "Mozilla/5.0 (Linux; Android 6.0.1; HTC Desire 820 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36",
         "expect": {

@@ -538,6 +538,8 @@
 
             /\s(surface\sduo)\s/i                                               // Surface Duo
             ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, TABLET]], [
+            /droid\s[\d\.]+;\s(fp\du?)\sbuild/i
+            ], [MODEL, [VENDOR, 'Fairphone'], [TYPE, MOBILE]], [
             /\s(u304aa)\sbuild/i                                                // AT&T
             ], [MODEL, [VENDOR, 'AT&T'], [TYPE, MOBILE]], [
             /sie-(\w*)/i                                                        // Siemens

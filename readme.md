@@ -62,8 +62,8 @@ console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
 Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
-Essential, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu,
-Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, OPPO, Ouya,
+Essential, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, 
+Meizu, Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, OPPO, Ouya,
 Palm, Panasonic, Pebble, Polytron, Realme, RIM, Samsung, Sharp, Siemens,
 Sony[Ericsson], Sprint, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
