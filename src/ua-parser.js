@@ -239,8 +239,8 @@
             /(?:ms|\()(ie)\s([\w\.]+)/i,                                        // Internet Explorer
 
             // Webkit/KHTML based
-            /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon)\/([\w\.-]+)/i,
-                                                                                // Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon)\/([\w\.-]+)/i,
+                                                                                // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
             /(rekonq|puffin|brave|whale|qqbrowserlite|qq)\/([\w\.]+)/i,         // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ, aka ShouQ
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
@@ -291,7 +291,10 @@
             ], [[NAME, 'Facebook']], [
             /\s(electron)\/([\w\.]+)\ssafari/i,                                 // Electron-based App
             /safari\s(line)\/([\w\.]+)/i,                                       // Line App for iOS
-            /\b(line)\/([\w\.]+)\/iab/i                                         // Line App for Android
+            /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
+            /(tesla)(?:\sqtcarbrowser|\/(20[12]\d\.[\w\.-]+))/i,                // Tesla
+
+            /(chromium)\/([\w\.-]+)/i                                           // Chromium
             ], [NAME, VERSION], [
             /\bgsa\/([\w\.]+)\s.*safari\//i                                     // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
@@ -640,6 +643,13 @@
             ], [MODEL, [VENDOR, 'Google'], [TYPE, WEARABLE]], [
             /droid\s[\d\.]+;\s(wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, 'Zebra'], [TYPE, WEARABLE]], [
+
+            ///////////////////
+            // EMBEDDED
+            ///////////////////
+
+            /(tesla)(?:\sqtcarbrowser|\/20[12]\d\.[\w\.-]+)/i                   // Tesla
+            ], [VENDOR, [TYPE, EMBEDDED]], [
 
             ////////////////////
             // MIXED (GENERIC)

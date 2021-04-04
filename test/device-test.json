@@ -1162,6 +1162,26 @@
         }
     },
     {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Tesla QtCarBrowser Safari/601.1",
+        "expect"  :
+        {
+            "vendor": "Tesla",
+            "model": "undefined",
+            "type": "embedded"
+        }
+    },
+    {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/537.36 (KHTML, like Gecko) Chromium/79.0.3945.130 Chrome/79.0.3945.130 Safari/537.36 Tesla/2020.16.2.1-e99c70fff409",
+        "expect"  :
+        {
+            "vendor": "Tesla",
+            "model": "undefined",
+            "type": "embedded"
+        }
+    },
+    {
         "desc": "Xiaomi 2013023",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; en-US; 2013023 Build/HM2013023) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/10.0.1.512 U3/0.8.0 Mobile Safari/533.1",
         "expect": {

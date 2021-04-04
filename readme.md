@@ -47,8 +47,8 @@ Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser,
 OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, 
 Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
 Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tizen Browser, UCBrowser, Vivaldi, Waterfox, WeChat, Weibo,
-Yandex, baidu, iCab, w3m, Whale Browser...
+SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, Vivaldi, Waterfox, WeChat,
+Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```
@@ -65,7 +65,7 @@ Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
 Essential, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu,
 Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, OPPO, Ouya,
 Palm, Panasonic, Pebble, Polytron, Realme, RIM, Samsung, Sharp, Siemens,
-Sony[Ericsson], Sprint, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
+Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```

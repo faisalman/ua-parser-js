@@ -999,6 +999,26 @@
         }
     },
     {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Tesla QtCarBrowser Safari/601.1",
+        "expect"  :
+        {
+            "name"    : "Tesla",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/537.36 (KHTML, like Gecko) Chromium/79.0.3945.130 Chrome/79.0.3945.130 Safari/537.36 Tesla/2020.16.2.1-e99c70fff409",
+        "expect"  :
+        {
+            "name"    : "Tesla",
+            "version" : "2020.16.2.1-e99c70fff409",
+            "major"   : "2020"
+        }
+    },
+    {
         "desc"    : "Tizen Browser",
         "ua"      : "Mozilla/5.0 (Linux; U; Tizen/1.0 like Android; en-us; AppleWebKit/534.46 (KHTML, like Gecko) Tizen Browser/1.0 Mobile",
         "expect"  :
