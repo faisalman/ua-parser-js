@@ -143,6 +143,42 @@
         }
     },
     {
+        "desc": "BlackBerry Priv",
+        "ua": "User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; STV100-1 Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/46.0.2490.76 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "BlackBerry",
+            "model": "STV100-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "BlackBerry Keyone",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; BBB100-1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "BlackBerry",
+            "model": "BBB100-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "BlackBerry Key2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; BBF100-1 Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.91 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "BlackBerry",
+            "model": "BBF100-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "BlackBerry Key2 LE",
+        "ua": "User-Agent: Mozilla/5.0 (Linux; Android 8.1.0; BBE100-1 Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "BlackBerry",
+            "model": "BBE100-1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Desktop (IE11 with Tablet string)",
         "ua": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect": {
@@ -332,6 +368,15 @@
         }
     },
     {
+        "desc": "LG Wing",
+        "ua": "Mozilla/5.0 (Linux; Android 10; LM-F100N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-F100N",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "LG Smart TV",
         "ua": "Mozilla/5.0 (DirectFB; U; Linux mips; en) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) LG Browser (; LG NetCast.TV-2011)",
         "expect": {
@@ -420,6 +465,15 @@
         "expect": {
             "vendor": "Motorola",
             "model": "DROID RAZR 4G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola RAZR 2019",
+        "ua": "Mozilla/5.0 (Linux; Android 9; motorola razr) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "razr",
             "type": "mobile"
         }
     },
@@ -537,6 +591,15 @@
         "expect": {
             "vendor": "Nokia",
             "model": "N9",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia 2720 Flip",
+        "ua": "Mozilla/5.0 (Mobile; Nokia_2720_Flip; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5.2",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "2720 Flip",
             "type": "mobile"
         }
     },
@@ -807,6 +870,24 @@
         "expect": {
             "vendor": "Samsung",
             "model": "SM-F900U",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Z Flip",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SM-F700N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-F700N",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Z Fold2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SM-F916B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-F916B",
             "type": "mobile"
         }
     },
@@ -1985,6 +2066,24 @@
         }
     },
     {
+        "desc": "Huawei Mate X",
+        "ua": "Mozilla/5.0 (Linux; Android 9; TAH-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "TAH-AN00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate X2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; TET-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "TET-AN00",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Huawei P20 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
@@ -2168,6 +2267,15 @@
     "expect": {
         "vendor": "ALCATEL",
         "model": "A564C",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Alcatel Go Flip",
+    "ua": "Mozilla/5.0 (Mobile; ALCATEL4044T; rv:37.0) Gecko/37.0 Firefox/37.0 KaiOS/1.0",
+    "expect": {
+        "vendor": "ALCATEL",
+        "model": "4044T",
         "type": "mobile"
     }
   },

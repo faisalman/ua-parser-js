@@ -431,7 +431,7 @@
 
             // Motorola
             /\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)\b[\w\s]+build\//i,
-            /\smot[\s-](\w*)/i,
+            /\smot(?:orola)?[\s-](\w*)/i,
             /((?:moto[\s\w\(\)]+|xt\d{3,4}|nexus\s6)(?=\sbuild|\)))/i
             ], [MODEL, [VENDOR, 'Motorola'], [TYPE, MOBILE]], [
             /\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i
@@ -440,7 +440,7 @@
             // LG
             /((?=lg)?[vl]k\-?\d{3})\sbuild|\s3\.[\s\w;-]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, TABLET]], [
-            /(nexus\s[45])/i,
+            /(lm-?f100[nv]?|nexus\s[45])/i,
             /lg[e;\s\/-]+((?!browser|netcast)\w+)/i,
             /\blg(\-?[\d\w]+)\sbuild/i
             ], [MODEL, [VENDOR, 'LG'], [TYPE, MOBILE]], [
@@ -453,7 +453,7 @@
             // Nokia
             /(?:maemo|nokia).*(n900|lumia\s\d+)/i,
             /nokia[\s_-]?([\w\.-]*)/i
-            ], [MODEL, [VENDOR, 'Nokia'], [TYPE, MOBILE]], [
+            ], [[MODEL, /_/g, ' '], [VENDOR, 'Nokia'], [TYPE, MOBILE]], [
 
             // Google
             /droid.+;\s(pixel\sc)[\s)]/i                                        // Google Pixel C
@@ -485,6 +485,7 @@
             // BlackBerry
             /\((playbook);[\w\s\),;-]+(rim)/i                                   // BlackBerry PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
+            /((?:bb[a-f]|st[hv])100-\d)/i,
             /\(bb10;\s(\w+)/i                                                   // BlackBerry 10
             ], [MODEL, [VENDOR, 'BlackBerry'], [TYPE, MOBILE]], [
 
