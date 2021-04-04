@@ -332,6 +332,33 @@
         }
     },
     {
+        "desc": "Lenovo Tab 4",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Lenovo TAB 2 A7-30HC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A7",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 7 Essential",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; Lenovo TB-7304X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7304X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 9; Lenovo TB-X606F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 YaBrowser/20.9.4.99.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X606F",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "LG K500",
         "ua": "Mozilla/5.0 (Linux; Android 6.0.1; LG-K500 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36",
         "expect": {
@@ -951,6 +978,15 @@
         "expect": {
             "vendor": "Samsung",
             "model": "SM-P550",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab A 10.1",
+        "ua": " Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-T515) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.0 Chrome/83.0.4103.106 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-T515",
             "type": "tablet"
         }
     },
@@ -2077,6 +2113,15 @@
         }
     },
     {
+        "desc": "Huawei MatePad T 10",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGR-L09; HMSCore 5.0.4.301) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11.0.3.304 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-L09",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Huawei Mate 10 Pro",
         "ua": "Mozilla/5.0 (Linux; Android 8.0; BLA-L29 Build/HUAWEIBLA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3236.6 Mobile Safari/537.36",
         "expect": {
@@ -2104,6 +2149,33 @@
         }
     },
     {
+      "desc": "Huawei Mate 20 X",
+      "ua": "Mozilla/5.0 (Linux; Android 9; EVR-L29 Build/HUAWEIEVR-L29; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "EVR-L29",
+          "type": "mobile"
+      }
+    },
+    {
+      "desc": "Huawei Mate 20 Pro",
+      "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "LYA-L09",
+          "type": "mobile"
+      }
+    },
+    {
+      "desc": "Huawei Mate 20 Pro",
+      "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+      "expect": {
+          "vendor": "Huawei",
+          "model": "LYA-AL00",
+          "type": "mobile"
+      }
+    },
+    {
         "desc": "Huawei P20 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
@@ -2127,33 +2199,6 @@
     "expect": {
         "vendor": "Huawei",
         "model": "CLT-L29",
-        "type": "mobile"
-    }
-  },
-  {
-    "desc": "Huawei Mate 20 X",
-    "ua": "Mozilla/5.0 (Linux; Android 9; EVR-L29 Build/HUAWEIEVR-L29; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36",
-    "expect": {
-        "vendor": "Huawei",
-        "model": "EVR-L29",
-        "type": "mobile"
-    }
-  },
-  {
-    "desc": "Huawei Mate 20 Pro",
-    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
-    "expect": {
-        "vendor": "Huawei",
-        "model": "LYA-L09",
-        "type": "mobile"
-    }
-  },
-  {
-    "desc": "Huawei Mate 20 Pro",
-    "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
-    "expect": {
-        "vendor": "Huawei",
-        "model": "LYA-AL00",
         "type": "mobile"
     }
   },
