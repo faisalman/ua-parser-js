@@ -232,7 +232,7 @@
 
             // Mixed
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer|instagram)[\/\s]?([\w\.]*)/i,  // Lunascape/Maxthon/Netfront/Jasmine/Blazer/Instagram
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i,     // Lunascape/Maxthon/Netfront/Jasmine/Blazer
             // Trident based
             /(avant\s|iemobile|slim)(?:browser)?[\/\s]?([\w\.]*)/i,             // Avant/IEMobile/SlimBrowser
             /(ba?idubrowser)[\/\s]?([\w\.]+)/i,                                 // Baidu Browser
@@ -278,6 +278,8 @@
             ], [[NAME, /(.+)/, '$1 Browser'], VERSION], [                       // Oculus/Samsung/Sailfish Browser
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
+            /\s(electron)\/([\w\.]+)\ssafari/i,                                 // Electron-based App
+            /(tesla)(?:\sqtcarbrowser|\/(20[12]\d\.[\w\.-]+))/i,                // Tesla
             /m?(qqbrowser|baiduboxapp|2345Explorer)[\/\s]?([\w\.]+)/i           // QQBrowser/Baidu App/2345 Browser
             ], [NAME, VERSION], [
             /(MetaSr)[\/\s]?([\w\.]+)/i,                                        // SouGouBrowser
@@ -289,12 +291,9 @@
             ], [VERSION, [NAME, 'Facebook']], [
             /FBAN\/FBIOS|FB_IAB\/FB4A/i                                         // Facebook App for iOS & Android without version
             ], [[NAME, 'Facebook']], [
-            /\s(electron)\/([\w\.]+)\ssafari/i,                                 // Electron-based App
             /safari\s(line)\/([\w\.]+)/i,                                       // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
-            /(tesla)(?:\sqtcarbrowser|\/(20[12]\d\.[\w\.-]+))/i,                // Tesla
-
-            /(chromium)\/([\w\.-]+)/i                                           // Chromium
+            /(chromium|instagram)[\/\s]([\w\.-]+)/i                             // Chromium/Instagram
             ], [NAME, VERSION], [
             /\bgsa\/([\w\.]+)\s.*safari\//i                                     // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
