@@ -1,5 +1,5 @@
 /*!@license
- * UAParser.js v0.7.26
+ * UAParser.js v0.7.27
  * Lightweight JavaScript-based User-Agent string parser
  * https://github.com/faisalman/ua-parser-js
  *
@@ -16,7 +16,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.26',
+    var LIBVERSION  = '0.7.27',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -541,6 +541,8 @@
 
             /\s(surface\sduo)\s/i                                               // Surface Duo
             ], [MODEL, [VENDOR, 'Microsoft'], [TYPE, TABLET]], [
+            /droid\s[\d\.]+;\s(fp\du?)\sbuild/i
+            ], [MODEL, [VENDOR, 'Fairphone'], [TYPE, MOBILE]], [
             /\s(u304aa)\sbuild/i                                                // AT&T
             ], [MODEL, [VENDOR, 'AT&T'], [TYPE, MOBILE]], [
             /sie-(\w*)/i                                                        // Siemens
@@ -814,7 +816,7 @@
             return _ua;
         };
         this.setUA = function (ua) {
-            _ua = ua.length > UA_MAX_LENGTH ? util.trim(ua, UA_MAX_LENGTH) : ua;
+            _ua = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? util.trim(ua, UA_MAX_LENGTH) : ua;
             return this;
         };
         this.setUA(_ua);
