@@ -3,7 +3,7 @@
   "name": "ua-parser-js",
   "version": "0.7.27",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
-  "description": "Lightweight JavaScript-based user-agent string parser",
+  "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment",
   "keywords": [
     "user-agent",
     "parser",
@@ -142,7 +142,7 @@
   ],
   "main": "src/ua-parser.js",
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments --compress --mangle",
+    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
     "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js",
     "verup": "node ./node_modules/verup",
