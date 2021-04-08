@@ -135,6 +135,24 @@
         }
     },
     {
+        "desc"    : "Windows NT on x86 or aarch64 CPU using Firefox",
+        "ua"      : "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "NT x.y"
+        }
+    },
+    {
+        "desc"    : "Windows NT on x64 CPU using Firefox",
+        "ua"      : "Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "NT x.y"
+        }
+    },
+    {
         "desc"    : "BlackBerry",
         "ua"      : "BlackBerry9300/5.0.0.912 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/378",
         "expect"  :
@@ -279,6 +297,15 @@
         }
     },
     {
+        "desc"    : "Nokia N900 Linux mobile, on the Fennec browser",
+        "ua"      : "Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0) Gecko/20100101 Firefox/10.0 Fennec/10.0",
+        "expect"  :
+        {
+            "name"    : "Maemo",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "MeeGo",
         "ua"      : "Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13",
         "expect"  :
@@ -320,7 +347,25 @@
         "expect"  :
         {
             "name"    : "Firefox OS",
-            "version" : "undefined"
+            "version" : "14.0"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on Tablet",
+        "ua"      : "Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "26.0"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on TV",
+        "ua"      : "Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "44.0"
         }
     },
     {
@@ -681,6 +726,24 @@
         {
             "name"    : "iOS",
             "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mac OS X on x86, x86_64, or aarch64 using Firefox",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+        "expect"  :
+        {
+            "name"    : "Mac OS",
+            "version" : "x.y"
+        }
+    },
+    {
+        "desc"    : "Mac OS X on PowerPC using Firefox",
+        "ua"      : "Mozilla/5.0 (Macintosh; PPC Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+        "expect"  :
+        {
+            "name"    : "Mac OS",
+            "version" : "x.y"
         }
     },
     {

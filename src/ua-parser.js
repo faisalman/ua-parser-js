@@ -323,8 +323,8 @@
             ], [VERSION, [NAME, FIREFOX+' Reality']], [
             /ekiohf.+(flow)\/([\w\.]+)/i,                                       // Flow
             /(swiftfox)/i,                                                      // Swiftfox
-            /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,
-                                                                                // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
+            /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/\s]?([\w\.\+]+)/i,
+                                                                                // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror/Klar
             /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([\w\.-]+)$/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(firefox)\/([\w\.]+)/i,                                            // Other Firefox-based
@@ -626,7 +626,7 @@
             ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
             /hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i            // HbbTV devices
             ], [[VENDOR, trim], [MODEL, trim], [TYPE, SMARTTV]], [
-            /[\s\/\(](android |smart[-\s]?|opera )tv[;\)\s]/i                   // SmartTV from Unidentified Vendors
+            /\b(android tv|smart[-\s]?tv|opera tv|tv; rv:)\b/i                  // SmartTV from Unidentified Vendors
             ], [[TYPE, SMARTTV]], [
 
             ///////////////////
@@ -655,13 +655,12 @@
             ], [MODEL, [TYPE, MOBILE]], [
             /droid .+?;\s([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i      // Android Tablets from Unidentified Vendors
             ], [MODEL, [TYPE, TABLET]], [
-            /\b(tablet|tab)[;\/]/i,                                             // Unidentifiable Tablet
-            /\b(mobile)(?:[;\/]| safari)/i                                      // Unidentifiable Mobile
-            ], [[TYPE, lowerize]], [
+            /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i,                     // Unidentifiable Tablet
+            ], [[TYPE, TABLET]], [
+            /(phone|mobile(?:[;\/]| safari))/i                                  // Unidentifiable Mobile
+            ], [[TYPE, MOBILE]], [
             /(android[\w\.\s\-]{0,9});.+buil/i                                  // Generic Android Device
-            ], [MODEL, [VENDOR, 'Generic']], [
-            /(phone)/i
-            ], [[TYPE, MOBILE]]
+            ], [MODEL, [VENDOR, 'Generic']]
         ],
 
         engine : [[
@@ -690,7 +689,7 @@
             ], [NAME, VERSION], [
             /(windows) nt 6\.2; (arm)/i,                                        // Windows RT
             /(windows phone(?: os)*)[\s\/]?([\d\.\s\w]*)/i,                     // Windows Phone
-            /(windows mobile|windows)[\s\/]?([ntce\d\.\s]+\w)(?!.+xbox)/i
+            /(windows mobile|windows)[\s\/]?([ntce\d\.\s]+[\w\.]+)(?!.+xbox)/i
             ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
             /(win(?=3|9|n)|win 9x )([nt\d\.]+)/i
             ], [[NAME, 'Windows'], [VERSION, strMapper, windowsVersionMap]], [
@@ -703,8 +702,8 @@
             /(macintosh|mac(?=_powerpc) )(?!.+haiku)/i                          // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
-            // Mobile OSes                                                      // Android/WebOS/Palm/QNX/Bada/RIM/MeeGo/Contiki/Sailfish OS
-            /(android|webos|palm os|qnx|bada|rim tablet os|meego|sailfish|contiki)[\/\s-]?([\w\.]*)/i,
+            // Mobile OSes                                                      // Android/WebOS/Palm/QNX/Bada/RIM/Maemo/MeeGo/Contiki/Sailfish OS
+            /(android|webos|palm os|qnx|bada|rim tablet os|maemo|meego|sailfish|contiki)[\/\s-]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,                                      // Blackberry
             /(tizen|kaios)[\/\s]([\w\.]+)/i,                                    // Tizen/KaiOS
             /\((series40);/i                                                    // Series 40
@@ -713,8 +712,8 @@
             ], [VERSION, [NAME, BLACKBERRY]], [
             /(?:symbian\s?os|symbos|s60(?=;)|series60)[\/\s-]?([\w\.]*)/i       // Symbian
             ], [VERSION, [NAME, 'Symbian']], [
-            /mozilla.+\(mobile;.+gecko.+firefox/i                               // Firefox OS
-            ], [[NAME, FIREFOX+' OS']], [
+            /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w\s]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
+            ], [VERSION, [NAME, FIREFOX+' OS']], [
             /web0s;.+rt(tv)/i,
             /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i                              // WebOS
             ], [VERSION, [NAME, 'webOS']], [

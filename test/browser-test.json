@@ -160,6 +160,16 @@
         }
     },
     {
+        "desc"    : "Camino on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Camino/2.2.1",
+        "expect"  :
+        {
+            "name"    : "Camino",
+            "version" : "2.2.1",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "Chimera",
         "ua"      : "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; pl-PL; rv:1.0.1) Gecko/20021111 Chimera/0.6",
         "expect"  :
@@ -427,6 +437,16 @@
             "name"    : "Fennec",
             "version" : "1.0a1",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Firefox for Maemo (Nokia N900)",
+        "ua"      : "Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1",
+        "expect"  :
+        {
+            "name"    : "Fennec",
+            "version" : "10.0.1",
+            "major"   : "10"
         }
     },
     {
@@ -959,6 +979,16 @@
         }
     },
     {
+        "desc"    : "SeaMonkey on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1",
+        "expect"  :
+        {
+            "name"    : "SeaMonkey",
+            "version" : "2.7.1",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "Silk Browser",
         "ua"      : "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-84)",
         "expect"  :
@@ -1225,6 +1255,16 @@
         {
             "name"    : "Firefox",
             "version" : "1.1",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Firefox iOS using iPad",
+        "ua"      : "Mozilla/5.0 (iPad; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "1.0",
             "major"   : "1"
         }
     },

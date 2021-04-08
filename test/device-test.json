@@ -2442,5 +2442,77 @@
         "model": "V1916A",
         "type": "mobile"
     }
+  },
+  {
+    "desc": "Unknown Mobile using Firefox",
+    "ua": "Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Unknown Tablet using Firefox",
+    "ua": "Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "tablet"
+    }
+  },
+  {
+    "desc": "Unknown Mobile using Focus for Android",
+    "ua": "Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Unknown Tablet using Focus for Android",
+    "ua": "Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Safari/537.36",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "tablet"
+    }
+  },
+  {
+    "desc": "Unknown Device using Focus for Android with GeckoView",
+    "ua": "Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Unknown Mobile using Firefox OS",
+    "ua": "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "mobile"
+    }
+  },
+  {
+    "desc": "Unknown Tablet using Firefox OS",
+    "ua": "Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "tablet"
+    }
+  },
+  {
+    "desc": "Unknown TV using Firefox OS",
+    "ua": "Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "smarttv"
+    }
   }
 ]

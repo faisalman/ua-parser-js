@@ -80,6 +80,14 @@
         }
     },
     {
+        "desc"    : "Nokia N900 Linux mobile",
+        "ua"      : "Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0) Gecko/20100101 Firefox/10.0 Fennec/10.0",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
         "desc"    : "ARMEABI",
         "ua"      : "[FBAN/FB4A;FBAV/237.0.0.44.120;FBBV/170693408;FBDM/{density=1.75,width=720,height=1280};FBLC/en_US;FBRV/172067074;FBCR/ ;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S367VL;FBSV/9;FBBK/1;FBOP/19;FBCA/armeabi-v7a:armeabi;]",
         "expect"  :
@@ -130,6 +138,14 @@
     {
         "desc"    : "Mac PowerPC",
         "ua"      : "iCab/2.9.5 (Macintosh; U; PPC; Mac OS X)",
+        "expect"  :
+        {
+            "architecture"  : "ppc"
+        }
+    },
+    {
+        "desc"    : "Mac OS X on PowerPC using Firefox",
+        "ua"      : "Mozilla/5.0 (Macintosh; PPC Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
         "expect"  :
         {
             "architecture"  : "ppc"
