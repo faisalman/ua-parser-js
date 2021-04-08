@@ -15,7 +15,7 @@
 JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
 
 * Author    : Faisal Salman <<f@faisalman.com>>
-* Demo      : http://faisalman.github.io/ua-parser-js
+* Demo      : https://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
 # Documentation
