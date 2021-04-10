@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="keywords" content="browser detection, user-agent, javascript, detect os, detect mobile tablet, detect device, detect cpu" />
-  <title>UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment. </title>
+  <meta name="keywords" content="browser detection, user-agent, javascript, detect os, detect mobile tablet, detect device, detect cpu, javascript, nodejs, jquery, typescript" />
+  <title>UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data using JavaScript. Supports browser & node.js environment. Available as jQuery plugin & @types-ready for TypeScript library.</title>
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="semantic-ui/semantic.js"></script>
   <script src="js/clipboard.min.js"></script>
-  <script src="src/ua-parser.js"></script>
+  <script src="js/ua-parser.js"></script>
   <script src="js/ua-list-example.js"></script>
   <script src="js/script.js"></script>
 </head>
@@ -23,7 +23,7 @@
       <h1 class="ui inverted header">
         What <span class="ui massive black label">device.type</span> am I using?
       </h1>
-      <h2><a href="https://faisalman.github.io/ua-parser-js">{UAParser.js}</a> abstracts away the hassle of User-Agent by extracting them into a set of simple & meaningful data so you can focus on what really matters.</h2>
+      <h2><a href="https://faisalman.github.io/ua-parser-js">{UAParser.js}</a> abstracts away the hassle of User-Agent detection by turning them into a set of simple & meaningful data so you can focus on what really matters.</h2>
       <div class="ui large buttons">
       <a class="ui labeled icon violet button" href="https://github.com/faisalman/ua-parser-js" target="_blank">
         <i class="download icon"></i>
@@ -357,14 +357,6 @@
               </div>
             </div>
             <div class="column">
-              <img src="images/companies/tumblr.png"/>
-              <div class="ui popup">
-                <div class="ui labeled icon small buttons">
-                  <a href="https://www.tumblr.com/policy/en/web-credits" target="_blank" class="ui teal button"><i class="tumblr icon"></i>Web & Mobile App</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
               <img src="images/companies/shopify.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
@@ -377,6 +369,15 @@
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
                   <a href="https://github.com/amplitude/Amplitude-JavaScript" target="_blank" class="ui blue button"><i class="github icon"></i>JavaScript SDK</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/apple.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://music.apple.com/" target="_blank" class="ui black button"><i class="music icon"></i>Apple Music Website</a>
+                  <a href="https://tv.apple.com/" target="_blank" class="ui grey button"><i class="tv icon"></i>Apple TV Website</a>
                 </div>
               </div>
             </div>
@@ -483,10 +484,10 @@
           </div>
           <div class="row">
             <div class="column">
-              <img src="images/companies/postman.png"/>
+              <img src="images/companies/scribd.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://www.postman.com/explore" target="_blank" class="ui orange button"><i class="fighter jet icon"></i>Website</a>
+                  <a href="https://www.scribd.com/" target="_blank" class="ui green button"><i class="scribd icon"></i>Website</a>
                 </div>
               </div>
             </div>
@@ -495,14 +496,6 @@
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
                   <a href="https://www.zendesk.com/" target="_blank" class="ui green button"><i class="life ring icon"></i>Support Desk</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <img src="images/companies/verizon.png"/>
-              <div class="ui popup">
-                <div class="ui labeled icon small buttons">
-                  <a href="https://www.verizon.com/supportresources/content/dam/verizon/support/consumer/documents/ftw-open-source-licenses190228.pdf" target="_blank" class="ui red button"><i class="tv icon"></i>Fios TV</a>
                 </div>
               </div>
             </div>
@@ -523,6 +516,14 @@
               </div>
             </div>
             <div class="column">
+              <img src="images/companies/tumblr.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.tumblr.com/policy/en/web-credits" target="_blank" class="ui teal button"><i class="tumblr icon"></i>Web & Mobile App</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
               <img src="images/companies/pinterest.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
@@ -533,10 +534,27 @@
           </div>
           <div class="row">
             <div class="column">
-              <img src="images/companies/scribd.png"/>
+              <img src="images/companies/uber.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://www.scribd.com/" target="_blank" class="ui green button"><i class="scribd icon"></i>Website</a>
+                  <a href="https://www.uber.com/a/join-new" target="_blank" class="ui black button"><i class="car icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/disney.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.disneyplus.com" target="_blank" class="ui blue button"><i class="tv icon"></i>Disney+ Website</a>
+                  <a href="https://www.nationalgeographic.com/" target="_blank" class="ui yellow button"><i class="square outline icon"></i>National Geographic Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/livescore.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.livescore.com/" target="_blank" class="ui orange button"><i class="futbol outline icon"></i>Website</a>
                 </div>
               </div>
             </div>
@@ -560,7 +578,41 @@
               <img src="images/companies/expedia.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://www.expedia.com/" target="_blank" class="ui blue button"><i class="plane icon"></i>Web-based App</a>
+                  <a href="https://www.expedia.com/" target="_blank" class="ui blue button"><i class="fighter jet icon"></i>Web-based App</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="images/companies/line.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://line.me" target="_blank" class="ui green button"><i class="chat icon"></i>LINE Messenger</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/olx.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.olx.com/" target="_blank" class="ui blue button"><i class="circle outline icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/grab.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://food.grab.com" target="_blank" class="ui green button"><i class="utensils icon"></i>GrabFood Web</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/traveloka.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.traveloka.com" target="_blank" class="ui blue button"><i class="plane icon"></i>Web-based App</a>
                 </div>
               </div>
             </div>
@@ -576,12 +628,21 @@
               <img src="images/companies/bukalapak.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://bukalapak.com/" target="_blank" class="ui red button"><i class="shopping basket icon"></i>Web-based App</a>
+                  <a href="https://bukalapak.com/" target="_blank" class="ui red button"><i class="blogger b icon"></i>Web-based App</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
+            <div class="column">
+              <img src="images/companies/jetbrains.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.jetbrains.com/help/hub/third-party-software.html" target="_blank" class="ui yellow button"><i class="cube icon"></i>Hub</a>
+                  <a href="https://www.jetbrains.com/idea/download/" target="_blank" class="ui pink button"><i class="cube icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
             <div class="column">
               <img src="images/companies/here.png"/>
               <div class="ui popup">
@@ -591,13 +652,39 @@
               </div>
             </div>
             <div class="column">
-              <img src="images/companies/jetbrains.png"/>
+              <img src="images/companies/postman.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://www.jetbrains.com/help/hub/third-party-software.html" target="_blank" class="ui black button"><i class="cube icon"></i>Hub</a>
+                  <a href="https://www.postman.com/explore" target="_blank" class="ui orange button"><i class="fighter jet icon"></i>Website</a>
                 </div>
               </div>
             </div>
+            <div class="column">
+              <img src="images/companies/intuit.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://myturbotax.intuit.com/" target="_blank" class="ui blue button"><i class="user icon"></i>Web & Mobile Platform</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/neo4j.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://neo4j.com/terms/thirdpartylicenses/bloom/" target="_blank" class="ui blue button"><i class="spinner icon"></i>Neo4j Bloom</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/mongodb.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://docs.mongodb.com/charts/master/third-party-licenses/" target="_blank" class="ui green button"><i class="leaf icon"></i>MongoDB Charts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
             <div class="column">
               <img src="images/companies/dell.png"/>
               <div class="ui popup">
@@ -631,18 +718,18 @@
               </div>
             </div>
             <div class="column">
-              <img src="images/companies/neo4j.png"/>
+              <img src="images/companies/hpe.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://neo4j.com/terms/thirdpartylicenses/bloom/" target="_blank" class="ui blue button"><i class="spinner icon"></i>Neo4j Bloom</a>
+                  <a href="https://www.hpe.com/content/dam/hpe/download/pdf/Software/HPE%20OVGD%20v1.40%20ALA.pdf" target="_blank" class="ui green button"><i class="square outline icon"></i>OneView Global Dashboard</a>
                 </div>
               </div>
             </div>
             <div class="column">
-              <img src="images/companies/mongodb.png"/>
+              <img src="images/companies/verizon.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
-                  <a href="https://docs.mongodb.com/charts/master/third-party-licenses/" target="_blank" class="ui green button"><i class="leaf icon"></i>MongoDB Charts</a>
+                  <a href="https://www.verizon.com/supportresources/content/dam/verizon/support/consumer/documents/ftw-open-source-licenses190228.pdf" target="_blank" class="ui red button"><i class="tv icon"></i>Fios TV</a>
                 </div>
               </div>
             </div>
