@@ -1154,8 +1154,8 @@
         "expect"  :
         {
             "name"    : "Edge",
-            "version" : "0.1",
-            "major"   : "0"
+            "version" : "12.0",
+            "major"   : "12"
         }
     },
     {
@@ -1164,8 +1164,8 @@
         "expect"  :
         {
             "name"    : "Edge",
-            "version" : "42",
-            "major"   : "42"
+            "version" : "17.17134",
+            "major"   : "17"
         }
     },
     {
@@ -1174,8 +1174,8 @@
         "expect"  :
         {
             "name"    : "Edge",
-            "version" : "44",
-            "major"   : "44"
+            "version" : "18.17763",
+            "major"   : "18"
         }
     },
     {
