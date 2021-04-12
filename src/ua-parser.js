@@ -333,12 +333,9 @@
             /(mozilla)\/([\w\.]+)\s.+rv\:.+gecko\/\d+/i,                        // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir)[\/\s]?([\w\.]+)/i,
-                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir
-            /(links) \(([\w\.]+)/i,                                            // Links
-            /(gobrowser)\/?([\w\.]*)/i,                                         // GoBrowser
-            /(ice\s?browser)\/v?([\w\._]+)/i,                                   // ICE Browser
-            /(mosaic)[\/\s]([\w\.]+)/i                                          // Mosaic
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\s\.]?browser)[\/\s-]?v?([\w\.]+)/i,
+                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir/Obigo/Mosaic/Go/ICE/UP.Browser
+            /(links) \(([\w\.]+)/i                                              // Links
             ], [NAME, VERSION]
         ],
 

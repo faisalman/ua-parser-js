@@ -43,12 +43,12 @@ Firefox [Reality], Flock, Flow, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceAp
 IceCat, IceDragon, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon,
 Kindle, Klar, Konqueror, LBBROWSER, Line, Links, Lunascape, Lynx, MIUI Browser,
 Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic,
-Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser,
+Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser,
 OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, 
 Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
 Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, Vivaldi, Waterfox, WeChat,
-Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
+SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Vivaldi, 
+Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```

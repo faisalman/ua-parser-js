@@ -769,6 +769,26 @@
         }
     },
     {
+        "desc"    : "Obigo",
+        "ua"      : "LG-GS290/V100 Obigo/WAP2.0 Profile/MIDP-2.1 Configuration/CLDC-1.1",
+        "expect"  :
+        {
+            "name"    : "Obigo",
+            "version" : "WAP2.0",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Obigo",
+        "ua"      : "LG/KU990i/v10a Browser/Obigo-Q05A/3.6 MMS/LG-MMS-V1.0/1.2 Java/ASVM/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+        "expect"  :
+        {
+            "name"    : "Obigo",
+            "version" : "Q05A",
+            "major"   : "05"
+        }
+    },
+    {
         "desc"    : "Oculus Browser",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G920I Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/3.4.9 SamsungBrowser/4.0 Chrome/57.0.2987.146 Mobile VR Safari/537.36",
         "expect"  :
@@ -1126,6 +1146,16 @@
             "name"    : "UCBrowser",
             "version" : "7.9.0.94",
             "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "UPBrowser",
+        "ua"      : "BenQ-CF61/1.00/WAP2.0/MIDP2.0/CLDC1.0 UP.Browser/6.3.0.4.c.1.102 (GUI) MMP/2.0",
+        "expect"  :
+        {
+            "name"    : "UP.Browser",
+            "version" : "6.3.0.4.c.1.102",
+            "major"   : "6"
         }
     },
     {
