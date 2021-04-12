@@ -701,7 +701,7 @@
             /cfnetwork\/.+darwin/i
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x)\s?([\w\s\.]*)/i,
-            /(macintosh|mac(?=_powerpc) )(?!.+haiku)/i                          // Mac OS
+            /(macintosh|mac_powerpc\b)(?!.+haiku)/i                         // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
             // Mobile OSes                                                      // Android/WebOS/Palm/QNX/Bada/RIM/Maemo/MeeGo/Contiki/Sailfish OS

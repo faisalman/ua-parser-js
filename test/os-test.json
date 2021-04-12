@@ -729,6 +729,15 @@
         }
     },
     {
+        "desc"    : "Mac OS on PowerPC",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 5.0b1; Mac_PowerPC)",
+        "expect"  :
+        {
+            "name"    : "Mac OS",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "Mac OS X on x86, x86_64, or aarch64 using Firefox",
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
         "expect"  :
