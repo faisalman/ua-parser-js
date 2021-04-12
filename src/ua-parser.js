@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v0.7.27
+/* UAParser.js v0.7.28
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -16,7 +16,8 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '0.7.27',
+
+    var LIBVERSION  = '0.7.28',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -213,11 +214,12 @@
         browser : [[
 
             /\b(?:crmo|crios)\/([\w\.]+)/i                                      // Chrome for Android/iOS
-            ], [VERSION, [NAME, CHROME]], [
-            /(?:edgios|edga|edg)\/([\w\.]+)/i                                   // Microsoft Edge
-            ], [VERSION, [NAME, EDGE]], [
-            /edge\/([\w\.]+)/i                                                  // Old Edge (Trident)
-            ], [[VERSION, strMapper, oldEdgeMap], [NAME, EDGE]], [
+            ], [VERSION, [NAME, 'Chrome']], [
+            /edg(?:e|ios|a)?\/([\w\.]+)/i                                       // Microsoft Edge
+            ], [VERSION, [NAME, 'Edge']], [
+            // breaking change (reserved for next major release):
+            ///edge\/([\w\.]+)/i                                                  // Old Edge (Trident)
+            //], [[VERSION, mapper.str, maps.browser.oldEdge.version], [NAME, 'Edge']], [
 
             // Presto based
             /(opera mini)\/([\w\.-]+)/i,                                        // Opera Mini
