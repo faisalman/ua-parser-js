@@ -690,8 +690,8 @@
             /microsoft (windows) (vista|xp)/i                                   // Windows (iTunes)
             ], [NAME, VERSION], [
             /(windows) nt 6\.2; (arm)/i,                                        // Windows RT
-            /(windows phone(?: os)*)[\s\/]?([\d\.\s\w]*)/i,                     // Windows Phone
-            /(windows mobile|windows)[\s\/]?([ntce\d\.\s]+[\w\.]+)(?!.+xbox)/i
+            /(windows (?:phone(?: os)?|mobile))[\s\/]?([\d\.\s\w]*)/i,          // Windows Phone
+            /(windows)[\s\/]?([ntce\d\.\s]+\w)(?!.+xbox)/i
             ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
             /(win(?=3|9|n)|win 9x )([nt\d\.]+)/i
             ], [[NAME, 'Windows'], [VERSION, strMapper, windowsVersionMap]], [
