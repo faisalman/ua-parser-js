@@ -749,7 +749,7 @@
             ], [[NAME, 'Solaris'], VERSION], [
             /((?:open)?solaris)[\/\s-]?([\w\.]*)/i,                             // Solaris
             /(aix) ((\d)(?=\.|\)|\s)[\w\.])*/i,                                 // AIX
-            /(plan 9|minix|beos|os\/2|amigaos|morphos|risc os|openvms|fuchsia)/i,  // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS/Fuchsia
+            /(plan 9|minix|beos|os\/2|amigaos|morphos|risc os|openvms|fuchsia|hp-ux)/i, // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS/Fuchsia/HP-UX
             /(unix)\s?([\w\.]*)/i                                               // UNIX
             ], [NAME, VERSION]
         ]

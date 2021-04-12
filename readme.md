@@ -88,9 +88,9 @@ NetSurf, Presto, Tasman, Trident, w3m, WebKit
 # Possible 'os.name'
 AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
 Contiki, Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Fuchsia, Gentoo, GNU,
-Haiku, Hurd, iOS, Joli, KaiOS, Linpus, Linux, Mac OS, Maemo, Mageia, Mandriva, 
-MeeGo, Minix, Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, 
-PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, 
+Haiku, HP-UX, Hurd, iOS, Joli, KaiOS, Linpus, Linux, Mac OS, Maemo, Mageia, 
+Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, 
+Palm, PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, 
 RISC OS, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, 
 Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
