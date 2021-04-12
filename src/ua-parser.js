@@ -659,7 +659,7 @@
             ], [MODEL, [TYPE, TABLET]], [
             /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i,                     // Unidentifiable Tablet
             ], [[TYPE, TABLET]], [
-            /(phone|mobile(?:[;\/]| safari))/i                                  // Unidentifiable Mobile
+            /(phone|mobile(?:[;\/]| safari)|pda(?=.+windows ce))/i              // Unidentifiable Mobile
             ], [[TYPE, MOBILE]], [
             /(android[\w\.\s\-]{0,9});.+buil/i                                  // Generic Android Device
             ], [MODEL, [VENDOR, 'Generic']]

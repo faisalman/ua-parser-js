@@ -2514,5 +2514,14 @@
         "model": "undefined",
         "type": "smarttv"
     }
+  },
+  {
+    "desc": "PDA with Windows CE",
+    "ua": "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "mobile"
+    }
   }
 ]
