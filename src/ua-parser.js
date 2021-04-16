@@ -704,8 +704,8 @@
             /(macintosh|mac_powerpc\b)(?!.+haiku)/i                         // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
-            // Mobile OSes                                                      // Android/WebOS/Palm/QNX/Bada/RIM/Maemo/MeeGo/Contiki/Sailfish OS
-            /(android|webos|palm os|qnx|bada|rim tablet os|maemo|meego|sailfish|contiki)[\/\s-]?([\w\.]*)/i,
+            // Mobile OSes                                                      // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS
+            /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[\/\s-]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,                                      // Blackberry
             /(tizen|kaios)[\/\s]([\w\.]+)/i,                                    // Tizen/KaiOS
             /\((series40);/i                                                    // Series 40
@@ -730,26 +730,22 @@
             /(nintendo|playstation) ([wids345portablevuch]+)/i,                 // Nintendo/Playstation
             /(xbox);\s+xbox ([^\);]+)/i,                                        // Microsoft Xbox (360, One, X, S, Series X, Series S)
 
-            // GNU/Linux based
+            // Other
+            /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i,                            // Joli/Palm
             /(mint)[\/\s\(\)]?(\w*)/i,                                          // Mint
             /(mageia|vectorlinux)[;\s]/i,                                       // Mageia/VectorLinux
-            /(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus|raspbian)(?: gnu\/linux)?(?: linux)?[\/\s-]?(?!chrom|package)([\w\.-]*)/i,
-                                                                                // Joli/Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware
-                                                                                // Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus
+            /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki)(?: gnu\/linux)?(?: enterprise)?(?:[\s-]linux)?(?:-gnu)?[\/\s-]?(?!chrom|package)([\w\.-]*)/i,
+                                                                                // Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware/Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus/Raspbian/Plan9/Minix/RISCOS/Contiki
             /(hurd|linux)\s?([\w\.]*)/i,                                        // Hurd/Linux
             /(gnu)\s?([\w\.]*)/i,                                               // GNU
-
-            // BSD based
             /\b([frentopc-]{0,4}bsd|dragonfly)\s?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,  // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
             /(haiku)\s(\w+)/i                                                   // Haiku
             ], [NAME, VERSION], [
-
-            // Other
             /(sunos)\s?([\w\.\d]*)/i                                            // Solaris
             ], [[NAME, 'Solaris'], VERSION], [
             /((?:open)?solaris)[\/\s-]?([\w\.]*)/i,                             // Solaris
             /(aix) ((\d)(?=\.|\)|\s)[\w\.])*/i,                                 // AIX
-            /(plan 9|minix|beos|os\/2|amigaos|morphos|risc os|openvms|fuchsia|hp-ux)/i, // Plan9/Minix/BeOS/OS2/AmigaOS/MorphOS/RISCOS/OpenVMS/Fuchsia/HP-UX
+            /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux)/i,            // BeOS/OS2/AmigaOS/MorphOS/OpenVMS/Fuchsia/HP-UX
             /(unix)\s?([\w\.]*)/i                                               // UNIX
             ], [NAME, VERSION]
         ]

@@ -667,11 +667,11 @@
     },
     {
         "desc"    : "Solaris",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; SunOS sun4u; en-US; rv:1.7) Gecko/20070606",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Solaris",
+            "version" : "sun4u"
         }
     },
     {
@@ -703,11 +703,11 @@
     },
     {
         "desc"    : "DragonFly",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; DragonFly i386; de; rv:1.9.1) Gecko/20090720 Firefox/3.5.1",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "DragonFly",
+            "version" : "undefined"
         }
     },
     {
@@ -847,137 +847,173 @@
     },
     {
         "desc"    : "AIX",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; AIX 000138384C00; en-US; rv:1.0.1) Gecko/20030213 Netscape/7.0",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "AIX",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "Plan9",
-        "ua"      : "",
+        "ua"      : "NCSA_Mosaic/5.0 (X11;Plan 9 4.0)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Plan 9",
+            "version" : "4.0"
         }
     },
     {
         "desc"    : "Minix",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Original ; Minix 3.3 ; rv:3.0)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Minix",
+            "version" : "3.3"
         }
     },
     {
         "desc"    : "BeOS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (BeOS; U; BeOS BePC; en-US; rv:1.8.1.8pre) Gecko/20070926 SeaMonkey/1.1.5pre",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "BeOS",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "OS/2",
-        "ua"      : "",
+        "ua"      : "Links (2.1pre14; OS/2 1 i386; 80x33)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "OS/2",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "AmigaOS",
-        "ua"      : "",
+        "ua"      : "Mozilla/4.0 (compatible; AWEB 3.4 SE; AmigaOS)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "AmigaOS",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "MorphOS",
-        "ua"      : "",
+        "ua"      : "AmigaVoyager/3.4.4 (MorphOS/PPC native)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "MorphOS",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "UNIX",
-        "ua"      : "",
+        "ua"      : "Surf/0.4.1 (X11; U; Unix; en-US) AppleWebKit/531.2+ Compatible (Safari)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Unix",
+            "version" : "undefined"
         }
     },
     {
         "desc"    : "Joli",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Jolicloud Linux i686) AppleWebKit/537.6 (KHTML, like Gecko) Joli OS/1.2 Chromium/23.0.1240.0 Chrome/23.0.1240.0 Safari/537.6",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Joli",
+            "version" : "1.2"
         }
     },
     {
         "desc"    : "CentOS",
-        "ua"      : "",
+        "ua"      : "Konqueror/15.13 (CentOS Linux 7.4; cs-CZ;)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "CentOS",
+            "version" : "7.4"
         }
     },
     {
         "desc"    : "PCLinuxOS",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.13) Gecko/20101209 PCLinuxOS/1.9.2.13-1pclos2010 (2010) Firefox/3.6.13",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "PCLinuxOS",
+            "version" : "1.9.2.13-1pclos2010"
         }
     },
     {
         "desc"    : "RedHat",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/4.3; Linux) KHTML/4.3.4 (like Gecko) Red Hat Enterprise Linux/4.3.4-11.el6_1.4",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Red Hat",
+            "version" : "4.3.4-11.el6_1.4"
+        }
+    },
+    {
+        "desc"    : "RedHat",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.13pre) Gecko/20070717 Red Hat/1.0.9-4.el4 SeaMonkey/1.0.9",
+        "expect"  :
+        {
+            "name"    : "Red Hat",
+            "version" : "1.0.9-4.el4"
+        }
+    },
+    {
+        "desc"    : "RedHat",
+        "ua"      : "iTunes/4.7.1 (Linux; N; Red Hat; x86_64-linux; EN; utf8) SqueezeCenter, Squeezebox Server, Logitech Media Server/7.9.1/1522157629",
+        "expect"  :
+        {
+            "name"    : "Red Hat",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "RedHat",
+        "ua"      : "curl/7.20.0 (x86_64-redhat-linux-gnu) libcurl/7.20.0 OpenSSL/0.9.8b zlib/1.2.3 libidn/0.6.5",
+        "expect"  :
+        {
+            "name"    : "redhat",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "RISC OS",
+        "ua"      : "Mozilla/1.10 [en] (Compatible; RISC OS 3.70; Oregano 1.10)",
+        "expect"  :
+        {
+            "name"    : "RISC OS",
+            "version" : "3.70"
         }
     },
     {
         "desc"    : "Zenwalk",
-        "ua"      : "",
+        "ua"      : "Flock/2.16 (Zenwalk 7.3; es_PR;)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Zenwalk",
+            "version" : "7.3"
         }
     },
     {
         "desc"    : "Hurd",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Hurd 0.9 i386; en-US) libwww-FM/2.14 SSL-MM/1.4.1 GNUTLS/3.7.0 Safari/696.96",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Hurd",
+            "version" : "0.9"
         }
     },
     {
         "desc"    : "Linux",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Linux",
+            "version" : "x86_64"
         }
     },
     {
@@ -991,11 +1027,11 @@
     },
     {
         "desc"    : "Palm OS",
-        "ua"      : "",
+        "ua"      : "Mozilla/4.76 [en] (PalmOS; U; WebPro3.0; Palm-Arz1)",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Palm",
+            "version" : "undefined"
         }
     },
     {
@@ -1005,6 +1041,24 @@
         {
             "name"    : "HP-UX",
             "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Contiki",
+        "ua"      : "Contiki/1.0 (Commodore 64; http://dunkels.com/adam/contiki/)",
+        "expect"  :
+        {
+            "name"    : "Contiki",
+            "version" : "1.0"
+        }
+    },
+    {
+        "desc"    : "Linpus",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9b5pre) Gecko/2008032619 Linpus/3.0-0.49",
+        "expect"  :
+        {
+            "name"    : "Linpus",
+            "version" : "3.0-0.49"
         }
     }
 ]
