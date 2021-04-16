@@ -184,15 +184,6 @@
             '2.0.4' : '/419',
             '?'     : '/'
         },
-        oldEdgeMap = {
-            '0.1'   : '12.',
-            '21'    : '13.',
-            '31'    : '14.',
-            '39'    : '15.',
-            '41'    : '16.',
-            '42'    : '17.',
-            '44'    : '18.'
-        },
         windowsVersionMap = {
             'ME'        : '4.90',
             'NT 3.11'   : 'NT3.51',
@@ -219,9 +210,6 @@
             ], [VERSION, [NAME, 'Chrome']], [
             /edg(?:e|ios|a)?\/([\w\.]+)/i                                       // Microsoft Edge
             ], [VERSION, [NAME, 'Edge']], [
-            // breaking change (reserved for next major release):
-            ///edge\/([\w\.]+)/i                                                  // Old Edge (Trident)
-            //], [[VERSION, mapper.str, maps.browser.oldEdge.version], [NAME, 'Edge']], [
 
             // Presto based
             /(opera mini)\/([\w\.-]+)/i,                                        // Opera Mini
