@@ -91,7 +91,7 @@
         },
         trim = function (str, len) {
             if (typeof(str) === STR_TYPE) {
-                str = str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, EMPTY);
+                str = str.replace(/^\s+|\s+$/g, EMPTY);
                 return typeof(len) === UNDEF_TYPE ? str : str.substring(0, UA_MAX_LENGTH);
             }
     };
@@ -212,29 +212,29 @@
             ], [VERSION, [NAME, 'Edge']], [
 
             // Presto based
-            /(opera mini)\/([\w\.-]+)/i,                                        // Opera Mini
-            /(opera [mobiletab]{3,6})\b.+version\/([\w\.-]+)/i,                 // Opera Mobi/Tablet
-            /(opera)(?:.+version\/|[\/\s]+)([\w\.]+)/i,                         // Opera
+            /(opera mini)\/([-\w\.]+)/i,                                        // Opera Mini
+            /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,                 // Opera Mobi/Tablet
+            /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,                          // Opera
             ], [NAME, VERSION], [
-            /opios[\/\s]+([\w\.]+)/i                                            // Opera mini on iphone >= 8.0
+            /opios[\/ ]+([\w\.]+)/i                                             // Opera mini on iphone >= 8.0
             ], [VERSION, [NAME, OPERA+' Mini']], [
             /\bopr\/([\w\.]+)/i                                                 // Opera Webkit
             ], [VERSION, [NAME, OPERA]], [
 
             // Mixed
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i,     // Lunascape/Maxthon/Netfront/Jasmine/Blazer
+            /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
             // Trident based
-            /(avant |iemobile|slim)(?:browser)?[\/\s]?([\w\.]*)/i,              // Avant/IEMobile/SlimBrowser
-            /(ba?idubrowser)[\/\s]?([\w\.]+)/i,                                 // Baidu Browser
+            /(avant |iemobile|slim)(?:browser)?[\/ ]?([\w\.]*)/i,               // Avant/IEMobile/SlimBrowser
+            /(ba?idubrowser)[\/ ]?([\w\.]+)/i,                                  // Baidu Browser
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale|qqbrowserlite|qq)\/([\w\.-]+)/i,
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale|qqbrowserlite|qq)\/([-\w\.]+)/i,
                                                                                 // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ, aka ShouQ
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
-            /(?:\buc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i               // UCBrowser
+            /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
             ], [VERSION, [NAME, 'UC'+BROWSER]], [
             /\bqbcore\/([\w\.]+)/i                                              // WeChat Desktop for Windows Built-in Browser
             ], [VERSION, [NAME, 'WeChat(Win) Desktop']], [
@@ -242,7 +242,7 @@
             ], [VERSION, [NAME, 'WeChat']], [
             /konqueror\/([\w\.]+)/i                                             // Konqueror
             ], [VERSION, [NAME, 'Konqueror']], [
-            /trident.+rv[:\s]([\w\.]{1,9})\b.+like gecko/i                      // IE11
+            /trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i                       // IE11
             ], [VERSION, [NAME, 'IE']], [
             /yabrowser\/([\w\.]+)/i                                             // Yandex
             ], [VERSION, [NAME, 'Yandex']], [
@@ -260,7 +260,7 @@
             ], [VERSION, [NAME, OPERA+' Coast']], [
             /miuibrowser\/([\w\.]+)/i                                           // MIUI Browser
             ], [VERSION, [NAME, 'MIUI '+BROWSER]], [
-            /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
+            /fxios\/([-\w\.]+)/i                                                // Firefox for iOS
             ], [VERSION, [NAME, FIREFOX]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
             ], [[NAME, '360 '+BROWSER]], [
@@ -269,10 +269,10 @@
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
-            /(tesla)(?:\sqtcarbrowser|\/(20\d\d\.[\w\.-]+))/i,                  // Tesla
-            /m?(qqbrowser|baiduboxapp|2345Explorer)[\/\s]?([\w\.]+)/i           // QQBrowser/Baidu App/2345 Browser
+            /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
+            /m?(qqbrowser|baiduboxapp|2345Explorer)[\/ ]?([\w\.]+)/i            // QQBrowser/Baidu App/2345 Browser
             ], [NAME, VERSION], [
-            /(metasr)[\/\s]?([\w\.]+)/i,                                        // SouGouBrowser
+            /(metasr)[\/ ]?([\w\.]+)/i,                                         // SouGouBrowser
             /(lbbrowser)/i                                                      // LieBao Browser
             ], [NAME], [
 
@@ -281,49 +281,49 @@
             ], [[NAME, 'Facebook'], VERSION], [
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
-            /(chromium|instagram)[\/\s]([\w\.-]+)/i                             // Chromium/Instagram
+            /(chromium|instagram)[\/ ]([-\w\.]+)/i                              // Chromium/Instagram
             ], [NAME, VERSION], [
-            /\bgsa\/([\w\.]+)\s.*safari\//i                                     // Google Search Appliance on iOS
+            /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
 
-            /headlesschrome(?:\/([\w\.]+)|\s)/i                                 // Chrome Headless
+            /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
 
-            /\swv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
+            / wv\).+(chrome)\/([\w\.]+)/i                                       // Chrome WebView
             ], [[NAME, CHROME+' WebView'], VERSION], [
 
-            /droid.+\sversion\/([\w\.]+)\b.+(?:mobile safari|safari)/i          // Android Browser
+            /droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i           // Android Browser
             ], [VERSION, [NAME, 'Android '+BROWSER]], [
 
-            /(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i      // Chrome/OmniWeb/Arora/Tizen/Nokia
+            /(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i       // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [
 
-            /version\/([\w\.]+)\s.*mobile\/\w+\s(safari)/i                      // Mobile Safari
+            /version\/([\w\.]+) .*mobile\/\w+ (safari)/i                        // Mobile Safari
             ], [VERSION, [NAME, 'Mobile Safari']], [
-            /version\/([\w\.]+)\s.*(mobile\s?safari|safari)/i                   // Safari & Safari Mobile
+            /version\/([\w\.]+) .*(mobile ?safari|safari)/i                     // Safari & Safari Mobile
             ], [VERSION, NAME], [
-            /webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i                     // Safari < 3.0
+            /webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i                      // Safari < 3.0
             ], [NAME, [VERSION, strMapper, oldSafariMap]], [
 
             /(webkit|khtml)\/([\w\.]+)/i
             ], [NAME, VERSION], [
 
             // Gecko based
-            /(navigator|netscape\d?)\/([\w\.-]+)/i                              // Netscape
+            /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
             ], [VERSION, [NAME, FIREFOX+' Reality']], [
             /ekiohf.+(flow)\/([\w\.]+)/i,                                       // Flow
             /(swiftfox)/i,                                                      // Swiftfox
-            /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/\s]?([\w\.\+]+)/i,
+            /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/ ]?([\w\.\+]+)/i,
                                                                                 // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror/Klar
-            /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([\w\.-]+)$/i,
+            /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(firefox)\/([\w\.]+)/i,                                            // Other Firefox-based
-            /(mozilla)\/([\w\.]+)\s.+rv\:.+gecko\/\d+/i,                        // Mozilla
+            /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i,                         // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\s\.]?browser)[\/\s-]?v?([\w\.]+)/i,
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
                                                                                 // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir/Obigo/Mosaic/Go/ICE/UP.Browser
             /(links) \(([\w\.]+)/i                                              // Links
             ], [NAME, VERSION]
@@ -331,7 +331,7 @@
 
         cpu : [[
 
-            /(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i                     // AMD64 (x64)
+            /(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i                     // AMD64 (x64)
             ], [[ARCHITECTURE, 'amd64']], [
 
             /(ia32(?=;))/i                                                      // IA32 (quicktime)
@@ -347,10 +347,10 @@
             ], [[ARCHITECTURE, 'armhf']], [
 
             // PocketPC mistakenly identified as PowerPC
-            /windows\s(ce|mobile); ppc;/i
+            /windows (ce|mobile); ppc;/i
             ], [[ARCHITECTURE, 'arm']], [
 
-            /((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i                           // PowerPC
+            /((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i                            // PowerPC
             ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
 
             /(sun4\w)[;\)]/i                                                    // SPARC
@@ -372,14 +372,14 @@
             /\b(sch-i[89]0\d|shw-m380s|sm-[pt]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, TABLET]], [
             /\b((?:s[cgp]h|gt|sm)-\w+|galaxy nexus)/i,
-            /samsung[\s-]([\w-]+)/i,
+            /samsung[- ]([-\w]+)/i,
             /sec-(sgh\w+)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, MOBILE]], [
 
             // Apple
-            /\((ip(?:hone|od)[\s\w]*);/i                                        // iPod/iPhone
+            /\((ip(?:hone|od)[\w ]*);/i                                         // iPod/iPhone
             ], [MODEL, [VENDOR, APPLE], [TYPE, MOBILE]], [
-            /\((ipad);[\w\s\),;-]+apple/i,                                      // iPad
+            /\((ipad);[-\w\),; ]+apple/i,                                       // iPad
             /applecoremedia\/[\w\.]+ \((ipad)/i,
             /\b(ipad)\d\d?,\d\d?[;\]].+ios/i
             ], [MODEL, [VENDOR, APPLE], [TYPE, TABLET]], [
@@ -387,19 +387,19 @@
             // Huawei
             /\b((?:agr|ags[23]|bah2?|sht?)-a?[lw]\d{2})/i,
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
-            /huawei([\w\s-]+)[;\)]/i,
+            /huawei([-\w ]+)[;\)]/i,
             /\b(nexus 6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?|ele-l\d\d)/i,
-            /\b(\w{2,4}-[atu][ln][01259][019])[;\)\s]/i
+            /\b(\w{2,4}-[atu][ln][01259][019])[;\) ]/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
             // Xiaomi
-            /\b(poco[\s\w]+)(?: bui|\))/i,                                      // Xiaomi POCO
-            /\b;\s(\w+) build\/hm\1/i,                                          // Xiaomi Hongmi 'numeric' models
-            /\b(hm[\s\-_]?note?[\s_]?(?:\d\w)?) bui/i,                          // Xiaomi Hongmi
-            /\b(redmi[\s\-_]?(?:note|k)?[\w\s_]+)(?: bui|\))/i,                 // Xiaomi Redmi
-            /\b(mi[\s\-_]?(?:a\d|one|one[\s_]plus|note lte)?[\s_]?(?:\d?\w?)[\s_]?(?:plus)?) bui/i  // Xiaomi Mi
+            /\b(poco[\w ]+)(?: bui|\))/i,                                       // Xiaomi POCO
+            /\b; (\w+) build\/hm\1/i,                                           // Xiaomi Hongmi 'numeric' models
+            /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,                            // Xiaomi Hongmi
+            /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,                   // Xiaomi Redmi
+            /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte)?[_ ]?(?:\d?\w?)[_ ]?(?:plus)?) bui/i // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
-            /\b(mi[\s\-_]?(?:pad)(?:[\w\s_]+))(?: bui|\))/i                     // Mi Pad tablets
+            /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i                       // Mi Pad tablets
             ],[[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, TABLET]], [
 
             // OPPO
@@ -417,48 +417,48 @@
             ], [MODEL, [VENDOR, 'Realme'], [TYPE, MOBILE]], [
 
             // Motorola
-            /\b(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w\s]+build\//i,
-            /\bmot(?:orola)?[\s-](\w*)/i,
-            /((?:moto[\s\w\(\)]+|xt\d{3,4}|nexus\s6)(?= bui|\)))/i
+            /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
+            /\bmot(?:orola)?[- ](\w*)/i,
+            /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, MOBILE]], [
-            /\b(mz60\d|xoom[\s2]{0,2}) build\//i
+            /\b(mz60\d|xoom[2 ]{0,2}) build\//i
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, TABLET]], [
 
             // LG
-            /((?=lg)?[vl]k\-?\d{3})\sbui|\s3\.[\s\w;-]{10}lg?-([06cv9]{3,4})/i
+            /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
-            /(lm-?f100[nv]?|nexus\s[45])/i,
-            /\blg[e;\s\/-]+((?!browser|netcast)\w+)/i,
-            /\blg(\-?[\d\w]+)\sbui/i
+            /(lm-?f100[nv]?|nexus [45])/i,
+            /\blg[-e;\/ ]+((?!browser|netcast)\w+)/i,
+            /\blg(\-?[\d\w]+) bui/i
             ], [MODEL, [VENDOR, LG], [TYPE, MOBILE]], [
 
             // Lenovo
-            /(ideatab[\w\-\s]+)/i,
-            /lenovo\s?(s[56]000[\w-]+|tab(?:[\s\w]+)|yt[\d\w-]{6}|tb[\d\w-]{6})/i
+            /(ideatab[-\w ]+)/i,
+            /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i
             ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
 
             // Nokia
             /(?:maemo|nokia).*(n900|lumia \d+)/i,
-            /nokia[\s_-]?([\w\.-]*)/i
+            /nokia[-_ ]?([-\w\.]*)/i
             ], [[MODEL, /_/g, ' '], [VENDOR, 'Nokia'], [TYPE, MOBILE]], [
 
             // Google
             /(pixel c)\b/i                                                      // Google Pixel C
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, TABLET]], [
-            /droid.+; (pixel[\s\daxl]{0,6})(?: bui|\))/i                        // Google Pixel
+            /droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i                         // Google Pixel
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, MOBILE]], [
 
             // Sony
-            /droid.+\s([c-g]\d{4}|so[-l]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
+            /droid.+ ([c-g]\d{4}|so[-l]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
             ], [MODEL, [VENDOR, SONY], [TYPE, MOBILE]], [
             /sony tablet [ps]/i,
             /\b(?:sony)?sgp\w+(?: bui|\))/i
             ], [[MODEL, 'Xperia Tablet'], [VENDOR, SONY], [TYPE, TABLET]], [
 
             // OnePlus
-            /\s(kb2005|in20[12]5|be20[12][59])\b/i,
+            / (kb2005|in20[12]5|be20[12][59])\b/i,
             /\ba000(1) bui/i,
-            /oneplus (a\d{4})[\s)]/i
+            /oneplus (a\d{4})[) ]/i
             ], [MODEL, [VENDOR, 'OnePlus'], [TYPE, MOBILE]], [
 
             // Amazon
@@ -470,26 +470,26 @@
             ], [[MODEL, /(.+)/g, 'Fire Phone $1'], [VENDOR, AMAZON], [TYPE, MOBILE]], [
 
             // BlackBerry
-            /(playbook);[\w\s\),;-]+(rim)/i                                     // BlackBerry PlayBook
+            /(playbook);[-\w\),; ]+(rim)/i                                      // BlackBerry PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
             /\b((?:bb[a-f]|st[hv])100-\d)/i,
-            /\(bb10;\s(\w+)/i                                                   // BlackBerry 10
+            /\(bb10; (\w+)/i                                                    // BlackBerry 10
             ], [MODEL, [VENDOR, BLACKBERRY], [TYPE, MOBILE]], [
 
             // Asus
-            /(?:\b|asus_)(transfo[prime\s]{4,10}\s\w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i
+            /(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i
             ], [MODEL, [VENDOR, ASUS], [TYPE, TABLET]], [
-            /\s(z[es]6[027][01][km][ls]|zenfone \d\w?)\b/i
+            / (z[es]6[027][01][km][ls]|zenfone \d\w?)\b/i
             ], [MODEL, [VENDOR, ASUS], [TYPE, MOBILE]], [
 
             // HTC
             /(nexus 9)/i                                                        // HTC Nexus 9
             ], [MODEL, [VENDOR, 'HTC'], [TYPE, TABLET]], [
-            /(htc)[;_\s-]{1,2}([\w\s]+(?=\)| bui)|\w+)/i,                       // HTC
+            /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,                         // HTC
 
             // ZTE
             /(zte)-(\w*)/i,
-            /(alcatel|geeksphone|nexian|panasonic|sony)[_\s-]?([\w-]*)/i        // Alcatel/GeeksPhone/Nexian/Panasonic/Sony
+            /(alcatel|geeksphone|nexian|panasonic|sony)[-_ ]?([-\w]*)/i         // Alcatel/GeeksPhone/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
             // Acer
@@ -498,34 +498,34 @@
 
             // Meizu
             /droid.+; (m[1-5] note) bui/i,
-            /\bmz-([\w-]{2,})/i
+            /\bmz-([-\w]{2,})/i
             ], [MODEL, [VENDOR, 'Meizu'], [TYPE, MOBILE]], [
 
             // MIXED
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[\s_-]?([\w-]*)/i,
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[-_ ]?([-\w]*)/i,
                                                                                 // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron
-            /(hp)\s([\w\s]+\w)/i,                                               // HP iPAQ
+            /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(asus)-?(\w+)/i,                                                   // Asus
-            /(microsoft); (lumia[\s\w]+)/i,                                     // Microsoft Lumia
-            /(lenovo)[_\s-]?([\w-]+)/i,                                         // Lenovo
+            /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
+            /(lenovo)[-_ ]?([-\w]+)/i,                                          // Lenovo
             /(jolla)/i,                                                         // Jolla
-            /(oppo)\s?([\w\s]+)\sbui/i                                          // OPPO
+            /(oppo) ?([\w ]+) bui/i                                             // OPPO
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /(archos) (gamepad2?)/i,                                            // Archos
             /(hp).+(touchpad(?!.+tablet)|tablet)/i,                             // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
-            /(nook)[\w\s]+build\/(\w+)/i,                                       // Nook
-            /(dell) (strea[kpr\s\d]*[\dko])/i,                                  // Dell Streak
-            /(le[\s\-]+pan)[\s\-]+(\w{1,9})\sbui/i,                             // Le Pan Tablets
-            /(trinity)[\-\s]*(t\d{3})\sbui/i,                                   // Trinity Tablets
-            /(gigaset)[\s\-]+(q\w{1,9})\sbui/i,                                 // Gigaset Tablets
-            /(vodafone)\s([\w\s]+)(?:\)|\sbui)/i                                // Vodafone
+            /(nook)[\w ]+build\/(\w+)/i,                                        // Nook
+            /(dell) (strea[kpr\d ]*[\dko])/i,                                   // Dell Streak
+            /(le[- ]+pan)[- ]+(\w{1,9}) bui/i,                                  // Le Pan Tablets
+            /(trinity)[- ]*(t\d{3}) bui/i,                                      // Trinity Tablets
+            /(gigaset)[- ]+(q\w{1,9}) bui/i,                                    // Gigaset Tablets
+            /(vodafone) ([\w ]+)(?:\)| bui)/i                                   // Vodafone
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
             /(surface duo)/i                                                    // Surface Duo
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, TABLET]], [
-            /droid\s[\d\.]+; (fp\du?) b/i                                       // Fairphone
+            /droid [\d\.]+; (fp\du?) b/i                                        // Fairphone
             ], [MODEL, [VENDOR, 'Fairphone'], [TYPE, MOBILE]], [
             /(u304aa)/i                                                         // AT&T
             ], [MODEL, [VENDOR, 'AT&T'], [TYPE, MOBILE]], [
@@ -533,11 +533,11 @@
             ], [MODEL, [VENDOR, 'Siemens'], [TYPE, MOBILE]], [
             /\b(rct\w+) b/i                                                     // RCA Tablets
             ], [MODEL, [VENDOR, 'RCA'], [TYPE, TABLET]], [
-            /\b(venue[\d\s]{2,7}) b/i                                           // Dell Venue Tablets
+            /\b(venue[\d ]{2,7}) b/i                                            // Dell Venue Tablets
             ], [MODEL, [VENDOR, 'Dell'], [TYPE, TABLET]], [
             /\b(q(?:mv|ta)\w+) b/i                                              // Verizon Tablet
             ], [MODEL, [VENDOR, 'Verizon'], [TYPE, TABLET]], [
-            /\b(?:barnes[&\s]+noble |bn[rt])([\w\s\+]*) b/i                     // Barnes & Noble Tablet
+            /\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i                       // Barnes & Noble Tablet
             ], [MODEL, [VENDOR, 'Barnes & Noble'], [TYPE, TABLET]], [
             /\b(tm\d{3}\w+) b/i
             ], [MODEL, [VENDOR, 'NuVision'], [TYPE, TABLET]], [
@@ -552,7 +552,7 @@
             /\b((zeki)?tb.*\b) b/i                                              // Zeki Tablets
             ], [MODEL, [VENDOR, 'Zeki'], [TYPE, TABLET]], [
             /\b([yr]\d{2}) b/i,
-            /\b(dragon[\-\s]+touch |dt)(\w{5}) b/i                              // Dragon Touch Tablet
+            /\b(dragon[- ]+touch |dt)(\w{5}) b/i                                // Dragon Touch Tablet
             ], [[VENDOR, 'Dragon Touch'], MODEL, [TYPE, TABLET]], [
             /\b(ns-?\w{0,9}) b/i                                                // Insignia Tablets
             ], [MODEL, [VENDOR, 'Insignia'], [TYPE, TABLET]], [
@@ -562,15 +562,15 @@
             ], [[VENDOR, 'Voice'], MODEL, [TYPE, MOBILE]], [
             /\b(lvtel\-)?(v1[12]) b/i                                           // LvTel Phones
             ], [[VENDOR, 'LvTel'], MODEL, [TYPE, MOBILE]], [
-            /\b(ph-1)\s/i                                                       // Essential PH-1
+            /\b(ph-1) /i                                                        // Essential PH-1
             ], [MODEL, [VENDOR, 'Essential'], [TYPE, MOBILE]], [
             /\b(v(100md|700na|7011|917g).*\b) b/i                               // Envizen Tablets
             ], [MODEL, [VENDOR, 'Envizen'], [TYPE, TABLET]], [
-            /\b(trio[\s\w\-\.]+) b/i                                            // MachSpeed Tablets
+            /\b(trio[-\w\. ]+) b/i                                              // MachSpeed Tablets
             ], [MODEL, [VENDOR, 'MachSpeed'], [TYPE, TABLET]], [
             /\btu_(1491) b/i                                                    // Rotor Tablets
             ], [MODEL, [VENDOR, 'Rotor'], [TYPE, TABLET]], [
-            /(shield[\w\s]+) b/i                                                // Nvidia Shield Tablets
+            /(shield[\w ]+) b/i                                                 // Nvidia Shield Tablets
             ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, TABLET]], [
             /(sprint) (\w+)/i                                                   // Sprint Phones
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
@@ -592,7 +592,7 @@
             ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
             /(playstation [345portablevi]+)/i                                   // Playstation
             ], [MODEL, [VENDOR, SONY], [TYPE, CONSOLE]], [
-            /\b(xbox(?: one)?(?!; xbox))[\s\);]/i                               // Microsoft Xbox
+            /\b(xbox(?: one)?(?!; xbox))[\); ]/i                                // Microsoft Xbox
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
 
             ///////////////////
@@ -605,7 +605,7 @@
             ], [[MODEL, /^/, 'SmartTV'], [VENDOR, SAMSUNG], [TYPE, SMARTTV]], [
             /(?:nux; netcast.+smarttv|lg netcast\.tv-201\d)/i,                  // LG SmartTV
             ], [[VENDOR, LG], [TYPE, SMARTTV]], [
-            /(apple)\s?tv/i                                                     // Apple TV
+            /(apple) ?tv/i                                                      // Apple TV
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
             /crkey/i                                                            // Google Chromecast
             ], [[MODEL, CHROME+'cast'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
@@ -614,9 +614,9 @@
             /\(dtv[\);].+(aquos)/i                                              // Sharp
             ], [MODEL, [VENDOR, 'Sharp'], [TYPE, SMARTTV]], [
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,                          // Roku
-            /hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i            // HbbTV devices
+            /hbbtv\/\d+\.\d+\.\d+ +\([\w ]*; *(\w[^;]*);([^;]*)/i               // HbbTV devices
             ], [[VENDOR, trim], [MODEL, trim], [TYPE, SMARTTV]], [
-            /\b(android tv|smart[-\s]?tv|opera tv|tv; rv:)\b/i                  // SmartTV from Unidentified Vendors
+            /\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i                   // SmartTV from Unidentified Vendors
             ], [[TYPE, SMARTTV]], [
 
             ///////////////////
@@ -634,22 +634,22 @@
             // EMBEDDED
             ///////////////////
 
-            /(tesla)(?: qtcarbrowser|\/[\w\.-]+)/i                              // Tesla
+            /(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i                              // Tesla
             ], [VENDOR, [TYPE, EMBEDDED]], [
 
             ////////////////////
             // MIXED (GENERIC)
             ///////////////////
 
-            /droid .+?;\s([^;]+?)(?: bui|\) applew).+? mobile safari/i          // Android Phones from Unidentified Vendors
+            /droid .+?; ([^;]+?)(?: bui|\) applew).+? mobile safari/i           // Android Phones from Unidentified Vendors
             ], [MODEL, [TYPE, MOBILE]], [
-            /droid .+?;\s([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i      // Android Tablets from Unidentified Vendors
+            /droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i       // Android Tablets from Unidentified Vendors
             ], [MODEL, [TYPE, TABLET]], [
             /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i,                     // Unidentifiable Tablet
             ], [[TYPE, TABLET]], [
             /(phone|mobile(?:[;\/]| safari)|pda(?=.+windows ce))/i              // Unidentifiable Mobile
             ], [[TYPE, MOBILE]], [
-            /(android[\w\.\s\-]{0,9});.+buil/i                                  // Generic Android Device
+            /(android[-\w\. ]{0,9});.+buil/i                                    // Generic Android Device
             ], [MODEL, [VENDOR, 'Generic']]
         ],
 
@@ -664,8 +664,8 @@
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i, // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
             /ekioh(flow)\/([\w\.]+)/i,                                          // Flow
-            /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
-            /(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab
+            /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,                           // KHTML/Tasman/Links
+            /(icab)[\/ ]([23]\.[\d\.]+)/i                                       // iCab
             ], [NAME, VERSION], [
 
             /rv\:([\w\.]{1,9})\b.+(gecko)/i                                     // Gecko
@@ -678,31 +678,31 @@
             /microsoft (windows) (vista|xp)/i                                   // Windows (iTunes)
             ], [NAME, VERSION], [
             /(windows) nt 6\.2; (arm)/i,                                        // Windows RT
-            /(windows (?:phone(?: os)?|mobile))[\s\/]?([\d\.\s\w]*)/i,          // Windows Phone
-            /(windows)[\s\/]?([ntce\d\.\s]+\w)(?!.+xbox)/i
+            /(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i,            // Windows Phone
+            /(windows)[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i
             ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
             /(win(?=3|9|n)|win 9x )([nt\d\.]+)/i
             ], [[NAME, 'Windows'], [VERSION, strMapper, windowsVersionMap]], [
 
             // iOS/macOS
-            /ip[honead]{2,4}\b(?:.*os ([\w]+) like\smac|; opera)/i,             // iOS
+            /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,              // iOS
             /cfnetwork\/.+darwin/i
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
-            /(mac os x)\s?([\w\s\.]*)/i,
-            /(macintosh|mac_powerpc\b)(?!.+haiku)/i                         // Mac OS
+            /(mac os x) ?([\w\. ]*)/i,
+            /(macintosh|mac_powerpc\b)(?!.+haiku)/i                             // Mac OS
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
             // Mobile OSes                                                      // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS
-            /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[\/\s-]?([\w\.]*)/i,
+            /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,                                      // Blackberry
-            /(tizen|kaios)[\/\s]([\w\.]+)/i,                                    // Tizen/KaiOS
+            /(tizen|kaios)[\/ ]([\w\.]+)/i,                                     // Tizen/KaiOS
             /\((series40);/i                                                    // Series 40
             ], [NAME, VERSION], [
             /\(bb(10);/i                                                        // BlackBerry 10
             ], [VERSION, [NAME, BLACKBERRY]], [
-            /(?:symbian\s?os|symbos|s60(?=;)|series60)[\/\s-]?([\w\.]*)/i       // Symbian
+            /(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i         // Symbian
             ], [VERSION, [NAME, 'Symbian']], [
-            /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w\s]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
+            /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
             ], [VERSION, [NAME, FIREFOX+' OS']], [
             /web0s;.+rt(tv)/i,
             /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i                              // WebOS
@@ -711,30 +711,30 @@
             // Google Chromecast
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
             ], [VERSION, [NAME, CHROME+'cast']], [
-            /(cros) [\w]+\s([\w\.]+\w)/i                                        // Chromium OS
+            /(cros) [\w]+ ([\w\.]+\w)/i                                         // Chromium OS
             ], [[NAME, 'Chromium OS'], VERSION],[
 
             // Console
             /(nintendo|playstation) ([wids345portablevuch]+)/i,                 // Nintendo/Playstation
-            /(xbox);\s+xbox ([^\);]+)/i,                                        // Microsoft Xbox (360, One, X, S, Series X, Series S)
+            /(xbox); +xbox ([^\);]+)/i,                                         // Microsoft Xbox (360, One, X, S, Series X, Series S)
 
             // Other
             /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i,                            // Joli/Palm
-            /(mint)[\/\s\(\)]?(\w*)/i,                                          // Mint
-            /(mageia|vectorlinux)[;\s]/i,                                       // Mageia/VectorLinux
-            /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki)(?: gnu\/linux)?(?: enterprise)?(?:[\s-]linux)?(?:-gnu)?[\/\s-]?(?!chrom|package)([\w\.-]*)/i,
+            /(mint)[\/\(\) ]?(\w*)/i,                                           // Mint
+            /(mageia|vectorlinux)[; ]/i,                                        // Mageia/VectorLinux
+            /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i,
                                                                                 // Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware/Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus/Raspbian/Plan9/Minix/RISCOS/Contiki
-            /(hurd|linux)\s?([\w\.]*)/i,                                        // Hurd/Linux
-            /(gnu)\s?([\w\.]*)/i,                                               // GNU
-            /\b([frentopc-]{0,4}bsd|dragonfly)\s?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,  // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
-            /(haiku)\s(\w+)/i                                                   // Haiku
+            /(hurd|linux) ?([\w\.]*)/i,                                         // Hurd/Linux
+            /(gnu) ?([\w\.]*)/i,                                                // GNU
+            /\b([-frentopc]{0,4}bsd|dragonfly) ?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,  // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
+            /(haiku) (\w+)/i                                                    // Haiku
             ], [NAME, VERSION], [
-            /(sunos)\s?([\w\.\d]*)/i                                            // Solaris
+            /(sunos) ?([\w\.\d]*)/i                                             // Solaris
             ], [[NAME, 'Solaris'], VERSION], [
-            /((?:open)?solaris)[\/\s-]?([\w\.]*)/i,                             // Solaris
-            /(aix) ((\d)(?=\.|\)|\s)[\w\.])*/i,                                 // AIX
+            /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,                              // Solaris
+            /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,                                  // AIX
             /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux)/i,            // BeOS/OS2/AmigaOS/MorphOS/OpenVMS/Fuchsia/HP-UX
-            /(unix)\s?([\w\.]*)/i                                               // UNIX
+            /(unix) ?([\w\.]*)/i                                                // UNIX
             ], [NAME, VERSION]
         ]
     };
