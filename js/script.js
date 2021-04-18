@@ -1,5 +1,6 @@
 $(document)
   .ready(function() {
+    var uaparser = new UAParser();
     var labels = ['browser.name', 'os.version', 'device.type', 'cpu.arch', 'device.model', 'browser.version', 'device.vendor', 'engine.name', 'engine.version'];
     var counter = 0;
     var rotateLabel = function () {
@@ -79,6 +80,16 @@ $(document)
                 $('#device-txt').text('-');
                 $('#device-img').attr('src', 'images/companies/default.png');
             }
+            if (result.gpu.vendor) {
+                var vendor = result.gpu.vendor!=undefined?result.gpu.vendor:'-';
+                var model = result.gpu.model!==undefined?result.gpu.model:'-';
+                $('#gpu-txt').html('<span class="ui large label">' + vendor + '</span><span class="ui large label">' + model + '</span>');
+                $('#gpu-img').attr('src', 'images/companies/' + result.gpu.vendor.toLowerCase() + '.png').on('error', function () {
+                    $(this).attr('src', 'images/companies/default.png');
+                });
+            } else {
+                $('#gpu-txt').text('-');
+            }
             $(this).transition('fly up', function () {
                 $(this).transition('pulse');
             });
@@ -109,6 +120,9 @@ $(document)
             return false;
         }
     });
+    if (!uaparser.getGPU().vendor) {
+        $('#gpu-divider,#gpu-segment').hide();
+    }
 
     $('.ui.rating').rating();
     $('#showcase img').popup({
