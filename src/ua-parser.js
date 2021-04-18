@@ -214,7 +214,7 @@
             // Presto based
             /(opera mini)\/([-\w\.]+)/i,                                        // Opera Mini
             /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,                 // Opera Mobi/Tablet
-            /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,                          // Opera
+            /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i                           // Opera
             ], [NAME, VERSION], [
             /opios[\/ ]+([\w\.]+)/i                                             // Opera mini on iphone >= 8.0
             ], [VERSION, [NAME, OPERA+' Mini']], [
@@ -385,7 +385,7 @@
             ], [MODEL, [VENDOR, APPLE], [TYPE, TABLET]], [
 
             // Huawei
-            /\b((?:agr|ags[23]|bah2?|sht?)-a?[lw]\d{2})/i,
+            /\b((?:agr|ags[23]|bah2?|sht?)-a?[lw]\d{2})/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
             /huawei([-\w ]+)[;\)]/i,
             /\b(nexus 6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?|ele-l\d\d)/i,
@@ -603,7 +603,7 @@
             ], [VENDOR, [TYPE, SMARTTV]], [
             /hbbtv.+maple;(\d+)/i
             ], [[MODEL, /^/, 'SmartTV'], [VENDOR, SAMSUNG], [TYPE, SMARTTV]], [
-            /(?:nux; netcast.+smarttv|lg netcast\.tv-201\d)/i,                  // LG SmartTV
+            /(?:nux; netcast.+smarttv|lg netcast\.tv-201\d)/i                   // LG SmartTV
             ], [[VENDOR, LG], [TYPE, SMARTTV]], [
             /(apple) ?tv/i                                                      // Apple TV
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
@@ -645,7 +645,7 @@
             ], [MODEL, [TYPE, MOBILE]], [
             /droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i       // Android Tablets from Unidentified Vendors
             ], [MODEL, [TYPE, TABLET]], [
-            /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i,                     // Unidentifiable Tablet
+            /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i                      // Unidentifiable Tablet
             ], [[TYPE, TABLET]], [
             /(phone|mobile(?:[;\/]| safari)|pda(?=.+windows ce))/i              // Unidentifiable Mobile
             ], [[TYPE, MOBILE]], [
