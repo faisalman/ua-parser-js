@@ -73,9 +73,13 @@ $(document)
                 var vendor = result.device.vendor!=undefined?result.device.vendor:'-';
                 var model = result.device.model!==undefined?result.device.model:'-';
                 $('#device-txt').html('<span class="ui large label">' + vendor + '</span><span class="ui large label">' + model + '</span>');
-                $('#device-img').attr('src', 'images/companies/' + result.device.vendor.toLowerCase() + '.png').on('error', function () {
-                    $(this).attr('src', 'images/companies/default.png');
-                });
+                if (result.device.vendor) {
+                    $('#device-img').attr('src', 'images/companies/' + result.device.vendor.toLowerCase() + '.png').on('error', function () {
+                        $(this).attr('src', 'images/companies/default.png');
+                    });
+                } else {
+                    $('#device-img').attr('src', 'images/companies/default.png');
+                }
             } else {
                 $('#device-txt').text('-');
                 $('#device-img').attr('src', 'images/companies/default.png');
