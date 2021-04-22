@@ -385,21 +385,20 @@
             ], [MODEL, [VENDOR, APPLE], [TYPE, TABLET]], [
 
             // Huawei
-            /\b((?:agr|ags[23]|bah2?|sht?)-a?[lw]\d{2})/i
+            /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
-            /huawei([-\w ]+)[;\)]/i,
-            /\b(nexus 6p|vog-[at]?l\d\d|ane-[at]?l[x\d]\d|eml-a?l\d\da?|lya-[at]?l\d[\dc]|clt-a?l\d\di?|ele-l\d\d)/i,
-            /\b(\w{2,4}-[atu][ln][01259][019])[;\) ]/i
+            /(?:huawei|honor)([-\w ]+)[;\)]/i,
+            /\b(nexus 6p|\w{2,4}-[atu]?[ln][01259x][012359][an]?)\b/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
             // Xiaomi
             /\b(poco[\w ]+)(?: bui|\))/i,                                       // Xiaomi POCO
             /\b; (\w+) build\/hm\1/i,                                           // Xiaomi Hongmi 'numeric' models
-            /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,                            // Xiaomi Hongmi
+            /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,                             // Xiaomi Hongmi
             /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,                   // Xiaomi Redmi
-            /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte)?[_ ]?(?:\d?\w?)[_ ]?(?:plus)?) bui/i // Xiaomi Mi
+            /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
-            /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i                       // Mi Pad tablets
+            /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i                        // Mi Pad tablets
             ],[[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, TABLET]], [
 
             // OPPO
@@ -413,7 +412,7 @@
             ], [MODEL, [VENDOR, 'Vivo'], [TYPE, MOBILE]], [
 
             // Realme
-            /\b(rmx[12]\d{3})(?: bui|;)/i
+            /\b(rmx[12]\d{3})(?: bui|;|\))/i
             ], [MODEL, [VENDOR, 'Realme'], [TYPE, MOBILE]], [
 
             // Motorola
@@ -427,9 +426,9 @@
             // LG
             /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
-            /(lm-?f100[nv]?|nexus [45])/i,
+            /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
             /\blg[-e;\/ ]+((?!browser|netcast)\w+)/i,
-            /\blg(\-?[\d\w]+) bui/i
+            /\blg-?([\d\w]+) bui/i
             ], [MODEL, [VENDOR, LG], [TYPE, MOBILE]], [
 
             // Lenovo
@@ -457,8 +456,7 @@
 
             // OnePlus
             / (kb2005|in20[12]5|be20[12][59])\b/i,
-            /\ba000(1) bui/i,
-            /oneplus (a\d{4})[) ]/i
+            /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i
             ], [MODEL, [VENDOR, 'OnePlus'], [TYPE, MOBILE]], [
 
             // Amazon
@@ -479,7 +477,7 @@
             // Asus
             /(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i
             ], [MODEL, [VENDOR, ASUS], [TYPE, TABLET]], [
-            / (z[es]6[027][01][km][ls]|zenfone \d\w?)\b/i
+            / (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i
             ], [MODEL, [VENDOR, ASUS], [TYPE, MOBILE]], [
 
             // HTC
@@ -488,7 +486,7 @@
             /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,                         // HTC
 
             // ZTE
-            /(zte)-(\w*)/i,
+            /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
             /(alcatel|geeksphone|nexian|panasonic|sony)[-_ ]?([-\w]*)/i         // Alcatel/GeeksPhone/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
@@ -525,7 +523,7 @@
 
             /(surface duo)/i                                                    // Surface Duo
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, TABLET]], [
-            /droid [\d\.]+; (fp\du?) b/i                                        // Fairphone
+            /droid [\d\.]+; (fp\du?)(?: b|\))/i                                 // Fairphone
             ], [MODEL, [VENDOR, 'Fairphone'], [TYPE, MOBILE]], [
             /(u304aa)/i                                                         // AT&T
             ], [MODEL, [VENDOR, 'AT&T'], [TYPE, MOBILE]], [
