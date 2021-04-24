@@ -112,6 +112,22 @@
         }
     },
     {
+        "desc"    : "ARM64",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; ARM64; RM-1096) AppleWebKit/537.36 (KHTML like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393",
+        "expect"  :
+        {
+            "architecture"  : "arm64"
+        }
+    },
+    {
+        "desc"    : "ARM64",
+        "ua"      : "Mozilla/5.0 (Linux; arm_64; Android 9; HRY-LX1T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 YaBrowser/19.12.1.121.00 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "architecture"  : "arm64"
+        }
+    },
+    {
         "desc"    : "Pocket PC",
         "ua"      : "Opera/9.7 (Windows Mobile; PPC; Opera Mobi/35166; U; en) Presto/2.2.1",
         "expect"  :
