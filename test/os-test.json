@@ -604,11 +604,11 @@
     },
     {
         "desc"    : "Slackware",
-        "ua"      : "",
+        "ua"      : "Mozilla/5.0 Slackware/13.37 (X11; U; Linux x86_64; en-US) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Slackware",
+            "version" : "13.37"
         }
     },
     {
@@ -1017,12 +1017,12 @@
         }
     },
     {
-        "desc"    : "GNU",
-        "ua"      : "",
+        "desc"    : "Deepin",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Deepin 15.5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 NFSBrowser/5.0.0.1886",
         "expect"  :
         {
-            "name"    : "",
-            "version" : ""
+            "name"    : "Deepin",
+            "version" : "15.5"
         }
     },
     {
@@ -1059,6 +1059,60 @@
         {
             "name"    : "Linpus",
             "version" : "3.0-0.49"
+        }
+    },
+    {
+        "desc"    : "Manjaro",
+        "ua"      : "Mozilla/5.0 (X11; Manjaro 19.0.2; Arch; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
+        "expect"  :
+        {
+            "name"    : "Manjaro",
+            "version" : "19.0.2"
+        }
+    },
+    {
+        "desc"    : "elementary OS",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/604.1 (KHTML, like Gecko) Version/11.0 Safari/604.1 elementary OS/0.4 (Loki) Epiphany/3.18.11",
+        "expect"  :
+        {
+            "name"    : "elementary OS",
+            "version" : "0.4"
+        }
+    },
+    {
+        "desc"    : "GhostBSD",
+        "ua"      : "Mozilla/5.0 (X11; GhostBSD/10.3; x86_64; rv:50.0.1) Gecko/20100101 Firefox/50.0.1",
+        "expect"  :
+        {
+            "name"    : "GhostBSD",
+            "version" : "10.3"
+        }
+    },
+    {
+        "desc"    : "Android-x86",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Generic Android-x86) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 OPR/61.2.3076.56749",
+        "expect"  :
+        {
+            "name"    : "Android-x86",
+            "version" : "7.1.2"
+        }
+    },
+    {
+        "desc"    : "Sabayon",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Sabayon Chrome/19.0.1084.46 Safari/536.5",
+        "expect"  :
+        {
+            "name"    : "Sabayon",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Linspire",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/20060803 Firefox/1.5.0.4 Linspire/1.5.0.4",
+        "expect"  :
+        {
+            "name"    : "Linspire",
+            "version" : "1.5.0.4"
         }
     }
 ]
