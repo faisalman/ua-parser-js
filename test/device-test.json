@@ -584,6 +584,15 @@
         }
     },
     {
+        "desc": "Huawei Y7p",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ART-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ART-L29",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Huawei Mate 20 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 8.1.0; SNE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36",
         "expect": {
