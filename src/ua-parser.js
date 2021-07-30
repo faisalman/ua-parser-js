@@ -114,6 +114,7 @@
                 // try matching uastring with regexes
                 while (j < regex.length && !matches) {
 
+                    if (!regex[j]) { break; }
                     matches = regex[j++].exec(ua);
 
                     if (!!matches) {
