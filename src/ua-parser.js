@@ -715,8 +715,8 @@
             // Google Chromecast
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
             ], [VERSION, [NAME, CHROME+'cast']], [
-            /(cros) [\w]+ ([\w\.]+\w)/i                                         // Chromium OS
-            ], [[NAME, 'Chromium OS'], VERSION],[
+            /(cros) [\w]+ ([\w\.]+\w)/i                                         // Chrome OS
+            ], [[NAME, 'Chrome OS'], VERSION],[
 
             // Console
             /(nintendo|playstation) ([wids345portablevuch]+)/i,                 // Nintendo/Playstation
