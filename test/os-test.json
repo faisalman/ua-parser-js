@@ -400,7 +400,7 @@
         "ua"      : "Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",
         "expect"  :
         {
-            "name"    : "Linux",
+            "name"    : "PlayStation",
             "version" : "4"
         }
     },
@@ -472,7 +472,7 @@
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.22+ (KHTML, like Gecko) Chromium/17.0.963.56 Chrome/17.0.963.56 Safari/535.22+ Ubuntu/12.04 (3.4.1-0ubuntu1) Epiphany/3.4.1",
         "expect"  :
         {
-            "name"    : "Linux",
+            "name"    : "Ubuntu",
             "version" : "12.04"
         }
     },
@@ -481,7 +481,7 @@
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/31.0.1650.63 Chrome/31.0.1650.63 Safari/537.36",
         "expect"  :
         {
-            "name"    : "Linux",
+            "name"    : "Ubuntu",
             "version" : "undefined"
         }
     },
@@ -724,7 +724,7 @@
         "ua"      : "Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
         "expect"  :
         {
-            "name"    : "iPhone",
+            "name"    : "iOS",
             "version" : "5.1.1"
         }
     },
@@ -733,7 +733,7 @@
         "ua"      : "Opera/9.80 (iPhone; Opera Mini/7.1.32694/27.1407; U; en) Presto/2.8.119 Version/11.10",
         "expect"  :
         {
-            "name"    : "iPhone",
+            "name"    : "iOS",
             "version" : "undefined"
         }
     },
@@ -769,7 +769,7 @@
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36",
         "expect"  :
         {
-            "name"    : "Mac",
+            "name"    : "Mac OS",
             "version" : "10.6.8"
         }
     },
