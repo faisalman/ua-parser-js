@@ -160,6 +160,16 @@
         }
     },
     {
+        "desc"    : "Camino on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Camino/2.2.1",
+        "expect"  :
+        {
+            "name"    : "Camino",
+            "version" : "2.2.1",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "Chimera",
         "ua"      : "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; pl-PL; rv:1.0.1) Gecko/20021111 Chimera/0.6",
         "expect"  :
@@ -240,6 +250,16 @@
         }
     },
     {
+        "desc"    : "Coc Coc Browser",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/78.0.129 Chrome/72.0.3626.129 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Coc Coc",
+            "version" : "78.0.129",
+            "major"   : "78"
+        }
+    },
+    {
         "desc"    : "Dillo",
         "ua"      : "Dillo/2.2",
         "expect"  :
@@ -280,6 +300,16 @@
         }
     },
     {
+        "desc"    : "Flow",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) EkiohFlow/5.7.4.30559 Flow/5.7.4 (like Gecko Firefox/53.0 rv:53.0)",
+        "expect"  :
+        {
+            "name"    : "Flow",
+            "version" : "5.7.4",
+            "major"   : "5"
+        }
+    },
+    {
         "desc"    : "Waterfox",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.2.2 Waterfox/55.2.2",
         "expect"  :
@@ -310,7 +340,7 @@
         }
     },
     {
-        "desc"    : "Facebook in-App Browser for Android",
+        "desc"    : "Facebook in-App Browser for Android with version",
         "ua"      : "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]",
         "expect"  :
         {
@@ -320,13 +350,33 @@
         }
     },
     {
-        "desc"    : "Facebook in-App Browser for iOS",
+        "desc"    : "Facebook in-App Browser for iOS with version",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E304 [FBAN/FBIOS;FBAV/91.0.0.41.73;FBBV/57050710;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.3.1;FBSS/2;FBCR/Telekom.de;FBID/phone;FBLC/de_DE;FBOP/5;FBRV/0])",
         "expect"  :
         {
             "name"    : "Facebook",
             "version" : "91.0.0.41.73",
             "major"   : "91"
+        }
+    },
+    {
+        "desc"    : "Facebook in-App Browser for iOS without version",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone10,2;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
+        "expect"  :
+        {
+            "name"    : "Facebook",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Instagram in-App Browser for iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 142.0.0.22.109 (iPhone12,5; iOS 14_1; en_US; en-US; scale=3.00; 1242x2688; 214888322) NW/1",
+        "expect"  :
+        {
+            "name"    : "Instagram",
+            "version" : "142.0.0.22.109",
+            "major"   : "142"
         }
     },
     {
@@ -360,6 +410,26 @@
         }
     },
     {
+        "desc"    : "Firefox Reality",
+        "ua"      : "Mozilla/5.0 (Android 7.1.2; Mobile VR; rv:65.0) Gecko/65.0 Firefox/65.0",
+        "expect"  :
+        {
+            "name"    : "Firefox Reality",
+            "version" : "65.0",
+            "major"   : "65"
+        }
+    },
+    {
+        "desc"    : "Firefox-based browser",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0 AppName/1.0",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "80.0",
+            "major"   : "80"
+        }
+    },
+    {
         "desc"    : "Fennec",
         "ua"      : "Mozilla/5.0 (X11; U; Linux armv61; en-US; rv:1.9.1b2pre) Gecko/20081015 Fennec/1.0a1",
         "expect"  :
@@ -367,6 +437,16 @@
             "name"    : "Fennec",
             "version" : "1.0a1",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Firefox for Maemo (Nokia N900)",
+        "ua"      : "Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1",
+        "expect"  :
+        {
+            "name"    : "Fennec",
+            "version" : "10.0.1",
+            "major"   : "10"
         }
     },
     {
@@ -669,6 +749,16 @@
         }
     },
     {
+        "desc"    : "Netscape 6",
+        "ua"      : "Mozilla/5.0 (Windows; U; Win95; de-DE; rv:0.9.2) Gecko/20010726 Netscape6/6.1",
+        "expect"  :
+        {
+            "name"    : "Netscape",
+            "version" : "6.1",
+            "major"   : "6"
+        }
+    },
+    {
         "desc"    : "Nokia Browser",
         "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/025.007; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.37 Mobile Safari/533.4 3gpp-gba",
         "expect"  :
@@ -676,6 +766,26 @@
             "name"    : "NokiaBrowser",
             "version" : "7.3.1.37",
             "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "Obigo",
+        "ua"      : "LG-GS290/V100 Obigo/WAP2.0 Profile/MIDP-2.1 Configuration/CLDC-1.1",
+        "expect"  :
+        {
+            "name"    : "Obigo",
+            "version" : "WAP2.0",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Obigo",
+        "ua"      : "LG/KU990i/v10a Browser/Obigo-Q05A/3.6 MMS/LG-MMS-V1.0/1.2 Java/ASVM/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+        "expect"  :
+        {
+            "name"    : "Obigo",
+            "version" : "Q05A",
+            "major"   : "05"
         }
     },
     {
@@ -899,6 +1009,16 @@
         }
     },
     {
+        "desc"    : "SeaMonkey on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1",
+        "expect"  :
+        {
+            "name"    : "SeaMonkey",
+            "version" : "2.7.1",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "Silk Browser",
         "ua"      : "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-84)",
         "expect"  :
@@ -936,6 +1056,26 @@
             "name"    : "Swiftfox",
             "version" : "undefined",
             "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Tesla QtCarBrowser Safari/601.1",
+        "expect"  :
+        {
+            "name"    : "Tesla",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/537.36 (KHTML, like Gecko) Chromium/79.0.3945.130 Chrome/79.0.3945.130 Safari/537.36 Tesla/2020.16.2.1-e99c70fff409",
+        "expect"  :
+        {
+            "name"    : "Tesla",
+            "version" : "2020.16.2.1-e99c70fff409",
+            "major"   : "2020"
         }
     },
     {
@@ -1009,6 +1149,16 @@
         }
     },
     {
+        "desc"    : "UPBrowser",
+        "ua"      : "BenQ-CF61/1.00/WAP2.0/MIDP2.0/CLDC1.0 UP.Browser/6.3.0.4.c.1.102 (GUI) MMP/2.0",
+        "expect"  :
+        {
+            "name"    : "UP.Browser",
+            "version" : "6.3.0.4.c.1.102",
+            "major"   : "6"
+        }
+    },
+    {
         "desc": "WeChat on iOS",
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_4_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H321 MicroMessenger/6.3.6 NetType/WIFI Language/zh_CN",
         "expect":
@@ -1026,6 +1176,16 @@
             "name": "WeChat",
             "version": "6.3.5.50_r1573191.640",
             "major": "6"
+        }
+    },
+    {
+        "desc": "WeChat on Android",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A366 Weibo (iPhone8,2__weibo__8.9.3__iphone__os12.0)",
+        "expect":
+        {
+            "name": "weibo",
+            "version": "8.9.3",
+            "major": "8"
         }
     },
     {
@@ -1059,13 +1219,33 @@
         }
     },
     {
-        "desc"    : "Microsoft Edge",
+        "desc"    : "Microsoft Edge 0.1",
         "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0",
         "expect"  :
         {
             "name"    : "Edge",
             "version" : "12.0",
             "major"   : "12"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge 42",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "17.17134",
+            "major"   : "17"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge 44",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "18.17763",
+            "major"   : "18"
         }
     },
     {
@@ -1115,6 +1295,16 @@
         {
             "name"    : "Firefox",
             "version" : "1.1",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Firefox iOS using iPad",
+        "ua"      : "Mozilla/5.0 (iPad; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "1.0",
             "major"   : "1"
         }
     },
@@ -1169,6 +1359,16 @@
         }
     },
     {
+        "desc"    : "WeChat Desktop for Windows Built-in Browser major version in 4",
+        "ua"      : "mozilla/5.0 (windows nt 10.0; wow64) applewebkit/537.36 (khtml, like gecko) chrome/53.0.2785.116 safari/537.36 qbcore/4.0.1301.400 qqbrowser/9.0.2524.400 mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/81.0.4044.138 safari/537.36 nettype/wifi micromessenger/7.0.20.1781(0x6700143b) windowswechat",
+        "expect"  :
+        {
+            "name"    : "WeChat(Win) Desktop",
+            "version" : "4.0.1301.400",
+            "major"   : "4"
+        }
+    },
+    {
         "desc"    : "GSA on iOS",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) GSA/30.1.161623614 Mobile/14F89 Safari/602.1",
         "expect"  :
@@ -1200,7 +1400,7 @@
         "expect"  :
         {
             "name"    : "BIDUBrowser",
-            "version" : "8.7", 
+            "version" : "8.7",
             "major"   : "8"
         }
     },
@@ -1231,6 +1431,26 @@
         {
             "name"    : "Brave",
             "version" : "4.5.16",
+            "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "Whale Browser",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.146 Whale/2.6.90.14 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Whale",
+            "version" : "2.6.90.14",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Electron",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Atom/1.41.0 Chrome/69.0.3497.128 Electron/4.2.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Electron",
+            "version" : "4.2.7",
             "major"   : "4"
         }
     }
