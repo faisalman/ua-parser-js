@@ -633,7 +633,7 @@
         "ua": "Mozilla/5.0 (iPad; U; CPU OS 11_2 like Mac OS X; zh-CN; iPad5,3) AppleWebKit/534.46 (KHTML, like Gecko) UCBrowser/3.0.1.776 U3/ Mobile/10A403 Safari/7543.48.3",
         "expect": {
             "vendor": "Apple",
-            "model": "iPad",
+            "model": "iPad5,3",
             "type": "tablet"
         }
     },
@@ -642,7 +642,7 @@
         "ua": "Mozilla/5.0 (iPad; CPU OS 12_4_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPad4,1;FBMD/iPad;FBSN/iOS;FBSV/12.4.5;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPad",
+            "model": "iPad4,1",
             "type": "tablet"
         }
     },
@@ -651,7 +651,7 @@
         "ua": "Mozilla/5.0 (iPad; CPU OS 14_4_2 like Mac OS X) WebKit/8610 (KHTML, like Gecko) Mobile/18D70 [FBAN/FBIOS;FBDV/iPad7,11;FBMD/iPad;FBSN/iOS;FBSV/14.4.2;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPad",
+            "model": "iPad7,11",
             "type": "tablet"
         }
     },
@@ -941,7 +941,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone",
+            "model": "iPhone8,4",
             "type": "mobile"
         }
     },
@@ -950,7 +950,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone",
+            "model": "iPhone8,4",
             "type": "mobile"
         }
     },
@@ -959,7 +959,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone12,5;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone",
+            "model": "iPhone12,5",
             "type": "mobile"
         }
     },
@@ -968,7 +968,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone11,2;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone",
+            "model": "iPhone11,2",
             "type": "mobile"
         }
     },
@@ -2684,7 +2684,9 @@
         "desc": "FaceBook Mobile App",
         "ua": "[FBAN/FBIOS;FBAV/283.0.0.44.117;FBBV/238386386;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/13.6.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/240127608]",
         "expect": {
-            "type": "mobile"
+            "type": "mobile",
+            "model": "iPhone12,1",
+            "vendor": "Apple"
         }
     },
     {
