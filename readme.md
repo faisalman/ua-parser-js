@@ -1,18 +1,26 @@
+<p align="center">
+    <img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png" width="256" height="256"> 
+</p>
+
+<p align="center">
+<a href="https://travis-ci.org/faisalman/ua-parser-js"><img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master"></a>
+<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg"></a>
+<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js.svg"></a>
+<a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://data.jsdelivr.com/v1/package/npm/ua-parser-js/badge"></a>
+<a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg"></a>
+</p>
+
 # UAParser.js
 
-<img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, & RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~17KB when minified / ~6KB gzipped). Written in vanilla JavaScript, which means it doesn't require any other library and can be used independently. However, it's not recommended to use this library as browser detection since the result may not be more accurate than using feature detection.
-
-[![Build Status](https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master)](https://travis-ci.org/faisalman/ua-parser-js)
-[![NPM downloads](https://img.shields.io/npm/dw/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
-[![NPM](https://img.shields.io/npm/v/ua-parser-js.svg)](https://www.npmjs.com/package/ua-parser-js)
-[![Bower](https://img.shields.io/bower/v/ua-parser-js.svg)](https://bower.io/)
-[![CDNJS](https://img.shields.io/cdnjs/v/UAParser.js.svg)](https://cdnjs.com/libraries/UAParser.js)
+JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
 
 * Author    : Faisal Salman <<f@faisalman.com>>
-* Demo      : http://faisalman.github.io/ua-parser-js
+* Demo      : https://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
-# Constructor
+# Documentation
+
+## Constructor
 
 * `new UAParser([uastring][,extensions])`
     * returns new instance
@@ -20,43 +28,44 @@
 * `UAParser([uastring][,extensions])`
     * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
-# Methods
+## Methods
 
 * `getBrowser()`
     * returns `{ name: '', version: '' }`
 
 ```sh
 # Possible 'browser.name':
-2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG, 
-BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera, 
-Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo, 
-Dolphin, Doris, Edge, Epiphany, Facebook, Falkon, Fennec, Firebird, Firefox, 
-Flock, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, 
-Iceape, Iceweasel, Iridium, Iron, Jasmine, K-Meleon, Kindle, Konqueror, 
-LBBROWSER Line, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, 
-Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, 
-NetSurf, Netfront, Netscape, NokiaBrowser, Oculus Browser, OmniWeb, 
-Opera Coast, Opera Mini, Opera Mobi, Opera Tablet, Opera, PaleMoon, PhantomJS, 
-Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, 
-RockMelt, Safari, Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, 
-Sleipnir, Slim, SlimBrowser, Swiftfox, Tizen Browser, UCBrowser, Vivaldi, 
-Waterfox, WeChat, Yandex, baidu, iCab, w3m, ...
+2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
+BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
+Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
+Dolphin, Doris, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, Firebird,
+Firefox [Reality], Flock, Flow, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, 
+IceCat, IceDragon, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon,
+Kindle, Klar, Konqueror, LBBROWSER, Line, Links, Lunascape, Lynx, MIUI Browser,
+Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic,
+Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser,
+OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, 
+Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
+Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
+SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Vivaldi, 
+Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```
 
 * `getDevice()`
-    * returns `{ model: '', type: '', vendor: '' }` 
+    * returns `{ model: '', type: '', vendor: '' }`
 
 ```sh
 # Possible 'device.type':
 console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
-Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, Essential,
-GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola,
-Nexian, Nintendo, Nokia, Nvidia, OnePlus, Ouya, Palm, Panasonic, Pebble, Polytron,
-RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
+Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
+Essential, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, 
+Meizu, Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, OPPO, Ouya,
+Palm, Panasonic, Pebble, Polytron, Realme, RIM, Roku, Samsung, Sharp, Siemens,
+Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -66,7 +75,7 @@ RIM, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Xbox, Xiaomi, ZTE, ...
 
 ```sh
 # Possible 'engine.name'
-Amaya, Blink, EdgeHTML, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront, 
+Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront,
 NetSurf, Presto, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
@@ -77,13 +86,13 @@ NetSurf, Presto, Tasman, Trident, w3m, WebKit
 
 ```sh
 # Possible 'os.name'
-AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, 
-Contiki, Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Fuchsia, Gentoo, GNU, 
-Haiku, Hurd, iOS, Joli, KaiOS, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo, 
-Minix, Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, 
-PCLinuxOS, Plan9, Playstation, QNX, RedHat, RIM Tablet OS, RISC OS, Sailfish, 
-Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, 
-WebOS, Windows [Phone/Mobile], Zenwalk, ...
+AIX, Amiga OS, Android[-x86], Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
+Contiki, Fedora, Firefox OS, FreeBSD, Debian, Deepin, DragonFly, elementary OS, 
+Fuchsia, Gentoo, GhostBSD, GNU, Haiku, HP-UX, Hurd, iOS, Joli, KaiOS, Linpus, Linspire,
+Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix, Mint, Morph OS, NetBSD,
+Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, 
+Raspbian, RedHat, RIM Tablet OS, RISC OS, Sabayon, Sailfish, Series40, Slackware, Solaris, 
+SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
@@ -93,7 +102,7 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 ```sh
 # Possible 'cpu.architecture'
-68k, amd64, arm[64], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
+68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
 * `getResult()`
@@ -103,11 +112,12 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
     * returns UA string of current instance
 
 * `setUA(uastring)`
-    * set UA string to parse
+    * set UA string to be parsed
     * returns current instance
 
+# Usage
 
-# Example
+## Using HTML
 
 ```html
 <!doctype html>
@@ -117,16 +127,15 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
 <script>
 
     var parser = new UAParser();
-
-    // by default it takes ua string from current browser's window.navigator.userAgent
     console.log(parser.getResult());
     /*
-        /// this will print an object structured like this:
+        /// This will print an object structured like this:
         {
             ua: "",
             browser: {
                 name: "",
-                version: ""
+                version: "",
+                major: "" //@deprecated
             },
             engine: {
                 name: "",
@@ -146,14 +155,14 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
             }
         }
     */
+    // Default result depends on current window.navigator.userAgent value
 
-    // let's test a custom user-agent string as an example
-    var uastring = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
-    parser.setUA(uastring);
-
+    // Now let's try a custom user-agent string as an example
+    var uastring1 = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
+    parser.setUA(uastring1);
     var result = parser.getResult();
-    // this will also produce the same result (without instantiation):
-    // var result = UAParser(uastring);
+    // You can also use UAParser constructor directly without having to create an instance:
+    // var result = UAParser(uastring1);
 
     console.log(result.browser);        // {name: "Chromium", version: "15.0.874.106"}
     console.log(result.device);         // {model: undefined, type: undefined, vendor: undefined}
@@ -162,7 +171,7 @@ WebOS, Windows [Phone/Mobile], Zenwalk, ...
     console.log(result.engine.name);    // "WebKit"
     console.log(result.cpu.architecture);   // "amd64"
 
-    // do some other tests
+    // Do some other tests
     var uastring2 = "Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)";
     console.log(parser.setUA(uastring2).getBrowser().name); // "Konqueror"
     console.log(parser.getOS());                            // {name: "OpenBSD", version: undefined}
@@ -201,40 +210,6 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
 ```
 
-## Using requirejs
-
-```js
-requirejs.config({
-    baseUrl : 'js/lib', // path to your script directory
-    paths   : {
-        'ua-parser-js' : 'ua-parser.min'
-    }
-});
-
-requirejs(['ua-parser-js'], function(UAParser) {
-    var parser = new UAParser();
-    console.log(parser.getResult());
-});
-```
-
-## Using CDN
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
-```
-
-## Using bower
-
-```sh
-$ bower install ua-parser-js
-```
-
-## Using meteor
-
-```sh
-$ meteor add faisalman:ua-parser-js
-```
-
 ## Using TypeScript
 
 ```sh
@@ -245,18 +220,18 @@ $ npm install --save @types/ua-parser-js
 
 ## Using jQuery/Zepto ($.ua)
 
-Although written in vanilla js (which means it doesn't depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create `$.ua` object based on browser's user-agent (although in case you need, `window.UAParser` constructor is still present). To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`. 
+Although written in vanilla js, this library will automatically detect if jQuery/Zepto is present and create `$.ua` object (with values based on its User-Agent) along with `window.UAParser` constructor. To get/set user-agent you can use: `$.ua.get()` / `$.ua.set(uastring)`.
 
 ```js
-// In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
+// Say we are in a browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':
 
-// Do some tests
+// Get the details
 console.log($.ua.device);           // {vendor: "HTC", model: "Evo Shift 4G", type: "mobile"}
 console.log($.ua.os);               // {name: "Android", version: "2.3.4"}
 console.log($.ua.os.name);          // "Android"
 console.log($.ua.get());            // "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0"
 
-// reset to custom user-agent
+// Now lets try to reset to another custom user-agent
 $.ua.set('Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13');
 
 // Test again
@@ -270,54 +245,49 @@ console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 $('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.device.type);
 ```
 
-## Extending regex patterns
+## Using Extension
 
 * `UAParser([uastring,] extensions)`
 
-Pass your own regexes to extend the limited matching rules.
-
 ```js
 // Example:
-var myOwnRegex = [[/(myownbrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
-var myParser = new UAParser({ browser: myOwnRegex });
-var uaString = 'Mozilla/5.0 MyOwnBrowser/1.3';
-console.log(myParser.setUA(uaString).getBrowser());   // {name: "MyOwnBrowser", version: "1.3"}
+var myOwnListOfBrowsers = [
+    [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]
+];
+var myParser = new UAParser({ browser: myOwnListOfBrowsers });
+var myUA = 'Mozilla/5.0 MyBrowser/1.3';
+console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3"}
 ```
-
 
 # Development
 
-## Contribute
+## Sponsors
+
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/backers.svg?avatarHeight=64" height="80"/></a> <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/sponsors.svg?avatarHeight=64" height="80"/></a>
+
+<a href="https://www.paypal.me/faisalman/"><img src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" height="40"></a>
+
+## Contributors
+
+<a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
+
+## How To Contribute
 
 * Fork and clone this repository
 * Make some changes as required
-* Write a unit test to showcase your feature
-* Run the test suites to make sure the changes you made didn't break anything `$ npm run test`
-* Commit and push to your own repository
-* Submit a pull request to this repository under `develop` branch
-* Profit? $$$
-
-## Build
-
-Build a minified & packed script
-
-```sh
-$ npm run build
-```
-
-
-# Donate
-
-Do you use & like UAParser.js but you don’t find a way to show some love? If yes, please consider donating to support this project. Otherwise, no worries, regardless of whether there is support or not, I will keep maintaining this project. Still, if you buy me a cup of coffee I would be more than happy though :)
-
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/faisalman/)
-
+* Write unit test to showcase its functionality
+* Run the test suites to make sure it's not breaking anything `$ npm test`
+* Submit a pull request under `develop` branch
 
 # License
 
 MIT License
 
-Copyright (c) 2012-2019 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2012-2021 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

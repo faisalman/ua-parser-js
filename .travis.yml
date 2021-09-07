@@ -1,3 +1,6 @@
+arch:
+ - amd64
+ - ppc64le
 language: node_js
 node_js:
     - stable
@@ -11,3 +14,5 @@ cache:
         - node_modules
 
 sudo: false
+
+script: npm run test-ci

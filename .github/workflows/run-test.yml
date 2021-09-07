@@ -1,0 +1,17 @@
+name: ua-parser-js-run-test
+
+on: [push, pull_request]
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [amd64, ppc64le]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: Run the test
+        run: |
+          npm install
+          npm run test-ci
