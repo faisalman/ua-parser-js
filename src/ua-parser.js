@@ -56,7 +56,8 @@
         SAMSUNG = 'Samsung',
         SONY    = 'Sony',
         XIAOMI  = 'Xiaomi',
-        ZEBRA   = 'Zebra';
+        ZEBRA   = 'Zebra',
+        FACEBOOK   = 'Facebook';
 
     ///////////
     // Helper
@@ -278,7 +279,7 @@
 
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
-            ], [[NAME, 'Facebook'], VERSION], [
+            ], [[NAME, FACEBOOK], VERSION], [
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(chromium|instagram)[\/ ]([-\w\.]+)/i                              // Chromium/Instagram
@@ -631,6 +632,10 @@
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, WEARABLE]], [
             /droid.+; (wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, WEARABLE]], [
+            /quest 2/i
+            ], [[MODEL, 'Quest 2'], [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
+            /quest/i
+            ], [[MODEL, 'Quest'], [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
 
             ///////////////////
             // EMBEDDED
