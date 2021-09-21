@@ -39,8 +39,7 @@ var methods     = [
         label       : 'os',
         list        : os,
         properties  : ['name', 'version']
-    }
-];
+}];
 
 describe('UAParser()', function () {
     var ua = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
@@ -63,6 +62,7 @@ for (var i in methods) {
                     describe('"' + methods[i]['list'][j].ua + '"', function () {
                         var expect = methods[i]['list'][j].expect;
                         var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];
+
                         methods[i]['properties'].forEach(function(m) {
                             it('should return ' + methods[i]['label'] + ' ' + m + ': ' + expect[m], function () {
                                 assert.strictEqual(result[m], expect[m] != 'undefined' ? expect[m] : undefined);
