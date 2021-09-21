@@ -269,6 +269,24 @@
         }
     },
     {
+        "desc": "Huawei Honor 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L41) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L41",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-AL10",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Huawei Nexus 6P",
         "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 6P Build/MTC19V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Mobile Safari/537",
         "expect": {
@@ -422,6 +440,42 @@
       }
     },
     {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-AL10",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L0C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L0C",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L29",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-TL00",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Huawei P20 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
@@ -499,6 +553,69 @@
         "expect": {
             "vendor": "Huawei",
             "model": "CDY-AN90",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L21",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L61) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L61",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L71) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L71",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L61D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L61D",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L61A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L61A",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L61D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L61D",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L71A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L71A",
             "type": "mobile"
         }
     },
