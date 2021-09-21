@@ -789,7 +789,7 @@
         }
     },
     {
-        "desc"    : "Oculus Browser",  
+        "desc"    : "Oculus Browser",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G920I Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/3.4.9 SamsungBrowser/4.0 Chrome/57.0.2987.146 Mobile VR Safari/537.36",
         "expect"  :
         {
@@ -800,26 +800,6 @@
     },
     {
         "desc"    : "Oculus Browser",
-        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.1; Pacific Build/N9F27L) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/4.0.0.17 SamsungBrowser/4.0 Chrome/61.0.3163.109 Mobile VR Safari/537.36",
-        "expect"  :
-        {
-            "name"    : "Oculus Browser",
-            "version" : "4.0.0.17",
-            "major"   : "4"
-        }
-    },
-    {
-        "desc"    : "Oculus Browser",
-        "ua"      : "Mozilla/5.0 (Linux; Android 9; SM-N960F) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/6.2.11.181027543 SamsungBrowser/4.0 Chrome/74.0.3729.182 Mobile VR Safari/537.36",
-        "expect"  :
-        {
-            "name"    : "Oculus Browser",
-            "version" : "6.2.11.181027543",
-            "major"   : "6"
-        }
-    },
-    {
-        "desc"    : "Oculus Browser (NOTE PARIS FROM https://developer.oculus.com/documentation/web/browser-specs/)",
         "ua"      : "Mozilla/5.0 (Linux; Android 10; Quest 2) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/15.0.0.0.22.280317669 SamsungBrowser/4.0 Chrome/89.0.4389.90 VR Safari/537.36",
         "expect"  :
         {
