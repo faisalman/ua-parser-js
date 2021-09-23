@@ -1648,6 +1648,15 @@
         }
     },
     {
+        "desc": "Sony Xperia 1ii",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SOG01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SOG01",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sony Xperia 10ii",
         "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AU52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
         "expect": {
