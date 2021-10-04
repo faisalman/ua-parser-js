@@ -632,10 +632,8 @@
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, WEARABLE]], [
             /droid.+; (wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, WEARABLE]], [
-            /quest 2/i
-            ], [[MODEL, 'Quest 2'], [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
-            /quest/i
-            ], [[MODEL, 'Quest'], [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
+            /(quest( 2)?)/i                                                     // Oculus Quest
+            ], [MODEL, [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
 
             ///////////////////
             // EMBEDDED
