@@ -1054,6 +1054,24 @@
         }
     },
     {
+        "desc": "Oculus Quest",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Quest) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/15.0.0.0.22.280317669 SamsungBrowser/4.0 Chrome/89.0.4389.90 VR Safari/537.36",
+        "expect": {
+            "vendor": "Facebook",
+            "model": "Quest",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Oculus Quest 2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Quest 2) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/15.0.0.0.22.280317669 SamsungBrowser/4.0 Chrome/89.0.4389.90 VR Safari/537.36",
+        "expect": {
+            "vendor": "Facebook",
+            "model": "Quest 2",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "OnePlus One",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.4; A0001 Build/KTU84Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36",
         "expect": {

@@ -799,6 +799,16 @@
         }
     },
     {
+        "desc"    : "Oculus Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; Quest 2) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/15.0.0.0.22.280317669 SamsungBrowser/4.0 Chrome/89.0.4389.90 VR Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Oculus Browser",
+            "version" : "15.0.0.0.22.280317669",
+            "major"   : "15"
+        }
+    },
+    {
         "desc"    : "OmniWeb",
         "ua"      : "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US) AppleWebKit/85 (KHTML, like Gecko) OmniWeb/v558.48",
         "expect"  :
