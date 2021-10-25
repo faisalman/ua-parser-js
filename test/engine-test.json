@@ -1,5 +1,14 @@
 [
     {
+        "desc"    : "Blink",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G920I Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/3.4.9 SamsungBrowser/4.0 Chrome/57.0.2987.146 Mobile VR Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Blink",
+            "version" : "57.0.2987.146"
+        }
+    },
+    {
         "desc"    : "EdgeHTML",
         "ua"      : "Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0",
         "expect"  :
@@ -9,12 +18,30 @@
         }
     },
     {
+        "desc"    : "Flow",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) EkiohFlow/5.7.4.30559 Flow/5.7.4 (like Gecko Firefox/53.0 rv:53.0)",
+        "expect"  :
+        {
+            "name"    : "Flow",
+            "version" : "5.7.4.30559"
+        }
+    },
+    {
         "desc"    : "Gecko",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:2.0b9pre) Gecko/20110111 Firefox/4.0b9pre",
         "expect"  :
         {
             "name"    : "Gecko",
             "version" : "2.0b9pre"
+        }
+    },
+    {
+        "desc"    : "Goanna",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.1; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0",
+        "expect"  :
+        {
+            "name"    : "Goanna",
+            "version" : "2.2"
         }
     },
     {
@@ -69,6 +96,60 @@
         {
             "name"    : "WebKit",
             "version" : "533.19.4"
+        }
+    },
+    {
+        "desc"    : "WebKit",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/27.0.1453.110 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "WebKit",
+            "version" : "537.36"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 5.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 WebAppManager",
+        "expect"  :
+        {
+            "name"    : "Blink",
+            "version" : "68.0.3440.106"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 4.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.34 Safari/537.36 WebAppManager",
+        "expect"  :
+        {
+            "name"    : "Blink",
+            "version" : "53.0.2785.34"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 3.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.2.1 Chrome/38.0.2125.122 Safari/537.36 WebAppManager",
+        "expect"  :
+        {
+            "name"    : "Blink",
+            "version" : "38.0.2125.122"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 2.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/538.2 (KHTML, like Gecko) Large Screen WebAppManager Safari/538.2",
+        "expect"  :
+        {
+            "name"    : "WebKit",
+            "version" : "538.2"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 1.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.41 (KHTML, like Gecko) Large Screen WebAppManager Safari/537.41",
+        "expect"  :
+        {
+            "name"    : "WebKit",
+            "version" : "537.41"
         }
     }
 ]
