@@ -404,7 +404,7 @@
 
             // OPPO
             /; (\w+) bui.+ oppo/i,
-            /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007)\b/i
+            /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i
             ], [MODEL, [VENDOR, 'OPPO'], [TYPE, MOBILE]], [
 
             // Vivo

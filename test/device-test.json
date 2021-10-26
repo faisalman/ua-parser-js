@@ -1243,6 +1243,15 @@
         }
     },
     {
+        "desc": "OPPO Reno5 A",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A101OP) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "A101OP",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "OPPO Find X",
         "ua": "Mozilla/5.0 (Linux; Android 8.1; PAFM00 Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36",
         "expect": {
