@@ -160,6 +160,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/parser": "7.15.8",
+    "@babel/traverse": "7.15.4",
     "jshint": "~2.12.0",
     "mocha": "~8.2.0",
     "requirejs": "^2.3.2",

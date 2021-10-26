@@ -2,6 +2,8 @@ var fs          = require('fs');
 var safe        = require('safe-regex');
 var assert      = require('assert');
 var requirejs   = require('requirejs');
+var parseJS     = require('@babel/parser').parse;
+var traverse    = require('@babel/traverse').default;
 var UAParser    = require('./../src/ua-parser');
 var browsers    = require('./browser-test.json');
 var cpus        = require('./cpu-test.json');
@@ -137,12 +139,19 @@ describe('Testing regexes', function () {
 
     var regexes;
 
-    // todo: use AST-based instead of grep
-    before('Read main js file', function (done) {
-        fs.readFile('src/ua-parser.js', 'utf8', function (err, data) {
-            regexes = data.match(/(\/.+\/[ig]+)(?=[,\s\n])/g);
-            done();
+    before('Read main js file', function () {
+        var code = fs.readFileSync('src/ua-parser.js', 'utf8').toString();
+        var ast = parseJS(code, { sourceType: "script" });
+        regexes = [];
+        traverse(ast, {
+            RegExpLiteral: (path) => {
+                regexes.push(path.node.pattern);
+            }
         });
+
+        if (regexes.length === 0) {
+            throw new Error("Regexes cannot be empty!");
+        }
     });
 
     describe('Begin testing', function () {
@@ -156,4 +165,4 @@ describe('Testing regexes', function () {
             });
         });
     });
-})
+});
