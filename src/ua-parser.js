@@ -76,7 +76,7 @@
         },
         enumerize = function (arr) {
             var enums = {};
-            for (var i in arr) {
+            for (var i=0; i<arr.length; i++) {
                 enums[arr[i].toUpperCase()] = arr[i];
             }
             return enums;
