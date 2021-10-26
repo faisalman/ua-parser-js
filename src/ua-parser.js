@@ -123,7 +123,7 @@
                             q = props[p];
                             // check if given property is actually array
                             if (typeof q === OBJ_TYPE && q.length > 0) {
-                                if (q.length == 2) {
+                                if (q.length === 2) {
                                     if (typeof q[1] == FUNC_TYPE) {
                                         // assign modified match
                                         this[q[0]] = q[1].call(this, match);
@@ -131,7 +131,7 @@
                                         // assign given value, ignore regex match
                                         this[q[0]] = q[1];
                                     }
-                                } else if (q.length == 3) {
+                                } else if (q.length === 3) {
                                     // check whether function or regex
                                     if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) {
                                         // call function (usually string mapper)
@@ -140,7 +140,7 @@
                                         // sanitize match using given regex
                                         this[q[0]] = match ? match.replace(q[1], q[2]) : undefined;
                                     }
-                                } else if (q.length == 4) {
+                                } else if (q.length === 4) {
                                         this[q[0]] = match ? q[3].call(this, match.replace(q[1], q[2])) : undefined;
                                 }
                             } else {
