@@ -1603,6 +1603,15 @@
         }
     },
     {
+        "desc": "SONY Xperia 1 III",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A101SO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "A101SO",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sony G8141 (Xperia XZ Premium)",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; G8141) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36",
         "expect": {
