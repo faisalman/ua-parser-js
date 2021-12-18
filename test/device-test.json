@@ -1747,6 +1747,15 @@
         }
     },
     {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Andr0id 9; BRAVIA 4K GB ATV3 Build/PTT1.190515.001.S38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.0.180.DIA5.104 Model/Sony-BRAVIA-4K-GB-ATV3",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc"    : "Tesla",
         "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Tesla QtCarBrowser Safari/601.1",
         "expect"  :
