@@ -1902,6 +1902,15 @@
         }
     },
     {
+        "desc": "Xiaomi Mi CC9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 11; zh-cn; MI CC 9 Build/RKQ1.200826.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/15.5.18",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI CC 9",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi MI PAD 2",
         "ua": "Mozilla/5.0 (Linux; Android 5.1; MI PAD 2 Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Safari/537.36 [FB_IAB/FB4A;FBAV/137.0.0.24.91;]",
         "expect": {
