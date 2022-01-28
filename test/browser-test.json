@@ -1463,5 +1463,15 @@
             "version" : "4.2.7",
             "major"   : "4"
         }
+    },
+    {
+        "desc"    : "IE11 on Windows 7 (ua length >255)",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64; APCPMS=^N201205020840572565478A37A6F9C41BD33F_9975^; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E; MARKANYEPS#25118; Zoom 3.6.0; rv:11.0) like Gecko",
+        "expect"  :
+        {
+            "name"    : "IE",
+            "version" : "11.0",
+            "major"   : "11"
+        }
     }
 ]
