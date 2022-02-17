@@ -190,6 +190,16 @@
         }
     },
     {
+        "desc"    : "Chrome",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4758.102 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chrome",
+            "version" : "100.0.4758.102",
+            "major"   : "100"
+        }
+    },
+    {
             "desc"    : "Chrome Headless",
             "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome Safari/537.36",
             "expect"  :
@@ -407,6 +417,16 @@
             "name"    : "Firefox",
             "version" : "15.0a2",
             "major"   : "15"
+        }
+    },
+    {
+        "desc"    : "Firefox",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0",
+        "expect"  :
+        {
+            "name"    : "Firefox",
+            "version" : "100.0",
+            "major"   : "100"
         }
     },
     {
@@ -1256,6 +1276,16 @@
             "name"    : "Edge",
             "version" : "18.17763",
             "major"   : "18"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge 100",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1108.55 Safari/537.36 Edg/100.0.1108.55",
+        "expect"  :
+        {
+            "name"    : "Edge",
+            "version" : "100.0.1108.55",
+            "major"   : "100"
         }
     },
     {
