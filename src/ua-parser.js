@@ -211,6 +211,8 @@
             ], [VERSION, [NAME, 'Chrome']], [
             /edg(?:e|ios|a)?\/([\w\.]+)/i                                       // Microsoft Edge
             ], [VERSION, [NAME, 'Edge']], [
+            /HuaweiBrowser\/([\w\.]+)/i                                         // HuaweiBrowser
+            ], [VERSION, [NAME, 'HuaweiBrowser']], [
 
             // Presto based
             /(opera mini)\/([-\w\.]+)/i,                                        // Opera Mini
