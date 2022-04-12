@@ -57,7 +57,8 @@
         SONY    = 'Sony',
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
-        FACEBOOK   = 'Facebook';
+        FACEBOOK   = 'Facebook',
+        KAKAO   = 'Kakao';
 
     ///////////
     // Helper
@@ -286,6 +287,11 @@
             ], [NAME, VERSION], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
+
+            / wv\).+(chrome)\/([\w\.]+).+(kakaotalk)/i                          // KakaoTalk App
+            ], [[NAME, KAKAO+'Talk'], VERSION], [
+            / wv\).+(chrome)\/([\w\.]+).+(kakaostory)/i                         // KakaoStory App
+            ], [[NAME, KAKAO+'Story'], VERSION], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
