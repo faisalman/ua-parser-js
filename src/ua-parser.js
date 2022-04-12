@@ -58,7 +58,8 @@
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
         FACEBOOK   = 'Facebook',
-        KAKAO   = 'Kakao';
+        KAKAO   = 'Kakao',
+        NAVER   = 'Naver';
 
     ///////////
     // Helper
@@ -223,6 +224,9 @@
             /\bopr\/([\w\.]+)/i                                                 // Opera Webkit
             ], [VERSION, [NAME, OPERA]], [
 
+            /whale\/([-\w\.]+).+NAVER\((.*)\)/i                                 // Naver InApp
+            ], [VERSION,[NAME, /(.+);\s+(.+);\s+(.+);\s+(.+)/i, NAVER+' $1 $2']], [
+
             // Mixed
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
@@ -288,10 +292,8 @@
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
 
-            / wv\).+(chrome)\/([\w\.]+).+(kakaotalk)/i                          // KakaoTalk App
-            ], [[NAME, KAKAO+'Talk'], VERSION], [
-            / wv\).+(chrome)\/([\w\.]+).+(kakaostory)/i                         // KakaoStory App
-            ], [[NAME, KAKAO+'Story'], VERSION], [
+            / wv\).+chrome\/([\w\.]+).+kakao(.+)\//i                          // Kakao App
+            ], [VERSION, [NAME, /(.+)/i, KAKAO+'$1']], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
