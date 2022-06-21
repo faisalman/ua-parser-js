@@ -274,7 +274,8 @@
             /m?(qqbrowser|baiduboxapp|2345Explorer)[\/ ]?([\w\.]+)/i            // QQBrowser/Baidu App/2345 Browser
             ], [NAME, VERSION], [
             /(metasr)[\/ ]?([\w\.]+)/i,                                         // SouGouBrowser
-            /(lbbrowser)/i                                                      // LieBao Browser
+            /(lbbrowser)/i,                                                     // LieBao Browser
+            /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME], [
 
             // WebView
