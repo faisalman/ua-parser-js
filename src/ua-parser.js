@@ -701,7 +701,7 @@
             ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
 
             // Mobile OSes
-            /droid ([\w\.]+)\b.+(android[- ]x86)/i                              // Android-x86
+            /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
             ], [VERSION, NAME], [                                               // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS
             /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,                                      // Blackberry
