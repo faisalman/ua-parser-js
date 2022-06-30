@@ -211,8 +211,6 @@
             ], [VERSION, [NAME, 'Chrome']], [
             /edg(?:e|ios|a)?\/([\w\.]+)/i                                       // Microsoft Edge
             ], [VERSION, [NAME, 'Edge']], [
-            /HuaweiBrowser\/([\w\.]+)/i                                         // HuaweiBrowser
-            ], [VERSION, [NAME, 'HuaweiBrowser']], [
 
             // Presto based
             /(opera mini)\/([-\w\.]+)/i,                                        // Opera Mini
@@ -267,8 +265,8 @@
             ], [VERSION, [NAME, FIREFOX]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
             ], [[NAME, '360 '+BROWSER]], [
-            /(oculus|samsung|sailfish)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1 '+BROWSER], VERSION], [                      // Oculus/Samsung/Sailfish Browser
+            /(oculus|samsung|sailfish|huawei)browser\/([\w\.]+)/i
+            ], [[NAME, /(.+)/, '$1 '+BROWSER], VERSION], [                      // Oculus/Samsung/Sailfish/Huawei Browser
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
