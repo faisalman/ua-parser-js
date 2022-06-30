@@ -1459,6 +1459,15 @@
         }
     },
     {
+        "desc": "Xiaomi TV",
+        "ua": "Mozilla/5.0 (Linux; Android 10; MiTV-MOOQ0 Build/QTG3.200305.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.61 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MiTV-MOOQ0",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Kindle Fire HD",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
         "expect": {
