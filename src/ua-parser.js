@@ -237,7 +237,8 @@
             ], [NAME, VERSION], [
             /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
             ], [VERSION, [NAME, 'UC'+BROWSER]], [
-            /\bqbcore\/([\w\.]+)/i                                              // WeChat Desktop for Windows Built-in Browser
+            /microm.+\bqbcore\/([\w\.]+)/i,                                     // WeChat Desktop for Windows Built-in Browser
+            /\bqbcore\/([\w\.]+).+microm/i
             ], [VERSION, [NAME, 'WeChat(Win) Desktop']], [
             /micromessenger\/([\w\.]+)/i                                        // WeChat
             ], [VERSION, [NAME, 'WeChat']], [

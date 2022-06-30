@@ -1449,6 +1449,16 @@
         }
     },
     {
+        "desc"    : "Supposed not to be detected as WeChat",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.124 Safari/537.36 qblink wegame.exe WeGame/5.1.1.11100 QBCore/3.70.107.400 QQBrowser/9.0.2524.400",
+        "expect"  :
+        {
+            "name"    : "QQBrowser",
+            "version" : "9.0.2524.400",
+            "major"   : "9"
+        }
+    },
+    {
         "desc"    : "GSA on iOS",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) GSA/30.1.161623614 Mobile/14F89 Safari/602.1",
         "expect"  :
