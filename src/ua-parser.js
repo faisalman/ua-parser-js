@@ -37,7 +37,7 @@
         SMARTTV     = 'smarttv',
         WEARABLE    = 'wearable',
         EMBEDDED    = 'embedded',
-        UA_MAX_LENGTH = 275;
+        UA_MAX_LENGTH = 350;
 
     var AMAZON  = 'Amazon',
         APPLE   = 'Apple',
