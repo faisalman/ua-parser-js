@@ -38,17 +38,18 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
-Dolphin, Doris, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, Firebird,
-Firefox [Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, ICE Browser, IE, 
-IEMobile, IceApe, IceCat, IceDragon, Iceweasel, Instagram, Iridium, Iron, Jasmine, 
-K-Meleon, Kindle, Klar, Konqueror, LBBROWSER, Line, LinkedIn, Links, Lunascape, Lynx, 
-MIUI Browser, Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, 
-Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, 
-Oculus Browser, OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, 
-Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, 
-Safari, Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Vivaldi, 
-Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
+Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
+Firebird, Firefox [Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, 
+ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, Instagram, 
+Iridium, Iron, Jasmine, K-Meleon, Kindle, Klar, Konqueror, LBBROWSER, Line, 
+LinkedIn, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, 
+MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, 
+Netscape, NokiaBrowser, Obigo, Oculus Browser, OmniWeb, Opera Coast, 
+Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ, 
+QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, Sailfish Browser, 
+Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, 
+Tesla, Tizen Browser, UCBrowser, UP.Browser, Vivaldi, Waterfox, WeChat, Weibo, 
+Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```
