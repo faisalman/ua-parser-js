@@ -39,7 +39,7 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
 Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
-Firebird, Firefox [Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, 
+Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, 
 ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, Instagram, 
 Iridium, Iron, Jasmine, K-Meleon, Kindle, Klar, Konqueror, LBBROWSER, Line, 
 LinkedIn, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, 
