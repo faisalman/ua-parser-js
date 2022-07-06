@@ -1545,6 +1545,16 @@
         }
     },
     {
+        "desc"    : "Yeti",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.0 Safari/537.36 (compatible; Yeti/1.1; +http://naver.me/spd)",
+        "expect"  : 
+        {
+            "name"    : "Yeti",
+            "version" : "1.1",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Electron",
         "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Atom/1.41.0 Chrome/69.0.3497.128 Electron/4.2.7 Safari/537.36",
         "expect"  :

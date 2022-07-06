@@ -94,7 +94,7 @@ Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix,
 Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, PCLinuxOS, 
 Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, RISC OS, Sabayon, 
 Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, 
-VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
+VectorLinux, WebOS, Windows [Phone/Mobile], Yeti, Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
