@@ -1711,6 +1711,15 @@
         }
     },
     {
+        "desc": "Sharp AQUOS-TVX19B",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AQUOS-TVX19B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "AQUOS-TVX19B",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Sharp Aquos B10",
         "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-A01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Mobile Safari/537.36",
         "expect": {
@@ -1887,6 +1896,24 @@
         "expect": {
             "vendor": "Sony",
             "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Android 9; BRAVIA 4K GB ATV3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony Bravia 4k UR2",
+        "ua": "Mozilla/5.0 (Linux: Andr0id 9: BRAVIA 4K UR2 Build/PTT1.190515.001.S104) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.5.431.DIA5HBBTV.250 Model/Sony-BRAVIA-4K-UR2",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K UR2",
             "type": "smarttv"
         }
     },
