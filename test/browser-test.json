@@ -1571,5 +1571,25 @@
         {
             "name"    : "LinkedIn"
         }
+    },
+    {
+        "desc"    : "Safari including comma in minor version number",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6,2 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Safari",
+            "version" : "15.6,2",
+            "major"   : "15"
+        }
+    },
+    {
+        "desc"    : "Mobile Safari including comma in minor version number",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 15_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6,2 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "Mobile Safari",
+            "version" : "15.6,2",
+            "major"   : "15"
+        }
     }
 ]
