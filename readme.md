@@ -61,6 +61,13 @@ Yandex, baidu, iCab, w3m, Whale Browser...
 # Possible 'device.type':
 console, mobile, tablet, smarttv, wearable, embedded
 
+##########
+# NOTE: 'desktop' is not a possible device type. 
+# UAParser only reports info directly available from the UA string, which is not the case for 'desktop' device type.
+# If you wish to detect desktop devices, you must handle the needed logic yourself.
+# You can read more about it in this issue: https://github.com/faisalman/ua-parser-js/issues/182
+##########
+
 # Possible 'device.vendor':
 Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
 Essential, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Lenovo, LG, 
