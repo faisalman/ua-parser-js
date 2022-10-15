@@ -1639,6 +1639,15 @@
         }
     },
     {
+        "desc": "Samsung Galaxy Tab S8",
+        "ua": "Mozilla/5.0 (Linux; Android 12; SM-X706B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-X706B",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Samsung Galaxy Tab S",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-T700 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
         "expect": {
