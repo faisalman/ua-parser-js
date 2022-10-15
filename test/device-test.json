@@ -197,6 +197,15 @@
         }
     },
     {
+        "desc": "Mobile (DuckDuckGo mobile browser)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile DuckDuckGo/5 Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Essential PH-1",
         "ua": "Mozilla/5.0 (Linux; Android 9; PH-1 Build/PPR1.180905.036) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36",
         "expect": {
@@ -265,6 +274,24 @@
         "expect": {
             "vendor": "Huawei",
             "model": "U8860",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L41) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L41",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-AL10",
             "type": "mobile"
         }
     },
@@ -422,6 +449,42 @@
       }
     },
     {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-AL10",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L0C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L0C",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L29",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-TL00",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Huawei P20 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
@@ -499,6 +562,69 @@
         "expect": {
             "vendor": "Huawei",
             "model": "CDY-AN90",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L21",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L61) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L61",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L71) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L71",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L61D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L61D",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L61A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L61A",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L61D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L61D",
+            "type": "mobile"
+        }
+      },
+      {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L71A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L71A",
             "type": "mobile"
         }
     },
@@ -1342,6 +1468,15 @@
         }
     },
     {
+        "desc": "Xiaomi TV",
+        "ua": "Mozilla/5.0 (Linux; Android 10; MiTV-MOOQ0 Build/QTG3.200305.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.61 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MiTV-MOOQ0",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Kindle Fire HD",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
         "expect": {
@@ -1504,6 +1639,15 @@
         }
     },
     {
+        "desc": "Samsung Galaxy Tab S8",
+        "ua": "Mozilla/5.0 (Linux; Android 12; SM-X706B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-X706B",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Samsung Galaxy Tab S",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-T700 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
         "expect": {
@@ -1576,6 +1720,15 @@
         }
     },
     {
+        "desc": "Sharp AQUOS-TVX19B",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AQUOS-TVX19B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "AQUOS-TVX19B",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Sharp Aquos B10",
         "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-A01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Mobile Safari/537.36",
         "expect": {
@@ -1599,6 +1752,15 @@
         "expect": {
             "vendor": "Sharp",
             "model": "SHV42",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "SONY Xperia 1 III",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A101SO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "A101SO",
             "type": "mobile"
         }
     },
@@ -1735,6 +1897,33 @@
             "vendor": "Sony",
             "model": "Xperia Tablet",
             "type": "tablet"
+        }
+    },
+    {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Andr0id 9; BRAVIA 4K GB ATV3 Build/PTT1.190515.001.S38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.0.180.DIA5.104 Model/Sony-BRAVIA-4K-GB-ATV3",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Android 9; BRAVIA 4K GB ATV3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony Bravia 4k UR2",
+        "ua": "Mozilla/5.0 (Linux: Andr0id 9: BRAVIA 4K UR2 Build/PTT1.190515.001.S104) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.5.431.DIA5HBBTV.250 Model/Sony-BRAVIA-4K-UR2",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K UR2",
+            "type": "smarttv"
         }
     },
     {
@@ -1880,6 +2069,15 @@
         "expect": {
             "vendor": "Xiaomi",
             "model": "Mi A2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi CC9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 11; zh-cn; MI CC 9 Build/RKQ1.200826.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/15.5.18",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI CC 9",
             "type": "mobile"
         }
     },

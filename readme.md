@@ -19,16 +19,59 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 * Source    : https://github.com/faisalman/ua-parser-js
 
 # Documentation
+### UAParser([user-agent][,extensions])
+typeof `user-agent` "string".
+
+typeof `extensions` "array".
+
+In The Browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in nodejs for the function to work.
+Usually you can find the user agent in:
+`request.headers["user-agent"]`.
+
 
 ## Constructor
-
+When you call `UAParser` with the `new` keyword `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
+Like so:
 * `new UAParser([uastring][,extensions])`
-    * returns new instance
+```js
+let parser = new UAParser("user-agent"); // you need to pass the user-agent for nodejs
+console.log(parser); // {}
+let parserResults = parser.getResults();
+console.log(parserResults);
+/** {
+  "ua": "",
+  "browser": {},
+  "engine": {},
+  "os": {},
+  "device": {},
+  "cpu": {}
+} */
+```
 
+When you call UAParser without the `new` keyword, it will automatically call `getResults()` function and return the parsed results.
 * `UAParser([uastring][,extensions])`
     * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 ## Methods
+
+#### Methods table
+The methods are self explanatory, here's a small overview on all the available methods:
+*  `getResult()` - returns all function object calls, user-agent string, browser info, cpu, device, engine, os:
+`{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`.
+
+ *  `getBrowser()`      - returns the browser name and version.
+ *  `getDevice()`       - returns the device model, type, vendor.
+ *  `getEngine()`       - returns the current browser engine name and version.
+ *  `getOS()`           - returns the running operating system name and version.
+ *  `getCPU()`          - returns CPU architectural design name.
+ *  `getUA()`           - returns the user-agent string.
+ *  `setUA(user-agent)` - set a custom user-agent to be parsed.
+
+
+---
+
+* `getResult()`
+    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 * `getBrowser()`
     * returns `{ name: '', version: '' }`
@@ -38,17 +81,18 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Comodo Dragon, Dillo,
-Dolphin, Doris, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, Firebird,
-Firefox [Reality], Flock, Flow, GSA, GoBrowser, ICE Browser, IE, IEMobile, IceApe, 
-IceCat, IceDragon, Iceweasel, Instagram, Iridium, Iron, Jasmine, K-Meleon,
-Kindle, Klar, Konqueror, LBBROWSER, Line, Links, Lunascape, Lynx, MIUI Browser,
-Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic,
-Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser,
-OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, 
-Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
-Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Vivaldi, 
-Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
+Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
+Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, 
+ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, Instagram, 
+Iridium, Iron, Jasmine, K-Meleon, Kindle, Klar, Konqueror, LBBROWSER, Line, 
+LinkedIn, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, Maemo, Maxthon, 
+MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, 
+Netscape, NokiaBrowser, Obigo, Oculus Browser, OmniWeb, Opera Coast, 
+Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Polaris, Puffin, QQ, 
+QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, Sailfish Browser, 
+Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Swiftfox, 
+Tesla, Tizen Browser, UCBrowser, UP.Browser, Vivaldi, Waterfox, WeChat, Weibo, 
+Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
 ```
@@ -59,6 +103,13 @@ Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 ```sh
 # Possible 'device.type':
 console, mobile, tablet, smarttv, wearable, embedded
+
+##########
+# NOTE: 'desktop' is not a possible device type. 
+# UAParser only reports info directly available from the UA string, which is not the case for 'desktop' device type.
+# If you wish to detect desktop devices, you must handle the needed logic yourself.
+# You can read more about it in this issue: https://github.com/faisalman/ua-parser-js/issues/182
+##########
 
 # Possible 'device.vendor':
 Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
@@ -88,11 +139,12 @@ NetSurf, Presto, Tasman, Trident, w3m, WebKit
 # Possible 'os.name'
 AIX, Amiga OS, Android[-x86], Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
 Contiki, Fedora, Firefox OS, FreeBSD, Debian, Deepin, DragonFly, elementary OS, 
-Fuchsia, Gentoo, GhostBSD, GNU, Haiku, HP-UX, Hurd, iOS, Joli, KaiOS, Linpus, Linspire,
-Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix, Mint, Morph OS, NetBSD,
-Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, 
-Raspbian, RedHat, RIM Tablet OS, RISC OS, Sabayon, Sailfish, Series40, Slackware, Solaris, 
-SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
+Fuchsia, Gentoo, GhostBSD, GNU, Haiku, HarmonyOS, HP-UX, Hurd, iOS, Joli, KaiOS, 
+Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix, 
+Mint, Morph OS, NetBSD, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PC-BSD, PCLinuxOS, 
+Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, RISC OS, Sabayon, 
+Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, 
+VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
@@ -104,9 +156,6 @@ SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], 
 # Possible 'cpu.architecture'
 68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
-
-* `getResult()`
-    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 * `getUA()`
     * returns UA string of current instance
@@ -190,6 +239,8 @@ SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, WebOS, Windows [Phone/Mobile], 
 ```
 
 ## Using node.js
+
+Note: Device information is not available in the NodeJS environment.
 
 ```sh
 $ npm install ua-parser-js

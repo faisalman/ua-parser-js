@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "1.0.2",
+  "version": "1.0.32",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment",
   "keywords": [
@@ -141,6 +141,10 @@
     "Zach Bjornson <zbbjornson@gmail.com>"
   ],
   "main": "src/ua-parser.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
