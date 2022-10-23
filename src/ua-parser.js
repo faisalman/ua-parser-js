@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v0.7.31
+/* UAParser.js v0.7.32
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -17,7 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.31',
+    var LIBVERSION  = '0.7.32',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -330,7 +330,10 @@
             /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
                                                                                 // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir/Obigo/Mosaic/Go/ICE/UP.Browser
             /(links) \(([\w\.]+)/i                                              // Links
-            ], [NAME, VERSION]
+            ], [NAME, VERSION], [
+            
+            /(cobalt)\/([\w\.]+)/i                                              // Cobalt
+            ], [NAME, [VERSION, /master.|lts./, ""]]
         ],
 
         cpu : [[

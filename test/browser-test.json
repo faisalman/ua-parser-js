@@ -1591,5 +1591,41 @@
             "version" : "15.6,2",
             "major"   : "15"
         }
+    },
+    {
+        "desc"     : "Cobalt 23 Master",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/23.master.0.0-devel (unlike Gecko) v8/8.8.278.8-jit gles Starboard/15",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "23.0.0",
+            "major"  : "23"
+        }
+    },
+    {
+        "desc"     : "Cobalt 23 LTS",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/23.lts.1.0-qa (unlike Gecko) v8/8.8.278.8-jit gles Starboard/15",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "23.1.0",
+            "major"  : "23"
+        }
+    },
+    {
+        "desc"     : "Cobalt 11",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/11.0-qa (unlike Gecko) Starboard/6",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "11.0",
+            "major"  : "11"
+        }
+    },
+    {
+        "desc"     : "Cobalt 9",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/9.0-qa (unlike Gecko) Starboard/4",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "9.0",
+            "major"  : "9"
+        }
     }
 ]
