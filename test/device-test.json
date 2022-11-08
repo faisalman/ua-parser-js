@@ -791,6 +791,24 @@
         }
     },
     {
+        "desc": "JVC LT-43V55LFA Smart TV",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB211 VSTVB MB200 HbbTV/1.2.1 (; JVC; MB211; 3.19.4.2; _TV_NT72563_2017 SmartTvA/3.0.0",
+        "expect": {
+            "vendor": "JVC",
+            "model": "MB211",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "JVC LT-43V65LUA Smart TV",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB130 VSTVB MB100 HbbTV/1.2.1 (; JVC; MB130; 5.7.20.0; _TV_G10_2017;) SmartTvA/3.0.0",
+        "expect": {
+            "vendor": "JVC",
+            "model": "MB130",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Lenovo Tab 2",
         "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
         "expect": {
