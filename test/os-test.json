@@ -1044,6 +1044,15 @@
         }
     },
     {
+        "desc"    : "Panasonic Viera",
+        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "expect"  :
+        {
+            "name"    : "Viera",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "HP-UX",
         "ua"      : "Mozilla/5.0 (X11; U; HP-UX 9000/785; es-ES; rv:1.0.1) Gecko/20020827 Netscape/7.0",
         "expect"  :
