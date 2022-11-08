@@ -1459,6 +1459,15 @@
         }
     },
     {
+        "desc": "Panasonic DMR-HST130 SAT receiver",
+        "ua": "HbbTV/1.1.1 (+PVR;Panasonic;DIGA WebKit M8658;3.420;;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "DIGA WebKit M8658",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Philips SmartTV",
         "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect": {
