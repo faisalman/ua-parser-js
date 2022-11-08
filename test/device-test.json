@@ -1441,6 +1441,15 @@
         }
     },
     {
+        "desc": "Panasonic TX-40FXW724 SmartTV",
+        "ua": "HbbTV/1.4.1 (+DRM;Panasonic;SmartTV2018mid;3.024;4301-0003 0002-0000;SmartTV2018;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "SmartTV2018mid",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Philips SmartTV",
         "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect": {
