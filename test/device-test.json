@@ -1432,6 +1432,15 @@
         }
     },
     {
+        "desc": "Panasonic TX-32CSW514 SmartTV",
+        "ua": "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "VIERA 2015",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Philips SmartTV",
         "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect": {
