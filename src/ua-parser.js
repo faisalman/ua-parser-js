@@ -52,6 +52,7 @@
         LG      = 'LG',
         MICROSOFT = 'Microsoft',
         MOTOROLA  = 'Motorola',
+        NETRANGE= 'Netrange',
         OPERA   = 'Opera',
         PANASONIC = 'Panasonic',
         SAMSUNG = 'Samsung',
@@ -734,8 +735,10 @@
             ], [[NAME, 'Chromium OS'], VERSION],[
 
             // Smart TVs
-            /Panasonic;VIERA/i                                                // Panasonic Viera
+            /Panasonic;VIERA/i                                                  // Panasonic Viera
             ], [[NAME, VIERA]], [
+            /NETRANGEMMH/i                                                      // Netrange
+            ], [[NAME, NETRANGE]], [
 
 
             // Console
