@@ -1450,6 +1450,15 @@
         }
     },
     {
+        "desc": "Panasonic TX-43HXW904 SmartTV",
+        "ua": "HbbTV/1.5.1 (+DRM;Panasonic;SmartTV2020mid;3.326;4301-0003 0008-0000;com.panasonic.SmartTV2020mid;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "SmartTV2020mid",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Philips SmartTV",
         "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect": {
