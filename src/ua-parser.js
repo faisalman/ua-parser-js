@@ -53,6 +53,7 @@
         MICROSOFT = 'Microsoft',
         MOTOROLA  = 'Motorola',
         NETRANGE= 'Netrange',
+        NETTV   = 'NetTV',
         OPERA   = 'Opera',
         PANASONIC = 'Panasonic',
         SAMSUNG = 'Samsung',
@@ -739,6 +740,8 @@
             ], [[NAME, VIERA]], [
             /NETRANGEMMH/i                                                      // Netrange
             ], [[NAME, NETRANGE]], [
+            /nettv\/(\d\.\d.\d)/i                                               // NetTV
+            ], [VERSION, [NAME, NETTV]], [
 
 
             // Console
