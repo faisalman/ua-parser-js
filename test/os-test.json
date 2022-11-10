@@ -198,6 +198,15 @@
         }
     },
     {
+        "desc"    : "Tizen 6.0",
+        "ua"      : "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
+        "expect"  :
+        {
+            "name"    : "Tizen",
+            "version" : "6.0"
+        }
+    },
+    {
         "desc"    : "Android",
         "ua"      : "Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; VM670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko)",
         "expect"  :
