@@ -1810,6 +1810,15 @@
         }
     },
     {
+        "desc": "Samsung SmartTV HBBTV",
+        "ua": "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2021:UAU7000",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Sharp AQUOS-TVX19B",
         "ua": "Mozilla/5.0 (Linux; Android 9; AQUOS-TVX19B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
         "expect": {
