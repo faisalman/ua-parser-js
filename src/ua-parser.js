@@ -772,7 +772,7 @@
             ], [NAME, VERSION]
         ],
         hbbtv : [[
-            /hbbtv\/(\d+\.\d+\.\d*) +\(([^;]*); *([^;]*); *([^;]*); *([^;]*); *([^;]*);/i      // HbbTV directive
+            /hbbtv\/(\d+\.\d+\.\d*) +\(([^;]*); *([^;]*); *([^;]*); *([^;]*); *([^;]*)/i      // HbbTV directive
             ], [VERSION, CAPABILITIES, [VENDOR, trim], [MODEL, trim], [SOFTWARE, trim], [HARDWARE, trim], [TYPE, SMARTTV]]
         ]
     };

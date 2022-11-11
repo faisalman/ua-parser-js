@@ -89,5 +89,18 @@
             "software": "PKG2.134EUA",
             "hardware": "2014"
         }
+    },
+    {
+        "desc"    : "Missing closing bracket (JVC MB211)",
+        "ua"      : "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB211 VSTVB MB200 HbbTV/1.2.1 (; JVC; MB211; 3.19.4.2; _TV_NT72563_2017 SmartTvA/3.0.0",
+        "expect"  :
+        {
+            "version" : "1.2.1",
+            "capabilities": "",
+            "vendor": "JVC",
+            "model": "MB211",
+            "software": "3.19.4.2",
+            "hardware": "_TV_NT72563_2017 SmartTvA/3.0.0"
+        }
     }
 ]
