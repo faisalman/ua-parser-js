@@ -13,6 +13,19 @@
         }
     },
     {
+        "desc"    : "Samsung SmartTV 2020",
+        "ua"      : "HbbTV/1.4.1 (+DRM;Samsung;SmartTV2020:UTU7000;T-KTSU2DEUC-1302.5;KantSU2;urn:samsungtv:familyname:20_KANTSU2_UHD_BASIC:2020;) Tizen/5.5 (+TVPLUS+SmartHubLink) Chrome/69 LaTivu_1.0.1_2020 VID/35",
+        "expect"  :
+        {
+            "version" : "1.4.1",
+            "capabilities": "+DRM",
+            "vendor": "Samsung",
+            "model": "SmartTV2020:UTU7000",
+            "software": "T-KTSU2DEUC-1302.5",
+            "hardware": "KantSU2"
+        }
+    },
+    {
         "desc"    : "Panasonic Viera 2016",
         "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2016;3.280;7901-0003 0000-0100;)",
         "expect"  :
@@ -62,6 +75,19 @@
             "model": "43UQ75009LF",
             "software": "WEBOS22 03.10.36",
             "hardware": "W22_K8LP"
+        }
+    },
+    {
+        "desc"    : "Broken version (Sony KDL-40W605B)",
+        "ua"      : "Opera/9.80 (Linux armv7l; HbbTV/1.1. (;Sony; KDL40W605B; PKG2.134EUA; 2014;);) Presto/2 12.407 Version/12.50",
+        "expect"  :
+        {
+            "version" : "1.1.",
+            "capabilities": "",
+            "vendor": "Sony",
+            "model": "KDL40W605B",
+            "software": "PKG2.134EUA",
+            "hardware": "2014"
         }
     }
 ]
