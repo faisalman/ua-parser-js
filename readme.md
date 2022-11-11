@@ -62,6 +62,7 @@ The methods are self explanatory, here's a small overview on all the available m
  *  `getBrowser()`      - returns the browser name and version.
  *  `getDevice()`       - returns the device model, type, vendor.
  *  `getEngine()`       - returns the current browser engine name and version.
+ *  `getHbbTv()`        - returns HbbTv information, if present.
  *  `getOS()`           - returns the running operating system name and version.
  *  `getCPU()`          - returns CPU architectural design name.
  *  `getUA()`           - returns the user-agent string.
@@ -189,6 +190,14 @@ VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk, ...
             engine: {
                 name: "",
                 version: ""
+            },
+            hbbtv: {
+                version: "",
+                capabilities: "",
+                "vendor": "",
+                "model": "",
+                "software": "",
+                "hardware": ""
             },
             os: {
                 name: "",

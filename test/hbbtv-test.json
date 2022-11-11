@@ -1,0 +1,106 @@
+[
+    {
+        "desc"    : "Samsung SmartTV 2019",
+        "ua"      : "HbbTV/1.4.1 (+DRM;Samsung;SmartTV2019;URU7400;T-MSLDEUC-1315.4;Musel;urn;samsungtv:familyname:19_MUSEL_UHD:2019;) Tizen/5.0 (+TVPLUS+SmartHubLink) Chrome/63 LaTivu_1.0._2019 VID/14",
+        "expect"  :
+        {
+            "version" : "1.4.1",
+            "capabilities": "+DRM",
+            "vendor": "Samsung",
+            "model": "SmartTV2019",
+            "software": "URU7400",
+            "hardware": "T-MSLDEUC-1315.4"
+        }
+    },
+    {
+        "desc"    : "Samsung SmartTV 2020",
+        "ua"      : "HbbTV/1.4.1 (+DRM;Samsung;SmartTV2020:UTU7000;T-KTSU2DEUC-1302.5;KantSU2;urn:samsungtv:familyname:20_KANTSU2_UHD_BASIC:2020;) Tizen/5.5 (+TVPLUS+SmartHubLink) Chrome/69 LaTivu_1.0.1_2020 VID/35",
+        "expect"  :
+        {
+            "version" : "1.4.1",
+            "capabilities": "+DRM",
+            "vendor": "Samsung",
+            "model": "SmartTV2020:UTU7000",
+            "software": "T-KTSU2DEUC-1302.5",
+            "hardware": "KantSU2"
+        }
+    },
+    {
+        "desc"    : "Panasonic Viera 2016",
+        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2016;3.280;7901-0003 0000-0100;)",
+        "expect"  :
+        {
+            "version" : "1.2.1",
+            "capabilities": "undefined",
+            "vendor": "Panasonic",
+            "model": "VIERA 2016",
+            "software": "3.280",
+            "hardware": "7901-0003 0000-0100"
+        }
+    },
+    {
+        "desc"    : "Samsung Maple",
+        "ua"      : "HbbTV/1.1.1 (;;;;;) Maple;2011",
+        "expect"  :
+        {
+            "version" : "1.1.1",
+            "capabilities": "",
+            "vendor": "",
+            "model": "",
+            "software": "",
+            "hardware": ""
+        }
+    },
+    {
+        "desc"    : "FireTV Stick",
+        "ua"      : "Mozilla/5.0 (Linux; Andr0id 9; AFTEU014 Build/PS7269) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.6.501.Sophia.507 HbbTV/1.5.1 (;Vewd;HbbTV add-on;;;;) FVC/4.0 (Vewd;;) smarttv_AFTEU014_Build_0022650019460_Chromium_67.0.3396.99",
+        "expect"  :
+        {
+            "version" : "1.5.1",
+            "capabilities": "",
+            "vendor": "Vewd",
+            "model": "HbbTV add-on",
+            "software": "",
+            "hardware": ""
+        }
+    },
+    {
+        "desc"    : "LG 2022",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 (+DRM; LGE; 43UQ75009LF; WEBOS22 03.10.36; W22_K8LP; DTV_W22P;)",
+        "expect"  :
+        {
+            "version" : "1.6.1",
+            "capabilities": "+DRM",
+            "vendor": "LGE",
+            "model": "43UQ75009LF",
+            "software": "WEBOS22 03.10.36",
+            "hardware": "W22_K8LP"
+        }
+    },
+    {
+        "desc"    : "Broken version (Sony KDL-40W605B)",
+        "ua"      : "Opera/9.80 (Linux armv7l; HbbTV/1.1. (;Sony; KDL40W605B; PKG2.134EUA; 2014;);) Presto/2 12.407 Version/12.50",
+        "expect"  :
+        {
+            "version" : "1.1.",
+            "capabilities": "",
+            "vendor": "Sony",
+            "model": "KDL40W605B",
+            "software": "PKG2.134EUA",
+            "hardware": "2014"
+        }
+    },
+    {
+        "desc"    : "Missing closing bracket (JVC MB211)",
+        "ua"      : "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB211 VSTVB MB200 HbbTV/1.2.1 (; JVC; MB211; 3.19.4.2; _TV_NT72563_2017 SmartTvA/3.0.0",
+        "expect"  :
+        {
+            "version" : "1.2.1",
+            "capabilities": "",
+            "vendor": "JVC",
+            "model": "MB211",
+            "software": "3.19.4.2",
+            "hardware": "_TV_NT72563_2017 SmartTvA/3.0.0"
+        }
+    }
+]
