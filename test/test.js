@@ -9,6 +9,7 @@ var browsers    = require('./browser-test.json');
 var cpus        = require('./cpu-test.json');
 var devices     = require('./device-test.json');
 var engines     = require('./engine-test.json');
+var hbbtvs      = require('./hbbtv-test.json');
 var os          = require('./os-test.json');
 var parser      = new UAParser();
 var methods     = [
@@ -35,6 +36,12 @@ var methods     = [
         label       : 'engine',
         list        : engines,
         properties  : ['name', 'version']
+    },
+    {
+        title       : 'getHbbtv',
+        label       : 'hbbtv',
+        list        : hbbtvs,
+        properties  : ['version', 'vendor', 'model', 'software', 'hardware']
     },
     {
         title       : 'getOS',
@@ -86,6 +93,7 @@ describe('Returns', function () {
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},
+                hbbtv: { version: undefined, vendor: undefined, model: undefined, software: undefined, hardware: undefined },
                 os: { name: undefined, version: undefined }
         });
         done();

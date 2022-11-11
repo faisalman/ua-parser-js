@@ -1,0 +1,67 @@
+[
+    {
+        "desc"    : "Samsung SmartTV 2019",
+        "ua"      : "HbbTV/1.4.1 (+DRM;Samsung;SmartTV2019;URU7400;T-MSLDEUC-1315.4;Musel;urn;samsungtv:familyname:19_MUSEL_UHD:2019;) Tizen/5.0 (+TVPLUS+SmartHubLink) Chrome/63 LaTivu_1.0._2019 VID/14",
+        "expect"  :
+        {
+            "version" : "1.4.1",
+            "capabilities": "+DRM",
+            "vendor": "Samsung",
+            "model": "SmartTV2019",
+            "software": "URU7400",
+            "hardware": "T-MSLDEUC-1315.4"
+        }
+    },
+    {
+        "desc"    : "Panasonic Viera 2016",
+        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2016;3.280;7901-0003 0000-0100;)",
+        "expect"  :
+        {
+            "version" : "1.2.1",
+            "capabilities": "undefined",
+            "vendor": "Panasonic",
+            "model": "VIERA 2016",
+            "software": "3.280",
+            "hardware": "7901-0003 0000-0100"
+        }
+    },
+    {
+        "desc"    : "Samsung Maple",
+        "ua"      : "HbbTV/1.1.1 (;;;;;) Maple;2011",
+        "expect"  :
+        {
+            "version" : "1.1.1",
+            "capabilities": "",
+            "vendor": "",
+            "model": "",
+            "software": "",
+            "hardware": ""
+        }
+    },
+    {
+        "desc"    : "FireTV Stick",
+        "ua"      : "Mozilla/5.0 (Linux; Andr0id 9; AFTEU014 Build/PS7269) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.6.501.Sophia.507 HbbTV/1.5.1 (;Vewd;HbbTV add-on;;;;) FVC/4.0 (Vewd;;) smarttv_AFTEU014_Build_0022650019460_Chromium_67.0.3396.99",
+        "expect"  :
+        {
+            "version" : "1.5.1",
+            "capabilities": "",
+            "vendor": "Vewd",
+            "model": "HbbTV add-on",
+            "software": "",
+            "hardware": ""
+        }
+    },
+    {
+        "desc"    : "LG 2022",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 (+DRM; LGE; 43UQ75009LF; WEBOS22 03.10.36; W22_K8LP; DTV_W22P;)",
+        "expect"  :
+        {
+            "version" : "1.6.1",
+            "capabilities": "+DRM",
+            "vendor": "LGE",
+            "model": "43UQ75009LF",
+            "software": "WEBOS22 03.10.36",
+            "hardware": "W22_K8LP"
+        }
+    }
+]

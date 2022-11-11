@@ -30,6 +30,9 @@
         TYPE        = 'type',
         VENDOR      = 'vendor',
         VERSION     = 'version',
+        CAPABILITIES= 'capabilities',
+        SOFTWARE    = 'software',
+        HARDWARE    = 'hardware',
         ARCHITECTURE= 'architecture',
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
@@ -767,6 +770,10 @@
             /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux)/i,            // BeOS/OS2/AmigaOS/MorphOS/OpenVMS/Fuchsia/HP-UX
             /(unix) ?([\w\.]*)/i                                                // UNIX
             ], [NAME, VERSION]
+        ],
+        hbbtv : [[
+            /hbbtv\/(\d+\.\d+\.\d+) +\(([\w\+ ]*); *([\w\d- ]*); *([\w\d-\. ]*); *([\w\d-\. ]*); *([\w\d-\. ]*);/i         // HbbTV directive
+            ], [VERSION, CAPABILITIES, [VENDOR, trim], [MODEL, trim], [SOFTWARE, trim], [HARDWARE, trim], [TYPE, SMARTTV]]
         ]
     };
 
@@ -817,6 +824,16 @@
             rgxMapper.call(_engine, _ua, _rgxmap.engine);
             return _engine;
         };
+        this.getHbbtv = function () {
+            var _hbbtv = {};
+            _hbbtv[VERSION] = undefined;
+            _hbbtv[VENDOR] = undefined;
+            _hbbtv[MODEL] = undefined;
+            _hbbtv[SOFTWARE] = undefined;
+            _hbbtv[HARDWARE] = undefined;
+            rgxMapper.call(_hbbtv, _ua, _rgxmap.hbbtv);
+            return _hbbtv;
+        };
         this.getOS = function () {
             var _os = {};
             _os[NAME] = undefined;
@@ -829,6 +846,7 @@
                 ua      : this.getUA(),
                 browser : this.getBrowser(),
                 engine  : this.getEngine(),
+                hbbtv   : this.getHbbtv(),
                 os      : this.getOS(),
                 device  : this.getDevice(),
                 cpu     : this.getCPU()
@@ -850,6 +868,7 @@
     UAParser.CPU = enumerize([ARCHITECTURE]);
     UAParser.DEVICE = enumerize([MODEL, VENDOR, TYPE, CONSOLE, MOBILE, SMARTTV, TABLET, WEARABLE, EMBEDDED]);
     UAParser.ENGINE = UAParser.OS = enumerize([NAME, VERSION]);
+    UAParser.HBBTV = enumerize([VERSION, VENDOR, MODEL, SOFTWARE, HARDWARE]);
 
     ///////////
     // Export
