@@ -36,7 +36,7 @@ Like so:
 ```js
 let parser = new UAParser("user-agent"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
-let parserResults = parser.getResults();
+let parserResults = parser.getResult();
 console.log(parserResults);
 /** {
   "ua": "",
