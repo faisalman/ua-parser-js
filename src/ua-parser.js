@@ -394,10 +394,10 @@
             ], [MODEL, [VENDOR, APPLE]], [
 
             // Huawei
-            /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i
+            /\b((?:ag[rs][23]?|bah2?|sht|btv)-a?[lw]\d{2})\b/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
             /(?:huawei|honor)([-\w ]+)[;\)]/i,
-            /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i
+            /\b(nexus 6p|(BKK|DRA|WAS|SNE|ART|AMN|JKM|MRD|JSN|LDN|YAL|VOG|ELE|CLT|EML|ANE|LYA|TET|TAH)e?-[atu]?[ln][\dx][012359c][adn]?)\b/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
             // Xiaomi

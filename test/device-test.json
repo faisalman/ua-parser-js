@@ -1748,7 +1748,7 @@
     },
     {
         "desc": "Sharp Aquos L2",
-        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02 Build/S4045) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
         "expect": {
             "vendor": "Sharp",
             "model": "SH-L02",
