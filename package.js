@@ -1,6 +1,6 @@
 Package.describe({
   name: 'faisalman:ua-parser-js',
-  version: '1.0.32',
+  version: '1.0.33',
   summary: 'Lightweight JavaScript-based user-agent string parser',
   git: 'https://github.com/faisalman/ua-parser-js.git',
   documentation: 'readme.md'

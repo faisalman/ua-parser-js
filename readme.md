@@ -36,7 +36,7 @@ Like so:
 ```js
 let parser = new UAParser("user-agent"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
-let parserResults = parser.getResults();
+let parserResults = parser.getResult();
 console.log(parserResults);
 /** {
   "ua": "",
@@ -48,7 +48,7 @@ console.log(parserResults);
 } */
 ```
 
-When you call UAParser without the `new` keyword, it will automatically call `getResults()` function and return the parsed results.
+When you call UAParser without the `new` keyword, it will automatically call `getResult()` function and return the parsed results.
 * `UAParser([uastring][,extensions])`
     * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
