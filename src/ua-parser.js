@@ -775,6 +775,7 @@
         }
 
         var _ua = ua || ((typeof window !== UNDEF_TYPE && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+        var _uach = (typeof window !== UNDEF_TYPE && window.navigator && window.navigator.userAgentData) ? window.navigator.userAgentData : undefined;
         var _rgxmap = extensions ? extend(regexes, extensions) : regexes;
 
         this.getBrowser = function () {
@@ -797,6 +798,9 @@
             _device[MODEL] = undefined;
             _device[TYPE] = undefined;
             rgxMapper.call(_device, _ua, _rgxmap.device);
+            if (!_device[TYPE] && _uach && _uach.mobile) {
+                _device[TYPE] = MOBILE;
+            }
             return _device;
         };
         this.getEngine = function () {
@@ -811,6 +815,9 @@
             _os[NAME] = undefined;
             _os[VERSION] = undefined;
             rgxMapper.call(_os, _ua, _rgxmap.os);
+            if (!_os[NAME] && _uach && _uach.platform != 'Unknown') {
+                _os[NAME] = _uach.platform.replace(/chrome/i, 'Chromium').replace(/mac/i, 'Mac ');
+            }
             return _os;
         };
         this.getResult = function () {
