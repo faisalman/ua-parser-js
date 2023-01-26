@@ -1627,5 +1627,50 @@
             "version": "9.0",
             "major"  : "9"
         }
+    },
+    {
+        "desc"     : "KakaoTalk App Android",
+        "ua"       : "Mozilla/5.0 (Linux; Android 12; SM-G988N Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.79 Mobile Safari/537.36;KAKAOTALK 2409760",
+        "expect"   : {
+            "name"   : "KAKAOTALK",
+            "version": "2409760",
+            "major"  : "2409760"
+        }
+    },
+    {
+        "desc"     : "KakaoStory App Android",
+        "ua"       : "Mozilla/5.0 (Linux; Android 12; SM-G988N Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.79 Mobile Safari/537.36 KAKAOSTORY/6.8.3_21046",
+        "expect"   : {
+            "name"   : "KAKAOSTORY",
+            "version": "6.8.3_21046",
+            "major"  : "6"
+        }
+    },
+    {
+        "desc"     : "KakaoTalk App iOS",
+        "ua"       : "Mozilla/5.0 (iPhone; CPU; iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 BizWebView KAKAOTALK 9.7.6",
+        "expect"   : {
+            "name"   : "KAKAOTALK",
+            "version": "9.7.6",
+            "major"  : "9"
+        }
+    },
+    {
+        "desc"     : "Naver App Android",
+        "ua"       : "Mozilla/5.0 (Linux; Android 12; SM-G988N Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.232 Whale/1.0.0.0 Crosswalk/26.90.3.21 Mobile Safari/537.36 NAVER(inapp; search; 1010; 11.11.2)",
+        "expect"   : {
+            "name"   : "NAVER",
+            "version": "11.11.2",
+            "major"  : "11"
+        }
+    },
+    {
+        "desc"     : "Naver App iOS",
+        "ua"       : "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Mobile/15E148 Safari/605.1 NAVER(inapp; search; 720; 10.25.0; 11PRO)",
+        "expect"   : {
+            "name"   : "NAVER",
+            "version": "10.25.0",
+            "major"  : "10"
+        }
     }
 ]

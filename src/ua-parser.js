@@ -58,9 +58,7 @@
         SONY    = 'Sony',
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
-        FACEBOOK   = 'Facebook',
-        KAKAO   = 'Kakao',
-        NAVER   = 'Naver';
+        FACEBOOK   = 'Facebook';
 
     ///////////
     // Helper
@@ -226,10 +224,6 @@
             /\bopr\/([\w\.]+)/i                                                 // Opera Webkit
             ], [VERSION, [NAME, OPERA]], [
 
-            /Safari\/([-\w\.]+).+NAVER\((.*)\)/i,                               // Naver InApp for iOS
-            /whale\/([-\w\.]+).+NAVER\((.*)\)/i                                 // Naver InApp Android
-            ], [VERSION,[NAME, /(.+); (.+); [0-9]+;.+/i, NAVER+' $1 $2']], [
-
             // Mixed
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
@@ -239,7 +233,7 @@
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
                                                                                 // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ, aka ShouQ
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
@@ -290,16 +284,14 @@
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
             ], [[NAME, FACEBOOK], VERSION], [
+            /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
+            /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(chromium|instagram)[\/ ]([-\w\.]+)/i                              // Chromium/Instagram
             ], [NAME, VERSION], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
-
-            /AppleWebKit\/([\w\.]+).+kakao(.*)\s+/i,                            // Kakao App for iOS
-            / wv\).+chrome\/([\w\.]+).+kakao(.+)\//i                            // Kakao App for Android
-            ], [VERSION, [NAME, /(.+)/i, KAKAO+'$1']], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
