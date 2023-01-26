@@ -818,6 +818,24 @@
         }
     },
     {
+        "desc": "Kobo eReader",
+        "ua": "Mozilla/5.0 (Unknown; Linux) AppleWebKit/538.1 (KHTML, like Gecko) Kobo eReader Safari/538.1",
+        "expect": {
+            "vendor": "Kobo",
+            "model": "eReader",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Kobo Touch",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.0; en-us;) AppleWebKit/538.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/538.1 (Kobo Touch 0377/4.20.14622)",
+        "expect": {
+            "vendor": "Kobo",
+            "model": "Touch",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Lenovo Tab 2",
         "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
         "expect": {
@@ -826,7 +844,7 @@
             "type": "tablet"
         }
     },
-  {
+    {
         "desc": "Lenovo Phone",
         "ua": "Mozilla/5.0 (Linux; Android 6.0; Lenovo PB2-650M Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/311.0.0.44.117;]",
         "expect": {
