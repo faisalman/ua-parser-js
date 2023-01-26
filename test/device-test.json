@@ -1585,6 +1585,15 @@
         }
     },
     {
+        "desc": "Samsung Galaxy S20 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SCG01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SCG01",
+            "type": "mobile"
+        }
+      },
+    {
         "desc": "Samsung Galaxy Note 10+",
         "ua": "Mozilla/5.0 (Linux; Android 9; SM-N976V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.89 Mobile Safari/537.36",
         "expect": {
