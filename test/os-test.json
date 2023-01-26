@@ -1057,7 +1057,7 @@
         "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
         "expect"  :
         {
-            "name"    : "Viera",
+            "name"    : "VIERA",
             "version" : "undefined"
         }
     },
@@ -1066,7 +1066,7 @@
         "ua"      : "Mozilla/5.0 (Linux; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36 OPR/46.0.2207.0 LOEWE-SL410/5.2.0.0 HbbTV/1.4.1 (; LOEWE; SL410; LOH/5.2.0.0;;) FVC/3.0 (LOEWE; SL410;) CE-HTML/1.0 Config (L:deu,CC:DEU) NETRANGEMMH",
         "expect"  :
         {
-            "name"    : "Netrange",
+            "name"    : "NETRANGE",
             "version" : "undefined"
         }
     },
@@ -1075,7 +1075,7 @@
         "ua"      : "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.2.1; en) Presto/2.6.33 Version/10.70",
         "expect"  :
         {
-            "name"    : "NetTV",
+            "name"    : "NETTV",
             "version" : "3.2.1"
         }
     },

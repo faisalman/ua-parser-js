@@ -1283,7 +1283,7 @@
         "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
         "expect"  :
         {
-            "name"    : "Viera",
+            "name"    : "VIERA",
             "version" : "undefined",
             "major"   : "undefined"
         }

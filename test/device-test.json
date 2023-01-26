@@ -1477,6 +1477,15 @@
         }
     },
     {
+        "desc": "Panasonic T31",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Panasonic T31 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.170 Mobile Safari/537.36 ",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "T31",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Panasonic TX-32CSW514 SmartTV",
         "ua": "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
         "expect": {
