@@ -1279,6 +1279,16 @@
         }
     },
     {
+        "desc"    : "Viera",
+        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "expect"  :
+        {
+            "name"    : "Viera",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
         "desc"    : "Yandex",
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.5 (KHTML, like Gecko) YaBrowser/1.0.1084.5402 Chrome/19.0.1084.5402 Safari/536.5",
         "expect"  :
