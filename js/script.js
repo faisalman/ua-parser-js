@@ -23,7 +23,7 @@ $(document)
         $('#demo-result').transition('fly up', function () {
             if (result.browser.name) {
                 var version = result.browser.version!==undefined?result.browser.version:'-';
-                $('#browser-txt').html('<span class="ui large label">' + result.browser.name + '</span><span class="ui large label">' + version + '</span>');
+                $('#browser-txt').html('<span class="ui large black label">' + result.browser.name + '</span><span class="ui large black label">' + version + '</span>');
                 $('#browser-img').attr('src', 'images/browsers/' + result.browser.name.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/browsers/default.png');
                 });
@@ -33,7 +33,7 @@ $(document)
             }
             if (result.engine.name) {
                 var version = result.engine.version!==undefined?result.engine.version:'-';
-                $('#engine-txt').html('<span class="ui large label">' + result.engine.name + '</span><span class="ui large label">' + version + '</span>');
+                $('#engine-txt').html('<span class="ui large black label">' + result.engine.name + '</span><span class="ui large black label">' + version + '</span>');
                 $('#engine-img').attr('src', 'images/engines/' + result.engine.name.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/engines/default.png');
                 });
@@ -43,7 +43,7 @@ $(document)
             }
             if (result.os.name) {
                 var version = result.os.version!==undefined?result.os.version:'-';
-                $('#os-txt').html('<span class="ui large label">' + result.os.name + '</span><span class="ui large label">' + version + '</span>');
+                $('#os-txt').html('<span class="ui large black label">' + result.os.name + '</span><span class="ui large black label">' + version + '</span>');
                 $('#os-img').attr('src', 'images/os/' + result.os.name.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/os/default.png');
                 });
@@ -52,7 +52,7 @@ $(document)
                 $('#os-img').attr('src', 'images/os/default.png');
             }
             if (result.cpu.architecture) {
-                $('#cpu-txt').html('<span class="ui large label">' + result.cpu.architecture + '</span>');
+                $('#cpu-txt').html('<span class="ui large black label">' + result.cpu.architecture + '</span>');
                 $('#cpu-img').attr('src', 'images/cpu/' + result.cpu.architecture.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/cpu/default.png');
                 });
@@ -61,7 +61,7 @@ $(document)
                 $('#cpu-img').attr('src', 'images/cpu/default.png');
             }
             if (result.device.type) {
-                $('#type-txt').html('<span class="ui large label">' + result.device.type + '</span>');
+                $('#type-txt').html('<span class="ui large black label">' + result.device.type + '</span>');
                 $('#type-img').attr('src', 'images/types/' + result.device.type.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/types/default.png');
                 });
@@ -72,7 +72,7 @@ $(document)
             if (result.device.vendor || result.device.model) {
                 var vendor = result.device.vendor!=undefined?result.device.vendor:'-';
                 var model = result.device.model!==undefined?result.device.model:'-';
-                $('#device-txt').html('<span class="ui large label">' + vendor + '</span><span class="ui large label">' + model + '</span>');
+                $('#device-txt').html('<span class="ui large black label">' + vendor + '</span><span class="ui large black label">' + model + '</span>');
                 if (result.device.vendor) {
                     $('#device-img').attr('src', 'images/companies/' + result.device.vendor.toLowerCase() + '.png').on('error', function () {
                         $(this).attr('src', 'images/companies/default.png');
@@ -87,7 +87,7 @@ $(document)
             if (result.gpu.vendor) {
                 var vendor = result.gpu.vendor!=undefined?result.gpu.vendor:'-';
                 var model = result.gpu.model!==undefined?result.gpu.model:'-';
-                $('#gpu-txt').html('<span class="ui large label">' + vendor + '</span><span class="ui large label">' + model + '</span>');
+                $('#gpu-txt').html('<span class="ui large black label">' + vendor + '</span><span class="ui large black label">' + model + '</span>');
                 $('#gpu-img').attr('src', 'images/companies/' + result.gpu.vendor.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/companies/default.png');
                 });

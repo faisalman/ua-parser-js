@@ -15,13 +15,13 @@ padding: 1em 0em;
 margin-left: 0.5em;
 }
 .masthead h1.ui.header {
-margin-top: 4.5em;
-font-size: 3.5em;
+margin-top: 3em;
+font-size: 7em;
 }
 .masthead h2 {
-font-size: 1.2em;
+font-size: 1.3em;
 font-weight: normal;
-margin: 0.5em 0 1em 0;
+margin: 0.5em 0 5em 0;
 }
 .masthead h2 a {
  color: #fff;
@@ -36,6 +36,10 @@ box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 background: #6435c9;
 background-image: linear-gradient(to right bottom, #6435c9, #7143d0, #7e51d6, #8a5edd, #966ce3);
 box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.ui.image.illustration {
+bottom: -1em;
+width:1000px;
 }
 .ui.vertical.stripe {
 padding: 8em 0em;
