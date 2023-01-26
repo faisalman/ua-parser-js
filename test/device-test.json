@@ -1765,6 +1765,15 @@
         }
     },
     {
+        "desc": "Sharp Aquos L2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SH-L02",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sharp Aquos R2",
         "ua": "Mozilla/5.0 (Linux; Android 8.0; SHV42) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36",
         "expect": {
