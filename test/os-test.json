@@ -198,6 +198,15 @@
         }
     },
     {
+        "desc"    : "Tizen 6.0",
+        "ua"      : "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
+        "expect"  :
+        {
+            "name"    : "Tizen",
+            "version" : "6.0"
+        }
+    },
+    {
         "desc"    : "Android",
         "ua"      : "Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; VM670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko)",
         "expect"  :
@@ -1041,6 +1050,33 @@
         {
             "name"    : "Palm",
             "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Panasonic Viera",
+        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "expect"  :
+        {
+            "name"    : "VIERA",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Netrange Smart TV",
+        "ua"      : "Mozilla/5.0 (Linux; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36 OPR/46.0.2207.0 LOEWE-SL410/5.2.0.0 HbbTV/1.4.1 (; LOEWE; SL410; LOH/5.2.0.0;;) FVC/3.0 (LOEWE; SL410;) CE-HTML/1.0 Config (L:deu,CC:DEU) NETRANGEMMH",
+        "expect"  :
+        {
+            "name"    : "NETRANGE",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "NetTV 3.2.1",
+        "ua"      : "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.2.1; en) Presto/2.6.33 Version/10.70",
+        "expect"  :
+        {
+            "name"    : "NETTV",
+            "version" : "3.2.1"
         }
     },
     {

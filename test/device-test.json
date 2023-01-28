@@ -800,6 +800,42 @@
         }
     },
     {
+        "desc": "JVC LT-43V55LFA Smart TV",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB211 VSTVB MB200 HbbTV/1.2.1 (; JVC; MB211; 3.19.4.2; _TV_NT72563_2017 SmartTvA/3.0.0",
+        "expect": {
+            "vendor": "JVC",
+            "model": "MB211",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "JVC LT-43V65LUA Smart TV",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB130 VSTVB MB100 HbbTV/1.2.1 (; JVC; MB130; 5.7.20.0; _TV_G10_2017;) SmartTvA/3.0.0",
+        "expect": {
+            "vendor": "JVC",
+            "model": "MB130",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Kobo eReader",
+        "ua": "Mozilla/5.0 (Unknown; Linux) AppleWebKit/538.1 (KHTML, like Gecko) Kobo eReader Safari/538.1",
+        "expect": {
+            "vendor": "Kobo",
+            "model": "eReader",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Kobo Touch",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.0; en-us;) AppleWebKit/538.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/538.1 (Kobo Touch 0377/4.20.14622)",
+        "expect": {
+            "vendor": "Kobo",
+            "model": "Touch",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Lenovo Tab 2",
         "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
         "expect": {
@@ -808,7 +844,7 @@
             "type": "tablet"
         }
     },
-  {
+    {
         "desc": "Lenovo Phone",
         "ua": "Mozilla/5.0 (Linux; Android 6.0; Lenovo PB2-650M Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/311.0.0.44.117;]",
         "expect": {
@@ -976,6 +1012,15 @@
         "expect": {
             "vendor": "LG",
             "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Loewe Smart TV",
+        "ua": "Mozilla/5.0 (Linux; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36 OPR/46.0.2207.0 LOEWE-SL410/5.2.0.0 HbbTV/1.4.1 (; LOEWE; SL410; LOH/5.2.0.0;;) FVC/3.0 (LOEWE; SL410;) CE-HTML/1.0 Config (L:deu,CC:DEU) NETRANGEMMH",
+        "expect": {
+            "vendor": "LOEWE",
+            "model": "SL410",
             "type": "smarttv"
         }
     },
@@ -1203,6 +1248,15 @@
         "expect": {
             "vendor": "Facebook",
             "model": "Quest 2",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Oculus Quest Pro",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; Quest Pro) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/24.4.0.22.60.426469926 SamsungBrowser/4.0 Chrome/106.0.5249.181 VR Safari/537.36",
+        "expect": {
+            "vendor": "Facebook",
+            "model": "Quest Pro",
             "type": "wearable"
         }
     },
@@ -1441,11 +1495,83 @@
         }
     },
     {
+        "desc": "Panasonic T31",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Panasonic T31 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.170 Mobile Safari/537.36 ",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "T31",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Panasonic TX-32CSW514 SmartTV",
+        "ua": "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "VIERA 2015",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Panasonic TX-40FXW724 SmartTV",
+        "ua": "HbbTV/1.4.1 (+DRM;Panasonic;SmartTV2018mid;3.024;4301-0003 0002-0000;SmartTV2018;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "SmartTV2018mid",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Panasonic TX-43HXW904 SmartTV",
+        "ua": "HbbTV/1.5.1 (+DRM;Panasonic;SmartTV2020mid;3.326;4301-0003 0008-0000;com.panasonic.SmartTV2020mid;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "SmartTV2020mid",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Panasonic DMR-HST130 SAT receiver",
+        "ua": "HbbTV/1.1.1 (+PVR;Panasonic;DIGA WebKit M8658;3.420;;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "DIGA WebKit M8658",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Philips SmartTV",
         "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect": {
             "vendor": "Philips",
             "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PFL6606K/02 SmartTV (2011)",
+        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PFL6606K/02 SmartTV (2013)",
+        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PHS5301/12 SmartTV (2016)",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36 OPR/29.0.1803.0 OMI/4.5.23.37.MOT2.13 HbbTV/1.2.1 (;Philips;32PHS5301/12;;_TV_MT5800;) Firmware/TPM161E_012.002.045.001 en",
+        "expect": {
+            "vendor": "Philips",
+            "model": "32PHS5301/12",
             "type": "smarttv"
         }
     },
@@ -1575,6 +1701,15 @@
             "type": "mobile"
         }
     },
+    {
+        "desc": "Samsung Galaxy S20 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SCG01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SCG01",
+            "type": "mobile"
+        }
+      },
     {
         "desc": "Samsung Galaxy Note 10+",
         "ua": "Mozilla/5.0 (Linux; Android 9; SM-N976V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.89 Mobile Safari/537.36",
@@ -1729,6 +1864,15 @@
         }
     },
     {
+        "desc": "Samsung SmartTV HBBTV",
+        "ua": "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2021:UAU7000",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Sharp AQUOS-TVX19B",
         "ua": "Mozilla/5.0 (Linux; Android 9; AQUOS-TVX19B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
         "expect": {
@@ -1749,6 +1893,15 @@
     {
         "desc": "Sharp Aquos L2",
         "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02 Build/S4045) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SH-L02",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sharp Aquos L2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
         "expect": {
             "vendor": "Sharp",
             "model": "SH-L02",
@@ -1953,6 +2106,26 @@
             "vendor": "Tesla",
             "model": "undefined",
             "type": "embedded"
+        }
+    },
+    {
+        "desc"    : "TechniSAT Digit ISIO S SAT receiver",
+        "ua"      : "Opera/9.80 (Linux sh4; U; HbbTV/1.1.1 (;;;;;); CE-HTML; TechniSat Digit ISIO S; de) Presto/2.9.167 Version/11.50",
+        "expect"  :
+        {
+            "vendor": "TechniSat",
+            "model": "Digit ISIO S",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc"    : "TechniSAT MultyVision SmartTV",
+        "ua"      : "Opera/9.80 (Linux i686; U; HbbTV/1.1.1 (;;;;;); CE-HTML; TechniSat MultyVision ISIO; de) Presto/2.9.167 Version/11.50",
+        "expect"  :
+        {
+            "vendor": "TechniSat",
+            "model": "MultyVision ISIO",
+            "type": "smarttv"
         }
     },
     {
