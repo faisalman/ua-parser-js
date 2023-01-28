@@ -23,7 +23,9 @@
       What <span class="ui massive black label">device.type</span> am I using?
     </h1>
     <div class="ui text container">
-      <h2><em><a href="https://faisalman.github.io/ua-parser-js">{UAParser.js}</a> abstracts away the hassle of <u>User-Agent</u> detection by turning them into a set of <u>simple</u> & <u>meaningful</u> data so you can<mark> focus on what really matters.</mark></em></h2> 
+      <h2>
+        <p><em><a href="https://faisalman.github.io/ua-parser-js">{UAParser.js}</a> abstracts away the hassle of <u>User-Agent</u> detection by turning them into a set of <u>simple</u> & <u>meaningful</u> data so you can focus on what really matters.</em></p><p><em>Now, detecting browser is as simple as <mark> UAParser().getBrowser() </mark></em>
+        </p></h2> 
     </div>
     <img class="ui centered image illustration" src="images/illustration.png"/>
   </div>
@@ -211,7 +213,7 @@
                   0-dependency Vanilla JS
                 </div>
               </h3>
-              <p>No framework needed. No transpiler required. Just a good ol' ES5 which should be able to run on most modern devices that are capable of executing JavaScript. Just insert the code and you're good to go.</p>
+              <p>No framework needed. No transpiler required. Just a good ol' ES3-compatible syntax that is able to run on relatively old browsers while also perform on most modern devices. Just insert the code and you're good to go.</p>
             </div>
           </div>
           <div class="column">
@@ -282,9 +284,7 @@
     </div>
     <div class="ui tall stacked segment" id="showcase">
       <div class="ui basic centered segment">
-        <h2 class="ui centered header">
-          Who's Using {UAParser.js}
-        </h2>
+        <h2 class="ui dividing header">Who's Using {UAParser.js} ?<div class="sub header">Showcasing some well-known companies that are using our library</div></h2>
       </div>
       <div class="ui basic centered segment">
         <div class="ui equal width stackable grid"">
@@ -543,6 +543,56 @@
           </div>
           <div class="row">
             <div class="column">
+              <img src="images/companies/zoho.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://mail.zoho.com" target="_blank" class="ui black button"><i class="envelope icon"></i>Zoho Mail</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/snapchat.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.snapchat.com/" target="_blank" class="ui blue button"><i class="snapchat ghost icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/udemy.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.udemy.com/" target="_blank" class="ui orange button"><i class="bullhorn icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/linktree.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://linktr.ee/" target="_blank" class="ui teal button"><i class="tree icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/blinkist.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.blinkist.com/" target="_blank" class="ui green button"><i class="book icon"></i>Website</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img src="images/companies/notion.png"/>
+              <div class="ui popup">
+                <div class="ui labeled icon small buttons">
+                  <a href="https://www.notion.so/" target="_blank" class="ui blue button"><i class="archive icon"></i>Web-based App</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
               <img src="images/companies/uber.png"/>
               <div class="ui popup">
                 <div class="ui labeled icon small buttons">
@@ -745,8 +795,21 @@
           </div>
         </div>
       </div>
-      <div class="ui horizontal divider">
-       USING IT TOO? INSERT YOUR COMPANY HERE
+    </div>
+    <div class="ui horizontal divider">
+      SUPPORTED BY THE AMAZING OPEN-SOURCE COMMUNITIES
+    </div>
+    <div class="ui tall stacked segment" id="showcase">
+      <div class="ui basic centered segment">
+        <h2 class="ui dividing header">Backers & Sponsors <div class="sub header">Those who give back and generously keep this library alive</div></h2>
+        <div class="description">
+          <a href="https://opencollective.com/ua-parser-js"><img class="ui centered image" src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=128"/>
+          <img class="ui centered image" src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=128"/></a>
+        </div>
+      </div>
+      <div class="ui basic centered segment">
+        <h2 class="ui dividing header">Contributors <div class="sub header">Those who collaborate and continuosly improve the code to be awesome</div></h2>
+        <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img class="ui centered image" src="https://contrib.rocks/image?repo=faisalman/ua-parser-js"/></a>
       </div>
     </div>
     <div class="ui hidden divider">
@@ -768,11 +831,12 @@
               <a href="https://opencollective.com/ua-parser-js" target="_blank" class="item"><img alt="OpenCollective" src="https://img.shields.io/opencollective/all/ua-parser-js?style=flat-square"></a>
               <a href="https://www.jsdelivr.com/package/npm/ua-parser-js" target="_blank" class="item"><img alt="jsDelivr" src="https://data.jsdelivr.com/v1/package/npm/ua-parser-js/badge"></a>
               <a href="https://cdnjs.com/libraries/UAParser.js" target="_blank" class="item"><img alt="Cdnjs" src="https://img.shields.io/cdnjs/v/UAParser.js?style=flat-square"></a>
-              <a href="https://openbase.com/js/ua-parser-js" target="_blank" class="item"><img alt="Openbase" src="https://badges.openbase.com/js/rating/ua-parser-js.svg"/></a>
+              <a href="https://openbase.com/js/ua-parser-js" target="_blank" class="item"><img alt="Openbase" src="https://badges.openbase.com/js/rating/ua-parser-js.svg"/></a>              
+              <iframe src="https://github.com/sponsors/faisalman/button" title="Github Sponsor" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
             </div>
           </div>
           <div class="ui right aligned basic segment">
-            <p>Licensed under MIT license. Copyright (c) 2012-2021 Faisal Salman.</p>
+            <p>Licensed under MIT license. Copyright (c) 2012-2023 Faisal Salman.</p>
           </div>
         </div>
       </div>
