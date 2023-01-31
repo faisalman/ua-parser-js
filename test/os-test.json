@@ -666,6 +666,15 @@
         }
     },
     {
+        "desc"    : "Chrome OS",
+        "ua"      : "Mozilla/5.0 (X11; CrOS x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chromium OS",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "Chromium OS",
         "ua"      : "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
         "expect"  :

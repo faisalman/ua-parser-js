@@ -738,7 +738,7 @@
             // Google Chromecast
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
             ], [VERSION, [NAME, CHROME+'cast']], [
-            /(cros) [\w]+ ([\w\.]+\w)/i                                         // Chromium OS
+            /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
             ], [[NAME, 'Chromium OS'], VERSION],[
 
             // Smart TVs
