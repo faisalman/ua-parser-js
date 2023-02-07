@@ -109,17 +109,17 @@ $(document)
     $('#demo-select').dropdown({
         values: values,
         onChange: function (val) {
-            $('#ua-txt-info').text('Result for:');
+            $('#ua-txt-info').text('For a given user-agent:');
             updateDemo(val);
         }
     });
     $('#demo-btn').click(function() {
-        $('#ua-txt-info').text('Result for:');
+        $('#ua-txt-info').text('For a given user-agent:');
         updateDemo($('input[name=custom-ua]').val());
     });
     $('input[name=custom-ua]').keypress(function (e) {
         if (e.which == 13) {
-            $('#ua-txt-info').text('Result for:');
+            $('#ua-txt-info').text('For a given user-agent:');
             updateDemo($(this).val());
             return false;
         }
