@@ -240,6 +240,8 @@
             ], [NAME, VERSION], [
             /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
             ], [VERSION, [NAME, 'UC'+BROWSER]], [
+            /myweb\/([\w\.]+)/i                                                 // Alipay MYWeb Browser
+            ], [VERSION, [NAME, 'MYWeb']], [
             /microm.+\bqbcore\/([\w\.]+)/i,                                     // WeChat Desktop for Windows Built-in Browser
             /\bqbcore\/([\w\.]+).+microm/i
             ], [VERSION, [NAME, 'WeChat(Win) Desktop']], [
