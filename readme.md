@@ -19,10 +19,7 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 * Source    : https://github.com/faisalman/ua-parser-js
 
 # Documentation
-### UAParser([user-agent][,extensions])
-typeof `user-agent` "string".
-
-typeof `extensions` "array".
+### UAParser([user-agent:string][,extensions:object])
 
 In The Browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in nodejs for the function to work.
 Usually you can find the user agent in:
@@ -32,7 +29,7 @@ Usually you can find the user agent in:
 ## Constructor
 When you call `UAParser` with the `new` keyword `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
 Like so:
-* `new UAParser([uastring][,extensions])`
+* `new UAParser([user-agent:string][,extensions:object])`
 ```js
 let parser = new UAParser("user-agent"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
@@ -49,7 +46,7 @@ console.log(parserResults);
 ```
 
 When you call UAParser without the `new` keyword, it will automatically call `getResult()` function and return the parsed results.
-* `UAParser([uastring][,extensions])`
+* `UAParser([user-agent:string][,extensions:object])`
     * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 ## Methods
@@ -67,13 +64,12 @@ The methods are self explanatory, here's a small overview on all the available m
  *  `getUA()`           - returns the user-agent string.
  *  `setUA(user-agent)` - set a custom user-agent to be parsed.
 
-
 ---
 
-* `getResult()`
-    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+* `getResult() : UAResult`
+    * returns `{ ua: '', browser: UABrowser {}, cpu: UACPU {}, device: UADevice {}, engine: UAEngine {}, os: UAOS {} }`
 
-* `getBrowser()`
+* `getBrowser() : UABrowser`
     * returns `{ name: '', version: '' }`
 
 ```sh
@@ -97,7 +93,7 @@ Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 # 'browser.version' determined dynamically
 ```
 
-* `getDevice()`
+* `getDevice() : UADevice`
     * returns `{ model: '', type: '', vendor: '' }`
 
 ```sh
@@ -121,7 +117,7 @@ Siemens, Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE
 # 'device.model' determined dynamically
 ```
 
-* `getEngine()`
+* `getEngine() : UAEngine`
     * returns `{ name: '', version: '' }`
 
 ```sh
@@ -132,7 +128,7 @@ NetSurf, Presto, Tasman, Trident, w3m, WebKit
 # 'engine.version' determined dynamically
 ```
 
-* `getOS()`
+* `getOS() : UAOS`
     * returns `{ name: '', version: '' }`
 
 ```sh
@@ -149,7 +145,7 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 # 'os.version' determined dynamically
 ```
 
-* `getCPU()`
+* `getCPU() : UACPU`
     * returns `{ architecture: '' }`
 
 ```sh
@@ -157,12 +153,91 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
-* `getUA()`
+* `getUA() : string`
     * returns UA string of current instance
 
 * `setUA(uastring)`
     * set UA string to be parsed
     * returns current instance
+
+#### * is() utility `since@1.1`
+
+```js
+let uap = new UAParser('Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537');
+
+uap.getBrowser().name;              // "IEMobile"
+uap.getBrowser().is("IEMobile");    // true
+uap.getCPU().is("ARM");             // true
+
+uap.getOS().name;                   // "Windows Phone"
+uap.getOS().is("Windows Phone");    // true
+
+uap.getDevice();                    // { vendor: "Nokia", model: "Lumia 635", type: "mobile" }
+uap.getResult().device;             // { vendor: "Nokia", model: "Lumia 635", type: "mobile" }
+
+uap.getDevice().is("mobile");       // true
+uap.getDevice().is("Lumia 635");    // true
+uap.getDevice().is("Nokia");        // true
+uap.getDevice().is("iPhone");       // false
+uap.getResult().device.is("Nokia"); // true
+uap.getResult().device.model;       // "Lumia 635"
+
+uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
+uap.getBrowser().is("IEMobile");    // false 
+uap.getBrowser().is("Chrome");      // true
+uap.getResult().browser.is("Edge"); // false
+uap.getResult().os.is("Mac OS");    // true
+uap.getResult().os.version;         // "10.6.8"
+uap.getEngine().is("Blink");        // true
+```
+
+#### * toString() utility `since@1.1`
+
+```js
+let uap = new UAParser('Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537');
+
+uap.getDevice();                    // { vendor: "Nokia", model: "Lumia 635", type: "mobile" }
+uap.getDevice().toString();         // "Nokia Lumia 635"
+
+uap.getResult().os.name;            // "Windows Phone"
+uap.getResult().os.version;         // "8.1"
+uap.getResult().os.toString();      // "Windows Phone 8.1"
+
+uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
+uap.getBrowser().name;              // Chrome 
+uap.getBrowser().version;           // 28.0.1500.95 
+uap.getBrowser().major;             // 28 
+uap.getBrowser().toString();        // "Chrome 28.0.1500.95"
+```
+
+## Extending Regex
+
+If you want to detect something that's not currently provided by UAParser.js (eg: bots, specific apps, etc), you can pass a list of regexes to extend internal UAParser.js regexes with your own.
+
+* `UAParser([uastring,] extensions)`
+
+```js
+// Example:
+let myOwnListOfBrowsers = [
+    [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]
+];
+let myParser = new UAParser({ browser: myOwnListOfBrowsers });
+let myUA = 'Mozilla/5.0 MyBrowser/1.3';
+console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3"}
+
+// Another example:
+let myOwnListOfDevices = [
+    [/(mytab) ([\w ]+)/i], [UAParser.DEVICE.VENDOR, UAParser.DEVICE.MODEL, [UAParser.DEVICE.TYPE, UAParser.DEVICE.TABLET]],
+    [/(myphone)/i], [UAParser.DEVICE.VENDOR, [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]]
+];
+let myParser2 = new UAParser({
+    browser: myOwnListOfBrowsers,
+    device: myOwnListOfDevices
+});
+let myUA2 = 'Mozilla/5.0 MyTab 14 Pro Max';
+console.log(myParser2.setUA(myUA2).getDevice());  // {vendor: "MyTab", model: "14 Pro Max", type: "tablet"}
+```
+
 
 # Usage
 
@@ -175,8 +250,8 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 <script src="ua-parser.min.js"></script>
 <script>
 
-    var parser = new UAParser();
-    console.log(parser.getResult());
+    var uap = new UAParser();
+    console.log(uap.getResult());
     /*
         /// This will print an object structured like this:
         {
@@ -184,7 +259,7 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
             browser: {
                 name: "",
                 version: "",
-                major: "" //@deprecated
+                major: ""
             },
             engine: {
                 name: "",
@@ -208,10 +283,10 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
     // Now let's try a custom user-agent string as an example
     var uastring1 = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
-    parser.setUA(uastring1);
-    var result = parser.getResult();
+    uap.setUA(uastring1);
+    var result = uap.getResult();
     // You can also use UAParser constructor directly without having to create an instance:
-    // var result = UAParser(uastring1);
+    // var ua = UAParser(uastring1);
 
     console.log(result.browser);        // {name: "Chromium", version: "15.0.874.106"}
     console.log(result.device);         // {model: undefined, type: undefined, vendor: undefined}
@@ -222,14 +297,14 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
     // Do some other tests
     var uastring2 = "Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)";
-    console.log(parser.setUA(uastring2).getBrowser().name); // "Konqueror"
-    console.log(parser.getOS());                            // {name: "OpenBSD", version: undefined}
-    console.log(parser.getEngine());                        // {name: "KHTML", version: "4.1.4"}
+    console.log(uap.setUA(uastring2).getBrowser().name); // "Konqueror"
+    console.log(uap.getOS());                            // {name: "OpenBSD", version: undefined}
+    console.log(uap.getEngine());                        // {name: "KHTML", version: "4.1.4"}
 
     var uastring3 = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
-    console.log(parser.setUA(uastring3).getDevice().model); // "PlayBook"
-    console.log(parser.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
-    console.log(parser.getBrowser().name);                  // "Safari"
+    console.log(uap.setUA(uastring3).getDevice().model); // "PlayBook"
+    console.log(uap.getOS())                             // {name: "RIM Tablet OS", version: "1.0.0"}
+    console.log(uap.getBrowser().name);                  // "Safari"
 
 </script>
 </head>
@@ -248,11 +323,11 @@ $ npm install ua-parser-js
 
 ```js
 var http = require('http');
-var parser = require('ua-parser-js');
+var uap = require('ua-parser-js');
 
 http.createServer(function (req, res) {
     // get user-agent header
-    var ua = parser(req.headers['user-agent']);
+    var ua = uap(req.headers['user-agent']);
     // write the result as response
     res.end(JSON.stringify(ua, null, '  '));
 })
@@ -294,20 +369,6 @@ console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 // Add class to <body> tag
 // <body class="ua-browser-safari ua-devicetype-tablet">
 $('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.device.type);
-```
-
-## Using Extension
-
-* `UAParser([uastring,] extensions)`
-
-```js
-// Example:
-var myOwnListOfBrowsers = [
-    [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]
-];
-var myParser = new UAParser({ browser: myOwnListOfBrowsers });
-var myUA = 'Mozilla/5.0 MyBrowser/1.3';
-console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3"}
 ```
 
 # Development

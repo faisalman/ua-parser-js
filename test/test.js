@@ -79,7 +79,7 @@ for (var i in methods) {
 
 describe('Returns', function () {
     it('getResult() should returns JSON', function(done) {
-        assert.deepStrictEqual(new UAParser('').getResult(), 
+        assert.deepEqual(new UAParser('').getResult(), 
             {
                 ua : '',
                 browser: { name: undefined, version: undefined, major: undefined },
@@ -165,4 +165,100 @@ describe('Testing regexes', function () {
             });
         });
     });
+});
+
+
+describe('is() utility method', function () {
+    let uap = new UAParser('Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537');
+
+    it('Should match full name', function () {
+        assert.strictEqual(uap.getBrowser().name, "IEMobile");
+        assert.strictEqual(uap.getBrowser().is("IEMobile"), true);
+        assert.strictEqual(uap.getBrowser().is("IE"), false);
+
+        it('Should ignore spaces and "Browser" suffix', function () {
+            assert.strictEqual(uap.getBrowser().is("I EMo b i l e Browser"), true);
+        });
+    });
+
+    it('Should ignore case', function () {
+        assert.strictEqual(uap.getEngine().name, "Trident");
+        assert.strictEqual(uap.getEngine().is("tRiDeNt"), true);
+    });
+
+    it('Should get exact name', function () {
+        assert.strictEqual(uap.getOS().name, "Windows Phone");
+        assert.strictEqual(uap.getOS().is("Windows Phone"), true);
+        assert.strictEqual(uap.getOS().is("Windows Phone OS"), true);
+        assert.strictEqual(uap.getOS().is("Windows Mobile"), false);
+        assert.strictEqual(uap.getOS().is("Android"), false);
+    });
+
+    it('Should check all device properties', function () {
+        assert.deepEqual(uap.getDevice(), {
+            vendor : "Nokia", 
+            model : "Lumia 635", 
+            type : "mobile"
+        });
+        assert.strictEqual(uap.getDevice().is("Nokia"), true);
+        assert.strictEqual(uap.getDevice().is("Lumia 635"), true);
+        assert.strictEqual(uap.getDevice().is("mobile"), true);
+
+        assert.strictEqual(uap.getResult().device.is("Nokia"), true);
+
+        uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15");
+        assert.strictEqual(uap.getDevice().is("undefined"), true);
+    });
+
+    it('Should get result after reassignment', function () {
+        uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
+        assert.strictEqual(uap.getOS().name, "Mac OS");
+        assert.strictEqual(uap.getOS().is("Mac OS"), true);
+        assert.strictEqual(uap.getOS().is("M ac"), false);
+        assert.strictEqual(uap.getOS().is("macOS"), true);
+        assert.strictEqual(uap.getOS().is("mac OS"), true);
+        assert.strictEqual(uap.getOS().is("M      a c   "), false);
+        assert.strictEqual(uap.getOS().is("Mac OS OS"), false);
+        assert.strictEqual(uap.getOS().is("Mac OS X"), false);
+
+        assert.strictEqual(uap.getBrowser().is("Chrome"), true);
+        assert.strictEqual(uap.getEngine().is("Blink"), true);
+    });
+
+    it('Should accept arch equivalent name', function () {
+        uap.setUA("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:19.0) Gecko/20100101 Firefox/19.0");
+        assert.strictEqual(uap.getCPU().architecture, "ia32");
+        assert.strictEqual(uap.getCPU().is("ia32"), true);
+        assert.strictEqual(uap.getCPU().is("x86"), false);
+
+        uap.setUA("Opera/9.80 (X11; Linux x86_64; U; Linux Mint; en) Presto/2.2.15 Version/10.10");
+        assert.strictEqual(uap.getCPU().architecture, "amd64");
+        assert.strictEqual(uap.getCPU().is("amd64"), true);
+        assert.strictEqual(uap.getCPU().is("x86-64"), false);
+        assert.strictEqual(uap.getCPU().is("x64"), false);
+    });
+});
+
+describe('toString() utility method', function () {
+    let uap = new UAParser('Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537');
+    assert.strictEqual(uap.getBrowser().name, "IEMobile");
+    assert.strictEqual(uap.getBrowser().version, "11.0");
+    assert.strictEqual(uap.getBrowser().major, "11");
+    assert.strictEqual(uap.getBrowser().toString(), "IEMobile 11.0");
+
+    assert.strictEqual(uap.getCPU().architecture, "arm");
+    assert.strictEqual(uap.getCPU().toString(), "arm");
+
+    assert.strictEqual(uap.getDevice().vendor, "Nokia");
+    assert.strictEqual(uap.getDevice().model, "Lumia 635");
+    assert.strictEqual(uap.getDevice().type, "mobile");
+    assert.strictEqual(uap.getDevice().toString(), "Nokia Lumia 635");
+
+    assert.strictEqual(uap.getEngine().name, "Trident");
+    assert.strictEqual(uap.getEngine().version, "7.0");
+    assert.strictEqual(uap.getEngine().toString(), "Trident 7.0");
+
+    assert.strictEqual(uap.getOS().name, "Windows Phone");
+    assert.strictEqual(uap.getOS().version, "8.1");
+    assert.strictEqual(uap.getOS().toString(), "Windows Phone 8.1");
 });
