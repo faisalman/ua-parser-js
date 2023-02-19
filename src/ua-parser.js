@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v0.7.33
+/* UAParser.js v1.1.34
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -17,7 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.33',
+    var LIBVERSION  = '1.1.34',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -56,7 +56,6 @@
         SAMSUNG = 'Samsung',
         SHARP   = 'Sharp',
         SONY    = 'Sony',
-        VIERA   = 'Viera',
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
         FACEBOOK   = 'Facebook';
@@ -87,10 +86,13 @@
             return typeof str1 === STR_TYPE ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
         },
         lowerize = function (str) {
-            return str.toLowerCase();
+            return typeof(str) === STR_TYPE ? str.toLowerCase() : UNDEF_TYPE;
         },
         majorize = function (version) {
             return typeof(version) === STR_TYPE ? version.replace(/[^\d\.]/g, EMPTY).split('.')[0] : undefined;
+        },
+        sanitize = function (str, rgx) {
+            return rgx ? lowerize(str).replace(rgx, EMPTY) : lowerize(str);
         },
         trim = function (str, len) {
             if (typeof(str) === STR_TYPE) {
@@ -200,6 +202,10 @@
             '8.1'       : 'NT 6.3',
             '10'        : ['NT 6.4', 'NT 10.0'],
             'RT'        : 'ARM'
+        },
+        archEquivalenceMap = {
+            'amd64'     : ['x86-64', 'x64'],
+            'ia32'      : ['x86']
     };
 
     //////////////
@@ -775,7 +781,70 @@
     // Constructor
     ////////////////
 
-    var UAParser = function (ua, extensions) {
+    function UAItem (propToString, propIs) {
+        this.propToString = propToString;
+        this.propIs = propIs[0];
+        this.rgxIs = propIs[1];
+    }
+    UAItem.prototype.is = function (strCheck) {
+        for (var i in this.propIs) {
+            if (sanitize(this[this.propIs[i]], this.rgxIs) == sanitize(strCheck, this.rgxIs)) {
+                return true;
+            }
+        }
+        return false;
+    };
+    UAItem.prototype.toString = function () {
+        var str = '';
+        for (var i in this.propToString) {
+            if (typeof(this[this.propToString[i]]) !== UNDEF_TYPE) {
+                str += (str ? ' ' : '') + this[this.propToString[i]];
+            }
+        }
+        return str ? str : UNDEF_TYPE;
+    };
+
+    function UABrowser () {
+        this[NAME] = undefined;
+        this[VERSION] = undefined;
+        this[MAJOR] = undefined;
+    }
+    UABrowser.prototype = new UAItem([NAME, VERSION], [[NAME], /\s?browser$/i]);
+
+    function UACPU () {
+        this[ARCHITECTURE] = undefined;
+    }
+    UACPU.prototype = new UAItem([ARCHITECTURE], [[ARCHITECTURE]]);
+
+    function UADevice () {
+        this[VENDOR] = undefined;
+        this[MODEL] = undefined;
+        this[TYPE] = undefined;
+    }
+    UADevice.prototype = new UAItem([VENDOR, MODEL], [[TYPE, MODEL, VENDOR]]);
+
+    function UAEngine () {
+        this[NAME] = undefined;
+        this[VERSION] = undefined;
+    }
+    UAEngine.prototype = new UAItem([NAME, VERSION], [[NAME]]);
+
+    function UAOS () {
+        this[NAME] = undefined;
+        this[VERSION] = undefined;
+    }
+    UAOS.prototype = new UAItem([NAME, VERSION], [[NAME], /\s?os$/i]);
+
+    function UAResult (uap) {
+        this.ua = uap.getUA();
+        this.browser = uap.getBrowser();
+        this.cpu = uap.getCPU();
+        this.device = uap.getDevice();
+        this.engine = uap.getEngine();
+        this.os = uap.getOS();
+    }
+
+    function UAParser (ua, extensions) {
 
         if (typeof ua === OBJ_TYPE) {
             extensions = ua;
@@ -790,25 +859,20 @@
         var _uach = (typeof window !== UNDEF_TYPE && window.navigator && window.navigator.userAgentData) ? window.navigator.userAgentData : undefined;
         var _rgxmap = extensions ? extend(regexes, extensions) : regexes;
 
+        // public methods
         this.getBrowser = function () {
-            var _browser = {};
-            _browser[NAME] = undefined;
-            _browser[VERSION] = undefined;
+            var _browser = new UABrowser();
             rgxMapper.call(_browser, _ua, _rgxmap.browser);
-            _browser.major = majorize(_browser.version);
+            _browser[MAJOR] = majorize(_browser[VERSION]);
             return _browser;
         };
         this.getCPU = function () {
-            var _cpu = {};
-            _cpu[ARCHITECTURE] = undefined;
+            var _cpu = new UACPU();
             rgxMapper.call(_cpu, _ua, _rgxmap.cpu);
             return _cpu;
         };
         this.getDevice = function () {
-            var _device = {};
-            _device[VENDOR] = undefined;
-            _device[MODEL] = undefined;
-            _device[TYPE] = undefined;
+            var _device = new UADevice();
             rgxMapper.call(_device, _ua, _rgxmap.device);
             if (!_device[TYPE] && _uach && _uach.mobile) {
                 _device[TYPE] = MOBILE;
@@ -816,31 +880,22 @@
             return _device;
         };
         this.getEngine = function () {
-            var _engine = {};
-            _engine[NAME] = undefined;
-            _engine[VERSION] = undefined;
+            var _engine = new UAEngine();
             rgxMapper.call(_engine, _ua, _rgxmap.engine);
             return _engine;
         };
         this.getOS = function () {
-            var _os = {};
-            _os[NAME] = undefined;
-            _os[VERSION] = undefined;
+            var _os = new UAOS();
             rgxMapper.call(_os, _ua, _rgxmap.os);
             if (!_os[NAME] && _uach && _uach.platform != 'Unknown') {
-                _os[NAME] = _uach.platform.replace(/chrome/i, 'Chromium').replace(/mac/i, 'Mac ');
+                _os[NAME] = _uach.platform  
+                                    .replace(/chrome os/i, 'Chromium OS')
+                                    .replace(/macos/i, 'Mac OS');           // backward compatibility
             }
             return _os;
         };
         this.getResult = function () {
-            return {
-                ua      : this.getUA(),
-                browser : this.getBrowser(),
-                engine  : this.getEngine(),
-                os      : this.getOS(),
-                device  : this.getDevice(),
-                cpu     : this.getCPU()
-            };
+            return new UAResult(this);
         };
         this.getUA = function () {
             return _ua;
@@ -851,7 +906,7 @@
         };
         this.setUA(_ua);
         return this;
-    };
+    }
 
     UAParser.VERSION = LIBVERSION;
     UAParser.BROWSER =  enumerize([NAME, VERSION, MAJOR]);
