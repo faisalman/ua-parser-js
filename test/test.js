@@ -205,9 +205,6 @@ describe('is() utility method', function () {
         assert.strictEqual(uap.getDevice().is("mobile"), true);
 
         assert.strictEqual(uap.getResult().device.is("Nokia"), true);
-
-        uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15");
-        assert.strictEqual(uap.getDevice().is("undefined"), true);
     });
 
     it('Should get result after reassignment', function () {
@@ -225,7 +222,16 @@ describe('is() utility method', function () {
         assert.strictEqual(uap.getEngine().is("Blink"), true);
     });
 
-    it('Should accept arch equivalent name', function () {
+    it('Should refrain from "undefined" until all properties are checked', function () {
+        assert.strictEqual(uap.getDevice().is("undefined"), false);
+        assert.strictEqual(uap.getDevice().is("Apple"), true);
+
+        uap.setUA("");
+        assert.strictEqual(uap.getDevice().is("undefined"), true);
+    });
+
+    //it('Should accept arch equivalent name', function () {
+    it('Should accept exact arch name', function () {
         uap.setUA("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:19.0) Gecko/20100101 Firefox/19.0");
         assert.strictEqual(uap.getCPU().architecture, "ia32");
         assert.strictEqual(uap.getCPU().is("ia32"), true);

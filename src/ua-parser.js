@@ -787,12 +787,17 @@
         this.rgxIs = propIs[1];
     }
     UAItem.prototype.is = function (strCheck) {
+        var is = false;
         for (var i in this.propIs) {
             if (sanitize(this[this.propIs[i]], this.rgxIs) == sanitize(strCheck, this.rgxIs)) {
-                return true;
+                is = true;
+                if (strCheck != UNDEF_TYPE) break;
+            } else if (strCheck == UNDEF_TYPE && is) {
+                is = !is;
+                break;
             }
         }
-        return false;
+        return is;
     };
     UAItem.prototype.toString = function () {
         var str = '';
