@@ -18,6 +18,25 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 * Demo      : https://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
 
+***
+
+### From Our Sponsors:
+<table>
+<thead>
+</thead>
+<tbody>
+<tr>
+<td align="center" width="200px" rowspan="2"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js"><img src="images/51degrees.svg" alt="51degrees" width="75%" height="75%" ></a></td>
+<td align="left" width="400px"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ @51degrees/ua-parser-js</a></td> 
+</tr>
+<tr>
+<td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ Visit 51Degrees <u>UAParser</u></a> to get started.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 # Documentation
 ### UAParser([user-agent:string][,extensions:object])
 
@@ -427,9 +446,10 @@ $('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.
 
 # Development
 
-## Sponsors
+## Backers & Sponsors
 
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/backers.svg?avatarHeight=64" height="80"/></a> <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/tiers/sponsors.svg?avatarHeight=64" height="80"/></a>
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
 
 <a href="https://www.paypal.me/faisalman/"><img src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" height="40"></a>
 
