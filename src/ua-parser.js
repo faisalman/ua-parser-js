@@ -59,7 +59,9 @@
         VIERA   = 'Viera',
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
-        FACEBOOK   = 'Facebook';
+        FACEBOOK    = 'Facebook',
+        CHROMIUM_OS = 'Chromium OS',
+        MAC_OS  = 'Mac OS';
 
     ///////////
     // Helper
@@ -715,7 +717,7 @@
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x) ?([\w\. ]*)/i,
             /(macintosh|mac_powerpc\b)(?!.+haiku)/i                             // Mac OS
-            ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
+            ], [[NAME, MAC_OS], [VERSION, /_/g, '.']], [
 
             // Mobile OSes
             /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
@@ -739,7 +741,7 @@
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
             ], [VERSION, [NAME, CHROME+'cast']], [
             /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
-            ], [[NAME, 'Chromium OS'], VERSION],[
+            ], [[NAME, CHROMIUM_OS], VERSION],[
 
             // Smart TVs
             /panasonic;(viera)/i,                                               // Panasonic Viera
@@ -818,6 +820,11 @@
             if (!_device[TYPE] && _uach && _uach.mobile) {
                 _device[TYPE] = MOBILE;
             }
+            // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
+            if (_device[MODEL] == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
+                _device[MODEL] = 'iPad';
+                _device[TYPE] = TABLET;
+            }
             return _device;
         };
         this.getEngine = function () {
@@ -833,7 +840,9 @@
             _os[VERSION] = undefined;
             rgxMapper.call(_os, _ua, _rgxmap.os);
             if (!_os[NAME] && _uach && _uach.platform != 'Unknown') {
-                _os[NAME] = _uach.platform.replace(/chrome/i, 'Chromium').replace(/mac/i, 'Mac ');
+                _os[NAME] = _uach.platform  
+                                    .replace(/chrome os/i, CHROMIUM_OS)
+                                    .replace(/macos/i, MAC_OS);           // backward compatibility
             }
             return _os;
         };
