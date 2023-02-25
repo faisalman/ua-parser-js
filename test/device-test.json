@@ -764,6 +764,15 @@
         }
     },
     {
+        "desc": "Apple Watch",
+        "ua": "atc/1.0 watchOS/7.3.3 model/Watch4,2 hwp/t8006 build/18S830 (6; dt:191)",
+        "expect": {
+            "vendor": "Apple",
+            "model": "watch",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "iPad using UCBrowser",
         "ua": "Mozilla/5.0 (iPad; U; CPU OS 11_2 like Mac OS X; zh-CN; iPad5,3) AppleWebKit/534.46 (KHTML, like Gecko) UCBrowser/3.0.1.776 U3/ Mobile/10A403 Safari/7543.48.3",
         "expect": {
