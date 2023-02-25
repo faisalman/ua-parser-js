@@ -159,7 +159,7 @@ Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix,
 Mint, Morph OS, NetBSD, NetRange, NetTV, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, 
 PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, 
 RISC OS, Sabayon, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, 
-Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
+Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
@@ -182,7 +182,7 @@ Ubuntu, Unix, VectorLinux, Viera, WebOS, Windows [Phone/Mobile], Zenwalk, ...
 #### * is() utility `since@1.1`
 
 ```js
-// Is just a shorthand to check whether one of the specified properties has equal value
+// Is just a shorthand to check whether specified item has a property with equals value (case-insensitive)
 // so that instead of write it using `==` operator like this:
 
 let ua = UAParser();
@@ -198,7 +198,7 @@ if (device.is("mobile") && !os.is("iOS")) {}
 if (device.is("smarttv") || device.is("Samsung")) {}
 
 /*
-    Properties will be checked in this particular order:
+    Each properties will be checked in this particular order:
     * browser : name
     * cpu : architecture 
     * device : type, model, vendor
@@ -220,10 +220,11 @@ uap.getOS().is("Windows Phone");    // true
 uap.getDevice();                    // { vendor: "Nokia", model: "Lumia 635", type: "mobile" }
 uap.getResult().device;             // { vendor: "Nokia", model: "Lumia 635", type: "mobile" }
 
-uap.getDevice().is("mobile");       // true
-uap.getDevice().is("Lumia 635");    // true
-uap.getDevice().is("Nokia");        // true
-uap.getDevice().is("iPhone");       // false
+let device = uap.getDevice();
+device.is("mobile");                // true
+device.is("Lumia 635");             // true
+device.is("Nokia");                 // true
+device.is("iPhone");                // false
 uap.getResult().device.is("Nokia"); // true
 uap.getResult().device.model;       // "Lumia 635"
 
