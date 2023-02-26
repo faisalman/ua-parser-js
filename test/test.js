@@ -45,7 +45,7 @@ var methods     = [
 
 describe('UAParser()', function () {
     var ua = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
-    assert.deepStrictEqual(UAParser(ua), new UAParser().setUA(ua).getResult());
+    assert.deepEqual(UAParser(ua), new UAParser().setUA(ua).getResult());
 });
 
 describe('UAParser() constructor does not throw with undefined ua argument', function () {
@@ -227,7 +227,9 @@ describe('is() utility method', function () {
         assert.strictEqual(uap.getDevice().is("Apple"), true);
 
         uap.setUA("");
+        assert.strictEqual(uap.getDevice().model, undefined);
         assert.strictEqual(uap.getDevice().is("undefined"), true);
+        assert.strictEqual(uap.getDevice().is(undefined), true);
     });
 
     //it('Should accept arch equivalent name', function () {

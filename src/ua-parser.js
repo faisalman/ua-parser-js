@@ -56,8 +56,10 @@
         SAMSUNG = 'Samsung',
         SHARP   = 'Sharp',
         SONY    = 'Sony',
+        SWISS   = 'Swiss',
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
+        ZTE     = 'ZTE',
         FACEBOOK    = 'Facebook',
         CHROMIUM_OS = 'Chromium OS',
         MAC_OS  = 'Mac OS';
@@ -87,14 +89,11 @@
         has = function (str1, str2) {
             return typeof str1 === STR_TYPE ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
         },
-        lowerize = function (str) {
-            return typeof(str) === STR_TYPE ? str.toLowerCase() : UNDEF_TYPE;
+        lowerize = function (str, rgx) {
+            return typeof(str) === STR_TYPE ? str.toLowerCase().replace((rgx ? new RegExp(rgx, 'i') : EMPTY), EMPTY) : str;
         },
         majorize = function (version) {
             return typeof(version) === STR_TYPE ? version.replace(/[^\d\.]/g, EMPTY).split('.')[0] : undefined;
-        },
-        sanitize = function (str, rgx) {
-            return rgx ? lowerize(str).replace(rgx, EMPTY) : lowerize(str);
         },
         trim = function (str, len) {
             if (typeof(str) === STR_TYPE) {
@@ -346,7 +345,7 @@
             ], [NAME, VERSION], [
             
             /(cobalt)\/([\w\.]+)/i                                              // Cobalt
-            ], [NAME, [VERSION, /master.|lts./, ""]]
+            ], [NAME, [VERSION, /[^\d\.]+./, EMPTY]]
         ],
 
         cpu : [[
@@ -566,13 +565,13 @@
             /\b(tm\d{3}\w+) b/i
             ], [MODEL, [VENDOR, 'NuVision'], [TYPE, TABLET]], [
             /\b(k88) b/i                                                        // ZTE K Series Tablet
-            ], [MODEL, [VENDOR, 'ZTE'], [TYPE, TABLET]], [
+            ], [MODEL, [VENDOR, ZTE], [TYPE, TABLET]], [
             /\b(nx\d{3}j) b/i                                                   // ZTE Nubia
-            ], [MODEL, [VENDOR, 'ZTE'], [TYPE, MOBILE]], [
+            ], [MODEL, [VENDOR, ZTE], [TYPE, MOBILE]], [
             /\b(gen\d{3}) b.+49h/i                                              // Swiss GEN Mobile
-            ], [MODEL, [VENDOR, 'Swiss'], [TYPE, MOBILE]], [
+            ], [MODEL, [VENDOR, SWISS], [TYPE, MOBILE]], [
             /\b(zur\d{3}) b/i                                                   // Swiss ZUR Tablet
-            ], [MODEL, [VENDOR, 'Swiss'], [TYPE, TABLET]], [
+            ], [MODEL, [VENDOR, SWISS], [TYPE, TABLET]], [
             /\b((zeki)?tb.*\b) b/i                                              // Zeki Tablets
             ], [MODEL, [VENDOR, 'Zeki'], [TYPE, TABLET]], [
             /\b([yr]\d{2}) b/i,
@@ -600,7 +599,7 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
             /(kin\.[onetw]{3})/i                                                // Microsoft Kin
             ], [[MODEL, /\./g, ' '], [VENDOR, MICROSOFT], [TYPE, MOBILE]], [
-            /droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i             // Zebra
+            /droid.+; ([c6]+|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i               // Zebra
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, TABLET]], [
             /droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, MOBILE]], [
@@ -624,7 +623,7 @@
             /\(dtv[\);].+(aquos)/i,
             /(aquos-tv[\w ]+)\)/i                                               // Sharp
             ], [MODEL, [VENDOR, SHARP], [TYPE, SMARTTV]],[
-            /(bravia[\w ]+)( bui|\))/i                                              // Sony
+            /(bravia[\w ]+)( bui|\))/i                                          // Sony
             ], [MODEL, [VENDOR, SONY], [TYPE, SMARTTV]], [
             /(mitv-\w{5}) bui/i                                                 // Xiaomi
             ], [MODEL, [VENDOR, XIAOMI], [TYPE, SMARTTV]], [
@@ -641,11 +640,11 @@
             ///////////////////
 
             /(ouya)/i,                                                          // Ouya
-            /(nintendo) ([wids3utch]+)/i                                        // Nintendo
+            /(nintendo) (\w+)/i                                                 // Nintendo
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
             /droid.+; (shield) bui/i                                            // Nvidia
             ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
-            /(playstation [345portablevi]+)/i                                   // Playstation
+            /(playstation \w+)/i                                                // Playstation
             ], [MODEL, [VENDOR, SONY], [TYPE, CONSOLE]], [
             /\b(xbox(?: one)?(?!; xbox))[\); ]/i                                // Microsoft Xbox
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
@@ -759,7 +758,7 @@
             /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 
             // Console
-            /(nintendo|playstation) ([wids345portablevuch]+)/i,                 // Nintendo/Playstation
+            /(nintendo|playstation) (\w+)/i,                                    // Nintendo/Playstation
             /(xbox); +xbox ([^\);]+)/i,                                         // Microsoft Xbox (360, One, X, S, Series X, Series S)
 
             // Other
@@ -787,73 +786,117 @@
     // Constructor
     ////////////////
 
-    function UAItem (propToString, propIs) {
-        this.propToString = propToString;
-        this.propIs = propIs[0];
-        this.rgxIs = propIs[1];
-    }
-    UAItem.prototype.is = function (strCheck) {
-        var is = false;
-        for (var i in this.propIs) {
-            if (sanitize(this[this.propIs[i]], this.rgxIs) == sanitize(strCheck, this.rgxIs)) {
-                is = true;
-                if (strCheck != UNDEF_TYPE) break;
-            } else if (strCheck == UNDEF_TYPE && is) {
-                is = !is;
-                break;
-            }
+    function UAItem () {}
+    UAItem.prototype.get = function (prop) {
+        if (!prop) {
+            return this.data;
         }
-        return is;
+        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
     };
-    UAItem.prototype.toString = function () {
-        var str = '';
-        for (var i in this.propToString) {
-            if (typeof(this[this.propToString[i]]) !== UNDEF_TYPE) {
-                str += (str ? ' ' : '') + this[this.propToString[i]];
-            }
-        }
-        return str ? str : UNDEF_TYPE;
+    UAItem.prototype.parse = function (ua, rgxmap) {
+        rgxMapper.call(this.data, ua, rgxmap);
+    };
+    UAItem.prototype.set = function (prop, val) {
+        this.data[prop] = val;
+    };
+    UAItem.prototype.then = function (callback) {
+        return callback(this.data);
+    };
+
+    var createUAData = function (data) {
+        return (function () {
+            var propIs = data.propIs;
+            var ignoreIs = data.ignoreIs;
+            var propToStr = data.propToStr;
+            var UAData = function () {
+                for (var i in data.props) {
+                    this[data.props[i]] = undefined;
+                }
+            };
+            UAData.prototype.is = function (strToCheck) {
+                var is = false;
+                for (var i in propIs) {
+                    if (lowerize(this[propIs[i]], ignoreIs) === lowerize(strToCheck, ignoreIs)) {
+                        is = true;
+                        if (strToCheck != UNDEF_TYPE) break;
+                    } else if (strToCheck == UNDEF_TYPE && is) {
+                        is = !is;
+                        break;
+                    }
+                }
+                return is;
+            };
+            UAData.prototype.toString = function () {
+                var str = EMPTY;
+                for (var i in propToStr) {
+                    if (typeof(this[propToStr[i]]) !== UNDEF_TYPE) {
+                        str += (str ? ' ' : EMPTY) + this[propToStr[i]];
+                    }
+                }
+                return str ? str : UNDEF_TYPE;
+            };
+            return new UAData();
+        })(data);
     };
 
     function UABrowser () {
-        this[NAME] = undefined;
-        this[VERSION] = undefined;
-        this[MAJOR] = undefined;
+        this.data = createUAData({
+            props : [NAME, VERSION, MAJOR],
+            propIs : [NAME],
+            ignoreIs : ' ?browser$',
+            propToStr : [NAME, VERSION]
+        });
     }
-    UABrowser.prototype = new UAItem([NAME, VERSION], [[NAME], /\s?browser$/i]);
+    UABrowser.prototype = new UAItem();
 
     function UACPU () {
-        this[ARCHITECTURE] = undefined;
+        this.data = createUAData({
+            props : [ARCHITECTURE],
+            propIs : [ARCHITECTURE],
+            propToStr : [ARCHITECTURE]
+        });
     }
-    UACPU.prototype = new UAItem([ARCHITECTURE], [[ARCHITECTURE]]);
+    UACPU.prototype = new UAItem();
 
     function UADevice () {
-        this[VENDOR] = undefined;
-        this[MODEL] = undefined;
-        this[TYPE] = undefined;
+        this.data = createUAData({
+            props : [TYPE, MODEL, VENDOR],
+            propIs : [TYPE, MODEL, VENDOR],
+            propToStr : [VENDOR, MODEL]
+        });
     }
-    UADevice.prototype = new UAItem([VENDOR, MODEL], [[TYPE, MODEL, VENDOR]]);
+    UADevice.prototype = new UAItem();
 
     function UAEngine () {
-        this[NAME] = undefined;
-        this[VERSION] = undefined;
+        this.data = createUAData({
+            props : [NAME, VERSION],
+            propIs : [NAME],
+            propToStr : [NAME, VERSION]
+        });
     }
-    UAEngine.prototype = new UAItem([NAME, VERSION], [[NAME]]);
+    UAEngine.prototype = new UAItem();
 
     function UAOS () {
-        this[NAME] = undefined;
-        this[VERSION] = undefined;
+        this.data = createUAData({
+            props : [NAME, VERSION],
+            propIs : [NAME],
+            ignoreIs : ' ?os$',
+            propToStr : [NAME, VERSION]
+        });
     }
-    UAOS.prototype = new UAItem([NAME, VERSION], [[NAME], /\s?os$/i]);
+    UAOS.prototype = new UAItem();
 
-    function UAResult (uap) {
-        this.ua = uap.getUA();
-        this.browser = uap.getBrowser();
-        this.cpu = uap.getCPU();
-        this.device = uap.getDevice();
-        this.engine = uap.getEngine();
-        this.os = uap.getOS();
+    function UAResult () {
+        this.data = { 
+            ua : '', 
+            browser : undefined, 
+            cpu : undefined, 
+            device : undefined, 
+            engine : undefined, 
+            os : undefined
+        };
     }
+    UAResult.prototype = new UAItem();
 
     function UAParser (ua, extensions) {
 
@@ -861,7 +904,6 @@
             extensions = ua;
             ua = undefined;
         }
-
         if (!(this instanceof UAParser)) {
             return new UAParser(ua, extensions).getResult();
         }
@@ -874,49 +916,56 @@
         // public methods
         this.getBrowser = function () {
             var _browser = new UABrowser();
-            rgxMapper.call(_browser, _ua, _rgxmap.browser);
-            _browser[MAJOR] = majorize(_browser[VERSION]);
+            _browser.parse(_ua, _rgxmap.browser);
+            _browser.set(MAJOR, majorize(_browser.get(VERSION)));
             // Brave-specific detection
             if (_navigator && _navigator.brave && typeof _navigator.brave.isBrave == FUNC_TYPE) {
-                _browser[NAME] = 'Brave';
+                _browser.set(NAME, 'Brave');
             }
-            return _browser;
+            return _browser.get();
         };
         this.getCPU = function () {
             var _cpu = new UACPU();
-            rgxMapper.call(_cpu, _ua, _rgxmap.cpu);
-            return _cpu;
+            _cpu.parse(_ua, _rgxmap.cpu);
+            return _cpu.get();
         };
         this.getDevice = function () {
             var _device = new UADevice();
-            rgxMapper.call(_device, _ua, _rgxmap.device);
-            if (!_device[TYPE] && _uach && _uach.mobile) {
-                _device[TYPE] = MOBILE;
+            _device.parse(_ua, _rgxmap.device);
+            if (!_device.get(TYPE) && _uach && _uach.mobile) {
+                _device.set(TYPE, MOBILE);
             }
             // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-            if (_device[MODEL] == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
-                _device[MODEL] = 'iPad';
-                _device[TYPE] = TABLET;
+            if (_device.get(NAME) == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
+                _device.set(MODEL, 'iPad');
+                _device.set(TYPE, TABLET);
             }
-            return _device;
+            return _device.get();
         };
         this.getEngine = function () {
             var _engine = new UAEngine();
-            rgxMapper.call(_engine, _ua, _rgxmap.engine);
-            return _engine;
+            _engine.parse(_ua, _rgxmap.engine);
+            return _engine.get();
         };
         this.getOS = function () {
             var _os = new UAOS();
-            rgxMapper.call(_os, _ua, _rgxmap.os);
-            if (!_os[NAME] && _uach && _uach.platform != 'Unknown') {
-                _os[NAME] = _uach.platform  
+            _os.parse(_ua, _rgxmap.os);
+            if (!_os.get(NAME) && _uach && _uach.platform != 'Unknown') {
+                _os.set(NAME, _uach.platform  
                                     .replace(/chrome os/i, CHROMIUM_OS)
-                                    .replace(/macos/i, MAC_OS);           // backward compatibility
+                                    .replace(/macos/i, MAC_OS));           // backward compatibility
             }
-            return _os;
+            return _os.get();
         };
         this.getResult = function () {
-            return new UAResult(this);
+            var _result = new UAResult();
+            _result.set('ua', _ua);
+            _result.set('browser', this.getBrowser());
+            _result.set('cpu', this.getCPU());
+            _result.set('device', this.getDevice());
+            _result.set('engine', this.getEngine());
+            _result.set('os', this.getOS());
+            return _result.get();
         };
         this.getUA = function () {
             return _ua;
