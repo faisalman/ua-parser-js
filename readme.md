@@ -26,11 +26,16 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 </thead>
 <tbody>
 <tr>
-<td align="center" width="200px" rowspan="2"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js"><img src="images/51degrees.svg" alt="51degrees" width="75%" height="75%" ></a></td>
+<td align="center" width="200px" rowspan="3"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js"><img src="images/51degrees.svg" alt="51degrees" width="75%" height="75%" ></a></td>
 <td align="left" width="400px"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ @51degrees/ua-parser-js</a></td> 
 </tr>
 <tr>
-<td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ Visit 51Degrees <u>UAParser</u></a> to get started.</p></td>
+<td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p>Visit <a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ 51Degrees <u>UAParser</u></a> to get started.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>On 6 March, we’ll be hosting a demonstration of the 51Degrees UAParser. Register your place for the webinar <a href="https://event.webinarjam.com/register/36/6k2gqu5p">↗ here</a>.</p></td>
 </tr>
 </tbody>
 </table>
