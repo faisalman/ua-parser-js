@@ -53,7 +53,7 @@ Usually you can find the user agent in:
 ## Constructor
 When you call `UAParser` with the `new` keyword `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
 Like so:
-* `new UAParser([user-agent:string][,extensions:object])`
+* `new UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])`
 ```js
 let parser = new UAParser("user-agent"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
@@ -70,7 +70,7 @@ console.log(parserResults);
 ```
 
 When you call UAParser without the `new` keyword, it will automatically call `getResult()` function and return the parsed results.
-* `UAParser([user-agent:string][,extensions:object])`
+* `UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])`
     * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 ## Methods
@@ -293,16 +293,17 @@ engine.toString();                  // "Blink 28.0.1500.95"
 
 If you want to detect something that's not currently provided by UAParser.js (eg: bots, specific apps, etc), you can pass a list of regexes to extend internal UAParser.js regexes with your own.
 
-* `UAParser([uastring,] extensions)`
+* `UAParser([uastring,] extensions [,headers:object(since@1.1)])`
 
 ```js
 // Example:
 let myOwnListOfBrowsers = [
-    [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]
+    [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, ['type', 'bot']]
 ];
 let myParser = new UAParser({ browser: myOwnListOfBrowsers });
 let myUA = 'Mozilla/5.0 MyBrowser/1.3';
-console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3"}
+console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3", major: "1", type : "bot"}
+console.log(myParser.getBrowser().is('bot'));    // true
 
 // Another example:
 let myOwnListOfDevices = [

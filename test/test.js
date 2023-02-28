@@ -106,6 +106,25 @@ describe('Extending Regex', function () {
     parser2.setUA(uaString);
     assert.strictEqual(parser2.getBrowser().name, 'MyOwnBrowser');
     assert.strictEqual(parser1.getBrowser().version, '1.3');
+
+    let myOwnListOfBrowsers = [
+        [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, ['type', 'bot']]
+    ];
+    let myParser = new UAParser({ browser: myOwnListOfBrowsers });
+    let myUA = 'Mozilla/5.0 MyBrowser/1.3';
+    assert.deepEqual(myParser.setUA(myUA).getBrowser(), {name: "MyBrowser", version: "1.3", major: "1", type : "bot"});
+    assert.strictEqual(myParser.getBrowser().is('bot'), true);
+    
+    let myOwnListOfDevices = [
+        [/(mytab) ([\w ]+)/i], [UAParser.DEVICE.VENDOR, UAParser.DEVICE.MODEL, [UAParser.DEVICE.TYPE, UAParser.DEVICE.TABLET]],
+        [/(myphone)/i], [UAParser.DEVICE.VENDOR, [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]]
+    ];
+    let myParser2 = new UAParser({
+        browser: myOwnListOfBrowsers,
+        device: myOwnListOfDevices
+    });
+    let myUA2 = 'Mozilla/5.0 MyTab 14 Pro Max';
+    assert.deepEqual(myParser2.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
 });
 
 describe('User-agent length', function () {
@@ -248,25 +267,72 @@ describe('is() utility method', function () {
 });
 
 describe('toString() utility method', function () {
-    let uap = new UAParser('Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537');
-    assert.strictEqual(uap.getBrowser().name, "IEMobile");
-    assert.strictEqual(uap.getBrowser().version, "11.0");
-    assert.strictEqual(uap.getBrowser().major, "11");
-    assert.strictEqual(uap.getBrowser().toString(), "IEMobile 11.0");
+    it('Should return full name', function () {
+        let uap = new UAParser('Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537');
+        assert.strictEqual(uap.getBrowser().name, "IEMobile");
+        assert.strictEqual(uap.getBrowser().version, "11.0");
+        assert.strictEqual(uap.getBrowser().major, "11");
+        assert.strictEqual(uap.getBrowser().toString(), "IEMobile 11.0");
 
-    assert.strictEqual(uap.getCPU().architecture, "arm");
-    assert.strictEqual(uap.getCPU().toString(), "arm");
+        assert.strictEqual(uap.getCPU().architecture, "arm");
+        assert.strictEqual(uap.getCPU().toString(), "arm");
 
-    assert.strictEqual(uap.getDevice().vendor, "Nokia");
-    assert.strictEqual(uap.getDevice().model, "Lumia 635");
-    assert.strictEqual(uap.getDevice().type, "mobile");
-    assert.strictEqual(uap.getDevice().toString(), "Nokia Lumia 635");
+        assert.strictEqual(uap.getDevice().vendor, "Nokia");
+        assert.strictEqual(uap.getDevice().model, "Lumia 635");
+        assert.strictEqual(uap.getDevice().type, "mobile");
+        assert.strictEqual(uap.getDevice().toString(), "Nokia Lumia 635");
 
-    assert.strictEqual(uap.getEngine().name, "Trident");
-    assert.strictEqual(uap.getEngine().version, "7.0");
-    assert.strictEqual(uap.getEngine().toString(), "Trident 7.0");
+        assert.strictEqual(uap.getEngine().name, "Trident");
+        assert.strictEqual(uap.getEngine().version, "7.0");
+        assert.strictEqual(uap.getEngine().toString(), "Trident 7.0");
 
-    assert.strictEqual(uap.getOS().name, "Windows Phone");
-    assert.strictEqual(uap.getOS().version, "8.1");
-    assert.strictEqual(uap.getOS().toString(), "Windows Phone 8.1");
+        assert.strictEqual(uap.getOS().name, "Windows Phone");
+        assert.strictEqual(uap.getOS().version, "8.1");
+        assert.strictEqual(uap.getOS().toString(), "Windows Phone 8.1");
+    });
+});
+
+describe('Read user-agent data from req.headers', function () {
+    const ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0)';
+    const ext = {
+        engine : [
+            [/(msie)/i], [[UAParser.ENGINE.NAME, 'Custom Browser 1']],
+            [/(edge)/i], [[UAParser.ENGINE.NAME, 'Custom Browser 2']]
+        ]
+    };
+    const req = { 
+        headers : {
+            'user-agent' : 'Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0'
+        }
+    };
+
+    it('Can be called with UAParser(ua)', function () {    
+        let engine = UAParser(ua).engine;
+        assert.strictEqual(engine.name, "Trident");
+    });
+
+    it('Can be called with UAParser(ua, extensions)', function () {    
+        let engine = UAParser(ua, ext).engine;
+        assert.strictEqual(engine.name, "Custom Browser 1");
+    });
+
+    it('Can be called with UAParser(ua, extensions, headers)', function () {    
+        let engine = UAParser(ua, ext, req.headers).engine;
+        assert.strictEqual(engine.name, "Custom Browser 1");
+    });
+
+    it('Can be called with UAParser(ua, headers)', function () {    
+        let engine = UAParser(ua, req.headers).engine;
+        assert.strictEqual(engine.name, "Trident");
+    });
+
+    it('Can be called with UAParser(extensions, headers)', function () {    
+        let engine = UAParser(ext, req.headers).engine;
+        assert.strictEqual(engine.name, "Custom Browser 2");
+    });
+
+    it('Can be called with UAParser(headers)', function () {    
+        let engine = UAParser(req.headers).engine;
+        assert.strictEqual(engine.name, "EdgeHTML");
+    });
 });

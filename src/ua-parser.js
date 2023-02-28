@@ -37,6 +37,7 @@
         SMARTTV     = 'smarttv',
         WEARABLE    = 'wearable',
         EMBEDDED    = 'embedded',
+        USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 350;
 
     var AMAZON  = 'Amazon',
@@ -71,11 +72,7 @@
     var extend = function (regexes, extensions) {
             var mergedRegexes = {};
             for (var i in regexes) {
-                if (extensions[i] && extensions[i].length % 2 === 0) {
-                    mergedRegexes[i] = extensions[i].concat(regexes[i]);
-                } else {
-                    mergedRegexes[i] = regexes[i];
-                }
+                mergedRegexes[i] = extensions[i] && extensions[i].length % 2 === 0 ? extensions[i].concat(regexes[i]) : regexes[i];
             }
             return mergedRegexes;
         },
@@ -88,6 +85,11 @@
         },
         has = function (str1, str2) {
             return typeof str1 === STR_TYPE ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
+        },
+        isExtensions = function (obj) {
+            for (var prop in obj) {
+                return /^(browser|cpu|device|engine|os)$/.test(prop);
+            }
         },
         lowerize = function (str, rgx) {
             return typeof(str) === STR_TYPE ? str.toLowerCase().replace((rgx ? new RegExp(rgx, 'i') : EMPTY), EMPTY) : str;
@@ -803,84 +805,83 @@
         return callback(this.data);
     };
     UAItem.createUAData = function (data) {
-        return (function () {
-            var propIs = data.propIs;
-            var ignoreIs = data.ignoreIs;
-            var propToStr = data.propToStr;
-            var UAData = function () {
-                for (var i in data.props) {
-                    this[data.props[i]] = undefined;
+        var is_ignoreProps = data.is_ignoreProps,
+            is_ignoreRgx = data.is_ignoreRgx,
+            toString_props = data.toString_props;
+
+        var UAData = function () {
+            for (var i in data.init_props) {
+                this[data.init_props[i]] = undefined;
+            }
+        };
+        UAData.prototype.is = function (strToCheck) {
+            var is = false;
+            for (var i in this) {
+                if (this.hasOwnProperty(i) && !is_ignoreProps[i] && lowerize(this[i], is_ignoreRgx) === lowerize(strToCheck, is_ignoreRgx)) {
+                    is = true;
+                    if (strToCheck != UNDEF_TYPE) break;
+                } else if (strToCheck == UNDEF_TYPE && is) {
+                    is = !is;
+                    break;
                 }
-            };
-            UAData.prototype.is = function (strToCheck) {
-                var is = false;
-                for (var i in propIs) {
-                    if (lowerize(this[propIs[i]], ignoreIs) === lowerize(strToCheck, ignoreIs)) {
-                        is = true;
-                        if (strToCheck != UNDEF_TYPE) break;
-                    } else if (strToCheck == UNDEF_TYPE && is) {
-                        is = !is;
-                        break;
-                    }
+            }
+            return is;
+        };
+        UAData.prototype.toString = function () {
+            var str = EMPTY;
+            for (var i in toString_props) {
+                if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
+                    str += (str ? ' ' : EMPTY) + this[toString_props[i]];
                 }
-                return is;
-            };
-            UAData.prototype.toString = function () {
-                var str = EMPTY;
-                for (var i in propToStr) {
-                    if (typeof(this[propToStr[i]]) !== UNDEF_TYPE) {
-                        str += (str ? ' ' : EMPTY) + this[propToStr[i]];
-                    }
-                }
-                return str ? str : UNDEF_TYPE;
-            };
-            return new UAData();
-        })(data);
+            }
+            return str ? str : UNDEF_TYPE;
+        };
+        return new UAData();
     };
 
     function UABrowser () {
         this.data = UAItem.createUAData({
-            props : [NAME, VERSION, MAJOR],
-            propIs : [NAME],
-            ignoreIs : ' ?browser$',
-            propToStr : [NAME, VERSION]
+            init_props : [NAME, VERSION, MAJOR],
+            is_ignoreProps : [VERSION, MAJOR],
+            is_ignoreRgx : ' ?browser$',
+            toString_props : [NAME, VERSION]
         });
     }
     UABrowser.prototype = new UAItem();
 
     function UACPU () {
         this.data = UAItem.createUAData({
-            props : [ARCHITECTURE],
-            propIs : [ARCHITECTURE],
-            propToStr : [ARCHITECTURE]
+            init_props : [ARCHITECTURE],
+            is_ignoreProps : [],
+            toString_props : [ARCHITECTURE]
         });
     }
     UACPU.prototype = new UAItem();
 
     function UADevice () {
         this.data = UAItem.createUAData({
-            props : [TYPE, MODEL, VENDOR],
-            propIs : [TYPE, MODEL, VENDOR],
-            propToStr : [VENDOR, MODEL]
+            init_props : [TYPE, MODEL, VENDOR],
+            is_ignoreProps : [],
+            toString_props : [VENDOR, MODEL]
         });
     }
     UADevice.prototype = new UAItem();
 
     function UAEngine () {
         this.data = UAItem.createUAData({
-            props : [NAME, VERSION],
-            propIs : [NAME],
-            propToStr : [NAME, VERSION]
+            init_props : [NAME, VERSION],
+            is_ignoreProps : [VERSION],
+            toString_props : [NAME, VERSION]
         });
     }
     UAEngine.prototype = new UAItem();
 
     function UAOS () {
         this.data = UAItem.createUAData({
-            props : [NAME, VERSION],
-            propIs : [NAME],
-            ignoreIs : ' ?os$',
-            propToStr : [NAME, VERSION]
+            init_props : [NAME, VERSION],
+            is_ignoreProps : [VERSION],
+            is_ignoreRgx : ' ?os$',
+            toString_props : [NAME, VERSION]
         });
     }
     UAOS.prototype = new UAItem();
@@ -897,18 +898,30 @@
     }
     UAResult.prototype = new UAItem();
 
-    function UAParser (ua, extensions) {
+    function UAParser (ua, extensions, headers) {
 
         if (typeof ua === OBJ_TYPE) {
-            extensions = ua;
+            if (isExtensions(ua)) {
+                if (typeof extensions === OBJ_TYPE) {
+                    headers = extensions;               // case UAParser(extensions, headers)           
+                }
+                extensions = ua;                        // case UAParser(extensions)
+            } else {
+                headers = ua;                           // case UAParser(headers)
+            }
             ua = undefined;
+        } else if (typeof ua === STR_TYPE && !isExtensions(extensions)) {
+            headers = extensions;                       // case UAParser(ua, headers)
+            extensions = undefined;
         }
+        
         if (!(this instanceof UAParser)) {
-            return new UAParser(ua, extensions).getResult();
+            return new UAParser(ua, extensions, headers).getResult();
         }
-
         var _navigator = (typeof window !== UNDEF_TYPE && window.navigator) ? window.navigator : undefined;
-        var _ua = ua || ((_navigator && _navigator.userAgent) ? _navigator.userAgent : EMPTY);
+
+        // _ua = user-supplied string || window.navigator.userAgent || user-agent header || empty
+        var _ua = ua || ((_navigator && _navigator.userAgent) ? _navigator.userAgent : (!ua && headers && headers[USER_AGENT] ? headers[USER_AGENT] : EMPTY));
         var _uach = (_navigator && _navigator.userAgentData) ? _navigator.userAgentData : undefined;
         var _rgxmap = extensions ? extend(regexes, extensions) : regexes;
 
