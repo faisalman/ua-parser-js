@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 /* UAParser.js v1.1.34
-   Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
+   Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
@@ -802,8 +802,7 @@
     UAItem.prototype.then = function (callback) {
         return callback(this.data);
     };
-
-    var createUAData = function (data) {
+    UAItem.createUAData = function (data) {
         return (function () {
             var propIs = data.propIs;
             var ignoreIs = data.ignoreIs;
@@ -840,7 +839,7 @@
     };
 
     function UABrowser () {
-        this.data = createUAData({
+        this.data = UAItem.createUAData({
             props : [NAME, VERSION, MAJOR],
             propIs : [NAME],
             ignoreIs : ' ?browser$',
@@ -850,7 +849,7 @@
     UABrowser.prototype = new UAItem();
 
     function UACPU () {
-        this.data = createUAData({
+        this.data = UAItem.createUAData({
             props : [ARCHITECTURE],
             propIs : [ARCHITECTURE],
             propToStr : [ARCHITECTURE]
@@ -859,7 +858,7 @@
     UACPU.prototype = new UAItem();
 
     function UADevice () {
-        this.data = createUAData({
+        this.data = UAItem.createUAData({
             props : [TYPE, MODEL, VENDOR],
             propIs : [TYPE, MODEL, VENDOR],
             propToStr : [VENDOR, MODEL]
@@ -868,7 +867,7 @@
     UADevice.prototype = new UAItem();
 
     function UAEngine () {
-        this.data = createUAData({
+        this.data = UAItem.createUAData({
             props : [NAME, VERSION],
             propIs : [NAME],
             propToStr : [NAME, VERSION]
@@ -877,7 +876,7 @@
     UAEngine.prototype = new UAItem();
 
     function UAOS () {
-        this.data = createUAData({
+        this.data = UAItem.createUAData({
             props : [NAME, VERSION],
             propIs : [NAME],
             ignoreIs : ' ?os$',

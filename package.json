@@ -197,6 +197,10 @@
     {
       "type": "paypal",
       "url": "https://paypal.me/faisalman"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/faisalman"
     }
   ]
 }

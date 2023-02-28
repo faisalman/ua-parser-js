@@ -228,7 +228,7 @@ describe('is() utility method', function () {
 
         uap.setUA("");
         assert.strictEqual(uap.getDevice().model, undefined);
-        assert.strictEqual(uap.getDevice().is("undefined"), true);
+        assert.strictEqual(uap.getDevice().is("undefined"), false);
         assert.strictEqual(uap.getDevice().is(undefined), true);
     });
 

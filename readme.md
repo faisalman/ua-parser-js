@@ -90,10 +90,10 @@ The methods are self explanatory, here's a small overview on all the available m
 
 ---
 
-* `getResult() : UAResult`
+* `getResult()`
     * returns `{ ua: '', browser: UABrowser {}, cpu: UACPU {}, device: UADevice {}, engine: UAEngine {}, os: UAOS {} }`
 
-* `getBrowser() : UABrowser`
+* `getBrowser()`
     * returns `{ name: '', version: '' }`
 
 ```sh
@@ -117,7 +117,7 @@ Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 # 'browser.version' determined dynamically
 ```
 
-* `getDevice() : UADevice`
+* `getDevice()`
     * returns `{ model: '', type: '', vendor: '' }`
 
 ```sh
@@ -141,7 +141,7 @@ Siemens, Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE
 # 'device.model' determined dynamically
 ```
 
-* `getEngine() : UAEngine`
+* `getEngine()`
     * returns `{ name: '', version: '' }`
 
 ```sh
@@ -152,7 +152,7 @@ NetSurf, Presto, Tasman, Trident, w3m, WebKit
 # 'engine.version' determined dynamically
 ```
 
-* `getOS() : UAOS`
+* `getOS()`
     * returns `{ name: '', version: '' }`
 
 ```sh
@@ -169,7 +169,7 @@ Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwal
 # 'os.version' determined dynamically
 ```
 
-* `getCPU() : UACPU`
+* `getCPU()`
     * returns `{ architecture: '' }`
 
 ```sh
@@ -177,7 +177,7 @@ Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwal
 68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
-* `getUA() : string`
+* `getUA()`
     * returns UA string of current instance
 
 * `setUA(uastring)`
@@ -479,7 +479,7 @@ Made with [contributors-img](https://contrib.rocks).
 
 MIT License
 
-Copyright (c) 2012-2021 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2012-2023 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
