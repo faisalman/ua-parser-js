@@ -12,7 +12,7 @@
 
 # UAParser.js
 
-JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
+JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data that can be used either in browser (client-side) or node.js (server-side).
 
 * Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : https://faisalman.github.io/ua-parser-js
@@ -26,16 +26,12 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 </thead>
 <tbody>
 <tr>
-<td align="center" width="200px" rowspan="3"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js"><img src="images/51degrees.svg" alt="51degrees" width="75%" height="75%" ></a></td>
+<td align="center" width="200px" rowspan="2"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js"><img src="images/51degrees.svg" alt="51degrees" width="75%" height="75%" ></a></td>
 <td align="left" width="400px"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ @51degrees/ua-parser-js</a></td> 
 </tr>
 <tr>
 <td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p>Visit <a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ 51Degrees <u>UAParser</u></a> to get started.</p>
 </td>
-</tr>
-<tr>
-<td>
-<p>On 6 March, we’ll be hosting a demonstration of the 51Degrees UAParser. Register your place for the webinar <a href="https://event.webinarjam.com/register/36/6k2gqu5p">↗ here</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -43,7 +39,7 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 ---
 
 # Documentation
-### UAParser([user-agent:string][,extensions:object])
+### UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])
 
 In The Browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in nodejs for the function to work.
 Usually you can find the user agent in:
@@ -55,7 +51,7 @@ When you call `UAParser` with the `new` keyword `UAParser` will return a new ins
 Like so:
 * `new UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])`
 ```js
-let parser = new UAParser("user-agent"); // you need to pass the user-agent for nodejs
+let parser = new UAParser("your user-agent here"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
 let parserResults = parser.getResult();
 console.log(parserResults);
@@ -297,24 +293,30 @@ If you want to detect something that's not currently provided by UAParser.js (eg
 
 ```js
 // Example:
-let myOwnListOfBrowsers = [
+const myOwnListOfBrowsers = [
     [/(mybrowser)\/([\w\.]+)/i], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION, ['type', 'bot']]
 ];
+
+const myUA = 'Mozilla/5.0 MyBrowser/1.3';
+
 let myParser = new UAParser({ browser: myOwnListOfBrowsers });
-let myUA = 'Mozilla/5.0 MyBrowser/1.3';
+
 console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3", major: "1", type : "bot"}
 console.log(myParser.getBrowser().is('bot'));    // true
 
 // Another example:
-let myOwnListOfDevices = [
+const myOwnListOfDevices = [
     [/(mytab) ([\w ]+)/i], [UAParser.DEVICE.VENDOR, UAParser.DEVICE.MODEL, [UAParser.DEVICE.TYPE, UAParser.DEVICE.TABLET]],
     [/(myphone)/i], [UAParser.DEVICE.VENDOR, [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]]
 ];
+
+const myUA2 = 'Mozilla/5.0 MyTab 14 Pro Max';
+
 let myParser2 = new UAParser({
     browser: myOwnListOfBrowsers,
     device: myOwnListOfDevices
 });
-let myUA2 = 'Mozilla/5.0 MyTab 14 Pro Max';
+
 console.log(myParser2.setUA(myUA2).getDevice());  // {vendor: "MyTab", model: "14 Pro Max", type: "tablet"}
 ```
 
@@ -408,6 +410,17 @@ var uap = require('ua-parser-js');
 http.createServer(function (req, res) {
     // get user-agent header
     var ua = uap(req.headers['user-agent']);
+
+    /* // BEGIN since@1.1 - you can also pass client-hints data to UAParser
+    
+    var getHighEntropyValues = 'Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Arch, Sec-CH-UA-Bitness';
+    res.setHeader('Accept-CH', getHighEntropyValues);
+    res.setHeader('Critical-CH', getHighEntropyValues);
+
+    var ua = uap(req.headers);
+
+    // END since@1.1 */
+
     // write the result as response
     res.end(JSON.stringify(ua, null, '  '));
 })

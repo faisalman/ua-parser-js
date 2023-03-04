@@ -336,3 +336,67 @@ describe('Read user-agent data from req.headers', function () {
         assert.strictEqual(engine.name, "EdgeHTML");
     });
 });
+
+describe('Map UA-CH headers', function () {
+
+    const headers = {
+        'sec-ch-ua' : '"Chromium";v="93", "Google Chrome";v="93", " Not;A Brand";v="99"',
+        'sec-ch-ua-full-version-list' : '"Chromium";v="93.0.1.2", "Google Chrome";v="93.0.1.2", " Not;A Brand";v="99.0.1.2"',
+        'sec-ch-ua-arch' : 'ARM',
+        'sec-ch-ua-bitness' : '64',
+        'sec-ch-ua-mobile' : '?1',
+        'sec-ch-ua-model' : 'Pixel 99',
+        'sec-ch-ua-platform' : 'Windows',
+        'sec-ch-ua-platform-version' : '13',
+        'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+    };
+
+    const headers2 = {
+        'sec-ch-ua-mobile' : '?1',
+        'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+    };
+
+    let uap = UAParser(headers);
+    let browser = uap.browser;
+    let cpu = uap.cpu;
+    let device = uap.device;
+    let engine = uap.engine;
+    let os = uap.os;
+
+    it('Can read from client-hints headers', function () {  
+
+        assert.strictEqual(browser.name, "Chrome");
+        assert.strictEqual(browser.version, "93.0.1.2");
+        assert.strictEqual(browser.major, "93");
+        assert.strictEqual(cpu.architecture, "arm64");
+        assert.strictEqual(device.type, "mobile");
+        assert.strictEqual(device.model, "Pixel 99");
+        assert.strictEqual(device.vendor, undefined);
+        assert.strictEqual(engine.name, 'Blink');
+        assert.strictEqual(engine.version, '110.0.0.0');
+        assert.strictEqual(os.name, "Windows");
+        assert.strictEqual(os.version, "11");
+    });
+
+    it('Can read from user-agent header', function () {  
+
+        uap = UAParser(headers2);
+        browser = uap.browser;
+        cpu = uap.cpu;
+        device = uap.device;
+        engine = uap.engine;
+        os = uap.os;
+
+        assert.strictEqual(browser.name, "Chrome");
+        assert.strictEqual(browser.version, "110.0.0.0");
+        assert.strictEqual(browser.major, "110");
+        assert.strictEqual(cpu.architecture, "amd64");
+        assert.strictEqual(device.type, "mobile");
+        assert.strictEqual(device.model, undefined);
+        assert.strictEqual(device.vendor, undefined);
+        assert.strictEqual(engine.name, 'Blink');
+        assert.strictEqual(engine.version, '110.0.0.0');
+        assert.strictEqual(os.name, "Linux");
+        assert.strictEqual(os.version, "x86_64");
+    });
+});

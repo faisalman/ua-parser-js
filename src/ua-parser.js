@@ -38,7 +38,15 @@
         WEARABLE    = 'wearable',
         EMBEDDED    = 'embedded',
         USER_AGENT  = 'user-agent',
-        UA_MAX_LENGTH = 350;
+        UA_MAX_LENGTH = 350,
+        CH_HEADER   = 'sec-ch-ua',
+        CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
+        CH_HEADER_ARCH      = CH_HEADER + '-arch',
+        CH_HEADER_BITNESS   = CH_HEADER + '-bitness',
+        CH_HEADER_MOBILE    = CH_HEADER + '-mobile',
+        CH_HEADER_MODEL     = CH_HEADER + '-model',
+        CH_HEADER_PLATFORM  = CH_HEADER + '-platform',
+        CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version';
 
     var AMAZON  = 'Amazon',
         APPLE   = 'Apple',
@@ -63,7 +71,8 @@
         ZTE     = 'ZTE',
         FACEBOOK    = 'Facebook',
         CHROMIUM_OS = 'Chromium OS',
-        MAC_OS  = 'Mac OS';
+        MAC_OS  = 'Mac OS',
+        WINDOWS = 'Windows';
 
     ///////////
     // Helper
@@ -109,6 +118,8 @@
     //////////////
 
     var rgxMapper = function (ua, arrays) {
+
+            if(!ua || !arrays) return;
 
             var i = 0, j, k, p, q, matches, match;
 
@@ -718,7 +729,7 @@
             /(windows)[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i
             ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
             /(win(?=3|9|n)|win 9x )([nt\d\.]+)/i
-            ], [[NAME, 'Windows'], [VERSION, strMapper, windowsVersionMap]], [
+            ], [[NAME, WINDOWS], [VERSION, strMapper, windowsVersionMap]], [
 
             // iOS/macOS
             /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,              // iOS
@@ -788,115 +799,174 @@
     // Constructor
     ////////////////
 
-    function UAItem () {}
+    function UAItem (data) {
+        if (!data) return;
+        this.ua = data[0];
+        this.rgxMap = data[1];
+        this.data = (function (data) {
+            var is_ignoreProps = data[3],
+                is_ignoreRgx = data[4],
+                toString_props = data[5];
+
+            var UAData = function () {
+                for (var init_props in data[2]) {
+                    this[data[2][init_props]] = undefined;
+                }
+            };
+            UAData.prototype.is = function (strToCheck) {
+                var is = false;
+                for (var i in this) {
+                    if (this.hasOwnProperty(i) && !is_ignoreProps[i] && lowerize(this[i], is_ignoreRgx) === lowerize(strToCheck, is_ignoreRgx)) {
+                        is = true;
+                        if (strToCheck != UNDEF_TYPE) break;
+                    } else if (strToCheck == UNDEF_TYPE && is) {
+                        is = !is;
+                        break;
+                    }
+                }
+                return is;
+            };
+            UAData.prototype.toString = function () {
+                var str = EMPTY;
+                for (var i in toString_props) {
+                    if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
+                        str += (str ? ' ' : EMPTY) + this[toString_props[i]];
+                    }
+                }
+                return str ? str : UNDEF_TYPE;
+            };
+            return new UAData();
+        })(data);
+    }
     UAItem.prototype.get = function (prop) {
-        if (!prop) {
-            return this.data;
-        }
+        if (!prop) return this.data;
         return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
     };
-    UAItem.prototype.parse = function (ua, rgxmap) {
-        rgxMapper.call(this.data, ua, rgxmap);
+    UAItem.prototype.parse = function () {
+        rgxMapper.call(this.data, this.ua, this.rgxMap);
+        return this;
     };
     UAItem.prototype.set = function (prop, val) {
         this.data[prop] = val;
-    };
-    UAItem.prototype.then = function (callback) {
-        return callback(this.data);
-    };
-    UAItem.createUAData = function (data) {
-        var is_ignoreProps = data.is_ignoreProps,
-            is_ignoreRgx = data.is_ignoreRgx,
-            toString_props = data.toString_props;
-
-        var UAData = function () {
-            for (var i in data.init_props) {
-                this[data.init_props[i]] = undefined;
-            }
-        };
-        UAData.prototype.is = function (strToCheck) {
-            var is = false;
-            for (var i in this) {
-                if (this.hasOwnProperty(i) && !is_ignoreProps[i] && lowerize(this[i], is_ignoreRgx) === lowerize(strToCheck, is_ignoreRgx)) {
-                    is = true;
-                    if (strToCheck != UNDEF_TYPE) break;
-                } else if (strToCheck == UNDEF_TYPE && is) {
-                    is = !is;
-                    break;
-                }
-            }
-            return is;
-        };
-        UAData.prototype.toString = function () {
-            var str = EMPTY;
-            for (var i in toString_props) {
-                if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
-                    str += (str ? ' ' : EMPTY) + this[toString_props[i]];
-                }
-            }
-            return str ? str : UNDEF_TYPE;
-        };
-        return new UAData();
+        return this;
     };
 
-    function UABrowser () {
-        this.data = UAItem.createUAData({
-            init_props : [NAME, VERSION, MAJOR],
-            is_ignoreProps : [VERSION, MAJOR],
-            is_ignoreRgx : ' ?browser$',
-            toString_props : [NAME, VERSION]
-        });
+    function UABrowser (ua, browserMap) {
+        UAItem.call(this, [
+            ua,
+            browserMap,
+            [NAME, VERSION, MAJOR],
+            [VERSION, MAJOR],
+            ' ?browser$',
+            [NAME, VERSION]
+        ]);
     }
     UABrowser.prototype = new UAItem();
+    UABrowser.prototype.parse = function (uach) {
+        if (uach) {
+            var brands = uach[CH_HEADER_FULL_VER_LIST] || uach[CH_HEADER];
+            if (brands) {
+                brands = brands.replace(/\\?\"/g, EMPTY).split(', ');
+                for (var i in brands) {
+                    var brand = brands[i].split(';v='),
+                        brandName = brand[0],
+                        brandVersion = brand[1];
+                    if (!/not.a.brand/i.test(brandName) && (!this.get(NAME) || /chromi/i.test(this.get(NAME)))) {
+                        this.set(NAME, brandName.replace(GOOGLE+' ', EMPTY))
+                            .set(VERSION, brandVersion)
+                            .set(MAJOR, majorize(brandVersion));
+                    }
+                }
+            }
+        }
+        if (!this.get(NAME)) UAItem.prototype.parse.call(this);
+        return this;
+    };
 
-    function UACPU () {
-        this.data = UAItem.createUAData({
-            init_props : [ARCHITECTURE],
-            is_ignoreProps : [],
-            toString_props : [ARCHITECTURE]
-        });
+    function UACPU (ua, cpuMap) {
+        UAItem.call(this, [
+            ua,
+            cpuMap,
+            [ARCHITECTURE],
+            [],
+            null,
+            [ARCHITECTURE]
+        ]);
     }
     UACPU.prototype = new UAItem();
+    UACPU.prototype.parse = function (uach) {
+        if (uach) {
+            var archName = uach[CH_HEADER_ARCH];
+            archName += (archName && uach[CH_HEADER_BITNESS] == '64') ? '64' : EMPTY;
+            rgxMapper.call(this.data, archName, this.rgxMap);
+        }
+        if (!this.get(ARCHITECTURE)) UAItem.prototype.parse.call(this);
+        return this;
+    };
 
-    function UADevice () {
-        this.data = UAItem.createUAData({
-            init_props : [TYPE, MODEL, VENDOR],
-            is_ignoreProps : [],
-            toString_props : [VENDOR, MODEL]
-        });
+    function UADevice (ua, deviceMap) {
+        UAItem.call(this, [
+            ua,
+            deviceMap,
+            [TYPE, MODEL, VENDOR],
+            [],
+            null,
+            [VENDOR, MODEL]
+        ]);
     }
     UADevice.prototype = new UAItem();
+    UADevice.prototype.parse = function (uach) {
+        if (uach) {
+            this.set(TYPE, uach[CH_HEADER_MOBILE] == '?1' ? 
+                            MOBILE : 
+                            this.get(TYPE))
+                .set(MODEL, uach[CH_HEADER_MODEL] ? 
+                            uach[CH_HEADER_MODEL].replace(/\"/g, EMPTY) : 
+                            this.get(MODEL));
+        }
+        if (!this.get(TYPE) && !this.get(MODEL)) UAItem.prototype.parse.call(this);
+        return this;
+    };
 
-    function UAEngine () {
-        this.data = UAItem.createUAData({
-            init_props : [NAME, VERSION],
-            is_ignoreProps : [VERSION],
-            toString_props : [NAME, VERSION]
-        });
+    function UAEngine (ua, engineMap) {
+        UAItem.call(this, [
+            ua,
+            engineMap,
+            [NAME, VERSION],
+            [VERSION],
+            null,
+            [NAME, VERSION]
+        ]);
     }
     UAEngine.prototype = new UAItem();
 
-    function UAOS () {
-        this.data = UAItem.createUAData({
-            init_props : [NAME, VERSION],
-            is_ignoreProps : [VERSION],
-            is_ignoreRgx : ' ?os$',
-            toString_props : [NAME, VERSION]
-        });
+    function UAOS (ua, osMap) {
+        UAItem.call(this, [
+            ua,
+            osMap,
+            [NAME, VERSION],
+            [VERSION],
+            ' ?os$',
+            [NAME, VERSION]
+        ]);
     }
     UAOS.prototype = new UAItem();
-
-    function UAResult () {
-        this.data = { 
-            ua : '', 
-            browser : undefined, 
-            cpu : undefined, 
-            device : undefined, 
-            engine : undefined, 
-            os : undefined
-        };
-    }
-    UAResult.prototype = new UAItem();
+    UAOS.prototype.parse = function (uach) {
+        if (uach) {
+            var osName = uach[CH_HEADER_PLATFORM] ? uach[CH_HEADER_PLATFORM].replace(/\"/g, EMPTY) : undefined;
+            var osVersion = uach[CH_HEADER_PLATFORM_VER] ? uach[CH_HEADER_PLATFORM_VER].replace(/\"/g, EMPTY) : undefined;
+            osVersion = (osName == WINDOWS) ? (majorize(osVersion) >= 13 ? '11' : '10') : osVersion;
+            this.set(NAME, osName)
+                .set(VERSION, osVersion);
+        }
+        if (!this.get(NAME)) UAItem.prototype.parse.call(this);
+        if (/(chrome |mac)os/.test(this.get(NAME))) {
+            this.set(NAME, this.get(NAME)
+                            .replace(/chrome os/i, CHROMIUM_OS)
+                            .replace(/macos/i, MAC_OS));
+        }
+        return this;
+    };
 
     function UAParser (ua, extensions, headers) {
 
@@ -908,6 +978,7 @@
                 extensions = ua;                        // case UAParser(extensions)
             } else {
                 headers = ua;                           // case UAParser(headers)
+                extensions = undefined;
             }
             ua = undefined;
         } else if (typeof ua === STR_TYPE && !isExtensions(extensions)) {
@@ -918,75 +989,114 @@
         if (!(this instanceof UAParser)) {
             return new UAParser(ua, extensions, headers).getResult();
         }
-        var _navigator = (typeof window !== UNDEF_TYPE && window.navigator) ? window.navigator : undefined;
 
-        // _ua = user-supplied string || window.navigator.userAgent || user-agent header || empty
-        var _ua = ua || ((_navigator && _navigator.userAgent) ? _navigator.userAgent : (!ua && headers && headers[USER_AGENT] ? headers[USER_AGENT] : EMPTY));
-        var _uach = (_navigator && _navigator.userAgentData) ? _navigator.userAgentData : undefined;
-        var _rgxmap = extensions ? extend(regexes, extensions) : regexes;
+        var navigator = (typeof window !== UNDEF_TYPE && window.navigator) ? 
+                        window.navigator : 
+                        undefined,
+
+            userAgent = ua || 
+                        ((navigator && navigator.userAgent) ? 
+                            navigator.userAgent : 
+                            (headers && headers[USER_AGENT] ? 
+                                headers[USER_AGENT] : 
+                                EMPTY)),
+
+            clientHints = (navigator && navigator.userAgentData) ? 
+                            navigator.userAgentData : 
+                            undefined,
+
+            regexMap = extensions ? 
+                        extend(regexes, extensions) : 
+                        regexes;
 
         // public methods
         this.getBrowser = function () {
-            var _browser = new UABrowser();
-            _browser.parse(_ua, _rgxmap.browser);
-            _browser.set(MAJOR, majorize(_browser.get(VERSION)));
-            // Brave-specific detection
-            if (_navigator && _navigator.brave && typeof _navigator.brave.isBrave == FUNC_TYPE) {
-                _browser.set(NAME, 'Brave');
+            var browser = new UABrowser(userAgent, regexMap.browser);
+            if (headers && (headers[CH_HEADER_FULL_VER_LIST] || headers[CH_HEADER])) {
+                browser.parse(headers);
+            } else {
+                browser.parse();
+                // Brave-specific detection
+                if (navigator && navigator.brave && typeof navigator.brave.isBrave == FUNC_TYPE) {
+                    browser.set(NAME, 'Brave');
+                }
             }
-            return _browser.get();
+            return browser
+                    .set(MAJOR, majorize(browser.get(VERSION)))
+                    .get();
         };
+        
         this.getCPU = function () {
-            var _cpu = new UACPU();
-            _cpu.parse(_ua, _rgxmap.cpu);
-            return _cpu.get();
+            var cpu = new UACPU(userAgent, regexMap.cpu);
+            if (headers && headers[CH_HEADER_ARCH]) {
+                cpu.parse(headers);
+            } else {
+                cpu.parse();
+            }
+            return cpu.get();
         };
+
         this.getDevice = function () {
-            var _device = new UADevice();
-            _device.parse(_ua, _rgxmap.device);
-            if (!_device.get(TYPE) && _uach && _uach.mobile) {
-                _device.set(TYPE, MOBILE);
+            var device = new UADevice(userAgent, regexMap.device);
+            if (headers && (headers[CH_HEADER_MOBILE] || headers[CH_HEADER_MODEL])) {
+                device.parse(headers);
+            } else {
+                device.parse();
+                if (!device.get(TYPE) && clientHints && clientHints.mobile) {
+                    device.set(TYPE, MOBILE);
+                }
+                // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
+                if (device.get(NAME) == 'Macintosh' && navigator && typeof navigator.standalone !== UNDEF_TYPE && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) {
+                    device
+                        .set(MODEL, 'iPad')
+                        .set(TYPE, TABLET);
+                }
             }
-            // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-            if (_device.get(NAME) == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
-                _device.set(MODEL, 'iPad');
-                _device.set(TYPE, TABLET);
-            }
-            return _device.get();
+            return device.get();
         };
+
         this.getEngine = function () {
-            var _engine = new UAEngine();
-            _engine.parse(_ua, _rgxmap.engine);
-            return _engine.get();
+            return new UAEngine(userAgent, regexMap.engine)
+                    .parse()
+                    .get();
         };
+
         this.getOS = function () {
-            var _os = new UAOS();
-            _os.parse(_ua, _rgxmap.os);
-            if (!_os.get(NAME) && _uach && _uach.platform != 'Unknown') {
-                _os.set(NAME, _uach.platform  
-                                    .replace(/chrome os/i, CHROMIUM_OS)
-                                    .replace(/macos/i, MAC_OS));           // backward compatibility
+            var os = new UAOS(userAgent, regexMap.os);
+            if (headers && headers[CH_HEADER_PLATFORM]) {
+                os.parse(headers);
+            } else {
+                os.parse();
+                if (!os.get(NAME) && clientHints && clientHints.platform != 'Unknown') {
+                    os.set(NAME, clientHints.platform  
+                                        .replace(/chrome os/i, CHROMIUM_OS)
+                                        .replace(/macos/i, MAC_OS));           // backward compatibility
+                }
             }
-            return _os.get();
+            return os.get();
         };
+
         this.getResult = function () {
-            var _result = new UAResult();
-            _result.set('ua', _ua);
-            _result.set('browser', this.getBrowser());
-            _result.set('cpu', this.getCPU());
-            _result.set('device', this.getDevice());
-            _result.set('engine', this.getEngine());
-            _result.set('os', this.getOS());
-            return _result.get();
+            return {
+                'ua'        : userAgent,
+                'browser'   : this.getBrowser(),
+                'cpu'       : this.getCPU(),
+                'device'    : this.getDevice(),
+                'engine'    : this.getEngine(),
+                'os'        : this.getOS()
+            };
         };
+
         this.getUA = function () {
-            return _ua;
+            return userAgent;
         };
+
         this.setUA = function (ua) {
-            _ua = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? trim(ua, UA_MAX_LENGTH) : ua;
+            userAgent = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? trim(ua, UA_MAX_LENGTH) : ua;
             return this;
         };
-        this.setUA(_ua);
+
+        this.setUA(userAgent);
         return this;
     }
 
