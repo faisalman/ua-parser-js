@@ -95,20 +95,34 @@
         has = function (str1, str2) {
             return typeof str1 === STR_TYPE ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
         },
+        initialize = function (arr) {
+            for (var i in arr) {
+                var propName = arr[i];
+                if (typeof propName == OBJ_TYPE && propName.length == 2) {
+                    this[propName[0]] = propName[1];
+                } else {
+                    this[propName] = undefined;
+                }
+            }
+            return this;
+        },
         isExtensions = function (obj) {
             for (var prop in obj) {
                 return /^(browser|cpu|device|engine|os)$/.test(prop);
             }
         },
         lowerize = function (str, rgx) {
-            return typeof(str) === STR_TYPE ? str.toLowerCase().replace((rgx ? new RegExp(rgx, 'i') : EMPTY), EMPTY) : str;
+            return typeof(str) === STR_TYPE ? strip((rgx ? new RegExp(rgx, 'i') : EMPTY), str.toLowerCase()) : str;
         },
         majorize = function (version) {
-            return typeof(version) === STR_TYPE ? version.replace(/[^\d\.]/g, EMPTY).split('.')[0] : undefined;
+            return typeof(version) === STR_TYPE ? strip(/[^\d\.]/g, version).split('.')[0] : undefined;
+        },
+        strip = function (pattern, str) {
+            return str.replace(pattern, EMPTY);
         },
         trim = function (str, len) {
             if (typeof(str) === STR_TYPE) {
-                str = str.replace(/^\s\s*/, EMPTY);
+                str = strip(/^\s\s*/, str);
                 return typeof(len) === UNDEF_TYPE ? str : str.substring(0, UA_MAX_LENGTH);
             }
     };
@@ -799,20 +813,45 @@
     // Constructor
     ////////////////
 
+    function UACHData (uach, isBrowser) {
+        uach = uach || {};
+        if (!isBrowser) {
+            initialize.call(this, ['brands', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness']);
+            if ((uach[CH_HEADER_FULL_VER_LIST] || uach[CH_HEADER])) {
+                this.brands = [];
+                var tokens = strip(/\\?\"/g, (uach[CH_HEADER_FULL_VER_LIST] || uach[CH_HEADER])).split(', ');
+                for (var i = 0; i < tokens.length; i++) {
+                    var token = tokens[i].split(';v=');
+                    this.brands[i] = { brand : token[0], version : token[1] };
+                }
+            }
+            this.mobile = uach[CH_HEADER_MOBILE] == '?1';
+            var setHeader = function (header) {
+                return header ? strip(/\"/g, header) : undefined; 
+            };
+            this.model = setHeader(uach[CH_HEADER_MODEL]);
+            this.platform = setHeader(uach[CH_HEADER_PLATFORM]);
+            this.platformVersion = setHeader(uach[CH_HEADER_PLATFORM_VER]);
+            this.architecture = setHeader(uach[CH_HEADER_ARCH]);
+            this.bitness = setHeader(uach[CH_HEADER_BITNESS]);
+        }
+        return this;
+    }
+
     function UAItem (data) {
         if (!data) return;
         this.ua = data[0];
         this.rgxMap = data[1];
+        this.uaCH = data[2];
         this.data = (function (data) {
-            var is_ignoreProps = data[3],
-                is_ignoreRgx = data[4],
-                toString_props = data[5];
+            var init_props = data[3],
+                is_ignoreProps = data[4],
+                is_ignoreRgx = data[5],
+                toString_props = data[6];
 
-            var UAData = function () {
-                for (var init_props in data[2]) {
-                    this[data[2][init_props]] = undefined;
-                }
-            };
+            function UAData () {
+                initialize.call(this, init_props);
+            }
             UAData.prototype.is = function (strToCheck) {
                 var is = false;
                 for (var i in this) {
@@ -851,10 +890,11 @@
         return this;
     };
 
-    function UABrowser (ua, browserMap) {
+    function UABrowser (ua, browserMap, uach) {
         UAItem.call(this, [
             ua,
             browserMap,
+            uach,
             [NAME, VERSION, MAJOR],
             [VERSION, MAJOR],
             ' ?browser$',
@@ -862,31 +902,27 @@
         ]);
     }
     UABrowser.prototype = new UAItem();
-    UABrowser.prototype.parse = function (uach) {
-        if (uach) {
-            var brands = uach[CH_HEADER_FULL_VER_LIST] || uach[CH_HEADER];
-            if (brands) {
-                brands = brands.replace(/\\?\"/g, EMPTY).split(', ');
-                for (var i in brands) {
-                    var brand = brands[i].split(';v='),
-                        brandName = brand[0],
-                        brandVersion = brand[1];
-                    if (!/not.a.brand/i.test(brandName) && (!this.get(NAME) || /chromi/i.test(this.get(NAME)))) {
-                        this.set(NAME, brandName.replace(GOOGLE+' ', EMPTY))
-                            .set(VERSION, brandVersion)
-                            .set(MAJOR, majorize(brandVersion));
-                    }
+    UABrowser.prototype.parseCH = function () {
+        var brands = this.uaCH.brands;
+        if (brands) {
+            for (var i in brands) {
+                var brandName = brands[i].brand,
+                    brandVersion = brands[i].version;
+                if (!/not.a.brand/i.test(brandName) && (!this.get(NAME) || /chromi/i.test(this.get(NAME)))) {
+                    this.set(NAME, strip(GOOGLE+' ', brandName))
+                        .set(VERSION, brandVersion)
+                        .set(MAJOR, majorize(brandVersion));
                 }
             }
         }
-        if (!this.get(NAME)) UAItem.prototype.parse.call(this);
         return this;
     };
 
-    function UACPU (ua, cpuMap) {
+    function UACPU (ua, cpuMap, uach) {
         UAItem.call(this, [
             ua,
             cpuMap,
+            uach,
             [ARCHITECTURE],
             [],
             null,
@@ -894,20 +930,18 @@
         ]);
     }
     UACPU.prototype = new UAItem();
-    UACPU.prototype.parse = function (uach) {
-        if (uach) {
-            var archName = uach[CH_HEADER_ARCH];
-            archName += (archName && uach[CH_HEADER_BITNESS] == '64') ? '64' : EMPTY;
-            rgxMapper.call(this.data, archName, this.rgxMap);
-        }
-        if (!this.get(ARCHITECTURE)) UAItem.prototype.parse.call(this);
+    UACPU.prototype.parseCH = function () {
+        var archName = this.uaCH.architecture;
+        archName += (archName && this.uaCH.bitness == '64') ? '64' : EMPTY;
+        rgxMapper.call(this.data, archName, this.rgxMap);
         return this;
     };
 
-    function UADevice (ua, deviceMap) {
+    function UADevice (ua, deviceMap, uach) {
         UAItem.call(this, [
             ua,
             deviceMap,
+            uach,
             [TYPE, MODEL, VENDOR],
             [],
             null,
@@ -915,16 +949,13 @@
         ]);
     }
     UADevice.prototype = new UAItem();
-    UADevice.prototype.parse = function (uach) {
-        if (uach) {
-            this.set(TYPE, uach[CH_HEADER_MOBILE] == '?1' ? 
-                            MOBILE : 
-                            this.get(TYPE))
-                .set(MODEL, uach[CH_HEADER_MODEL] ? 
-                            uach[CH_HEADER_MODEL].replace(/\"/g, EMPTY) : 
-                            this.get(MODEL));
+    UADevice.prototype.parseCH = function () {
+        if (this.uaCH.mobile) {
+            this.set(TYPE, MOBILE);
         }
-        if (!this.get(TYPE) && !this.get(MODEL)) UAItem.prototype.parse.call(this);
+        if (this.uaCH.model) {
+            this.set(MODEL, strip(/\"/g, this.uaCH.model));
+        }
         return this;
     };
 
@@ -932,6 +963,7 @@
         UAItem.call(this, [
             ua,
             engineMap,
+            null,
             [NAME, VERSION],
             [VERSION],
             null,
@@ -940,10 +972,11 @@
     }
     UAEngine.prototype = new UAItem();
 
-    function UAOS (ua, osMap) {
+    function UAOS (ua, osMap, uach) {
         UAItem.call(this, [
             ua,
             osMap,
+            uach,
             [NAME, VERSION],
             [VERSION],
             ' ?os$',
@@ -951,22 +984,15 @@
         ]);
     }
     UAOS.prototype = new UAItem();
-    UAOS.prototype.parse = function (uach) {
-        if (uach) {
-            var osName = uach[CH_HEADER_PLATFORM] ? uach[CH_HEADER_PLATFORM].replace(/\"/g, EMPTY) : undefined;
-            var osVersion = uach[CH_HEADER_PLATFORM_VER] ? uach[CH_HEADER_PLATFORM_VER].replace(/\"/g, EMPTY) : undefined;
-            osVersion = (osName == WINDOWS) ? (majorize(osVersion) >= 13 ? '11' : '10') : osVersion;
-            this.set(NAME, osName)
-                .set(VERSION, osVersion);
-        }
-        if (!this.get(NAME)) UAItem.prototype.parse.call(this);
-        if (/(chrome |mac)os/.test(this.get(NAME))) {
-            this.set(NAME, this.get(NAME)
-                            .replace(/chrome os/i, CHROMIUM_OS)
-                            .replace(/macos/i, MAC_OS));
-        }
+    UAOS.prototype.parseCH = function (uach) {
+        var osName = this.uaCH.platform;
+        var osVersion = this.uaCH.platformVersion;
+        osVersion = (osName == WINDOWS) ? (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10') : osVersion;
+        this.set(NAME, osName)
+            .set(VERSION, osVersion);
         return this;
     };
+    
 
     function UAParser (ua, extensions, headers) {
 
@@ -1000,8 +1026,10 @@
                             (headers && headers[USER_AGENT] ? 
                                 headers[USER_AGENT] : 
                                 EMPTY)),
+            
+            clientHints = new UACHData(headers, false),
 
-            clientHints = (navigator && navigator.userAgentData) ? 
+            userAgentData = (navigator && navigator.userAgentData) ? 
                             navigator.userAgentData : 
                             undefined,
 
@@ -1011,10 +1039,11 @@
 
         // public methods
         this.getBrowser = function () {
-            var browser = new UABrowser(userAgent, regexMap.browser);
+            var browser = new UABrowser(userAgent, regexMap.browser, clientHints);
             if (headers && (headers[CH_HEADER_FULL_VER_LIST] || headers[CH_HEADER])) {
-                browser.parse(headers);
-            } else {
+                browser.parseCH();
+            } 
+            if (!browser.get(NAME)) {
                 browser.parse();
                 // Brave-specific detection
                 if (navigator && navigator.brave && typeof navigator.brave.isBrave == FUNC_TYPE) {
@@ -1027,22 +1056,24 @@
         };
         
         this.getCPU = function () {
-            var cpu = new UACPU(userAgent, regexMap.cpu);
+            var cpu = new UACPU(userAgent, regexMap.cpu, clientHints);
             if (headers && headers[CH_HEADER_ARCH]) {
-                cpu.parse(headers);
-            } else {
+                cpu.parseCH();
+            } 
+            if (!cpu.get(ARCHITECTURE)) {
                 cpu.parse();
             }
             return cpu.get();
         };
 
         this.getDevice = function () {
-            var device = new UADevice(userAgent, regexMap.device);
+            var device = new UADevice(userAgent, regexMap.device, clientHints);
             if (headers && (headers[CH_HEADER_MOBILE] || headers[CH_HEADER_MODEL])) {
-                device.parse(headers);
-            } else {
+                device.parseCH();
+            } 
+            if (!device.get(TYPE) || !device.get(MODEL)) {
                 device.parse();
-                if (!device.get(TYPE) && clientHints && clientHints.mobile) {
+                if (!device.get(TYPE) && userAgentData && userAgentData.mobile) {
                     device.set(TYPE, MOBILE);
                 }
                 // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
@@ -1062,13 +1093,14 @@
         };
 
         this.getOS = function () {
-            var os = new UAOS(userAgent, regexMap.os);
+            var os = new UAOS(userAgent, regexMap.os, clientHints);
             if (headers && headers[CH_HEADER_PLATFORM]) {
-                os.parse(headers);
-            } else {
+                os.parseCH();
+            } 
+            if (!os.get(NAME)) {
                 os.parse();
-                if (!os.get(NAME) && clientHints && clientHints.platform != 'Unknown') {
-                    os.set(NAME, clientHints.platform  
+                if (!os.get(NAME) && userAgentData && userAgentData.platform != 'Unknown') {
+                    os.set(NAME, userAgentData.platform  
                                         .replace(/chrome os/i, CHROMIUM_OS)
                                         .replace(/macos/i, MAC_OS));           // backward compatibility
                 }
@@ -1079,6 +1111,7 @@
         this.getResult = function () {
             return {
                 'ua'        : userAgent,
+                'ua_ch'     : clientHints,
                 'browser'   : this.getBrowser(),
                 'cpu'       : this.getCPU(),
                 'device'    : this.getDevice(),
