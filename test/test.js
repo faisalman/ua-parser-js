@@ -82,7 +82,7 @@ describe('Returns', function () {
         assert.deepEqual(new UAParser('').getResult(), 
             {
                 ua : '',
-                ua_ch : { architecture: undefined, bitness: undefined, brands: undefined, mobile: false, model: undefined, platform: undefined, platformVersion: undefined },
+                ua_ch : { architecture: undefined, bitness: undefined, brands: undefined, fullVersionList: undefined, mobile: false, model: undefined, platform: undefined, platformVersion: undefined },
                 browser: { name: undefined, version: undefined, major: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
@@ -399,5 +399,13 @@ describe('Map UA-CH headers', function () {
         assert.strictEqual(engine.version, '110.0.0.0');
         assert.strictEqual(os.name, "Linux");
         assert.strictEqual(os.version, "x86_64");
+    });
+});
+
+describe('Map UA-CH JS', function () {
+    it('Can read client hints from browser', async function () {  
+        let ua = new UAParser();
+        let browser = await ua.getBrowser().withClientHints();
+        // TODO : create tests
     });
 });
