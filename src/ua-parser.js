@@ -47,22 +47,23 @@
         CH_HEADER_MODEL     = CH_HEADER + '-model',
         CH_HEADER_PLATFORM  = CH_HEADER + '-platform',
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES = ['brands', 'fullVersionList', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness'];
+        CH_ALL_VALUES = ['brands', 'fullVersionList', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness'],
+        UA_BROWSER  = 'browser',
+        UA_CPU      = 'cpu',
+        UA_DEVICE   = 'device',
+        UA_ENGINE   = 'engine',
+        UA_OS       = 'os',
+        UA_RESULT   = 'result';
 
     var AMAZON  = 'Amazon',
         APPLE   = 'Apple',
         ASUS    = 'ASUS',
         BLACKBERRY = 'BlackBerry',
-        BROWSER = 'Browser',
-        CHROME  = 'Chrome',
-        EDGE    = 'Edge',
-        FIREFOX = 'Firefox',
         GOOGLE  = 'Google',
         HUAWEI  = 'Huawei',
         LG      = 'LG',
         MICROSOFT = 'Microsoft',
         MOTOROLA  = 'Motorola',
-        OPERA   = 'Opera',
         SAMSUNG = 'Samsung',
         SHARP   = 'Sharp',
         SONY    = 'Sony',
@@ -70,7 +71,14 @@
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
         ZTE     = 'ZTE',
+
+        BROWSER = 'Browser',
+        CHROME  = 'Chrome',
+        EDGE    = 'Edge',
+        FIREFOX = 'Firefox',
+        OPERA   = 'Opera',
         FACEBOOK    = 'Facebook',
+
         CHROMIUM_OS = 'Chromium OS',
         MAC_OS  = 'Mac OS',
         WINDOWS = 'Windows';
@@ -385,12 +393,10 @@
 
         cpu : [[
 
-            /(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i                     // AMD64 (x64)
+            /\b(?:(amd|x|x86[-_]?|wow|win)64)\b/i                               // AMD64 (x64)
             ], [[ARCHITECTURE, 'amd64']], [
 
-            /(ia32(?=;))/i                                                      // IA32 (quicktime)
-            ], [[ARCHITECTURE, lowerize]], [
-
+            /(ia32(?=;))/i,                                                     // IA32 (quicktime)
             /((?:i[346]|x)86)[;\)]/i                                            // IA32 (x86)
             ], [[ARCHITECTURE, 'ia32']], [
 
@@ -824,6 +830,9 @@
     function UAParserDataCH (uach, isHTTP_UACH) {
         uach = uach || {};
         initialize.call(this, CH_ALL_VALUES);
+        var setVal = function (val) {
+            return typeof val === STR_TYPE ? strip(/\"/g, val) : val || undefined; 
+        };
         if (isHTTP_UACH) {
             var toArray = function (header) {
                 if (!header) return undefined;
@@ -838,17 +847,14 @@
             this.brands = toArray(uach[CH_HEADER]);
             this.fullVersionList = toArray(uach[CH_HEADER_FULL_VER_LIST]);
             this.mobile = /\?1/.test(uach[CH_HEADER_MOBILE]);
-            var setHeader = function (header) {
-                return header ? strip(/\"/g, header) : undefined; 
-            };
-            this.model = setHeader(uach[CH_HEADER_MODEL]);
-            this.platform = setHeader(uach[CH_HEADER_PLATFORM]);
-            this.platformVersion = setHeader(uach[CH_HEADER_PLATFORM_VER]);
-            this.architecture = setHeader(uach[CH_HEADER_ARCH]);
-            this.bitness = setHeader(uach[CH_HEADER_BITNESS]);
+            this.model = setVal(uach[CH_HEADER_MODEL]);
+            this.platform = setVal(uach[CH_HEADER_PLATFORM]);
+            this.platformVersion = setVal(uach[CH_HEADER_PLATFORM_VER]);
+            this.architecture = setVal(uach[CH_HEADER_ARCH]);
+            this.bitness = setVal(uach[CH_HEADER_BITNESS]);
         } else {
             for (var prop in uach) {
-                this[prop] = uach[prop];
+                if(this.hasOwnProperty(prop) && uach[prop]) this[prop] = setVal(uach[prop]);
             }
         }
         return this;
@@ -894,28 +900,28 @@
                 return str ? str : UNDEF_TYPE;
             };
             UAParserData.prototype.withClientHints = function () {
-                if (!NAVIGATOR_UADATA) return;
+                if (!NAVIGATOR_UADATA) return this;
                 return NAVIGATOR_UADATA
                         .getHighEntropyValues(CH_ALL_VALUES)
                         .then(function (res) {
 
                             var JS_UACH = new UAParserDataCH(res, false),
                                 browser = new UAParserBrowser(ua, rgxMap, JS_UACH).get(),
-                                cpu = new UAParserCPU(ua, rgxMap, JS_UACH).get(),
-                                device = new UAParserDevice(ua, rgxMap, JS_UACH).get(),
-                                engine = new UAParserEngine(ua, rgxMap).get(),
-                                os = new UAParserOS(ua, rgxMap, JS_UACH).get();
+                                cpu     = new UAParserCPU(ua, ((itemType == UA_RESULT) ? rgxMap.cpu : rgxMap), JS_UACH).get(),
+                                device  = new UAParserDevice(ua, rgxMap, JS_UACH).get(),
+                                engine  = new UAParserEngine(ua, rgxMap).get(),
+                                os      = new UAParserOS(ua, rgxMap, JS_UACH).get();
 
                             switch (itemType) {
-                                case 'browser':
+                                case UA_BROWSER:
                                     return browser;
-                                case 'cpu':
+                                case UA_CPU:
                                     return cpu;
-                                case 'device':
+                                case UA_DEVICE:
                                     return device;
-                                case 'engine':
+                                case UA_ENGINE:
                                     return engine;
-                                case 'os':
+                                case UA_OS:
                                     return os;
                                 default :
                                     return {
@@ -950,7 +956,7 @@
         UAParserItem.call(this, [
             ua,
             uach,
-            'browser',
+            UA_BROWSER,
             browserMap,
             [NAME, VERSION, MAJOR],
             [VERSION, MAJOR],
@@ -988,7 +994,7 @@
         UAParserItem.call(this, [
             ua,
             uach,
-            'cpu',
+            UA_CPU,
             cpuMap,
             [ARCHITECTURE],
             [],
@@ -1014,7 +1020,7 @@
         UAParserItem.call(this, [
             ua,
             uach,
-            'device',
+            UA_DEVICE,
             deviceMap,
             [TYPE, MODEL, VENDOR],
             [],
@@ -1049,7 +1055,7 @@
         UAParserItem.call(this, [
             ua,
             null,
-            'engine',
+            UA_ENGINE,
             engineMap,
             [NAME, VERSION],
             [VERSION],
@@ -1064,7 +1070,7 @@
         UAParserItem.call(this, [
             ua,
             uach,
-            'os',
+            UA_OS,
             osMap,
             [NAME, VERSION],
             [VERSION],
@@ -1074,7 +1080,7 @@
         this.parseCH();
         if (!this.get(NAME)) {
             this.parse();
-            if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA.platform != 'Unknown') {
+            if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA.platform && NAVIGATOR_UADATA.platform != 'Unknown') {
                 this.set(NAME, NAVIGATOR_UADATA.platform  
                                     .replace(/chrome os/i, CHROMIUM_OS)
                                     .replace(/macos/i, MAC_OS));           // backward compatibility
@@ -1093,8 +1099,8 @@
         return this;
     };
 
-    function UAParserResult (ua, uach) {
-        UAParserItem.call(this, [ua, uach]);
+    function UAParserResult (ua, resMap, uach) {
+        UAParserItem.call(this, [ua, uach, UA_RESULT, resMap]);
     }
     UAParserResult.prototype = new UAParserItem();
     
@@ -1155,14 +1161,14 @@
         };
 
         this.getResult = function () {
-            return new UAParserResult(userAgent, HTTP_UACH)
+            return new UAParserResult(userAgent, regexMap, HTTP_UACH)
                         .set('ua', userAgent)
                         .set('ua_ch', HTTP_UACH)
-                        .set('browser', this.getBrowser())
-                        .set('cpu', this.getCPU())
-                        .set('device', this.getDevice())
-                        .set('engine', this.getEngine())
-                        .set('os', this.getOS())
+                        .set(UA_BROWSER, this.getBrowser())
+                        .set(UA_CPU, this.getCPU())
+                        .set(UA_DEVICE, this.getDevice())
+                        .set(UA_ENGINE, this.getEngine())
+                        .set(UA_OS, this.getOS())
                         .get();
         };
 

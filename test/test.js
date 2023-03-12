@@ -402,10 +402,62 @@ describe('Map UA-CH headers', function () {
     });
 });
 
-describe('Map UA-CH JS', function () {
-    it('Can read client hints from browser', async function () {  
-        let ua = new UAParser();
-        let browser = await ua.getBrowser().withClientHints();
-        // TODO : create tests
+describe('Map UA-CH JS', () => {
+
+    it('does not throw when using withClientHints() in non-supported environment', () => {
+        assert.doesNotThrow(() => { 
+            new UAParser().getResult().withClientHints();
+        });
+    });
+
+    window = { navigator : { userAgent : '' , userAgentData : new NavigatorUAData() } };
+    function NavigatorUAData () {
+        this.mobile = false;
+        this.platform = '';
+        this.brands = [{ brand : 'A Chromium-based Browser', version : '1' }];
+        this.getHighEntropyValues = (values) => {
+            return new Promise((resolve) => {
+                const result = {
+                    brands : [{ brand : 'A Chromium-based Browser', version : '1' }],
+                    fullVersionList : [{ brand : 'A Chromium-based Browser', version : '1.2.3' }],
+                    architecture : 'x86',
+                    bitness : '64',
+                    mobile : true,
+                    model : 'Galaxy S3',
+                    platform : 'Android',
+                    platformVersion : '1000'                
+                };
+                resolve(result);
+            });
+        }
+    };
+    delete require.cache[require.resolve('./../src/ua-parser')];
+    const UAParserWithWindow = require('./../src/ua-parser');
+
+    it('Can read client hints from browser', async () => {
+
+        let uap = new UAParserWithWindow()
+
+        let os = await uap.getOS().withClientHints();
+
+        assert.strictEqual(os.name, 'Android');
+        assert.strictEqual(os.is('Android'), true);
+        assert.strictEqual(os.toString(), 'Android 1000');
+
+        let result = await uap.getResult().withClientHints();
+
+        assert.strictEqual(result.browser.name, 'A Chromium-based Browser');
+        assert.strictEqual(result.browser.version, '1.2.3');
+        assert.strictEqual(result.cpu.architecture, 'amd64');
+        assert.strictEqual(result.os.name, 'Android');
+
+        let result_without_ch = uap.getResult();
+
+        assert.strictEqual(result_without_ch.browser.name, undefined);
+
+        uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
+        assert.strictEqual(uap.getOS().name, "Mac OS");
+        
+        // TODO : create full tests
     });
 });
