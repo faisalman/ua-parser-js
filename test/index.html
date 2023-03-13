@@ -1,0 +1,10 @@
+<script src="../js/ua-parser.js"></script>
+<script>
+    try {
+        var result = JSON.stringify(UAParser(), null, "\t");
+        document.write("<pre>" + result + "</pre>");
+        console.log(result);
+    } catch (e) {
+        document.write("Error: " + e);
+    }
+</script>
