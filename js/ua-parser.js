@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v0.7.33-gpu-experimental
+/* UAParser.js v0.7.34
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -17,7 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.33-gpu-experimental',
+    var LIBVERSION  = '0.7.34',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -56,9 +56,12 @@
         SAMSUNG = 'Samsung',
         SHARP   = 'Sharp',
         SONY    = 'Sony',
+        VIERA   = 'Viera',
         XIAOMI  = 'Xiaomi',
         ZEBRA   = 'Zebra',
-        FACEBOOK   = 'Facebook';
+        FACEBOOK    = 'Facebook',
+        CHROMIUM_OS = 'Chromium OS',
+        MAC_OS  = 'Mac OS';
 
     ///////////
     // Helper
@@ -116,6 +119,7 @@
                 // try matching uastring with regexes
                 while (j < regex.length && !matches) {
 
+                    if (!regex[j]) { break; }
                     matches = regex[j++].exec(ua);
 
                     if (!!matches) {
@@ -175,14 +179,8 @@
     // String map
     //////////////
 
-    var gpuVendorMap = {
-        'AMD'       : 'Radeon',
-        'ARM'       : 'Mali',
-        'NVIDIA'    : 'GeForce',
-        'Qualcomm'  : 'Adreno'
-        },
-        // Safari < 3.0
-        oldSafariMap = {
+    // Safari < 3.0
+    var oldSafariMap = {
             '1.0'   : '/8',
             '1.2'   : '/1',
             '1.3'   : '/3',
@@ -238,7 +236,7 @@
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
                                                                                 // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ, aka ShouQ
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
@@ -289,6 +287,8 @@
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
             ], [[NAME, FACEBOOK], VERSION], [
+            /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
+            /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(chromium|instagram)[\/ ]([-\w\.]+)/i                              // Chromium/Instagram
@@ -335,7 +335,8 @@
             // Other
             /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
                                                                                 // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir/Obigo/Mosaic/Go/ICE/UP.Browser
-            /(links) \(([\w\.]+)/i                                              // Links
+            /(links) \(([\w\.]+)/i,                                             // Links
+            /panasonic;(viera)/i                                                // Panasonic Viera
             ], [NAME, VERSION], [
             
             /(cobalt)\/([\w\.]+)/i                                              // Cobalt
@@ -378,13 +379,12 @@
 
             //////////////////////////
             // MOBILES & TABLETS
-            // Ordered by popularity
             /////////////////////////
 
             // Samsung
             /\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, TABLET]], [
-            /\b((?:s[cgp]h|gt|sm)-\w+|galaxy nexus)/i,
+            /\b((?:s[cgp]h|gt|sm)-\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
             /samsung[- ]([-\w]+)/i,
             /sec-(sgh\w+)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, MOBILE]], [
@@ -398,6 +398,10 @@
             ], [MODEL, [VENDOR, APPLE], [TYPE, TABLET]], [
             /(macintosh);/i
             ], [MODEL, [VENDOR, APPLE]], [
+
+            // Sharp
+            /\b(sh-?[altvz]?\d\d[a-ekm]?)/i
+            ], [MODEL, [VENDOR, SHARP], [TYPE, MOBILE]], [
 
             // Huawei
             /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i
@@ -502,7 +506,7 @@
 
             // ZTE
             /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
-            /(alcatel|geeksphone|nexian|panasonic|sony(?!-bra))[-_ ]?([-\w]*)/i         // Alcatel/GeeksPhone/Nexian/Panasonic/Sony
+            /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i         // Alcatel/GeeksPhone/Nexian/Panasonic/Sony
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
             // Acer
@@ -513,10 +517,6 @@
             /droid.+; (m[1-5] note) bui/i,
             /\bmz-([-\w]{2,})/i
             ], [MODEL, [VENDOR, 'Meizu'], [TYPE, MOBILE]], [
-
-            // Sharp
-            /\b(sh-?[altvz]?\d\d[a-ekm]?)/i
-            ], [MODEL, [VENDOR, SHARP], [TYPE, MOBILE]], [
 
             // MIXED
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[-_ ]?([-\w]*)/i,
@@ -529,6 +529,7 @@
             /(oppo) ?([\w ]+) bui/i                                             // OPPO
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
+            /(kobo)\s(ereader|touch)/i,                                         // Kobo
             /(archos) (gamepad2?)/i,                                            // Archos
             /(hp).+(touchpad(?!.+tablet)|tablet)/i,                             // HP TouchPad
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
@@ -599,20 +600,6 @@
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, MOBILE]], [
 
             ///////////////////
-            // CONSOLES
-            ///////////////////
-
-            /(ouya)/i,                                                          // Ouya
-            /(nintendo) ([wids3utch]+)/i                                        // Nintendo
-            ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
-            /droid.+; (shield) bui/i                                            // Nvidia
-            ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
-            /(playstation [345portablevi]+)/i                                   // Playstation
-            ], [MODEL, [VENDOR, SONY], [TYPE, CONSOLE]], [
-            /\b(xbox(?: one)?(?!; xbox))[\); ]/i                                // Microsoft Xbox
-            ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
-
-            ///////////////////
             // SMARTTVS
             ///////////////////
 
@@ -635,11 +622,27 @@
             ], [MODEL, [VENDOR, SONY], [TYPE, SMARTTV]], [
             /(mitv-\w{5}) bui/i                                                 // Xiaomi
             ], [MODEL, [VENDOR, XIAOMI], [TYPE, SMARTTV]], [
+            /Hbbtv.*(technisat) (.*);/i                                         // TechniSAT
+            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,                          // Roku
-            /hbbtv\/\d+\.\d+\.\d+ +\([\w ]*; *(\w[^;]*);([^;]*)/i               // HbbTV devices
+            /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i         // HbbTV devices
             ], [[VENDOR, trim], [MODEL, trim], [TYPE, SMARTTV]], [
             /\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i                   // SmartTV from Unidentified Vendors
             ], [[TYPE, SMARTTV]], [
+
+            ///////////////////
+            // CONSOLES
+            ///////////////////
+
+            /(ouya)/i,                                                          // Ouya
+            /(nintendo) ([wids3utch]+)/i                                        // Nintendo
+            ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
+            /droid.+; (shield) bui/i                                            // Nvidia
+            ], [MODEL, [VENDOR, 'Nvidia'], [TYPE, CONSOLE]], [
+            /(playstation [345portablevi]+)/i                                   // Playstation
+            ], [MODEL, [VENDOR, SONY], [TYPE, CONSOLE]], [
+            /\b(xbox(?: one)?(?!; xbox))[\); ]/i                                // Microsoft Xbox
+            ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
 
             ///////////////////
             // WEARABLES
@@ -647,11 +650,13 @@
 
             /((pebble))app/i                                                    // Pebble
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
+            /(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i                              // Apple Watch
+            ], [MODEL, [VENDOR, APPLE], [TYPE, WEARABLE]], [
             /droid.+; (glass) \d/i                                              // Google Glass
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, WEARABLE]], [
             /droid.+; (wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, WEARABLE]], [
-            /(quest( 2)?)/i                                                     // Oculus Quest
+            /(quest( 2| pro)?)/i                                                // Oculus Quest
             ], [MODEL, [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
 
             ///////////////////
@@ -696,13 +701,6 @@
             ], [VERSION, NAME]
         ],
 
-        gpu : [[
-
-            /(intel|nvidia|sis|amd|apple|powervr)\W? (.+)/i,                    // Intel/NVIDIA/SiS/AMD/Apple/PowerVR
-            /(((?:radeon|adreno|geforce|mali).+))/i,                            // AMD Radeon/NVIDIA GeForce/Qualcomm Adreno/ARM Mali
-            ], [[VENDOR, strMapper, gpuVendorMap], [MODEL, / ?(\(.+?\)| direct3d.+| opengl.+|\/.+$| gpu$)/gi, EMPTY]]
-        ],
-
         os : [[
 
             // Windows
@@ -721,7 +719,7 @@
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x) ?([\w\. ]*)/i,
             /(macintosh|mac_powerpc\b)(?!.+haiku)/i                             // Mac OS
-            ], [[NAME, 'Mac OS'], [VERSION, /_/g, '.']], [
+            ], [[NAME, MAC_OS], [VERSION, /_/g, '.']], [
 
             // Mobile OSes
             /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
@@ -740,12 +738,19 @@
             /web0s;.+rt(tv)/i,
             /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i                              // WebOS
             ], [VERSION, [NAME, 'webOS']], [
+            /watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i                              // watchOS
+            ], [VERSION, [NAME, 'watchOS']], [
 
             // Google Chromecast
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
             ], [VERSION, [NAME, CHROME+'cast']], [
-            /(cros) [\w]+ ([\w\.]+\w)/i                                         // Chromium OS
-            ], [[NAME, 'Chromium OS'], VERSION],[
+            /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
+            ], [[NAME, CHROMIUM_OS], VERSION],[
+
+            // Smart TVs
+            /panasonic;(viera)/i,                                               // Panasonic Viera
+            /(netrange)mmh/i,                                                   // Netrange
+            /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 
             // Console
             /(nintendo|playstation) ([wids345portablevuch]+)/i,                 // Nintendo/Playstation
@@ -787,16 +792,21 @@
             return new UAParser(ua, extensions).getResult();
         }
 
-        var _ua = ua || ((typeof window !== UNDEF_TYPE && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+        var _navigator = (typeof window !== UNDEF_TYPE && window.navigator) ? window.navigator : undefined;
+        var _ua = ua || ((_navigator && _navigator.userAgent) ? _navigator.userAgent : EMPTY);
+        var _uach = (_navigator && _navigator.userAgentData) ? _navigator.userAgentData : undefined;
         var _rgxmap = extensions ? extend(regexes, extensions) : regexes;
-        var _renderer;
 
         this.getBrowser = function () {
             var _browser = {};
             _browser[NAME] = undefined;
             _browser[VERSION] = undefined;
             rgxMapper.call(_browser, _ua, _rgxmap.browser);
-            _browser.major = majorize(_browser.version);
+            _browser[MAJOR] = majorize(_browser[VERSION]);
+            // Brave-specific detection
+            if (_navigator && _navigator.brave && typeof _navigator.brave.isBrave == FUNC_TYPE) {
+                _browser[NAME] = 'Brave';
+            }
             return _browser;
         };
         this.getCPU = function () {
@@ -811,6 +821,14 @@
             _device[MODEL] = undefined;
             _device[TYPE] = undefined;
             rgxMapper.call(_device, _ua, _rgxmap.device);
+            if (!_device[TYPE] && _uach && _uach.mobile) {
+                _device[TYPE] = MOBILE;
+            }
+            // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
+            if (_device[MODEL] == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
+                _device[MODEL] = 'iPad';
+                _device[TYPE] = TABLET;
+            }
             return _device;
         };
         this.getEngine = function () {
@@ -820,20 +838,16 @@
             rgxMapper.call(_engine, _ua, _rgxmap.engine);
             return _engine;
         };
-        this.getGPU = function () {
-            var _gpu = {};
-            _gpu[VENDOR] = undefined;
-            _gpu[MODEL] = undefined;
-            if (_renderer) {
-                rgxMapper.call(_gpu, _renderer, _rgxmap.gpu);
-            }
-            return _gpu;
-        };
         this.getOS = function () {
             var _os = {};
             _os[NAME] = undefined;
             _os[VERSION] = undefined;
             rgxMapper.call(_os, _ua, _rgxmap.os);
+            if (!_os[NAME] && _uach && _uach.platform != 'Unknown') {
+                _os[NAME] = _uach.platform  
+                                    .replace(/chrome os/i, CHROMIUM_OS)
+                                    .replace(/macos/i, MAC_OS);           // backward compatibility
+            }
             return _os;
         };
         this.getResult = function () {
@@ -843,16 +857,8 @@
                 engine  : this.getEngine(),
                 os      : this.getOS(),
                 device  : this.getDevice(),
-                cpu     : this.getCPU(),
-                gpu     : this.getGPU()
+                cpu     : this.getCPU()
             };
-        };
-        this.getRenderer = function () {
-            return _renderer;
-        };
-        this.setRenderer = function (renderer) {
-            _renderer = renderer;
-            return this;
         };
         this.getUA = function () {
             return _ua;
@@ -862,12 +868,6 @@
             return this;
         };
         this.setUA(_ua);
-        // browser only
-        if (typeof window !== UNDEF_TYPE && window.document) {
-            var canvas = document.createElement('canvas');
-            var gl = canvas.getContext ? canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl') : undefined;
-            this.setRenderer(gl && gl.getParameter && gl.getExtension && gl.getExtension('WEBGL_debug_renderer_info') ? gl.getParameter(gl.getExtension('WEBGL_debug_renderer_info').UNMASKED_RENDERER_WEBGL) : undefined);
-        }
         return this;
     };
 
@@ -876,7 +876,6 @@
     UAParser.CPU = enumerize([ARCHITECTURE]);
     UAParser.DEVICE = enumerize([MODEL, VENDOR, TYPE, CONSOLE, MOBILE, SMARTTV, TABLET, WEARABLE, EMBEDDED]);
     UAParser.ENGINE = UAParser.OS = enumerize([NAME, VERSION]);
-    UAParser.GPU = enumerize([VENDOR, MODEL]);
 
     ///////////
     // Export

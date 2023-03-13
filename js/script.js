@@ -16,10 +16,12 @@ $(document)
 
     var updateDemo = function (ua) {
         var result = UAParser(ua);
+        if(!result) return;
         $('#ua-txt').transition('flip vertical', function () {
             $(this).text(result.ua);
             $(this).transition('flip vertical');
         });
+        $('#ua-result').text(JSON.stringify(result, null, "  "));
         $('#demo-result').transition('fly up', function () {
             if (result.browser.name) {
                 var version = result.browser.version!==undefined?result.browser.version:'-';
@@ -84,7 +86,7 @@ $(document)
                 $('#device-txt').text('-');
                 $('#device-img').attr('src', 'images/companies/default.png');
             }
-            if (result.gpu.vendor) {
+/*            if (result.gpu.vendor) {
                 var vendor = result.gpu.vendor!=undefined?result.gpu.vendor:'-';
                 var model = result.gpu.model!==undefined?result.gpu.model:'-';
                 $('#gpu-txt').html('<span class="ui large black label">' + vendor + '</span><span class="ui large black label">' + model + '</span>');
@@ -93,7 +95,7 @@ $(document)
                 });
             } else {
                 $('#gpu-txt').text('-');
-            }
+            }*/
             $(this).transition('fly up', function () {
                 $(this).transition('pulse');
             });
@@ -124,9 +126,9 @@ $(document)
             return false;
         }
     });
-    if (!uaparser.getGPU().vendor) {
+//    if (!uaparser.getGPU().vendor) {
         $('#gpu-divider,#gpu-segment').hide();
-    }
+//    }
 
     $('.ui.rating').rating();
     $('#showcase img').popup({
