@@ -39,6 +39,11 @@
         EMBEDDED    = 'embedded',
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 350,
+        BRANDS      = 'brands',
+        FULLVERLIST = 'fullVersionList',
+        PLATFORM    = 'platform',
+        PLATFORMVER = 'platformVersion',
+        BITNESS     = 'bitness',
         CH_HEADER   = 'sec-ch-ua',
         CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
         CH_HEADER_ARCH      = CH_HEADER + '-arch',
@@ -127,6 +132,16 @@
                 return /^(browser|cpu|device|engine|os)$/.test(prop);
             }
         },
+        itemListToArray = function (header) {
+            if (!header) return undefined;
+            var arr = [];
+            var tokens = strip(/\\?\"/g, header).split(', ');
+            for (var i = 0; i < tokens.length; i++) {
+                var token = tokens[i].split(';v=');
+                arr[i] = { brand : token[0], version : token[1] };
+            }
+            return arr;
+        },
         lowerize = function (str, rgx) {
             return typeof(str) === STR_TYPE ? strip((rgx ? new RegExp(rgx, 'i') : EMPTY), str.toLowerCase()) : str;
         },
@@ -135,6 +150,9 @@
         },
         strip = function (pattern, str) {
             return str.replace(pattern, EMPTY);
+        },
+        stripQuotes = function (val) {
+            return typeof val === STR_TYPE ? strip(/\"/g, val) : val; 
         },
         trim = function (str, len) {
             if (typeof(str) === STR_TYPE) {
@@ -830,31 +848,21 @@
     function UAParserDataCH (uach, isHTTP_UACH) {
         uach = uach || {};
         initialize.call(this, CH_ALL_VALUES);
-        var setVal = function (val) {
-            return typeof val === STR_TYPE ? strip(/\"/g, val) : val || undefined; 
-        };
         if (isHTTP_UACH) {
-            var toArray = function (header) {
-                if (!header) return undefined;
-                var arr = [];
-                var tokens = strip(/\\?\"/g, header).split(', ');
-                for (var i = 0; i < tokens.length; i++) {
-                    var token = tokens[i].split(';v=');
-                    arr[i] = { brand : token[0], version : token[1] };
-                }
-                return arr;
-            };
-            this.brands = toArray(uach[CH_HEADER]);
-            this.fullVersionList = toArray(uach[CH_HEADER_FULL_VER_LIST]);
-            this.mobile = /\?1/.test(uach[CH_HEADER_MOBILE]);
-            this.model = setVal(uach[CH_HEADER_MODEL]);
-            this.platform = setVal(uach[CH_HEADER_PLATFORM]);
-            this.platformVersion = setVal(uach[CH_HEADER_PLATFORM_VER]);
-            this.architecture = setVal(uach[CH_HEADER_ARCH]);
-            this.bitness = setVal(uach[CH_HEADER_BITNESS]);
+            initialize.call(this, [
+                [BRANDS, itemListToArray(uach[CH_HEADER])],
+                [FULLVERLIST, itemListToArray(uach[CH_HEADER_FULL_VER_LIST])],
+                [BRANDS, itemListToArray(uach[CH_HEADER])],
+                [MOBILE, /\?1/.test(uach[CH_HEADER_MOBILE])],
+                [MODEL, stripQuotes(uach[CH_HEADER_MODEL])],
+                [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
+                [PLATFORMVER, stripQuotes(uach[CH_HEADER_PLATFORM_VER])],
+                [ARCHITECTURE, stripQuotes(uach[CH_HEADER_ARCH])],
+                [BITNESS, stripQuotes(uach[CH_HEADER_BITNESS])]
+            ]);
         } else {
             for (var prop in uach) {
-                if(this.hasOwnProperty(prop) && uach[prop]) this[prop] = setVal(uach[prop]);
+                if(this.hasOwnProperty(prop) && uach[prop]) this[prop] = stripQuotes(uach[prop]);
             }
         }
         return this;
@@ -867,6 +875,7 @@
         this.rgxMap = data[3];
         this.data = (function (data) {
             var ua = data[0],
+                uaCH = data[1],
                 itemType = data[2],
                 rgxMap = data[3],
                 init_props = data[4],
@@ -900,17 +909,41 @@
                 return str ? str : UNDEF_TYPE;
             };
             UAParserData.prototype.withClientHints = function () {
-                if (!NAVIGATOR_UADATA) return this;
+                if (!NAVIGATOR_UADATA) {
+                    var HTTP_UACH = uaCH;
+                    switch (itemType) {
+                        case UA_BROWSER:
+                            return new UAParserBrowser(ua, rgxMap, HTTP_UACH).parseCH().get();
+                        case UA_CPU:
+                            return new UAParserCPU(ua, rgxMap, HTTP_UACH).parseCH().get();
+                        case UA_DEVICE:
+                            return new UAParserDevice(ua, rgxMap, HTTP_UACH).parseCH().get();
+                        case UA_ENGINE:
+                            return new UAParserEngine(ua, rgxMap).get();
+                        case UA_OS:
+                            return new UAParserOS(ua, rgxMap, HTTP_UACH).parseCH().get();
+                        default :
+                            return {
+                                'ua'        : ua,
+                                'ua_ch'     : uaCH,
+                                'browser'   : new UAParserBrowser(ua, rgxMap[UA_BROWSER], HTTP_UACH).parseCH().get(),
+                                'cpu'       : new UAParserCPU(ua, rgxMap[UA_CPU], HTTP_UACH).parseCH().get(),
+                                'device'    : new UAParserDevice(ua, rgxMap[UA_DEVICE], HTTP_UACH).parseCH().get(),
+                                'engine'    : new UAParserEngine(ua, rgxMap[UA_ENGINE]).get(),
+                                'os'        : new UAParserOS(ua, rgxMap[UA_OS], HTTP_UACH).parseCH().get()
+                            };
+                    }
+                }
                 return NAVIGATOR_UADATA
                         .getHighEntropyValues(CH_ALL_VALUES)
                         .then(function (res) {
 
                             var JS_UACH = new UAParserDataCH(res, false),
-                                browser = new UAParserBrowser(ua, rgxMap, JS_UACH).get(),
-                                cpu     = new UAParserCPU(ua, ((itemType == UA_RESULT) ? rgxMap.cpu : rgxMap), JS_UACH).get(),
-                                device  = new UAParserDevice(ua, rgxMap, JS_UACH).get(),
+                                browser = new UAParserBrowser(ua, rgxMap, JS_UACH).parseCH().get(),
+                                cpu     = new UAParserCPU(ua, ((itemType == UA_RESULT) ? rgxMap[UA_CPU] : rgxMap), JS_UACH).parseCH().get(),
+                                device  = new UAParserDevice(ua, rgxMap, JS_UACH).parseCH().get(),
                                 engine  = new UAParserEngine(ua, rgxMap).get(),
-                                os      = new UAParserOS(ua, rgxMap, JS_UACH).get();
+                                os      = new UAParserOS(ua, rgxMap, JS_UACH).parseCH().get();
 
                             switch (itemType) {
                                 case UA_BROWSER:
@@ -963,24 +996,21 @@
             ' ?browser$',
             [NAME, VERSION]
         ]);
-        this.parseCH();
-        if (!this.get(NAME)) {
-            this.parse();
-            // Brave-specific detection
-            if (NAVIGATOR && NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
-                this.set(NAME, 'Brave');
-            }
+        this.parse();
+        // Brave-specific detection
+        if (NAVIGATOR && NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
+            this.set(NAME, 'Brave');
         }
         this.set(MAJOR, majorize(this.get(VERSION)));
     }
     UAParserBrowser.prototype = new UAParserItem();
     UAParserBrowser.prototype.parseCH = function () {
-        var brands = this.uaCH.fullVersionList || this.uaCH.brands;
+        var brands = this.uaCH[FULLVERLIST] || this.uaCH[BRANDS];
         if (brands) {
             for (var i in brands) {
                 var brandName = brands[i].brand,
                     brandVersion = brands[i].version;
-                if (!/not.a.brand/i.test(brandName) && (!this.get(NAME) || /chromi/i.test(this.get(NAME)))) {
+                if (!/not.a.brand/i.test(brandName) || /chromi/i.test(this.get(NAME))) {
                     this.set(NAME, strip(GOOGLE+' ', brandName))
                         .set(VERSION, brandVersion)
                         .set(MAJOR, majorize(brandVersion));
@@ -1001,16 +1031,13 @@
             null,
             [ARCHITECTURE]
         ]);
-        this.parseCH();
-        if (!this.get(ARCHITECTURE)) {
-            this.parse();
-        }
+        this.parse();
     }
     UAParserCPU.prototype = new UAParserItem();
     UAParserCPU.prototype.parseCH = function () {
-        var archName = this.uaCH.architecture;
+        var archName = this.uaCH[ARCHITECTURE];
         if (archName) {
-            archName += (archName && this.uaCH.bitness == '64') ? '64' : EMPTY;
+            archName += (archName && this.uaCH[BITNESS] == '64') ? '64' : EMPTY;
             rgxMapper.call(this.data, archName, this.rgxMap);
         }
         return this;
@@ -1027,26 +1054,23 @@
             null,
             [VENDOR, MODEL]
         ]);
-        this.parseCH();
-        if (!this.get(TYPE) || !this.get(MODEL)) {
-            this.parse();
-            if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA.mobile) {
-                this.set(TYPE, MOBILE);
-            }
-            // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-            if (this.get(NAME) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
-                this.set(MODEL, 'iPad')
-                    .set(TYPE, TABLET);
-            }
+        this.parse();
+        if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
+            this.set(TYPE, MOBILE);
+        }
+        // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
+        if (this.get(NAME) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
+            this.set(MODEL, 'iPad')
+                .set(TYPE, TABLET);
         }
     }
     UAParserDevice.prototype = new UAParserItem();
     UAParserDevice.prototype.parseCH = function () {
-        if (this.uaCH.mobile) {
+        if (this.uaCH[MOBILE]) {
             this.set(TYPE, MOBILE);
         }
-        if (this.uaCH.model) {
-            this.set(MODEL, strip(/\"/g, this.uaCH.model));
+        if (this.uaCH[MODEL]) {
+            this.set(MODEL, this.uaCH[MODEL]);
         }
         return this;
     };
@@ -1077,21 +1101,18 @@
             ' ?os$',
             [NAME, VERSION]
         ]);
-        this.parseCH();
-        if (!this.get(NAME)) {
-            this.parse();
-            if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA.platform && NAVIGATOR_UADATA.platform != 'Unknown') {
-                this.set(NAME, NAVIGATOR_UADATA.platform  
-                                    .replace(/chrome os/i, CHROMIUM_OS)
-                                    .replace(/macos/i, MAC_OS));           // backward compatibility
-            }
+        this.parse();
+        if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM] && NAVIGATOR_UADATA[PLATFORM] != 'Unknown') {
+            this.set(NAME, NAVIGATOR_UADATA[PLATFORM]  
+                                .replace(/chrome os/i, CHROMIUM_OS)
+                                .replace(/macos/i, MAC_OS));           // backward compatibility
         }
     }
     UAParserOS.prototype = new UAParserItem();
     UAParserOS.prototype.parseCH = function () {
-        var osName = this.uaCH.platform;
+        var osName = this.uaCH[PLATFORM];
         if(osName) {
-            var osVersion = this.uaCH.platformVersion;
+            var osVersion = this.uaCH[PLATFORMVER];
             osVersion = (osName == WINDOWS) ? (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10') : osVersion;
             this.set(NAME, osName)
                 .set(VERSION, osVersion);
@@ -1141,23 +1162,23 @@
 
         // public methods
         this.getBrowser = function () {
-            return new UAParserBrowser(userAgent, regexMap.browser, HTTP_UACH).get();
+            return new UAParserBrowser(userAgent, regexMap[UA_BROWSER], HTTP_UACH).get();
         };
         
         this.getCPU = function () {
-            return new UAParserCPU(userAgent, regexMap.cpu, HTTP_UACH).get();
+            return new UAParserCPU(userAgent, regexMap[UA_CPU], HTTP_UACH).get();
         };
 
         this.getDevice = function () {
-            return new UAParserDevice(userAgent, regexMap.device, HTTP_UACH).get();
+            return new UAParserDevice(userAgent, regexMap[UA_DEVICE], HTTP_UACH).get();
         };
 
         this.getEngine = function () {
-            return new UAParserEngine(userAgent, regexMap.engine).get();
+            return new UAParserEngine(userAgent, regexMap[UA_ENGINE]).get();
         };
 
         this.getOS = function () {
-            return new UAParserOS(userAgent, regexMap.os, HTTP_UACH).get();
+            return new UAParserOS(userAgent, regexMap[UA_OS], HTTP_UACH).get();
         };
 
         this.getResult = function () {

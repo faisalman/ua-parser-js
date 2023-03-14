@@ -351,54 +351,134 @@ describe('Map UA-CH headers', function () {
         'sec-ch-ua-platform-version' : '13',
         'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
     };
+    
+    let uap = UAParser(headers).withClientHints();
+    let browser = new UAParser(headers).getBrowser().withClientHints();
+    let cpu = new UAParser(headers).getCPU().withClientHints();
+    let device = new UAParser(headers).getDevice().withClientHints();
+    let engine = new UAParser(headers).getEngine().withClientHints();
+    let os = new UAParser(headers).getOS().withClientHints();
 
-    const headers2 = {
-        'sec-ch-ua-mobile' : '?1',
-        'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+    let ua_ch = {
+        "architecture": "ARM",
+        "bitness": "64",
+        "brands": [
+          {
+            "brand": "Chromium",
+            "version": "93"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "93"
+          },
+          {
+            "brand": " Not;A Brand",
+            "version": "99"
+          }
+        ],
+        "fullVersionList": [
+          {
+            "brand": "Chromium",
+            "version": "93.0.1.2"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "93.0.1.2"
+          },
+          {
+            "brand": " Not;A Brand",
+            "version": "99.0.1.2"
+          }
+        ],
+        "mobile": true,
+        "model": "Pixel 99",
+        "platform": "Windows",
+        "platformVersion": "13"
     };
 
-    let uap = UAParser(headers);
-    let browser = uap.browser;
-    let cpu = uap.cpu;
-    let device = uap.device;
-    let engine = uap.engine;
-    let os = uap.os;
+    it('Can read from client-hints headers using `withClientHints()`', function () {  
 
-    it('Can read from client-hints headers', function () {  
-
+        assert.deepEqual(uap.ua_ch, ua_ch);
+        assert.strictEqual(uap.ua, "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36");
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, "93.0.1.2");
+        assert.strictEqual(uap.browser.major, "93");        
         assert.strictEqual(browser.name, "Chrome");
         assert.strictEqual(browser.version, "93.0.1.2");
         assert.strictEqual(browser.major, "93");
+        assert.strictEqual(uap.cpu.architecture, "arm64");
         assert.strictEqual(cpu.architecture, "arm64");
+        assert.strictEqual(uap.device.type, "mobile");
+        assert.strictEqual(uap.device.model, "Pixel 99");
+        assert.strictEqual(uap.device.vendor, undefined);
         assert.strictEqual(device.type, "mobile");
         assert.strictEqual(device.model, "Pixel 99");
         assert.strictEqual(device.vendor, undefined);
+        assert.strictEqual(uap.engine.name, 'Blink');
+        assert.strictEqual(uap.engine.version, '110.0.0.0');
         assert.strictEqual(engine.name, 'Blink');
         assert.strictEqual(engine.version, '110.0.0.0');
+        assert.strictEqual(uap.os.name, "Windows");
+        assert.strictEqual(uap.os.version, "11");
         assert.strictEqual(os.name, "Windows");
         assert.strictEqual(os.version, "11");
     });
 
-    it('Can read from user-agent header', function () {  
+    it('Only read from user-agent header when called without `withClientHints()`', function () { 
 
-        uap = UAParser(headers2);
-        browser = uap.browser;
-        cpu = uap.cpu;
-        device = uap.device;
-        engine = uap.engine;
-        os = uap.os;
+        uap = UAParser(headers);
+        browser = new UAParser(headers).getBrowser();
+        cpu = new UAParser(headers).getCPU();
+        device = new UAParser(headers).getDevice();
+        engine = new UAParser(headers).getEngine();
+        os = new UAParser(headers).getOS();
 
-        assert.strictEqual(browser.name, "Chrome");
-        assert.strictEqual(browser.version, "110.0.0.0");
-        assert.strictEqual(browser.major, "110");
-        assert.strictEqual(cpu.architecture, "amd64");
-        assert.strictEqual(device.type, "mobile");
-        assert.strictEqual(device.model, undefined);
-        assert.strictEqual(device.vendor, undefined);
-        assert.strictEqual(engine.name, 'Blink');
-        assert.strictEqual(engine.version, '110.0.0.0');
-        assert.strictEqual(os.name, "Linux");
-        assert.strictEqual(os.version, "x86_64");
+        assert.deepEqual(uap.ua_ch, ua_ch);
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, "110.0.0.0");
+        assert.strictEqual(uap.browser.major, "110");
+        assert.strictEqual(uap.cpu.architecture, "amd64");
+        assert.strictEqual(uap.device.type, undefined);
+        assert.strictEqual(uap.device.model, undefined);
+        assert.strictEqual(uap.device.vendor, undefined);
+        assert.strictEqual(uap.engine.name, 'Blink');
+        assert.strictEqual(uap.engine.version, '110.0.0.0');
+        assert.strictEqual(uap.os.name, "Linux");
+        assert.strictEqual(uap.os.version, "x86_64");
+    });
+
+    it('Fallback to user-agent header when using `withClientHints()` but found no client hints-related headers', function () {  
+
+        const headers2 = {
+            'sec-ch-ua-mobile' : '?1',
+            'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+        };
+        
+        uap = UAParser(headers2).withClientHints();
+
+        ua_ch = {
+            "architecture": undefined,
+            "bitness": undefined,
+            "brands": undefined,
+            "fullVersionList": undefined,
+            "mobile": true,
+            "model": undefined,
+            "platform": undefined,
+            "platformVersion": undefined
+        };
+
+        assert.deepEqual(uap.ua_ch, ua_ch);
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, "110.0.0.0");
+        assert.strictEqual(uap.browser.major, "110");
+        assert.strictEqual(uap.cpu.architecture, "amd64");
+        assert.strictEqual(uap.device.type, "mobile");
+        assert.strictEqual(uap.device.model, undefined);
+        assert.strictEqual(uap.device.vendor, undefined);
+        assert.strictEqual(uap.engine.name, 'Blink');
+        assert.strictEqual(uap.engine.version, '110.0.0.0');
+        assert.strictEqual(uap.os.name, "Linux");
+        assert.strictEqual(uap.os.version, "x86_64");
     });
 });
 
@@ -450,6 +530,12 @@ describe('Map UA-CH JS', () => {
         assert.strictEqual(result.browser.version, '1.2.3');
         assert.strictEqual(result.cpu.architecture, 'amd64');
         assert.strictEqual(result.os.name, 'Android');
+
+        await uap.getDevice().withClientHints().then((device) => {
+            assert.strictEqual(device.type, 'mobile');
+            assert.strictEqual(device.vendor, undefined);
+            assert.strictEqual(device.model, 'Galaxy S3');
+        });
 
         let result_without_ch = uap.getResult();
 
