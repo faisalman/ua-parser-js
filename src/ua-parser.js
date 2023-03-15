@@ -909,7 +909,10 @@
                 return str ? str : UNDEF_TYPE;
             };
             UAParserData.prototype.withClientHints = function () {
+
+                // nodejs / non-client-hints browsers
                 if (!NAVIGATOR_UADATA) {
+
                     var HTTP_UACH = uaCH;
                     switch (itemType) {
                         case UA_BROWSER:
@@ -923,52 +926,54 @@
                         case UA_OS:
                             return new UAParserOS(ua, rgxMap, HTTP_UACH).parseCH().get();
                         default :
-                            return {
-                                'ua'        : ua,
-                                'ua_ch'     : uaCH,
-                                'browser'   : new UAParserBrowser(ua, rgxMap[UA_BROWSER], HTTP_UACH).parseCH().get(),
-                                'cpu'       : new UAParserCPU(ua, rgxMap[UA_CPU], HTTP_UACH).parseCH().get(),
-                                'device'    : new UAParserDevice(ua, rgxMap[UA_DEVICE], HTTP_UACH).parseCH().get(),
-                                'engine'    : new UAParserEngine(ua, rgxMap[UA_ENGINE]).get(),
-                                'os'        : new UAParserOS(ua, rgxMap[UA_OS], HTTP_UACH).parseCH().get()
-                            };
+                            return new UAParserResult(ua, rgxMap, HTTP_UACH)
+                                        .set('ua', ua)
+                                        .set('ua_ch', uaCH)
+                                        .set(UA_BROWSER, new UAParserBrowser(ua, rgxMap[UA_BROWSER], HTTP_UACH).parseCH().get())
+                                        .set(UA_CPU, new UAParserCPU(ua, rgxMap[UA_CPU], HTTP_UACH).parseCH().get())
+                                        .set(UA_DEVICE, new UAParserDevice(ua, rgxMap[UA_DEVICE], HTTP_UACH).parseCH().get())
+                                        .set(UA_ENGINE, new UAParserEngine(ua, rgxMap[UA_ENGINE]).get())
+                                        .set(UA_OS, new UAParserOS(ua, rgxMap[UA_OS], HTTP_UACH).parseCH().get())
+                                        .get();
                     }
                 }
+
+                // browsers based on chromium 85+
                 return NAVIGATOR_UADATA
                         .getHighEntropyValues(CH_ALL_VALUES)
                         .then(function (res) {
 
-                            var JS_UACH = new UAParserDataCH(res, false),
-                                browser = new UAParserBrowser(ua, rgxMap, JS_UACH).parseCH().get(),
-                                cpu     = new UAParserCPU(ua, ((itemType == UA_RESULT) ? rgxMap[UA_CPU] : rgxMap), JS_UACH).parseCH().get(),
-                                device  = new UAParserDevice(ua, rgxMap, JS_UACH).parseCH().get(),
-                                engine  = new UAParserEngine(ua, rgxMap).get(),
-                                os      = new UAParserOS(ua, rgxMap, JS_UACH).parseCH().get();
-
+                            var JS_UACH = new UAParserDataCH(res, false);
                             switch (itemType) {
                                 case UA_BROWSER:
-                                    return browser;
+                                    return UAParserBrowser(ua, rgxMap, JS_UACH).parseCH().get();
                                 case UA_CPU:
-                                    return cpu;
+                                    return new UAParserCPU(ua, rgxMap, JS_UACH).parseCH().get();
                                 case UA_DEVICE:
-                                    return device;
+                                    return new UAParserDevice(ua, rgxMap, JS_UACH).parseCH().get();
                                 case UA_ENGINE:
-                                    return engine;
+                                    return new UAParserEngine(ua, rgxMap).get();
                                 case UA_OS:
-                                    return os;
+                                    return new UAParserOS(ua, rgxMap, JS_UACH).parseCH().get();
                                 default :
-                                    return {
-                                        'ua'        : ua,
-                                        'ua_ch'     : JS_UACH,
-                                        'browser'   : browser,
-                                        'cpu'       : cpu,
-                                        'device'    : device,
-                                        'engine'    : engine,
-                                        'os'        : os
-                                    };
+                                    return new UAParserResult(ua, rgxMap, JS_UACH)
+                                                .set('ua', ua)
+                                                .set('ua_ch', JS_UACH)
+                                                .set(UA_BROWSER, new UAParserBrowser(ua, rgxMap[UA_BROWSER], JS_UACH).parseCH().get())
+                                                .set(UA_CPU, new UAParserCPU(ua, rgxMap[UA_CPU], JS_UACH).parseCH().get())
+                                                .set(UA_DEVICE, new UAParserDevice(ua, rgxMap[UA_DEVICE], JS_UACH).parseCH().get())
+                                                .set(UA_ENGINE, new UAParserEngine(ua, rgxMap[UA_ENGINE]).get())
+                                                .set(UA_OS, new UAParserOS(ua, rgxMap[UA_OS], JS_UACH).parseCH().get())
+                                                .get();
                             }
                 });
             };
+            if (!NAVIGATOR_UADATA) {
+                UAParserData.prototype.then = function (cb) { 
+                    cb(this);
+                    return this;
+                };
+            }
             return new UAParserData();
         })(data);
     }

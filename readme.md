@@ -33,6 +33,11 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 <td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p>Visit <a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ 51Degrees <u>UAParser</u></a> to get started.</p>
 </td>
 </tr>
+<tr>
+<td colspan="2">
+<a href="https://opencollective.com/ua-parser-js">↗ Become a sponsor</a>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -41,13 +46,11 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 # Documentation
 ### UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])
 
-In The Browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in nodejs for the function to work.
-Usually you can find the user agent in:
-`request.headers["user-agent"]`.
+In the browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in' nodejs for the function to work. Usually you can find the user agent in: `request.headers["user-agent"]`.
 
 
 ## Constructor
-When you call `UAParser` with the `new` keyword `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
+When you call `UAParser` with the `new` keyword, `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
 Like so:
 * `new UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])`
 ```js
@@ -183,7 +186,7 @@ Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwal
     * set UA string to be parsed
     * returns current instance
 
-#### * `is()` utility `since@1.1`
+#### * `is():boolean` utility `since@1.1`
 
 ```js
 // Is just a shorthand to check whether specified item has a property with equals value (case-insensitive)
@@ -247,7 +250,7 @@ let engine = uap.getEngine();
 engine.is("Blink");                 // true
 ```
 
-#### * `toString()` utility `since@1.1`
+#### * `toString():string` utility `since@1.1`
 
 ```js
 // Retrieve full-name values as a string
@@ -288,9 +291,9 @@ engine.version;                     // "28.0.1500.95"
 engine.toString();                  // "Blink 28.0.1500.95"
 ```
 
-#### * `withClientHints()` `since@1.1`
+#### * `withClientHints():Promise<object>|Thenable<object>` `since@1.1`
 
-Unlike reading user-agent data, accessing client-hints data in browser-environment must be done in an asynchronous way. Worry not, you can chain the UAParser's `get*` method with `withClientHints()` to read the client-hints data as well that will return the updated data as a `Promise`.
+Unlike reading user-agent data, accessing client-hints data in browser-environment must be done in an asynchronous way. Worry not, you can chain the UAParser's `get*` method with `withClientHints()` to read the client-hints data as well that will return the updated data as a `Promise`. In nodejs-environment / browser-environment with non-secure context or without client-hints support (basically anything that's not chromium-based) this will return the updated data as a `Thenable` (can be chained with `then()`).
 
 ```js
 (async function () {  
@@ -451,11 +454,13 @@ http.createServer(function (req, res) {
     var ua = uap(req.headers['user-agent']);
 
     /* // BEGIN since@1.1 - you can also pass client-hints data to UAParser
-    
+
+    // note: only works in secure context (https:// or localhost or file://)
+
     var getHighEntropyValues = 'Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Arch, Sec-CH-UA-Bitness';
     res.setHeader('Accept-CH', getHighEntropyValues);
     res.setHeader('Critical-CH', getHighEntropyValues);
-
+    
     var ua = uap(req.headers);
 
     // END since@1.1 */
