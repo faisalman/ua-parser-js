@@ -2,6 +2,9 @@ name: ua-parser-js-run-test
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
   run-test:
     runs-on: ubuntu-latest

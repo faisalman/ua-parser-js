@@ -197,6 +197,15 @@
         }
     },
     {
+        "desc": "Mobile (DuckDuckGo mobile browser)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile DuckDuckGo/5 Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Essential PH-1",
         "ua": "Mozilla/5.0 (Linux; Android 9; PH-1 Build/PPR1.180905.036) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36",
         "expect": {
@@ -746,11 +755,20 @@
         }
     },
     {
+        "desc": "Apple Desktop",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
+        "expect": {
+            "vendor": "Apple",
+            "model": "Macintosh",
+            "type": "undefined"
+        }
+    },
+    {
         "desc": "iPad using UCBrowser",
         "ua": "Mozilla/5.0 (iPad; U; CPU OS 11_2 like Mac OS X; zh-CN; iPad5,3) AppleWebKit/534.46 (KHTML, like Gecko) UCBrowser/3.0.1.776 U3/ Mobile/10A403 Safari/7543.48.3",
         "expect": {
             "vendor": "Apple",
-            "model": "iPad5,3",
+            "model": "iPad",
             "type": "tablet"
         }
     },
@@ -759,7 +777,7 @@
         "ua": "Mozilla/5.0 (iPad; CPU OS 12_4_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPad4,1;FBMD/iPad;FBSN/iOS;FBSV/12.4.5;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPad4,1",
+            "model": "iPad",
             "type": "tablet"
         }
     },
@@ -768,7 +786,7 @@
         "ua": "Mozilla/5.0 (iPad; CPU OS 14_4_2 like Mac OS X) WebKit/8610 (KHTML, like Gecko) Mobile/18D70 [FBAN/FBIOS;FBDV/iPad7,11;FBMD/iPad;FBSN/iOS;FBSV/14.4.2;FBSS/2;FBID/tablet;FBLC/en_US;FBOP/5]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPad7,11",
+            "model": "iPad",
             "type": "tablet"
         }
     },
@@ -1058,7 +1076,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone8,4",
+            "model": "iPhone",
             "type": "mobile"
         }
     },
@@ -1067,7 +1085,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone8,4",
+            "model": "iPhone",
             "type": "mobile"
         }
     },
@@ -1076,7 +1094,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone12,5;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone12,5",
+            "model": "iPhone",
             "type": "mobile"
         }
     },
@@ -1085,7 +1103,7 @@
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone11,2;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
             "vendor": "Apple",
-            "model": "iPhone11,2",
+            "model": "iPhone",
             "type": "mobile"
         }
     },
@@ -1459,6 +1477,15 @@
         }
     },
     {
+        "desc": "Xiaomi TV",
+        "ua": "Mozilla/5.0 (Linux; Android 10; MiTV-MOOQ0 Build/QTG3.200305.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.61 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MiTV-MOOQ0",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Kindle Fire HD",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
         "expect": {
@@ -1621,6 +1648,15 @@
         }
     },
     {
+        "desc": "Samsung Galaxy Tab S8",
+        "ua": "Mozilla/5.0 (Linux; Android 12; SM-X706B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-X706B",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Samsung Galaxy Tab S",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-T700 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
         "expect": {
@@ -1689,6 +1725,15 @@
         "expect": {
             "vendor": "Samsung",
             "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sharp AQUOS-TVX19B",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AQUOS-TVX19B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "AQUOS-TVX19B",
             "type": "smarttv"
         }
     },
@@ -1869,6 +1914,24 @@
         "expect": {
             "vendor": "Sony",
             "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Android 9; BRAVIA 4K GB ATV3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony Bravia 4k UR2",
+        "ua": "Mozilla/5.0 (Linux: Andr0id 9: BRAVIA 4K UR2 Build/PTT1.190515.001.S104) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.5.431.DIA5HBBTV.250 Model/Sony-BRAVIA-4K-UR2",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K UR2",
             "type": "smarttv"
         }
     },
@@ -2864,9 +2927,7 @@
         "desc": "FaceBook Mobile App",
         "ua": "[FBAN/FBIOS;FBAV/283.0.0.44.117;FBBV/238386386;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/13.6.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/240127608]",
         "expect": {
-            "type": "mobile",
-            "model": "iPhone12,1",
-            "vendor": "Apple"
+            "type": "mobile"
         }
     },
     {
