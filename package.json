@@ -139,14 +139,20 @@
     "yuanyang <work_yuanyang@163.com>",
     "Yun Young-jin <yupmin@yupmin-office-macmini.local>",
     "Zach Bjornson <zbbjornson@gmail.com>"
-  ],
+  ],  
+  "type": "commonjs",
   "main": "src/ua-parser.js",
+  "module": "dist/ua-parser.mjs",
+  "exports": {
+      "require": "./src/ua-parser.js",
+      "import": "./dist/ua-parser.mjs"
+  },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle",
+    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node -e \"const fs=require('fs');fs.writeFileSync('dist/ua-parser.mjs','// Generated ESM version of UAParser.js\\n// Source file: /src/ua-parser.js\\n\\n'+fs.readFileSync('src/ua-parser.js','utf-8').replace(/\\(func[\\s\\S]+strict\\';/ig,'const window = undefined;').replace(/\\/[\\/\\s]+export[\\s\\S]+/ig,'export {UAParser};'),'utf-8')\"",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
     "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js",
     "verup": "node ./node_modules/verup",
