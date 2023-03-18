@@ -886,28 +886,6 @@
             function UAParserData () {
                 initialize.call(this, init_props);
             }
-            UAParserData.prototype.is = function (strToCheck) {
-                var is = false;
-                for (var i in this) {
-                    if (this.hasOwnProperty(i) && !is_ignoreProps[i] && lowerize(this[i], is_ignoreRgx) === lowerize(strToCheck, is_ignoreRgx)) {
-                        is = true;
-                        if (strToCheck != UNDEF_TYPE) break;
-                    } else if (strToCheck == UNDEF_TYPE && is) {
-                        is = !is;
-                        break;
-                    }
-                }
-                return is;
-            };
-            UAParserData.prototype.toString = function () {
-                var str = EMPTY;
-                for (var i in toString_props) {
-                    if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
-                        str += (str ? ' ' : EMPTY) + this[toString_props[i]];
-                    }
-                }
-                return str ? str : UNDEF_TYPE;
-            };
             UAParserData.prototype.withClientHints = function () {
 
                 // nodejs / non-client-hints browsers
@@ -968,6 +946,30 @@
                             }
                 });
             };
+            if(itemType != UA_RESULT) {
+                UAParserData.prototype.is = function (strToCheck) {
+                    var is = false;
+                    for (var i in this) {
+                        if (this.hasOwnProperty(i) && !is_ignoreProps[i] && lowerize(this[i], is_ignoreRgx) === lowerize(strToCheck, is_ignoreRgx)) {
+                            is = true;
+                            if (strToCheck != UNDEF_TYPE) break;
+                        } else if (strToCheck == UNDEF_TYPE && is) {
+                            is = !is;
+                            break;
+                        }
+                    }
+                    return is;
+                };
+                UAParserData.prototype.toString = function () {
+                    var str = EMPTY;
+                    for (var i in toString_props) {
+                        if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
+                            str += (str ? ' ' : EMPTY) + this[toString_props[i]];
+                        }
+                    }
+                    return str ? str : UNDEF_TYPE;
+                };
+            }
             if (!NAVIGATOR_UADATA) {
                 UAParserData.prototype.then = function (cb) { 
                     cb(this);
