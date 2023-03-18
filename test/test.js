@@ -229,11 +229,12 @@ describe('is() utility method', function () {
 
     it('Should get result after reassignment', function () {
         uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
-        assert.strictEqual(uap.getOS().name, "Mac OS");
+        assert.strictEqual(uap.getOS().name, "macOS");
         assert.strictEqual(uap.getOS().is("Mac OS"), true);
-        assert.strictEqual(uap.getOS().is("M ac"), false);
         assert.strictEqual(uap.getOS().is("macOS"), true);
         assert.strictEqual(uap.getOS().is("mac OS"), true);
+        
+        assert.strictEqual(uap.getOS().is("M ac"), false);
         assert.strictEqual(uap.getOS().is("M      a c   "), false);
         assert.strictEqual(uap.getOS().is("Mac OS OS"), false);
         assert.strictEqual(uap.getOS().is("Mac OS X"), false);
@@ -542,7 +543,7 @@ describe('Map UA-CH JS', () => {
         assert.strictEqual(result_without_ch.browser.name, undefined);
 
         uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
-        assert.strictEqual(uap.getOS().name, "Mac OS");
+        assert.strictEqual(uap.getOS().name, "macOS");
         
         // TODO : create full tests
     });

@@ -84,8 +84,6 @@
         OPERA   = 'Opera',
         FACEBOOK    = 'Facebook',
 
-        CHROMIUM_OS = 'Chromium OS',
-        MAC_OS  = 'Mac OS',
         WINDOWS = 'Windows';
    
     var NAVIGATOR           = (typeof window !== UNDEF_TYPE && window.navigator) ? 
@@ -783,7 +781,7 @@
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x) ?([\w\. ]*)/i,
             /(macintosh|mac_powerpc\b)(?!.+haiku)/i                             // Mac OS
-            ], [[NAME, MAC_OS], [VERSION, /_/g, '.']], [
+            ], [[NAME, 'macOS'], [VERSION, /_/g, '.']], [
 
             // Mobile OSes
             /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
@@ -809,7 +807,7 @@
             /crkey\/([\d\.]+)/i                                                 // Google Chromecast
             ], [VERSION, [NAME, CHROME+'cast']], [
             /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
-            ], [[NAME, CHROMIUM_OS], VERSION],[
+            ], [[NAME, "Chrome OS"], VERSION],[
 
             // Smart TVs
             /panasonic;(viera)/i,                                               // Panasonic Viera
@@ -1110,9 +1108,7 @@
         ]);
         this.parse();
         if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM] && NAVIGATOR_UADATA[PLATFORM] != 'Unknown') {
-            this.set(NAME, NAVIGATOR_UADATA[PLATFORM]  
-                                .replace(/chrome os/i, CHROMIUM_OS)
-                                .replace(/macos/i, MAC_OS));           // backward compatibility
+            this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
         }
     }
     UAParserOS.prototype = new UAParserItem();
