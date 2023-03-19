@@ -102,19 +102,19 @@ The methods are self explanatory, here's a small overview on all the available m
 # Possible 'browser.name':
 2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
-Chrome Headless, Chrome WebView, Chrome, Chromium, Cobalt, Comodo Dragon, Dillo,
+Chrome [Mobile/Headless/WebView], Chromium, Cobalt, Comodo Dragon, Dillo,
 Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
-Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, 
-ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, Instagram, 
-Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, Kindle, Klar, Konqueror, 
-LBBROWSER, Line, LinkedIn, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, 
-Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, 
+Firebird, Firefox [Mobile/Focus/Reality], Flock, Flow, GSA, GoBrowser, 
+Huawei Browser, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, 
+Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, Kindle, Klar, 
+Konqueror, LBBROWSER, Line, LinkedIn, Links, Lunascape, Lynx, MIUI Browser, 
+Maemo Browser, Maemo, Maxthon, MetaSr Midori, Minimo, Mosaic, Mozilla, NetFront, 
 NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser, OmniWeb, 
 Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Polaris, 
-Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
+Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari [Mobile], 
 Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
 SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Viera, 
-Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
+Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser, ...
 
 # 'browser.version' determined dynamically
 ```

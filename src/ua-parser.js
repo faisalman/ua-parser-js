@@ -52,39 +52,37 @@
         CH_HEADER_MODEL     = CH_HEADER + '-model',
         CH_HEADER_PLATFORM  = CH_HEADER + '-platform',
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES = ['brands', 'fullVersionList', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness'],
+        CH_ALL_VALUES       = ['brands', 'fullVersionList', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness'],
         UA_BROWSER  = 'browser',
         UA_CPU      = 'cpu',
         UA_DEVICE   = 'device',
         UA_ENGINE   = 'engine',
         UA_OS       = 'os',
-        UA_RESULT   = 'result';
-
-    var AMAZON  = 'Amazon',
-        APPLE   = 'Apple',
-        ASUS    = 'ASUS',
-        BLACKBERRY = 'BlackBerry',
-        GOOGLE  = 'Google',
-        HUAWEI  = 'Huawei',
-        LG      = 'LG',
-        MICROSOFT = 'Microsoft',
-        MOTOROLA  = 'Motorola',
-        SAMSUNG = 'Samsung',
-        SHARP   = 'Sharp',
-        SONY    = 'Sony',
-        SWISS   = 'Swiss',
-        XIAOMI  = 'Xiaomi',
-        ZEBRA   = 'Zebra',
-        ZTE     = 'ZTE',
-
-        BROWSER = 'Browser',
-        CHROME  = 'Chrome',
-        EDGE    = 'Edge',
-        FIREFOX = 'Firefox',
-        OPERA   = 'Opera',
+        UA_RESULT   = 'result',
+        AMAZON      = 'Amazon',
+        APPLE       = 'Apple',
+        ASUS        = 'ASUS',
+        BLACKBERRY  = 'BlackBerry',
+        GOOGLE      = 'Google',
+        HUAWEI      = 'Huawei',
+        LG          = 'LG',
+        MICROSOFT   = 'Microsoft',
+        MOTOROLA    = 'Motorola',
+        SAMSUNG     = 'Samsung',
+        SHARP       = 'Sharp',
+        SONY        = 'Sony',
+        SWISS       = 'Swiss',
+        XIAOMI      = 'Xiaomi',
+        ZEBRA       = 'Zebra',
+        ZTE         = 'ZTE',
+        SUFFIX_BROWSER = 'Browser',
+        SUFFIX_MOBILE  = 'Mobile',
+        CHROME      = 'Chrome',
+        EDGE        = 'Edge',
+        FIREFOX     = 'Firefox',
+        OPERA       = 'Opera',
         FACEBOOK    = 'Facebook',
-
-        WINDOWS = 'Windows';
+        WINDOWS     = 'Windows';
    
     var NAVIGATOR           = (typeof window !== UNDEF_TYPE && window.navigator) ? 
                                 window.navigator : 
@@ -305,7 +303,7 @@
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
             /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
-            ], [VERSION, [NAME, 'UC'+BROWSER]], [
+            ], [VERSION, [NAME, 'UC'+SUFFIX_BROWSER]], [
             /microm.+\bqbcore\/([\w\.]+)/i,                                     // WeChat Desktop for Windows Built-in Browser
             /\bqbcore\/([\w\.]+).+microm/i
             ], [VERSION, [NAME, 'WeChat(Win) Desktop']], [
@@ -318,7 +316,7 @@
             /yabrowser\/([\w\.]+)/i                                             // Yandex
             ], [VERSION, [NAME, 'Yandex']], [
             /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
-            ], [[NAME, /(.+)/, '$1 Secure '+BROWSER], VERSION], [
+            ], [[NAME, /(.+)/, '$1 Secure '+SUFFIX_BROWSER], VERSION], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
             /\bopt\/([\w\.]+)/i                                                 // Opera Touch
@@ -330,13 +328,13 @@
             /coast\/([\w\.]+)/i                                                 // Opera Coast
             ], [VERSION, [NAME, OPERA+' Coast']], [
             /miuibrowser\/([\w\.]+)/i                                           // MIUI Browser
-            ], [VERSION, [NAME, 'MIUI '+BROWSER]], [
-            /fxios\/([-\w\.]+)/i                                                // Firefox for iOS
-            ], [VERSION, [NAME, FIREFOX]], [
+            ], [VERSION, [NAME, 'MIUI '+SUFFIX_BROWSER]], [
+            /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
+            ], [VERSION, [NAME, 'Firefox '+SUFFIX_MOBILE]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
-            ], [[NAME, '360 '+BROWSER]], [
+            ], [[NAME, '360 '+SUFFIX_BROWSER]], [
             /(oculus|samsung|sailfish|huawei)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1 '+BROWSER], VERSION], [                      // Oculus/Samsung/Sailfish/Huawei Browser
+            ], [[NAME, /(.+)/, '$1 '+SUFFIX_BROWSER], VERSION], [                      // Oculus/Samsung/Sailfish/Huawei Browser
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
@@ -367,14 +365,18 @@
             ], [[NAME, CHROME+' WebView'], VERSION], [
 
             /droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i           // Android Browser
-            ], [VERSION, [NAME, 'Android '+BROWSER]], [
+            ], [VERSION, [NAME, 'Android '+SUFFIX_BROWSER]], [
+
+            /chrome\/([\w\.]+) mobile/i,                                        // Chrome Mobile
+            /(?:(?:android.+)crmo|crios)\/([\w\.]+)/i                           // Chrome for Android/iOS
+            ], [VERSION, [NAME, 'Chrome '+SUFFIX_MOBILE]], [
 
             /(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i       // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [
 
-            /version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i                      // Mobile Safari
-            ], [VERSION, [NAME, 'Mobile Safari']], [
-            /version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i                // Safari & Safari Mobile
+            /version\/([\w\.\,]+) .*mobile(?:\/\w+ | ?)safari/i                 // Safari Mobile
+            ], [VERSION, [NAME, 'Safari '+SUFFIX_MOBILE]], [
+            /version\/([\w\.\,]+) .*(safari)/i                                  // Safari
             ], [VERSION, NAME], [
             /webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i                      // Safari < 3.0
             ], [NAME, [VERSION, strMapper, oldSafariMap]], [
@@ -383,6 +385,8 @@
             ], [NAME, VERSION], [
 
             // Gecko based
+            /(?:mobile|tablet);.*(firefox)\/([\w\.-]+)/i                        // Firefox Mobile
+            ], [[NAME, 'Firefox '+SUFFIX_MOBILE], VERSION], [
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
