@@ -462,7 +462,7 @@
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, MOBILE]], [
 
             // Apple
-            /\((ip(?:hone|od)[\w ]*);/i                                         // iPod/iPhone
+            /(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i                          // iPod/iPhone
             ], [MODEL, [VENDOR, APPLE], [TYPE, MOBILE]], [
             /\((ipad);[-\w\),; ]+apple/i,                                       // iPad
             /applecoremedia\/[\w\.]+ \((ipad)/i,
@@ -789,6 +789,7 @@
 
             // iOS/macOS
             /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,              // iOS
+            /ios;fbsv\/([\d\.]+)/i,
             /cfnetwork\/.+darwin/i
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x) ?([\w\. ]*)/i,
