@@ -195,6 +195,7 @@ describe('is() utility method', function () {
         assert.strictEqual(uap.getBrowser().name, "IEMobile");
         assert.strictEqual(uap.getBrowser().is("IEMobile"), true);
         assert.strictEqual(uap.getBrowser().is("IE"), false);
+        assert.strictEqual(uap.getBrowser().is("11.0"), false);
     });
 
     it('Should ignore "Browser" suffix', function () {
@@ -204,6 +205,7 @@ describe('is() utility method', function () {
     it('Should ignore case', function () {
         assert.strictEqual(uap.getEngine().name, "Trident");
         assert.strictEqual(uap.getEngine().is("tRiDeNt"), true);
+        assert.strictEqual(uap.getEngine().is("7.0"), false);
     });
 
     it('Should get exact name', function () {

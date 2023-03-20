@@ -153,7 +153,7 @@
   ],
   "scripts": {
     "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node -e \"const fs=require('fs');fs.writeFileSync('dist/ua-parser.mjs','// Generated ESM version of UAParser.js\\n// Source file: /src/ua-parser.js\\n\\n'+fs.readFileSync('src/ua-parser.js','utf-8').replace(/\\(func[\\s\\S]+strict\\';/ig,'const window = undefined;').replace(/\\/[\\/\\s]+export[\\s\\S]+/ig,'export {UAParser};'),'utf-8')\"",
-    "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
+    "test": "jshint src/ua-parser.js && mocha -R spec test/test.js && mocha -R spec test/es6-test.mjs",
     "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js",
     "verup": "node ./node_modules/verup",
     "version": "node ./node_modules/verup 0"
