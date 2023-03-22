@@ -994,7 +994,7 @@
                     this.set(TYPE, MOBILE);
                 }
                 // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-                if (this.get(NAME) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
+                if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
                     this.set(MODEL, 'iPad')
                         .set(TYPE, TABLET);
                 }
