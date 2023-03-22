@@ -1299,6 +1299,16 @@
         }
     },
     {
+        "desc"    : "Yandex",
+        "ua"      : "Mozilla/5.0 (Linux; arm_64; Android 11; M2101K7AG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.125 YaApp_Android/22.70 YaSearchBrowser/22.70 BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Yandex",
+            "version" : "22.70",
+            "major"   : "22"
+        }
+    },
+    {
         "desc"    : "Puffin",
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo P2a42 Build/MMB29M; en-us) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Puffin/6.0.8.15804AP",
         "expect"  :
