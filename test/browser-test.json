@@ -759,6 +759,16 @@
         }
     },
     {
+        "desc"    : "Mobile Safari",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)  Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "Safari Mobile",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
         "desc"    : "Mosaic",
         "ua"      : "NCSA_Mosaic/2.6 (X11; SunOS 4.1.3 sun4m)",
         "expect"  :

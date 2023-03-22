@@ -382,6 +382,8 @@
 
             /version\/([\w\.\,]+) .*mobile(?:\/\w+ | ?)safari/i                 // Safari Mobile
             ], [VERSION, [NAME, 'Safari '+SUFFIX_MOBILE]], [
+            /iphone .*mobile(?:\/\w+ | ?)safari/i
+            ], [[NAME, 'Safari '+SUFFIX_MOBILE]], [
             /version\/([\w\.\,]+) .*(safari)/i                                  // Safari
             ], [VERSION, NAME], [
             /webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i                      // Safari < 3.0
