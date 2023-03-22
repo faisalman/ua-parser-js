@@ -75,8 +75,8 @@
         XIAOMI      = 'Xiaomi',
         ZEBRA       = 'Zebra',
         ZTE         = 'ZTE',
-        SUFFIX_BROWSER = 'Browser',
-        SUFFIX_MOBILE  = 'Mobile',
+        PREFIX_MOBILE  = 'Mobile ',
+        SUFFIX_BROWSER = ' Browser',
         CHROME      = 'Chrome',
         EDGE        = 'Edge',
         FIREFOX     = 'Firefox',
@@ -280,8 +280,9 @@
 
         browser : [[
 
+            // Most common regardless engine
             /\b(?:crmo|crios)\/([\w\.]+)/i                                      // Chrome for Android/iOS
-            ], [VERSION, [NAME, 'Chrome']], [
+            ], [VERSION, [NAME, PREFIX_MOBILE + 'Chrome']], [
             /edg(?:e|ios|a)?\/([\w\.]+)/i                                       // Microsoft Edge
             ], [VERSION, [NAME, 'Edge']], [
 
@@ -305,11 +306,12 @@
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
             /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
-                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ, aka ShouQ
+                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo
+            /(heytap|ovi)browser\/([\d\.]+)/i,                                  // HeyTap/Ovi
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
             /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
-            ], [VERSION, [NAME, 'UC'+SUFFIX_BROWSER]], [
+            ], [VERSION, [NAME, 'UCBrowser']], [
             /microm.+\bqbcore\/([\w\.]+)/i,                                     // WeChat Desktop for Windows Built-in Browser
             /\bqbcore\/([\w\.]+).+microm/i
             ], [VERSION, [NAME, 'WeChat(Win) Desktop']], [
@@ -322,7 +324,7 @@
             /ya(?:search)?browser\/([\w\.]+)/i                                  // Yandex
             ], [VERSION, [NAME, 'Yandex']], [
             /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
-            ], [[NAME, /(.+)/, '$1 Secure '+SUFFIX_BROWSER], VERSION], [
+            ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
             /\bopt\/([\w\.]+)/i                                                 // Opera Touch
@@ -334,13 +336,13 @@
             /coast\/([\w\.]+)/i                                                 // Opera Coast
             ], [VERSION, [NAME, OPERA+' Coast']], [
             /miuibrowser\/([\w\.]+)/i                                           // MIUI Browser
-            ], [VERSION, [NAME, 'MIUI '+SUFFIX_BROWSER]], [
+            ], [VERSION, [NAME, 'MIUI' + SUFFIX_BROWSER]], [
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
-            ], [VERSION, [NAME, 'Firefox '+SUFFIX_MOBILE]], [
+            ], [VERSION, [NAME, PREFIX_MOBILE + 'Firefox']], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
-            ], [[NAME, '360 '+SUFFIX_BROWSER]], [
+            ], [[NAME, '360' + SUFFIX_BROWSER]], [
             /(oculus|samsung|sailfish|huawei)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1 '+SUFFIX_BROWSER], VERSION], [                      // Oculus/Samsung/Sailfish/Huawei Browser
+            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [               // Oculus/Samsung/Sailfish/Huawei Browser
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
@@ -371,19 +373,18 @@
             ], [[NAME, CHROME+' WebView'], VERSION], [
 
             /droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i           // Android Browser
-            ], [VERSION, [NAME, 'Android '+SUFFIX_BROWSER]], [
+            ], [VERSION, [NAME, 'Android' + SUFFIX_BROWSER]], [
 
-            /chrome\/([\w\.]+) mobile/i,                                        // Chrome Mobile
-            /(?:(?:android.+)crmo|crios)\/([\w\.]+)/i                           // Chrome for Android/iOS
-            ], [VERSION, [NAME, 'Chrome '+SUFFIX_MOBILE]], [
+            /chrome\/([\w\.]+) mobile/i                                         // Chrome Mobile
+            ], [VERSION, [NAME, PREFIX_MOBILE + 'Chrome']], [
 
             /(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i       // Chrome/OmniWeb/Arora/Tizen/Nokia
             ], [NAME, VERSION], [
 
             /version\/([\w\.\,]+) .*mobile(?:\/\w+ | ?)safari/i                 // Safari Mobile
-            ], [VERSION, [NAME, 'Safari '+SUFFIX_MOBILE]], [
+            ], [VERSION, [NAME, PREFIX_MOBILE + 'Safari']], [
             /iphone .*mobile(?:\/\w+ | ?)safari/i
-            ], [[NAME, 'Safari '+SUFFIX_MOBILE]], [
+            ], [[NAME, PREFIX_MOBILE + 'Safari']], [
             /version\/([\w\.\,]+) .*(safari)/i                                  // Safari
             ], [VERSION, NAME], [
             /webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i                      // Safari < 3.0
@@ -394,7 +395,7 @@
 
             // Gecko based
             /(?:mobile|tablet);.*(firefox)\/([\w\.-]+)/i                        // Firefox Mobile
-            ], [[NAME, 'Firefox '+SUFFIX_MOBILE], VERSION], [
+            ], [[NAME, PREFIX_MOBILE + 'Firefox'], VERSION], [
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
