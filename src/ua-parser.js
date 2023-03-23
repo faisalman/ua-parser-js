@@ -969,7 +969,7 @@
             ]);
         } else {
             for (var prop in uach) {
-                if(this.hasOwnProperty(prop) && uach[prop]) this[prop] = stripQuotes(uach[prop]);
+                if(this.hasOwnProperty(prop) && typeof uach[prop] !== UNDEF_TYPE) this[prop] = uach[prop];
             }
         }
         return this;
@@ -1009,7 +1009,7 @@
                 break;
             case UA_RESULT:
                 var createUAParserItem = function (itemType) {
-                    return new UAParserItem(itemType, ua, rgxMap, uaCH).get();
+                    return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).get();
                 };
                 this.set('ua', ua)
                     .set('ua_ch', uaCH)
@@ -1028,7 +1028,7 @@
     };
     UAParserItem.prototype.parse = function () {
         if (this.itemType != UA_RESULT) {
-            rgxMapper.call(this.data, this.ua, this.rgxMap[this.itemType]);
+            rgxMapper.call(this.data, this.ua, this.rgxMap);
         }
         return this;
     };
@@ -1055,8 +1055,8 @@
             case UA_CPU:
                 var archName = uaCH[ARCHITECTURE];
                 if (archName) {
-                    archName += (archName && uaCH[BITNESS] == '64') ? '64' : EMPTY;
-                    rgxMapper.call(this.data, archName, rgxMap[this.itemType]);
+                    if (archName && uaCH[BITNESS] == '64') archName += '64';
+                    rgxMapper.call(this.data, archName, rgxMap);
                 }
                 break;
             case UA_DEVICE:
@@ -1071,14 +1071,14 @@
                 var osName = uaCH[PLATFORM];
                 if(osName) {
                     var osVersion = uaCH[PLATFORMVER];
-                    osVersion = (osName == WINDOWS) ? (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10') : osVersion;
+                    if (osName == WINDOWS) osVersion = (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10');
                     this.set(NAME, osName)
                         .set(VERSION, osVersion);
                 }
                 break;
             case UA_RESULT:
                 var createUAParserItemWithCH = function (itemType) {
-                    return new UAParserItem(itemType, ua, rgxMap, uaCH).parseCH().get();
+                    return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).parseCH().get();
                 };
                 this.set('ua', ua)
                     .set('ua_ch', uaCH)
@@ -1132,7 +1132,7 @@
 
             createUAParserItemFunc = function (itemType) {
                 return function () {
-                    return new UAParserItem(itemType, userAgent, regexMap, HTTP_UACH).get();
+                    return new UAParserItem(itemType, userAgent, itemType == UA_RESULT ? regexMap : regexMap[itemType], HTTP_UACH).get();
                 };
             };
 
