@@ -459,6 +459,14 @@
       [MODEL, [VENDOR, SAMSUNG], [TYPE, MOBILE]],
       [
         // Apple
+        /((ipod|iphone)\d+,\d+)/i // iPod/iPhone model
+      ],
+      [MODEL, [VENDOR, APPLE], [TYPE, MOBILE]],
+      [
+        /(ipad\d+,\d+)/i // iPad model
+      ],
+      [MODEL, [VENDOR, APPLE], [TYPE, TABLET]],
+      [
         /\((ip(?:hone|od)[\w ]*);/i // iPod/iPhone
       ],
       [MODEL, [VENDOR, APPLE], [TYPE, MOBILE]],
