@@ -483,6 +483,36 @@ describe('Map UA-CH headers', function () {
         assert.strictEqual(uap.os.name, "Linux");
         assert.strictEqual(uap.os.version, "x86_64");
     });
+
+    it('Can detect Apple silicon from client hints data', function () {  
+
+        // https://github.com/faisalman/ua-parser-js/issues/489#issuecomment-1479213579
+        const httpHeadersFromAppleSilicon = {
+            'sec-ch-ua-arch' : 'arm',
+            'sec-ch-ua-platform' : 'macOS',
+            'sec-ch-ua-mobile' : '?0',
+            'sec-ch-ua' : '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+            'user-agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:97.0) Gecko/20100101 Firefox/97.0'
+        };
+        
+        UAParser(httpHeadersFromAppleSilicon).withClientHints().then(function (ua) {
+
+            // Only works in Chrome
+            /* 
+                if (ua.os.is("macOS") && 
+                    ua.cpu.is("arm") &&
+                    !ua.device.is("mobile") && 
+                    !ua.device.is("tablet")) {
+                        // possibly an Apple silicon device
+                    }
+            */
+
+            assert.strictEqual(ua.os.is("macOS"), true);
+            assert.strictEqual(ua.cpu.is("arm"), true);            
+            assert.strictEqual(ua.device.is("mobile"), false);
+            assert.strictEqual(ua.device.is("tablet"), false);
+        });
+    });
 });
 
 describe('Map UA-CH JS', () => {

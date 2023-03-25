@@ -1056,7 +1056,7 @@
                 var archName = uaCH[ARCHITECTURE];
                 if (archName) {
                     if (archName && uaCH[BITNESS] == '64') archName += '64';
-                    rgxMapper.call(this.data, archName, rgxMap);
+                    rgxMapper.call(this.data, archName + ';', rgxMap);
                 }
                 break;
             case UA_DEVICE:
