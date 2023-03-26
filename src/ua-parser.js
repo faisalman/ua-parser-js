@@ -987,7 +987,7 @@
         switch(this.itemType) {
             case UA_BROWSER:
                 // Brave-specific detection
-                if (NAVIGATOR && NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
+                if (NAVIGATOR && NAVIGATOR.userAgent == ua && NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
                     this.set(NAME, 'Brave');
                 }
                 this.set(MAJOR, majorize(this.get(VERSION)));
