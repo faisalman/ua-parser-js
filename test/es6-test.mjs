@@ -1,4 +1,4 @@
-import { UAParser } from '../dist/ua-parser.mjs'
+import { UAParser } from '../src/ua-parser.mjs'
 import * as assert from 'assert'
 
 describe('Returns', () => {

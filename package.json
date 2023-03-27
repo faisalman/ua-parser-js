@@ -142,19 +142,19 @@
   ],  
   "type": "commonjs",
   "main": "src/ua-parser.js",
-  "module": "dist/ua-parser.mjs",
+  "module": "src/ua-parser.mjs",
   "exports": {
       "require": "./src/ua-parser.js",
-      "import": "./dist/ua-parser.mjs"
+      "import": "./src/ua-parser.mjs"
   },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node -e \"const fs=require('fs');fs.writeFileSync('dist/ua-parser.mjs','// Generated ESM version of UAParser.js\\n// Source file: /src/ua-parser.js\\n\\n'+fs.readFileSync('src/ua-parser.js','utf-8').replace(/\\(func[\\s\\S]+strict\\';/ig,'const window = undefined;').replace(/\\/[\\/\\s]+export[\\s\\S]+/ig,'export {UAParser};'),'utf-8')\"",
-    "test": "jshint src/ua-parser.js && mocha -R spec test/test.js && mocha -R spec test/es6-test.mjs",
-    "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js",
+    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node -e \"const fs=require('fs');fs.writeFileSync('src/ua-parser.mjs','// Generated ESM version of UAParser.js\\n// Source file: /src/ua-parser.js\\n\\nconst window = undefined;\\n\\n'+fs.readFileSync('src/ua-parser.js','utf-8').replace(/\\(func[\\s\\S]+strict\\';/ig,'').replace(/\\/[\\/\\s]+export[\\s\\S]+/ig,'export {UAParser};'),'utf-8')\"",
+    "test": "jshint src/ua-parser.js && mocha -R nyan test",
+    "test-ci": "jshint src/ua-parser.js && mocha -R spec test",
     "verup": "node ./node_modules/verup",
     "version": "node ./node_modules/verup 0"
   },
