@@ -144,15 +144,21 @@
   "main": "src/ua-parser.js",
   "module": "src/ua-parser.mjs",
   "exports": {
+    "." : {
       "require": "./src/ua-parser.js",
       "import": "./src/ua-parser.mjs"
+    },
+    "./enums" : {
+      "require": "./src/ua-parser-enum.js",
+      "import": "./src/ua-parser-enum.mjs"
+    }
   },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node -e \"const fs=require('fs');fs.writeFileSync('src/ua-parser.mjs','// Generated ESM version of UAParser.js\\n// Source file: /src/ua-parser.js\\n\\nconst window = undefined;\\n\\n'+fs.readFileSync('src/ua-parser.js','utf-8').replace(/\\(func[\\s\\S]+strict\\';/ig,'').replace(/\\/[\\/\\s]+export[\\s\\S]+/ig,'export {UAParser};'),'utf-8')\"",
+    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node -e \"const fs=require('fs');fs.writeFileSync('src/ua-parser.mjs','// Generated ESM version of UAParser.js\\n// Source file: /src/ua-parser.js\\n\\nconst window = undefined;\\n\\n'+fs.readFileSync('src/ua-parser.js','utf-8').replace(/\\(func[\\s\\S]+strict\\';/ig,'').replace(/\\/[\\/\\s]+export[\\s\\S]+/ig,'export {UAParser};'),'utf-8');fs.writeFileSync('src/ua-parser-enum.mjs','// Generated ESM version of UAParser.js enums\\n// Source file: /src/ua-parser-enum.js\\n\\n'+fs.readFileSync('src/ua-parser-enum.js','utf-8').replace(/module\\.exports =/ig,'export'),'utf-8')\"",
     "test": "jshint src/ua-parser.js && mocha -R nyan test",
     "test-ci": "jshint src/ua-parser.js && mocha -R spec test",
     "verup": "node ./node_modules/verup",
