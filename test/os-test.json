@@ -1204,5 +1204,14 @@
             "name"    : "Linspire",
             "version" : "1.5.0.4"
         }
+    },
+    {
+        "desc"    : "SerenityOS",
+        "ua"      : "Mozilla/4.0 (SerenityOS; x86) LibWeb+LibJS (Not KHTML, nor Gecko) LibWeb",
+        "expect"  :
+        {
+            "name"    : "SerenityOS",
+            "version" : "undefined"
+        }
     }
 ]

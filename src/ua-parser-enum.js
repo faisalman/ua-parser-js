@@ -68,6 +68,7 @@ const EngineName = Object.freeze({
     GECKO   : 'Gecko',
     GOANNA  : 'Goanna',
     ICAB    : 'iCab',
+    LIBWEB  : 'LibWeb',
     KHTML   : 'KHTML',
     LINKS   : 'Links',
     LYNX    : 'Lynx',
