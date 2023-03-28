@@ -54,6 +54,15 @@
         }
     },
     {
+        "desc"    : "LibWeb",
+        "ua"      : "Mozilla/4.0 (SerenityOS; x86) LibWeb+LibJS (Not KHTML, nor Gecko) LibWeb",
+        "expect"  :
+        {
+            "name"    : "LibWeb",
+            "version" : "undefined"
+        }
+    },
+    {
         "desc"    : "NetFront",
         "ua"      : "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
         "expect"  :
