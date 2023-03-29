@@ -206,5 +206,13 @@
         {
             "architecture"  : "irix64"
         }
+    },
+    {
+        "desc"    : "68k",
+        "ua"      : "'Mozilla/1.1 (Macintosh; U; 68K)'",
+        "expect"  : 
+        {
+            "architecture"  : "68k"
+        }
     }
 ]

@@ -43,8 +43,11 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 
 ---
 
+# Version 2.0
+What's new & breaking, please read [CHANGELOG](changelog.md) before upgrading.
+
 # Documentation
-### UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])
+### UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)])
 
 In the browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in' nodejs for the function to work. Usually you can find the user agent in: `request.headers["user-agent"]`.
 
@@ -52,7 +55,7 @@ In the browser environment you dont need to pass the user-agent string to the fu
 ## Constructor
 When you call `UAParser` with the `new` keyword, `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
 Like so:
-* `new UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])`
+* `new UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)])`
 ```js
 let parser = new UAParser("your user-agent here"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
@@ -65,22 +68,19 @@ console.log(parserResults);
   "os"      : {},
   "device"  : {},
   "cpu"     : {}
-  
-  // since@1.1 
-  ,"ua_ch"  : {}
 } */
 ```
 
 When you call UAParser without the `new` keyword, it will automatically call `getResult()` function and return the parsed results.
-* `UAParser([user-agent:string][,extensions:object][,headers:object(since@1.1)])`
-    * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} /* added since@1.1: ua_ch: {} */ }`
+* `UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)])`
+    * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 ## Methods
 
 #### Methods table
 The methods are self explanatory, here's a small overview on all the available methods:
 *  `getResult()` - returns all function object calls, user-agent string, browser info, cpu, device, engine, os:
-`{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} /* added since@1.1: ua_ch: {} */ }`.
+`{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`.
 
  *  `getBrowser()`      - returns the browser name and version.
  *  `getDevice()`       - returns the device model, type, vendor.
@@ -93,7 +93,7 @@ The methods are self explanatory, here's a small overview on all the available m
 ---
 
 * `getResult()`
-    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} /* added since@1.1: ua_ch: {} */ }`
+    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
 
 * `getBrowser()`
     * returns `{ name: '', version: '' }`
@@ -113,7 +113,7 @@ NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser, OmniWeb,
 Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Polaris, 
 Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, [Mobile] Safari, 
 Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Viera, 
+SlimBrowser, Swiftfox, Tesla, TikTok, Tizen Browser, UCBrowser, UP.Browser, Viera, 
 Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser, ...
 
 # 'browser.version' determined dynamically
@@ -148,8 +148,8 @@ Siemens, Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE
 
 ```sh
 # Possible 'engine.name'
-Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront,
-NetSurf, Presto, Tasman, Trident, w3m, WebKit
+Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, LibWeb, Links, Lynx, 
+NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
@@ -165,8 +165,9 @@ Fuchsia, Gentoo, GhostBSD, GNU, Haiku, HarmonyOS, HP-UX, Hurd, iOS, Joli, KaiOS,
 Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix, 
 Mint, Morph OS, NetBSD, NetRange, NetTV, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, 
 PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, 
-RISC OS, Sabayon, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, 
-Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwalk, ...
+RISC OS, Sabayon, Sailfish, SerenityOS, Series40, Slackware, Solaris, SUSE, Symbian, 
+Tizen, Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], 
+Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
@@ -186,10 +187,10 @@ Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwal
     * set UA string to be parsed
     * returns current instance
 
-#### * `is():boolean` utility `since@1.1`
+#### * `is():boolean` utility `since@2.0`
 
 ```js
-// Is just a shorthand to check whether specified item has a property with equals value (case-insensitive)
+// Is just a shorthand comparison to check whether the value of specified item equals one of its properties (in a case-insensitive way)
 // so that instead of write it using `==` operator like this:
 
 let ua = UAParser();
@@ -202,15 +203,10 @@ if (device.type == "smarttv" || device.vendor == "Samsung") {}
 // we can also write the comparison above into as follow:
 
 if (device.is("mobile") && !os.is("iOS")) {}
-if (device.is("smarttv") || device.is("Samsung")) {}
+if (device.is("SmartTV") || device.is("SaMsUnG")) {}
 
 /*
-    Each properties will be checked in this particular order:
-    * browser : name
-    * cpu : architecture 
-    * device : type, model, vendor
-    * engine : name 
-    * os : name
+    For device, properties will be checked in this particular order: type, model, vendor
 */
 
 // Another examples:
@@ -250,7 +246,7 @@ let engine = uap.getEngine();
 engine.is("Blink");                 // true
 ```
 
-#### * `toString():string` utility `since@1.1`
+#### * `toString():string` utility `since@2.0`
 
 ```js
 // Retrieve full-name values as a string
@@ -291,11 +287,12 @@ engine.version;                     // "28.0.1500.95"
 engine.toString();                  // "Blink 28.0.1500.95"
 ```
 
-#### * `withClientHints():Promise<object>|Thenable<object>` `since@1.1`
+#### * `withClientHints():Promise<object>|Thenable<object>` `since@2.0`
 
-Unlike reading user-agent data, accessing client-hints data in browser-environment must be done in an asynchronous way. Worry not, you can chain the UAParser's `get*` method with `withClientHints()` to read the client-hints data as well that will return the updated data as a `Promise`. In nodejs-environment / browser-environment with non-secure context or without client-hints support (basically anything that's not chromium-based) this will return the updated data as a `Thenable` (can be chained with `then()`).
+Recently Chrome limits the information exposed through user-agent and introduces a new experimental set of data called "client-hints". In browser-environment, obtaining the client-hints data via JavaScript must be done in an asynchronous way. In `UAParser` you can chain the result object from `get*` method with `withClientHints()` to also read the client-hints data from the browser and return the updated data as a `Promise`.
 
 ```js
+// client-side example
 (async function () {  
     let ua = new UAParser();
 
@@ -314,12 +311,43 @@ Unlike reading user-agent data, accessing client-hints data in browser-environme
 })();
 ```
 
+Along with `User-Agent` HTTP header, Chrome also sends this client-hints data by default under `Sec-CH-UA-*` HTTP headers in each request. In server-side development, you can capture this extra information by passing the `req.headers` to `UAParser()` (see examples below). When using `withClientHints()` in nodejs environment and browser without client-hints support (basically anything that's not Chromium-based) the updated data will be returned as a `Thenable` (has `then()` method).
+
+```js
+// server-side example
+
+// Suppose we got a request having these HTTP headers: 
+const request = {
+    headers : {
+        'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+
+        'sec-ch-ua-mobile' : '?1',
+        'sec-ch-ua-model' : 'Galaxy S3 Marketing',
+        'sec-ch-ua-platform' : 'Android'
+    }
+};
+
+const result1 = UAParser(request.headers);                      // parse only "user-agent" header
+const result2 = UAParser(request.headers).withClientHints();    // update with "sec-ch-ua" headers
+
+console.log(result1.os.name);       // "Linux"
+console.log(result1.device.type);   // undefined
+console.log(result1.device.model);  // undefined
+
+console.log(result2.os.name);       // "Android"
+console.log(result2.device.type);   // "mobile"
+console.log(result2.device.model);  // "Galaxy S3 Marketing"
+
+new UAParser(request.headers).getBrowser().withClientHints().then((browser) => {
+    console.log(browser.toString());    // Chrome 110.0.0.0 
+});
+```
 
 ## Extending Regex
 
 If you want to detect something that's not currently provided by UAParser.js (eg: `bots`, specific apps, etc), you can pass a list of regexes to extend internal UAParser.js regexes with your own.
 
-* `UAParser([uastring,] extensions [,headers:object(since@1.1)])`
+* `UAParser([uastring,] extensions [,headers:object(since@2.0)])`
 
 ```js
 // Example:
@@ -389,18 +417,6 @@ console.log(myParser2.setUA(myUA2).getDevice());  // {vendor: "MyTab", model: "1
             cpu: {
                 architecture: ""
             }
-
-            // added since@1.1:
-            ,ua_ch: {
-                architecture: "",
-                brands: "",
-                bitness: "",
-                fullVersionList: "",
-                mobile: "",
-                model: "",
-                platform: "",
-                platformVersion: ""
-            }
         }
     */
     // Default result depends on current window.navigator.userAgent value
@@ -453,7 +469,7 @@ http.createServer(function (req, res) {
     // get user-agent header
     var ua = uap(req.headers['user-agent']);
 
-    /* // BEGIN since@1.1 - you can also pass client-hints data to UAParser
+    /* // BEGIN since@2.0 - you can also pass client-hints data to UAParser
 
     // note: only works in secure context (https:// or localhost or file://)
 
@@ -463,7 +479,7 @@ http.createServer(function (req, res) {
     
     var ua = uap(req.headers);
 
-    // END since@1.1 */
+    // END since@2.0 */
 
     // write the result as response
     res.end(JSON.stringify(ua, null, '  '));
@@ -477,14 +493,13 @@ console.log('Server running at http://127.0.0.1:1337/');
 
 ```js
 import { UAParser } from 'ua-parser-js';
-import { CPUArch, DeviceType } from 'ua-parser-js/enums';
 
-const { cpu, device } = UAParser('Mozilla/5.0 (X11; U; Linux armv7l; en-GB; rv:1.9.2a1pre) Gecko/20090928 Firefox/3.5 Maemo Browser 1.4.1.22 RX-51 N900');
+const { browser, cpu, device } = UAParser('Mozilla/5.0 (X11; U; Linux armv7l; en-GB; rv:1.9.2a1pre) Gecko/20090928 Firefox/3.5 Maemo Browser 1.4.1.22 RX-51 N900');
 
-console.log(browser.name)                   // Maemo Browser
-console.log(cpu.is(CPUArch.ARM))            // true
-console.log(device.is(DeviceType.MOBILE))   // true
-console.log(device.model)                   // N900
+console.log(browser.name);          // Maemo Browser
+console.log(cpu.is('arm'));         // true
+console.log(device.is('mobile'));   // true
+console.log(device.model);          // N900
 ```
 
 ## Using TypeScript

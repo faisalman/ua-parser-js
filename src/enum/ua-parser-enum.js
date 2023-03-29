@@ -1,8 +1,5 @@
-// Generated ESM version of UAParser.js enums
-// Source file: /src/ua-parser-enum.js
-
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0
+/*  Enums for UAParser.js v2.0.0-alpha.1
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     MIT License */
@@ -71,6 +68,7 @@ const EngineName = Object.freeze({
     GECKO   : 'Gecko',
     GOANNA  : 'Goanna',
     ICAB    : 'iCab',
+    LIBWEB  : 'LibWeb',
     KHTML   : 'KHTML',
     LINKS   : 'Links',
     LYNX    : 'Lynx',
@@ -93,7 +91,7 @@ const OSName = Object.freeze({
     // TODO : test!
 });
 
-export { 
+module.exports = { 
     BrowserName, 
     CPUArch, 
     DeviceType, 

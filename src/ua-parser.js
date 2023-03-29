@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v1.1.34
+/* UAParser.js v2.0.0-alpha.1
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -17,7 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '1.1.34',
+    var LIBVERSION  = '2.0.0-alpha.1',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -960,7 +960,6 @@
                     return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).get();
                 };
                 this.set('ua', ua)
-                    .set('ua_ch', uaCH)
                     .set(UA_BROWSER, createUAParserItem(UA_BROWSER))
                     .set(UA_CPU, createUAParserItem(UA_CPU))
                     .set(UA_DEVICE, createUAParserItem(UA_DEVICE))
@@ -1029,7 +1028,6 @@
                     return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).parseCH().get();
                 };
                 this.set('ua', ua)
-                    .set('ua_ch', uaCH)
                     .set(UA_BROWSER, createUAParserItemWithCH(UA_BROWSER))
                     .set(UA_CPU, createUAParserItemWithCH(UA_CPU))
                     .set(UA_DEVICE, createUAParserItemWithCH(UA_DEVICE))
