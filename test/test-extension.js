@@ -32,4 +32,5 @@ describe('Bots', () => {
     });
 });
 
+// TODO : move test spec to JSON file
 // TODO : check for safe-regex

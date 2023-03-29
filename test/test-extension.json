@@ -1,0 +1,342 @@
+[{
+    "desc": "Essential PH-1",
+    "ua": "Mozilla/5.0 (Linux; Android 9; PH-1 Build/PPR1.180905.036) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Essential",
+        "model": "PH-1",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "Gigaset Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Gigaset QV830 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Gigaset",
+        "model": "QV830",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "RCA Voyager III Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 6.0.1; RCT6973W43 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "RCA",
+        "model": "RCT6973W43",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "RCA Voyager II Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 5.0; RCT6773W22B Build/LRX21M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "RCA",
+        "model": "RCT6773W22B",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Verizon Quanta Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; QMV7B Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Verizon",
+        "model": "QMV7B",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Verizon Ellipsis 8 Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 5.1.1; QTAQZ3 Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Verizon",
+        "model": "QTAQZ3",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Verizon Ellipsis 8HD Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 6.0.1; QTASUN1 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36",
+    "expect": {
+        "vendor": "Verizon",
+        "model": "QTASUN1",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Dell Venue 8 Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Venue 8 3830 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Dell",
+        "model": "Venue 8 3830",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Dell Venue 7 Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Venue 7 3730 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Dell",
+        "model": "Venue 7 3730",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Barnes & Noble Nook HD+ Tablet",
+    "ua": "Mozilla/5.0 (Linux; U; Android 4.1.2; en-us; Barnes & Noble Nook HD+ Build/JZO54K; CyanogenMod-10) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+    "expect": {
+        "vendor": "Barnes & Noble",
+        "model": "Nook HD+",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Barnes & Noble V400 Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 4.0.4; BNTV400 Build/IMM76L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.111 Safari/537.36",
+    "expect": {
+        "vendor": "Barnes & Noble",
+        "model": "V400",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "NuVision TM101A540N Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 5.1; TM101A540N Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/50.0.2661.86 Safari/537.36",
+    "expect": {
+        "vendor": "NuVision",
+        "model": "TM101A540N",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "ZTE-Z431",
+    "ua": "ZTE-Z431/1.4.0 NetFront/4.2 QTV5.1 Profile/MIDP-2.1 Configuration/CLDC-1.1",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "Z431",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "ZTE",
+    "ua": "Mozilla/5.0 (Linux; U; Android 4.1.2; en-us; ZTE-Z740G Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "Z740G",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "ZTE K Series Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 6.0.1; K88 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "K88",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "ZTE Nubia Red Magic 3",
+    "ua": "Mozilla/5.0 (Linux; Android 9; NX629J Build/PKQ1.190321.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/4064 MicroMessenger/7.0.10.1580(0x27000A34) Process/tools NetType/WIFI Language/zh_CN ABI/arm64",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "NX629J",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "ZTE Blade A5",
+    "ua": "Mozilla/5.0 (Linux; Android 9; ZTE Blade A5 2019) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "Blade A5 2019",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "ZTE BLADE V0730",
+    "ua": "Mozilla/5.0 (Linux; Android 6.0; ZTE BLADE V0730) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "BLADE V0730",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "ZTE B2017G",
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; ZTE B2017G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "ZTE",
+        "model": "B2017G",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "Swizz GEN610",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; GEN610 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Swiss",
+        "model": "GEN610",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "Swizz ZUR700",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; ZUR700 Build/KVT49L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Safari/537.36",
+    "expect": {
+        "vendor": "Swiss",
+        "model": "ZUR700",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Zeki TB782b Tablet",
+    "ua": "Mozilla/5.0 (Linux; U; Android 4.0.4; en-US; TB782B Build/IMM76D) AppleWebKit/534.31 (KHTML, like Gecko) UCBrowser/9.0.2.299 U3/0.8.0 Mobile Safari/534.31",
+    "expect": {
+        "vendor": "Zeki",
+        "model": "TB782B",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Dragon Touch Tablet",
+    "ua": "Mozilla/5.0 (Linux; Android 4.0.4; DT9138B Build/IMM76D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.72 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Dragon Touch",
+        "model": "9138B",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Insignia Tablet",
+    "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; NS-P08A7100 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Insignia",
+        "model": "NS-P08A7100",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Voice Xtreme V75",
+    "ua": "Mozilla/5.0 (Linux; U; Android 4.2.1; en-us; V75 Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+    "expect": {
+        "vendor": "Voice",
+        "model": "V75",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "LvTel V11",
+    "ua": "Mozilla/5.0 (Linux; Android 5.1.1; V11 Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39.0.0.0 Safari/537.36",
+    "expect": {
+        "vendor": "LvTel",
+        "model": "V11",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "Envizen Tablet V100MD",
+    "ua": "Mozilla/5.0 (Linux; U; Android 4.1.1; en-us; V100MD Build/V100MD.20130816) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+    "expect": {
+        "vendor": "Envizen",
+        "model": "V100MD",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Rotor Tablet",
+    "ua": "mozilla/5.0 (linux; android 5.0.1; tu_1491 build/lrx22c) applewebkit/537.36 (khtml, like gecko) chrome/43.0.2357.93 safari/537.36",
+    "expect": {
+        "vendor": "Rotor",
+        "model": "1491",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "MachSpeed Tablets",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Trio 7.85 vQ Build/Trio_7.85_vQ) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36",
+    "expect": {
+        "vendor": "MachSpeed",
+        "model": "Trio 7.85 vQ",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Trinity Tablets",
+    "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Trinity T101 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Safari/537.36",
+    "expect": {
+        "vendor": "Trinity",
+        "model": "T101",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "NextBook Next7",
+    "ua": "Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; Next7P12 Build/IMM76I) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+    "expect": {
+        "vendor": "NextBook",
+        "model": "Next7P12",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "NextBook Tablets",
+    "ua": "Mozilla/5.0 (Linux; Android 5.0; NXA8QC116 Build/LRX21V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "NextBook",
+        "model": "NXA8QC116",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Le Pan Tablets",
+    "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Le Pan TC802A Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Le Pan",
+        "model": "TC802A",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Le Pan Tablets",
+    "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Le Pan TC802A Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "expect": {
+        "vendor": "Le Pan",
+        "model": "TC802A",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "AT&T Radiant Core U304AA",
+    "ua": "Dalvik/2.1.0 (Linux; U; Android 9; U304AA Build/P00610)",
+    "expect": {
+        "vendor": "AT&T",
+        "model": "U304AA",
+        "type": "mobile"
+    }
+},
+{
+    "desc": "Vodafone Smart Tab 4G",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.4; Vodafone Smart Tab 4G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "expect": {
+        "vendor": "Vodafone",
+        "model": "Smart Tab 4G",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "Vodafone Smart ultra 6",
+    "ua": "Mozilla/5.0 (Linux; Android 5.0.2; Vodafone Smart ultra 6 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.133 Mobile Safari/537.36",
+    "expect": {
+        "vendor": "Vodafone",
+        "model": "Smart ultra 6",
+        "type": "tablet"
+    }
+},
+{
+    "desc": "4ife 4K Smart TV Box",
+    "ua": "Mozilla/5.0 (Linux; Android 4.4.2; 4ife 4K Smart TV Box Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36 Vinebre",
+    "expect": {
+        "vendor": "undefined",
+        "model": "undefined",
+        "type": "smarttv"
+    }
+}]

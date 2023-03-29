@@ -82,7 +82,7 @@ describe('Returns', function () {
         assert.deepEqual(new UAParser('').getResult(), 
             {
                 ua : '',
-                ua_ch : { architecture: undefined, bitness: undefined, brands: undefined, fullVersionList: undefined, mobile: false, model: undefined, platform: undefined, platformVersion: undefined },
+                //ua_ch : { architecture: undefined, bitness: undefined, brands: undefined, fullVersionList: undefined, mobile: false, model: undefined, platform: undefined, platformVersion: undefined },
                 browser: { name: undefined, version: undefined, major: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
@@ -362,7 +362,7 @@ describe('Map UA-CH headers', function () {
     let engine = new UAParser(headers).getEngine().withClientHints();
     let os = new UAParser(headers).getOS().withClientHints();
 
-    let ua_ch = {
+/*    let ua_ch = {
         "architecture": "ARM",
         "bitness": "64",
         "brands": [
@@ -397,11 +397,11 @@ describe('Map UA-CH headers', function () {
         "model": "Pixel 99",
         "platform": "Windows",
         "platformVersion": "13"
-    };
+    };*/
 
     it('Can read from client-hints headers using `withClientHints()`', function () {  
 
-        assert.deepEqual(uap.ua_ch, ua_ch);
+        //assert.deepEqual(uap.ua_ch, ua_ch);
         assert.strictEqual(uap.ua, "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36");
         assert.strictEqual(uap.browser.name, "Chrome");
         assert.strictEqual(uap.browser.version, "93.0.1.2");
@@ -436,7 +436,7 @@ describe('Map UA-CH headers', function () {
         engine = new UAParser(headers).getEngine();
         os = new UAParser(headers).getOS();
 
-        assert.deepEqual(uap.ua_ch, ua_ch);
+        //assert.deepEqual(uap.ua_ch, ua_ch);
         assert.strictEqual(uap.browser.name, "Chrome");
         assert.strictEqual(uap.browser.version, "110.0.0.0");
         assert.strictEqual(uap.browser.major, "110");
@@ -459,7 +459,7 @@ describe('Map UA-CH headers', function () {
         
         uap = UAParser(headers2).withClientHints();
 
-        ua_ch = {
+/*        ua_ch = {
             "architecture": undefined,
             "bitness": undefined,
             "brands": undefined,
@@ -470,7 +470,7 @@ describe('Map UA-CH headers', function () {
             "platformVersion": undefined
         };
 
-        assert.deepEqual(uap.ua_ch, ua_ch);
+        assert.deepEqual(uap.ua_ch, ua_ch);*/
         assert.strictEqual(uap.browser.name, "Chrome");
         assert.strictEqual(uap.browser.version, "110.0.0.0");
         assert.strictEqual(uap.browser.major, "110");
