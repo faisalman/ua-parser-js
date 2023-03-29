@@ -991,8 +991,8 @@
                 if (brands) {
                     for (var i in brands) {
                         var brandName = brands[i].brand,
-                            brandVersion = brands[i].version;
-                        if (!/not.a.brand/i.test(brandName) || /chromi/i.test(this.get(NAME))) {
+                            brandVersion = brands[i].version
+                        if (!/not.a.brand/i.test(brandName) && i < 1 || /chromi/i.test(this.get(NAME))) {
                             this.set(NAME, strip(GOOGLE+' ', brandName))
                                 .set(VERSION, brandVersion)
                                 .set(MAJOR, majorize(brandVersion));
