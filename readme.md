@@ -477,7 +477,7 @@ http.createServer(function (req, res) {
     res.setHeader('Accept-CH', getHighEntropyValues);
     res.setHeader('Critical-CH', getHighEntropyValues);
     
-    var ua = uap(req.headers);
+    var ua = uap(req.headers).withClientHints();
 
     // END since@2.0 */
 

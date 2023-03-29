@@ -932,26 +932,27 @@
             ['data', createUAParserData(itemType, ua, rgxMap, uaCH)]
         ]);
         this.parse();
+        var isSelfNav = NAVIGATOR && NAVIGATOR.userAgent == ua;
         switch(this.itemType) {
             case UA_BROWSER:
                 // Brave-specific detection
-                if (NAVIGATOR && NAVIGATOR.userAgent == ua && NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
+                if (isSelfNav && NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
                     this.set(NAME, 'Brave');
                 }
                 this.set(MAJOR, majorize(this.get(VERSION)));
                 break;
             case UA_DEVICE:
-                if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
+                if (isSelfNav && !this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
                     this.set(TYPE, MOBILE);
                 }
                 // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-                if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
+                if (isSelfNav && this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
                     this.set(MODEL, 'iPad')
                         .set(TYPE, TABLET);
                 }
                 break;
             case UA_OS:
-                if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM] && NAVIGATOR_UADATA[PLATFORM] != 'Unknown') {
+                if (isSelfNav && !this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
                     this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
                 }
                 break;
