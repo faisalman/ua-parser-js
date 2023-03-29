@@ -14,8 +14,7 @@ $(document)
     rotateLabel();
     setInterval(rotateLabel, 3000);
 
-    var updateDemo = function (ua) {
-        var result = UAParser(ua);
+    var updateDemo = function (result) {
         if(!result) return;
         $('#ua-txt').transition('flip vertical', function () {
             $(this).text(result.ua);
@@ -101,7 +100,9 @@ $(document)
             });
         });
     }
-    updateDemo();
+    UAParser().withClientHints().then(function(result) {
+        updateDemo(result);
+    });
 
     var i;
     var values = [];
@@ -112,17 +113,17 @@ $(document)
         values: values,
         onChange: function (val) {
             $('#ua-txt-info').text('For a given user-agent:');
-            updateDemo(val);
+            updateDemo(UAParser(val));
         }
     });
     $('#demo-btn').click(function() {
         $('#ua-txt-info').text('For a given user-agent:');
-        updateDemo($('input[name=custom-ua]').val());
+        updateDemo(UAParser($('input[name=custom-ua]').val()));
     });
     $('input[name=custom-ua]').keypress(function (e) {
         if (e.which == 13) {
             $('#ua-txt-info').text('For a given user-agent:');
-            updateDemo($(this).val());
+            updateDemo(UAParser($(this).val()));
             return false;
         }
     });
