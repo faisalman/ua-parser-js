@@ -803,6 +803,7 @@
         var _ua = ua || ((_navigator && _navigator.userAgent) ? _navigator.userAgent : EMPTY);
         var _uach = (_navigator && _navigator.userAgentData) ? _navigator.userAgentData : undefined;
         var _rgxmap = extensions ? extend(regexes, extensions) : regexes;
+        var _isSelfNav = _navigator && _navigator.userAgent == _ua;
 
         this.getBrowser = function () {
             var _browser = {};
@@ -811,7 +812,7 @@
             rgxMapper.call(_browser, _ua, _rgxmap.browser);
             _browser[MAJOR] = majorize(_browser[VERSION]);
             // Brave-specific detection
-            if (_navigator && _navigator.brave && typeof _navigator.brave.isBrave == FUNC_TYPE) {
+            if (_isSelfNav && _navigator && _navigator.brave && typeof _navigator.brave.isBrave == FUNC_TYPE) {
                 _browser[NAME] = 'Brave';
             }
             return _browser;
@@ -828,11 +829,11 @@
             _device[MODEL] = undefined;
             _device[TYPE] = undefined;
             rgxMapper.call(_device, _ua, _rgxmap.device);
-            if (!_device[TYPE] && _uach && _uach.mobile) {
+            if (_isSelfNav && !_device[TYPE] && _uach && _uach.mobile) {
                 _device[TYPE] = MOBILE;
             }
             // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-            if (_device[MODEL] == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
+            if (_isSelfNav && _device[MODEL] == 'Macintosh' && _navigator && typeof _navigator.standalone !== UNDEF_TYPE && _navigator.maxTouchPoints && _navigator.maxTouchPoints > 2) {
                 _device[MODEL] = 'iPad';
                 _device[TYPE] = TABLET;
             }
@@ -850,7 +851,7 @@
             _os[NAME] = undefined;
             _os[VERSION] = undefined;
             rgxMapper.call(_os, _ua, _rgxmap.os);
-            if (!_os[NAME] && _uach && _uach.platform != 'Unknown') {
+            if (_isSelfNav && !_os[NAME] && _uach && _uach.platform != 'Unknown') {
                 _os[NAME] = _uach.platform  
                                     .replace(/chrome os/i, CHROMIUM_OS)
                                     .replace(/macos/i, MAC_OS);           // backward compatibility
