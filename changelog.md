@@ -4,6 +4,15 @@
 
 Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
 
+## Version 0.7.35 / 1.0.35
+- Fix result from user-supplied user-agent being altered
+- Add new browser: Heytap, TikTok
+- Add new engine: LibWeb
+- Add new OS: SerenityOS
+- Improve browser detection: Yandex
+- Improve device detection: iPhone, Amazon Echo
+- Improve OS detection: iOS
+
 ## Version 0.7.34 / 1.0.34
 - Fix Sharp Mobile detected as Huawei Tablet
 - Fix IE8 bug

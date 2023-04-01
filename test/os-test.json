@@ -765,6 +765,15 @@
         }
     },
     {
+        "desc": "iOS with FaceBook Mobile App",
+        "ua": "[FBAN/FBIOS;FBAV/283.0.0.44.117;FBBV/238386386;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/13.6.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/240127608]",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "13.6.1"
+        }
+    },
+    {
         "desc"    : "watchOS",
         "ua"      : "server-bag [Watch OS,8.4,19S546,Watch3,4]",
         "expect"  :
@@ -1194,6 +1203,15 @@
         {
             "name"    : "Linspire",
             "version" : "1.5.0.4"
+        }
+    },
+    {
+        "desc"    : "SerenityOS",
+        "ua"      : "Mozilla/4.0 (SerenityOS; x86) LibWeb+LibJS (Not KHTML, nor Gecko) LibWeb",
+        "expect"  :
+        {
+            "name"    : "SerenityOS",
+            "version" : "undefined"
         }
     }
 ]

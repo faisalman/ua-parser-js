@@ -33,10 +33,6 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 <td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p>Visit <a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ 51Degrees <u>UAParser</u></a> to get started.</p>
 </td>
 </tr>
-<tr>
-<td>
-<p>On 6 March, we’ll be hosting a demonstration of the 51Degrees UAParser. Register your place for the webinar <a href="https://event.webinarjam.com/register/36/6k2gqu5p">↗ here</a>.</p></td>
-</tr>
 </tbody>
 </table>
 
@@ -106,16 +102,16 @@ The methods are self explanatory, here's a small overview on all the available m
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Cobalt, Comodo Dragon, Dillo,
 Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
-Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Huawei Browser, 
-ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, Instagram, 
-Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, Kindle, Klar, Konqueror, 
-LBBROWSER, Line, LinkedIn, Links, Lunascape, Lynx, MIUI Browser, Maemo Browser, 
+Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Heytap, 
+Huawei Browser, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, Iceweasel, 
+Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, Kindle, Klar, 
+Konqueror, LBBROWSER, Line, LinkedIn, Links, Lunascape, Lynx, MIUI Browser,
 Maemo, Maxthon, MetaSr Midori, Minimo, Mobile Safari, Mosaic, Mozilla, NetFront, 
 NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser, OmniWeb, 
 Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Polaris, 
 Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
 Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tesla, Tizen Browser, UCBrowser, UP.Browser, Viera, 
+SlimBrowser, Swiftfox, Tesla, TikTok, Tizen Browser, UCBrowser, UP.Browser, Viera, 
 Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
 
 # 'browser.version' determined dynamically
@@ -150,8 +146,8 @@ Siemens, Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE
 
 ```sh
 # Possible 'engine.name'
-Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, Links, Lynx, NetFront,
-NetSurf, Presto, Tasman, Trident, w3m, WebKit
+Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, LibWeb, Links, Lynx, 
+NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
@@ -167,8 +163,9 @@ Fuchsia, Gentoo, GhostBSD, GNU, Haiku, HarmonyOS, HP-UX, Hurd, iOS, Joli, KaiOS,
 Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix, 
 Mint, Morph OS, NetBSD, NetRange, NetTV, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, 
 PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, 
-RISC OS, Sabayon, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, 
-Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], Zenwalk, ...
+RISC OS, Sabayon, Sailfish, SerenityOS, Series40, Slackware, Solaris, SUSE, Symbian, 
+Tizen, Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, Windows [Phone/Mobile], 
+Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
