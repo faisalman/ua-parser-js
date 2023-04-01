@@ -888,8 +888,21 @@
 
         if (!NAVIGATOR_UADATA) {
             UAParserData.prototype.then = function (cb) { 
-                cb(this);
-                return this;
+                var that = this;
+                var UAParserDataResolve = function () {
+                    for (var prop in that) {
+                        if (that.hasOwnProperty(prop)) {
+                            this[prop] = that[prop];
+                        }
+                    }
+                };
+                UAParserDataResolve.prototype = {
+                    is : UAParserData.prototype.is,
+                    toString : UAParserData.prototype.toString
+                };
+                var resolveData = new UAParserDataResolve();
+                cb(resolveData);
+                return resolveData;
             };
         }
 
@@ -991,8 +1004,8 @@
                 if (brands) {
                     for (var i in brands) {
                         var brandName = brands[i].brand,
-                            brandVersion = brands[i].version
-                        if (!/not.a.brand/i.test(brandName) && i < 1 || /chromi/i.test(this.get(NAME))) {
+                            brandVersion = brands[i].version;
+                        if (!/not.a.brand/i.test(brandName) && (i < 1 || /chromi/i.test(this.get(NAME)))) {
                             this.set(NAME, strip(GOOGLE+' ', brandName))
                                 .set(VERSION, brandVersion)
                                 .set(MAJOR, majorize(brandVersion));

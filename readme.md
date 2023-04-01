@@ -287,9 +287,9 @@ engine.version;                     // "28.0.1500.95"
 engine.toString();                  // "Blink 28.0.1500.95"
 ```
 
-#### * `withClientHints():Promise<object>|Thenable<object>` `since@2.0`
+#### * `withClientHints():Promise<object>|Thenable<object>|object` `since@2.0`
 
-Recently Chrome limits the information exposed through user-agent and introduces a new experimental set of data called "client-hints". In browser-environment, obtaining the client-hints data via JavaScript must be done in an asynchronous way. In `UAParser` you can chain the result object from `get*` method with `withClientHints()` to also read the client-hints data from the browser and return the updated data as a `Promise`.
+Recently, Chrome limits the information exposed through user-agent and introduces a new experimental set of data called "client-hints". In browser-environment, obtaining the client-hints data via JavaScript must be done in an asynchronous way. In `UAParser` you can chain the result object from `get*` method with `withClientHints()` to also read the client-hints data from the browser and return the updated data as a `Promise`.
 
 ```js
 // client-side example
@@ -311,7 +311,7 @@ Recently Chrome limits the information exposed through user-agent and introduces
 })();
 ```
 
-Along with `User-Agent` HTTP header, Chrome also sends this client-hints data by default under `Sec-CH-UA-*` HTTP headers in each request. In server-side development, you can capture this extra information by passing the `req.headers` to `UAParser()` (see examples below). When using `withClientHints()` in nodejs environment and browser without client-hints support (basically anything that's not Chromium-based) the updated data will be returned as a `Thenable` (has `then()` method).
+Along with `User-Agent` HTTP header, Chrome also sends this client-hints data by default under `Sec-CH-UA-*` HTTP headers in each request. In server-side development, you can capture this extra information by passing the `req.headers` to `UAParser()` (see examples below). When using `withClientHints()` in nodejs environment and browser without client-hints support (basically anything that's not Chromium-based), it will returns a new object with updated data.
 
 ```js
 // server-side example
@@ -338,7 +338,10 @@ console.log(result2.os.name);       // "Android"
 console.log(result2.device.type);   // "mobile"
 console.log(result2.device.model);  // "Galaxy S3 Marketing"
 
-new UAParser(request.headers).getBrowser().withClientHints().then((browser) => {
+new UAParser(request.headers)
+        .getBrowser()
+        .withClientHints()
+        .then((browser) => {
     console.log(browser.toString());    // Chrome 110.0.0.0 
 });
 ```
@@ -376,6 +379,19 @@ let myParser2 = new UAParser({
 });
 
 console.log(myParser2.setUA(myUA2).getDevice());  // {vendor: "MyTab", model: "14 Pro Max", type: "tablet"}
+```
+
+Some basic extensions (although not very complete at the moment) can also be found under `ua-parser-js/extensions` submodule.
+
+```js
+import { UAParser } from 'ua-parser-js';
+import { Emails } from 'ua-parser-js/extensions';
+
+const browser = new UAParser(Emails)
+                        .setUA('Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0')
+                        .getBrowser();
+
+console.log(browser.name); // Thunderbird
 ```
 
 
