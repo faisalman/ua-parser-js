@@ -1,26 +1,38 @@
 # UAParser.js Changelog
 
-# Version 2.0.0-alpha.1
-- Breaking changes:
-  - Browser detection on mobile device: `Chrome => Mobile Chrome`, `Firefox => Mobile Firefox`
-  - OS detection: `Mac OS => macOS`, `Chromium OS => Chrome OS`
-- Add some new methods in result object: 
-  - Add support for client hints: `withClientHints()`
-  - Utility for easy comparison: `is()`
-  - Utility to print full-name: `toString()`
-- Add support for ES module `import { UAParser } from 'ua-parser-js'`
-- Provide Enums `'ua-parser-js/enums'`
-- Provide Extensions `'ua-parser-js/extensions'`
+# Version 2.0
+- What's breaking:
+  - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
+  - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
+- What's new:
+  - Add some new methods in result object: 
+    - Add support for client hints: `withClientHints()`
+    - Utility for easy comparison: `is()`
+    - Utility to print full-name: `toString()`
+  - Add support for ES module `import { UAParser } from 'ua-parser-js'`
+  - Provide Enums `'ua-parser-js/enums'`
+  - Provide Extensions `'ua-parser-js/extensions'`
+
+## Version 2.0.0-alpha.2
+- Fix browser result always returning Chromium when using `withClientHints()`
+- Fix infinite-loop when await-ing `withClientHints()` in non-client-hints browser
+
+## Version 2.0.0-alpha.1
+- Initial work on new major version
+
+
+# Version 0.7 / 1.0
+
+Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
+
+## Version 0.7.35 / 1.0.35
+- Fix result from user-supplied user-agent being altered
 - Add new browser: Heytap, TikTok
 - Add new engine: LibWeb
 - Add new OS: SerenityOS
 - Improve browser detection: Yandex
 - Improve device detection: iPhone, Amazon Echo
 - Improve OS detection: iOS
-
-# Version 0.7 / 1.0
-
-Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
 
 ## Version 0.7.34 / 1.0.34
 - Fix Sharp Mobile detected as Huawei Tablet

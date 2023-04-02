@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.0-alpha.1
+/*  Extensions for UAParser.js v2.0.0-alpha.2
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     MIT License */

@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-alpha.1
+/* UAParser.js v2.0.0-alpha.2
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -17,7 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '2.0.0-alpha.1',
+    var LIBVERSION  = '2.0.0-alpha.2',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -332,7 +332,7 @@
             /miuibrowser\/([\w\.]+)/i                                           // MIUI Browser
             ], [VERSION, [NAME, 'MIUI' + SUFFIX_BROWSER]], [
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
-            ], [VERSION, [NAME, PREFIX_MOBILE + 'Firefox']], [
+            ], [VERSION, [NAME, PREFIX_MOBILE + FIREFOX]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
             ], [[NAME, '360' + SUFFIX_BROWSER]], [
             /(oculus|samsung|sailfish|huawei)browser\/([\w\.]+)/i
@@ -391,7 +391,7 @@
 
             // Gecko based
             /(?:mobile|tablet);.*(firefox)\/([\w\.-]+)/i                        // Firefox Mobile
-            ], [[NAME, PREFIX_MOBILE + 'Firefox'], VERSION], [
+            ], [[NAME, PREFIX_MOBILE + FIREFOX], VERSION], [
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
