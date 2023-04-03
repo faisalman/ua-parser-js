@@ -300,6 +300,16 @@
         }
     },
     {
+        "desc"    : "DuckDuckGo",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile DuckDuckGo/5 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "DuckDuckGo",
+            "version" : "5",
+            "major"   : "5"
+        }
+    },
+    {
         "desc"    : "Epiphany",
         "ua"      : "Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.7) Gecko/20040628 Epiphany/1.2.6",
         "expect"  :
@@ -496,6 +506,46 @@
             "name"    : "GoBrowser",
             "version" : "1.6.91",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "HuaweiBrowser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00；HMSCore/4.0.0 GMS/10.4 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Huawei Browser",
+            "version" : "10.0.3.102",
+            "major"   : "10"
+        }
+    },
+    {
+        "desc"    : "HuaweiBrowser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00；HMSCore/4.0.0 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Huawei Browser",
+            "version" : "10.0.3.102",
+            "major"   : "10"
+        }
+    },
+    {
+        "desc"    : "HuaweiBrowser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00；GMS/10.4 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Huawei Browser",
+            "version" : "10.0.3.102",
+            "major"   : "10"
+        }
+    },
+    {
+        "desc"    : "HuaweiBrowser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Huawei Browser",
+            "version" : "10.0.3.102",
+            "major"   : "10"
         }
     },
     {
@@ -1209,7 +1259,7 @@
         }
     },
     {
-        "desc": "WeChat on Android",
+        "desc": "WeiBo on Android",
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A366 Weibo (iPhone8,2__weibo__8.9.3__iphone__os12.0)",
         "expect":
         {
@@ -1409,6 +1459,16 @@
         }
     },
     {
+        "desc"    : "Supposed not to be detected as WeChat",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.124 Safari/537.36 qblink wegame.exe WeGame/5.1.1.11100 QBCore/3.70.107.400 QQBrowser/9.0.2524.400",
+        "expect"  :
+        {
+            "name"    : "QQBrowser",
+            "version" : "9.0.2524.400",
+            "major"   : "9"
+        }
+    },
+    {
         "desc"    : "GSA on iOS",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) GSA/30.1.161623614 Mobile/14F89 Safari/602.1",
         "expect"  :
@@ -1502,6 +1562,70 @@
             "name"    : "IE",
             "version" : "11.0",
             "major"   : "11"
+        }
+    },
+    {
+        "desc"    : "LinkedIn",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]",
+        "expect"  :
+        {
+            "name"    : "LinkedIn"
+        }
+    },
+    {
+        "desc"    : "Safari including comma in minor version number",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6,2 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Safari",
+            "version" : "15.6,2",
+            "major"   : "15"
+        }
+    },
+    {
+        "desc"    : "Mobile Safari including comma in minor version number",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 15_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6,2 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "Mobile Safari",
+            "version" : "15.6,2",
+            "major"   : "15"
+        }
+    },
+    {
+        "desc"     : "Cobalt 23 Master",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/23.master.0.0-devel (unlike Gecko) v8/8.8.278.8-jit gles Starboard/15",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "23.0.0",
+            "major"  : "23"
+        }
+    },
+    {
+        "desc"     : "Cobalt 23 LTS",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/23.lts.1.0-qa (unlike Gecko) v8/8.8.278.8-jit gles Starboard/15",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "23.1.0",
+            "major"  : "23"
+        }
+    },
+    {
+        "desc"     : "Cobalt 11",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/11.0-qa (unlike Gecko) Starboard/6",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "11.0",
+            "major"  : "11"
+        }
+    },
+    {
+        "desc"     : "Cobalt 9",
+        "ua"       : "Mozilla/5.0 (X11; Linux x86_64) Cobalt/9.0-qa (unlike Gecko) Starboard/4",
+        "expect"   : {
+            "name"   : "Cobalt",
+            "version": "9.0",
+            "major"  : "9"
         }
     }
 ]
