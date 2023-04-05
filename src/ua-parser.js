@@ -846,10 +846,14 @@
             assignFromEntries.call(this, init_props);
         }
         UAParserData.prototype.withClientHints = function () {
+
+            var prevData = this;
             
             // nodejs / non-client-hints browsers
             if (!NAVIGATOR_UADATA) {
-                return new UAParserItem(itemType, ua, rgxMap, uaCH).parseCH().get();
+                var item = new UAParserItem(itemType, ua, rgxMap, uaCH);
+                item.data = prevData;
+                return item.parseCH().get();
             }
 
             // browsers based on chromium 85+
@@ -857,7 +861,9 @@
                     .getHighEntropyValues(CH_ALL_VALUES)
                     .then(function (res) {
                         var JS_UACH = new UAParserDataCH(res, false);
-                        return new UAParserItem(itemType, ua, rgxMap, JS_UACH).parseCH().get();
+                        var item = new UAParserItem(itemType, ua, rgxMap, JS_UACH);
+                        item.data = prevData;
+                        return item.parseCH().get();
             });
         };
 
@@ -944,8 +950,29 @@
             ['rgxMap', rgxMap],
             ['data', createUAParserData(itemType, ua, rgxMap, uaCH)]
         ]);
-        this.parse();
-        var isSelfNav = NAVIGATOR && NAVIGATOR.userAgent == ua;
+        if(this.itemType == UA_RESULT) {
+            var createUAParserItem = function (itemType) {
+                return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).parseUA().get();
+            };
+            this.set('ua', ua)
+                .set(UA_BROWSER, createUAParserItem(UA_BROWSER))
+                .set(UA_CPU, createUAParserItem(UA_CPU))
+                .set(UA_DEVICE, createUAParserItem(UA_DEVICE))
+                .set(UA_ENGINE, createUAParserItem(UA_ENGINE))
+                .set(UA_OS, createUAParserItem(UA_OS))
+                .get();
+        }
+        return this;
+    }
+    UAParserItem.prototype.get = function (prop) {
+        if (!prop) return this.data;
+        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
+    };
+    UAParserItem.prototype.parseUA = function () {
+        if (this.itemType != UA_RESULT) {
+            rgxMapper.call(this.data, this.ua, this.rgxMap);
+        }
+        var isSelfNav = NAVIGATOR && NAVIGATOR.userAgent == this.ua;
         switch(this.itemType) {
             case UA_BROWSER:
                 // Brave-specific detection
@@ -968,28 +995,6 @@
                 if (isSelfNav && !this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
                     this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
                 }
-                break;
-            case UA_RESULT:
-                var createUAParserItem = function (itemType) {
-                    return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).get();
-                };
-                this.set('ua', ua)
-                    .set(UA_BROWSER, createUAParserItem(UA_BROWSER))
-                    .set(UA_CPU, createUAParserItem(UA_CPU))
-                    .set(UA_DEVICE, createUAParserItem(UA_DEVICE))
-                    .set(UA_ENGINE, createUAParserItem(UA_ENGINE))
-                    .set(UA_OS, createUAParserItem(UA_OS))
-                    .get();
-        }
-        return this;
-    }
-    UAParserItem.prototype.get = function (prop) {
-        if (!prop) return this.data;
-        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
-    };
-    UAParserItem.prototype.parse = function () {
-        if (this.itemType != UA_RESULT) {
-            rgxMapper.call(this.data, this.ua, this.rgxMap);
         }
         return this;
     };
@@ -1038,8 +1043,11 @@
                 }
                 break;
             case UA_RESULT:
+                var prevData = this.data;
                 var createUAParserItemWithCH = function (itemType) {
-                    return new UAParserItem(itemType, ua, rgxMap[itemType], uaCH).parseCH().get();
+                    var item = new UAParserItem(itemType, ua, rgxMap[itemType], uaCH);
+                    item.data = prevData[itemType];
+                    return item.parseCH().get();
                 };
                 this.set('ua', ua)
                     .set(UA_BROWSER, createUAParserItemWithCH(UA_BROWSER))
@@ -1092,7 +1100,7 @@
 
             createUAParserItemFunc = function (itemType) {
                 return function () {
-                    return new UAParserItem(itemType, userAgent, itemType == UA_RESULT ? regexMap : regexMap[itemType], HTTP_UACH).get();
+                    return new UAParserItem(itemType, userAgent, itemType == UA_RESULT ? regexMap : regexMap[itemType], HTTP_UACH).parseUA().get();
                 };
             };
 
