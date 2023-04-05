@@ -8,10 +8,12 @@
    Source : https://github.com/faisalman/ua-parser-js */
 /////////////////////////////////////////////////////////////////////////////////
 
+/*jshint esversion: 3 */ 
+
 (function (window, undefined) {
 
     'use strict';
-
+    
     //////////////
     // Constants
     /////////////
