@@ -964,14 +964,7 @@
         }
         return this;
     }
-    UAParserItem.prototype.get = function (prop) {
-        if (!prop) return this.data;
-        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
-    };
-    UAParserItem.prototype.parseUA = function () {
-        if (this.itemType != UA_RESULT) {
-            rgxMapper.call(this.data, this.ua, this.rgxMap);
-        }
+    UAParserItem.prototype.detectFeature = function () {
         var isSelfNav = NAVIGATOR && NAVIGATOR.userAgent == this.ua;
         switch(this.itemType) {
             case UA_BROWSER:
@@ -996,6 +989,17 @@
                     this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
                 }
         }
+        return this;
+    };
+    UAParserItem.prototype.get = function (prop) {
+        if (!prop) return this.data;
+        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
+    };
+    UAParserItem.prototype.parseUA = function () {
+        if (this.itemType != UA_RESULT) {
+            rgxMapper.call(this.data, this.ua, this.rgxMap);
+        }
+        this.detectFeature();
         return this;
     };
     UAParserItem.prototype.parseCH = function () {
