@@ -8,7 +8,8 @@
    Source : https://github.com/faisalman/ua-parser-js */
 /////////////////////////////////////////////////////////////////////////////////
 
-/*jshint esversion: 3 */ 
+/* jshint esversion: 3 */ 
+/* globals window */
 
 (function (window, undefined) {
 

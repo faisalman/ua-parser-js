@@ -5,6 +5,8 @@
     MIT License */
 //////////////////////////////////////////////
 
+/*jshint esversion: 6 */ 
+
 const BrowserName = Object.freeze({
     CHROME          : 'Chrome',
     EDGE            : 'Edge',
@@ -98,4 +100,4 @@ module.exports = {
     DeviceVendor,
     EngineName,
     OSName
-}
+};

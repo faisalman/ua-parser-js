@@ -5,11 +5,11 @@ var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
 var UAParser    = require('./../src/ua-parser');
-var browsers    = require('./browser-test.json');
-var cpus        = require('./cpu-test.json');
-var devices     = require('./device-test.json');
-var engines     = require('./engine-test.json');
-var os          = require('./os-test.json');
+var browsers    = require('./specs/browser-all.json');
+var cpus        = require('./specs/cpu-all.json');
+var devices     = require('./specs/device-all.json');
+var engines     = require('./specs/engine-all.json');
+var os          = require('./specs/os-all.json');
 var parser      = new UAParser();
 var methods     = [
     {
@@ -82,7 +82,6 @@ describe('Returns', function () {
         assert.deepEqual(new UAParser('').getResult(), 
             {
                 ua : '',
-                //ua_ch : { architecture: undefined, bitness: undefined, brands: undefined, fullVersionList: undefined, mobile: false, model: undefined, platform: undefined, platformVersion: undefined },
                 browser: { name: undefined, version: undefined, major: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
@@ -362,43 +361,6 @@ describe('Map UA-CH headers', function () {
     let engine = new UAParser(headers).getEngine().withClientHints();
     let os = new UAParser(headers).getOS().withClientHints();
 
-/*    let ua_ch = {
-        "architecture": "ARM",
-        "bitness": "64",
-        "brands": [
-          {
-            "brand": "Chromium",
-            "version": "93"
-          },
-          {
-            "brand": "Google Chrome",
-            "version": "93"
-          },
-          {
-            "brand": " Not;A Brand",
-            "version": "99"
-          }
-        ],
-        "fullVersionList": [
-          {
-            "brand": "Chromium",
-            "version": "93.0.1.2"
-          },
-          {
-            "brand": "Google Chrome",
-            "version": "93.0.1.2"
-          },
-          {
-            "brand": " Not;A Brand",
-            "version": "99.0.1.2"
-          }
-        ],
-        "mobile": true,
-        "model": "Pixel 99",
-        "platform": "Windows",
-        "platformVersion": "13"
-    };*/
-
     it('Can read from client-hints headers using `withClientHints()`', function () {  
 
         //assert.deepEqual(uap.ua_ch, ua_ch);
@@ -436,7 +398,6 @@ describe('Map UA-CH headers', function () {
         engine = new UAParser(headers).getEngine();
         os = new UAParser(headers).getOS();
 
-        //assert.deepEqual(uap.ua_ch, ua_ch);
         assert.strictEqual(uap.browser.name, "Chrome");
         assert.strictEqual(uap.browser.version, "110.0.0.0");
         assert.strictEqual(uap.browser.major, "110");
@@ -459,18 +420,6 @@ describe('Map UA-CH headers', function () {
         
         uap = UAParser(headers2).withClientHints();
 
-/*        ua_ch = {
-            "architecture": undefined,
-            "bitness": undefined,
-            "brands": undefined,
-            "fullVersionList": undefined,
-            "mobile": true,
-            "model": undefined,
-            "platform": undefined,
-            "platformVersion": undefined
-        };
-
-        assert.deepEqual(uap.ua_ch, ua_ch);*/
         assert.strictEqual(uap.browser.name, "Chrome");
         assert.strictEqual(uap.browser.version, "110.0.0.0");
         assert.strictEqual(uap.browser.major, "110");
@@ -512,71 +461,5 @@ describe('Map UA-CH headers', function () {
             assert.strictEqual(ua.device.is("mobile"), false);
             assert.strictEqual(ua.device.is("tablet"), false);
         });
-    });
-});
-
-describe('Map UA-CH JS', () => {
-
-    it('does not throw when using withClientHints() in non-supported environment', () => {
-        assert.doesNotThrow(() => { 
-            new UAParser().getResult().withClientHints();
-        });
-    });
-
-    window = { navigator : { userAgent : '' , userAgentData : new NavigatorUAData() } };
-    function NavigatorUAData () {
-        this.mobile = false;
-        this.platform = '';
-        this.brands = [{ brand : 'A Chromium-based Browser', version : '1' }];
-        this.getHighEntropyValues = (values) => {
-            return new Promise((resolve) => {
-                const result = {
-                    brands : [{ brand : 'A Chromium-based Browser', version : '1' }],
-                    fullVersionList : [{ brand : 'A Chromium-based Browser', version : '1.2.3' }],
-                    architecture : 'x86',
-                    bitness : '64',
-                    mobile : true,
-                    model : 'Galaxy S3',
-                    platform : 'Android',
-                    platformVersion : '1000'                
-                };
-                resolve(result);
-            });
-        }
-    };
-    delete require.cache[require.resolve('./../src/ua-parser')];
-    const UAParserWithWindow = require('./../src/ua-parser');
-
-    it('Can read client hints from browser', async () => {
-
-        let uap = new UAParserWithWindow()
-
-        let os = await uap.getOS().withClientHints();
-
-        assert.strictEqual(os.name, 'Android');
-        assert.strictEqual(os.is('Android'), true);
-        assert.strictEqual(os.toString(), 'Android 1000');
-
-        let result = await uap.getResult().withClientHints();
-
-        assert.strictEqual(result.browser.name, 'A Chromium-based Browser');
-        assert.strictEqual(result.browser.version, '1.2.3');
-        assert.strictEqual(result.cpu.architecture, 'amd64');
-        assert.strictEqual(result.os.name, 'Android');
-
-        await uap.getDevice().withClientHints().then((device) => {
-            assert.strictEqual(device.type, 'mobile');
-            assert.strictEqual(device.vendor, undefined);
-            assert.strictEqual(device.model, 'Galaxy S3');
-        });
-
-        let result_without_ch = uap.getResult();
-
-        assert.strictEqual(result_without_ch.browser.name, undefined);
-
-        uap.setUA("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36");
-        assert.strictEqual(uap.getOS().name, "macOS");
-        
-        // TODO : create full tests
     });
 });

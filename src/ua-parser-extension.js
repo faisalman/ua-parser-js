@@ -5,6 +5,8 @@
     MIT License */
 //////////////////////////////////////////////
 
+/*jshint esversion: 6 */ 
+
 const MODEL     = 'model';
 const NAME      = 'name';
 const TYPE      = 'type';
@@ -117,4 +119,4 @@ module.exports = {
     ExtraDevices,
     Emails,
     Tools
-}
+};
