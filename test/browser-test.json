@@ -1084,8 +1084,8 @@
         "expect"  :
         {
             "name"    : "Safari",
-            "version" : "2.0.4",
-            "major"   : "2"
+            "version" : "1",
+            "major"   : "1"
         }
     },
     {
