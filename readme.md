@@ -346,6 +346,21 @@ new UAParser(request.headers)
 });
 ```
 
+#### * `withFeatureCheck():object` `since@2.0`
+
+This method allows us to examine other features beyond `navigator.userAgent` to further improve detection of the following:
+- browser : Brave (check for `navigator.isBrave`)
+- device  : iPad (check for `navigator.standalone` & `navigator.maxTouchPoints`)
+
+```js
+// suppose this code runs on iPad
+const withoutFeatureCheck = UAParser();
+const withFeatureCheck = UAParser().withFeatureCheck();
+
+console.log(withoutFeatureCheck.device); // { vendor : "Apple", model : "Macintosh", type : undefined }
+console.log(withFeatureCheck.device);    // { vendor : "Apple", model : "iPad", type : "tablet" }
+```
+
 ## Extending Regex
 
 If you want to detect something that's not currently provided by UAParser.js (eg: `bots`, specific apps, etc), you can pass a list of regexes to extend internal UAParser.js regexes with your own.

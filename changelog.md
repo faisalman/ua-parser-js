@@ -7,6 +7,7 @@
 - What's new:
   - Add some new methods in result object: 
     - Add support for client hints: `withClientHints()`
+    - Add support for feature detection: `withFeatureCheck()`
     - Utility for easy comparison: `is()`
     - Utility to print full-name: `toString()`
   - Add support for ES module `import { UAParser } from 'ua-parser-js'`

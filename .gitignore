@@ -1,6 +1,7 @@
 node_modules/
 npm-debug.log
 playwright-report/
+test-results/
 
 ### vim ###
 .*.s[a-w][a-z]

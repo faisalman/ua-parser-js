@@ -862,6 +862,10 @@
             });
         };
 
+        UAParserData.prototype.withFeatureCheck = function () {
+            return item.detectFeature().get();
+        };
+
         if (itemType != UA_RESULT) {
             UAParserData.prototype.is = function (strToCheck) {
                 var is = false;
@@ -978,6 +982,20 @@
                         if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
                             this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
                         }
+                        break;
+                    case UA_RESULT:
+                        var data = this.data;
+                        var detect = function (itemType) {
+                            return data[itemType]
+                                    .getItem()
+                                    .detectFeature()
+                                    .get();
+                        };
+                        this.set(UA_BROWSER, detect(UA_BROWSER))
+                            .set(UA_CPU, detect(UA_CPU))
+                            .set(UA_DEVICE, detect(UA_DEVICE))
+                            .set(UA_ENGINE, detect(UA_ENGINE))
+                            .set(UA_OS, detect(UA_OS));
                 }
             }
             return this;
@@ -1046,8 +1064,7 @@
                                 .parseCH()
                                 .get();
                     };
-                    this.set('ua', ua)
-                        .set(UA_BROWSER, parse(UA_BROWSER))
+                    this.set(UA_BROWSER, parse(UA_BROWSER))
                         .set(UA_CPU, parse(UA_CPU))
                         .set(UA_DEVICE, parse(UA_DEVICE))
                         .set(UA_ENGINE, parse(UA_ENGINE))
@@ -1118,7 +1135,6 @@
                     return function () {
                         return new UAParserItem(itemType, userAgent, regexMap[itemType], HTTP_UACH)
                                     .parseUA()
-                                    .detectFeature()
                                     .get();
                     };
                 }
