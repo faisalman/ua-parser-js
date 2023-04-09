@@ -829,22 +829,22 @@
             return props;
     })();
 
-    var createUAParserData = function (item, itemType) {
+    var createIData = function (item, itemType) {
 
         var init_props = defaultProps.init[itemType],
             is_ignoreProps = defaultProps.isIgnore[itemType] || 0,
             is_ignoreRgx = defaultProps.isIgnoreRgx[itemType] || 0,
             toString_props = defaultProps.toString[itemType] || 0;
 
-        function UAParserData () {
+        function IData () {
             setProps.call(this, init_props);
         }
 
-        UAParserData.prototype.getItem = function () {
+        IData.prototype.getItem = function () {
             return item;
         };
 
-        UAParserData.prototype.withClientHints = function () {
+        IData.prototype.withClientHints = function () {
 
             // nodejs / non-client-hints browsers
             if (!NAVIGATOR_UADATA) {
@@ -858,14 +858,18 @@
                     .getHighEntropyValues(CH_ALL_VALUES)
                     .then(function (res) {
                         return item
-                                .setCH(new UAParserDataCH(res, false))
+                                .setCH(new UACHData(res, false))
                                 .parseCH()
                                 .get();
             });
         };
 
+        IData.prototype.withFeatureCheck = function () {
+            return item.detectFeature().get();
+        };
+
         if (itemType != UA_RESULT) {
-            UAParserData.prototype.is = function (strToCheck) {
+            IData.prototype.is = function (strToCheck) {
                 var is = false;
                 for (var i in this) {
                     if (this.hasOwnProperty(i) && !has(is_ignoreProps, i) && lowerize(is_ignoreRgx ? strip(is_ignoreRgx, this[i]) : this[i]) == lowerize(is_ignoreRgx ? strip(is_ignoreRgx, strToCheck) : strToCheck)) {
@@ -878,7 +882,7 @@
                 }
                 return is;
             };
-            UAParserData.prototype.toString = function () {
+            IData.prototype.toString = function () {
                 var str = EMPTY;
                 for (var i in toString_props) {
                     if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
@@ -890,33 +894,33 @@
         }
 
         if (!NAVIGATOR_UADATA) {
-            UAParserData.prototype.then = function (cb) { 
+            IData.prototype.then = function (cb) { 
                 var that = this;
-                var UAParserDataResolve = function () {
+                var IDataResolve = function () {
                     for (var prop in that) {
                         if (that.hasOwnProperty(prop)) {
                             this[prop] = that[prop];
                         }
                     }
                 };
-                UAParserDataResolve.prototype = {
-                    is : UAParserData.prototype.is,
-                    toString : UAParserData.prototype.toString
+                IDataResolve.prototype = {
+                    is : IData.prototype.is,
+                    toString : IData.prototype.toString
                 };
-                var resolveData = new UAParserDataResolve();
+                var resolveData = new IDataResolve();
                 cb(resolveData);
                 return resolveData;
             };
         }
 
-        return new UAParserData();
+        return new IData();
     };
 
     /////////////////
     // Constructor
     ////////////////
 
-    function UAParserDataCH (uach, isHTTP_UACH) {
+    function UACHData (uach, isHTTP_UACH) {
         uach = uach || {};
         setProps.call(this, CH_ALL_VALUES);
         if (isHTTP_UACH) {
@@ -938,7 +942,7 @@
         }
     }
 
-    function UAParserItem (itemType, ua, rgxMap, uaCH) {
+    function UAItem (itemType, ua, rgxMap, uaCH) {
 
         this.get = function (prop) {
             if (!prop) return this.data;
@@ -980,6 +984,20 @@
                         if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
                             this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
                         }
+                        break;
+                    case UA_RESULT:
+                        var data = this.data;
+                        var detect = function (itemType) {
+                            return data[itemType]
+                                    .getItem()
+                                    .detectFeature()
+                                    .get();
+                        };
+                        this.set(UA_BROWSER, detect(UA_BROWSER))
+                            .set(UA_CPU, detect(UA_CPU))
+                            .set(UA_DEVICE, detect(UA_DEVICE))
+                            .set(UA_ENGINE, detect(UA_ENGINE))
+                            .set(UA_OS, detect(UA_OS));
                 }
             }
             return this;
@@ -1048,8 +1066,7 @@
                                 .parseCH()
                                 .get();
                     };
-                    this.set('ua', ua)
-                        .set(UA_BROWSER, parse(UA_BROWSER))
+                    this.set(UA_BROWSER, parse(UA_BROWSER))
                         .set(UA_CPU, parse(UA_CPU))
                         .set(UA_DEVICE, parse(UA_DEVICE))
                         .set(UA_ENGINE, parse(UA_ENGINE))
@@ -1063,7 +1080,7 @@
             ['ua', ua],
             ['uaCH', uaCH],
             ['rgxMap', rgxMap],
-            ['data', createUAParserData(this, itemType)]
+            ['data', createIData(this, itemType)]
         ]);
 
         return this;
@@ -1098,7 +1115,7 @@
                                 headers[USER_AGENT] : 
                                 EMPTY)),
             
-            HTTP_UACH = new UAParserDataCH(headers, true),
+            HTTP_UACH = new UACHData(headers, true),
 
             regexMap = extensions ? 
                         extend(defaultRegexes, extensions) : 
@@ -1107,7 +1124,7 @@
             createItemFunc = function (itemType) {
                 if (itemType == UA_RESULT) {
                     return function () {
-                        return new UAParserItem(itemType, userAgent, regexMap, HTTP_UACH)
+                        return new UAItem(itemType, userAgent, regexMap, HTTP_UACH)
                                     .set('ua', userAgent)
                                     .set(UA_BROWSER, this.getBrowser())
                                     .set(UA_CPU, this.getCPU())
@@ -1118,9 +1135,8 @@
                     };
                 } else {
                     return function () {
-                        return new UAParserItem(itemType, userAgent, regexMap[itemType], HTTP_UACH)
+                        return new UAItem(itemType, userAgent, regexMap[itemType], HTTP_UACH)
                                     .parseUA()
-                                    .detectFeature()
                                     .get();
                     };
                 }

@@ -3,11 +3,13 @@
 </p>
 
 <p align="center">
-<a href="https://travis-ci.org/faisalman/ua-parser-js"><img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master"></a>
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg"></a>
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js.svg"></a>
-<a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://data.jsdelivr.com/v1/package/npm/ua-parser-js/badge"></a>
-<a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg"></a>
+<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
+<a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://img.shields.io/jsdelivr/gh/hw/faisalman/ua-parser-js?logo=jsdelivr&style=for-the-badge"></a>
+<a href="https://github.com/faisalman/ua-parser-js"><img src="https://img.shields.io/github/stars/faisalman/ua-parser-js?color=yellow&logo=github&style=for-the-badge"></a>
+<a href="https://bundlephobia.com/package/ua-parser-js@1.0.35"><img src="https://img.shields.io/bundlephobia/minzip/ua-parser-js?logo=hackthebox&logoColor=white&style=for-the-badge"/></a>
+<a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img src="https://img.shields.io/github/contributors/faisalman/ua-parser-js?color=purple&logo=githubsponsors&style=for-the-badge"></a>
+<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
+<a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
 </p>
 
 # UAParser.js
@@ -47,39 +49,47 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 What's new & breaking, please read [CHANGELOG](changelog.md) before upgrading.
 
 # Documentation
-### UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)])
+### `UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)]):IData`
 
-In the browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in' nodejs for the function to work. Usually you can find the user agent in: `request.headers["user-agent"]`.
-
+In browser environment you don't need to pass the user-agent string to the function, as it should automatically get the string from the `window.navigator.userAgent`. Whereas in nodejs environment, the user-agent string must be passed in order for the function to work (usually you can find the user-agent in: `request.headers["user-agent"]`).
 
 ## Constructor
+
+#### * `new UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)]):UAParser`
+
 When you call `UAParser` with the `new` keyword, `UAParser` will return a new instance with an empty result object, you have to call one of the available methods to get the information from the user-agent string.
 Like so:
-* `new UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)])`
+
 ```js
 let parser = new UAParser("your user-agent here"); // you need to pass the user-agent for nodejs
 console.log(parser); // {}
 let parserResults = parser.getResult();
 console.log(parserResults);
-/** {
-  "ua"      : "",
-  "browser" : {},
-  "engine"  : {},
-  "os"      : {},
-  "device"  : {},
-  "cpu"     : {}
-} */
+/* 
+  {
+    ua      : "",
+    browser : {},
+    engine  : {},
+    os      : {},
+    device  : {},
+    cpu     : {}
+  } 
+*/
 ```
 
-When you call UAParser without the `new` keyword, it will automatically call `getResult()` function and return the parsed results.
-* `UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)])`
-    * returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+#### * `UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)]):IData`
 
-## Methods
+When you call `UAParser` without the `new` keyword, it will automatically call `getResult()` function and return the parsed results.
+
+```sh
+returns result object `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+```
+
+## `UAParser`:
 
 #### Methods table
 The methods are self explanatory, here's a small overview on all the available methods:
-*  `getResult()` - returns all function object calls, user-agent string, browser info, cpu, device, engine, os:
+ *  `getResult()` - returns all function object calls, user-agent string, browser info, cpu, device, engine, os:
 `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`.
 
  *  `getBrowser()`      - returns the browser name and version.
@@ -88,17 +98,21 @@ The methods are self explanatory, here's a small overview on all the available m
  *  `getOS()`           - returns the running operating system name and version.
  *  `getCPU()`          - returns CPU architectural design name.
  *  `getUA()`           - returns the user-agent string.
- *  `setUA(user-agent)` - set a custom user-agent to be parsed.
+ *  `setUA(ua)`         - set a custom user-agent to be parsed.
 
 ---
 
-* `getResult()`
-    * returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
-
-* `getBrowser()`
-    * returns `{ name: '', version: '' }`
+#### * `getResult():IData`
 
 ```sh
+returns `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`
+```
+
+#### * `getBrowser():IData`
+
+```sh
+returns `{ name: '', version: '' }`
+
 # Possible 'browser.name':
 2345Explorer, 360 Browser, Amaya, Android Browser, Arora, Avant, Avast, AVG,
 BIDUBrowser, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
@@ -119,10 +133,11 @@ Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser, ...
 # 'browser.version' determined dynamically
 ```
 
-* `getDevice()`
-    * returns `{ model: '', type: '', vendor: '' }`
+#### * `getDevice():IData`
 
 ```sh
+returns `{ model: '', type: '', vendor: '' }`
+
 # Possible 'device.type':
 console, mobile, tablet, smarttv, wearable, embedded
 
@@ -143,10 +158,11 @@ Siemens, Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE
 # 'device.model' determined dynamically
 ```
 
-* `getEngine()`
-    * returns `{ name: '', version: '' }`
+#### * `getEngine():IData`
 
 ```sh
+returns `{ name: '', version: '' }`
+
 # Possible 'engine.name'
 Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, LibWeb, Links, Lynx, 
 NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
@@ -154,10 +170,11 @@ NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
 # 'engine.version' determined dynamically
 ```
 
-* `getOS()`
-    * returns `{ name: '', version: '' }`
+#### * `getOS():IData`
 
 ```sh
+returns `{ name: '', version: '' }`
+
 # Possible 'os.name'
 AIX, Amiga OS, Android[-x86], Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
 Contiki, Fedora, Firefox OS, FreeBSD, Debian, Deepin, DragonFly, elementary OS, 
@@ -172,22 +189,42 @@ Zenwalk, ...
 # 'os.version' determined dynamically
 ```
 
-* `getCPU()`
-    * returns `{ architecture: '' }`
+#### * `getCPU():IData`
 
 ```sh
+returns `{ architecture: '' }`
+
 # Possible 'cpu.architecture'
 68k, amd64, arm[64/hf], avr, ia[32/64], irix[64], mips[64], pa-risc, ppc, sparc[64]
 ```
 
-* `getUA()`
-    * returns UA string of current instance
+#### * `getUA():string`
 
-* `setUA(uastring)`
-    * set UA string to be parsed
-    * returns current instance
+```sh
+returns user-agent string of current instance
+```
 
-#### * `is():boolean` utility `since@2.0`
+#### * `setUA(ua:string):UAParser`
+
+```sh
+set user-agent string to be parsed
+returns current instance
+```
+
+---
+
+## `IData`: `since@2.0`
+
+#### Methods table
+The methods are self explanatory, here's a small overview on all the available methods:
+ *  `is(value)`             - returns `true` if the passed value matches a value of current object, `false` otherwise
+ *  `toString()`            - returns the full-name values of current object as a string
+ *  `withClientHints()`     - returns an object with re-updated data from client hints
+ *  `withFeatureCheck()`    - returns an object with re-updated data from feature detection
+
+---
+
+#### * `is(value:string):boolean`
 
 ```js
 // Is just a shorthand comparison to check whether the value of specified item equals one of its properties (in a case-insensitive way)
@@ -246,7 +283,7 @@ let engine = uap.getEngine();
 engine.is("Blink");                 // true
 ```
 
-#### * `toString():string` utility `since@2.0`
+#### * `toString():string`
 
 ```js
 // Retrieve full-name values as a string
@@ -287,7 +324,7 @@ engine.version;                     // "28.0.1500.95"
 engine.toString();                  // "Blink 28.0.1500.95"
 ```
 
-#### * `withClientHints():Promise<object>|Thenable<object>|object` `since@2.0`
+#### * `withClientHints():Promise<IData>|Thenable<IData>|IData`
 
 Recently, Chrome limits the information exposed through user-agent and introduces a new experimental set of data called "client-hints". In browser-environment, obtaining the client-hints data via JavaScript must be done in an asynchronous way. In `UAParser` you can chain the result object from `get*` method with `withClientHints()` to also read the client-hints data from the browser and return the updated data as a `Promise`.
 
@@ -346,7 +383,7 @@ new UAParser(request.headers)
 });
 ```
 
-#### * `withFeatureCheck():object` `since@2.0`
+#### * `withFeatureCheck():IData`
 
 This method allows us to examine other features beyond `navigator.userAgent` to further improve detection of the following:
 - browser : Brave (check for `navigator.isBrave`)
