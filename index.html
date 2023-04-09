@@ -19,21 +19,23 @@
 <body>
 <div class="pusher">
   <div class="ui inverted instagram vertical masthead center aligned segment">
-    <h1 class="ui inverted header">
+    <h2 class="ui inverted header">
       What <span class="ui massive black label">device.type</span> am I using?
-    </h1>
+    </h2>
     <div class="ui text container">
-      <h2>
-        <p><a href="https://faisalman.github.io/ua-parser-js">{UAParser.js}</a> detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client-Hints with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).</p>
-        
-        <p>Now, detecting browser is as simple as <mark> ua.getBrowser() </mark>
-        </p></h2> 
+      <h1>
+        <p><a href="https://faisalman.github.io/ua-parser-js">{UAParser.js}</a> detect <u>Browser</u>, <u>Engine</u>, <u>OS</u>, <u>CPU</u>, and <u>Device</u> type/model from User-Agent & Client-Hints with relatively small footprint (~17KB minified, ~7KB gzipped) that can be used either in browser (client-side) or node.js (server-side).</p></h1> 
+        <div class="ui massive buttons">
+            <a href="#try" class="ui violet button"><i class="magic icon"></i>Try The Demo</a>
+            <div class="or"></div>
+            <a href="https://faisalman.github.io/ua-parser-js/docs/v2" class="ui black button"><i class="book icon"></i>Read The Docs</a>
+        </div>
     </div>
     <img class="ui centered image illustration" src="images/illustration.png"/>
   </div>
 
 
-  <div class="ui text container">
+  <div id="try" class="ui text container">
     <div class="ui horizontal divider">
       FROM OUR SPONSORS :
     </div>
@@ -67,13 +69,30 @@
           </div>
         </div>
       </div>
+      <div class="column">
+        <div class="ui fluid black card">
+          <div class="content">
+            <div class="header">
+            </div>
+            <div class="meta">
+            </div>
+            <div class="description" style="height:288px">
+            </div>
+          </div>
+          <div class="extra content">
+              <a href="https://opencollective.com/ua-parser-js"
+              class="ui right floated large labeled icon black button">
+              <i class="external alternate icon"></i>Become a Sponsor</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
 
   <div class="ui text container">
     <div id="demo" class="ui horizontal divider">
-      USER-AGENT PLAYGROUND
+      DEMO : A USER-AGENT PLAYGROUND
     </div>
     <div class="ui tall stacked segment">
       <div class="ui basic segment">
@@ -332,7 +351,7 @@
     </div>
     <div class="ui tall stacked segment" id="showcase">
       <div class="ui basic centered segment">
-        <h2 class="ui dividing header">Who's Using {UAParser.js} ?<div class="sub header">Showcasing some well-known companies that are using our library</div></h2>
+        <h2 class="ui dividing header">Who's Using {UAParser.js} ?<div class="sub header">Showcasing some companies that are using our library</div></h2>
       </div>
       <div class="ui basic centered segment">
         <div class="ui equal width stackable grid"">
@@ -901,7 +920,7 @@
     </div>
     <div class="ui tall stacked segment" id="showcase">
       <div class="ui basic centered segment">
-        <h2 class="ui dividing header">Backers & Sponsors <div class="sub header">Those who give back and generously keep this library alive</div></h2>
+        <h2 class="ui dividing header">Backers & Sponsors <div class="sub header">Those who give back and get the value from using this library</div></h2>
         <div class="description">
           <a href="https://opencollective.com/ua-parser-js"><img class="ui centered image" src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=128"/>
           <img class="ui centered image" src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=128"/></a>
@@ -926,13 +945,16 @@
         <div class="eleven wide column">
           <div class="ui basic right aligned segment">
             <div class="ui inverted link animated selection horizontal list">
-              <a href="https://github.com/faisalman/ua-parser-js" target="_blank" class="item"><img alt="GitHub" src="https://img.shields.io/github/stars/faisalman/ua-parser-js?style=social"/></a>
-              <a href="https://www.npmjs.com/package/ua-parser-js" target="_blank" class="item"><img alt="npm" src="https://img.shields.io/npm/dm/ua-parser-js?style=social"></a>
-              <a href="https://opencollective.com/ua-parser-js" target="_blank" class="item"><img alt="OpenCollective" src="https://img.shields.io/opencollective/all/ua-parser-js?style=flat-square"></a>
-              <a href="https://www.jsdelivr.com/package/npm/ua-parser-js" target="_blank" class="item"><img alt="jsDelivr" src="https://data.jsdelivr.com/v1/package/npm/ua-parser-js/badge"></a>
-              <a href="https://cdnjs.com/libraries/UAParser.js" target="_blank" class="item"><img alt="Cdnjs" src="https://img.shields.io/cdnjs/v/UAParser.js?style=flat-square"></a>
-              <a href="https://openbase.com/js/ua-parser-js" target="_blank" class="item"><img alt="Openbase" src="https://badges.openbase.com/js/rating/ua-parser-js.svg"/></a>              
-              <iframe src="https://github.com/sponsors/faisalman/button" title="Github Sponsor" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+                <a target="_blank" class="item" href="https://github.com/faisalman/ua-parser-js"><img src="https://img.shields.io/github/stars/faisalman/ua-parser-js?color=yellow&logo=github&style=for-the-badge"></a>
+                <a target="_blank" class="item" href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dm/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
+                <a target="_blank" class="item" href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
+                <a target="_blank" class="item" href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://img.shields.io/jsdelivr/npm/hm/ua-parser-js?logo=jsdelivr&style=for-the-badge"></a>
+                <a target="_blank" class="item" href="https://bundlephobia.com/package/ua-parser-js"><img src="https://img.shields.io/bundlephobia/minzip/ua-parser-js?logo=hackthebox&logoColor=white&style=for-the-badge"/></a>
+                <a target="_blank" class="item" href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img src="https://img.shields.io/github/contributors/faisalman/ua-parser-js?color=purple&logo=githubsponsors&style=for-the-badge"></a>
+                <a target="_blank" class="item" href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
+                <a href="https://opencollective.com/ua-parser-js" target="_blank" class="item"><img alt="OpenCollective" src="https://img.shields.io/opencollective/all/ua-parser-js?color=teal&style=for-the-badge"></a>
+                <a href="https://openbase.com/js/ua-parser-js" target="_blank" class="item"><img alt="Openbase" src="https://badges.openbase.com/js/rating/ua-parser-js.svg?style=for-the-badge"/></a>              
+                <iframe src="https://github.com/sponsors/faisalman/button" title="Github Sponsor" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
             </div>
           </div>
           <div class="ui right aligned basic segment">

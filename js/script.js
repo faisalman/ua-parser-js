@@ -4,7 +4,7 @@ $(document)
     var labels = ['browser.name', 'os.version', 'device.type', 'cpu.arch', 'device.model', 'browser.version', 'device.vendor', 'engine.name', 'engine.version'];
     var counter = 0;
     var rotateLabel = function () {
-        $('h1 .label').transition('fly down', function () {
+        $('h2 .label').transition('fly down', function () {
             $(this).text(labels[counter++]).transition('fade up', 100, function (){
             if(counter>=labels.length)counter=0;
             $(this).transition('jiggle');
@@ -21,7 +21,7 @@ $(document)
             $(this).transition('flip vertical');
         });
         $('#ua-result').text(JSON.stringify(result, null, "  "));
-        $('#demo-result').transition('fly up', function () {
+        $('#demo-result').transition('zoom', function () {
             if (result.browser.name) {
                 var version = result.browser.version!==undefined?result.browser.version:'-';
                 $('#browser-txt').html('<span class="ui large black label">' + result.browser.name + '</span><span class="ui large black label">' + version + '</span>');
@@ -95,8 +95,10 @@ $(document)
             } else {
                 $('#gpu-txt').text('-');
             }*/
-            $(this).transition('fly up', function () {
-                $(this).transition('pulse');
+            $(this).transition('zoom', function () {
+                $(this).transition('pulse', function () {
+                    $(this).transition('jiggle');
+                });
             });
         });
     }
@@ -106,14 +108,19 @@ $(document)
 
     var i;
     var values = [];
+    var prevVal;
     for(i = 0; i < uaExampleList.length; i++){
         values.push({ name: uaExampleList[i], value: uaExampleList[i]});
     }
     $('#demo-select').dropdown({
         values: values,
         onChange: function (val) {
-            $('#ua-txt-info').text('For a given user-agent:');
-            updateDemo(UAParser(val));
+            if (val != prevVal)
+            {
+                $('#ua-txt-info').text('For a given user-agent:');
+                updateDemo(UAParser(val));
+                prevVal = val;
+            }
         }
     });
     $('#demo-btn').click(function() {
