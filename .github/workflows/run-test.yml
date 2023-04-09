@@ -12,8 +12,8 @@ jobs:
       matrix:
         arch: [amd64, ppc64le]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - name: Run the test
         run: |
           npm install
