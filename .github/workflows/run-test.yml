@@ -18,7 +18,7 @@ jobs:
           node-version: 'lts/*'
       - name: Run the test
         run: |
-          npm install
+          npm ci
           npm run build
           npx playwright install
           npm run test-ci

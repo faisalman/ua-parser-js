@@ -164,16 +164,16 @@
   ],
   "scripts": {
     "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node script/build-module.js",
-    "test": "jshint src && mocha -R nyan test/mocha*js && npx playwright test",
-    "test-ci": "jshint src && mocha -R spec test/mocha*js && npx playwright test"
+    "test": "jshint src && mocha -R nyan test/mocha*js && npx playwright test && npx lockfile-lint -p package-lock.json",
+    "test-ci": "jshint src && mocha -R spec test/mocha*js && npx playwright test && npx lockfile-lint -p package-lock.json"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
     "@babel/traverse": "7.15.4",
-    "@playwright/test": "^1.32.2",
+    "@playwright/test": "~1.32.2",
     "jshint": "~2.12.0",
     "mocha": "~8.2.0",
-    "requirejs": "^2.3.2",
+    "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",
     "uglify-js": "~3.12.0"
   },
