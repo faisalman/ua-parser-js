@@ -10,6 +10,7 @@
 <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img src="https://img.shields.io/github/contributors/faisalman/ua-parser-js?color=purple&logo=githubsponsors&style=for-the-badge"></a>
 <a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
 <a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
+<img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge">
 </p>
 
 # UAParser.js
@@ -19,6 +20,7 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 * Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : https://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
+* Documentation : https://faisalman.github.io/ua-parser-js-docs/v2
 
 ***
 
