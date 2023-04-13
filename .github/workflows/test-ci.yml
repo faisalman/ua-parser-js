@@ -1,4 +1,4 @@
-name: ua-parser-js-run-test
+name: UAParser.js CI-Test
 
 on: [push, pull_request]
 
