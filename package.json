@@ -163,9 +163,8 @@
     "src"
   ],
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle && node script/build-module.js",
-    "test": "jshint src && mocha -R nyan test/mocha*js && npx playwright test && npx lockfile-lint -p package-lock.json",
-    "test-ci": "jshint src && mocha -R spec test/mocha*js && npx playwright test && npx lockfile-lint -p package-lock.json"
+    "build": "./script/build-dist.sh && ./script/build-module.js",
+    "test": "npm run build && ./script/test-all.sh"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
@@ -187,6 +186,7 @@
   },
   "directories": {
     "dist": "dist",
+    "script": "script",
     "src": "src",
     "test": "test"
   },
