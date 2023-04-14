@@ -15,10 +15,19 @@ const VERSION   = 'version';
 const MOBILE    = 'mobile';
 const TABLET    = 'tablet';
 
+const Apps = Object.freeze({
+    browser : [
+        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, 'app']]
+    ]
+});
+
 const Bots = Object.freeze({
     browser : [
-                                                                                // Googlebot / BingBot / MSNBot / FacebookBot
-        [/((?:google|bing|msn|facebook)bot(?:\-[imagevdo]{5})?|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']]
+        // Googlebot / BingBot / MSNBot / FacebookBot
+        [/((?:google|bing|msn|facebook)bot(?:\-[imagevdo]{5})?|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
+
+        // Slackbot - https://api.slack.com/robots
+        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']]
     ]
 });
 
@@ -107,16 +116,17 @@ const Emails = Object.freeze({
     ]
 });
 
-const Tools = Object.freeze({
+const CLI = Object.freeze({
     browser : [
                                                                                 // wget / curl / lynx
-        [/(wget|curl|lynx)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'tool']]
+        [/(wget|curl|lynx)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'cli']]
     ]
 });
 
 module.exports = { 
+    Apps,
     Bots,
     ExtraDevices,
     Emails,
-    Tools
+    CLI
 };

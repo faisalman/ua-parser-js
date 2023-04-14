@@ -1,7 +1,7 @@
 const assert = require('assert');
 const safeRegex = require('safe-regex');
 const UAParser = require('ua-parser-js');
-const { Bots, Emails, Tools } = require('ua-parser-js/extensions');
+const { Bots, Emails, CLI } = require('ua-parser-js/extensions');
 
 describe('Bots', () => {
     it('Can detect bots', () => {
@@ -20,11 +20,11 @@ describe('Bots', () => {
         assert.deepEqual(botParser.setUA(bingPreview).getBrowser(), {name: "BingPreview", version: "1.0b", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(opera).getBrowser(), {name: "Opera", version: "8.5", major: "8"});
 
-        // try merging Bots & Tools
-        const botsAndTools = { browser : [...Bots.browser, ...Tools.browser]};
-        const botolParser = new UAParser(botsAndTools);
-        assert.deepEqual(botolParser.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"tool"});
-        assert.deepEqual(botolParser.setUA(facebookBot).getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"bot"});
+        // try merging Bots & CLIs
+        const botsAndCLIs = { browser : [...Bots.browser, ...CLI.browser]};
+        const botsAndCLIsParser = new UAParser(botsAndCLIs);
+        assert.deepEqual(botsAndCLIsParser.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"cli"});
+        assert.deepEqual(botsAndCLIsParser.setUA(facebookBot).getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"bot"});
 
         const emailParser = new UAParser(Emails);
         assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
