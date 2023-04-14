@@ -918,10 +918,10 @@
     // Constructor
     ////////////////
 
-    function UACHData (uach, isHTTP_UACH) {
+    function UACHData (uach, isHttpUACH) {
         uach = uach || {};
         setProps.call(this, CH_ALL_VALUES);
-        if (isHTTP_UACH) {
+        if (isHttpUACH) {
             setProps.call(this, [
                 [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [FULLVERLIST, itemListToArray(uach[CH_HEADER_FULL_VER_LIST])],
@@ -1106,15 +1106,12 @@
             return new UAParser(ua, extensions, headers).getResult();
         }
 
-        var userAgent = ua || 
-                        ((NAVIGATOR && NAVIGATOR.userAgent) ? 
-                            NAVIGATOR.userAgent : 
-                            (headers && headers[USER_AGENT] ? 
-                                headers[USER_AGENT] : 
-                                EMPTY)),
-            
-            HTTP_UACH = new UACHData(headers, true),
+        var userAgent = typeof ua === STR_TYPE ? ua :                                       // Passed user-agent string
+                            ((NAVIGATOR && NAVIGATOR.userAgent) ? NAVIGATOR.userAgent :     // navigator.userAgent
+                                (headers && headers[USER_AGENT] ? headers[USER_AGENT] :     // User-Agent from passed headers
+                                    EMPTY)),                                                // empty string
 
+            httpUACH = new UACHData(headers, true),
             regexMap = extensions ? 
                         extend(defaultRegexes, extensions) : 
                         defaultRegexes,
@@ -1122,7 +1119,7 @@
             createItemFunc = function (itemType) {
                 if (itemType == UA_RESULT) {
                     return function () {
-                        return new UAItem(itemType, userAgent, regexMap, HTTP_UACH)
+                        return new UAItem(itemType, userAgent, regexMap, httpUACH)
                                     .set('ua', userAgent)
                                     .set(UA_BROWSER, this.getBrowser())
                                     .set(UA_CPU, this.getCPU())
@@ -1133,13 +1130,13 @@
                     };
                 } else {
                     return function () {
-                        return new UAItem(itemType, userAgent, regexMap[itemType], HTTP_UACH)
+                        return new UAItem(itemType, userAgent, regexMap[itemType], httpUACH)
                                     .parseUA()
                                     .get();
                     };
                 }
             };
-
+            
         // public methods
         setProps.call(this, [
             ['getBrowser', createItemFunc(UA_BROWSER)],

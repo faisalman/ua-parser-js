@@ -5,6 +5,18 @@ import url from 'url';
 
 const localHtml = `file://${path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '../')}/dist/ua-parser.html`;
 
+test.describe('test input', () => {
+    test.beforeEach(async ({ page }) => {
+        await page.goto(localHtml);
+    });
+
+    test('accept empty string', async ({ page }) => {
+        // @ts-ignore
+        const uap = await page.evaluate(async () => await UAParser(''));
+        expect(uap).toHaveProperty('ua', '');
+    });
+});
+
 test('read client hints data', async ({ page }) => {
     await page.addInitScript(() => {
         Object.defineProperty(navigator, 'userAgentData', {
