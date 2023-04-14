@@ -774,6 +774,15 @@
         }
     },
     {
+        "desc": "iOS with Slack App",
+        "ua": "com.tinyspeck.chatlyio/23.04.10 (iPhone; iOS 16.4.1; Scale/3.00)",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "16.4.1"
+        }
+    },
+    {
         "desc"    : "watchOS",
         "ua"      : "server-bag [Watch OS,8.4,19S546,Watch3,4]",
         "expect"  :
