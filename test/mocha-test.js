@@ -4,7 +4,7 @@ var assert      = require('assert');
 var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
-var UAParser    = require('../src/ua-parser');
+var UAParser    = require('ua-parser-js');
 var browsers    = require('./specs/browser-all.json');
 var cpus        = require('./specs/cpu-all.json');
 var devices     = require('./specs/device-all.json');
@@ -159,7 +159,7 @@ describe('Testing regexes', function () {
     var regexes;
 
     before('Read main js file', function () {
-        var code = fs.readFileSync('src/ua-parser.js', 'utf8').toString();
+        var code = fs.readFileSync('src/main/ua-parser.js', 'utf8').toString();
         var ast = parseJS(code, { sourceType: "script" });
         regexes = [];
         traverse(ast, {

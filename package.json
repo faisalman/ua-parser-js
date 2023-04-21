@@ -142,20 +142,21 @@
     "Zach Bjornson <zbbjornson@gmail.com>"
   ],
   "type": "commonjs",
-  "main": "src/ua-parser.js",
-  "module": "src/module/ua-parser.mjs",
+  "main": "src/main/ua-parser.js",
+  "module": "src/main/ua-parser.mjs",
+  "browser": "dist/ua-parser.pack.js",
   "exports": {
     ".": {
-      "require": "./src/ua-parser.js",
-      "import": "./src/module/ua-parser.mjs"
+      "require": "./src/main/ua-parser.js",
+      "import": "./src/main/ua-parser.mjs"
     },
     "./enums": {
-      "require": "./src/ua-parser-enum.js",
-      "import": "./src/module/ua-parser-enum.mjs"
+      "require": "./src/enums/ua-parser-enums.js",
+      "import": "./src/enums/ua-parser-enums.mjs"
     },
     "./extensions": {
-      "require": "./src/ua-parser-extension.js",
-      "import": "./src/module/ua-parser-extension.mjs"
+      "require": "./src/extensions/ua-parser-extensions.js",
+      "import": "./src/extensions/ua-parser-extensions.mjs"
     }
   },
   "files": [

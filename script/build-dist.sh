@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SRC_PATH="src/ua-parser.js"
+SRC_PATH="src/main/ua-parser.js"
 MIN_PATH="dist/ua-parser.min.js"
 PACK_PATH="dist/ua-parser.pack.js"
 
