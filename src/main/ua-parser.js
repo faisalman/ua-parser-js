@@ -1147,7 +1147,8 @@
             ['getResult', createItemFunc(UA_RESULT)],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
-                userAgent = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? trim(ua, UA_MAX_LENGTH) : ua;
+                if (typeof ua === STR_TYPE)
+                    userAgent = ua.length > UA_MAX_LENGTH ? trim(ua, UA_MAX_LENGTH) : ua;
                 return this;
             }]
         ])
