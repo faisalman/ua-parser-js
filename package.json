@@ -165,11 +165,13 @@
   ],
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-module.js",
+    "fuzz": "npx jazzer ./test/jazzer-fuzz-test.js --sync",
     "test": "npm run build && ./script/test-all.sh"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
     "@babel/traverse": "7.15.4",
+    "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "~1.32.2",
     "jshint": "~2.13.6",
     "mocha": "~8.2.0",
