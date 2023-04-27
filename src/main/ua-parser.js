@@ -285,7 +285,7 @@
             // Mixed
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
-            /(webmaf)\/(\S+)/i,                                                 // Sony/Playstation WebMAF
+            /(webmaf)\/([a-z0-9\.-]+)/i,                                        // Sony/Playstation WebMAF
             // Trident based
             /(avant |iemobile|slim)(?:browser)?[\/ ]?([\w\.]*)/i,               // Avant/IEMobile/SlimBrowser
             /(ba?idubrowser)[\/ ]?([\w\.]+)/i,                                  // Baidu Browser
