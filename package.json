@@ -142,20 +142,21 @@
     "Zach Bjornson <zbbjornson@gmail.com>"
   ],
   "type": "commonjs",
-  "main": "src/ua-parser.js",
-  "module": "src/module/ua-parser.mjs",
+  "main": "src/main/ua-parser.js",
+  "module": "src/main/ua-parser.mjs",
+  "browser": "dist/ua-parser.pack.js",
   "exports": {
     ".": {
-      "require": "./src/ua-parser.js",
-      "import": "./src/module/ua-parser.mjs"
+      "require": "./src/main/ua-parser.js",
+      "import": "./src/main/ua-parser.mjs"
     },
     "./enums": {
-      "require": "./src/ua-parser-enum.js",
-      "import": "./src/module/ua-parser-enum.mjs"
+      "require": "./src/enums/ua-parser-enums.js",
+      "import": "./src/enums/ua-parser-enums.mjs"
     },
     "./extensions": {
-      "require": "./src/ua-parser-extension.js",
-      "import": "./src/module/ua-parser-extension.mjs"
+      "require": "./src/extensions/ua-parser-extensions.js",
+      "import": "./src/extensions/ua-parser-extensions.mjs"
     }
   },
   "files": [
@@ -164,11 +165,13 @@
   ],
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-module.js",
+    "fuzz": "npx jazzer ./test/jazzer-fuzz-test.js --sync",
     "test": "npm run build && ./script/test-all.sh"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
     "@babel/traverse": "7.15.4",
+    "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "~1.32.2",
     "jshint": "~2.13.6",
     "mocha": "~8.2.0",
