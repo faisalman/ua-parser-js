@@ -4,6 +4,7 @@
 - What's breaking:
   - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
   - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
+  - Apps on PlayStation 4/5 now report `WebMAF` instead of `WebKit` for `browser.name` and the `WebMAF`-version in `browser.version`
 - What's new:
   - Add some new methods in result object: 
     - Add support for client hints: `withClientHints()`
