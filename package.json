@@ -165,8 +165,12 @@
   ],
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-module.js",
-    "fuzz": "npx jazzer ./test/jazzer-fuzz-test.js --sync",
-    "test": "npm run build && ./script/test-all.sh"
+    "fuzz": "jazzer ./test/jazzer-fuzz-test.js --sync",
+    "test": "./script/test-all.sh",
+    "test:jshint": "jshint src && jshint script",
+    "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
+    "test:mocha": "mocha -R list test/mocha*js",
+    "test:playwright": "playwright test"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",

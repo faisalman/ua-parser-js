@@ -1,21 +1,26 @@
 #!/usr/bin/env bash
 
 echo '
+- run build
+'
+npm run build || exit 1
+
+echo '
 - lint js code
 '
-jshint src && jshint script || exit 1 
+npm run test:jshint || exit 1 
 
 echo '
 - test using mocha
 '
-mocha -R list test/mocha*js || exit 1 
+npm run test:mocha || exit 1 
 
 echo '
 - test using playwright
 '
-npx playwright test || exit 1 
+npm run test:playwright || exit 1 
 
 echo '
 - lint lockfile
 '
-npx lockfile-lint -p package-lock.json || exit 1 
+npm run test:lockfile-lint || exit 1 
