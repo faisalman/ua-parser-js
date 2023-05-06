@@ -200,6 +200,46 @@
         }
     },
     {
+        "desc"    : "Chrome 112.0 on Win10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chrome",
+            "version" : "112.0.0.0",
+            "major"   : "112"
+        }
+    },
+    {
+        "desc"    : "Chrome 112.0 on macOS",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chrome",
+            "version" : "112.0.0.0",
+            "major"   : "112"
+        }
+    },
+    {
+        "desc"    : "Chrome 111.0 on Linux",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chrome",
+            "version" : "111.0.0.0",
+            "major"   : "111"
+        }
+    },
+    {
+        "desc"    : "Chrome 111.0 on ChromeOS",
+        "ua"      : "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Chrome",
+            "version" : "111.0.0.0",
+            "major"   : "111"
+        }
+    },
+    {
             "desc"    : "Chrome Headless",
             "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome Safari/537.36",
             "expect"  :
@@ -1329,6 +1369,56 @@
         }
     },
     {
+        "desc"    : "Yandex",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.0.2246 Yowser/2.5 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Yandex",
+            "version" : "23.3.0.2246",
+            "major"   : "23"
+        }
+    },
+    {
+        "desc"    : "Yandex on Android",
+        "ua"      : "Mozilla/5.0 (Linux; arm_64; Android 13; SM-G965F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.76 YaBrowser/21.3.4.59 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Yandex",
+            "version" : "21.3.4.59",
+            "major"   : "21"
+        }
+    },
+    {
+        "desc"    : "Yandex on iPhone",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 YaBrowser/23.3.3.330 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "Yandex",
+            "version" : "23.3.3.330",
+            "major"   : "23"
+        }
+    },
+    {
+        "desc"    : "Yandex on iPad",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 YaBrowser/23.3.3.330 Mobile/15E148 Safari/605.1",
+        "expect"  :
+        {
+            "name"    : "Yandex",
+            "version" : "23.3.3.330",
+            "major"   : "23"
+        }
+    },
+    {
+        "desc"    : "Yandex on iPod",
+        "ua"      : "Mozilla/5.0 (iPod touch; CPU iPhone 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 YaBrowser/23.3.3.330 Mobile/15E148 Safari/605.1",
+        "expect"  :
+        {
+            "name"    : "Yandex",
+            "version" : "23.3.3.330",
+            "major"   : "23"
+        }
+    },
+    {
         "desc"    : "Puffin",
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo P2a42 Build/MMB29M; en-us) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Puffin/6.0.8.15804AP",
         "expect"  :
@@ -1426,6 +1516,16 @@
             "name"    : "Mobile Firefox",
             "version" : "1.1",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Firefox on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/112.0 Mobile/15E148 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Mobile Firefox",
+            "version" : "112.0",
+            "major"   : "112"
         }
     },
     {
