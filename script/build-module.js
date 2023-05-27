@@ -16,6 +16,11 @@ const PATH = {
         src : 'src/extensions/ua-parser-extensions.js',
         dest : 'src/extensions/ua-parser-extensions.mjs',
         title : 'extensions'
+    },
+    helpers : {
+        src : 'src/helpers/ua-parser-helpers.js',
+        dest : 'src/helpers/ua-parser-helpers.mjs',
+        title : 'helpers'
     }
 };
 const generateMJS = (module, replacers) => {
@@ -47,3 +52,6 @@ generateMJS('enums', [[/module\.exports =/ig, 'export']]);
 
 // ua-parser-extension.mjs
 generateMJS('extensions', [[/module\.exports =/ig, 'export']]);
+
+// ua-parser-helpers.mjs
+generateMJS('helpers', [[/module\.exports =/ig, 'export']]);

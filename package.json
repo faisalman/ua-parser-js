@@ -157,6 +157,10 @@
     "./extensions": {
       "require": "./src/extensions/ua-parser-extensions.js",
       "import": "./src/extensions/ua-parser-extensions.mjs"
+    },
+    "./helpers": {
+      "require": "./src/helpers/ua-parser-helpers.js",
+      "import": "./src/helpers/ua-parser-helpers.mjs"
     }
   },
   "files": [
