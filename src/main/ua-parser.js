@@ -925,7 +925,6 @@
             setProps.call(this, [
                 [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [FULLVERLIST, itemListToArray(uach[CH_HEADER_FULL_VER_LIST])],
-                [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [MOBILE, /\?1/.test(uach[CH_HEADER_MOBILE])],
                 [MODEL, stripQuotes(uach[CH_HEADER_MODEL])],
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
