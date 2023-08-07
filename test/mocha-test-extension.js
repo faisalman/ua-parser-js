@@ -9,6 +9,7 @@ const Ext = require('ua-parser-js/extensions');
 describe('Bots', () => {
     it('Can detect bots', () => {
         const googleBot = 'Googlebot-Video/1.0';
+        const gptBot = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.0; +https://openai.com/gptbot)';
         const msnBot = 'msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)';
         const bingPreview = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b';
         const opera = 'Opera/8.5 (Macintosh; PPC Mac OS X; U; en)';
@@ -19,6 +20,7 @@ describe('Bots', () => {
 
         const botParser = new UAParser(Ext.Bots);
         assert.deepEqual(botParser.setUA(googleBot).getBrowser(), {name: "Googlebot-Video", version: "1.0", major: "1", type: "bot"});
+        assert.deepEqual(botParser.setUA(gptBot).getBrowser(), {name: "GPTBot", version: "1.0", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(msnBot).getBrowser(), {name: "msnbot-media", version: "1.1", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(bingPreview).getBrowser(), {name: "BingPreview", version: "1.0b", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(opera).getBrowser(), {name: "Opera", version: "8.5", major: "8"});

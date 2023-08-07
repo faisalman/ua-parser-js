@@ -26,6 +26,9 @@ const Bots = Object.freeze({
         // Googlebot / BingBot / MSNBot / FacebookBot
         [/((?:google|bing|msn|facebook)bot(?:[\-imagevdo]{0,6})|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
 
+        // GPTBot - https://platform.openai.com/docs/gptbot
+        [/(gptbot)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
+
         // Slackbot - https://api.slack.com/robots
         [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']]
     ]
