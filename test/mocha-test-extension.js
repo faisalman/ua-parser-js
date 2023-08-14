@@ -17,6 +17,9 @@ describe('Bots', () => {
         const facebookBot = 'Mozilla/5.0 (compatible; FacebookBot/1.0; +https://developers.facebook.com/docs/sharing/webmasters/facebookbot/)';
         const outlook = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.9126; Microsoft Outlook 16.0.9126; ms-office; MSOffice 16)';
         const thunderbird = 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0';
+        const axios = 'axios/1.3.5';
+        const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
+        const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
 
         const botParser = new UAParser(Ext.Bots);
         assert.deepEqual(botParser.setUA(googleBot).getBrowser(), {name: "Googlebot-Video", version: "1.0", major: "1", type: "bot"});
@@ -34,6 +37,11 @@ describe('Bots', () => {
         const emailParser = new UAParser(Ext.Emails);
         assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
         assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: "Thunderbird", version: "78.13.0", major: "78", type: "email"});
+
+        const moduleParser = new UAParser(Ext.Modules);
+        assert.deepEqual(moduleParser.setUA(axios).getBrowser(), {name: "axios", version: "1.3.5", major: "1", type: "module"});
+        assert.deepEqual(moduleParser.setUA(jsdom).getBrowser(), {name: "jsdom", version: "20.0.3", major: "20", type: "module"});
+        assert.deepEqual(moduleParser.setUA(scrapy).getBrowser(), {name: "Scrapy", version: "1.5.0", major: "1", type: "module"});
     });
 });
 

@@ -230,11 +230,19 @@ const MediaPlayers = Object.freeze({
     ]
 });
 
+const Modules = Object.freeze({
+    browser : [
+                                                                            // Axios/jsdom/Scrapy
+        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'module']]
+    ]
+});
+
 module.exports = { 
     Apps,
     Bots,
     CLIs,
     ExtraDevices,
     Emails,
-    MediaPlayers
+    MediaPlayers,
+    Modules
 };
