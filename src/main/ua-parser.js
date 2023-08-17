@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-alpha.2
+/* UAParser.js v2.0.0-alpha.3
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -20,7 +20,7 @@
     /////////////
 
 
-    var LIBVERSION  = '2.0.0-alpha.2',
+    var LIBVERSION  = '2.0.0-alpha.3',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -50,12 +50,12 @@
         CH_HEADER   = 'sec-ch-ua',
         CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
         CH_HEADER_ARCH      = CH_HEADER + '-arch',
-        CH_HEADER_BITNESS   = CH_HEADER + '-bitness',
-        CH_HEADER_MOBILE    = CH_HEADER + '-mobile',
-        CH_HEADER_MODEL     = CH_HEADER + '-model',
-        CH_HEADER_PLATFORM  = CH_HEADER + '-platform',
+        CH_HEADER_BITNESS   = CH_HEADER + '-' + BITNESS,
+        CH_HEADER_MOBILE    = CH_HEADER + '-' + MOBILE,
+        CH_HEADER_MODEL     = CH_HEADER + '-' + MODEL,
+        CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES       = ['brands', 'fullVersionList', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness'],
+        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, BITNESS],
         UA_BROWSER  = 'browser',
         UA_CPU      = 'cpu',
         UA_DEVICE   = 'device',

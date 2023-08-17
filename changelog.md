@@ -13,6 +13,13 @@
   - Add support for ES module `import { UAParser } from 'ua-parser-js'`
   - Provide Enums `'ua-parser-js/enums'`
   - Provide Extensions `'ua-parser-js/extensions'`
+  - Provide Helpers `'ua-parser-js/helpers'`
+
+## Version 2.0.0-alpha.3
+- Add `withFeatureCheck()` method
+- Add `isFrozenUA()` method in `helpers` submodule
+- Add `MediaPlayers` & `Modules` in `extensions` submodule
+- Fix issue with ESM import
 
 ## Version 2.0.0-alpha.2
 - Fix browser result always returning Chromium when using `withClientHints()`

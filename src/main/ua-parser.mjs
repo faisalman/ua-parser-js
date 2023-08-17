@@ -3,7 +3,7 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-alpha.2
+/* UAParser.js v2.0.0-alpha.3
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -22,7 +22,7 @@
     /////////////
 
 
-    var LIBVERSION  = '2.0.0-alpha.2',
+    var LIBVERSION  = '2.0.0-alpha.3',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -52,12 +52,12 @@
         CH_HEADER   = 'sec-ch-ua',
         CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
         CH_HEADER_ARCH      = CH_HEADER + '-arch',
-        CH_HEADER_BITNESS   = CH_HEADER + '-bitness',
-        CH_HEADER_MOBILE    = CH_HEADER + '-mobile',
-        CH_HEADER_MODEL     = CH_HEADER + '-model',
-        CH_HEADER_PLATFORM  = CH_HEADER + '-platform',
+        CH_HEADER_BITNESS   = CH_HEADER + '-' + BITNESS,
+        CH_HEADER_MOBILE    = CH_HEADER + '-' + MOBILE,
+        CH_HEADER_MODEL     = CH_HEADER + '-' + MODEL,
+        CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES       = ['brands', 'fullVersionList', MOBILE, MODEL, 'platform', 'platformVersion', ARCHITECTURE, 'bitness'],
+        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, BITNESS],
         UA_BROWSER  = 'browser',
         UA_CPU      = 'cpu',
         UA_DEVICE   = 'device',
@@ -349,7 +349,7 @@
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
-            /(chromium|instagram)[\/ ]([-\w\.]+)/i                              // Chromium/Instagram
+            /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i                     // Chromium/Instagram/Snapchat
             ], [NAME, VERSION], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA']], [
@@ -476,7 +476,7 @@
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
             // Xiaomi
-            /\b(poco[\w ]+)(?: bui|\))/i,                                       // Xiaomi POCO
+            /\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i,                  // Xiaomi POCO
             /\b; (\w+) build\/hm\1/i,                                           // Xiaomi Hongmi 'numeric' models
             /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,                             // Xiaomi Hongmi
             /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,                   // Xiaomi Redmi
@@ -584,7 +584,7 @@
             ], [MODEL, [VENDOR, 'Meizu'], [TYPE, MOBILE]], [
 
             // MIXED
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[-_ ]?([-\w]*)/i,
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,
                                                                                 // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(asus)-?(\w+)/i,                                                   // Asus
@@ -629,7 +629,7 @@
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
             /crkey/i                                                            // Google Chromecast
             ], [[MODEL, CHROME+'cast'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
-            /droid.+aft(\w)( bui|\))/i                                          // Fire TV
+            /droid.+aft(\w+)( bui|\))/i                                         // Fire TV
             ], [MODEL, [VENDOR, AMAZON], [TYPE, SMARTTV]], [
             /\(dtv[\);].+(aquos)/i,
             /(aquos-tv[\w ]+)\)/i                                               // Sharp
@@ -927,7 +927,6 @@
             setProps.call(this, [
                 [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [FULLVERLIST, itemListToArray(uach[CH_HEADER_FULL_VER_LIST])],
-                [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [MOBILE, /\?1/.test(uach[CH_HEADER_MOBILE])],
                 [MODEL, stripQuotes(uach[CH_HEADER_MODEL])],
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
@@ -1149,7 +1148,8 @@
             ['getResult', createItemFunc(UA_RESULT)],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
-                userAgent = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? trim(ua, UA_MAX_LENGTH) : ua;
+                if (typeof ua === STR_TYPE)
+                    userAgent = ua.length > UA_MAX_LENGTH ? trim(ua, UA_MAX_LENGTH) : ua;
                 return this;
             }]
         ])
