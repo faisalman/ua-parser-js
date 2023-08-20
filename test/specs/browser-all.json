@@ -1149,6 +1149,26 @@
         }
     },
     {
+        "desc"    : "Sony WebMAF SDK (Playstation)",
+        "ua"      : "Mozilla/5.0 (PlayStation 4 WebMAF) AppleWebKit/601.2 (KHTML, like Gecko) WebMAF/v3.1.0-0-ge5873ba4 SDK: (0x09508001u), Built: Nov  1 2022 14:36:14",
+        "expect"  :
+        {
+            "name"    : "WebMAF",
+            "version" : "v3.1.0-0-ge5873ba4",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "Sony WebMAF SDK (Playstation)",
+        "ua"      : "Mozilla/5.0 (PlayStation 5; WebMAF/1.0.0) AppleWebKit/537.73 (KHTML, like Gecko)",
+        "expect"  :
+        {
+            "name"    : "WebMAF",
+            "version" : "1.0.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Swiftfox",
         "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/20061024 Firefox/2.0 (Swiftfox)",
         "expect"  :
