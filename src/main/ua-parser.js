@@ -43,6 +43,7 @@
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 350,
         BRANDS      = 'brands',
+        FORMFACTOR  = 'formFactor',
         FULLVERLIST = 'fullVersionList',
         PLATFORM    = 'platform',
         PLATFORMVER = 'platformVersion',
@@ -51,6 +52,7 @@
         CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
         CH_HEADER_ARCH      = CH_HEADER + '-arch',
         CH_HEADER_BITNESS   = CH_HEADER + '-' + BITNESS,
+        CH_HEADER_FORM_FACTOR = CH_HEADER + '-form-factor',
         CH_HEADER_MOBILE    = CH_HEADER + '-' + MOBILE,
         CH_HEADER_MODEL     = CH_HEADER + '-' + MODEL,
         CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
@@ -256,6 +258,15 @@
             '8.1'       : 'NT 6.3',
             '10'        : ['NT 6.4', 'NT 10.0'],
             'RT'        : 'ARM'
+        },
+        
+        formFactorMap = {
+            'embedded'  : 'Automotive',
+            'mobile'    : 'Mobile',
+            'tablet'    : 'Tablet',
+            'smarttv'   : 'TV',
+            'wearable'  : ['VR', 'XR'],
+            '?'         : 'Unknown'
     };
 
     //////////////
@@ -930,6 +941,7 @@
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
                 [PLATFORMVER, stripQuotes(uach[CH_HEADER_PLATFORM_VER])],
                 [ARCHITECTURE, stripQuotes(uach[CH_HEADER_ARCH])],
+                [FORMFACTOR, stripQuotes(uach[CH_HEADER_FORM_FACTOR])],
                 [BITNESS, stripQuotes(uach[CH_HEADER_BITNESS])]
             ]);
         } else {
@@ -1043,6 +1055,9 @@
                     }
                     if (uaCH[MODEL]) {
                         this.set(MODEL, uaCH[MODEL]);
+                    }
+                    if (uaCH[FORMFACTOR]) {
+                        this.set(TYPE, strMapper(uaCH[FORMFACTOR], formFactorMap));
                     }
                     break;
                 case UA_OS:

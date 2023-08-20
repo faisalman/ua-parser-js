@@ -462,4 +462,23 @@ describe('Map UA-CH headers', function () {
             assert.strictEqual(ua.device.is("tablet"), false);
         });
     });
+
+    it('Can detect form-factor from client-hints', function () {  
+
+        const FFVR = {
+            'sec-ch-ua-form-factor' : 'VR'
+        };
+
+        const FFUnknown = {
+            'sec-ch-ua-form-factor' : 'Unknown'
+        };
+        
+        UAParser(FFVR).withClientHints().then(function (ua) {
+            assert.strictEqual(ua.device.type, 'wearable');
+        });
+
+        UAParser(FFUnknown).withClientHints().then(function (ua) {
+            assert.strictEqual(ua.device.type, undefined);
+        });
+    });
 });
