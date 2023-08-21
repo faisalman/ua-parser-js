@@ -1,9 +1,9 @@
 {
     "title": "UAParser.js Helpers",
     "name": "@ua-parser-js/helpers",
-    "version": "2.0.0-alpha.3",
+    "version": "0.0.1",
     "author": "Faisal Salman <f@faisalman.com>",
-    "description": "Helpers for UAParser.js",
+    "description": "A collection of utility methods for UAParser.js",
     "main": "ua-parser-helpers.js",
     "module": "ua-parser-helpers.mjs",
     "scripts" : {

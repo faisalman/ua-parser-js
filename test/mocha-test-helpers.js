@@ -1,4 +1,4 @@
-const { isFrozenUA } = require('ua-parser-js/helpers');
+const { isFrozenUA } = require('@ua-parser-js/helpers');
 const assert = require('assert');
 
 describe('isFrozenUA', () => {
