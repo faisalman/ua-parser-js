@@ -1,0 +1,29 @@
+{
+    "title": "UAParser.js Helpers",
+    "name": "@ua-parser-js/helpers",
+    "version": "2.0.0-alpha.3",
+    "author": "Faisal Salman <f@faisalman.com>",
+    "description": "Helpers for UAParser.js",
+    "main": "ua-parser-helpers.js",
+    "module": "ua-parser-helpers.mjs",
+    "scripts" : {
+        "test": "echo 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/faisalman/ua-parser-js.git"
+    },
+    "keywords": [
+        "ua-parser-js",
+        "browser-detection",
+        "device-detection",
+        "os-detection",
+        "user-agent",
+        "client-hints"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/faisalman/ua-parser-js/issues"
+    },
+    "homepage": "https://github.com/faisalman/ua-parser-js#readme"
+}
