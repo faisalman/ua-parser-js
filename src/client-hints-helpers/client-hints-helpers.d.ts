@@ -32,6 +32,4 @@ export interface ClientHintsHTTPHeaders {
     'sec-ch-ua-wow64'?: string;
 }
 
-export function isFrozenUA(ua: string): boolean;
-export function unfreezeUA(): Promise<string>;
 export function UACHParser(headers: ClientHintsHTTPHeaders): ClientHintsJSHighEntropy;

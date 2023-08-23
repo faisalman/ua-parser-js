@@ -1,0 +1,32 @@
+{
+    "title": "User-Agent Helpers",
+    "name": "@ua-parser-js/user-agent-helpers",
+    "version": "0.0.1",
+    "author": "Faisal Salman <f@faisalman.com>",
+    "description": "A collection of utility methods for working with user-agent",
+    "main": "user-agent-helpers.js",
+    "module": "user-agent-helpers.mjs",
+    "scripts": {
+        "test": "mocha ../../test/mocha-test-helpers"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/faisalman/ua-parser-js.git"
+    },
+    "keywords": [
+        "ua-parser-js",
+        "browser-detection",
+        "device-detection",
+        "os-detection",
+        "user-agent",
+        "client-hints"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/faisalman/ua-parser-js/issues"
+    },
+    "homepage": "https://github.com/faisalman/ua-parser-js#readme",
+    "dependencies": {
+        "@ua-parser-js/client-hints-helpers": "*"
+    }
+}

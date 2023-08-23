@@ -1,13 +1,13 @@
 {
-    "title": "UAParser.js Helpers",
-    "name": "@ua-parser-js/helpers",
-    "version": "0.0.3",
+    "title": "Client-Hints Helpers",
+    "name": "@ua-parser-js/client-hints-helpers",
+    "version": "0.0.1",
     "author": "Faisal Salman <f@faisalman.com>",
-    "description": "A collection of utility methods for UAParser.js",
-    "main": "ua-parser-helpers.js",
-    "module": "ua-parser-helpers.mjs",
+    "description": "A collection of utility methods for working with client-hints",
+    "main": "client-hints-helpers.js",
+    "module": "client-hints-helpers.mjs",
     "scripts": {
-        "test": "echo 1"
+        "test": "mocha ../../test/mocha-test-helpers"
     },
     "repository": {
         "type": "git",

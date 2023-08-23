@@ -1,4 +1,5 @@
-const { isFrozenUA, unfreezeUA, UACHParser } = require('@ua-parser-js/helpers');
+const { isFrozenUA, unfreezeUA } = require('@ua-parser-js/user-agent-helpers');
+const { UACHParser } = require('@ua-parser-js/client-hints-helpers');
 const assert = require('assert');
 
 describe('isFrozenUA()', () => {
@@ -54,7 +55,7 @@ describe('unfreezeUA()', () => {
 });
 
 describe('UACHParser()', () => {
-    it('parse client hints HTTP headers (sec-ch-ua) into a JavaScript object', () => {
+    it('parse client hints HTTP headers (sec-ch-ua) into a client hints-like JavaScript object', () => {
         assert.deepEqual(UACHParser(headers), {
             "architecture": "arm",
             "bitness": "64",
