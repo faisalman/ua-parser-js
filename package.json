@@ -14,7 +14,11 @@
     "device",
     "cpu",
     "jquery-plugin",
-    "ecosystem:jquery"
+    "ecosystem:jquery",
+    "ua-parser-js",
+    "browser-detection",
+    "device-detection",
+    "os-detection"
   ],
   "homepage": "https://github.com/faisalman/ua-parser-js",
   "contributors": [
@@ -215,6 +219,7 @@
     }
   ],
   "workspaces": [
-    "src/helpers"
+    "src/client-hints-helpers",
+    "src/user-agent-helpers"
   ]
 }
