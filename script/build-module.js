@@ -54,9 +54,9 @@ const modules = [
         replacements : []
     },
     {
-        src : 'src/client-hints-helpers/client-hints-helpers.js',
-        dest : 'src/client-hints-helpers/client-hints-helpers.mjs',
-        title : '@ua-parser-js/client-hints-helpers',
+        src : 'src/ua-client-hints/ua-client-hints.js',
+        dest : 'src/ua-client-hints/ua-client-hints.mjs',
+        title : '@ua-parser-js/ua-client-hints',
         replacements : []
     }
 ];

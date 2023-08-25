@@ -219,7 +219,7 @@
     }
   ],
   "workspaces": [
-    "src/client-hints-helpers",
+    "src/ua-client-hints",
     "src/user-agent-helpers"
   ]
 }

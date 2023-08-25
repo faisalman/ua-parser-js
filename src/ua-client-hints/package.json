@@ -1,11 +1,11 @@
 {
-    "title": "Client-Hints Helpers",
-    "name": "@ua-parser-js/client-hints-helpers",
+    "title": "User-Agent Client Hints",
+    "name": "@ua-parser-js/ua-client-hints",
     "version": "0.0.1",
     "author": "Faisal Salman <f@faisalman.com>",
-    "description": "A collection of utility methods for working with client-hints",
-    "main": "client-hints-helpers.js",
-    "module": "client-hints-helpers.mjs",
+    "description": "A collection of utility methods for working with user-agent client hints",
+    "main": "ua-client-hints.js",
+    "module": "ua-client-hints.mjs",
     "scripts": {
         "test": "mocha ../../test/mocha-test-helpers"
     },
