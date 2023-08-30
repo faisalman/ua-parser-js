@@ -11,7 +11,7 @@
 
 /*jshint esversion: 11 */ 
 
-import { UACHParser } from '@ua-parser-js/client-hints-helpers';
+import { UAClientHints } from '@ua-parser-js/ua-client-hints';
 
 /*
     # Reference:
@@ -47,7 +47,7 @@ const unfreezeUA = async (ua, ch) => {
         if (!ua['user-agent']) {
             throw new Error('User-Agent header not found');
         }
-        ch = UACHParser(ua);
+        ch = new UAClientHints().setUAData(ua).getUAData();
         ua = ua['user-agent'];
     } else {
         ua = ua || navigator.userAgent;

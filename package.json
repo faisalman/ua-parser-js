@@ -171,7 +171,8 @@
     "build": "./script/build-dist.sh && ./script/build-module.js",
     "fuzz": "jazzer ./test/jazzer-fuzz-test.js --sync",
     "test": "./script/test-all.sh",
-    "test:jshint": "jshint src && jshint script",
+    "test:eslint": "eslint src && eslint script",
+    "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
     "test:mocha": "mocha -R list test/mocha*js",
     "test:playwright": "playwright test"
@@ -181,6 +182,7 @@
     "@babel/traverse": "7.15.4",
     "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "~1.32.2",
+    "eslint": "^8.48.0",
     "jshint": "~2.13.6",
     "mocha": "~8.2.0",
     "requirejs": "2.3.2",

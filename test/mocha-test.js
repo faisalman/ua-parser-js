@@ -345,12 +345,12 @@ describe('Map UA-CH headers', function () {
     const headers = {
         'sec-ch-ua' : '"Chromium";v="93", "Google Chrome";v="93", " Not;A Brand";v="99"',
         'sec-ch-ua-full-version-list' : '"Chromium";v="93.0.1.2", "Google Chrome";v="93.0.1.2", " Not;A Brand";v="99.0.1.2"',
-        'sec-ch-ua-arch' : 'ARM',
-        'sec-ch-ua-bitness' : '64',
+        'sec-ch-ua-arch' : '"arm"',
+        'sec-ch-ua-bitness' : '"64"',
         'sec-ch-ua-mobile' : '?1',
-        'sec-ch-ua-model' : 'Pixel 99',
-        'sec-ch-ua-platform' : 'Windows',
-        'sec-ch-ua-platform-version' : '13',
+        'sec-ch-ua-model' : '"Pixel 99"',
+        'sec-ch-ua-platform' : '"Windows"',
+        'sec-ch-ua-platform-version' : '"13"',
         'user-agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
     };
     
