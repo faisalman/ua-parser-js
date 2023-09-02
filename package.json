@@ -221,6 +221,7 @@
     }
   ],
   "workspaces": [
+    "src/gpu-detect",
     "src/ua-client-hints",
     "src/user-agent-helpers"
   ]

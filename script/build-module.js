@@ -48,6 +48,12 @@ const modules = [
         replacements : []
     },
     {
+        src : 'src/gpu-detect/gpu-detect.js',
+        dest : 'src/gpu-detect/gpu-detect.mjs',
+        title : '@ua-parser-js/gpu-detect',
+        replacements : []
+    },
+    {
         src : 'src/user-agent-helpers/user-agent-helpers.js',
         dest : 'src/user-agent-helpers/user-agent-helpers.mjs',
         title : '@ua-parser-js/user-agent-helpers',
