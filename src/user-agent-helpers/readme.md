@@ -64,4 +64,14 @@ import { unfreezeUA } from '@ua-parser-js/user-agent-helpers';
 unfreezeUA()
     .then(newUA => console.log(newUA));
 // 'Mozilla/5.0 (Windows NT 11.0; ARM) AppleWebKit/537.36 (KHTML, like Gecko) New Browser/110.1.2.3 Chromium/110.1.2.3 Safari/537.36'
+
+/*
+// Alternatively:
+const ua = navigator.userAgent;
+const ch = await navigator.userAgentData.getHighEntropyValues();
+const newUA = await unfreezeUA(ua, ch);
+
+// Server environment:
+const newUA = await unfreezeUA(req.headers);
+*/
 ```
