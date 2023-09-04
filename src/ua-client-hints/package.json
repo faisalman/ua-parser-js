@@ -7,7 +7,7 @@
     "main": "ua-client-hints.js",
     "module": "ua-client-hints.mjs",
     "scripts": {
-        "test": "mocha ../../test/mocha-test-helpers"
+        "test": "mocha ./test/*"
     },
     "repository": {
         "type": "git",
