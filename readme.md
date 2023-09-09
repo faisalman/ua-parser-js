@@ -17,6 +17,9 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 * Author    : Faisal Salman <<f@faisalman.com>>
 * Demo      : https://faisalman.github.io/ua-parser-js
 * Source    : https://github.com/faisalman/ua-parser-js
+* Documentation : 
+  * v1 : https://github.com/faisalman/ua-parser-js/tree/1.0.35#documentation
+  * v2 : https://faisalman.github.io/ua-parser-js-docs/v2
 
 ***
 
@@ -26,11 +29,8 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 </thead>
 <tbody>
 <tr>
-<td align="center" width="200px" rowspan="3"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js"><img src="images/51degrees.svg" alt="51degrees" width="75%" height="75%" ></a></td>
-<td align="left" width="400px"><a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ @51degrees/ua-parser-js</a></td> 
-</tr>
-<tr>
-<td><br/><p>UAParser.js has been upgraded to detect comprehensive device data based on the User-Agent and User-Agent Client Hints.</p><p>This package supports all device types including Apple and Android devices and can be used either in a browser (client-side) or Node.js environment (server-side).</p><p>Visit <a href="https://www.npmjs.com/package/@51degrees/ua-parser-js">↗ 51Degrees <u>UAParser</u></a> to get started.</p>
+<td colspan="2">
+<a href="https://opencollective.com/ua-parser-js">↗ Become a sponsor</a>
 </td>
 </tr>
 </tbody>
@@ -111,8 +111,9 @@ NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, Oculus Browser, OmniWeb,
 Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Polaris, 
 Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
 Sailfish Browser, Samsung Browser, SeaMonkey, Silk, Skyfire, Sleipnir, Slim, 
-SlimBrowser, Swiftfox, Tesla, TikTok, Tizen Browser, UCBrowser, UP.Browser, Viera, 
-Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, Whale Browser...
+SlimBrowser, Snapchat, Swiftfox, Tesla, TikTok, Tizen Browser, UCBrowser, 
+UP.Browser, Viera, Vivaldi, Waterfox, WeChat, Weibo, Yandex, baidu, iCab, w3m, 
+Whale Browser, ...
 
 # 'browser.version' determined dynamically
 ```
@@ -133,10 +134,11 @@ console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
 Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
-Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Jolla, Kobo,
-Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, OnePlus, 
-OPPO, Ouya, Palm, Panasonic, Pebble, Polytron, Realme, RIM, Roku, Samsung, Sharp, 
-Siemens, Sony[Ericsson], Sprint, Tesla, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
+Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Infinix, Jolla, 
+Kobo, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, Nintendo, Nokia, Nvidia, 
+OnePlus, OPPO, Ouya, Palm, Panasonic, Pebble, Polytron, Realme, RIM, Roku, Samsung, 
+Sharp, Siemens, Sony[Ericsson], Sprint, Tecno, Tesla, Vivo, Vodafone, Xbox, Xiaomi, 
+Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
