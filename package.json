@@ -182,7 +182,6 @@
     "@babel/traverse": "7.15.4",
     "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "~1.32.2",
-    "eslint": "^8.48.0",
     "jshint": "~2.13.6",
     "mocha": "~8.2.0",
     "requirejs": "2.3.2",
@@ -219,10 +218,5 @@
       "type": "github",
       "url": "https://github.com/sponsors/faisalman"
     }
-  ],
-  "workspaces": [
-    "src/gpu-detect",
-    "src/ua-client-hints",
-    "src/user-agent-helpers"
   ]
 }

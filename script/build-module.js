@@ -46,24 +46,6 @@ const modules = [
         dest : 'src/extensions/ua-parser-extensions.mjs',
         title : 'ua-parser-js/extensions',
         replacements : []
-    },
-    {
-        src : 'src/gpu-detect/gpu-detect.js',
-        dest : 'src/gpu-detect/gpu-detect.mjs',
-        title : '@ua-parser-js/gpu-detect',
-        replacements : []
-    },
-    {
-        src : 'src/user-agent-helpers/user-agent-helpers.js',
-        dest : 'src/user-agent-helpers/user-agent-helpers.mjs',
-        title : '@ua-parser-js/user-agent-helpers',
-        replacements : []
-    },
-    {
-        src : 'src/ua-client-hints/ua-client-hints.js',
-        dest : 'src/ua-client-hints/ua-client-hints.mjs',
-        title : '@ua-parser-js/ua-client-hints',
-        replacements : []
     }
 ];
 

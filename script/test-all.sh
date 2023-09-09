@@ -9,7 +9,7 @@ echo '
 - lint js code
 '
 npm run test:jshint || exit 1 
-npm run test:eslint || exit 1 
+#npm run test:eslint || exit 1 
 
 echo '
 - test using mocha
