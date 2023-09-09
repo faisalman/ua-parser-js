@@ -616,7 +616,7 @@
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
             /crkey/i                                                            // Google Chromecast
             ], [[MODEL, CHROME+'cast'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
-            /droid.+aft(\w)( bui|\))/i                                          // Fire TV
+            /droid.+aft(\w+)( bui|\))/i                                         // Fire TV
             ], [MODEL, [VENDOR, AMAZON], [TYPE, SMARTTV]], [
             /\(dtv[\);].+(aquos)/i,
             /(aquos-tv[\w ]+)\)/i                                               // Sharp
