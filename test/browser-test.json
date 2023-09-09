@@ -1819,5 +1819,45 @@
             "version": "28.3.4",
             "major"  : "28"
         }
+    },
+    {
+        "desc"    : "Chrome Mobile",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Mobile Chrome",
+            "version" : "58.0.3029.83",
+            "major"   : "58"
+        }
+    },
+    {
+        "desc"    : "Firefox Mobile",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W) AppleWebKit/537.36 (KHTML, like Gecko) FxiOS/7.5b3349 Mobile/14F89 Safari/603.2.4",
+        "expect"  :
+        {
+            "name"    : "Mobile Firefox",
+            "version" : "7.5b3349",
+            "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "Firefox Mobile",
+        "ua"      : "Mozilla/5.0 (Android 5.0; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0",
+        "expect"  :
+        {
+            "name"    : "Mobile Firefox",
+            "version" : "41.0",
+            "major"   : "41"
+        }
+    },
+    {
+        "desc"    : "Snapchat",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Snapchat/12.33.0.36 (like Safari/8614.1.25.0.31, panda)",
+        "expect"  :
+        {
+            "name"    : "Snapchat",
+            "version" : "12.33.0.36",
+            "major"   : "12"
+        }
     }
 ]
