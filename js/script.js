@@ -1,6 +1,5 @@
 $(document)
   .ready(function() {
-    var uaparser = new UAParser();
     var labels = ['browser.name', 'os.version', 'device.type', 'cpu.arch', 'device.model', 'browser.version', 'device.vendor', 'engine.name', 'engine.version'];
     var counter = 0;
     var rotateLabel = function () {
@@ -16,9 +15,9 @@ $(document)
 
     var updateDemo = function (result) {
         if(!result) return;
-        $('#ua-txt').transition('flip vertical', function () {
+        $('#ua-txt').transition('zoom', function () {
             $(this).text(result.ua);
-            $(this).transition('flip vertical');
+            $(this).transition('zoom');
         });
         $('#ua-result').text(JSON.stringify(result, null, "  "));
         $('#demo-result').transition('zoom', function () {
@@ -102,9 +101,22 @@ $(document)
             });
         });
     }
-    UAParser().withClientHints().then(function(result) {
-        updateDemo(result);
-    });
+    
+    var qs;
+    if (URLSearchParams) {
+        qs = new URLSearchParams(window.location.search).get('ua');
+    }
+    if (qs) {
+        $('#ua-txt-info').text('For a given user-agent:');
+        UAParser(qs).then(function(result) {
+            updateDemo(result);
+        });
+        $('#ua-txt').get(0).scrollIntoView();
+    } else {
+        UAParser().withClientHints().then(function(result) {
+            updateDemo(result);
+        });
+    }
 
     var i;
     var values = [];
@@ -117,20 +129,17 @@ $(document)
         onChange: function (val) {
             if (val != prevVal)
             {
-                $('#ua-txt-info').text('For a given user-agent:');
-                updateDemo(UAParser(val));
                 prevVal = val;
+                window.location.search = '?ua=' + val;
             }
         }
     });
     $('#demo-btn').click(function() {
-        $('#ua-txt-info').text('For a given user-agent:');
-        updateDemo(UAParser($('input[name=custom-ua]').val()));
+        window.location.search = '?ua=' + $('input[name=custom-ua]').val();
     });
     $('input[name=custom-ua]').keypress(function (e) {
         if (e.which == 13) {
-            $('#ua-txt-info').text('For a given user-agent:');
-            updateDemo(UAParser($(this).val()));
+            window.location.search = '?ua=' + $(this).val();
             return false;
         }
     });
@@ -154,4 +163,5 @@ $(document)
         $('.mini.modal').modal('setting', 'transition', 'vertical flip').modal('show');
         e.clearSelection();
     });
+    hljs.highlightAll();
 });

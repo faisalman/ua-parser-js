@@ -1,6 +1,16 @@
 html {
     scroll-behavior: smooth;
 }
+code,
+.code {
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+}
+strong.subtle{
+    color: rgba(0, 0, 0, 0.7)
+}
+.hljs-punctuation, .hljs-tag {
+color: rgba(255, 255, 255, 0.3);
+}  
 .ui.horizontal.divider {
     margin: 3rem 0 2rem;
 }
@@ -19,10 +29,10 @@ margin-left: 0.5em;
 }
 .masthead h2.ui.header {
 margin-top: 3em;
-font-size: 7em;
+font-size: 5rem;
 }
 .masthead h1 {
-font-size: 1.3em;
+font-size: 1.8rem;
 font-weight: normal;
 margin: 0.5em 0 2em 0;
 }
@@ -99,7 +109,7 @@ display: none;
     min-height: 300px;
 }
 .masthead .ui.massive.label {
-    font-size: 1rem;
+    font-size: 3rem;
 }
 .masthead h1.ui.header {
     font-size: 1.5em;
