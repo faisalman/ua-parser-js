@@ -7,6 +7,11 @@ assignees: ''
 
 ---
 
+**Library version**
+Which version of the library that you use, eg: v0.7.35 or v2.0.0-alpha.3
+
+For the issue related with detection result, you can use the demo section in https://uaparser.js.org to confirm
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
