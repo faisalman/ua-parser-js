@@ -108,10 +108,8 @@ $(document)
     }
     if (qs) {
         $('#ua-txt-info').text('For a given user-agent:');
-        UAParser(qs).then(function(result) {
-            updateDemo(result);
-        });
         $('#ua-txt').get(0).scrollIntoView();
+        updateDemo(UAParser(qs));
     } else {
         UAParser().withClientHints().then(function(result) {
             updateDemo(result);
