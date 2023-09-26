@@ -2,6 +2,7 @@
 
 # Version 2.0
 - What's breaking:
+  - Dual-licensed under AGPL v3 or Commercial License
   - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
   - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
 - What's new:
