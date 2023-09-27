@@ -42,7 +42,7 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 ---
 
 # Version 2.0
-What's new & breaking, please read [CHANGELOG](changelog.md) before upgrading.
+What's new & breaking, please read [CHANGELOG](CHANGELOG.md) before upgrading.
 
 # Documentation
 ### `UAParser([user-agent:string][,extensions:object][,headers:object(since@2.0)]):IData`
