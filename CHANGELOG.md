@@ -2,33 +2,19 @@
 
 # Version 2.0
 - What's breaking:
-  - Dual-licensed under AGPL v3 or Commercial License
+  - Dual-licensed under AGPLv3 or PRO License
   - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
   - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
 - What's new:
-  - Add some new methods in result object: 
-    - Add support for client hints: `withClientHints()`
-    - Add support for feature detection: `withFeatureCheck()`
+  - Some new methods in result object: 
+    - Support for client hints: `withClientHints()`
+    - Support for feature detection: `withFeatureCheck()`
     - Utility for easy comparison: `is()`
     - Utility to print full-name: `toString()`
-  - Add support for ES module `import { UAParser } from 'ua-parser-js'`
-  - Provide Enums `'ua-parser-js/enums'`
-  - Provide Extensions `'ua-parser-js/extensions'`
-  - Provide Helpers `'ua-parser-js/helpers'`
-
-## Version 2.0.0-alpha.3
-- Add `withFeatureCheck()` method
-- Add `isFrozenUA()` method in `helpers` submodule
-- Add `MediaPlayers` & `Modules` in `extensions` submodule
-- Fix issue with ESM import
-
-## Version 2.0.0-alpha.2
-- Fix browser result always returning Chromium when using `withClientHints()`
-- Fix infinite-loop when await-ing `withClientHints()` in non-client-hints browser
-
-## Version 2.0.0-alpha.1
-- Initial work on new major version
-
+  - Support for ES module `import { UAParser } from 'ua-parser-js'`
+  - Provided Enums submodule `'ua-parser-js/enums'`
+  - Provided Extensions submodule `'ua-parser-js/extensions'`
+  - Provided Helpers submodule `'ua-parser-js/helpers'`
 
 # Version 0.7 / 1.0
 
