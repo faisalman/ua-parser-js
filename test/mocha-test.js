@@ -466,16 +466,25 @@ describe('Map UA-CH headers', function () {
     it('Can detect form-factor from client-hints', function () {  
 
         const FFVR = {
-            'sec-ch-ua-form-factor' : 'VR'
+            'sec-ch-ua-form-factor' : '"VR"'
+        };
+
+        const FFEInk = {
+            'sec-ch-ua-form-factor' : '"Tablet", "EInk"'
         };
 
         const FFUnknown = {
-            'sec-ch-ua-form-factor' : 'Unknown'
+            'sec-ch-ua-form-factor' : '"Unknown"'
         };
         
         UAParser(FFVR).withClientHints().then(function (ua) {
             assert.strictEqual(ua.device.type, 'wearable');
         });
+
+        UAParser(FFEInk).withClientHints().then(function (ua) {
+            assert.strictEqual(ua.device.type, 'tablet');
+        });
+
 
         UAParser(FFUnknown).withClientHints().then(function (ua) {
             assert.strictEqual(ua.device.type, undefined);

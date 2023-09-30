@@ -40,7 +40,8 @@ test('read client hints data', async ({ page }) => {
                                 version: '110'
                             }
                         ],
-                        platform: 'New OS'
+                        platform: 'New OS',
+                        formFactor: 'New Form Factor'
                     });
                 }
             }
@@ -54,6 +55,7 @@ test('read client hints data', async ({ page }) => {
 
     expect(uap).toHaveProperty('browser.name', 'New Browser');
     expect(uap).toHaveProperty('os.name', 'New OS');
+    expect(uap).toHaveProperty('device.type', undefined);
 });
 
 test('detect Brave', async ({ page }) => {
