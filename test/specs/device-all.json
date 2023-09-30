@@ -153,6 +153,15 @@
         }
     },
     {
+        "desc": "ASUS Zenfone 2 Laser",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; ASUS_Z00ED) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "Z00ED",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Acer Iconia A1-810",
         "ua": "Mozilla/5.0 (Linux; Android 4.2.2; A1-810 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Safari/537.36",
         "expect": {
@@ -972,6 +981,15 @@
         }
     },
     {
+        "desc": "Lenovo IdeaTab S6000",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.1.1011.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "IdeaTab S6000-H",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "LG V40 ThinQ",
         "ua": "Mozilla/5.0 (Linux; Android 9; LM-V405) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
         "expect": {
@@ -1589,6 +1607,15 @@
         "expect": {
             "vendor": "OPPO",
             "model": "X9007",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO F5",
+        "ua": "ozilla/5.0 (Linux; Android 7.1.1; CPH1723) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "CPH1723",
             "type": "mobile"
         }
     },
@@ -2331,6 +2358,15 @@
         }
     },
     {
+        "desc": "Tecno Spark 8C",
+        "ua": "Mozilla/5.0 (Linux; Android 11; TECNO KG5n) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TECNO",
+            "model": "KG5n",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Tesla",
         "ua": "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Tesla QtCarBrowser Safari/601.1",
         "expect": {
@@ -2700,6 +2736,15 @@
         }
     },
     {
+        "desc": "Xiaomi POCOPHONE F1",
+        "ua": "Mozilla/5.0 (Linux; Android 10; POCOPHONE F1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "POCOPHONE F1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi Redmi 4A",
         "ua": "Mozilla/5.0 (Linux; Android 6.0; Redmi 4A Build/MMB29M; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36",
         "expect": {
@@ -2795,6 +2840,15 @@
         "expect": {
             "vendor": "Xiaomi",
             "model": "Redmi Note 8",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ZTE Blade A6",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; ZTE BLADE A0620 Build/NMF26F; ru-ru) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 Puffin/9.2.0.50586AP",
+        "expect": {
+            "vendor": "ZTE",
+            "model": "BLADE A0620",
             "type": "mobile"
         }
     },
@@ -3105,6 +3159,15 @@
         }
     },
     {
+        "desc": "Google Pixel 7",
+        "ua": "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 7",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Generic Android Device",
         "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; i980 Build/MRA58K)",
         "expect": {
@@ -3332,6 +3395,15 @@
             "vendor": "OUYA",
             "model": "undefined",
             "type": "console"
+        }
+    },
+    {
+        "desc": "Vivo S1 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; vivo 1920) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Vivo",
+            "model": "1920",
+            "type": "mobile"
         }
     },
     {

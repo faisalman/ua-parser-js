@@ -3,9 +3,9 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-alpha.3
+/* UAParser.js v2.0.0-beta
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
-   MIT License *//*
+   AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
    Demo   : https://faisalman.github.io/ua-parser-js
@@ -22,7 +22,7 @@
     /////////////
 
 
-    var LIBVERSION  = '2.0.0-alpha.3',
+    var LIBVERSION  = '2.0.0-beta',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -491,8 +491,10 @@
             /\b; (\w+) build\/hm\1/i,                                           // Xiaomi Hongmi 'numeric' models
             /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,                             // Xiaomi Hongmi
             /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,                   // Xiaomi Redmi
+            /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|\))/i,             // Xiaomi Redmi 'numeric' models
             /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i // Xiaomi Mi
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
+            /oid[^\)]+; (2\d{4}(283|rpbf)[cgl])( bui|\))/i,                     // Redmi Pad
             /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i                        // Mi Pad tablets
             ],[[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, TABLET]], [
 
@@ -507,7 +509,7 @@
             ], [MODEL, [VENDOR, 'Vivo'], [TYPE, MOBILE]], [
 
             // Realme
-            /\b(rmx[12]\d{3})(?: bui|;|\))/i
+            /\b(rmx[1-3]\d{3})(?: bui|;|\))/i
             ], [MODEL, [VENDOR, 'Realme'], [TYPE, MOBILE]], [
 
             // Motorola
@@ -593,6 +595,10 @@
             /droid.+; (m[1-5] note) bui/i,
             /\bmz-([-\w]{2,})/i
             ], [MODEL, [VENDOR, 'Meizu'], [TYPE, MOBILE]], [
+                
+            // Ulefone
+            /; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Ulefone'], [TYPE, MOBILE]], [
 
             // MIXED
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,

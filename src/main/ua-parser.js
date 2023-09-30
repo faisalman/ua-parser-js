@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-alpha.3
+/* UAParser.js v2.0.0-beta
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
-   MIT License *//*
+   AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
    Demo   : https://faisalman.github.io/ua-parser-js
@@ -20,7 +20,7 @@
     /////////////
 
 
-    var LIBVERSION  = '2.0.0-alpha.3',
+    var LIBVERSION  = '2.0.0-beta',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',

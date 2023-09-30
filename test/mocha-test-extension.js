@@ -4,7 +4,7 @@ const parseJS = require('@babel/parser').parse;
 const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
 const UAParser = require('ua-parser-js');
-const Ext = require('ua-parser-js/extensions');
+const { Bots, CLIs, Emails, Modules } = require('ua-parser-js/extensions');
 
 describe('Bots', () => {
     it('Can detect bots', () => {
@@ -21,7 +21,7 @@ describe('Bots', () => {
         const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
         const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
 
-        const botParser = new UAParser(Ext.Bots);
+        const botParser = new UAParser(Bots);
         assert.deepEqual(botParser.setUA(googleBot).getBrowser(), {name: "Googlebot-Video", version: "1.0", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(gptBot).getBrowser(), {name: "GPTBot", version: "1.0", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(msnBot).getBrowser(), {name: "msnbot-media", version: "1.1", major: "1", type: "bot"});
@@ -29,16 +29,16 @@ describe('Bots', () => {
         assert.deepEqual(botParser.setUA(opera).getBrowser(), {name: "Opera", version: "8.5", major: "8"});
 
         // try merging Bots & CLIs
-        const botsAndCLIs = { browser : [...Ext.Bots.browser, ...Ext.CLIs.browser]};
+        const botsAndCLIs = { browser : [...Bots.browser, ...CLIs.browser]};
         const botsAndCLIsParser = new UAParser(botsAndCLIs);
         assert.deepEqual(botsAndCLIsParser.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"cli"});
         assert.deepEqual(botsAndCLIsParser.setUA(facebookBot).getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"bot"});
 
-        const emailParser = new UAParser(Ext.Emails);
+        const emailParser = new UAParser(Emails);
         assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
         assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: "Thunderbird", version: "78.13.0", major: "78", type: "email"});
 
-        const moduleParser = new UAParser(Ext.Modules);
+        const moduleParser = new UAParser(Modules);
         assert.deepEqual(moduleParser.setUA(axios).getBrowser(), {name: "axios", version: "1.3.5", major: "1", type: "module"});
         assert.deepEqual(moduleParser.setUA(jsdom).getBrowser(), {name: "jsdom", version: "20.0.3", major: "20", type: "module"});
         assert.deepEqual(moduleParser.setUA(scrapy).getBrowser(), {name: "Scrapy", version: "1.5.0", major: "1", type: "module"});
