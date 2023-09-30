@@ -1,5 +1,5 @@
 import { UAParser } from 'ua-parser-js';
-import { CPUArch, DeviceType, EngineName } from 'ua-parser-js/enums';
+import { CPU, Device, Engine } from 'ua-parser-js/enums';
 import * as assert from 'assert';
 
 describe('Returns', () => {
@@ -20,8 +20,8 @@ describe('Returns', () => {
 describe('Enums', () => {    
     it('Can use enum', () => {
         const { cpu, device, engine } = UAParser('Mozilla/5.0 (X11; U; Linux armv7l; en-GB; rv:1.9.2a1pre) Gecko/20090928 Firefox/3.5 Maemo Browser 1.4.1.22 RX-51 N900');
-        assert.strictEqual(cpu.is(CPUArch.ARM), true);
-        assert.strictEqual(device.is(DeviceType.MOBILE), true);
-        assert.strictEqual(engine.is(EngineName.GECKO), true);
+        assert.strictEqual(cpu.is(CPU.ARM), true);
+        assert.strictEqual(device.is(Device.MOBILE), true);
+        assert.strictEqual(engine.is(Engine.GECKO), true);
     });
 });
