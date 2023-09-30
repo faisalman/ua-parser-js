@@ -23,6 +23,7 @@
     <script src="js/script.js"></script>
     <script defer src="https://app.tinyanalytics.io/pixel/9nNpPJDLeUns0LD3"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 </head>
 
 <body>
@@ -38,10 +39,9 @@
                         in browser (client-side) or node.js (server-side).</p>
                 </h1>
                 <div class="ui massive buttons">
-                    <a href="#try" class="ui violet button"><i class="magic icon"></i>Try The Demo</a>
-                    <div class="or"></div>
-                    <a href="https://docs.uaparser.js.org/v2" class="ui black button"><i class="book icon"></i>Read The
-                        Docs</a>
+                    <a href="#try" class="ui violet button"><i class="magic icon"></i>Try Demo</a>
+                    <a href="#download" class="ui blue button"><i class="download icon"></i>Download</a>
+                    <a href="https://docs.uaparser.js.org/v2" class="ui green button"><i class="book icon"></i>Read Docs</a>
                 </div>
             </div>
             <img class="ui centered image illustration" src="images/uap-illustrations.png" />
@@ -82,7 +82,7 @@
                 </div>
                 <div class="ui basic segment">
                     <p>
-                        {UAParser.js} will transforms it into a well-structured format: </p>
+                        In addition with some browser-supplied data, {UAParser.js} will transforms it into a well-structured format: </p>
                     <pre><code id="ua-result" class="language-json"></code></pre>
                 </div>
                 <div id="demo-result" class="ui equal width stackable internally celled grid">
@@ -232,13 +232,13 @@
                                     <i class="paper plane icon"></i>
                                     <div class="content">Relatively Small Footprint</div>
                                 </h3>
-                                <p>{UAParser.js} is <strong class="subtle">optimized</strong> to be used within browser.
+                                <p>{UAParser.js} starts from and is <strong class="subtle">optimized</strong> to be used within browser.
                                     While it covers a <strong class="subtle">vast</strong> range of detection, the size
                                     always kept to be as <strong class="subtle">light</strong> as possible.</p>
                                 <p>For extra <strong class="subtle">cache</strong> performance, {UAParser.js} also
-                                    available in popular CDN services: <a class="ui label code"
+                                    available in popular CDN services: <a class="ui code"
                                         href="https://www.jsdelivr.com/package/npm/ua-parser-js"
-                                        target="_blank">jsDelivr</a> / <a class="ui label code" target="_blank"
+                                        target="_blank">jsDelivr</a> / <a class="ui code" target="_blank"
                                         href="https://cdnjs.com/libraries/UAParser.js">CDNJS</a></p>
                             </div>
                         </div>
@@ -250,8 +250,8 @@
                                         Zero-deps Vanilla JS
                                     </div>
                                 </h3>
-                                <p>No bloated framework. No transpiler required. No unnecessary boilerplate. No
-                                    dependencies.</p>
+                                <p>No
+                                    dependencies. No bloated framework. No transpiler needed. No unnecessary boilerplate. No large-sized files required.</p>
                                 <p>Just a good ol' <strong class="subtle">ES3-compatible</strong> syntax that is able to
                                     run on relatively old browsers while also <strong class="subtle">performs</strong>
                                     on most modern devices.</p>
@@ -267,13 +267,13 @@
                                         100% Free & Open Source
                                     </div>
                                 </h3>
-                                <p>Licensed under an extremely <strong class="subtle">permissive</strong> MIT license,
-                                    {UAParser.js} is free to use & modify at no charge.</p>
-                                <p><strong class="subtle">Contribute</strong> back either by submitting a <a
+                                <p>Licensed under open-source terms,
+                                    {UAParser.js} is free to use & modify at no charge. PRO licenses also available for non-open-source purpose.</p>
+                                <p><strong class="subtle">Contribute</strong> back in form of a <a
                                         class="ui code" href="https://github.com/faisalman/ua-parser-js/pulls"
-                                        target="_blank"> PR</a> or consider to <a class="ui code" target="_blank"
+                                        target="_blank"> PR</a>, or <a class="ui code" target="_blank"
                                         href="https://opencollective.com/ua-parser-js/">donate</a> if you find it
-                                    <strong class="subtle">helpful</strong> for your business or company.</p>
+                                    <strong class="subtle">helpful</strong> for your business.</p>
                             </div>
                         </div>
                         <div class="column">
@@ -289,7 +289,7 @@
                                 <p>Also, for <strong class="subtle">TypeScript</strong> user, there is a
                                     community-maintained types: <a
                                         href="https://www.npmjs.com/package/@types/ua-parser-js" target="_blank"
-                                        class="ui label code">@types/ua-parser-js</a></p>
+                                        class="ui code">@types/ua-parser-js</a></p>
                             </div>
                         </div>
                         <div class="column">
@@ -1026,9 +1026,195 @@
             </div>
         </div>
         <div class="ui horizontal divider">
+            DOWNLOADS : CHOOSE YOUR PACKAGE
+        </div>
+        <div class="ui tall stacked segment" id="download">
+            <div class="ui basic centered segment">
+                <h2 class="ui dividing header">Package Options<div class="sub header">Comparison between our regular open-source & PRO licenses</div>
+                </h2>
+                <table class="ui center aligned collapsing celled table">
+                    <thead>
+                        <tr>
+                            <th class="left aligned"></th>
+                            <th>Version 1.0</th>
+                            <th colspan="4">Version 2.0</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="left aligned">License</td>
+                            <td>MIT</td>
+                            <td>AGPLv3</td>
+                            <td>PRO Personal</td>
+                            <td>PRO Business</td>
+                            <td>PRO Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Browser detection</td>
+                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">CPU detection</td>
+                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Device detection</td>
+                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Engine detection</td>
+                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">OS detection</td>
+                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Enhanced detection</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Client Hints support</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Extras (Apps, Bots, Libs, Emails, Media Players, etc)</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">CommonJS support</td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">ES modules support</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">npm module available</td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">TypeScript declarations available</td>
+                            <td class="warning" data-tooltip="Community version" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Allowed for commercial use</td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="negative" data-tooltip="Non-commercial use only (personal/educational/non-profit/etc)" data-inverted=""><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Permissive license</td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="warning" data-tooltip="Copyleft license" data-inverted=""><i class="large orange exclamation circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Unlimited use per 1 license</td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="warning" data-tooltip="1 project per 1 license" data-inverted=""><i class="large orange circle exclamation icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">1-year support</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Lifetime updates</td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Price</td>
+                            <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
+                            <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
+                            <td data-tooltip="$12 (one-time fee)" data-inverted="">$12</td>
+                            <td data-tooltip="$25 (one-time fee)" data-inverted="">$25</td>
+                            <td data-tooltip="$500 (one-time fee)" data-inverted="">$500</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="right aligned" colspan="6">
+                                <a target="_blank" class="ui icon right labeled violet large button" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35">GET THE PACKAGE <i class="icon arrow circle right"></i></a>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="ui horizontal divider">
             CONTRIBUTORS : SUPPORTED BY THE AMAZING OPEN-SOURCE COMMUNITIES
         </div>
-        <div class="ui tall stacked segment" id="showcase">
+        <div class="ui tall stacked segment" id="contributors">
+            <div class="ui basic centered segment">
+                <h2 class="ui dividing header">Contributors <div class="sub header">Those who collaborate and
+                        continuosly improve this library to be awesome</div>
+                </h2>
+                <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img class="ui centered image"
+                        src="https://opencollective.com/ua-parser-js/contributors.svg?avatarHeight=64&width=640" /></a>
+            </div>
             <div class="ui basic centered segment">
                 <h2 class="ui dividing header">Backers & Sponsors <div class="sub header">Those who give back and get
                         the value from using this library</div>
@@ -1042,23 +1228,16 @@
             </div>
             <div class="ui basic left aligned segment">
                 <h3 class="ui dividing header">Contribute to UAParser.js<div class="sub header">It's free to use, but
-                        feel free to contribute if you find it useful</div>
+                        feel free to contribute if you find it helpful</div>
                 </h3>
                 <a href="https://opencollective.com/ua-parser-js/donate?interval=oneTime"
-                    class="ui labeled icon red button">
+                    class="ui labeled icon black button">
                     <i class="dollar sign icon"></i>ONE-TIME SPONSOR</a>
                 <a href="https://opencollective.com/ua-parser-js/donate?interval=month"
-                    class="ui labeled icon violet button">
+                    class="ui labeled icon black button">
                     <i class="sync icon"></i>MONTHLY SPONSOR</a>
                 <a href="https://github.com/sponsors/faisalman" class="ui labeled icon black button">
                     <i class="github alternate icon"></i>GITHUB SPONSOR</a>
-            </div>
-            <div class="ui basic centered segment">
-                <h2 class="ui dividing header">Contributors <div class="sub header">Those who collaborate and
-                        continuosly improve this library to be awesome</div>
-                </h2>
-                <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img class="ui centered image"
-                        src="https://opencollective.com/ua-parser-js/contributors.svg?avatarHeight=64&width=640" /></a>
             </div>
         </div>
         <div class="ui hidden divider">
@@ -1102,7 +1281,7 @@
                         </div>
                     </div>
                     <div class="ui right aligned basic segment">
-                        <p>Licensed under MIT license. Copyright (c) 2012-2023 Faisal Salman.</p>
+                        <p>Licensed under AGPLv3 license. Copyright (c) 2012-2023 Faisal Salman.</p>
                     </div>
                 </div>
             </div>
