@@ -167,6 +167,7 @@
     "Ziding Zhang <zidingz@gmail.com>"
   ],
   "type": "commonjs",
+  "types": "src/main/ua-parser.d.ts",
   "main": "src/main/ua-parser.js",
   "module": "src/main/ua-parser.mjs",
   "browser": "dist/ua-parser.pack.js",
@@ -193,6 +194,7 @@
     "build+test": "npm run build && npm run test",
     "fuzz": "jazzer ./test/jazzer-fuzz-test.js --sync",
     "test": "./script/test-all.sh",
+    "test:dts": "tsd --typings src/main/ua-parser.d.ts --files test/dts-test.ts",
     "test:eslint": "eslint src && eslint script",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
@@ -208,6 +210,7 @@
     "mocha": "~8.2.0",
     "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",
+    "tsd": "^0.29.0",
     "uglify-js": "~3.12.0"
   },
   "repository": {
