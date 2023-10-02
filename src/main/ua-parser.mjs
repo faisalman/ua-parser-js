@@ -3,7 +3,7 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-beta
+/* UAParser.js v2.0.0-beta.1
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -22,7 +22,7 @@
     /////////////
 
 
-    var LIBVERSION  = '2.0.0-beta',
+    var LIBVERSION  = '2.0.0-beta.1',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -131,10 +131,14 @@
         itemListToArray = function (header) {
             if (!header) return undefined;
             var arr = [];
-            var tokens = strip(/\\?\"/g, header).split(', ');
+            var tokens = strip(/\\?\"/g, header).split(',');
             for (var i = 0; i < tokens.length; i++) {
-                var token = tokens[i].split(';v=');
-                arr[i] = { brand : token[0], version : token[1] };
+                if (tokens[i].indexOf(';') > -1) {
+                    var token = trim(tokens[i]).split(';v=');
+                    arr[i] = { brand : token[0], version : token[1] };
+                } else {
+                    arr[i] = tokens[i];
+                }
             }
             return arr;
         },
@@ -159,7 +163,7 @@
             return str.replace(pattern, EMPTY);
         },
         stripQuotes = function (val) {
-            return typeof val === STR_TYPE ? strip(/\"/g, val) : val; 
+            return typeof val === STR_TYPE ? strip(/\\?\"/g, val) : val; 
         },
         trim = function (str, len) {
             if (typeof(str) === STR_TYPE) {
@@ -241,7 +245,7 @@
                     return (i === UNKNOWN) ? undefined : i;
                 }
             }
-            return str;
+            return map.hasOwnProperty('*') ? map['*'] : str;
     };
 
     ///////////////
@@ -265,10 +269,11 @@
         formFactorMap = {
             'embedded'  : 'Automotive',
             'mobile'    : 'Mobile',
-            'tablet'    : 'Tablet',
+            'tablet'    : ['Tablet', 'EInk'],
             'smarttv'   : 'TV',
-            'wearable'  : ['VR', 'XR'],
-            '?'         : 'Unknown'
+            'wearable'  : ['VR', 'XR', 'Watch'],
+            '?'         : ['Desktop', 'Unknown'],
+            '*'         : undefined
     };
 
     //////////////
@@ -949,7 +954,7 @@
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
                 [PLATFORMVER, stripQuotes(uach[CH_HEADER_PLATFORM_VER])],
                 [ARCHITECTURE, stripQuotes(uach[CH_HEADER_ARCH])],
-                [FORMFACTOR, stripQuotes(uach[CH_HEADER_FORM_FACTOR])],
+                [FORMFACTOR, itemListToArray(uach[CH_HEADER_FORM_FACTOR])],
                 [BITNESS, stripQuotes(uach[CH_HEADER_BITNESS])]
             ]);
         } else {
@@ -1031,8 +1036,7 @@
         };
 
         this.parseCH = function () {
-            var ua = this.ua,
-                uaCH = this.uaCH,
+            var uaCH = this.uaCH,
                 rgxMap = this.rgxMap;
     
             switch (this.itemType) {
@@ -1065,7 +1069,16 @@
                         this.set(MODEL, uaCH[MODEL]);
                     }
                     if (uaCH[FORMFACTOR]) {
-                        this.set(TYPE, strMapper(uaCH[FORMFACTOR], formFactorMap));
+                        var ff;
+                        if (typeof uaCH[FORMFACTOR] !== 'string') {
+                            var idx = 0;
+                            while (!ff && idx < uaCH[FORMFACTOR].length) {
+                                ff = strMapper(uaCH[FORMFACTOR][idx++], formFactorMap);
+                            }
+                        } else {
+                            ff = strMapper(uaCH[FORMFACTOR], formFactorMap);
+                        }
+                        this.set(TYPE, ff);
                     }
                     break;
                 case UA_OS:
