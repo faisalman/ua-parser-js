@@ -1,4 +1,4 @@
-# UAPARSER.JS PRO BUSINESS LICENSE
+# UAPARSER.JS PRO ENTERPRISE LICENSE
 
 Version 1, October 2023
 
@@ -32,9 +32,7 @@ This license is only valid for You as 1 (one) individual/organization/company an
 
 ## Rights
 
-You may use and modify The Code only in 1 (one) Project, if you use it in more than 1 (one) Project you have to purchase for another license.
-
-If You transfer a Project to a client, the use of The Code must be limited to the original functionality that You created for them. The Code must not be extracted, reproduced, or used in any other way. You must inform your client of this condition.
+You may use, copy, and modify The Code for an indefinite number of Projects.
 
 You have the right to get lifetime updates and a 1 (one) year support, starting from the time you make the purchase.
 
@@ -43,6 +41,8 @@ You have the right to get lifetime updates and a 1 (one) year support, starting 
 ## Restriction
 
 You may not redistribute The Code, as-is or modified, except as a part of a Project that you made.
+
+If You transfer a Project to a client, the use of The Code must be limited to the original functionality that You created for them. The Code must not be extracted, reproduced, or used in any other way. You must inform your client of this condition.
 
 You may not deliver a Project that contains The Code as an open-source Project that might be used for commercial purpose to the general public, except with our written consent.
 

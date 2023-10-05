@@ -4,12 +4,12 @@
 
 # UAParser.js
 
-Thank you for purchasing UAParser.js PRO Business License, if you haven't please order here: https://store.faisalman.com
+Thank you for purchasing UAParser.js PRO Enterprise License, if you haven't please order here: https://store.faisalman.com
 
 # Download
 
 ```sh
-npm install @ua-parser-js/pro-business
+npm install @ua-parser-js/pro-enterprise
 ```
 
 # Documentation
@@ -18,6 +18,6 @@ https://docs.uaparser.js.org/v2
 
 # License
 
-UAParser.js PRO Business
+UAParser.js PRO Enterprise
 
 Copyright (c) 2012-2023 Faisal Salman <<f@faisalman.com>>
