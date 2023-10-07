@@ -59,7 +59,7 @@ const CPU = Object.freeze({
 
 const Device = Object.freeze({
     CONSOLE: 'console',
-    DEKSTOP: 'desktop',
+    DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
