@@ -23,6 +23,177 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
 see what's new & breaking.
 
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Version 1.0</th>
+            <th colspan="4">Version 2.0</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>License</td>
+            <td>MIT</td>
+            <td>AGPLv3</td>
+            <td>PRO Personal</td>
+            <td>PRO Business</td>
+            <td>PRO Enterprise</td>
+        </tr>
+        <tr>
+            <td>Browser detection</td>
+            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>CPU detection</td>
+            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Device detection</td>
+            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Engine detection</td>
+            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>OS detection</td>
+            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Enhanced detection</td>
+            <td>⛔️</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Client Hints support</td>
+            <td>⛔️</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Extras (Apps, Bots, Libs, Emails, Media Players, etc)</td>
+            <td>⛔️</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>CommonJS support</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>ES modules support</td>
+            <td>⛔️</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>npm module available</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>TypeScript declarations available</td>
+            <td><a href="#" title="Community version">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Allowed for commercial use</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>⛔️</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Permissive license</td>
+            <td>✅</td>
+            <td><a href="#" title="Copyleft license">⚠️</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Unlimited use per 1 license</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td><a href="#" title="1 project per 1 license">⚠️</a></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>1-year support</td>
+            <td>⛔️</td>
+            <td>⛔️</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Lifetime updates</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><a href="#" title="Pay as you want">FREE</a></td>
+            <td><a href="#" title="Pay as you want">FREE</a></td>
+            <td><a href="#" title="$12 (one-time fee)">$12</a></td>
+            <td><a href="#" title="$25 (one-time fee)">$25</a></td>
+            <td><a href="#" title="$500 (one-time fee)">$500</a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th align="right" colspan="6">
+                <a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PACKAGE 📥</a>
+            </th>
+        </tr>
+    </tfoot>
+</table>
+
 # Documentation
 
   * v1.0: https://github.com/faisalman/ua-parser-js/tree/1.0.35#documentation
