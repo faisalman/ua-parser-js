@@ -41,7 +41,7 @@
         WEARABLE    = 'wearable',
         EMBEDDED    = 'embedded',
         USER_AGENT  = 'user-agent',
-        UA_MAX_LENGTH = 350,
+        UA_MAX_LENGTH = 500,
         BRANDS      = 'brands',
         FORMFACTOR  = 'formFactor',
         FULLVERLIST = 'fullVersionList',
