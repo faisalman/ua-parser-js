@@ -203,7 +203,7 @@
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
-    "@babel/traverse": "7.15.4",
+    "@babel/traverse": "7.23.2",
     "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "~1.32.2",
     "jshint": "~2.13.6",
