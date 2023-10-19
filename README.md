@@ -27,7 +27,7 @@ see what's new & breaking.
     <thead>
         <tr>
             <th></th>
-            <th>Version 1.0</th>
+            <th>Version 0.7 / 1.0</th>
             <th colspan="4">Version 2.0</th>
         </tr>
     </thead>
@@ -42,7 +42,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Browser detection</td>
-            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td><strong title="Basic detection">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -50,7 +50,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>CPU detection</td>
-            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td><strong title="Basic detection">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -58,7 +58,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Device detection</td>
-            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td><strong title="Basic detection">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -66,7 +66,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Engine detection</td>
-            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td><strong title="Basic detection">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -74,7 +74,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>OS detection</td>
-            <td><a href="#" title="Basic detection">⚠️</a></td>
+            <td><strong title="Basic detection">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -130,7 +130,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>TypeScript declarations available</td>
-            <td><a href="#" title="Community version">⚠️</a></td>
+            <td><strong title="Community version">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -147,7 +147,7 @@ see what's new & breaking.
         <tr>
             <td>Permissive license</td>
             <td>✅</td>
-            <td><a href="#" title="Copyleft license">⚠️</a></td>
+            <td><strong title="Copyleft license">⚠️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -157,7 +157,7 @@ see what's new & breaking.
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
-            <td><a href="#" title="1 project per 1 license">⚠️</a></td>
+            <td><strong title="1 project per 1 license">⚠️</strong></td>
             <td>✅</td>
         </tr>
         <tr>
@@ -178,11 +178,11 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Price</td>
-            <td><a href="#" title="Pay as you want">FREE</a></td>
-            <td><a href="#" title="Pay as you want">FREE</a></td>
-            <td><a href="#" title="$12 (one-time fee)">$12</a></td>
-            <td><a href="#" title="$25 (one-time fee)">$25</a></td>
-            <td><a href="#" title="$500 (one-time fee)">$500</a></td>
+            <td><strong title="Pay as you want">FREE</strong></td>
+            <td><strong title="Pay as you want">FREE</strong></td>
+            <td><strong title="$12 (one-time fee)">$12</strong></td>
+            <td><strong title="$25 (one-time fee)">$25</strong></td>
+            <td><strong title="$500 (one-time fee)">$500</strong></td>
         </tr>
     </tbody>
     <tfoot>

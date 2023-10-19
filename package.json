@@ -194,7 +194,7 @@
     "build+test": "npm run build && npm run test",
     "fuzz": "jazzer ./test/jazzer-fuzz-test.js --sync",
     "test": "./script/test-all.sh",
-    "test:dts": "tsd --typings src/main/ua-parser.d.ts --files test/dts-test.ts",
+    "test:dts-lint": "tsd --typings src/main/ua-parser.d.ts --files test/dts-test.ts",
     "test:eslint": "eslint src && eslint script",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
