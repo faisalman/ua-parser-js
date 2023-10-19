@@ -70,6 +70,7 @@
         BLACKBERRY  = 'BlackBerry',
         GOOGLE      = 'Google',
         HUAWEI      = 'Huawei',
+        LENOVO      = 'Lenovo',
         LG          = 'LG',
         MICROSOFT   = 'Microsoft',
         MOTOROLA    = 'Motorola',
@@ -326,6 +327,8 @@
             ], [VERSION, [NAME, 'IE']], [
             /ya(?:search)?browser\/([\w\.]+)/i                                  // Yandex
             ], [VERSION, [NAME, 'Yandex']], [
+            /slbrowser\/([\w\.]+)/i                                             // Smart Lenovo Browser
+            ], [VERSION, [NAME, 'Smart ' + LENOVO + SUFFIX_BROWSER]], [
             /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
@@ -540,7 +543,7 @@
             // Lenovo
             /(ideatab[-\w ]+)/i,
             /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i
-            ], [MODEL, [VENDOR, 'Lenovo'], [TYPE, TABLET]], [
+            ], [MODEL, [VENDOR, LENOVO], [TYPE, TABLET]], [
 
             // Nokia
             /(?:maemo|nokia).*(n900|lumia \d+)/i,
