@@ -301,11 +301,12 @@
             ], [VERSION, [NAME, OPERA]], [
 
             // Mixed
+            /\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i            // Baidu
+            ], [VERSION, [NAME, 'Baidu']], [
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
             // Trident based
-            /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,               // Avant/IEMobile/SlimBrowser
-            /(ba?idubrowser)[\/ ]?([\w\.]+)/i,                                  // Baidu Browser
+            /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,             // Avant/IEMobile/SlimBrowser
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
@@ -359,7 +360,7 @@
             ], [[NAME, SOGOU + ' Mobile'], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
-            /m?(qqbrowser|baiduboxapp|2345Explorer)[\/ ]?([\w\.]+)/i            // QQBrowser/Baidu App/2345 Browser
+            /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i                        // QQBrowser/2345 Browser
             ], [NAME, VERSION], [
             /(lbbrowser)/i,                                                     // LieBao Browser
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
