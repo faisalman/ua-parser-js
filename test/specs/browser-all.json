@@ -84,7 +84,7 @@
         "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.0 Chrome/38.0.2125.102 Mobile Safari/537.36",
         "expect"  :
         {
-            "name"    : "Samsung Browser",
+            "name"    : "Samsung Internet",
             "version" : "3.0",
             "major"   : "3"
         }
@@ -1189,11 +1189,41 @@
         }
     },
     {
-        "desc"    : "Samsung Browser",
+        "desc"    : "Samsung Internet for Android",
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; SAMSUNG-SM-G925A Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
         "expect"  :
         {
-            "name"    : "Samsung Browser",
+            "name"    : "Samsung Internet",
+            "version" : "4.0",
+            "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "Samsung Internet for Tizen Mobile",
+        "ua"      : "Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) SamsungBrowser/1.0 Mobile Safari/537.3",
+        "expect"  :
+        {
+            "name"    : "Samsung Internet",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Samsung Internet for Smart-TV",
+        "ua"      : "Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1",
+        "expect"  :
+        {
+            "name"    : "Samsung Internet",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Samsung Internet for Gear VR",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925K Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile VR Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Samsung Internet",
             "version" : "4.0",
             "major"   : "4"
         }

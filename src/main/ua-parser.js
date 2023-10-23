@@ -347,8 +347,10 @@
             ], [VERSION, [NAME, PREFIX_MOBILE + FIREFOX]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
             ], [[NAME, '360' + SUFFIX_BROWSER]], [
-            /(oculus|samsung|sailfish|huawei|vivo)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Samsung/Sailfish/HuaweiBrowser/VivoBrowser
+            /(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i
+            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/HuaweiBrowser/VivoBrowser
+            /samsungbrowser\/([\w\.]+)/i                                        // Samsung Internet
+            ], [VERSION, [NAME, SAMSUNG + ' Internet']], [
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
             ], [[NAME, /_/g, ' '], VERSION], [
             /metasr[\/ ]?([\d\.]+)/i                                            // Sogou Explorer
