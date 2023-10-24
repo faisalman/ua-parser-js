@@ -183,6 +183,10 @@
     "./extensions": {
       "require": "./src/extensions/ua-parser-extensions.js",
       "import": "./src/extensions/ua-parser-extensions.mjs"
+    },
+    "./helpers": {
+      "require": "./src/extensions/ua-parser-helpers.js",
+      "import": "./src/extensions/ua-parser-helpers.mjs"
     }
   },
   "files": [
