@@ -19,7 +19,6 @@
     // Constants
     /////////////
 
-
     var LIBVERSION  = '2.0.0-beta.1',
         EMPTY       = '',
         UNKNOWN     = '?',
@@ -89,7 +88,8 @@
         SOGOU       = 'Sogou',
         WINDOWS     = 'Windows';
    
-    var NAVIGATOR           = (typeof window !== UNDEF_TYPE && window.navigator) ? 
+    var isWindow            = typeof window !== UNDEF_TYPE,
+        NAVIGATOR           = (isWindow && window.navigator) ? 
                                 window.navigator : 
                                 undefined,
         NAVIGATOR_UADATA    = (NAVIGATOR && NAVIGATOR.userAgentData) ? 
@@ -121,12 +121,15 @@
                 }
                 return false;
             }
-            return typeof str1 === STR_TYPE ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
+            return isString(str1) ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
         },
         isExtensions = function (obj) {
             for (var prop in obj) {
                 return /^(browser|cpu|device|engine|os)$/.test(prop);
             }
+        },
+        isString = function (val) {
+            return typeof val === STR_TYPE;
         },
         itemListToArray = function (header) {
             if (!header) return undefined;
@@ -143,10 +146,10 @@
             return arr;
         },
         lowerize = function (str) {
-            return typeof(str) === STR_TYPE ? str.toLowerCase() : str;
+            return isString(str) ? str.toLowerCase() : str;
         },
         majorize = function (version) {
-            return typeof(version) === STR_TYPE ? strip(/[^\d\.]/g, version).split('.')[0] : undefined;
+            return isString(version) ? strip(/[^\d\.]/g, version).split('.')[0] : undefined;
         },
         setProps = function (arr) {
             for (var i in arr) {
@@ -160,15 +163,15 @@
             return this;
         },
         strip = function (pattern, str) {
-            return str.replace(pattern, EMPTY);
+            return isString(str) ? str.replace(pattern, EMPTY) : str;
         },
-        stripQuotes = function (val) {
-            return typeof val === STR_TYPE ? strip(/\\?\"/g, val) : val; 
+        stripQuotes = function (str) {
+            return strip(/\\?\"/g, str); 
         },
         trim = function (str, len) {
-            if (typeof(str) === STR_TYPE) {
+            if (isString(str)) {
                 str = strip(/^\s\s*/, str);
-                return typeof(len) === UNDEF_TYPE ? str : str.substring(0, UA_MAX_LENGTH);
+                return typeof len === UNDEF_TYPE ? str : str.substring(0, UA_MAX_LENGTH);
             }
     };
 
@@ -1191,7 +1194,7 @@
             ['getResult', createItemFunc(UA_RESULT)],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
-                if (typeof ua === STR_TYPE)
+                if (isString(ua))
                     userAgent = ua.length > UA_MAX_LENGTH ? trim(ua, UA_MAX_LENGTH) : ua;
                 return this;
             }]
@@ -1212,7 +1215,7 @@
     //////////
 
     // check js environment
-    if (typeof(exports) !== UNDEF_TYPE) {
+    if (typeof exports !== UNDEF_TYPE) {
         // nodejs env
         if (typeof module !== UNDEF_TYPE && module.exports) {
             exports = module.exports = UAParser;
@@ -1220,11 +1223,11 @@
         exports.UAParser = UAParser;
     } else {
         // requirejs env (optional)
-        if (typeof(define) === FUNC_TYPE && define.amd) {
+        if (typeof define === FUNC_TYPE && define.amd) {
             define(function () {
                 return UAParser;
             });
-        } else if (typeof window !== UNDEF_TYPE) {
+        } else if (isWindow) {
             // browser env
             window.UAParser = UAParser;
         }
@@ -1235,7 +1238,7 @@
     //   In AMD env the global scope should be kept clean, but jQuery is an exception.
     //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
     //   and we should catch that.
-    var $ = typeof window !== UNDEF_TYPE && (window.jQuery || window.Zepto);
+    var $ = isWindow && (window.jQuery || window.Zepto);
     if ($ && !$.ua) {
         var parser = new UAParser();
         $.ua = parser.getResult();
