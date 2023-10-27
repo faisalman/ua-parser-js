@@ -144,9 +144,69 @@
         "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; baidubrowser 1.x)",
         "expect"  :
         {
-            "name"    : "baidubrowser",
+            "name"    : "Baidu",
             "version" : "1.x",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Baidu",
+        "ua"      : "Mozilla/5.0 (Linux; Android 9; Redmi Note 5 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.153 Mobile Safari/537.36 bdbrowser/6.4.0.4",
+        "expect"  :
+        {
+            "name"    : "Baidu",
+            "version" : "6.4.0.4",
+            "major"   : "6"
+        }
+    },
+    {
+        "desc"    : "Baidu",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.4.9999.1900 Safari/537.31 BDSpark/26.4",
+        "expect"  :
+        {
+            "name"    : "Baidu",
+            "version" : "26.4",
+            "major"   : "26"
+        }
+    },
+    {
+        "desc"    : "Baidu",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) BaiduHD/5.4.0.0 Mobile/10A406 Safari/8536.25",
+        "expect"  :
+        {
+            "name"    : "Baidu",
+            "version" : "5.4.0.0",
+            "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "BaiDu Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 BIDUBrowser/8.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Baidu",
+            "version" : "8.7",
+            "major"   : "8"
+        }
+    },
+    {
+        "desc"    : "baidu app on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16C101 main%2F1.0 baiduboxapp/11.12.0.18 (Baidu; P2 12.1.2)",
+        "expect"  :
+        {
+            "name"    : "Baidu",
+            "version" : "11.12.0.18",
+            "major"   : "11"
+        }
+    },
+    {
+        "desc"    : "baidu app on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.1.0; BKK-AL10 Build/HONORBKK-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.83 Mobile Safari/537.36 T7/11.11 baiduboxapp/11.11.0.0 (Baidu; P1 8.1.0)",
+        "expect"  :
+        {
+            "name"    : "Baidu",
+            "version" : "11.11.0.0",
+            "major"   : "11"
         }
     },
     {
@@ -1649,26 +1709,6 @@
         }
     },
     {
-        "desc"    : "baidu app on iOS",
-        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16C101 main%2F1.0 baiduboxapp/11.12.0.18 (Baidu; P2 12.1.2)",
-        "expect"  :
-        {
-            "name"    : "baiduboxapp",
-            "version" : "11.12.0.18",
-            "major"   : "11"
-        }
-    },
-    {
-        "desc"    : "baidu app on Android",
-        "ua"      : "Mozilla/5.0 (Linux; Android 8.1.0; BKK-AL10 Build/HONORBKK-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.83 Mobile Safari/537.36 T7/11.11 baiduboxapp/11.11.0.0 (Baidu; P1 8.1.0)",
-        "expect"  :
-        {
-            "name"    : "baiduboxapp",
-            "version" : "11.11.0.0",
-            "major"   : "11"
-        }
-    },
-    {
         "desc"    : "WeChat Desktop for Windows Built-in Browser",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.901.400 QQBrowser/9.0.2524.400",
         "expect"  :
@@ -1734,16 +1774,6 @@
         "expect"  :
         {
             "name"    : "LBBROWSER"
-        }
-    },
-    {
-        "desc"    : "BaiDu Browser",
-        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 BIDUBrowser/8.7 Safari/537.36",
-        "expect"  :
-        {
-            "name"    : "BIDUBrowser",
-            "version" : "8.7",
-            "major"   : "8"
         }
     },
     {
