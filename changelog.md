@@ -4,6 +4,14 @@
 
 Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
 
+## Version 0.7.37 / 1.0.37
+- Fix misidentified WebView token as device model
+- Increase UA_MAX_LENGTH to 500
+- Add new browser: Alipay, Klarna, Smart Lenovo Browser, Vivo Browser
+- Add new device: Ulefone
+- Improve device detection: Realme, Xiaomi Redmi
+- Rename browser: Avant, Baidu, Samsung Internet, Sogou Explorer, Sogou Mobile, WeChat
+
 ## Version 0.7.36 / 1.0.36
 - Add new browser: Snapchat
 - Add new devices: Infinix, Tecno
