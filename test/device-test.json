@@ -1647,10 +1647,19 @@
         }
     },
     {
+        "desc": "Realme 8",
+        "ua": "Mozilla/5.0 (Linux; Android 12; RMX3085) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX3085",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Realme 9 Pro",
         "ua": "Mozilla/5.0 (Linux; Android 13; RMX3471) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
         "expect": {
-            "vendor": "undefined",
+            "vendor": "Realme",
             "model": "RMX3471",
             "type": "mobile"
         }
@@ -1659,7 +1668,7 @@
         "desc": "Realme GT Master",
         "ua": "Mozilla/5.0 (Linux; Android 13; RMX3363) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
         "expect": {
-            "vendor": "undefined",
+            "vendor": "Realme",
             "model": "RMX3363",
             "type": "mobile"
         }
