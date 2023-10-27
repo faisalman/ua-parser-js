@@ -2466,6 +2466,42 @@
         }
     },
     {
+        "desc": "Xiaomi 2201117TG",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 2201117TG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "2201117TG",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi M2004J19C",
+        "ua": "Mozilla/5.0 (Linux; Android 11; M2004J19C Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.77 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2004J19C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi M2006C3MNG",
+        "ua": "Mozilla/5.0 (Linux; Android 11; M2006C3MNG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2006C3MNG",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xiaomi 21061119DG",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 11; 21061119DG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.7.24.00 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "21061119DG",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi 2013023",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; en-US; 2013023 Build/HM2013023) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/10.0.1.512 U3/0.8.0 Mobile Safari/533.1",
         "expect": {
@@ -2685,7 +2721,7 @@
         "desc": "Xiaomi Redmi 10C",
         "ua": "Mozilla/5.0 (Linux; Android 12; 220333QAG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
         "expect": {
-            "vendor": "undefined",
+            "vendor": "Xiaomi",
             "model": "220333QAG",
             "type": "mobile"
         }
@@ -2739,7 +2775,7 @@
         "desc": "XiaoMi Redmi Note 10 5G",
         "ua": "Mozilla/5.0 (Linux; Android 12; M2103K19C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.88 Mobile Safari/537.36",
         "expect": {
-            "vendor": "undefined",
+            "vendor": "Xiaomi",
             "model": "M2103K19C",
             "type": "mobile"
         }
@@ -2748,7 +2784,7 @@
         "desc": "XiaoMi Redmi Note 10 Pro",
         "ua": "Mozilla/5.0 (Linux; Android 13; M2101K6P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
         "expect": {
-            "vendor": "undefined",
+            "vendor": "Xiaomi",
             "model": "M2101K6P",
             "type": "mobile"
         }
@@ -2757,7 +2793,7 @@
         "desc": "XiaoMi Redmi Note 10 Pro",
         "ua": "Mozilla/5.0 (Linux; Android 12; M2101K6G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
         "expect": {
-            "vendor": "undefined",
+            "vendor": "Xiaomi",
             "model": "M2101K6G",
             "type": "mobile"
         }
