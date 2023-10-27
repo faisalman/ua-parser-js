@@ -2808,6 +2808,24 @@
         }
     },
     {
+        "desc": "XiaoMi Redmi Note 12 Turbo",
+        "ua": "Mozilla/5.0 (Linux; Android 13; 23049RAD8C; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36 VivoBrowser/16.7.1.1",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "23049RAD8C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ZTE Blade A6",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; ZTE BLADE A0620 Build/NMF26F; ru-ru) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 Puffin/9.2.0.50586AP",
+        "expect": {
+            "vendor": "ZTE",
+            "model": "BLADE A0620",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "PlayStation 4",
         "ua": "Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",
         "expect": {
