@@ -288,6 +288,8 @@
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
             ], [[NAME, FACEBOOK], VERSION], [
+            /(Klarna)\/([\w\.]+)/i                                              // Klarna Shopping Browser for iOS & Android
+            ], [[NAME, KLARNA], VERSION], [
             /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
