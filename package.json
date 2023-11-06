@@ -174,7 +174,8 @@
   "exports": {
     ".": {
       "require": "./src/main/ua-parser.js",
-      "import": "./src/main/ua-parser.mjs"
+      "import": "./src/main/ua-parser.mjs",
+      "types": "./src/main/ua-parser.d.ts"
     },
     "./enums": {
       "require": "./src/enums/ua-parser-enums.js",
@@ -185,8 +186,9 @@
       "import": "./src/extensions/ua-parser-extensions.mjs"
     },
     "./helpers": {
-      "require": "./src/extensions/ua-parser-helpers.js",
-      "import": "./src/extensions/ua-parser-helpers.mjs"
+      "require": "./src/helpers/ua-parser-helpers.js",
+      "import": "./src/helpers/ua-parser-helpers.mjs",
+      "types": "./src/helpers/ua-parser-helpers.d.ts"
     }
   },
   "files": [
