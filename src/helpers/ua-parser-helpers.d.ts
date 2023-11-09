@@ -4,8 +4,10 @@
 
 import { IResult } from "../main/ua-parser";
 
-declare function isAppleSilicon(res:IResult): boolean;
+declare function isAppleSilicon(res: IResult): boolean;
+declare function isChromiumBased(res: IResult): boolean;
 
 export {
-    isAppleSilicon
+    isAppleSilicon,
+    isChromiumBased
 }

@@ -7,14 +7,15 @@
 
 /*jshint esversion: 6 */ 
 
-const { CPU, OS } = require('../enums/ua-parser-enums');
+const { CPU, OS, Engine } = require('../enums/ua-parser-enums');
 
-const isAppleSilicon = function (res) {
-    return res.os.is(OS.MACOS) && res.cpu.is(CPU.ARM);
-}
+const isAppleSilicon = (res) => res.os.is(OS.MACOS) && res.cpu.is(CPU.ARM);
+
+const isChromiumBased = (res) => res.engine.is(Engine.BLINK);
 
 module.exports = { 
-    isAppleSilicon
+    isAppleSilicon,
+    isChromiumBased
 }
 
 // TODO: create test
