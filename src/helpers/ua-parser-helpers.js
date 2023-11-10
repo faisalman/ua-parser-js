@@ -17,5 +17,3 @@ module.exports = {
     isAppleSilicon,
     isChromiumBased
 }
-
-// TODO: create test
