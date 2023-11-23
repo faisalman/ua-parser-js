@@ -19,23 +19,21 @@ The most comprehensive, compact, & up-to-date JavaScript library to detect
 user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser 
 (client-side) or node.js (server-side).
 
-# Version 2.0
-Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
-see what's new & breaking.
+## License Options
 
 <table>
     <thead>
         <tr>
             <th></th>
-            <th>Version 0.7 / 1.0</th>
-            <th colspan="4">Version 2.0</th>
+            <th colspan="2">Open-Source Editions</th>
+            <th colspan="3">PRO / Commercial Editions</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>License</td>
+            <td>License options</td>
             <td>MIT</td>
-            <td>AGPLv3</td>
+            <td>AGPL</td>
             <td>PRO Personal</td>
             <td>PRO Business</td>
             <td>PRO Enterprise</td>
@@ -145,9 +143,9 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Permissive license</td>
+            <td>Permissive (non-copyleft) license</td>
             <td>✅</td>
-            <td><strong title="Copyleft license">⚠️</strong></td>
+            <td><strong title="Copyleft license">⛔️</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -188,11 +186,15 @@ see what's new & breaking.
     <tfoot>
         <tr>
             <th align="right" colspan="6">
-                <a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PACKAGE 📥</a>
+                <a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a>
             </th>
         </tr>
     </tfoot>
 </table>
+
+## Version 2.0
+Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
+see what's new & breaking.
 
 # Documentation
 
@@ -216,22 +218,3 @@ Made with [contributors-img](https://contrib.rocks).
 
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
-
-# License
-
-AGPLv3 License
-
-Copyright (c) 2012-2023 Faisal Salman <<f@faisalman.com>>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see http://www.gnu.org/licenses/.
