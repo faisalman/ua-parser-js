@@ -490,4 +490,26 @@ describe('Map UA-CH headers', function () {
             assert.strictEqual(ua.device.type, undefined);
         });
     });
+
+    it('Avoid error on headers variation', function () {  
+
+        const headers2 = {
+            'sec-ch-ua' : '"Google Chrome";v="119", "Chromium";v="119", "Not?A_Brand";v="24"',
+            'sec-ch-ua-full-version-list' : '"Google Chrome", "Chromium", "Not?A_Brand";v="24.0.0.0"',
+            'sec-ch-ua-full-version' : '""',
+            'sec-ch-ua-mobile' : '?0',
+            'sec-ch-ua-arch' : '""',
+            'sec-ch-ua-bitness' : '""',
+            'sec-ch-ua-model' : '""',
+            'sec-ch-ua-platform' : '"Windows"',
+            'sec-ch-ua-platform-version' : '""',
+            'sec-ch-ua-wow64' : '?0',
+        };
+        
+        uap = UAParser(headers2).withClientHints();
+
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, undefined);
+        assert.strictEqual(uap.browser.major, undefined);
+    });
 });

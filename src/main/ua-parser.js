@@ -1056,7 +1056,7 @@
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS];
                     if (brands) {
                         for (var i in brands) {
-                            var brandName = brands[i].brand,
+                            var brandName = brands[i].brand || brands[i],
                                 brandVersion = brands[i].version;
                             if (!/not.a.brand/i.test(brandName) && (i < 1 || /chromi/i.test(this.get(NAME)))) {
                                 this.set(NAME, strip(GOOGLE+' ', brandName))
