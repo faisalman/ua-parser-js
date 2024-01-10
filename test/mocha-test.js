@@ -512,4 +512,50 @@ describe('Map UA-CH headers', function () {
         assert.strictEqual(uap.browser.version, undefined);
         assert.strictEqual(uap.browser.major, undefined);
     });
+
+    it('Prioritize more specific brand name regardless the order', function () {  
+
+        const headers3a = {
+            'sec-ch-ua-full-version-list' : '"Not_A Brand;v=8, Chromium;v=120.0.6099.131, Google Chrome;v=120.0.6099.132"'
+        };
+        const headers3b = {
+            'sec-ch-ua-full-version-list' : '"Chromium;v=120.0.6099.131, Not_A Brand;v=8, Google Chrome;v=120.0.6099.132"'
+        };
+        const headers3c = {
+            'sec-ch-ua-full-version-list' : '"Google Chrome;v=120.0.6099.132, Chromium;v=120.0.6099.131, Not_A Brand;v=8"'
+        };
+        const headers3d = {
+            'sec-ch-ua-full-version-list' : '"Microsoft Edge;v=120.0.6099.133, Google Chrome;v=120.0.6099.132, Chromium;v=120.0.6099.131, Not_A Brand;v=8"'
+        };
+        const headers3e = {
+            'sec-ch-ua-full-version-list' : '"Chromium;v=120.0.6099.131, Google Chrome;v=120.0.6099.132, Microsoft Edge;v=120.0.6099.133, Not_A Brand;v=8"'
+        };
+        const headers3f = {
+            'sec-ch-ua-full-version-list' : '"Not_A Brand;v=8, Microsoft Edge;v=120.0.6099.133, Google Chrome;v=120.0.6099.132, Chromium;v=120.0.6099.131"'
+        };
+        
+        uap = UAParser(headers3a).withClientHints();
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, "120.0.6099.132");
+
+        uap = UAParser(headers3b).withClientHints();
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, "120.0.6099.132");
+
+        uap = UAParser(headers3c).withClientHints();
+        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.version, "120.0.6099.132");
+
+        uap = UAParser(headers3d).withClientHints();
+        assert.strictEqual(uap.browser.name, "Microsoft Edge");
+        assert.strictEqual(uap.browser.version, "120.0.6099.133");
+
+        uap = UAParser(headers3e).withClientHints();
+        assert.strictEqual(uap.browser.name, "Microsoft Edge");
+        assert.strictEqual(uap.browser.version, "120.0.6099.133");
+
+        uap = UAParser(headers3f).withClientHints();
+        assert.strictEqual(uap.browser.name, "Microsoft Edge");
+        assert.strictEqual(uap.browser.version, "120.0.6099.133");
+    });
 });

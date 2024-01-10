@@ -140,7 +140,7 @@
                     var token = trim(tokens[i]).split(';v=');
                     arr[i] = { brand : token[0], version : token[1] };
                 } else {
-                    arr[i] = tokens[i];
+                    arr[i] = trim(tokens[i]);
                 }
             }
             return arr;
@@ -1055,15 +1055,16 @@
     
             switch (this.itemType) {
                 case UA_BROWSER:
-                    var brands = uaCH[FULLVERLIST] || uaCH[BRANDS];
+                    var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
                         for (var i in brands) {
-                            var brandName = brands[i].brand || brands[i],
+                            var brandName = strip(GOOGLE+' ', brands[i].brand || brands[i]),
                                 brandVersion = brands[i].version;
-                            if (!/not.a.brand/i.test(brandName) && (i < 1 || /chromi/i.test(this.get(NAME)))) {
-                                this.set(NAME, strip(GOOGLE+' ', brandName))
+                            if (!/not.a.brand/i.test(brandName) && (!prevName || (/chrom/i.test(prevName) && !/chromi/i.test(brandName)))) {
+                                this.set(NAME, brandName)
                                     .set(VERSION, brandVersion)
                                     .set(MAJOR, majorize(brandVersion));
+                                prevName = brandName;
                             }
                         }
                     }
