@@ -547,15 +547,15 @@ describe('Map UA-CH headers', function () {
         assert.strictEqual(uap.browser.version, "120.0.6099.132");
 
         uap = UAParser(headers3d).withClientHints();
-        assert.strictEqual(uap.browser.name, "Microsoft Edge");
+        assert.strictEqual(uap.browser.name, "Edge");
         assert.strictEqual(uap.browser.version, "120.0.6099.133");
 
         uap = UAParser(headers3e).withClientHints();
-        assert.strictEqual(uap.browser.name, "Microsoft Edge");
+        assert.strictEqual(uap.browser.name, "Edge");
         assert.strictEqual(uap.browser.version, "120.0.6099.133");
 
         uap = UAParser(headers3f).withClientHints();
-        assert.strictEqual(uap.browser.name, "Microsoft Edge");
+        assert.strictEqual(uap.browser.name, "Edge");
         assert.strictEqual(uap.browser.version, "120.0.6099.133");
     });
 });

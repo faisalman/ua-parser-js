@@ -1058,7 +1058,7 @@
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
                         for (var i in brands) {
-                            var brandName = strip(GOOGLE+' ', brands[i].brand || brands[i]),
+                            var brandName = strip(/(Google|Microsoft) /, brands[i].brand || brands[i]),
                                 brandVersion = brands[i].version;
                             if (!/not.a.brand/i.test(brandName) && (!prevName || (/chrom/i.test(prevName) && !/chromi/i.test(brandName)))) {
                                 this.set(NAME, brandName)
