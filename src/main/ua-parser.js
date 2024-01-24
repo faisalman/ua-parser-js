@@ -1085,8 +1085,8 @@
                     }
                     // Xbox-Specific Detection
                     if (uaCH[MODEL] == 'Xbox') {
-                        this.set(TYPE, CONSOLE);
-                        this.set(VENDOR, MICROSOFT);
+                        this.set(TYPE, CONSOLE)
+                            .set(VENDOR, MICROSOFT);
                     }
                     if (uaCH[FORMFACTOR]) {
                         var ff;
@@ -1112,7 +1112,7 @@
                     // Xbox-Specific Detection
                     if (this.get(NAME) == WINDOWS && uaCH[MODEL] == 'Xbox') {
                         this.set(NAME, 'Xbox')
-                        this.set(VERSION, undefined)
+                            .set(VERSION, undefined);
                     }           
                     break;
                 case UA_RESULT:
