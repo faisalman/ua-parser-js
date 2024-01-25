@@ -173,42 +173,23 @@
   "browser": "dist/ua-parser.pack.js",
   "exports": {
     ".": {
-      "require": {
-        "default": "./src/main/ua-parser.js",
-        "types": "./src/main/ua-parser.d.ts"
-      },
-      "import": {
-        "default": "./src/main/ua-parser.mjs",
-        "types": "./src/main/ua-parser.d.ts"
-      }
+      "require": "./src/main/ua-parser.js",
+      "import": "./src/main/ua-parser.mjs",
+      "types": "./src/main/ua-parser.d.ts"
     },
     "./enums": {
-      "require": {
-        "default": "./src/enums/ua-parser-enums.js"
-      },
-      "import": {
-        "default": "./src/enums/ua-parser-enums.mjs"
-      }
+      "require": "./src/enums/ua-parser-enums.js",
+      "import": "./src/enums/ua-parser-enums.mjs"
     },
     "./extensions": {
-      "require": {
-        "default": "./src/extensions/ua-parser-extensions.js",
-        "types": "./src/extensions/ua-parser-extensions.d.ts"
-      },
-      "import": {
-        "default": "./src/extensions/ua-parser-extensions.mjs",
-        "types": "./src/extensions/ua-parser-extensions.d.ts"
-      }
+      "require": "./src/extensions/ua-parser-extensions.js",
+      "import": "./src/extensions/ua-parser-extensions.mjs",
+      "types": "./src/extensions/ua-parser-extensions.d.ts"
     },
     "./helpers": {
-      "require": {
-        "default": "./src/helpers/ua-parser-helpers.js",
-        "types": "./src/helpers/ua-parser-helpers.d.ts"
-      },
-      "import": {
-        "default": "./src/helpers/ua-parser-helpers.mjs",
-        "types": "./src/helpers/ua-parser-helpers.d.ts"
-      }
+      "require": "./src/helpers/ua-parser-helpers.js",
+      "import": "./src/helpers/ua-parser-helpers.mjs",
+      "types": "./src/helpers/ua-parser-helpers.d.ts"
     }
   },
   "files": [
