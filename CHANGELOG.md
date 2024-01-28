@@ -16,9 +16,53 @@
   - Provided Extensions submodule `'ua-parser-js/extensions'`
   - Provided Helpers submodule `'ua-parser-js/helpers'`
 
+## Version 2.0.0-beta.2
+
+- Increase UA_MAX_LENGTH to 500
+- Add TypeScript declaration file in `ua-parser-js/extensions` submodule
+- Improve TypeScript module resolution
+- Add new methods in `ua-parser-js/helpers` submodule: `isAppleSilicon()` & `isChromiumBased()`
+- Fix misidentified WebView token as device model
+- Add new browser: Alipay, Klarna, Opera GX, Smart Lenovo Browser, Vivo Browser
+- Rename browser: Avant, Baidu, Samsung Internet, Sogou Explorer, Sogou Mobile, WeChat
+- Improve client-hints detection: Edge, Xbox
+
+## Version 2.0.0-beta.1
+
+- Update Client Hints Form-Factor
+- Provide in-package type definitions
+- Add new device: Ulefone
+- Improve device detection: Realme, Xiaomi Redmi
+
+## Version 2.0.0-alpha.3
+
+- Add `withFeatureCheck()` method
+- Add `isFrozenUA()` method in `ua-parser-js/helpers` submodule
+- Add `MediaPlayers` & `Modules` in `ua-parser-js/extensions` submodule
+- Fix issue with ESM import
+
+## Version 2.0.0-alpha.2
+
+- Fix browser result always returning Chromium when using withClientHints()
+- Fix infinite-loop when await-ing withClientHints() in non-client-hints browser
+
+## Version 2.0.0-alpha.1
+
+- Initial work on new major version
+
+
 # Version 0.7 / 1.0
 
 Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
+
+## Version 0.7.37
+
+- Fix misidentified WebView token as device model
+- Increase UA_MAX_LENGTH to 500
+- Add new browser: Alipay, Klarna, Smart Lenovo Browser, Vivo Browser
+- Add new device: Ulefone
+- Improve device detection: Realme, Xiaomi Redmi
+- Rename browser: Avant, Baidu, Samsung Internet, Sogou Explorer, Sogou Mobile, WeChat
 
 ## Version 0.7.36 / 1.0.36
 - Add new browser: Snapchat

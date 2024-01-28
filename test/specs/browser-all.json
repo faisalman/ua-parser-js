@@ -1309,6 +1309,16 @@
         }
     },
     {
+        "desc"    : "Samsung Internet in Redmi 8A",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Samsung Internet",
+            "version" : "23.0",
+            "major"   : "23"
+        }
+    },
+    {
         "desc"    : "SeaMonkey",
         "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1b4pre) Gecko/20090405 SeaMonkey/2.0b1pre",
         "expect"  :
