@@ -1,4 +1,4 @@
-// Type definitions for UAParser.js v2.0.0-beta.1
+// Type definitions for UAParser.js v2.0.0-beta.2
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
@@ -47,10 +47,12 @@ declare namespace UAParser {
     }
 
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
+    type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
+    type UAParserExt = Partial<Record<UAParserProps, RegexMap>>;
 
-    export function UAParser(uastring?: string, extensions?: Record<string, RegexMap>, headers?: Record<string, string>): IResult;
+    export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: Record<string, string>): IResult;
     export function UAParser(uastring?: string, headers?: Record<string, string>): IResult;
-    export function UAParser(extensions?: Record<string, RegexMap>, headers?: Record<string, string>): IResult;
+    export function UAParser(extensions?: UAParserExt, headers?: Record<string, string>): IResult;
     export function UAParser(headers?: Record<string, string>): IResult;
 
     export class UAParser {
@@ -84,9 +86,9 @@ declare namespace UAParser {
         };
         static readonly VERSION: string;
 
-        constructor(uastring?: string, extensions?: Record<string, RegexMap>, headers?: Record<string, string>);
+        constructor(uastring?: string, extensions?: UAParserExt, headers?: Record<string, string>);
         constructor(uastring?: string, headers?: Record<string, string>);
-        constructor(extensions?: Record<string, RegexMap>, headers?: Record<string, string>);
+        constructor(extensions?: UAParserExt, headers?: Record<string, string>);
         constructor(headers?: Record<string, string>);
     
         getUA(): string;
