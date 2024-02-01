@@ -46,6 +46,12 @@ const modules = [
         dest : 'src/extensions/ua-parser-extensions.mjs',
         title : 'ua-parser-js/extensions',
         replacements : []
+    },
+    {
+        src : 'src/helpers/ua-parser-helpers.js',
+        dest : 'src/helpers/ua-parser-helpers.mjs',
+        title : 'ua-parser-js/helpers',
+        replacements : []
     }
 ];
 

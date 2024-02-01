@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js PRO Personal",
   "name": "@ua-parser-js/pro-personal",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
   "keywords": [
@@ -174,7 +174,8 @@
   "exports": {
     ".": {
       "require": "./src/main/ua-parser.js",
-      "import": "./src/main/ua-parser.mjs"
+      "import": "./src/main/ua-parser.mjs",
+      "types": "./src/main/ua-parser.d.ts"
     },
     "./enums": {
       "require": "./src/enums/ua-parser-enums.js",
@@ -182,7 +183,13 @@
     },
     "./extensions": {
       "require": "./src/extensions/ua-parser-extensions.js",
-      "import": "./src/extensions/ua-parser-extensions.mjs"
+      "import": "./src/extensions/ua-parser-extensions.mjs",
+      "types": "./src/extensions/ua-parser-extensions.d.ts"
+    },
+    "./helpers": {
+      "require": "./src/helpers/ua-parser-helpers.js",
+      "import": "./src/helpers/ua-parser-helpers.mjs",
+      "types": "./src/helpers/ua-parser-helpers.d.ts"
     }
   },
   "files": [
@@ -194,7 +201,7 @@
     "build+test": "npm run build && npm run test",
     "fuzz": "jazzer ./test/jazzer-fuzz-test.js --sync",
     "test": "./script/test-all.sh",
-    "test:dts": "tsd --typings src/main/ua-parser.d.ts --files test/dts-test.ts",
+    "test:dts-lint": "tsd --typings src/main/ua-parser.d.ts --files test/dts-test.ts",
     "test:eslint": "eslint src && eslint script",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
@@ -203,7 +210,7 @@
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
-    "@babel/traverse": "7.15.4",
+    "@babel/traverse": "7.23.2",
     "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "~1.32.2",
     "jshint": "~2.13.6",

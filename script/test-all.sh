@@ -29,4 +29,4 @@ npm run test:lockfile-lint || exit 1
 echo '
 - lint d.ts files
 '
-npm run test:dts || exit 1
+npm run test:dts-lint || exit 1
