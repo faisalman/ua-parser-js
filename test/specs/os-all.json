@@ -81,6 +81,24 @@
         }
     },
     {
+        "desc"    : "WeChat Desktop for Windows Built-in Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.901.400 QQBrowser/9.0.2524.400",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "7"
+        }
+    },
+    {
+        "desc"    : "WeChat Desktop for Windows Built-in Browser major version in 4",
+        "ua"      : "mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/81.0.4044.138 safari/537.36 nettype/wifi micromessenger/7.0.20.1781(0x6700143b) windowswechat",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "7"
+        }
+    },
+    {
         "desc"    : "Windows RT",
         "ua"      : "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)",
         "expect"  :
