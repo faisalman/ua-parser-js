@@ -15,6 +15,7 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
+        type?: string;
     }
 
     interface ICPU extends IData<ICPU> {
