@@ -81,6 +81,7 @@
         PREFIX_MOBILE  = 'Mobile ',
         SUFFIX_BROWSER = ' Browser',
         CHROME      = 'Chrome',
+        CHROMECAST  = 'Chromecast',
         EDGE        = 'Edge',
         FIREFOX     = 'Firefox',
         OPERA       = 'Opera',
@@ -670,8 +671,14 @@
             ], [[VENDOR, LG], [TYPE, SMARTTV]], [
             /(apple) ?tv/i                                                      // Apple TV
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
-            /crkey/i                                                            // Google Chromecast
-            ], [[MODEL, CHROME+'cast'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
+            /crkey.*devicetype\/chromecast/i                                    // Google Chromecast Third Generation
+            ], [[MODEL, CHROMECAST+' Third Generation'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
+            /crkey.*devicetype\/([^/]*)/i                                       // Google Chromecast with specific device type
+            ], [[MODEL, /^/, 'Chromecast '], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
+            /fuchsia.*crkey/i                                                   // Google Chromecast Nest Hub
+            ], [[MODEL, CHROMECAST+' Nest Hub'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
+            /crkey/i                                                            // Google Chromecast, Linux-based or unknown
+            ], [[MODEL, CHROMECAST], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
             /droid.+aft(\w+)( bui|\))/i                                         // Fire TV
             ], [MODEL, [VENDOR, AMAZON], [TYPE, SMARTTV]], [
             /\(dtv[\);].+(aquos)/i,
@@ -784,6 +791,18 @@
             /(macintosh|mac_powerpc\b)(?!.+haiku)/i                             // Mac OS
             ], [[NAME, 'macOS'], [VERSION, /_/g, '.']], [
 
+            // Google Chromecast
+            /android ([\d\.]+).*crkey/i                                         // Google Chromecast, Android-based
+            ], [VERSION, [NAME, CHROMECAST + ' Android']], [
+            /fuchsia.*crkey\/([\d\.]+)/i                                        // Google Chromecast, Fuchsia-based
+            ], [VERSION, [NAME, CHROMECAST + ' Fuchsia']], [
+            /crkey\/([\d\.]+).*devicetype\/smartspeaker/i                       // Google Chromecast, Linux-based Smart Speaker
+            ], [VERSION, [NAME, CHROMECAST + ' SmartSpeaker']], [
+            /linux.*crkey\/([\d\.]+)/i                                          // Google Chromecast, Legacy Linux-based
+            ], [VERSION, [NAME, CHROMECAST + ' Linux']], [
+            /crkey\/([\d\.]+)/i                                                 // Google Chromecast, unknown
+            ], [VERSION, [NAME, CHROMECAST]], [
+
             // Mobile OSes
             /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
             ], [VERSION, NAME], [                                               // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS
@@ -804,9 +823,7 @@
             /watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i                              // watchOS
             ], [VERSION, [NAME, 'watchOS']], [
 
-            // Google Chromecast
-            /crkey\/([\d\.]+)/i                                                 // Google Chromecast
-            ], [VERSION, [NAME, CHROME+'cast']], [
+            // Google ChromeOS
             /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
             ], [[NAME, "Chrome OS"], VERSION],[
 
