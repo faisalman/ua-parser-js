@@ -1512,6 +1512,15 @@
         }
     },
     {
+        "desc": "OPPO Pad",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; OPD2101 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.3.9.1290 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OPD2101",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "OPPO Neo",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; R831T Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 OppoBrowser/3.3.2 Mobile Safari/534.30",
         "expect": {
