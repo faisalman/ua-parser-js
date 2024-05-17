@@ -128,6 +128,7 @@ const Browser = Object.freeze({
     TESLA: 'Tesla',
     TIKTOK: 'TikTok',
     TIZEN: 'Tizen Browser',
+    TWITTER: 'Twitter',
     UC: 'UCBrowser',
     UP: 'UP.Browser',
     VIERA: 'Viera',
