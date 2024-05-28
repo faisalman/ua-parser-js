@@ -223,6 +223,8 @@
             ], [NAME, VERSION], [
             /opios[\/ ]+([\w\.]+)/i                                             // Opera mini on iphone >= 8.0
             ], [VERSION, [NAME, OPERA+' Mini']], [
+            /\bop(?:rg)?x\/([\w\.]+)/i                                          // Opera GX
+            ], [VERSION, [NAME, OPERA+' GX']], [
             /\bopr\/([\w\.]+)/i                                                 // Opera Webkit
             ], [VERSION, [NAME, OPERA]], [
 
