@@ -1377,6 +1377,15 @@
         }
     },
     {
+        "desc": "Oculus Quest 3",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; Quest 3) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/31.4.0.6.51.566757996 Chrome/120.0.6099.283 VR Safari/537.36",
+        "expect": {
+            "vendor": "Facebook",
+            "model": "Quest 3",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Oculus Quest Pro",
         "ua": "Mozilla/5.0 (X11; Linux x86_64; Quest Pro) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/24.4.0.22.60.426469926 SamsungBrowser/4.0 Chrome/106.0.5249.181 VR Safari/537.36",
         "expect": {
