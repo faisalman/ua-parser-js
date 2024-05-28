@@ -108,13 +108,13 @@ Iceweasel, Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon,
 Kindle, Klar, Klarna, Konqueror, LBBROWSER, Line, LinkedIn, Links, Lunascape, 
 Lynx, MIUI Browser, Maemo, Maxthon, Midori, Minimo, Mobile Safari, Mosaic, 
 Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, 
-Oculus Browser, OmniWeb, Opera Coast, Opera [Mini/Mobi/Tablet], PaleMoon, 
+Oculus Browser, OmniWeb, Opera Coast, Opera [GX/Mini/Mobi/Tablet], PaleMoon, 
 PhantomJS, Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, 
 QupZilla, RockMelt, Safari, Sailfish Browser, Samsung Internet, SeaMonkey, Silk, 
 Skyfire, Sleipnir, Slim, SlimBrowser, Smart Lenovo Browser, Snapchat, 
-Sogou [Explorer/Mobile], Swiftfox, Tesla, TikTok, Tizen Browser, UCBrowser, 
-UP.Browser, Viera, Vivaldi, Vivo Browser, Waterfox, WeChat, Weibo, Yandex, w3m, 
-Whale Browser, ...
+Sogou [Explorer/Mobile], Swiftfox, Tesla, TikTok, Tizen Browser, Twitter, 
+UCBrowser, UP.Browser, Viera, Vivaldi, Vivo Browser, Waterfox, WeChat, Weibo, 
+Yandex, w3m, Whale Browser, ...
 
 # 'browser.version' determined dynamically
 ```

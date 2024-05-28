@@ -4,6 +4,12 @@
 
 Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
 
+## Version 0.7.38 / 1.0.38
+- Fix error on getOS() when userAgentData.platform is undefined
+- Add new browser: Opera GX, Twitter
+- Improve browser detection: DuckDuckGo
+- Improve device detection: OPPO Pad, Oculus Quest
+
 ## Version 0.7.37 / 1.0.37
 - Fix misidentified WebView token as device model
 - Increase UA_MAX_LENGTH to 500
