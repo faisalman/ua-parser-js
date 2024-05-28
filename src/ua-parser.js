@@ -872,7 +872,7 @@
             _os[NAME] = undefined;
             _os[VERSION] = undefined;
             rgxMapper.call(_os, _ua, _rgxmap.os);
-            if (_isSelfNav && !_os[NAME] && _uach && _uach.platform != 'Unknown') {
+            if (_isSelfNav && !_os[NAME] && _uach && _uach.platform && _uach.platform != 'Unknown') {
                 _os[NAME] = _uach.platform  
                                     .replace(/chrome os/i, CHROMIUM_OS)
                                     .replace(/macos/i, MAC_OS);           // backward compatibility
