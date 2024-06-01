@@ -196,6 +196,7 @@
     "dist",
     "src"
   ],
+  "bin": "./script/cli.js",
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-module.js",
     "build+test": "npm run build && npm run test",
