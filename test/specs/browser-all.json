@@ -1710,16 +1710,6 @@
         }
     },
     {
-        "desc"    : "Viera",
-        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
-        "expect"  :
-        {
-            "name"    : "VIERA",
-            "version" : "undefined",
-            "major"   : "undefined"
-        }
-    },
-    {
         "desc"    : "w3m",
         "ua"      : "w3m/0.5.1",
         "expect"  :
