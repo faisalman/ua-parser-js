@@ -26,7 +26,7 @@ describe('Bots', () => {
         assert.deepEqual(botParser.setUA(gptBot).getBrowser(), {name: "GPTBot", version: "1.0", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(msnBot).getBrowser(), {name: "msnbot-media", version: "1.1", major: "1", type: "bot"});
         assert.deepEqual(botParser.setUA(bingPreview).getBrowser(), {name: "BingPreview", version: "1.0b", major: "1", type: "bot"});
-        assert.deepEqual(botParser.setUA(opera).getBrowser(), {name: "Opera", version: "8.5", major: "8"});
+        assert.deepEqual(botParser.setUA(opera).getBrowser(), {name: "Opera", version: "8.5", major: "8", type: undefined});
 
         // try merging Bots & CLIs
         const botsAndCLIs = { browser : [...Bots.browser, ...CLIs.browser]};

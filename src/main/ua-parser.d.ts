@@ -62,6 +62,7 @@ declare namespace UAParser {
             NAME: 'name'; 
             VERSION: 'version'; 
             MAJOR: 'major';
+            TYPE: 'type';
         };
         static readonly CPU: { 
             ARCHITECTURE: 'architecture'; 

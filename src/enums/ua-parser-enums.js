@@ -144,6 +144,14 @@ const Browser = Object.freeze({
     // TODO : test!
 });
 
+const BrowserType = Object.freeze({
+    BOT: 'bot',
+    CLI: 'cli',
+    EMAIL: 'email',
+    INAPP: 'inapp',
+    MODULE: 'module'
+});
+
 const CPU = Object.freeze({
     ARM : 'arm',
     ARM_64: 'arm64',
@@ -341,7 +349,8 @@ const OS = Object.freeze({
 });
 
 module.exports = { 
-    Browser, 
+    Browser,
+    BrowserType, 
     CPU, 
     Device, 
     Vendor,

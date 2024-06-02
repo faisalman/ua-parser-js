@@ -10,6 +10,7 @@ var cpus        = require('./specs/cpu-all.json');
 var devices     = require('./specs/device-all.json');
 var engines     = require('./specs/engine-all.json');
 var os          = require('./specs/os-all.json');
+
 var parser      = new UAParser();
 var methods     = [
     {
@@ -82,7 +83,7 @@ describe('Returns', function () {
         assert.deepEqual(new UAParser('').getResult(), 
             {
                 ua : '',
-                browser: { name: undefined, version: undefined, major: undefined },
+                browser: { name: undefined, version: undefined, major: undefined, type: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},

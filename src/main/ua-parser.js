@@ -847,7 +847,7 @@
     var defaultProps = (function () {
             var props = { init : {}, isIgnore : {}, isIgnoreRgx : {}, toString : {}};
             setProps.call(props.init, [
-                [UA_BROWSER, [NAME, VERSION, MAJOR]],
+                [UA_BROWSER, [NAME, VERSION, MAJOR, TYPE]],
                 [UA_CPU, [ARCHITECTURE]],
                 [UA_DEVICE, [TYPE, MODEL, VENDOR]],
                 [UA_ENGINE, [NAME, VERSION]],
@@ -1225,7 +1225,7 @@
     }
 
     UAParser.VERSION = LIBVERSION;
-    UAParser.BROWSER =  enumerize([NAME, VERSION, MAJOR]);
+    UAParser.BROWSER =  enumerize([NAME, VERSION, MAJOR, TYPE]);
     UAParser.CPU = enumerize([ARCHITECTURE]);
     UAParser.DEVICE = enumerize([MODEL, VENDOR, TYPE, CONSOLE, MOBILE, SMARTTV, TABLET, WEARABLE, EMBEDDED]);
     UAParser.ENGINE = UAParser.OS = enumerize([NAME, VERSION]);

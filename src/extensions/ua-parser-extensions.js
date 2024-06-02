@@ -15,12 +15,6 @@ const VERSION   = 'version';
 const MOBILE    = 'mobile';
 const TABLET    = 'tablet';
 
-const Apps = Object.freeze({
-    browser : [
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, 'app']]
-    ]
-});
-
 const Bots = Object.freeze({
     browser : [
         // Googlebot / BingBot / MSNBot / FacebookBot
@@ -121,6 +115,12 @@ const Emails = Object.freeze({
     browser : [
                                                                             // Microsoft Outlook / Thunderbird
         [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, 'email']]
+    ]
+});
+
+const InApps = Object.freeze({
+    browser : [
+        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, 'inapp']]
     ]
 });
 
@@ -238,11 +238,11 @@ const Modules = Object.freeze({
 });
 
 module.exports = { 
-    Apps,
     Bots,
     CLIs,
     ExtraDevices,
     Emails,
+    InApps,
     MediaPlayers,
     Modules
 };
