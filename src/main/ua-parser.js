@@ -42,7 +42,7 @@
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 500,
         BRANDS      = 'brands',
-        FORMFACTOR  = 'formFactor',
+        FORMFACTORS = 'formFactors',
         FULLVERLIST = 'fullVersionList',
         PLATFORM    = 'platform',
         PLATFORMVER = 'platformVersion',
@@ -51,12 +51,12 @@
         CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
         CH_HEADER_ARCH      = CH_HEADER + '-arch',
         CH_HEADER_BITNESS   = CH_HEADER + '-' + BITNESS,
-        CH_HEADER_FORM_FACTOR = CH_HEADER + '-form-factor',
+        CH_HEADER_FORM_FACTORS = CH_HEADER + '-form-factors',
         CH_HEADER_MOBILE    = CH_HEADER + '-' + MOBILE,
         CH_HEADER_MODEL     = CH_HEADER + '-' + MODEL,
         CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTOR, BITNESS],
+        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTORS, BITNESS],
         UA_BROWSER  = 'browser',
         UA_CPU      = 'cpu',
         UA_DEVICE   = 'device',
@@ -269,7 +269,7 @@
             'RT'        : 'ARM'
         },
         
-        formFactorMap = {
+        formFactorsMap = {
             'embedded'  : 'Automotive',
             'mobile'    : 'Mobile',
             'tablet'    : ['Tablet', 'EInk'],
@@ -975,7 +975,7 @@
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
                 [PLATFORMVER, stripQuotes(uach[CH_HEADER_PLATFORM_VER])],
                 [ARCHITECTURE, stripQuotes(uach[CH_HEADER_ARCH])],
-                [FORMFACTOR, itemListToArray(uach[CH_HEADER_FORM_FACTOR])],
+                [FORMFACTORS, itemListToArray(uach[CH_HEADER_FORM_FACTORS])],
                 [BITNESS, stripQuotes(uach[CH_HEADER_BITNESS])]
             ]);
         } else {
@@ -1095,15 +1095,15 @@
                         this.set(TYPE, CONSOLE)
                             .set(VENDOR, MICROSOFT);
                     }
-                    if (uaCH[FORMFACTOR]) {
+                    if (uaCH[FORMFACTORS]) {
                         var ff;
-                        if (typeof uaCH[FORMFACTOR] !== 'string') {
+                        if (typeof uaCH[FORMFACTORS] !== 'string') {
                             var idx = 0;
-                            while (!ff && idx < uaCH[FORMFACTOR].length) {
-                                ff = strMapper(uaCH[FORMFACTOR][idx++], formFactorMap);
+                            while (!ff && idx < uaCH[FORMFACTORS].length) {
+                                ff = strMapper(uaCH[FORMFACTORS][idx++], formFactorsMap);
                             }
                         } else {
-                            ff = strMapper(uaCH[FORMFACTOR], formFactorMap);
+                            ff = strMapper(uaCH[FORMFACTORS], formFactorsMap);
                         }
                         this.set(TYPE, ff);
                     }

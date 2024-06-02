@@ -463,18 +463,18 @@ describe('Map UA-CH headers', function () {
         });
     });
 
-    it('Can detect form-factor from client-hints', function () {  
+    it('Can detect form-factors from client-hints', function () {  
 
         const FFVR = {
-            'sec-ch-ua-form-factor' : '"VR"'
+            'sec-ch-ua-form-factors' : '"VR"'
         };
 
         const FFEInk = {
-            'sec-ch-ua-form-factor' : '"Tablet", "EInk"'
+            'sec-ch-ua-form-factors' : '"Tablet", "EInk"'
         };
 
         const FFUnknown = {
-            'sec-ch-ua-form-factor' : '"Unknown"'
+            'sec-ch-ua-form-factors' : '"Unknown"'
         };
         
         UAParser(FFVR).withClientHints().then(function (ua) {
