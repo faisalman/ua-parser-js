@@ -3,8 +3,8 @@ const assert = require('assert');
 const parseJS = require('@babel/parser').parse;
 const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
-const UAParser = require('ua-parser-js');
-const { Bots, CLIs, Emails, Modules } = require('ua-parser-js/extensions');
+const { UAParser } = require('../src/main/ua-parser');
+const { Bots, CLIs, Emails, Modules } = require('../src/extensions/ua-parser-extensions');
 
 describe('Bots', () => {
     it('Can detect bots', () => {

@@ -1,6 +1,6 @@
 const assert = require('assert');
-const UAParser = require('ua-parser-js');
-const { isAppleSilicon, isChromiumBased } = require('ua-parser-js/helpers');
+const { UAParser } = require('../src/main/ua-parser');
+const { isAppleSilicon, isChromiumBased } = require('../src/helpers/ua-parser-helpers');
 
 describe('isAppleSilicon', () => {
     it('Can detect Apple Silicon device', () => {
