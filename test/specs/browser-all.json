@@ -210,6 +210,16 @@
         }
     },
     {
+        "desc"    : "Blazer",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; PalmSource/hspr-H102; Blazer/4.0) 16;320x320",
+        "expect"  :
+        {
+            "name"    : "Blazer",
+            "version" : "4.0",
+            "major"   : "4"
+        }
+    },
+    {
         "desc"    : "Bolt",
         "ua"      : "Mozilla/5.0 (X11; 78; CentOS; US-en) AppleWebKit/527+ (KHTML, like Gecko) Bolt/0.862 Version/3.0 Safari/523.15",
         "expect"  :
@@ -390,6 +400,26 @@
         }
     },
     {
+        "desc"    : "Comodo Dragon",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.7 (KHTML, like Gecko) Comodo_Dragon/16.1.1.0 Chrome/16.0.912.63 Safari/535.7",
+        "expect"  :
+        {
+            "name"    : "Comodo Dragon",
+            "version" : "16.1.1.0",
+            "major"   : "16"
+        }
+    },
+    {
+        "desc"    : "Conkeror",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:6.0.1) Gecko/20110831 conkeror/0.9.3",
+        "expect"  :
+        {
+            "name"    : "conkeror",
+            "version" : "0.9.3",
+            "major"   : "0"
+        }
+    },
+    {
         "desc"    : "Dillo",
         "ua"      : "Dillo/2.2",
         "expect"  :
@@ -421,6 +451,16 @@
     },
     {
         "desc"    : "DuckDuckGo",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.1517.4.1 Ddg/17.4.1",
+        "expect"  :
+        {
+            "name"    : "DuckDuckGo",
+            "version" : "17.4.1",
+            "major"   : "17"
+        }
+    },
+    {
+        "desc"    : "DuckDuckGo",
         "ua"      : "Mozilla/5.0 (Linux; Android 8.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile DuckDuckGo/5 Safari/537.36",
         "expect"  :
         {
@@ -447,6 +487,16 @@
             "name"    : "Flow",
             "version" : "5.7.4",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Go Browser",
+        "ua"      : "NokiaE66/GoBrowser/2.0.297",
+        "expect"  :
+        {
+            "name"    : "GoBrowser",
+            "version" : "2.0.297",
+            "major"   : "2"
         }
     },
     {
@@ -709,6 +759,16 @@
         }
     },
     {
+        "desc"    : "ICEBrowser",
+        "ua"      : "Mozilla/5.0 (Java 1.6.0_01; Windows XP 5.1 x86; en) ICEbrowser/v6_1_2",
+        "expect"  :
+        {
+            "name"    : "ICEbrowser",
+            "version" : "6.1.2",
+            "major"   : "6"
+        }
+    },
+    {
         "desc"    : "IceCat",
         "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008092921 IceCat/3.0.3-g1",
         "expect"  :
@@ -769,6 +829,26 @@
         }
     },
     {
+        "desc"    : "Iron",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1250.0 Iron/22.0.2150.0 Safari/537.4",
+        "expect"  :
+        {
+            "name"    : "Iron",
+            "version" : "22.0.2150.0",
+            "major"   : "22"
+        }
+    },
+    {
+        "desc"    : "Jasmine",
+        "ua"      : "SAMSUNG-S8000/S8000XXIF3 SHP/VPP/R5 Jasmine/1.0 Nextreaming SMM-MMS/1.2.0 profile/MIDP-2.1 configuration/CLDC-1.1",
+        "expect"  :
+        {
+            "name"    : "Jasmine",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "K-Meleon",
         "ua"      : "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.5) Gecko/20031016 K-Meleon/0.8.2",
         "expect"  :
@@ -789,6 +869,16 @@
         }
     },
     {
+        "desc"    : "Klar < 4.1",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Klar/1.0 Chrome/58.0.3029.83 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Klar",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Konqueror",
         "ua"      : "Mozilla/5.0 (compatible; Konqueror/3.5; Linux; X11; x86_64) KHTML/3.5.6 (like Gecko) (Kubuntu)",
         "expect"  :
@@ -806,6 +896,16 @@
             "name"    : "Konqueror",
             "version" : "5.0.97",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Rekonq",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; cs-CZ) AppleWebKit/533.3 (KHTML, like Gecko) rekonq Safari/533.3",
+        "expect"  :
+        {
+            "name"    : "rekonq",
+            "version" : "undefined",
+            "major"   : "undefined"
         }
     },
     {
@@ -1009,6 +1109,26 @@
         }
     },
     {
+        "desc"    : "NetSurf in Plan9",
+        "ua"      : "Mozilla/5.0 (Plan9) NetSurf/3.12",
+        "expect"  :
+        {
+            "name"    : "NetSurf",
+            "version" : "3.12",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "NetSurf in Linux",
+        "ua"      : "NetSurf/3.10 (Linux; Arch Linux)",
+        "expect"  :
+        {
+            "name"    : "NetSurf",
+            "version" : "3.10",
+            "major"   : "3"
+        }
+    },
+    {
         "desc"    : "Nokia Browser",
         "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/025.007; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.37 Mobile Safari/533.4 3gpp-gba",
         "expect"  :
@@ -1189,6 +1309,16 @@
         }
     },
     {
+        "desc"    : "OviBrowser",
+        "ua"      : "Mozilla/5.0 (Series40; NokiaX3-02/le6.32; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/1.0.0.11.8",
+        "expect"  :
+        {
+            "name"    : "OviBrowser",
+            "version" : "1.0.0.11.8",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "PhantomJS",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34",
         "expect"  :
@@ -1219,13 +1349,33 @@
         }
     },
     {
-        "desc"    : "QQ",
+        "desc"    : "QQBrowser",
         "ua"      : "Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; OPPO R7s Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.1 Mobile Safari/537.36",
         "expect"  :
         {
             "name"    : "QQBrowser",
             "version" : "7.1",
             "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "QQBrowser",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 9; zh-cn; vivo X21 Build/PKQ1.180819.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/9.9 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "QQBrowser",
+            "version" : "9.9",
+            "major"   : "9"
+        }
+    },
+    {
+        "desc"    : "Quark",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; JLH-AN00 Build/HONORJLH-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Quark/5.8.2.221 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Quark",
+            "version" : "5.8.2.221",
+            "major"   : "5"
         }
     },
     {
@@ -1236,6 +1386,16 @@
             "name"    : "QupZilla",
             "version" : "1.8.9",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Rekonq 2",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) rekonq/2.2.1 Safari/537.21",
+        "expect"  :
+        {
+            "name"    : "rekonq",
+            "version" : "2.2.1",
+            "major"   : "2"
         }
     },
     {
@@ -1357,6 +1517,37 @@
             "version" : "2.0",
             "major"   : "2"
         }
+    },    
+    {
+        "desc"    : "Sleipnir",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; SOV37 Build/52.1.C.0.220; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.120 Mobile Safari/537.36 Sleipnir/3.7.5",
+        "expect"  :
+        {
+            "name"    : "Sleipnir",
+            "version" : "3.7.5",
+            "major"   : "3"
+        }
+    },
+
+    {
+        "desc"    : "Sleipnir",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Sleipnir 2.8.4)",
+        "expect"  :
+        {
+            "name"    : "Sleipnir",
+            "version" : "2.8.4",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Sleipnir",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.1; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022) Sleipnir/2.8.4",
+        "expect"  :
+        {
+            "name"    : "Sleipnir",
+            "version" : "2.8.4",
+            "major"   : "2"
+        }
     },
     {
         "desc"    : "SlimBrowser",
@@ -1469,7 +1660,7 @@
         }
     },
     {
-        "desc"    : "UPBrowser",
+        "desc"    : "UP.Browser",
         "ua"      : "BenQ-CF61/1.00/WAP2.0/MIDP2.0/CLDC1.0 UP.Browser/6.3.0.4.c.1.102 (GUI) MMP/2.0",
         "expect"  :
         {
@@ -1539,13 +1730,13 @@
         }
     },
     {
-        "desc"    : "Viera",
-        "ua"      : "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "desc"    : "w3m",
+        "ua"      : "w3m/0.5.1",
         "expect"  :
         {
-            "name"    : "VIERA",
-            "version" : "undefined",
-            "major"   : "undefined"
+            "name"    : "w3m",
+            "version" : "0.5.1",
+            "major"   : "0"
         }
     },
     {
@@ -1753,7 +1944,7 @@
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456 QQ/6.5.3.410 V1_IPH_SQ_6.5.3_1_APP_A Pixel/1080 Core/UIWebView NetType/WIFI Mem/26",
         "expect"  :
         {
-            "name"    : "QQ",
+            "name"    : "QQBrowser",
             "version" : "6.5.3.410",
             "major"   : "6"
         }
@@ -1763,7 +1954,7 @@
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0; PRO 6 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile MQQBrowser/6.8 TBS/036824 Safari/537.36 V1_AND_SQ_6.5.8_422_YYB_D PA QQ/6.5.8.2910 NetType/WIFI WebP/0.3.0 Pixel/1080",
         "expect"  :
         {
-            "name"    : "QQ",
+            "name"    : "QQBrowser",
             "version" : "6.5.8.2910",
             "major"   : "6"
         }
@@ -1902,6 +2093,46 @@
         "expect"  :
         {
             "name"    : "LinkedIn"
+        }
+    },
+    {
+        "desc"    : "Links in Linux",
+        "ua"      : "Links (2.xpre7; Linux 2.4.18 i586; x)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.xpre7",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Links in Mac",
+        "ua"      : "Links (2.1pre33; Darwin 8.11.0 Power Macintosh; 169x55)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.1pre33",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Links in NetBSD",
+        "ua"      : "Links (2.29; NetBSD 10.0 i386; GNU C 10.5; x)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.29",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Links in FreeBSD",
+        "ua"      : "Links (2.1pre15; FreeBSD 5.3-RELEASE i386; 196x84)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.1pre15",
+            "major"   : "2"
         }
     },
     {
@@ -2070,6 +2301,26 @@
             "name"    : "Snapchat",
             "version" : "12.33.0.36",
             "major"   : "12"
+        }
+    },
+    {
+        "desc"    : "Twitter",
+        "ua"      : "Mozilla/5.0 (Linux; Android 13; CPH2531 Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.120 Mobile Safari/537.36 TwitterAndroid",
+        "expect"  :
+        {
+            "name"    : "Twitter",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Twitter",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 15_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19H12 Twitter for iPhone/10.34",
+        "expect"  :
+        {
+            "name"    : "Twitter",
+            "version" : "10.34",
+            "major"   : "10"
         }
     }
 ]
