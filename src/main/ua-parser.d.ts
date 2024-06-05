@@ -23,7 +23,7 @@ declare namespace UAParser {
     }
 
     interface IDevice extends IData<IDevice> {
-        type?: 'mobile' | 'tablet' | 'console' | 'smarttv' | 'wearable';
+        type?: 'mobile' | 'tablet' | 'console' | 'smarttv' | 'wearable' | 'xr' | 'embedded';
         vendor?: string;
         model?: string;
     }
@@ -76,6 +76,7 @@ declare namespace UAParser {
             SMARTTV: 'smarttv';
             TABLET: 'tablet';
             WEARABLE: 'wearable';
+            XR: 'xr';
             EMBEDDED: 'embedded';
         };
         static readonly ENGINE: { 

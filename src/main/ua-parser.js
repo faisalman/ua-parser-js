@@ -38,6 +38,7 @@
         TABLET      = 'tablet',
         SMARTTV     = 'smarttv',
         WEARABLE    = 'wearable',
+        XR          = 'xr',
         EMBEDDED    = 'embedded',
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 500,
@@ -274,7 +275,8 @@
             'mobile'    : 'Mobile',
             'tablet'    : ['Tablet', 'EInk'],
             'smarttv'   : 'TV',
-            'wearable'  : ['VR', 'XR', 'Watch'],
+            'wearable'  : 'Watch',
+            'xr'        : ['VR', 'XR'],
             '?'         : ['Desktop', 'Unknown'],
             '*'         : undefined
     };
@@ -711,12 +713,17 @@
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
             /(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i                              // Apple Watch
             ], [MODEL, [VENDOR, APPLE], [TYPE, WEARABLE]], [
-            /droid.+; (glass) \d/i                                              // Google Glass
-            ], [MODEL, [VENDOR, GOOGLE], [TYPE, WEARABLE]], [
             /droid.+; (wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, WEARABLE]], [
+
+            ///////////////////
+            // XR
+            ///////////////////
+
+            /droid.+; (glass) \d/i                                              // Google Glass
+            ], [MODEL, [VENDOR, GOOGLE], [TYPE, XR]], [
             /(quest( \d| pro)?)/i                                               // Oculus Quest
-            ], [MODEL, [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
+            ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
 
             ///////////////////
             // EMBEDDED

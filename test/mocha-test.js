@@ -479,7 +479,7 @@ describe('Map UA-CH headers', function () {
         };
         
         UAParser(FFVR).withClientHints().then(function (ua) {
-            assert.strictEqual(ua.device.type, 'wearable');
+            assert.strictEqual(ua.device.type, 'xr');
         });
 
         UAParser(FFEInk).withClientHints().then(function (ua) {

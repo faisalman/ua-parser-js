@@ -179,7 +179,8 @@ const Device = Object.freeze({
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
     TABLET: 'tablet',
-    WEARABLE: 'wearable'
+    WEARABLE: 'wearable',
+    XR: 'xr'
 });
 
 const Vendor = Object.freeze({

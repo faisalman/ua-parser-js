@@ -1373,7 +1373,7 @@
         "expect": {
             "vendor": "Facebook",
             "model": "Quest",
-            "type": "wearable"
+            "type": "xr"
         }
     },
     {
@@ -1382,7 +1382,7 @@
         "expect": {
             "vendor": "Facebook",
             "model": "Quest 2",
-            "type": "wearable"
+            "type": "xr"
         }
     },
     {
@@ -1391,7 +1391,7 @@
         "expect": {
             "vendor": "Facebook",
             "model": "Quest 3",
-            "type": "wearable"
+            "type": "xr"
         }
     },
     {
@@ -1400,7 +1400,7 @@
         "expect": {
             "vendor": "Facebook",
             "model": "Quest Pro",
-            "type": "wearable"
+            "type": "xr"
         }
     },
     {
