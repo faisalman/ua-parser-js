@@ -14,24 +14,36 @@ const VENDOR    = 'vendor';
 const VERSION   = 'version';
 const MOBILE    = 'mobile';
 const TABLET    = 'tablet';
+const BOT       = 'bot';
+const CLI       = 'cli';
+const EMAIL     = 'email';
+const INAPP     = 'inapp';
+const MODULE    = 'module';
 
 const Bots = Object.freeze({
     browser : [
         // Googlebot / BingBot / MSNBot / FacebookBot
-        [/((?:google|bing|msn|facebook)bot(?:[\-imagevdo]{0,6})|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
-
         // GPTBot - https://platform.openai.com/docs/gptbot
-        [/(gptbot)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
+        // YandexBot - https://yandex.com/bots
+        // Applebot - http://apple.com/go/applebot
+        // Amazonbot - https://developer.amazon.com/amazonbot
+        [/((?:google|bing|msn|facebook|gpt|yandex|apple|amazon)bot(?:[\-imagevdo]{0,6})|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, BOT]],
 
         // Slackbot - https://api.slack.com/robots
-        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']]
+        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], [NAME, VERSION, [TYPE, BOT]],
+
+        // ClaudeBot / Bytespider
+        [/(claude(?:bot|-web)|bytespider)\/?([\w\.]*)/i], [NAME, VERSION, [TYPE, BOT]],
+
+        // Yandex Bots - https://yandex.com/bots
+        [/http:\/\/(yandex).com\/(bot)s/i], [NAME, TYPE]
     ]
 });
 
 const CLIs = Object.freeze({
     browser : [
                                                                             // wget / curl / lynx
-        [/(wget|curl|lynx)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'cli']]
+        [/(wget|curl|lynx)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
 
@@ -114,13 +126,13 @@ const ExtraDevices = Object.freeze({
 const Emails = Object.freeze({
     browser : [
                                                                             // Microsoft Outlook / Thunderbird
-        [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, 'email']]
+        [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
 const InApps = Object.freeze({
     browser : [
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, 'inapp']]
+        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]]
     ]
 });
 
@@ -233,7 +245,7 @@ const MediaPlayers = Object.freeze({
 const Modules = Object.freeze({
     browser : [
                                                                             // Axios/jsdom/Scrapy
-        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'module']]
+        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, MODULE]]
     ]
 });
 
