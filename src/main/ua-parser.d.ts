@@ -15,7 +15,7 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
-        type?: string;
+        type?: 'bot' | 'cli' | 'email' | 'inapp' | 'module';
     }
 
     interface ICPU extends IData<ICPU> {

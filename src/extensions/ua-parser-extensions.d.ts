@@ -4,10 +4,10 @@
 
 import type { UAParserExt } from "../main/ua-parser";
 
-export const Apps: UAParserExt;
 export const Bots: UAParserExt;
 export const CLIs: UAParserExt;
 export const ExtraDevices: UAParserExt;
 export const Emails: UAParserExt;
+export const InApps: UAParserExt;
 export const MediaPlayers: UAParserExt;
 export const Modules: UAParserExt;
