@@ -899,6 +899,26 @@
         }
     },
     {
+        "desc"    : "PicoBrowser",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Pico Neo3 Link OS5.8.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "PicoBrowser",
+            "version" : "3.3.22",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "PicoBrowser",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; PICO 4 OS5.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36 OculusBrowser/7.0",
+        "expect"  :
+        {
+            "name"    : "PicoBrowser",
+            "version" : "3.3.22",
+            "major"   : "3"
+        }
+    },
+    {
         "desc"    : "Rekonq",
         "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; cs-CZ) AppleWebKit/533.3 (KHTML, like Gecko) rekonq Safari/533.3",
         "expect"  :
@@ -1737,6 +1757,16 @@
             "name"    : "w3m",
             "version" : "0.5.1",
             "major"   : "0"
+        }
+    },
+    {
+        "desc"    : "Wolvic",
+        "ua"      : "Mozilla/5.0 (Android 12; Mobile VR; rv:121.0) Gecko/121.0 Firefox/121.0 Wolvic/1.6.1",
+        "expect"  :
+        {
+            "name"    : "Wolvic",
+            "version" : "1.6.1",
+            "major"   : "1"
         }
     },
     {

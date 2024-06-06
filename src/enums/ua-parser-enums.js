@@ -104,6 +104,7 @@ const Browser = Object.freeze({
     PALEMOON: 'PaleMoon',
     PHANTOMJS: 'PhantomJS',
     PHOENIX: 'Phoenix',
+    PICOBROWSER: 'Pico Browser',
     POLARIS: 'Polaris',
     PUFFIN: 'Puffin',
     QQ: 'QQBrowser',
@@ -139,6 +140,7 @@ const Browser = Object.freeze({
     WECHAT: 'WeChat',
     WEIBO: 'Weibo',
     WHALE: 'Whale',
+    WOLVIC: 'Wolvic',
     YANDEX: 'Yandex'
 
     // TODO : test!
