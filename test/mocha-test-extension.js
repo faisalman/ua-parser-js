@@ -34,6 +34,12 @@ describe('Bots', () => {
         assert.deepEqual(botsAndCLIsParser.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"cli"});
         assert.deepEqual(botsAndCLIsParser.setUA(facebookBot).getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"bot"});
 
+        // alternative merge options
+        const botsAndCLIsParser2 = new UAParser([Bots, CLIs]);
+        const botsAndCLIsParser3 = new UAParser(facebookBot, [Bots, CLIs]);
+        assert.deepEqual(botsAndCLIsParser2.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"cli"});
+        assert.deepEqual(botsAndCLIsParser3.getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"bot"});
+
         const emailParser = new UAParser(Emails);
         assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
         assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: "Thunderbird", version: "78.13.0", major: "78", type: "email"});

@@ -49,7 +49,7 @@ declare namespace UAParser {
 
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
     type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
-    type UAParserExt = Partial<Record<UAParserProps, RegexMap>>;
+    type UAParserExt = Partial<Record<UAParserProps, RegexMap>> | Partial<Record<UAParserProps, RegexMap>>[];
 
     export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: Record<string, string>): IResult;
     export function UAParser(uastring?: string, headers?: Record<string, string>): IResult;

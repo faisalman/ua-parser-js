@@ -101,12 +101,21 @@
     // Helper
     //////////
 
-    var extend = function (regexes, extensions) {
-            var mergedRegexes = {};
-            for (var i in regexes) {
-                mergedRegexes[i] = extensions[i] && extensions[i].length % 2 === 0 ? extensions[i].concat(regexes[i]) : regexes[i];
+    var extend = function (defaultRgx, extensions) {
+            var mergedRgx = {};
+            var extraRgx = extensions;
+            if (!isExtensions(extensions)) {
+                extraRgx = {};
+                for (var i in extensions) {
+                    for (var j in extensions[i]) {
+                        extraRgx[j] = extensions[i][j].concat(extraRgx[j] ? extraRgx[j] : []);
+                    }
+                }
             }
-            return mergedRegexes;
+            for (var k in defaultRgx) {
+                mergedRgx[k] = extraRgx[k] && extraRgx[k].length % 2 === 0 ? extraRgx[k].concat(defaultRgx[k]) : defaultRgx[k];
+            }
+            return mergedRgx;
         },
         enumerize = function (arr) {
             var enums = {};
@@ -124,9 +133,9 @@
             }
             return isString(str1) ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
         },
-        isExtensions = function (obj) {
+        isExtensions = function (obj, deep) {
             for (var prop in obj) {
-                return /^(browser|cpu|device|engine|os)$/.test(prop);
+                return /^(browser|cpu|device|engine|os)$/.test(prop) || (deep ? isExtensions(obj[prop]) : false);
             }
         },
         isString = function (val) {
@@ -1163,7 +1172,7 @@
     function UAParser (ua, extensions, headers) {
 
         if (typeof ua === OBJ_TYPE) {
-            if (isExtensions(ua)) {
+            if (isExtensions(ua, true)) {
                 if (typeof extensions === OBJ_TYPE) {
                     headers = extensions;               // case UAParser(extensions, headers)           
                 }
@@ -1173,7 +1182,7 @@
                 extensions = undefined;
             }
             ua = undefined;
-        } else if (typeof ua === STR_TYPE && !isExtensions(extensions)) {
+        } else if (typeof ua === STR_TYPE && !isExtensions(extensions, true)) {
             headers = extensions;                       // case UAParser(ua, headers)
             extensions = undefined;
         }

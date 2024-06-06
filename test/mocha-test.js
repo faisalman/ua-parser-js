@@ -126,6 +126,13 @@ describe('Extending Regex', function () {
     });
     let myUA2 = 'Mozilla/5.0 MyTab 14 Pro Max';
     assert.deepEqual(myParser2.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
+
+    let myParser3 = new UAParser([{ 
+        browser: myOwnListOfBrowsers 
+    }, { 
+        device: myOwnListOfDevices 
+    }]);
+    assert.deepEqual(myParser3.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
 });
 
 describe('User-agent length', function () {
