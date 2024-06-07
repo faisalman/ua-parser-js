@@ -15,7 +15,7 @@
 
 # UAParser.js
 
-The most comprehensive, compact, & up-to-date JavaScript library to detect 
+The most comprehensive, compact, & up-to-date isomorphic JavaScript library to detect 
 user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser 
 (client-side) or node.js (server-side).
 
@@ -176,11 +176,11 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
         </tr>
         <tr>
             <td>Price</td>
-            <td><strong title="Pay as you want">FREE</strong></td>
-            <td><strong title="Pay as you want">FREE</strong></td>
-            <td><strong title="$12 (one-time fee)">$12</strong></td>
-            <td><strong title="$25 (one-time fee)">$25</strong></td>
-            <td><strong title="$500 (one-time fee)">$500</strong></td>
+            <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/1.0.x/license.md">License</a>)</strong></td>
+            <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$12 (one-time fee)">$12 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-personal/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$25 (one-time fee)">$25 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-business/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$500 (one-time fee)">$500 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
         </tr>
     </tbody>
     <tfoot>
@@ -205,8 +205,7 @@ see what's new & breaking.
 
 ## Contributors
 
-Large or small, your contribution is valuable here. Please read [CONTRIBUTING](CONTRIBUTING.md) 
-guide first for the instruction details.
+Please read [CONTRIBUTING](CONTRIBUTING.md) guide first for the instruction details.
 
 <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
