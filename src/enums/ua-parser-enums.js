@@ -147,9 +147,10 @@ const Browser = Object.freeze({
 });
 
 const BrowserType = Object.freeze({
-    BOT: 'bot',
+    CRAWLER: 'crawler',
     CLI: 'cli',
     EMAIL: 'email',
+    FETCHER: 'fetcher',
     INAPP: 'inapp',
     MODULE: 'module'
 });

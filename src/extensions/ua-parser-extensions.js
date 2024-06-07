@@ -14,36 +14,59 @@ const VENDOR    = 'vendor';
 const VERSION   = 'version';
 const MOBILE    = 'mobile';
 const TABLET    = 'tablet';
-const BOT       = 'bot';
+const CRAWLER   = 'crawler';
 const CLI       = 'cli';
 const EMAIL     = 'email';
+const FETCHER   = 'fetcher';
 const INAPP     = 'inapp';
 const MODULE    = 'module';
 
-const Bots = Object.freeze({
+const CLIs = Object.freeze({
     browser : [
-        // Googlebot / BingBot / MSNBot / FacebookBot
-        // GPTBot - https://platform.openai.com/docs/gptbot
-        // YandexBot - https://yandex.com/bots
-        // Applebot - http://apple.com/go/applebot
-        // Amazonbot - https://developer.amazon.com/amazonbot
-        [/((?:google|bing|msn|facebook|gpt|yandex|apple|amazon)bot(?:[\-imagevdo]{0,6})|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, BOT]],
-
-        // Slackbot - https://api.slack.com/robots
-        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], [NAME, VERSION, [TYPE, BOT]],
-
-        // ClaudeBot / Bytespider
-        [/(claude(?:bot|-web)|bytespider)\/?([\w\.]*)/i], [NAME, VERSION, [TYPE, BOT]],
-
-        // Yandex Bots - https://yandex.com/bots
-        [/http:\/\/(yandex).com\/(bot)s/i], [NAME, TYPE]
+        // wget / curl / lynx
+        [/(wget|curl|lynx)[\/ ]([\w\.]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
 
-const CLIs = Object.freeze({
+const Crawlers = Object.freeze({
     browser : [
-                                                                            // wget / curl / lynx
-        [/(wget|curl|lynx)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, CLI]]
+        // Amazonbot - https://developer.amazon.com/amazonbot
+        // Applebot - http://apple.com/go/applebot
+        // Bingbot - http://www.bing.com/bingbot.htm
+        // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
+        // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
+        // GPTBot - https://platform.openai.com/docs/gptbot
+        [/((?:amazon|apple|bing|duckduck|facebook|gpt)bot)\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
+        [/(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Bytespider
+        // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
+        [/((?:bytespider|(?=yahoo! )slurp))/i], 
+        [NAME, [TYPE, CRAWLER]],
+
+        // ClaudeBot
+        [/(claude(?:bot|-web))\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Googlebot - http://www.google.com/bot.html
+        [
+            /(google(?:bot|other)(?:-image|-video|-news|-extended)?|(?:storebot-)?google(?:-inspectiontool)?)\/?([\w\.]*)/i
+        ], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+        
+        // Sogou Spider
+        [/(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Yandex Bots - https://yandex.com/bots
+        [
+            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i
+        ], 
+        [NAME, VERSION, [TYPE, CRAWLER]]
     ]
 });
 
@@ -125,8 +148,36 @@ const ExtraDevices = Object.freeze({
 
 const Emails = Object.freeze({
     browser : [
-                                                                            // Microsoft Outlook / Thunderbird
+        // Microsoft Outlook / Thunderbird
         [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
+    ]
+});
+
+const Fetchers = Object.freeze({
+    browser : [
+        // BingPreview / Mastodon / Pinterestbot / Redditbot / Telegrambot / Twitterbot
+        [/(bingpreview|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, FETCHER]],
+
+        // Google Bots / Snapchat
+        [/(feedfetcher-google|google-read-aloud|(?=bot; )snapchat)/i], 
+        [NAME, [TYPE, FETCHER]],
+
+
+        // Slackbot - https://api.slack.com/robots
+        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, FETCHER]],
+
+        // WhatsApp
+        [/(whatsapp)\/([\w\.]+)[\/ ][ianw]/i], 
+        [NAME, VERSION, [TYPE, FETCHER]],
+
+        // Yandex Bots - https://yandex.com/bots
+        [
+            /(yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(yandex(?:sitelinks|userproxy))/i
+        ], 
+        [NAME, VERSION, [TYPE, FETCHER]]
     ]
 });
 
@@ -244,16 +295,17 @@ const MediaPlayers = Object.freeze({
 
 const Modules = Object.freeze({
     browser : [
-                                                                            // Axios/jsdom/Scrapy
+        // Axios/jsdom/Scrapy
         [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, MODULE]]
     ]
 });
 
 module.exports = { 
-    Bots,
     CLIs,
+    Crawlers,
     ExtraDevices,
     Emails,
+    Fetchers,
     InApps,
     MediaPlayers,
     Modules
