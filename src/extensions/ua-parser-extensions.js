@@ -21,12 +21,20 @@ const FETCHER   = 'fetcher';
 const INAPP     = 'inapp';
 const MODULE    = 'module';
 
+//////////////////////
+// COMMAND LINE APPS
+/////////////////////
+
 const CLIs = Object.freeze({
     browser : [
         // wget / curl / lynx
         [/(wget|curl|lynx)[\/ ]([\w\.]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
+
+////////////////////////
+// CRAWLERS / SPIDERS
+///////////////////////
 
 const Crawlers = Object.freeze({
     browser : [
@@ -69,6 +77,10 @@ const Crawlers = Object.freeze({
         [NAME, VERSION, [TYPE, CRAWLER]]
     ]
 });
+
+//////////////////
+// EXTRA DEVICES
+/////////////////
 
 const ExtraDevices = Object.freeze({
     device : [[    
@@ -146,12 +158,20 @@ const ExtraDevices = Object.freeze({
     ]
 });
 
+///////////////
+// EMAIL APPS
+//////////////
+
 const Emails = Object.freeze({
     browser : [
         // Microsoft Outlook / Thunderbird
         [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
+
+///////////////////////
+// ON-DEMAND SCRAPERS
+//////////////////////
 
 const Fetchers = Object.freeze({
     browser : [
@@ -181,11 +201,19 @@ const Fetchers = Object.freeze({
     ]
 });
 
+////////////////////
+// IN-APP BROWSERS
+///////////////////
+
 const InApps = Object.freeze({
     browser : [
         [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]]
     ]
 });
+
+//////////////////////
+// MEDIA PLAYER APPS
+/////////////////////
 
 const MediaPlayers = Object.freeze({
     browser : [[
@@ -292,6 +320,10 @@ const MediaPlayers = Object.freeze({
         ], [[NAME, 'rad.io'], VERSION]
     ]
 });
+
+////////////////////////
+// MODULES / LIBRARIES
+///////////////////////
 
 const Modules = Object.freeze({
     browser : [

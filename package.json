@@ -206,7 +206,7 @@
     "test:eslint": "eslint src && eslint script",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
-    "test:mocha": "mocha -R list test/mocha*js",
+    "test:mocha": "mocha test/mocha*js",
     "test:playwright": "playwright test"
   },
   "devDependencies": {
