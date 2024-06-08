@@ -175,8 +175,9 @@ const Emails = Object.freeze({
 
 const Fetchers = Object.freeze({
     browser : [
+        // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
         // BingPreview / Mastodon / Pinterestbot / Redditbot / Telegrambot / Twitterbot
-        [/(bingpreview|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i], 
+        [/(bingpreview|chatgpt-user|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
         // Google Bots / Snapchat

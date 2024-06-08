@@ -8,5 +8,15 @@
             "version" : "1.0b",
             "type"    : "fetcher"
         }
+    },
+    {
+        "desc"    : "ChatGPT-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+        "expect"  :
+        {
+            "name"    : "ChatGPT-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
     }
 ]
