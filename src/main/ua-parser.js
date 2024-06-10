@@ -733,6 +733,8 @@
 
             /droid.+; (glass) \d/i                                              // Google Glass
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, XR]], [
+            /(pico) (4|neo3(?: link|pro)?)/i                                    // Pico
+            ], [VENDOR, MODEL, [TYPE, XR]], [
             /(quest( \d| pro)?)/i                                               // Oculus Quest
             ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
 
@@ -836,6 +838,7 @@
             // Console
             /(nintendo|playstation) (\w+)/i,                                    // Nintendo/Playstation
             /(xbox); +xbox ([^\);]+)/i,                                         // Microsoft Xbox (360, One, X, S, Series X, Series S)
+            /(pico) .+os([\w\.]+)/i,                                            // Pico
 
             // Other
             /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i,                            // Joli/Palm
