@@ -1,27 +1,10 @@
 # UAParser.js Changelog
 
-# Version 2.0
-- What's breaking:
-  - Dual-licensed under AGPLv3 or PRO License
-  - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
-  - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
-- What's new:
-  - Some new methods in result object: 
-    - Support for client hints: `withClientHints()`
-    - Support for feature detection: `withFeatureCheck()`
-    - Utility for easy comparison: `is()`
-    - Utility to print full-name: `toString()`
-  - Support for ES module `import { UAParser } from 'ua-parser-js'`
-  - Provided Enums submodule `'ua-parser-js/enums'`
-  - Provided Extensions submodule `'ua-parser-js/extensions'`
-  - Provided Helpers submodule `'ua-parser-js/helpers'`
-
 ## Version 2.0.0-beta.3
 
 - Breaking:
   - AR/VR devices moved to new device type: `xr`
   - New property in `browser`: `type`
-  - In `ua-parser-js/extensions` submodule, `bots` divided into `crawler` / `fetcher` 
 - New features:
   - Parse directly from command line using `npx ua-parser-js`
   - Extensions can be passed as a list to `UAParser()`
@@ -29,6 +12,7 @@
 - Improve browser detection: DuckDuckGo, ICEBrowser, Klar, QQ, Sleipnir
 - Improve device detection: Oculus Quest & Oppo Pad
 - Update latest client hints spec: `formFactor` -> `formFactors`
+- In `ua-parser-js/extensions` submodule, `bots` divided into `crawler` / `fetcher` 
 
 ## Version 2.0.0-beta.2
 
@@ -64,13 +48,36 @@
 
 - Initial work on new major version
 
+## Version 2.0
 
-# Version 0.7 / 1.0
+- What's breaking:
+  - Dual-licensed under AGPLv3 or PRO License
+  - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
+  - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
+  - AR/VR devices moved to new device type: `xr`
+  - New property in `browser`: `type`
+- What's new:
+  - Some new methods in result object: 
+    - Support for client hints: `withClientHints()`
+    - Support for feature detection: `withFeatureCheck()`
+    - Utility for easy comparison: `is()`
+    - Utility to print full-name: `toString()`
+  - Parse directly from command line using `npx ua-parser-js`
+  - Extensions can be passed as a list to `UAParser()`
+  - Support for ES module `import { UAParser } from 'ua-parser-js'`
+  - Provided Enums submodule `'ua-parser-js/enums'`
+  - Provided Extensions submodule `'ua-parser-js/extensions'`
+  - Provided Helpers submodule `'ua-parser-js/helpers'`
 
-Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
+---
 
-## Version 0.7.37
+## Version 0.7.38 / 1.0.38
+- Fix error on getOS() when userAgentData.platform is undefined
+- Add new browser: Opera GX, Twitter
+- Improve browser detection: DuckDuckGo
+- Improve device detection: OPPO Pad, Oculus Quest
 
+## Version 0.7.37 / 1.0.37
 - Fix misidentified WebView token as device model
 - Increase UA_MAX_LENGTH to 500
 - Add new browser: Alipay, Klarna, Smart Lenovo Browser, Vivo Browser
@@ -143,6 +150,10 @@ Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://g
 - Fix trailing comma for ES3 compatibility
 - Some code refactor
 
-# Version 0.8
+## Version 0.7 / 1.0
+
+Version 1.0.x is basically the equivalent of version 0.7.x (mirror/duplicate). See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
+
+## Version 0.8
 
 Version 0.8 was created by accident. This version is now deprecated and no longer maintained, please update to version 0.7 / 1.0.
