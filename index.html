@@ -40,8 +40,8 @@
                 </h1>
                 <div class="ui massive buttons">
                     <a href="#try" class="ui violet button"><i class="magic icon"></i>Try Demo</a>
-                    <a href="#download" class="ui blue button"><i class="download icon"></i>Download</a>
                     <a href="https://docs.uaparser.js.org/v2" class="ui green button"><i class="book icon"></i>Read Docs</a>
+                    <a href="#download" class="ui blue button"><i class="download icon"></i>Download</a>
                 </div>
             </div>
             <img class="ui centered image illustration" src="images/uap-illustrations.png" />
@@ -70,19 +70,22 @@
             </div>
             <div class="ui tall stacked segment">
                 <div class="ui basic segment">
-                    <p id="ua-txt-info">
-                        {UAParser.js} abstracts away the hassle of User-Agent detection by turning them into a set of
-                        simple & meaningful data. As an example, this is what we get from your browser's User-Agent
-                        information: </p>
                     <div class="ui black massive label">
                         <p id="ua-txt" class="code"></p><button id="btn-clipboard"
                             class="ui right floated labeled icon violet large button" data-clipboard-target="#ua-txt"><i
                                 class="clipboard icon"></i>COPY TO CLIPBOARD</button>
                     </div>
-                </div>
-                <div class="ui basic segment">
-                    <p>
-                        In addition with some browser-supplied data, {UAParser.js} will transforms it into a well-structured format: </p>
+                    <div class="ui basic segment center aligned">
+                        <p class="what-provides" id="ua-txt-info">
+                            What your browser provides = 😱😵‍💫❓
+                        </p>
+                        <div class="ui horizontal divider">
+                            VS
+                        </div>
+                        <p class="what-provides">
+                            What {UAParser.js} provides = 🙂👍🎉
+                        </p>
+                    </div>
                     <pre><code id="ua-result" class="language-json"></code></pre>
                 </div>
                 <div id="demo-result" class="ui equal width stackable internally celled grid">
@@ -174,7 +177,7 @@
                         </select>
                     </div>
                     <div class="field">
-                        <label>OR type any User-Agent you want to check:</label>
+                        <label>OR simply type any User-Agent that you want to check:</label>
                         <div class="ui right action input">
                             <input type="text" name="custom-ua"
                                 placeholder="Mozilla/5.0 (Linux; U; Android 4.0.3; H4NY4-C0NT0H Build/CR7) . . . .">
@@ -219,11 +222,7 @@
                                     <i class="filter icon"></i>
                                     <div class="content">Extract Only What's Valuable</div>
                                 </h3>
-                                <p>User-Agent string as of today is a mess. On the other hand, there is no <strong
-                                        class="subtle">reliable</strong> way to identify user details. </p>
-                                <p>{UAParser.js} <strong class="subtle">filters</strong> the noise away & extracts
-                                    <strong class="subtle">only</strong> the most meaningful data: Browser, Engine, OS,
-                                    CPU, & Device in a <strong class="subtle">well-structured</strong> format.</p>
+                                <p>{UAParser.js} filters the noise away and only extracts the most meaningful data in a well-structured format.</p>
                             </div>
                         </div>
                         <div class="column">
@@ -232,14 +231,7 @@
                                     <i class="paper plane icon"></i>
                                     <div class="content">Relatively Small Footprint</div>
                                 </h3>
-                                <p>{UAParser.js} starts from and is <strong class="subtle">optimized</strong> to be used within browser.
-                                    While it covers a <strong class="subtle">vast</strong> range of detection, the size
-                                    always kept to be as <strong class="subtle">light</strong> as possible.</p>
-                                <p>For extra <strong class="subtle">cache</strong> performance, {UAParser.js} also
-                                    available in popular CDN services: <a class="ui code"
-                                        href="https://www.jsdelivr.com/package/npm/ua-parser-js"
-                                        target="_blank">jsDelivr</a> / <a class="ui code" target="_blank"
-                                        href="https://cdnjs.com/libraries/UAParser.js">CDNJS</a></p>
+                                <p>While {UAParser.js} covers a vast range of detection, on the other hand its size is always kept to be as light as possible.</p>
                             </div>
                         </div>
                         <div class="column">
@@ -250,11 +242,7 @@
                                         Zero-deps Vanilla JS
                                     </div>
                                 </h3>
-                                <p>No
-                                    dependencies. No bloated framework. No transpiler needed. No unnecessary boilerplate. No large-sized files required.</p>
-                                <p>Just a good ol' <strong class="subtle">ES3-compatible</strong> syntax that is able to
-                                    run on relatively old browsers while also <strong class="subtle">performs</strong>
-                                    on most modern devices.</p>
+                                <p>No dependencies, bloated framework, unnecessary boilerplate, transpiler, or large-sized files required.</p>
                             </div>
                         </div>
                     </div>
@@ -267,13 +255,7 @@
                                         100% Free & Open Source
                                     </div>
                                 </h3>
-                                <p>Licensed under open-source terms,
-                                    {UAParser.js} is free to use & modify at no charge. PRO licenses also available for non-open-source purpose.</p>
-                                <p><strong class="subtle">Contribute</strong> back in form of a <a
-                                        class="ui code" href="https://github.com/faisalman/ua-parser-js/pulls"
-                                        target="_blank"> PR</a>, or <a class="ui code" target="_blank"
-                                        href="https://opencollective.com/ua-parser-js/">donate</a> if you find it
-                                    <strong class="subtle">helpful</strong> for your business.</p>
+                                <p>{UAParser.js} is free to use & modify at no charge. PRO licenses also available if you need a non-free license.</p>
                             </div>
                         </div>
                         <div class="column">
@@ -284,12 +266,7 @@
                                         Best Developer Experience
                                     </div>
                                 </h3>
-                                <p>For <strong class="subtle">jQuery</strong> user, {UAParser.js} automatically detects
-                                    and generates a plugin as <span class="ui small label code">$.ua</span></p>
-                                <p>Also, for <strong class="subtle">TypeScript</strong> user, there is a
-                                    community-maintained types: <a
-                                        href="https://www.npmjs.com/package/@types/ua-parser-js" target="_blank"
-                                        class="ui code">@types/ua-parser-js</a></p>
+                                <p>{UAParser.js} generates a plugin for jQuery user, and provides predefined type for TypeScript user.</p>
                             </div>
                         </div>
                         <div class="column">
@@ -298,11 +275,7 @@
                                     <i class="npm icon"></i>
                                     <div class="content">Client-side & Server-side</div>
                                 </h3>
-                                <p>Whether it's a client-side webpage running in a <strong
-                                        class="subtle">browser</strong>, or a server-side <strong
-                                        class="subtle">node.js</strong> app, simply type:</p><a
-                                    class="ui medium label code" target="_blank"
-                                    href="https://www.npmjs.com/package/ua-parser-js">$ npm i ua-parser-js</a>
+                                <p>{UAParser.js} is an isomorphic JavaScript library that's able to run either in browser or node.js environment.
                             </div>
                         </div>
                     </div>
@@ -1218,7 +1191,7 @@
         <div class="ui tall stacked segment" id="contributors">
             <div class="ui basic centered segment">
                 <h2 class="ui dividing header">Contributors <div class="sub header">Those who collaborate and
-                        continuosly improve this library to be awesome</div>
+                        continuously improve this library to be awesome</div>
                 </h2>
                 <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img class="ui centered image"
                         src="https://opencollective.com/ua-parser-js/contributors.svg?avatarHeight=64&width=640" /></a>
@@ -1281,15 +1254,14 @@
                             <a href="https://opencollective.com/ua-parser-js" target="_blank" class="item"><img
                                     alt="OpenCollective"
                                     src="https://img.shields.io/opencollective/all/ua-parser-js?color=teal&style=for-the-badge"></a>
-                            <a href="https://openbase.com/js/ua-parser-js" target="_blank" class="item"><img
-                                    alt="Openbase"
-                                    src="https://badges.openbase.com/js/rating/ua-parser-js.svg?style=for-the-badge" /></a>
+                            <a href="https://github.com/faisalman/ua-parser-js" target="_blank" class="item">
+                                <img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge"></a>
                             <iframe src="https://github.com/sponsors/faisalman/button" title="Github Sponsor"
                                 height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
                         </div>
                     </div>
                     <div class="ui right aligned basic segment">
-                        <p>Licensed under AGPLv3 license. Copyright (c) 2012-2023 Faisal Salman.</p>
+                        <p>Licensed under AGPLv3 license. Copyright (c) 2012-2024 Faisal Salman.</p>
                     </div>
                 </div>
             </div>

@@ -124,4 +124,11 @@ display: none;
 #showcase .ui.stackable.grid > .row > .column {
     width: 33.3% !important;
 }
-}  
+}
+
+.what-provides {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
