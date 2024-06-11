@@ -156,6 +156,7 @@ const BrowserType = Object.freeze({
     EMAIL: 'email',
     FETCHER: 'fetcher',
     INAPP: 'inapp',
+    MEDIAPLAYER: 'mediaplayer',
     MODULE: 'module'
 });
 
@@ -228,6 +229,7 @@ const Vendor = Object.freeze({
     PALM: 'Palm',
     PANASONIC: 'Panasonic',
     PEBBLE: 'Pebble',
+    PICO: 'Pico',
     POLYTRON: 'Polytron',
     REALME: 'Realme',
     RIM: 'RIM',
@@ -325,6 +327,7 @@ const OS = Object.freeze({
     PALM: 'Palm',
     PC_BSD: 'PC-BSD',
     PCLINUXOS: 'PCLinuxOS',
+    PICO: 'Pico',
     PLAN9: 'Plan9',
     PLAYSTATION: 'PlayStation',
     QNX: 'QNX',

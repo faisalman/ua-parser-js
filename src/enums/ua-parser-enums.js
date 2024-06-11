@@ -152,6 +152,7 @@ const BrowserType = Object.freeze({
     EMAIL: 'email',
     FETCHER: 'fetcher',
     INAPP: 'inapp',
+    MEDIAPLAYER: 'mediaplayer',
     MODULE: 'module'
 });
 

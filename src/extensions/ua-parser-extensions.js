@@ -19,6 +19,7 @@ const CLI       = 'cli';
 const EMAIL     = 'email';
 const FETCHER   = 'fetcher';
 const INAPP     = 'inapp';
+const MEDIAPLAYER = 'mediaplayer';
 const MODULE    = 'module';
 
 //////////////////////
@@ -221,13 +222,13 @@ const MediaPlayers = Object.freeze({
 
         /(apple(?:coremedia|))\/([\w\._]+)/i,                               // Generic Apple CoreMedia
         /(coremedia) v([\w\._]+)/i
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(aqualung|lyssna|bsplayer)\/([\w\.-]+)/i                           // Aqualung/Lyssna/BSPlayer
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(ares|ossproxy)\s([\w\.-]+)/i                                      // Ares/OSSProxy
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(audacious|audimusicstream|amarok|bass|core|dalvik|gnomemplayer|music on console|nsplayer|psp-internetradioplayer|videos)\/([\w\.-]+)/i,
                                                                             // Audacious/AudiMusicStream/Amarok/BASS/OpenCORE/Dalvik/GnomeMplayer/MoC
@@ -235,90 +236,90 @@ const MediaPlayers = Object.freeze({
         /(clementine|music player daemon)\s([\w\.-]+)/i,                    // Clementine/MPD
         /(lg player|nexplayer)\s([\d\.]+)/i,
         /player\/(nexplayer|lg player)\s([\w\.-]+)/i                        // NexPlayer/LG Player
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
         /(nexplayer)\s([\w\.-]+)/i                                          // Nexplayer
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(flrp)\/([\w\.-]+)/i                                               // Flip Player
-        ], [[NAME, 'Flip Player'], VERSION], [
+        ], [[NAME, 'Flip Player'], VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(fstream|nativehost|queryseekspider|ia-archiver|facebookexternalhit)/i
                                                                             // FStream/NativeHost/QuerySeekSpider/IA Archiver/facebookexternalhit
-        ], [NAME], [
+        ], [NAME, [TYPE, MEDIAPLAYER]], [
 
         /(gstreamer) souphttpsrc.+libsoup\/([\w\.-]+)/i
                                                                             // Gstreamer
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(htc streaming player)\s[\w_]+\s\/\s([\d\.]+)/i,                   // HTC Streaming Player
         /(java|python-urllib|python-requests|wget|libcurl)\/([\w\.-_]+)/i,
                                                                             // Java/urllib/requests/wget/cURL
         /(lavf)([\d\.]+)/i                                                  // Lavf (FFMPEG)
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(htc_one_s)\/([\d\.]+)/i,                                          // HTC One S
-        ], [[NAME, /_/g, ' '], VERSION], [
+        ], [[NAME, /_/g, ' '], VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(mplayer)(?:\s|\/)(?:(?:sherpya-){0,1}svn)(?:-|\s)(r\d+(?:-\d+[\w\.-]+))/i,
                                                                             // MPlayer SVN
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(mplayer)(?:\s|\/)([\w\.-]+)/i,                                    // MPlayer
         /(mplayer) unknown-([\w\.\-]+)/i                                    // MPlayer UNKNOWN
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(mplayer)/i,                                                       // MPlayer (no other info)
         /(yourmuze)/i,                                                      // YourMuze
         /(media player classic|nero showtime)/i                             // Media Player Classic/Nero ShowTime
-        ], [NAME], [
+        ], [NAME, [TYPE, MEDIAPLAYER]], [
 
         /(nero (?:home|scout))\/([\w\.-]+)/i                                // Nero Home/Nero Scout
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(nokia\d+)\/([\w\.-]+)/i                                           // Nokia
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /\s(songbird)\/([\w\.-]+)/i                                         // Songbird/Philips-Songbird
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(winamp)3 version ([\w\.-]+)/i,                                    // Winamp
         /(winamp)\s([\w\.-]+)/i,
         /(winamp)mpeg\/([\w\.-]+)/i
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(ocms-bot|tapinradio|tunein radio|unknown|winamp|inlight radio)/i  // OCMS-bot/tap in radio/tunein/unknown/winamp (no other info)
                                                                             // inlight radio
-        ], [NAME], [
+        ], [NAME, [TYPE, MEDIAPLAYER]], [
 
         /(quicktime|rma|radioapp|radioclientapplication|soundtap|totem|stagefright|streamium)\/([\w\.-]+)/i
                                                                             // QuickTime/RealMedia/RadioApp/RadioClientApplication/
                                                                             // SoundTap/Totem/Stagefright/Streamium
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(smp)([\d\.]+)/i                                                   // SMP
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(vlc) media player - version ([\w\.]+)/i,                          // VLC Videolan
         /(vlc)\/([\w\.-]+)/i,
         /(xbmc|gvfs|xine|xmms|irapp)\/([\w\.-]+)/i,                         // XBMC/gvfs/Xine/XMMS/irapp
         /(foobar2000)\/([\d\.]+)/i,                                         // Foobar2000
         /(itunes)\/([\d\.]+)/i                                              // iTunes
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(wmplayer)\/([\w\.-]+)/i,                                          // Windows Media Player
         /(windows-media-player)\/([\w\.-]+)/i
-        ], [[NAME, /-/g, ' '], VERSION], [
+        ], [[NAME, /-/g, ' '], VERSION, [TYPE, MEDIAPLAYER]], [
 
         /windows\/([\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ (home media server)/i,
                                                                             // Windows Media Server
-        ], [VERSION, [NAME, 'Windows']], [
+        ], [VERSION, [NAME, 'Windows'], [TYPE, MEDIAPLAYER]], [
 
         /(com\.riseupradioalarm)\/([\d\.]*)/i                               // RiseUP Radio Alarm
-        ], [NAME, VERSION], [
+        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(rad.io)\s([\d\.]+)/i,                                             // Rad.io
         /(radio.(?:de|at|fr))\s([\d\.]+)/i
-        ], [[NAME, 'rad.io'], VERSION]
+        ], [[NAME, 'rad.io'], VERSION, [TYPE, MEDIAPLAYER]]
     ]
 });
 
