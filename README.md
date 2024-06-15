@@ -19,7 +19,86 @@ The most comprehensive, compact, & up-to-date isomorphic JavaScript library to d
 user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser 
 (client-side) or node.js (server-side).
 
-## License Options
+# Overview
+
+```js
+import { UAParser } from 'ua-parser-js';
+
+// 1. Problem: 
+// Imagine getting this wild user-agent string from a visitor:
+const ua = `Mozilla/5.0 (Linux; Android 10; STK-LX1 
+Build/HONORSTK-LX1; wv) AppleWebKit/537.36 (KHTML, 
+like Gecko) Version/4.0 Chrome/110.0.5481.153 Mobile 
+Safari/537.36 musical_ly_2022803040 JsSdk/1.0 
+NetType/WIFI Channel/huaweiadsglobal_int 
+AppName/musical_ly app_version/28.3.4 ByteLocale/en 
+ByteFullLocale/en Region/IQ Spark/1.2.7-alpha.8 
+AppVersion/28.3.4 PIA/1.5.11 BytedanceWebview/d8a21c6`;
+// Note: this is a real user-agent (what???)
+
+// 2. Solution:
+// Just pass the complex user-agent string to `UAParser`
+const parser = new UAParser(ua);
+
+// 3. Result:
+// And voila!
+console.log(parser.getBrowser());
+// { name : "TikTok", version : "28.3.4", major : "28", type: undefined }
+
+console.log(parser.getCPU());
+// { architecture : undefined }
+
+console.log(parser.getEngine());
+// { name : "Blink", version : "110.0.5481.153" }
+
+console.log(parser.getDevice());
+// { type : "mobile", vendor : "Huawei", model : "STK-LX1" }
+
+console.log(parser.getOS());
+// { name : "Android", version : "10" }
+
+console.log(parser.getResult());
+/*
+{
+    ua: "Mozilla/5.0 (Linux; Android 10; STK-LX1 Build/HONORSTK-LX1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.153 Mobile Safari/537.36 musical_ly_2022803040 JsSdk/1.0 NetType/WIFI Channel/huaweiadsglobal_int AppName/musical_ly app_version/28.3.4 ByteLocale/en ByteFullLocale/en Region/IQ Spark/1.2.7-alpha.8 AppVersion/28.3.4 PIA/1.5.11 BytedanceWebview/d8a21c6",
+    browser: {
+        name: "TikTok",
+        version: "28.3.4",
+        major: "28"
+    },
+    cpu: {},
+    device: {
+        type: "mobile",
+        model: "STK-LX1",
+        vendor: "Huawei"
+    },
+    engine: {
+        name: "Blink",
+        version: "110.0.5481.153"
+    },
+    os: {
+        name: "Android",
+        version: "10"
+    }
+}
+*/
+
+// 4. Conclusion:
+// The visitor is browsing from a TikTok app using an Android-powered Huawei device
+// Phew! Thanks, UAParser.js!
+```
+
+  * Live demo: https://uaparser.js.org/
+
+# Documentation
+
+  * v1.0: https://github.com/faisalman/ua-parser-js/tree/1.0.38#documentation
+  * v2.0: https://docs.uaparser.js.org/v2 
+
+Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
+see what's new & breaking.
+
+# License Options
 
 <table>
     <thead>
@@ -32,8 +111,8 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
     <tbody>
         <tr>
             <td>License options</td>
-            <td>MIT</td>
-            <td>AGPL</td>
+            <td>MIT (v1.x)</td>
+            <td>AGPL (v2.x)</td>
             <td>PRO Personal</td>
             <td>PRO Business</td>
             <td>PRO Enterprise</td>
@@ -191,15 +270,6 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
         </tr>
     </tfoot>
 </table>
-
-## Version 2.0
-Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
-see what's new & breaking.
-
-# Documentation
-
-  * v1.0: https://github.com/faisalman/ua-parser-js/tree/1.0.35#documentation
-  * v2.0: https://docs.uaparser.js.org/v2 
 
 # Development
 
