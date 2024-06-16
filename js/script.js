@@ -107,7 +107,7 @@ $(document)
         qs = new URLSearchParams(window.location.search).get('ua');
     }
     if (qs) {
-        $('#ua-txt-info').text('What the browser provides 😱😵‍💫❓');
+        $('#ua-txt-info').text('What the browser provides = 😱😵‍💫❓');
         $('#ua-txt').get(0).scrollIntoView();
         updateDemo(UAParser(qs));
     } else {

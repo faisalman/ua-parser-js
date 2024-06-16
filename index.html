@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="keywords"
-        content="browser detection, user-agent, javascript, detect os, detect mobile tablet, detect device, detect cpu, javascript, nodejs, jquery, typescript, client hints" />
-    <title>UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client-Hints data
-        using JavaScript. Supports browser & node.js environment. Available as jQuery plugin & @types-ready for
-        TypeScript.</title>
+        content="browser detection, user-agent, javascript, detect os, mobile, tablet, detect device, cpu, javascript, nodejs, jquery, typescript, client hints, bots, iphone, ipad, android" />
+    <meta name="description" content="UAParser.js is the most comprehensive, compact, & up-to-date isomorphic JavaScript library to detect visitor's Browser, Engine, OS, CPU, and Device type/model.">
+    <title>UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data using JavaScript. Supports browser & node.js environment. Also available as jQuery plugin & TypeScript-ready development.</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/srcery.min.css">
     <link rel="icon" type="image/png" href="images/logo.png">
@@ -34,17 +33,17 @@
             </h2>
             <div class="ui text container">
                 <h1>
-                    <p><a href="https://uaparser.js.org">{UAParser.js}</a> is a JavaScript library to detect user's
+                    <p><a href="https://uaparser.dev">{UAParser.js}</a> is a JavaScript library to detect user's
                         <u>Browser</u>, <u>Engine</u>, <u>OS</u>, <u>CPU</u>, and <u>Device</u> type/model. Runs either
                         in browser (client-side) or node.js (server-side).</p>
                 </h1>
                 <div class="ui massive buttons">
                     <a href="#try" class="ui violet button"><i class="magic icon"></i>Try Demo</a>
-                    <a href="https://docs.uaparser.js.org/v2" class="ui green button"><i class="book icon"></i>Read Docs</a>
+                    <a href="https://docs.uaparser.dev" class="ui green button"><i class="book icon"></i>Read Docs</a>
                     <a href="#download" class="ui blue button"><i class="download icon"></i>Download</a>
                 </div>
             </div>
-            <img class="ui centered image illustration" src="images/uap-illustrations.png" />
+            <img alt="UAParser.js Illustration" class="ui centered image illustration" src="images/uap-illustrations.png" />
         </div>
 
 
@@ -99,7 +98,7 @@
                                 <div class="header" id="browser-txt"></div>
                             </div>
                             <div class="ui basic segment">
-                                <img class="ui tiny centered image" id="browser-img" src="">
+                                <img alt="detected browser icon" class="ui tiny centered image" id="browser-img" src="">
                             </div>
                         </div>
                         <div class="column">
@@ -111,7 +110,7 @@
                                 <div class="header" id="engine-txt"></div>
                             </div>
                             <div class="ui basic segment">
-                                <img class="ui tiny centered image" id="engine-img" src="">
+                                <img alt="detected engine icon" class="ui tiny centered image" id="engine-img" src="">
                             </div>
                         </div>
                         <div class="column">
@@ -123,7 +122,7 @@
                                 <div class="header" id="os-txt"></div>
                             </div>
                             <div class="ui basic segment">
-                                <img class="ui tiny centered image" id="os-img" src="">
+                                <img alt="detected os icon" class="ui tiny centered image" id="os-img" src="">
                             </div>
                         </div>
                     </div>
@@ -134,7 +133,7 @@
                                 Type
                             </div>
                             <div class="ui basic segment">
-                                <img class="ui tiny centered image" id="type-img" src="">
+                                <img alt="detected device type icon" class="ui tiny centered image" id="type-img" src="">
                                 <div class="ui center aligned header">
                                     <div class="header" id="type-txt"></div>
                                 </div>
@@ -146,7 +145,7 @@
                                 Model
                             </div>
                             <div class="ui basic segment">
-                                <img class="ui tiny centered image" id="device-img" src="">
+                                <img alt="detected device vendor icon" class="ui tiny centered image" id="device-img" src="">
                                 <div class="ui center aligned header">
                                     <div class="header" id="device-txt"></div>
                                 </div>
@@ -158,7 +157,7 @@
                                 CPU
                             </div>
                             <div class="ui basic segment">
-                                <img class="ui tiny centered image" id="cpu-img" src="">
+                                <img alt="detected cpu icon" class="ui tiny centered image" id="cpu-img" src="">
                                 <div class="ui center aligned header">
                                     <div id="cpu-txt"></div>
                                 </div>
@@ -202,7 +201,7 @@
                                 <i class="microchip icon"></i>
                                 GPU
                             </div>
-                            <img class="ui tiny centered image" id="gpu-img" src="">
+                            <img alt="detected gpu icon" class="ui tiny centered image" id="gpu-img" src="">
                             <div class="ui center aligned header">
                                 <div id="gpu-txt"></div>
                             </div>
@@ -292,7 +291,7 @@
                                 <div class="ui items">
                                     <div class="item">
                                         <div class="content">
-                                            <a class="header">Great Utility!</a>
+                                            <span class="header">Great Utility!</span>
                                             <div class="extra">
                                                 <div class="ui star rating" data-rating="5" data-max-rating="5"></div>
                                                 5/5
@@ -314,7 +313,7 @@
                                 <div class="ui relaxed divided items">
                                     <div class="item">
                                         <div class="content">
-                                            <a class="header">Totally Rocks!</a>
+                                            <span class="header">Totally Rocks!</span>
                                             <div class="description">
                                                 <p class="code"><em>"I've been using your library for a long time and it
                                                         totally rocks!"</em>.</p>
@@ -324,7 +323,7 @@
                                     </div>
                                     <div class="item">
                                         <div class="content">
-                                            <a class="header">Very Useful!</a>
+                                            <span class="header">Very Useful!</span>
                                             <div class="description">
                                                 <p class="code"><em>"Thank you for putting out this very useful
                                                         library!"</em>.</p>
@@ -351,7 +350,7 @@
                     <div class="ui equal width stackable grid"">
           <div class=" row">
                         <div class="column">
-                            <img src="images/companies/microsoft.png" />
+                            <img alt="Microsoft logo" src="images/companies/microsoft.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://opensource.microsoft.com/thanks/" target="_blank"
@@ -363,7 +362,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/amazon.png" />
+                            <img alt="Amazon logo" src="images/companies/amazon.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon buttons">
                                     <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=200309690"
@@ -376,7 +375,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/facebook.png" />
+                            <img alt="Facebook logo" src="images/companies/facebook.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/facebook/fbjs/tree/fbjs-v2.0.0/packages/fbjs"
@@ -386,7 +385,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/instagram.png" />
+                            <img alt="Instagram logo" src="images/companies/instagram.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.instagram.com" target="_blank" class="ui pink button"><i
@@ -395,7 +394,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/whatsapp.png" />
+                            <img alt="WhatsApp logo" src="images/companies/whatsapp.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://web.whatsapp.com" target="_blank" class="ui green button"><i
@@ -404,7 +403,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/slack.png" />
+                            <img alt="Slack logo" src="images/companies/slack.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://slack.com/libs/desktop" target="_blank" class="ui red button"><i
@@ -415,7 +414,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/google.png" />
+                            <img alt="Google logo" src="images/companies/google.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/google/tachometer" target="_blank"
@@ -424,7 +423,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/httptoolkit.png" />
+                            <img alt="HTTPToolkit logo" src="images/companies/httptoolkit.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon buttons">
                                     <a href="https://httptoolkit.com/" target="_blank" class="ui red button"><i
@@ -433,7 +432,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/aliexpress.png" />
+                            <img alt="AliExpress logo" src="images/companies/aliexpress.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.aliexpress.com" target="_blank" class="ui orange button"><i
@@ -442,7 +441,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/vercel.png" />
+                            <img alt="Vercel logo" src="images/companies/vercel.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/vercel/next.js" target="_blank"
@@ -451,7 +450,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/gitpod.png" />
+                            <img alt="Gitpod logo" src="images/companies/gitpod.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://gitpod.io" target="_blank" class="ui teal button"><i
@@ -460,7 +459,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/apple.png" />
+                            <img alt="Apple logo" src="images/companies/apple.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://music.apple.com/" target="_blank" class="ui black button"><i
@@ -473,7 +472,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/discord.png" />
+                            <img alt="Discord logo" src="images/companies/discord.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://discord.com/acknowledgements" target="_blank"
@@ -482,7 +481,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/mozilla.png" />
+                            <img alt="Mozilla logo" src="images/companies/mozilla.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/mozilla/addons-frontend/tree/2019.06.06" target="_blank"
@@ -491,7 +490,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/automattic.png" />
+                            <img alt="Automattic logo" src="images/companies/automattic.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/Automattic/wp-calypso/tree/v6.12.0/client"
@@ -501,7 +500,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/shopify.png" />
+                            <img alt="Shopify logo" src="images/companies/shopify.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/Shopify/quilt/tree/%40shopify/react-form%400.12.0/packages/browser"
@@ -514,7 +513,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/amplitude.png" />
+                            <img alt="Amplitude logo" src="images/companies/amplitude.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/amplitude/Amplitude-JavaScript" target="_blank"
@@ -523,7 +522,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/line.png" />
+                            <img alt="LINE logo" src="images/companies/line.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://line.me" target="_blank" class="ui green button"><i
@@ -534,7 +533,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/electron.png" />
+                            <img alt="Electron logo" src="images/companies/electron.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.electronjs.org/" target="_blank" class="ui green button"><i
@@ -543,7 +542,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/livechat.png" />
+                            <img alt="LiveChat logo" src="images/companies/livechat.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/livechat/emoji-keyboard" target="_blank"
@@ -552,7 +551,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/rocket.chat.png" />
+                            <img alt="RocketChat logo" src="images/companies/rocket.chat.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/RocketChat/Rocket.Chat/tree/3.12.1" target="_blank"
@@ -561,7 +560,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/8thwall.png" />
+                            <img alt="8th Wall logo" src="images/companies/8thwall.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="http://www.8thwall.com/" target="_blank" class="ui violet button"><i
@@ -570,7 +569,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/circleci.png" />
+                            <img alt="CircleCI logo" src="images/companies/circleci.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://circleci.com/docs/enterprise/open-source/" target="_blank"
@@ -579,7 +578,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/salesforce.png" />
+                            <img alt="Salesforce logo" src="images/companies/salesforce.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/SalesforceCommerceCloud/pwa-kit" target="_blank"
@@ -590,7 +589,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/protonmail.png" />
+                            <img alt="ProtonMail logo" src="images/companies/protonmail.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/ProtonMail/WebClient/" target="_blank"
@@ -599,7 +598,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/autodesk.png" />
+                            <img alt="AutoDesk logo" src="images/companies/autodesk.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.autodesk.com/company/legal-notices-trademarks/autodesk-desktop-platform-components/2021"
@@ -609,7 +608,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/confluent.png" />
+                            <img alt="Confluent logo" src="images/companies/confluent.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.confluent.io/third_party_software_CP_v5_0/" target="_blank"
@@ -618,7 +617,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/elastic.png" />
+                            <img alt="Elastic logo" src="images/companies/elastic.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.elastic.co/guide/en/cloud-enterprise/current/ece-dependencies.html"
@@ -628,7 +627,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/optimizely.png" />
+                            <img alt="Optimizely logo" src="images/companies/optimizely.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/optimizely/ua-parser-js" target="_blank"
@@ -637,7 +636,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/reddit.png" />
+                            <img alt="Reddit logo" src="images/companies/reddit.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://reddit.com/" target="_blank" class="ui orange button"><i
@@ -648,7 +647,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/scribd.png" />
+                            <img alt="Scribd logo" src="images/companies/scribd.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.scribd.com/" target="_blank" class="ui green button"><i
@@ -657,7 +656,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/zendesk.png" />
+                            <img alt="Zendesk logo" src="images/companies/zendesk.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.zendesk.com/" target="_blank" class="ui green button"><i
@@ -666,7 +665,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/imgur.png" />
+                            <img alt="Imgur logo" src="images/companies/imgur.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://imgur.com/" target="_blank" class="ui black button"><i
@@ -675,7 +674,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/vimeo.png" />
+                            <img alt="Vimeo logo" src="images/companies/vimeo.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://vimeo.com/" target="_blank" class="ui teal button"><i
@@ -684,7 +683,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/tumblr.png" />
+                            <img alt="Tumblr logo" src="images/companies/tumblr.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.tumblr.com/policy/en/web-credits" target="_blank"
@@ -693,7 +692,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/pinterest.png" />
+                            <img alt="Pinterest logo" src="images/companies/pinterest.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.pinterest.com/" target="_blank" class="ui red button"><i
@@ -706,7 +705,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/zoho.png" />
+                            <img alt="Zoho logo" src="images/companies/zoho.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://mail.zoho.com" target="_blank" class="ui black button"><i
@@ -715,7 +714,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/snapchat.png" />
+                            <img alt="Snapchat logo" src="images/companies/snapchat.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.snapchat.com/" target="_blank" class="ui blue button"><i
@@ -724,7 +723,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/udemy.png" />
+                            <img alt="Udemy logo" src="images/companies/udemy.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.udemy.com/" target="_blank" class="ui orange button"><i
@@ -733,7 +732,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/linktree.png" />
+                            <img alt="Linktree logo" src="images/companies/linktree.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://linktr.ee/" target="_blank" class="ui teal button"><i
@@ -742,7 +741,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/blinkist.png" />
+                            <img alt="Blinkist logo" src="images/companies/blinkist.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.blinkist.com/" target="_blank" class="ui green button"><i
@@ -751,7 +750,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/notion.png" />
+                            <img alt="Notion logo" src="images/companies/notion.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.notion.so/" target="_blank" class="ui blue button"><i
@@ -762,7 +761,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/uber.png" />
+                            <img alt="Uber logo" src="images/companies/uber.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.uber.com/a/join-new" target="_blank" class="ui black button"><i
@@ -771,7 +770,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/disney.png" />
+                            <img alt="Disney logo" src="images/companies/disney.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.disneyplus.com" target="_blank" class="ui blue button"><i
@@ -783,7 +782,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/livescore.png" />
+                            <img alt="Livescore logo" src="images/companies/livescore.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.livescore.com/" target="_blank" class="ui orange button"><i
@@ -792,7 +791,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/freelancer.png" />
+                            <img alt="Freelancer logo" src="images/companies/freelancer.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.freelancer.com/" target="_blank" class="ui teal button"><i
@@ -801,7 +800,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/instacart.png" />
+                            <img alt="Instacart logo" src="images/companies/instacart.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.instacart.com/" target="_blank" class="ui green button"><i
@@ -810,7 +809,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/expedia.png" />
+                            <img alt="Expedia logo" src="images/companies/expedia.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.expedia.com/" target="_blank" class="ui blue button"><i
@@ -821,7 +820,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/olx.png" />
+                            <img alt="OLX logo" src="images/companies/olx.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.olx.com/" target="_blank" class="ui blue button"><i
@@ -830,7 +829,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/grab.png" />
+                            <img alt="Grab logo" src="images/companies/grab.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://food.grab.com" target="_blank" class="ui green button"><i
@@ -839,7 +838,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/traveloka.png" />
+                            <img alt="Traveloka logo" src="images/companies/traveloka.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.traveloka.com" target="_blank" class="ui blue button"><i
@@ -848,7 +847,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/shopee.png" />
+                            <img alt="Shopee logo" src="images/companies/shopee.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://seller.shopee.co.id/" target="_blank" class="ui orange button"><i
@@ -857,7 +856,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/bukalapak.png" />
+                            <img alt="Bukalapak logo" src="images/companies/bukalapak.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://bukalapak.com/" target="_blank" class="ui red button"><i
@@ -866,7 +865,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/tokopedia.png" />
+                            <img alt="Tokopedia logo" src="images/companies/tokopedia.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://tiket.tokopedia.com/" target="_blank" class="ui green button"><i
@@ -877,7 +876,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/jetbrains.png" />
+                            <img alt="JetBrains logo" src="images/companies/jetbrains.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.jetbrains.com/help/hub/third-party-software.html"
@@ -888,7 +887,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/here.png" />
+                            <img alt="Here logo" src="images/companies/here.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/heremaps/harp.gl/tree/master/%40here/harp-test-utils"
@@ -898,7 +897,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/postman.png" />
+                            <img alt="Postman logo" src="images/companies/postman.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.postman.com/explore" target="_blank"
@@ -907,7 +906,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/intuit.png" />
+                            <img alt="Intuit logo" src="images/companies/intuit.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://myturbotax.intuit.com/" target="_blank" class="ui blue button"><i
@@ -916,7 +915,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/neo4j.png" />
+                            <img alt="Neo4j logo" src="images/companies/neo4j.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://neo4j.com/terms/thirdpartylicenses/bloom/" target="_blank"
@@ -925,7 +924,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/mongodb.png" />
+                            <img alt="Mongodb logo" src="images/companies/mongodb.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://docs.mongodb.com/charts/master/third-party-licenses/"
@@ -937,7 +936,7 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="images/companies/dell.png" />
+                            <img alt="Dell logo" src="images/companies/dell.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://cloud.ibm.com/media/docs/downloads/oss-licensing-info/IBMCloud-DeveloperConsole-OSS-Licenses.txt"
@@ -947,7 +946,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/ibm.png" />
+                            <img alt="IBM logo" src="images/companies/ibm.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://cloud.ibm.com/media/docs/downloads/oss-licensing-info/IBMCloud-DeveloperConsole-OSS-Licenses.txt"
@@ -957,7 +956,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/oracle.png" />
+                            <img alt="Oracle logo" src="images/companies/oracle.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://docs.oracle.com/cloud/latest/netsuitecs_gs/NSLIU/NSLIU.pdf"
@@ -967,7 +966,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/siemens.png" />
+                            <img alt="Siemens logo" src="images/companies/siemens.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://premiumservices.siemens.com/assets/ReadMe_OSS.html" target="_blank"
@@ -976,7 +975,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/hpe.png" />
+                            <img alt="HPE logo" src="images/companies/hpe.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.hpe.com/content/dam/hpe/download/pdf/Software/HPE%20OVGD%20v1.40%20ALA.pdf"
@@ -986,7 +985,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <img src="images/companies/verizon.png" />
+                            <img alt="Verizon logo" src="images/companies/verizon.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.verizon.com/supportresources/content/dam/verizon/support/consumer/documents/ftw-open-source-licenses190228.pdf"
@@ -1193,7 +1192,7 @@
                 <h2 class="ui dividing header">Contributors <div class="sub header">Those who collaborate and
                         continuously improve this library to be awesome</div>
                 </h2>
-                <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img class="ui centered image"
+                <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img alt="contributor photos" class="ui centered image"
                         src="https://opencollective.com/ua-parser-js/contributors.svg?avatarHeight=64&width=640" /></a>
             </div>
             <div class="ui basic centered segment">
@@ -1201,9 +1200,9 @@
                         the value from using this library</div>
                 </h2>
                 <div class="description">
-                    <a href="https://opencollective.com/ua-parser-js"><img class="ui centered image"
+                    <a href="https://opencollective.com/ua-parser-js"><img alt="organization backer photos" class="ui centered image"
                             src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=128" />
-                        <img class="ui centered image"
+                        <img alt="individual backer photos" class="ui centered image"
                             src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=128" /></a>
                 </div>
             </div>
@@ -1229,41 +1228,41 @@
             <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="five wide column">
                     <div class="ui basic right aligned segment">
-                        <img class="ui centered small image" src="images/uap-logo-transparent.png">
+                        <img alt="UAParser.js logo transparent" class="ui centered small image" src="images/uap-logo-transparent.png">
                     </div>
                 </div>
                 <div class="eleven wide column">
                     <div class="ui basic right aligned segment">
                         <div class="ui inverted link animated selection horizontal list">
                             <a target="_blank" class="item" href="https://github.com/faisalman/ua-parser-js"><img
-                                    src="https://img.shields.io/github/stars/faisalman/ua-parser-js?color=yellow&logo=github&style=for-the-badge"></a>
+                                alt="GitHub stars badge" src="https://img.shields.io/github/stars/faisalman/ua-parser-js?color=yellow&logo=github&style=for-the-badge"></a>
                             <a target="_blank" class="item" href="https://www.npmjs.com/package/ua-parser-js"><img
-                                    src="https://img.shields.io/npm/dm/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
+                                alt="NPM downloads badge" src="https://img.shields.io/npm/dm/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
                             <a target="_blank" class="item" href="https://www.npmjs.com/package/ua-parser-js"><img
-                                    src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
+                                alt="NPM latest version badge" src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
                             <a target="_blank" class="item"
                                 href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img
-                                    src="https://img.shields.io/jsdelivr/npm/hm/ua-parser-js?logo=jsdelivr&style=for-the-badge"></a>
+                                alt="Jsdelivr badge" src="https://img.shields.io/jsdelivr/npm/hm/ua-parser-js?logo=jsdelivr&style=for-the-badge"></a>
                             <a target="_blank" class="item" href="https://bundlephobia.com/package/ua-parser-js"><img
-                                    src="https://img.shields.io/bundlephobia/minzip/ua-parser-js?logo=hackthebox&logoColor=white&style=for-the-badge" /></a>
+                                alt="Bundlephobia badge" src="https://img.shields.io/bundlephobia/minzip/ua-parser-js?logo=hackthebox&logoColor=white&style=for-the-badge" /></a>
                             <a target="_blank" class="item"
                                 href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img
-                                    src="https://img.shields.io/github/contributors/faisalman/ua-parser-js?color=purple&logo=githubsponsors&style=for-the-badge"></a>
+                                alt="GitHub sponsors badge" src="https://img.shields.io/github/contributors/faisalman/ua-parser-js?color=purple&logo=githubsponsors&style=for-the-badge"></a>
                             <a target="_blank" class="item" href="https://cdnjs.com/libraries/UAParser.js"><img
-                                    src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
+                                alt="CDNJS badge" src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
                             <a href="https://opencollective.com/ua-parser-js" target="_blank" class="item"><img
-                                    alt="OpenCollective"
+                                    alt="OpenCollective badge"
                                     src="https://img.shields.io/opencollective/all/ua-parser-js?color=teal&style=for-the-badge"></a>
                             <a href="https://github.com/faisalman/ua-parser-js" target="_blank" class="item">
-                                <img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge"></a>
+                                <img alt="OSSF Scorecard badge" src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge"></a>
                             <iframe src="https://github.com/sponsors/faisalman/button" title="Github Sponsor"
                                 height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
                         </div>
                     </div>
-                    <div class="ui right aligned basic segment">
-                        <p>Licensed under AGPLv3 license. Copyright (c) 2012-2024 Faisal Salman.</p>
-                    </div>
                 </div>
+            </div>
+            <div class="ui right aligned basic segment">
+                <p>UAParser.js is licensed under MIT, AGPLv3 & PRO licenses. Copyright (c) 2012-2024 Faisal Salman.</p>
             </div>
         </div>
     </div>
