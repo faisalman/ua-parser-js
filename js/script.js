@@ -162,4 +162,6 @@ $(document)
         e.clearSelection();
     });
     hljs.highlightAll();
+
+    $('.menu .item').tab();
 });

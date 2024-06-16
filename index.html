@@ -210,76 +210,342 @@
                 </div>
             </div>
             <div class="ui horizontal divider">
-                FEATURES: WHEN LESS IS MORE
+                QUICKSTART : SUPPORT VARIOUS DEVELOPMENT STRATEGIES
             </div>
-            <div class="ui tall stacked segment">
-                <div class="ui equal width stackable grid">
-                    <div class="row">
-                        <div class="column">
-                            <div class="ui basic segment">
-                                <h3 class="ui header">
-                                    <i class="filter icon"></i>
-                                    <div class="content">Extract Only What's Valuable</div>
-                                </h3>
-                                <p>{UAParser.js} filters the noise away and only extracts the most meaningful data in a well-structured format.</p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui basic segment">
-                                <h3 class="ui header">
-                                    <i class="paper plane icon"></i>
-                                    <div class="content">Relatively Small Footprint</div>
-                                </h3>
-                                <p>While {UAParser.js} covers a vast range of detection, on the other hand its size is always kept to be as light as possible.</p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui basic segment">
-                                <h3 class="ui header">
-                                    <i class="js square icon"></i>
-                                    <div class="content">
-                                        Zero-deps Vanilla JS
-                                    </div>
-                                </h3>
-                                <p>No dependencies, bloated framework, unnecessary boilerplate, transpiler, or large-sized files required.</p>
-                            </div>
-                        </div>
+                <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="esm">ESM / TypeScript</a>
+                    <a class="item" data-tab="node">Node.js</a>
+                    <a class="item" data-tab="html">HTML</a>
+                    <a class="item" data-tab="jquery">jQuery</a>
+                    <a class="item" data-tab="cli">Command Line</a>
+                </div>
+                <div class="ui bottom attached tab tall stacked segment active" data-tab="esm">
+                    <div class="ui basic segment">
+                        <p>To get started, install UAParser.js using npm:</p>
+
+<pre><code>$ npm install ua-parser-js
+</code></pre>
+
+<p>Then, import the library in your application:</p>
+
+<pre><code class="language-js">import { UAParser } from 'ua-parser-js';
+
+const ua = 'Mozilla/5.0 (X11; U; Linux armv7l; en-GB; rv:1.9.2a1pre)
+Gecko/20090928 Firefox/3.5 Maemo Browser 1.4.1.22 RX-51 N900';
+
+const { browser, cpu, device } = UAParser(ua);
+
+console.log(browser.name);          // Maemo Browser
+console.log(cpu.is('arm'));         // true
+console.log(device.is('mobile'));   // true
+console.log(device.vendor);         // Nokia
+console.log(device.model);          // N900
+</code></pre>
+                        
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-es-modules-typescript.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
                     </div>
-                    <div class="row">
-                        <div class="column">
-                            <div class="ui basic segment">
-                                <h3 class="ui header">
-                                    <i class="github icon"></i>
-                                    <div class="content">
-                                        100% Free & Open Source
-                                    </div>
-                                </h3>
-                                <p>{UAParser.js} is free to use & modify at no charge. PRO licenses also available if you need a non-free license.</p>
+                </div>
+                <div class="ui bottom attached tab tall stacked segment" data-tab="html">
+                    <div class="ui basic segment">
+
+                        <p>Download UAParser.js from the official GitHub repository: <a href="https://github.com/faisalman/ua-parser-js/blob/master/dist/ua-parser.min.js">ua-parser-js</a>, then place the following script tag in your HTML file to include the library:</p>
+
+
+<pre><code class="language-js">&lt;script src="ua-parser.min.js"&gt;&lt;/script&gt;
+</code></pre>
+                        <p>Alternatively, you can use a CDN like <a href="https://cdn.jsdelivr.net/npm/ua-parser-js/src/ua-parser.min.js">jsDelivr</a> or <a href="https://cdnjs.com/libraries/UAParser.js">cdnjs</a> in your script tag:</p>                       
+
+<pre><code class="language-js">&lt;script src="https://cdn.jsdelivr.net/npm/ua-parser-js/dist/ua-parser.min.js">&lt;/script>
+</code></pre>
+
+<p>Then, use the library in your HTML page:</p>
+                        
+<pre><code class="language-html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="ua-parser.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+
+const uap = new UAParser();
+console.log(uap.getResult());
+/*
+    /// This will print an object structured like this:
+    {
+        ua: "",
+        browser: {
+            name: "",
+            version: "",
+            major: "",
+            type: ""
+        },
+        engine: {
+            name: "",
+            version: ""
+        },
+        os: {
+            name: "",
+            version: ""
+        },
+        device: {
+            model: "",
+            type: "",
+            vendor: ""
+        },
+        cpu: {
+            architecture: ""
+        }
+    }
+*/
+// The result depends on current window.navigator.userAgent value
+
+// Now let's try a custom user-agent string as an example
+const uastring1 = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
+uap.setUA(uastring1);
+const result = uap.getResult();
+
+console.log(result.browser); // {name: "Chromium", version: "15.0.874.106", major: "15", type: undefined}
+console.log(result.device); // {model: undefined, type: undefined, vendor: undefined}
+console.log(result.os); // {name: "Ubuntu", version: "11.10"}
+console.log(result.os.version); // "11.10"
+console.log(result.engine.name); // "WebKit"
+console.log(result.cpu.architecture); // "amd64"
+
+// Do some other tests
+const uastring2 = "Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)";
+console.log(uap.setUA(uastring2).getBrowser().name); // "Konqueror"
+console.log(uap.getOS()); // {name: "OpenBSD", version: undefined}
+console.log(uap.getEngine()); // {name: "KHTML", version: "4.1.4"}
+
+const uastring3 = 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11';
+console.log(uap.setUA(uastring3).getDevice().model); // "PlayBook"
+console.log(uap.getOS()); // {name: "RIM Tablet OS", version: "1.0.0"}
+console.log(uap.getBrowser().name); // "Safari"
+
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-html.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                    </div>
+                </div>
+                <div class="ui bottom attached tab tall stacked segment" data-tab="node">
+                    <div class="ui basic segment">
+
+                        <p>In a server-side environment like Node.js, UAParser.js can parse the <code>[User-Agent]</code> and <code>[Sec-CH-UA-*]</code> headers from the incoming HTTP requests. </p>
+
+                        <p>To get started, install UAParser.js using npm:</p>
+                        
+<pre><code>$ npm install ua-parser-js
+</code></pre>
+                        
+                        <p>Then, require the library in your Node.js application:</p>
+                        
+<pre><code class="language-js">const http = require('http');
+const uap = require('ua-parser-js');
+
+http.createServer(function (req, res) {
+    // get user-agent header
+    let ua = uap(req.headers['user-agent']);
+
+    /* 
+    // Since v2.0.0
+    // you can also pass Client Hints data to UAParser
+    // note: only works in a secure context (localhost or https://)
+    // from any browsers that are based on Chrome 85+
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA
+
+        const getHighEntropyValues = 'Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Arch, Sec-CH-UA-Bitness';
+        res.setHeader('Accept-CH', getHighEntropyValues);
+        res.setHeader('Critical-CH', getHighEntropyValues);
+        
+        ua = uap(req.headers).withClientHints();
+    */
+
+    // write the result as response
+    res.end(JSON.stringify(ua, null, '  '));
+})
+.listen(1337, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:1337/');
+</code></pre>
+
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-node-js.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+
+                    </div>
+                </div>
+                <div class="ui bottom attached tab tall stacked segment" data-tab="jquery">
+                    <div class="ui basic segment">
+                        <p>Although written in vanilla JavaScript, UAParser.js automatically detects the presence of <code>jQuery</code> (or <code>Zepto</code>) and creates a <code>$.ua</code> object in addition to the <code>window.UAParser</code> constructor.</p>
+
+                        <h4>Properties</h4>
+                        
+                        <p>The result of detected user-agent</p>
+                        
+                        <ul>
+                            <li><code>$.ua.browser</code></li>
+                            <li><code>$.ua.cpu</code></li>
+                            <li><code>$.ua.device</code></li>
+                            <li><code>$.ua.engine</code></li>
+                            <li><code>$.ua.os</code></li>
+                        </ul>
+                        
+                        <h4>Methods</h4>
+                        
+                        <p>To get or set the user-agent</p>
+                        
+                        <ul>
+                            <li><code>$.ua.get()</code></li>
+                            <li><code>$.ua.set(ua)</code></li>
+                        </ul>
+                        
+                        <h4>Code Example:</h4>
+                        
+<pre><code>// Say we are in a browser where jQuery is present
+// with user-agent: "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0"
+
+// Get the details
+console.log($.ua.device);           // {vendor: "HTC", model: "Evo Shift 4G", type: "mobile"}
+console.log($.ua.os);               // {name: "Android", version: "2.3.4"}
+console.log($.ua.os.name);          // "Android"
+console.log($.ua.get());            // "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0"
+
+if($.ua.browser.is("IE")) {
+    alert("Please upgrade!");
+}
+
+// Now let's try another custom user-agent
+$.ua.set('Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13');
+
+// Test again
+console.log($.ua.browser.name);     // "Safari"
+console.log($.ua.engine.name);      // "Webkit"
+console.log($.ua.device);           // {vendor: "Motorola", model: "Xoom", type: "tablet"}
+console.log($.ua.browser.version);  // "4.0"
+console.log($.ua.browser.major);    // "4"
+
+// Add class to &lt;body&gt; tag
+// &lt;body class="ua-browser-safari ua-devicetype-tablet"&gt;
+$('body')
+    .addClass(
+        'ua-browser-' + 
+        $.ua.browser.name + 
+        ' ua-devicetype-' + 
+        $.ua.device.type);
+</code></pre>
+
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-jquery.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                    </div>
+                </div>
+                <div class="ui bottom attached tab tall stacked segment" data-tab="cli">
+                    <div class="ui basic segment">
+
+                        You can use <code>npx</code> to run UAParser.js from the command line without installing the package:
+
+<pre><code>$ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)"
+
+# console output:
+"
+[
+    {
+        "ua": "Flock/2.16 (Zenwalk 7.3; es_PR;)",
+        "browser": {
+            "name": "Flock",
+            "version": "2.16",
+            "major": "2"
+        },
+        "cpu": {},
+        "device": {},
+        "engine": {},
+        "os": {
+            "name": "Zenwalk",
+            "version": "7.3"
+        }
+    }
+]
+"
+
+# let's save the result into a log file:
+$ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
+</code></pre>
+
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-cli.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                    </div>
+                </div>
+                <div class="ui horizontal divider">
+                    FEATURES: WHEN LESS IS MORE
+                </div>
+                <div class="ui tall stacked segment">
+                    <div class="ui equal width stackable grid">
+                        <div class="row">
+                            <div class="column">
+                                <div class="ui basic segment">
+                                    <h3 class="ui header">
+                                        <i class="filter icon"></i>
+                                        <div class="content">Extract Only What's Valuable</div>
+                                    </h3>
+                                    <p>{UAParser.js} filters the noise away and only extracts the most meaningful data in a well-structured format.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="ui basic segment">
+                                    <h3 class="ui header">
+                                        <i class="paper plane icon"></i>
+                                        <div class="content">Relatively Small Footprint</div>
+                                    </h3>
+                                    <p>While {UAParser.js} covers a vast range of detection, on the other hand its size is always kept to be as light as possible.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="ui basic segment">
+                                    <h3 class="ui header">
+                                        <i class="js square icon"></i>
+                                        <div class="content">
+                                            Zero-deps Vanilla JS
+                                        </div>
+                                    </h3>
+                                    <p>No dependencies, bloated framework, unnecessary boilerplate, transpiler, or large-sized files required.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="ui basic segment">
-                                <h3 class="ui header">
-                                    <i class="keyboard icon"></i>
-                                    <div class="content">
-                                        Best Developer Experience
-                                    </div>
-                                </h3>
-                                <p>{UAParser.js} generates a plugin for jQuery user, and provides predefined type for TypeScript user.</p>
+                        <div class="row">
+                            <div class="column">
+                                <div class="ui basic segment">
+                                    <h3 class="ui header">
+                                        <i class="github icon"></i>
+                                        <div class="content">
+                                            100% Free & Open Source
+                                        </div>
+                                    </h3>
+                                    <p>{UAParser.js} is free to use & modify at no charge. PRO licenses also available if you need a non-free license.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui basic segment">
-                                <h3 class="ui header">
-                                    <i class="npm icon"></i>
-                                    <div class="content">Client-side & Server-side</div>
-                                </h3>
-                                <p>{UAParser.js} is an isomorphic JavaScript library that's able to run either in browser or node.js environment.
+                            <div class="column">
+                                <div class="ui basic segment">
+                                    <h3 class="ui header">
+                                        <i class="keyboard icon"></i>
+                                        <div class="content">
+                                            Best Developer Experience
+                                        </div>
+                                    </h3>
+                                    <p>{UAParser.js} generates a plugin for jQuery user, and provides predefined type for TypeScript user.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="ui basic segment">
+                                    <h3 class="ui header">
+                                        <i class="npm icon"></i>
+                                        <div class="content">Client-side & Server-side</div>
+                                    </h3>
+                                    <p>{UAParser.js} is an isomorphic JavaScript library that's able to run either in browser or node.js environment.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="ui horizontal divider">
                 TESTIMONIALS : LOVED BY DEVELOPERS
             </div>
@@ -338,7 +604,7 @@
                 </div>
             </div>
             <div class="ui horizontal divider">
-                SHOWCASES : TRUSTED BY TOP COMPANIES WORLDWIDE
+                SHOWCASES : TRUSTED BY TOP COMPANIES
             </div>
             <div class="ui tall stacked segment" id="showcase">
                 <div class="ui basic centered segment">
@@ -1004,7 +1270,7 @@
             <div class="ui basic centered segment">
                 <h2 class="ui dividing header">Package Options<div class="sub header">Comparison between our regular open-source & PRO licenses</div>
                 </h2>
-                <table class="ui center aligned collapsing celled table">
+                <table class="ui center aligned collapsing celled unstackable table">
                     <thead>
                         <tr>
                             <th class="left aligned"></th>
