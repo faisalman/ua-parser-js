@@ -21,7 +21,7 @@
     "os-detection",
     "bot-detection"
   ],
-  "homepage": "https://github.com/faisalman/ua-parser-js",
+  "homepage": "https://uaparser.dev",
   "contributors": [
     "Aamir Poonawalla <aamir@urx.com>",
     "Admas <mollases@users.noreply.github.com>",
@@ -237,7 +237,7 @@
     "test": "test"
   },
   "bugs": "https://github.com/faisalman/ua-parser-js/issues",
-  "demo": "https://uaparser.js.org",
+  "demo": "https://uaparser.dev",
   "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.pack.js",
   "funding": [
     {

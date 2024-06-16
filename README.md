@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://uaparser.js.org"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
+    <a href="https://uaparser.dev"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
 </p>
 
 <p align="center">
@@ -88,12 +88,12 @@ console.log(parser.getResult());
 // Phew! Thanks, UAParser.js!
 ```
 
-  * Live demo: https://uaparser.js.org/
+  * Live demo: https://uaparser.dev
 
 # Documentation
 
   * v1.0: https://github.com/faisalman/ua-parser-js/tree/1.0.38#documentation
-  * v2.0: https://docs.uaparser.js.org/v2 
+  * v2.0: https://docs.uaparser.dev
 
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
 see what's new & breaking.

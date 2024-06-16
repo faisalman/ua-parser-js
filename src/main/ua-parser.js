@@ -4,7 +4,7 @@
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
-   Demo   : https://faisalman.github.io/ua-parser-js
+   Demo   : https://uaparser.dev
    Source : https://github.com/faisalman/ua-parser-js */
 /////////////////////////////////////////////////////////////////////////////////
 
