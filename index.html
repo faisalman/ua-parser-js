@@ -8,12 +8,19 @@
     <meta name="keywords"
         content="browser detection, user-agent, javascript, detect os, mobile, tablet, detect device, cpu, javascript, nodejs, jquery, typescript, client hints, bots, iphone, ipad, android" />
     <meta name="description" content="UAParser.js is the most comprehensive, compact, & up-to-date isomorphic JavaScript library to detect visitor's Browser, Engine, OS, CPU, and Device type/model.">
+    <meta name="application-name" content="UAParser.js">
+    <meta property="og:title" content="UAParser.js">
+    <meta property="og:url" content="https://uaparser.dev/">
+    <meta property="og:image" content="https://uaparser.dev/images/uap-header.png">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Abstract away the hassle of user-agent detection">
+    <meta property="og:locale" content="en_US">
     <title>UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data using JavaScript. Supports browser & node.js environment. Also available as jQuery plugin & TypeScript-ready development.</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/srcery.min.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/srcery.min.css">
     <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/uap-logo.png">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="semantic-ui/semantic.js"></script>
     <script src="js/clipboard.min.js"></script>
@@ -28,15 +35,15 @@
 <body>
     <div class="pusher">
         <div class="ui inverted instagram vertical masthead center aligned segment">
-            <h2 class="ui inverted header">
-                What <span class="ui massive black label">device.type</span> am I using?
-            </h2>
+            <h3>
+                What is my <a href="#ua-txt-info"><span class="ui massive white label">{ device.type }</span></a> ?
+            </h3>
+            <div class="ui horizontal inverted divider">
+                Introducing
+            </div>
             <div class="ui text container">
-                <h1>
-                    <p><a href="https://uaparser.dev">{UAParser.js}</a> is a JavaScript library to detect user's
-                        <u>Browser</u>, <u>Engine</u>, <u>OS</u>, <u>CPU</u>, and <u>Device</u> type/model. Runs either
-                        in browser (client-side) or node.js (server-side).</p>
-                </h1>
+                    <a href="https://uaparser.dev"><h1>UAParser.js</h1></a>
+                    <h2>Abstract Away The Hassle of User-Agent Detection</h2>
                 <div class="ui massive buttons">
                     <a href="#try" class="ui violet button"><i class="magic icon"></i>Try Demo</a>
                     <a href="https://docs.uaparser.dev" class="ui green button"><i class="book icon"></i>Read Docs</a>
@@ -130,7 +137,7 @@
                         <div class="column">
                             <div class="ui center aligned animated icon">
                                 <i class="tv icon"></i>
-                                Type
+                                Device
                             </div>
                             <div class="ui basic segment">
                                 <img alt="detected device type icon" class="ui tiny centered image" id="type-img" src="">
@@ -142,7 +149,7 @@
                         <div class="column">
                             <div class="ui center aligned animated icon">
                                 <i class="mobile alternate icon"></i>
-                                Model
+                                Series
                             </div>
                             <div class="ui basic segment">
                                 <img alt="detected device vendor icon" class="ui tiny centered image" id="device-img" src="">

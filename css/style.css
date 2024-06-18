@@ -15,75 +15,89 @@ color: rgba(255, 255, 255, 0.3);
     margin: 3rem 0 2rem;
 }
 .hidden.menu {
-display: none;
+    display: none;
+}
+.masthead.segment {
+    min-height: 300px;
+}
+.masthead a h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 5rem;
+}
+.masthead h2 {
+    font-weight: normal;
+    margin: 0 0 2em 0;
 }
 .masthead.inverted.segment {
     background-color: #6435c9;
+    padding: 0;
 }
 .masthead.segment {
-min-height: 600px;
-padding: 1em 0em;
+    min-height: 600px;
+    padding: 1em 0em;
 }
 .masthead .ui.menu .ui.button {
-margin-left: 0.5em;
+    margin-left: 0.5em;
 }
-.masthead h2.ui.header {
-margin-top: 3em;
-font-size: 5rem;
+.masthead h3 {
+    background-color: black;
+    padding: 5em 0;
+    font-size: 5rem;
 }
-.masthead h1 {
-font-size: 1.8rem;
-font-weight: normal;
-margin: 0.5em 0 2em 0;
+
+.masthead .divider {
+    padding: 3em;
+    margin: 0;
 }
-.masthead h1 a {
- color: #fff;
- font-weight: bold;
+
+.masthead .ui.massive.buttons {
+    margin: 2rem 0 5rem;
 }
+
 .instagram.masthead.inverted.segment {
-background: #6435c9;
-background-image: linear-gradient(to left top, #6435c9, #7143d0, #7e51d6, #8a5edd, #966ce3);
-box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    background: #6435c9;
+    background-image: linear-gradient(to left top, #6435c9, #7143d0, #7e51d6, #8a5edd, #966ce3);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 .instagram.footer.inverted.segment {
-background: #6435c9;
-background-image: linear-gradient(to right bottom, #6435c9, #7143d0, #7e51d6, #8a5edd, #966ce3);
-box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    background: #6435c9;
+    background-image: linear-gradient(to right bottom, #6435c9, #7143d0, #7e51d6, #8a5edd, #966ce3);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 .ui.image.illustration {
-bottom: -1em;
-width:1000px;
+    width:1000px;
 }
 .ui.vertical.stripe {
-padding: 8em 0em;
+    padding: 8em 0em;
 }
 .ui.vertical.stripe h3 {
-font-size: 2em;
+    font-size: 2em;
 }
 .ui.vertical.stripe .button + h3,
 .ui.vertical.stripe p + h3 {
-margin-top: 3em;
+    margin-top: 3em;
 }
 .ui.vertical.stripe .floated.image {
-clear: both;
+    clear: both;
 }
 .ui.vertical.stripe p {
-font-size: 1.33em;
+    font-size: 1.33em;
 }
 .ui.vertical.stripe .horizontal.divider {
-margin: 3em 0em;
+    margin: 3em 0em;
 }
 
 .quote.stripe.segment {
-padding: 0em;
+    padding: 0em;
 }
 .quote.stripe.segment .grid .column {
-padding-top: 5em;
-padding-bottom: 5em;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 .footer.segment {
-padding: 5em 0em;
+    padding: 5em 0em;
 }
 
 .footer p {
@@ -91,7 +105,7 @@ padding: 5em 0em;
 }
 
 .secondary.pointing.menu .toc.item {
-display: none;
+    display: none;
 }
 
 @media only screen and (max-width: 700px) {
@@ -104,21 +118,6 @@ display: none;
 }
 .secondary.pointing.menu .toc.item {
     display: block;
-}
-.masthead.segment {
-    min-height: 300px;
-}
-.masthead .ui.massive.label {
-    font-size: 3rem;
-}
-.masthead h1.ui.header {
-    font-size: 1.5em;
-    margin-top: 3em;
-}
-.masthead h2 {
-    margin-top: 1em;
-    font-size: 0.75em;
-    font-weight: normal;
 }
 #demo-result > .row > .column,
 #showcase .ui.stackable.grid > .row > .column {

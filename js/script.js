@@ -1,9 +1,9 @@
 $(document)
   .ready(function() {
-    var labels = ['browser.name', 'os.version', 'device.type', 'cpu.arch', 'device.model', 'browser.version', 'device.vendor', 'engine.name', 'engine.version'];
+    var labels = ['{ browser.name }', '{ os.version }', '{ device.type }', '{ cpu.arch }', '{ device.model }', '{ browser.version }', '{ device.vendor }', '{ engine.name }', '{ engine.version }'];
     var counter = 0;
     var rotateLabel = function () {
-        $('h2 .label').transition('fly down', function () {
+        $('.masthead h3 .label').transition('fly down', function () {
             $(this).text(labels[counter++]).transition('fade up', 100, function (){
             if(counter>=labels.length)counter=0;
             $(this).transition('jiggle');
