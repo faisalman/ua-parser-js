@@ -17,9 +17,6 @@ color: rgba(255, 255, 255, 0.3);
 .hidden.menu {
     display: none;
 }
-.masthead.segment {
-    min-height: 300px;
-}
 .masthead a h1 {
     color: #fff;
     font-weight: bold;
@@ -42,11 +39,11 @@ color: rgba(255, 255, 255, 0.3);
 }
 .masthead h3 {
     background-color: black;
-    padding: 5em 0;
+    padding: 42.5vh 0;
     font-size: 5rem;
 }
 
-.masthead .divider {
+.masthead .ui.horizontal.divider {
     padding: 3em;
     margin: 0;
 }
@@ -87,7 +84,6 @@ color: rgba(255, 255, 255, 0.3);
 .ui.vertical.stripe .horizontal.divider {
     margin: 3em 0em;
 }
-
 .quote.stripe.segment {
     padding: 0em;
 }
@@ -109,20 +105,23 @@ color: rgba(255, 255, 255, 0.3);
 }
 
 @media only screen and (max-width: 700px) {
-.ui.fixed.menu {
-    display: none !important;
-}
-.secondary.pointing.menu .item,
-.secondary.pointing.menu .menu {
-    display: none;
-}
-.secondary.pointing.menu .toc.item {
-    display: block;
-}
-#demo-result > .row > .column,
-#showcase .ui.stackable.grid > .row > .column {
-    width: 33.3% !important;
-}
+    .ui.fixed.menu {
+        display: none !important;
+    }
+    .secondary.pointing.menu .item,
+    .secondary.pointing.menu .menu {
+        display: none;
+    }
+    .secondary.pointing.menu .toc.item {
+        display: block;
+    }
+    #demo-result > .row > .column,
+    #showcase .ui.stackable.grid > .row > .column {
+        width: 33.3% !important;
+    }
+    .masthead h3 {
+        font-size: 2em;
+    }
 }
 
 .what-provides {

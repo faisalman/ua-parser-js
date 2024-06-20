@@ -6,12 +6,13 @@ $(document)
         $('.masthead h3 .label').transition('fly down', function () {
             $(this).text(labels[counter++]).transition('fade up', 100, function (){
             if(counter>=labels.length)counter=0;
-            $(this).transition('jiggle');
+            $(this).transition('tada');
             });
         });
-    }
+    };
+    $('.masthead h3').transition({animation: 'slide up', interval: 9000});
     rotateLabel();
-    setInterval(rotateLabel, 3000);
+    setInterval(rotateLabel, 1000);
 
     var updateDemo = function (result) {
         if(!result) return;
@@ -107,8 +108,8 @@ $(document)
         qs = new URLSearchParams(window.location.search).get('ua');
     }
     if (qs) {
-        $('#ua-txt-info').text('What the browser provides = 😱😵‍💫❓');
-        $('#ua-txt').get(0).scrollIntoView();
+        $('#ua-txt-info').text('What the browser provides = 😱😵‍💫❌');
+        $('#demo-result').get(0).scrollIntoView();
         updateDemo(UAParser(qs));
     } else {
         UAParser().withClientHints().then(function(result) {
