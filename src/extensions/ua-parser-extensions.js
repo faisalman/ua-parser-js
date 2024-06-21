@@ -39,43 +39,40 @@ const CLIs = Object.freeze({
 
 const Crawlers = Object.freeze({
     browser : [
-        // Amazonbot - https://developer.amazon.com/amazonbot
-        // Applebot - http://apple.com/go/applebot
-        // Bingbot - http://www.bing.com/bingbot.htm
-        // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
-        // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
-        // GPTBot - https://platform.openai.com/docs/gptbot
-        [/((?:amazon|apple|bing|duckduck|facebook|gpt)bot)\/([\w\.]+)/i], 
-        [NAME, VERSION, [TYPE, CRAWLER]],
+        [
+            // Amazonbot - https://developer.amazon.com/amazonbot
+            // Applebot - http://apple.com/go/applebot
+            // Bingbot - http://www.bing.com/bingbot.htm
+            // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
+            // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
+            // GPTBot - https://platform.openai.com/docs/gptbot
+            /((?:amazon|apple|bing|duckduck|facebook|gpt)bot)\/([\w\.]+)/i,
 
-        // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
-        [/(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i], 
+            // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
+            /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
+
+            // ClaudeBot
+            /(claude(?:bot|-web))\/([\w\.]+)/i, 
+
+            // Googlebot - http://www.google.com/bot.html
+            /(google(?:bot|other)(?:-image|-video|-news|-extended)?|(?:storebot-)?google(?:-inspectiontool)?)\/?([\w\.]*)/i, 
+
+            // Sogou Spider
+            /(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i, 
+
+            // Yahoo! Japan - https://support.yahoo-net.jp/PccSearch/s/article/H000007955
+            /(y!?j-(?:asr|br[uw]|dscv|mmp|vsidx|wsc))\/([\w\.]+)/i, 
+
+            // Yandex Bots - https://yandex.com/bots
+            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i 
+        ],
+
         [NAME, VERSION, [TYPE, CRAWLER]],
 
         // Bytespider
         // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
         [/((?:bytespider|(?=yahoo! )slurp))/i], 
-        [NAME, [TYPE, CRAWLER]],
-
-        // ClaudeBot
-        [/(claude(?:bot|-web))\/([\w\.]+)/i], 
-        [NAME, VERSION, [TYPE, CRAWLER]],
-
-        // Googlebot - http://www.google.com/bot.html
-        [
-            /(google(?:bot|other)(?:-image|-video|-news|-extended)?|(?:storebot-)?google(?:-inspectiontool)?)\/?([\w\.]*)/i
-        ], 
-        [NAME, VERSION, [TYPE, CRAWLER]],
-        
-        // Sogou Spider
-        [/(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i], 
-        [NAME, VERSION, [TYPE, CRAWLER]],
-
-        // Yandex Bots - https://yandex.com/bots
-        [
-            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i
-        ], 
-        [NAME, VERSION, [TYPE, CRAWLER]]
+        [NAME, [TYPE, CRAWLER]]
     ]
 });
 
@@ -176,30 +173,29 @@ const Emails = Object.freeze({
 
 const Fetchers = Object.freeze({
     browser : [
-        // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
-        // BingPreview / Mastodon / Pinterestbot / Redditbot / Telegrambot / Twitterbot
-        [/(bingpreview|chatgpt-user|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i], 
+        [
+            // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
+            // BingPreview / Mastodon / Pinterestbot / Redditbot / Telegrambot / Twitterbot
+            /(bingpreview|chatgpt-user|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i,
+
+            // Slackbot - https://api.slack.com/robots
+            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
+            
+            // WhatsApp
+            /(whatsapp)\/([\w\.]+)[\/ ][ianw]/i,
+
+            // Yahoo! Japan
+            /(y!?j-dlc)\/([\w\.]+)/i,
+
+            // Yandex Bots - https://yandex.com/bots
+            /(yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(yandex(?:sitelinks|userproxy))/i
+        ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
         // Google Bots / Snapchat
         [/(feedfetcher-google|google-read-aloud|(?=bot; )snapchat)/i], 
         [NAME, [TYPE, FETCHER]],
-
-
-        // Slackbot - https://api.slack.com/robots
-        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], 
-        [NAME, VERSION, [TYPE, FETCHER]],
-
-        // WhatsApp
-        [/(whatsapp)\/([\w\.]+)[\/ ][ianw]/i], 
-        [NAME, VERSION, [TYPE, FETCHER]],
-
-        // Yandex Bots - https://yandex.com/bots
-        [
-            /(yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
-            /(yandex(?:sitelinks|userproxy))/i
-        ], 
-        [NAME, VERSION, [TYPE, FETCHER]]
     ]
 });
 
@@ -209,7 +205,11 @@ const Fetchers = Object.freeze({
 
 const InApps = Object.freeze({
     browser : [
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]]
+        // Slack
+        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]],
+
+        // Yahoo! Japan
+        [/jp\.co\.yahoo\.android\.yjtop\/([\d\.]+)/i], [VERSION, 'Yahoo! Japan', [TYPE, INAPP]]
     ]
 });
 

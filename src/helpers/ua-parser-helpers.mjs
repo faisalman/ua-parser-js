@@ -11,7 +11,7 @@
 
 /*jshint esversion: 6 */ 
 
-import { CPU, OS, Engine } from '../enums/ua-parser-enums';
+import { CPU, OS, Engine } from '../enums/ua-parser-enums.mjs';
 
 const isAppleSilicon = (res) => res.os.is(OS.MACOS) && res.cpu.is(CPU.ARM);
 

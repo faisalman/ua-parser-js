@@ -80,6 +80,16 @@
         }
     },
     {
+        "desc"    : "Yahoo! Japan",
+        "ua"      : "Y!J-BRW/1.0 (https://www.yahoo-help.jp/app/answers/detail/p/595/a_id/42716)",
+        "expect"  :
+        {
+            "name"    : "Y!J-BRW",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "YandexBot",
         "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
         "expect"  :
