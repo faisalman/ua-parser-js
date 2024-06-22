@@ -7,9 +7,11 @@ import { IResult } from "../main/ua-parser";
 declare function isAppleSilicon(res: IResult): boolean;
 declare function isChromiumBased(res: IResult): boolean;
 declare function isFrozenUA(ua: string): boolean;
+declare function isPWA(): boolean;
 
 export {
     isAppleSilicon,
     isChromiumBased,
-    isFrozenUA
+    isFrozenUA,
+    isPWA
 }
