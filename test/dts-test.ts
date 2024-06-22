@@ -1,6 +1,6 @@
 import { expectType } from 'tsd';
 import { UAParser, IResult, IBrowser, ICPU, IEngine, IDevice, IOS } from "../src/main/ua-parser";
-import { isAppleSilicon, isChromiumBased } from "../src/helpers/ua-parser-helpers";
+import { isAppleSilicon, isChromeFamily } from "../src/helpers/ua-parser-helpers";
 
 const uastring = 'Mozilla/5.0 (X11; MyCustomOS; Linux i686; rv:19.0) Gecko/20100101 Firefox/19.0';
 const extensions = {
@@ -46,4 +46,4 @@ expectType<UAParser>(parser.setUA(uastring));
 const result = parser.getResult();
 
 expectType<boolean>(isAppleSilicon(result));
-expectType<boolean>(isChromiumBased(result));
+expectType<boolean>(isChromeFamily(result));

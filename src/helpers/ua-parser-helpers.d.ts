@@ -5,13 +5,13 @@
 import { IResult } from "../main/ua-parser";
 
 declare function isAppleSilicon(res: IResult): boolean;
-declare function isChromiumBased(res: IResult): boolean;
+declare function isChromeFamily(res: IResult): boolean;
 declare function isFrozenUA(ua: string): boolean;
-declare function isPWA(): boolean;
+declare function isStandalonePWA(): boolean;
 
 export {
     isAppleSilicon,
-    isChromiumBased,
+    isChromeFamily,
     isFrozenUA,
-    isPWA
+    isStandalonePWA
 }
