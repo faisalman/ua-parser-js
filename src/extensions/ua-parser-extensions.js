@@ -46,7 +46,9 @@ const Crawlers = Object.freeze({
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
-            /((?:amazon|apple|bing|duckduck|facebook|gpt)bot)\/([\w\.]+)/i,
+            // MJ12bot - https://mj12bot.com/
+            // SemrushBot - http://www.semrush.com/bot.html
+            /((?:amazon|apple|bing|duckduck|facebook|gpt|mj12|semrush)bot)\/([\w\.]+)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
             /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
