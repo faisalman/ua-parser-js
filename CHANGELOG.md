@@ -16,6 +16,20 @@
   - Provided Extensions submodule `'ua-parser-js/extensions'`
   - Provided Helpers submodule `'ua-parser-js/helpers'`
 
+## Version 2.0.0-beta.3
+
+- Breaking:
+  - AR/VR devices moved to new device type: `xr`
+  - New property in `browser`: `type`
+  - In `ua-parser-js/extensions` submodule, `bots` divided into `crawler` / `fetcher` 
+- New features:
+  - Parse directly from command line using `npx ua-parser-js`
+  - Extensions can be passed as a list to `UAParser()`
+- Add new browser: Pico Browser, Twitter, Wolvic
+- Improve browser detection: DuckDuckGo, ICEBrowser, Klar, QQ, Sleipnir
+- Improve device detection: Oculus Quest & Oppo Pad
+- Update latest client hints spec: `formFactor` -> `formFactors`
+
 ## Version 2.0.0-beta.2
 
 - Increase UA_MAX_LENGTH to 500

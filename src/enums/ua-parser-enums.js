@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0-beta.2
+/*  Enums for UAParser.js v2.0.0-beta.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Personal License */
@@ -50,7 +50,7 @@ const Browser = Object.freeze({
     FENNEC: 'Fennec',
     FLOCK: 'Flock',
     FLOW: 'Flow',
-    GO: 'Go Browser',
+    GO: 'GoBrowser',
     GOOGLE_SEARCH: 'GSA',
     HEYTAP: 'HeyTap',
     HUAWEI: 'Huawei Browser',
@@ -104,6 +104,7 @@ const Browser = Object.freeze({
     PALEMOON: 'PaleMoon',
     PHANTOMJS: 'PhantomJS',
     PHOENIX: 'Phoenix',
+    PICOBROWSER: 'Pico Browser',
     POLARIS: 'Polaris',
     PUFFIN: 'Puffin',
     QQ: 'QQBrowser',
@@ -128,9 +129,9 @@ const Browser = Object.freeze({
     TESLA: 'Tesla',
     TIKTOK: 'TikTok',
     TIZEN: 'Tizen Browser',
+    TWITTER: 'Twitter',
     UC: 'UCBrowser',
     UP: 'UP.Browser',
-    VIERA: 'Viera',
     VIVALDI: 'Vivaldi',
     VIVO: 'Vivo Browser',
     W3M: 'w3m',
@@ -139,9 +140,19 @@ const Browser = Object.freeze({
     WECHAT: 'WeChat',
     WEIBO: 'Weibo',
     WHALE: 'Whale',
+    WOLVIC: 'Wolvic',
     YANDEX: 'Yandex'
 
     // TODO : test!
+});
+
+const BrowserType = Object.freeze({
+    CRAWLER: 'crawler',
+    CLI: 'cli',
+    EMAIL: 'email',
+    FETCHER: 'fetcher',
+    INAPP: 'inapp',
+    MODULE: 'module'
 });
 
 const CPU = Object.freeze({
@@ -171,7 +182,8 @@ const Device = Object.freeze({
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
     TABLET: 'tablet',
-    WEARABLE: 'wearable'
+    WEARABLE: 'wearable',
+    XR: 'xr'
 });
 
 const Vendor = Object.freeze({
@@ -341,7 +353,8 @@ const OS = Object.freeze({
 });
 
 module.exports = { 
-    Browser, 
+    Browser,
+    BrowserType, 
     CPU, 
     Device, 
     Vendor,
