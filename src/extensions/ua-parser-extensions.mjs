@@ -6,7 +6,7 @@
 /*  Extensions for UAParser.js v2.0.0-beta.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
-    AGPLv3 License */
+    UAParser.js PRO Personal License */
 //////////////////////////////////////////////
 
 /*jshint esversion: 6 */ 

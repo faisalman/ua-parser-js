@@ -1,6 +1,6 @@
 {
-  "title": "UAParser.js",
-  "name": "ua-parser-js",
+  "title": "UAParser.js PRO Personal",
+  "name": "@ua-parser-js/pro-personal",
   "version": "2.0.0-beta.3",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
@@ -226,7 +226,7 @@
     "type": "git",
     "url": "https://github.com/faisalman/ua-parser-js.git"
   },
-  "license": "AGPL-3.0-or-later",
+  "license": "UAParser.js-PRO-Personal",
   "engines": {
     "node": "*"
   },
