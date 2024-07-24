@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.0-beta.2
+/*  Extensions for UAParser.js v2.0.0-beta.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Enterorise License */
@@ -14,32 +14,73 @@ const VENDOR    = 'vendor';
 const VERSION   = 'version';
 const MOBILE    = 'mobile';
 const TABLET    = 'tablet';
+const CRAWLER   = 'crawler';
+const CLI       = 'cli';
+const EMAIL     = 'email';
+const FETCHER   = 'fetcher';
+const INAPP     = 'inapp';
+const MODULE    = 'module';
 
-const Apps = Object.freeze({
-    browser : [
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, 'app']]
-    ]
-});
-
-const Bots = Object.freeze({
-    browser : [
-        // Googlebot / BingBot / MSNBot / FacebookBot
-        [/((?:google|bing|msn|facebook)bot(?:[\-imagevdo]{0,6})|bingpreview)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
-
-        // GPTBot - https://platform.openai.com/docs/gptbot
-        [/(gptbot)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']],
-
-        // Slackbot - https://api.slack.com/robots
-        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], [NAME, VERSION, [TYPE, 'bot']]
-    ]
-});
+//////////////////////
+// COMMAND LINE APPS
+/////////////////////
 
 const CLIs = Object.freeze({
     browser : [
-                                                                            // wget / curl / lynx
-        [/(wget|curl|lynx)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'cli']]
+        // wget / curl / lynx
+        [/(wget|curl|lynx)[\/ ]([\w\.]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
+
+////////////////////////
+// CRAWLERS / SPIDERS
+///////////////////////
+
+const Crawlers = Object.freeze({
+    browser : [
+        // Amazonbot - https://developer.amazon.com/amazonbot
+        // Applebot - http://apple.com/go/applebot
+        // Bingbot - http://www.bing.com/bingbot.htm
+        // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
+        // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
+        // GPTBot - https://platform.openai.com/docs/gptbot
+        [/((?:amazon|apple|bing|duckduck|facebook|gpt)bot)\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
+        [/(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Bytespider
+        // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
+        [/((?:bytespider|(?=yahoo! )slurp))/i], 
+        [NAME, [TYPE, CRAWLER]],
+
+        // ClaudeBot
+        [/(claude(?:bot|-web))\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Googlebot - http://www.google.com/bot.html
+        [
+            /(google(?:bot|other)(?:-image|-video|-news|-extended)?|(?:storebot-)?google(?:-inspectiontool)?)\/?([\w\.]*)/i
+        ], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+        
+        // Sogou Spider
+        [/(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        // Yandex Bots - https://yandex.com/bots
+        [
+            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i
+        ], 
+        [NAME, VERSION, [TYPE, CRAWLER]]
+    ]
+});
+
+//////////////////
+// EXTRA DEVICES
+/////////////////
 
 const ExtraDevices = Object.freeze({
     device : [[    
@@ -117,12 +158,62 @@ const ExtraDevices = Object.freeze({
     ]
 });
 
+///////////////
+// EMAIL APPS
+//////////////
+
 const Emails = Object.freeze({
     browser : [
-                                                                            // Microsoft Outlook / Thunderbird
-        [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, 'email']]
+        // Microsoft Outlook / Thunderbird
+        [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
+
+///////////////////////
+// ON-DEMAND SCRAPERS
+//////////////////////
+
+const Fetchers = Object.freeze({
+    browser : [
+        // BingPreview / Mastodon / Pinterestbot / Redditbot / Telegrambot / Twitterbot
+        [/(bingpreview|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, FETCHER]],
+
+        // Google Bots / Snapchat
+        [/(feedfetcher-google|google-read-aloud|(?=bot; )snapchat)/i], 
+        [NAME, [TYPE, FETCHER]],
+
+
+        // Slackbot - https://api.slack.com/robots
+        [/(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i], 
+        [NAME, VERSION, [TYPE, FETCHER]],
+
+        // WhatsApp
+        [/(whatsapp)\/([\w\.]+)[\/ ][ianw]/i], 
+        [NAME, VERSION, [TYPE, FETCHER]],
+
+        // Yandex Bots - https://yandex.com/bots
+        [
+            /(yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(yandex(?:sitelinks|userproxy))/i
+        ], 
+        [NAME, VERSION, [TYPE, FETCHER]]
+    ]
+});
+
+////////////////////
+// IN-APP BROWSERS
+///////////////////
+
+const InApps = Object.freeze({
+    browser : [
+        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]]
+    ]
+});
+
+//////////////////////
+// MEDIA PLAYER APPS
+/////////////////////
 
 const MediaPlayers = Object.freeze({
     browser : [[
@@ -230,19 +321,24 @@ const MediaPlayers = Object.freeze({
     ]
 });
 
+////////////////////////
+// MODULES / LIBRARIES
+///////////////////////
+
 const Modules = Object.freeze({
     browser : [
-                                                                            // Axios/jsdom/Scrapy
-        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, 'module']]
+        // Axios/jsdom/Scrapy
+        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, MODULE]]
     ]
 });
 
 module.exports = { 
-    Apps,
-    Bots,
     CLIs,
+    Crawlers,
     ExtraDevices,
     Emails,
+    Fetchers,
+    InApps,
     MediaPlayers,
     Modules
 };

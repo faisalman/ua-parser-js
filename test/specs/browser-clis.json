@@ -1,0 +1,42 @@
+[
+    {
+        "desc"    : "curl",
+        "ua"      : "curl/7.38.0",
+        "expect"  :
+        {
+            "name"    : "curl",
+            "version" : "7.38.0",
+            "type"    : "cli"
+        }
+    },
+    {
+        "desc"    : "lynx",
+        "ua"      : "Lynx 2.8.8dev.3",
+        "expect"  :
+        {
+            "name"    : "Lynx",
+            "version" : "2.8.8dev.3",
+            "type"    : "cli"
+        }
+    },
+    {
+        "desc"    : "lynx",
+        "ua"      : "Lynx/2.6",
+        "expect"  :
+        {
+            "name"    : "Lynx",
+            "version" : "2.6",
+            "type"    : "cli"
+        }
+    },
+    {
+        "desc"    : "wget",
+        "ua"      : "Wget/1.21.1",
+        "expect"  :
+        {
+            "name"    : "Wget",
+            "version" : "1.21.1",
+            "type"    : "cli"
+        }
+    }
+]

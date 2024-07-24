@@ -1,0 +1,12 @@
+[
+    {
+        "desc"    : "Scrapy",
+        "ua"      : "Scrapy/1.5.0 (+https://scrapy.org)",
+        "expect"  :
+        {
+            "name"    : "Scrapy",
+            "version" : "1.5.0",
+            "type"    : "module"
+        }
+    }
+]

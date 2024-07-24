@@ -1,8 +1,8 @@
 # UAPARSER.JS PRO ENTERPRISE LICENSE
 
-Version 1, October 2023
+Version 2, July 2024
 
-Copyright (C) 2023 Faisal Salman <f+ua-parser-js@faisalman.com>
+Copyright (C) 2023-2024 Faisal Salman <f+ua-parser-js@faisalman.com>
 
 ---
 
@@ -10,7 +10,7 @@ Copyright (C) 2023 Faisal Salman <f+ua-parser-js@faisalman.com>
 
 "We" are the team behind UAParser.js.
 
-"You" are the individual/organization/company who is responsible for purchasing this license.
+"You" are the individual, organization, or company who is responsible for purchasing this license.
 
 "The Code" is UAParser.js.
 
@@ -20,13 +20,13 @@ Copyright (C) 2023 Faisal Salman <f+ua-parser-js@faisalman.com>
 
 ## License
 
-We retains all title, intellectual property, and ownership rights to The Code.
+We retain all title, intellectual property, and ownership rights to The Code.
 
 The Code is licensed, not sold, to You for use solely subject to the terms and conditions detailed here.
 
 We grant You (and only You) a limited, non-exclusive, non-transferable, non-sublicensable, royalty-free right to use, copy, and modify The Code.
 
-This license is only valid for You as 1 (one) individual/organization/company and can not be transferred to other individual/organization/company.
+This license is only valid for You as one (1) individual, organization, or company and cannot be transferred to another individual, organization, or company.
 
 ---
 
@@ -34,17 +34,17 @@ This license is only valid for You as 1 (one) individual/organization/company an
 
 You may use, copy, and modify The Code for an indefinite number of Projects.
 
-You have the right to get lifetime updates and a 1 (one) year support, starting from the time you make the purchase.
+You have the right to receive lifetime updates and one (1) year of support, starting from the time you make the purchase.
 
 ---
 
-## Restriction
+## Restrictions
 
 You may not redistribute The Code, as-is or modified, except as a part of a Project that you made.
 
 If You transfer a Project to a client, the use of The Code must be limited to the original functionality that You created for them. The Code must not be extracted, reproduced, or used in any other way. You must inform your client of this condition.
 
-You may not deliver a Project that contains The Code as an open-source Project that might be used for commercial purpose to the general public, except with our written consent.
+You may not deliver a Project that contains The Code as an open-source Project that might be used for commercial purposes by the general public, except with our written consent.
 
 You may not use The Code for unlawful, inappropriate, illegal, or offensive purposes.
 
@@ -52,19 +52,19 @@ You may not use The Code for unlawful, inappropriate, illegal, or offensive purp
 
 ## Limitations
 
-The Code is provided 'as is' without warranty of any kind, expressed, or implied. 
+The Code is provided 'as is' without warranty of any kind, expressed or implied. 
 
 We shall not be liable for any damages, including but not limited to, direct, indirect, special, incidental, or consequential damages or losses that occur by the use of The Code.
 
-We reserve the rights to discontinue the lifetime updates for The Code at any time, with or without notice.
+We reserve the right to discontinue the lifetime updates for The Code at any time, with or without notice.
 
-We offer support only for question within the scope of The Code functionality or related at our sole discretion.
+We offer support only for questions within the scope of The Code's functionality or related issues at our sole discretion.
 
 ---
 
-## Terminations
+## Termination
 
-This license works indefinitely but can be revoked at any time if there is a violation to any of the terms.
+This license is effective indefinitely but can be revoked at any time if there is a violation of any of the terms.
 
 ---
 

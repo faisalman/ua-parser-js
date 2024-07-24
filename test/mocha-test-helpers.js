@@ -1,5 +1,5 @@
 const assert = require('assert');
-const UAParser = require('../src/main/ua-parser');
+const { UAParser } = require('../src/main/ua-parser');
 const { isAppleSilicon, isChromiumBased } = require('../src/helpers/ua-parser-helpers');
 
 describe('isAppleSilicon', () => {

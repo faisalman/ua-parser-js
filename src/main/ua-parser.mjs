@@ -3,12 +3,12 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-beta.2
+/* UAParser.js v2.0.0-beta.3
    Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    UAParser.js PRO Enterorise License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
-   Demo   : https://faisalman.github.io/ua-parser-js
+   Demo   : https://uaparser.dev
    Source : https://github.com/faisalman/ua-parser-js */
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -21,7 +21,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.0-beta.2',
+    var LIBVERSION  = '2.0.0-beta.3',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -40,11 +40,12 @@
         TABLET      = 'tablet',
         SMARTTV     = 'smarttv',
         WEARABLE    = 'wearable',
+        XR          = 'xr',
         EMBEDDED    = 'embedded',
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 500,
         BRANDS      = 'brands',
-        FORMFACTOR  = 'formFactor',
+        FORMFACTORS = 'formFactors',
         FULLVERLIST = 'fullVersionList',
         PLATFORM    = 'platform',
         PLATFORMVER = 'platformVersion',
@@ -53,12 +54,12 @@
         CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
         CH_HEADER_ARCH      = CH_HEADER + '-arch',
         CH_HEADER_BITNESS   = CH_HEADER + '-' + BITNESS,
-        CH_HEADER_FORM_FACTOR = CH_HEADER + '-form-factor',
+        CH_HEADER_FORM_FACTORS = CH_HEADER + '-form-factors',
         CH_HEADER_MOBILE    = CH_HEADER + '-' + MOBILE,
         CH_HEADER_MODEL     = CH_HEADER + '-' + MODEL,
         CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTOR, BITNESS],
+        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTORS, BITNESS],
         UA_BROWSER  = 'browser',
         UA_CPU      = 'cpu',
         UA_DEVICE   = 'device',
@@ -102,12 +103,21 @@
     // Helper
     //////////
 
-    var extend = function (regexes, extensions) {
-            var mergedRegexes = {};
-            for (var i in regexes) {
-                mergedRegexes[i] = extensions[i] && extensions[i].length % 2 === 0 ? extensions[i].concat(regexes[i]) : regexes[i];
+    var extend = function (defaultRgx, extensions) {
+            var mergedRgx = {};
+            var extraRgx = extensions;
+            if (!isExtensions(extensions)) {
+                extraRgx = {};
+                for (var i in extensions) {
+                    for (var j in extensions[i]) {
+                        extraRgx[j] = extensions[i][j].concat(extraRgx[j] ? extraRgx[j] : []);
+                    }
+                }
             }
-            return mergedRegexes;
+            for (var k in defaultRgx) {
+                mergedRgx[k] = extraRgx[k] && extraRgx[k].length % 2 === 0 ? extraRgx[k].concat(defaultRgx[k]) : defaultRgx[k];
+            }
+            return mergedRgx;
         },
         enumerize = function (arr) {
             var enums = {};
@@ -125,9 +135,9 @@
             }
             return isString(str1) ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
         },
-        isExtensions = function (obj) {
+        isExtensions = function (obj, deep) {
             for (var prop in obj) {
-                return /^(browser|cpu|device|engine|os)$/.test(prop);
+                return /^(browser|cpu|device|engine|os)$/.test(prop) || (deep ? isExtensions(obj[prop]) : false);
             }
         },
         isString = function (val) {
@@ -271,12 +281,13 @@
             'RT'        : 'ARM'
         },
         
-        formFactorMap = {
+        formFactorsMap = {
             'embedded'  : 'Automotive',
             'mobile'    : 'Mobile',
             'tablet'    : ['Tablet', 'EInk'],
             'smarttv'   : 'TV',
-            'wearable'  : ['VR', 'XR', 'Watch'],
+            'wearable'  : 'Watch',
+            'xr'        : ['VR', 'XR'],
             '?'         : ['Desktop', 'Unknown'],
             '*'         : undefined
     };
@@ -311,17 +322,20 @@
             /\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i            // Baidu
             ], [VERSION, [NAME, 'Baidu']], [
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
-            /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
+            /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i,      
+                                                                                // Lunascape/Maxthon/Netfront/Jasmine/Blazer/Sleipnir
             // Trident based
             /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,             // Avant/IEMobile/SlimBrowser
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
-                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar)\/([-\w\.]+)/i,
+                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar
             /(heytap|ovi)browser\/([\d\.]+)/i,                                  // HeyTap/Ovi
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
+            /\bddg\/([\w\.]+)/i                                                 // DuckDuckGo
+            ], [VERSION, [NAME, 'DuckDuckGo']], [
             /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
             ], [VERSION, [NAME, 'UCBrowser']], [
             /microm.+\bqbcore\/([\w\.]+)/i,                                     // WeChat Desktop for Windows Built-in Browser
@@ -354,8 +368,10 @@
             ], [VERSION, [NAME, PREFIX_MOBILE + FIREFOX]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
             ], [[NAME, '360' + SUFFIX_BROWSER]], [
-            /(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/HuaweiBrowser/VivoBrowser
+            /\b(qq)\/([\w\.]+)/i                                                // QQ
+            ], [[NAME, /(.+)/, '$1Browser'], VERSION], [
+            /(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i
+            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/HuaweiBrowser/VivoBrowser/PicoBrowser
             /samsungbrowser\/([\w\.]+)/i                                        // Samsung Internet
             ], [VERSION, [NAME, SAMSUNG + ' Internet']], [
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
@@ -368,7 +384,7 @@
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
             /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i                        // QQBrowser/2345 Browser
             ], [NAME, VERSION], [
-            /(lbbrowser)/i,                                                     // LieBao Browser
+            /(lbbrowser|rekonq)/i,                                              // LieBao Browser/Rekonq
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME], [
 
@@ -381,6 +397,7 @@
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
+            /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
             /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i                     // Chromium/Instagram/Snapchat
             ], [NAME, VERSION], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
@@ -420,23 +437,24 @@
             ], [[NAME, PREFIX_MOBILE + FIREFOX], VERSION], [
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
+            /(wolvic)\/([\w\.]+)/i                                              // Wolvic
+            ], [NAME, VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
             ], [VERSION, [NAME, FIREFOX+' Reality']], [
             /ekiohf.+(flow)\/([\w\.]+)/i,                                       // Flow
             /(swiftfox)/i,                                                      // Swiftfox
-            /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/ ]?([\w\.\+]+)/i,
-                                                                                // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror/Klar
+            /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i,
+                                                                                // IceDragon/Iceweasel/Camino/Chimera/Fennec/Maemo/Minimo/Conkeror
             /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i,
                                                                                 // Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
             /(firefox)\/([\w\.]+)/i,                                            // Other Firefox-based
             /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i,                         // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
-                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Sleipnir/Obigo/Mosaic/Go/ICE/UP.Browser
-            /(links) \(([\w\.]+)/i,                                             // Links
-            /panasonic;(viera)/i                                                // Panasonic Viera
-            ], [NAME, VERSION], [
+            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
+                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Obigo/Mosaic/Go/ICE/UP.Browser
+            /(links) \(([\w\.]+)/i                                              // Links
+            ], [NAME, [VERSION, /_/g, '.']], [
             
             /(cobalt)\/([\w\.]+)/i                                              // Cobalt
             ], [NAME, [VERSION, /[^\d\.]+./, EMPTY]]
@@ -523,6 +541,8 @@
             /; (\w+) bui.+ oppo/i,
             /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i
             ], [MODEL, [VENDOR, 'OPPO'], [TYPE, MOBILE]], [
+            /\b(opd2\d{3}a?) bui/i
+            ], [MODEL, [VENDOR, 'OPPO'], [TYPE, TABLET]], [
 
             // Vivo
             /vivo (\w+)(?: bui|\))/i,
@@ -706,12 +726,17 @@
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
             /(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i                              // Apple Watch
             ], [MODEL, [VENDOR, APPLE], [TYPE, WEARABLE]], [
-            /droid.+; (glass) \d/i                                              // Google Glass
-            ], [MODEL, [VENDOR, GOOGLE], [TYPE, WEARABLE]], [
             /droid.+; (wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, WEARABLE]], [
-            /(quest( 2| pro)?)/i                                                // Oculus Quest
-            ], [MODEL, [VENDOR, FACEBOOK], [TYPE, WEARABLE]], [
+
+            ///////////////////
+            // XR
+            ///////////////////
+
+            /droid.+; (glass) \d/i                                              // Google Glass
+            ], [MODEL, [VENDOR, GOOGLE], [TYPE, XR]], [
+            /(quest( \d| pro)?)/i                                               // Oculus Quest
+            ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
 
             ///////////////////
             // EMBEDDED
@@ -842,7 +867,7 @@
     var defaultProps = (function () {
             var props = { init : {}, isIgnore : {}, isIgnoreRgx : {}, toString : {}};
             setProps.call(props.init, [
-                [UA_BROWSER, [NAME, VERSION, MAJOR]],
+                [UA_BROWSER, [NAME, VERSION, MAJOR, TYPE]],
                 [UA_CPU, [ARCHITECTURE]],
                 [UA_DEVICE, [TYPE, MODEL, VENDOR]],
                 [UA_ENGINE, [NAME, VERSION]],
@@ -970,7 +995,7 @@
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
                 [PLATFORMVER, stripQuotes(uach[CH_HEADER_PLATFORM_VER])],
                 [ARCHITECTURE, stripQuotes(uach[CH_HEADER_ARCH])],
-                [FORMFACTOR, itemListToArray(uach[CH_HEADER_FORM_FACTOR])],
+                [FORMFACTORS, itemListToArray(uach[CH_HEADER_FORM_FACTORS])],
                 [BITNESS, stripQuotes(uach[CH_HEADER_BITNESS])]
             ]);
         } else {
@@ -1090,15 +1115,15 @@
                         this.set(TYPE, CONSOLE)
                             .set(VENDOR, MICROSOFT);
                     }
-                    if (uaCH[FORMFACTOR]) {
+                    if (uaCH[FORMFACTORS]) {
                         var ff;
-                        if (typeof uaCH[FORMFACTOR] !== 'string') {
+                        if (typeof uaCH[FORMFACTORS] !== 'string') {
                             var idx = 0;
-                            while (!ff && idx < uaCH[FORMFACTOR].length) {
-                                ff = strMapper(uaCH[FORMFACTOR][idx++], formFactorMap);
+                            while (!ff && idx < uaCH[FORMFACTORS].length) {
+                                ff = strMapper(uaCH[FORMFACTORS][idx++], formFactorsMap);
                             }
                         } else {
-                            ff = strMapper(uaCH[FORMFACTOR], formFactorMap);
+                            ff = strMapper(uaCH[FORMFACTORS], formFactorsMap);
                         }
                         this.set(TYPE, ff);
                     }
@@ -1149,7 +1174,7 @@
     function UAParser (ua, extensions, headers) {
 
         if (typeof ua === OBJ_TYPE) {
-            if (isExtensions(ua)) {
+            if (isExtensions(ua, true)) {
                 if (typeof extensions === OBJ_TYPE) {
                     headers = extensions;               // case UAParser(extensions, headers)           
                 }
@@ -1159,7 +1184,7 @@
                 extensions = undefined;
             }
             ua = undefined;
-        } else if (typeof ua === STR_TYPE && !isExtensions(extensions)) {
+        } else if (typeof ua === STR_TYPE && !isExtensions(extensions, true)) {
             headers = extensions;                       // case UAParser(ua, headers)
             extensions = undefined;
         }
@@ -1220,7 +1245,7 @@
     }
 
     UAParser.VERSION = LIBVERSION;
-    UAParser.BROWSER =  enumerize([NAME, VERSION, MAJOR]);
+    UAParser.BROWSER =  enumerize([NAME, VERSION, MAJOR, TYPE]);
     UAParser.CPU = enumerize([ARCHITECTURE]);
     UAParser.DEVICE = enumerize([MODEL, VENDOR, TYPE, CONSOLE, MOBILE, SMARTTV, TABLET, WEARABLE, EMBEDDED]);
     UAParser.ENGINE = UAParser.OS = enumerize([NAME, VERSION]);
