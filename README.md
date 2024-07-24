@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://uaparser.js.org"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
+    <a href="https://uaparser.dev"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
 </p>
 
 # UAParser.js
@@ -14,10 +14,10 @@ npm install @ua-parser-js/pro-business
 
 # Documentation
 
-https://docs.uaparser.js.org/v2 
+https://docs.uaparser.dev 
 
 # License
 
 UAParser.js PRO Business
 
-Copyright (c) 2012-2023 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2012-2024 Faisal Salman <<f@faisalman.com>>

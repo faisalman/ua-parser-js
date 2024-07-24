@@ -4,12 +4,13 @@ var assert      = require('assert');
 var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
-var UAParser    = require('../src/main/ua-parser');
+var {UAParser}  = require('../src/main/ua-parser');
 var browsers    = require('./specs/browser-all.json');
 var cpus        = require('./specs/cpu-all.json');
 var devices     = require('./specs/device-all.json');
 var engines     = require('./specs/engine-all.json');
 var os          = require('./specs/os-all.json');
+
 var parser      = new UAParser();
 var methods     = [
     {
@@ -82,7 +83,7 @@ describe('Returns', function () {
         assert.deepEqual(new UAParser('').getResult(), 
             {
                 ua : '',
-                browser: { name: undefined, version: undefined, major: undefined },
+                browser: { name: undefined, version: undefined, major: undefined, type: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},
@@ -125,6 +126,13 @@ describe('Extending Regex', function () {
     });
     let myUA2 = 'Mozilla/5.0 MyTab 14 Pro Max';
     assert.deepEqual(myParser2.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
+
+    let myParser3 = new UAParser([{ 
+        browser: myOwnListOfBrowsers 
+    }, { 
+        device: myOwnListOfDevices 
+    }]);
+    assert.deepEqual(myParser3.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
 });
 
 describe('User-agent length', function () {
@@ -463,22 +471,22 @@ describe('Map UA-CH headers', function () {
         });
     });
 
-    it('Can detect form-factor from client-hints', function () {  
+    it('Can detect form-factors from client-hints', function () {  
 
         const FFVR = {
-            'sec-ch-ua-form-factor' : '"VR"'
+            'sec-ch-ua-form-factors' : '"VR"'
         };
 
         const FFEInk = {
-            'sec-ch-ua-form-factor' : '"Tablet", "EInk"'
+            'sec-ch-ua-form-factors' : '"Tablet", "EInk"'
         };
 
         const FFUnknown = {
-            'sec-ch-ua-form-factor' : '"Unknown"'
+            'sec-ch-ua-form-factors' : '"Unknown"'
         };
         
         UAParser(FFVR).withClientHints().then(function (ua) {
-            assert.strictEqual(ua.device.type, 'wearable');
+            assert.strictEqual(ua.device.type, 'xr');
         });
 
         UAParser(FFEInk).withClientHints().then(function (ua) {

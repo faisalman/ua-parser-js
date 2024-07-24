@@ -1,0 +1,92 @@
+[
+    {
+        "desc"    : "Applebot",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1;+http://www.apple.com/go/applebot)",
+        "expect"  :
+        {
+            "name"    : "Applebot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Amazonbot",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot)",
+        "expect"  :
+        {
+            "name"    : "Amazonbot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Bytespider",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.1511.1269 Mobile Safari/537.36; Bytespider",
+        "expect"  :
+        {
+            "name"    : "Bytespider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ClaudeBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "ClaudeBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ClaudeWeb",
+        "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-Web",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "FacebookBot",
+        "ua"      : "Mozilla/5.0 (compatible; FacebookBot/1.0; +https://developers.facebook.com/docs/sharing/webmasters/facebookbot/",
+        "expect"  :
+        {
+            "name"    : "FacebookBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Googlebot-Video",
+        "ua"      : "Googlebot-Video/1.0",
+        "expect"  :
+        {
+            "name"    : "Googlebot-Video",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "GPTBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.0; +https://openai.com/gptbot)",
+        "expect"  :
+        {
+            "name"    : "GPTBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    }
+]

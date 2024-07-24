@@ -40,7 +40,7 @@ test('read client hints data', async ({ page }) => {
                             }
                         ],
                         platform: 'New OS',
-                        formFactor: 'New Form Factor'
+                        formFactors: 'New Form Factor'
                     });
                 }
             }

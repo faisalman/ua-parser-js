@@ -1,4 +1,4 @@
-// Type definitions for UAParser.js v2.0.0-beta.2
+// Type definitions for UAParser.js v2.0.0-beta.3
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
@@ -15,6 +15,7 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
+        type?: 'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'module';
     }
 
     interface ICPU extends IData<ICPU> {
@@ -22,7 +23,7 @@ declare namespace UAParser {
     }
 
     interface IDevice extends IData<IDevice> {
-        type?: 'mobile' | 'tablet' | 'console' | 'smarttv' | 'wearable';
+        type?: 'mobile' | 'tablet' | 'console' | 'smarttv' | 'wearable' | 'xr' | 'embedded';
         vendor?: string;
         model?: string;
     }
@@ -48,7 +49,7 @@ declare namespace UAParser {
 
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
     type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
-    type UAParserExt = Partial<Record<UAParserProps, RegexMap>>;
+    type UAParserExt = Partial<Record<UAParserProps, RegexMap>> | Partial<Record<UAParserProps, RegexMap>>[];
 
     export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: Record<string, string>): IResult;
     export function UAParser(uastring?: string, headers?: Record<string, string>): IResult;
@@ -61,6 +62,7 @@ declare namespace UAParser {
             NAME: 'name'; 
             VERSION: 'version'; 
             MAJOR: 'major';
+            TYPE: 'type';
         };
         static readonly CPU: { 
             ARCHITECTURE: 'architecture'; 
@@ -74,6 +76,7 @@ declare namespace UAParser {
             SMARTTV: 'smarttv';
             TABLET: 'tablet';
             WEARABLE: 'wearable';
+            XR: 'xr';
             EMBEDDED: 'embedded';
         };
         static readonly ENGINE: { 
