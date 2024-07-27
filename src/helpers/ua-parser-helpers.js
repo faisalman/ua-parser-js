@@ -9,7 +9,25 @@
 
 const { CPU, OS, Engine } = require('../enums/ua-parser-enums');
 
-const isAppleSilicon = (res) => res.os.is(OS.MACOS) && res.cpu.is(CPU.ARM);
+const isAppleSilicon = (res) => {
+    if (res.os.is(OS.MACOS)) {
+        if (res.cpu.is(CPU.ARM)) {
+            return true;
+        }
+        try {
+            const canvas = document.createElement('canvas');
+            const webgl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            const debug = webgl.getExtension('WEBGL_debug_renderer_info');
+            const renderer = webgl.getParameter(debug.UNMASKED_RENDERER_WEBGL);
+            if (renderer.match(/apple m\d/i)) {
+                return true;
+            }
+        } catch {
+            return false;
+        }
+    }
+    return false;
+}
 
 const isChromeFamily = (res) => res.engine.is(Engine.BLINK);
 
