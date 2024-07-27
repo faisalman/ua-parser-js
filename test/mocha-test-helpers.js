@@ -1,6 +1,23 @@
 const assert = require('assert');
 const { UAParser } = require('../src/main/ua-parser');
-const { isAppleSilicon, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
+const { getDeviceVendor, isAppleSilicon, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
+
+describe('getDeviceVendor', () => {
+    it('Can guess the device vendor from a model name', () => {
+        
+        const modelSM = 'SM-A605G';
+        const modelRedmi = 'Redmi Note 8';
+        const modelNexus = 'Nexus 6P';
+        const modelQuest = 'Quest 3';
+        const modelAquos = 'AQUOS-TVX19B';
+
+        assert.equal(getDeviceVendor(modelSM), 'Samsung');
+        assert.equal(getDeviceVendor(modelRedmi), 'Xiaomi');
+        assert.equal(getDeviceVendor(modelNexus), 'Huawei');
+        assert.equal(getDeviceVendor(modelQuest), 'Facebook');
+        assert.equal(getDeviceVendor(modelAquos), 'Sharp');
+    });
+});
 
 describe('isAppleSilicon', () => {
     it('Can detect Apple Silicon device', () => {

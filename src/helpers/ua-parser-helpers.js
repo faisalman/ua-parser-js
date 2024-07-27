@@ -8,6 +8,9 @@
 /*jshint esversion: 6 */ 
 
 const { CPU, OS, Engine } = require('../enums/ua-parser-enums');
+const { UAParser } = require('../main/ua-parser');
+
+const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${model}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36`).device.vendor;
 
 const isAppleSilicon = (res) => {
     if (res.os.is(OS.MACOS)) {
@@ -44,6 +47,7 @@ const isStandalonePWA = () => window && (window.matchMedia('(display-mode: stand
                                 document.referrer.startsWith('app-info://platform/microsoft-store'));
 
 module.exports = { 
+    getDeviceVendor,
     isAppleSilicon,
     isChromeFamily,
     isFrozenUA,
