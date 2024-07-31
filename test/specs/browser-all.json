@@ -699,6 +699,16 @@
         }
     },
     {
+        "desc"    : "Helio",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Safari/537.36 Helio/0.98.20",
+        "expect"  :
+        {
+            "name"    : "Helio",
+            "version" : "0.98.20",
+            "major"   : "0"
+        }
+    },
+    {
         "desc"    : "HeyTap",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.61 Safari/537.36 HeyTapBrowser/40.8.10.1",
         "expect"  :
