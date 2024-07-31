@@ -219,6 +219,7 @@ const Vendor = Object.freeze({
     NEXIAN: 'Nexian',
     NINTENDO: 'Nintendo',
     NOKIA: 'Nokia',
+    NOTHING: 'Nothing',
     NVIDIA: 'Nvidia',
     ONEPLUS: 'OnePlus',
     OPPO: 'OPPO',

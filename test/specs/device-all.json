@@ -1368,6 +1368,33 @@
         }
     },
     {
+        "desc": "Nothing 1",
+        "ua": "Mozilla/5.0 (Linux; Android 13; A063) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/22.0 Chrome/111.0.5563.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "A063",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nothing 2",
+        "ua": "Mozilla/5.0 (Linux; Android 14; A065 Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/125.0.6422.53 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "A065",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nothing 2a",
+        "ua": "Mozilla/5.0 (Linux; Android 14; A142 Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.71 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "A142",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Oculus Quest",
         "ua": "Mozilla/5.0 (Linux; Android 10; Quest) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/15.0.0.0.22.280317669 SamsungBrowser/4.0 Chrome/89.0.4389.90 VR Safari/537.36",
         "expect": {
