@@ -237,6 +237,7 @@ const Vendor = Object.freeze({
     SIEMENS: 'Siemens',
     SONY: 'Sony',
     SPRINT: 'Sprint',
+    TCL: 'TCL',
     TECHNISAT: 'TechniSAT',
     TECNO: 'Tecno',
     TESLA: 'Tesla',
