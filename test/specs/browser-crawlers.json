@@ -80,6 +80,26 @@
         }
     },
     {
+        "desc"    : "MJ12bot",
+        "ua"      : "Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)",
+        "expect"  :
+        {
+            "name"    : "MJ12bot",
+            "version" : "v1.4.8",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot",
+            "version" : "7",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Yahoo! Japan",
         "ua"      : "Y!J-BRW/1.0 (https://www.yahoo-help.jp/app/answers/detail/p/595/a_id/42716)",
         "expect"  :
