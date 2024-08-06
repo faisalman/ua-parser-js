@@ -2421,6 +2421,51 @@
         }
     },
     {
+        "desc": "TCL 10 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T790Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36 EdgA/114.0.1823.43",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T790Y",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 10 5G UW",
+        "ua": "Mozilla/5.0 (Linux; Android 10; T790S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T790S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 10 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T782H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Mobile Safari/537.36 OPR/64.3.3282.60839",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T782H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 10 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; T799B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T799B",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 10 SE",
+        "ua": "Mozilla/5.0 (Linux; Android 10; T766H_RU) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T766H",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "TCL 10 TabMax",
         "ua": "Mozilla/5.0 (Linux; Android 11; 9296Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
         "expect": {
@@ -2448,12 +2493,327 @@
         }
     },
     {
+        "desc": "TCL 10L",
+        "ua": "Mozilla/5.0 (Linux; Android 10; T770B Build/QKQ1.200329.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36 GSA/11.41.10.23.arm64",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T770B",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 10L",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T770H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T770H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T781) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T781",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T810S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36 EdgA/113.0.1774.63",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T810S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20 SE",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T671H Build/RKQ1.201112.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.73 Mobile Safari/537.36 GoogleApp/13.9.7.23.arm64",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T671H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20 XE",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 5087Z) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "5087Z",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20B",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 6159K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6159K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 205",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 4187D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "4187D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20E",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 6125A) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/18.0 Chrome/99.0.4844.88 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6125A",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20L",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T774H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.59 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T774H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20L Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T775H Build/RKQ1.210107.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.61 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T775H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20R 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T767H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.97 Mobile Safari/537.36 OPR/71.3.3718.67322",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T767H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20S",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T773O) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T773O",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 20Y",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 6156D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.134 Mobile Safari/537.36 OPR/70.3.3653.66287",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6156D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30 V 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; T781S Build/RKQ1.210614.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.166 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/369.0.0.5.110;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T781S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30 XE 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T767W Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.162 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/416.0.0.35.85;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T767W",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 305",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 11; 6102D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.6.96.00 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6102D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 306",
+        "ua": "Mozilla/5.0 (Linux; Android 12; 6102H Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.141 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/332.0.0.22.108;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6102H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T676H Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.162 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T676H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30+",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T676J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T676J",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T776H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T776H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30 LE",
+        "ua": "Mozilla/5.0 (Linux; Android 12; 4188V Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.136 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/352.0.0.14.108;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "4188V",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30 SE",
+        "ua": "Mozilla/5.0 (Linux; Android 12; 6165H Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.1.0.28.104;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6165H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 30E",
+        "ua": "Mozilla/5.0 (Linux; Android 12; 6127I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "6127I",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 40 NxtPaper",
+        "ua": "Mozilla/5.0 (Linux; Android 13; T612B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/125.0.6422.53 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T612B",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL A3",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A509DL Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/101.0.4951.61 Mobile Safari/537.36 GSA/13.18.7.23.arm64",
+        "expect": {
+            "vendor": "TCL",
+            "model": "A509DL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL A30",
+        "ua": "Mozilla/5.0 (Linux; Android 11; 5102L Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.136 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/413.0.0.30.104;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "5102L",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 40 SE",
+        "ua": "Mozilla/5.0 (Linux; Android 13; T610K Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.166 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T610K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 40 XE 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 13; T609DL Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/125.0.6422.136 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/466.1.0.57.85;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T609DL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 403",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T431D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T431D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 405",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T506D Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.162 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/418.0.0.33.69;]",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T506D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 408",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; T507U Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36 OPR/75.0.2254.68857",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T507U",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL 40R 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T771K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36 EdgA/114.0.1823.37",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T771K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "TCL Ion X",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T430W Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.60 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T430W",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "TCL NxtPaper 11",
         "ua": "Mozilla/5.0 (Linux; Android 13; 9466X Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.179 Safari/537.36 [FB_IAB/FB4A;FBAV/473.0.0.41.81;]",
         "expect": {
             "vendor": "TCL",
             "model": "9466X",
             "type": "tablet"
+        }
+    },
+    {
+        "desc": "TCL Stylus 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; T779W Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.2 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "T779W",
+            "type": "mobile"
         }
     },
     {
@@ -2525,6 +2885,15 @@
         "expect": {
             "vendor": "TCL",
             "model": "9080G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "TCL Xess P17AA",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; TCL Xess P17AA Build/LMY47D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.85 Safari/537.36",
+        "expect": {
+            "vendor": "TCL",
+            "model": "Xess P17AA",
             "type": "tablet"
         }
     },

@@ -629,8 +629,11 @@
             ], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
 
             // TCL
-            /droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i
+            /tcl (xess p17aa)/i,
+            /droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])(_\w(\w|\w\w))?(\)| bui)/i
             ], [MODEL, [VENDOR, 'TCL'], [TYPE, TABLET]], [
+            /droid [\w\.]+; (418(?:7d|8v)|5087z|5102l|61(?:02[dh]|25[adfh]|27[ai]|56[dh]|59k|65[ah])|a509dl|t(?:43(?:0w|1[adepqu])|50(?:6d|7[adju])|6(?:09dl|10k|12b|71[efho]|76[hjk])|7(?:66[ahju]|67[hw]|7[045][bh]|71[hk]|73o|76[ho]|79w|81[hks]?|82h|90[bhsy]|99b)|810[hs]))(_\w(\w|\w\w))?(\)| bui)/i
+            ], [MODEL, [VENDOR, 'TCL'], [TYPE, MOBILE]], [
 
             // Acer
             /droid.+; ([ab][1-7]-?[0178a]\d\d?)/i
