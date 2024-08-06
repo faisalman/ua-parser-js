@@ -3555,6 +3555,42 @@
         }
     },
     {
+        "desc": "Google Chromecast with Google TV",
+        "ua": "Mozilla/5.0 (Linux; Android 12.0; Build/STTL.240206.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.0 Safari/537.36 CrKey/1.56.500000 DeviceType/AndroidTV",
+        "expect": {
+            "vendor": "Google",
+            "model": "Chromecast AndroidTV",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Google Chromecast Mini Smart Speaker",
+        "ua": "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.225 Safari/537.36 CrKey/1.56.500000 DeviceType/SmartSpeaker",
+        "expect": {
+            "vendor": "Google",
+            "model": "Chromecast SmartSpeaker",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Google Chromecast Third Generation",
+        "ua": "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.225 Safari/537.36 CrKey/1.56.500000 DeviceType/Chromecast",
+        "expect": {
+            "vendor": "Google",
+            "model": "Chromecast Third Generation",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Google Chromecast Nest Hub",
+        "ua": "Mozilla/5.0 (Fuchsia) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 CrKey/1.56.500000",
+        "expect": {
+            "vendor": "Google",
+            "model": "Chromecast Nest Hub",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Google Chromecast",
         "ua": "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.84 Safari/537.36 CrKey/1.22.79313",
         "expect": {
