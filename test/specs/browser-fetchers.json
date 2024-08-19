@@ -1,5 +1,15 @@
 [
     {
+        "desc"    : "AhrefsSiteAudit",
+        "ua"      : "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36 (compatible; AhrefsSiteAudit/6.1; +http://ahrefs.com/robot/site-audit)",
+        "expect"  :
+        {
+            "name"    : "AhrefsSiteAudit",
+            "version" : "6.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "BingPreview",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
         "expect"  :
@@ -16,6 +26,26 @@
         {
             "name"    : "ChatGPT-User",
             "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Rogerbot",
+        "ua"      : "Mozilla/5.0 (compatible; rogerBot/1.0; UrlCrawler; http://www.seomoz.org/dp/rogerbot)",
+        "expect"  :
+        {
+            "name"    : "rogerBot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "UptimeRobot",
+        "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
+        "expect"  :
+        {
+            "name"    : "UptimeRobot",
+            "version" : "2.0",
             "type"    : "fetcher"
         }
     }

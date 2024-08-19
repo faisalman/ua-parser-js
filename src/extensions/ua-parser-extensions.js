@@ -40,21 +40,26 @@ const CLIs = Object.freeze({
 const Crawlers = Object.freeze({
     browser : [
         [
+            // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
             // Applebot - http://apple.com/go/applebot
             // Bingbot - http://www.bing.com/bingbot.htm
+            // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
             // MJ12bot - https://mj12bot.com/
             // SemrushBot - http://www.semrush.com/bot.html
-            /((?:amazon|apple|bing|duckduck|facebook|gpt|mj12|semrush)bot)\/([\w\.]+)/i,
+            /((?:ahrefs|amazon|apple|bing|dot|duckduck|facebook|gpt|mj12|semrush)bot)\/([\w\.]+)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
             /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
 
             // ClaudeBot
             /(claude(?:bot|-web))\/([\w\.]+)/i, 
+
+            // Coc Coc Bot - https://help.coccoc.com/en/search-engine
+            /(coccocbot-(?:image|web))\/([\w\.]+)/i, 
 
             // Googlebot - http://www.google.com/bot.html
             /(google(?:bot|other)(?:-image|-video|-news|-extended)?|(?:storebot-)?google(?:-inspectiontool)?)\/?([\w\.]*)/i, 
@@ -176,9 +181,10 @@ const Emails = Object.freeze({
 const Fetchers = Object.freeze({
     browser : [
         [
+            // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
-            // BingPreview / Mastodon / Pinterestbot / Redditbot / Telegrambot / Twitterbot
-            /(bingpreview|chatgpt-user|mastodon|(?:discord|linkedin|pinterest|reddit|telegram|twitter)bot)\/([\w\.]+)/i,
+            // BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / Telegrambot / Twitterbot / UptimeRobot
+            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot)\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
             /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,

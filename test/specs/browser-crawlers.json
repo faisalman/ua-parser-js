@@ -1,5 +1,15 @@
 [
     {
+        "desc"    : "AhrefsBot",
+        "ua"      : "Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)",
+        "expect"  :
+        {
+            "name"    : "AhrefsBot",
+            "version" : "7.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Applebot",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1;+http://www.apple.com/go/applebot)",
         "expect"  :
@@ -40,12 +50,42 @@
         }
     },
     {
+        "desc"    : "Coc Coc Bot (web)",
+        "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
+        "expect"  :
+        {
+            "name"    : "coccocbot-web",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Coc Coc Bot (image)",
+        "ua"      : "Mozilla/5.0 (compatible; coccocbot-image/1.0; +http://help.coccoc.com/searchengine)",
+        "expect"  :
+        {
+            "name"    : "coccocbot-image",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "ClaudeWeb",
         "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
         "expect"  :
         {
             "name"    : "Claude-Web",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Dotbot",
+        "ua"      : "Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)",
+        "expect"  :
+        {
+            "name"    : "DotBot",
+            "version" : "1.2",
             "type"    : "crawler"
         }
     },
