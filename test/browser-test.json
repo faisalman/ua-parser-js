@@ -210,6 +210,16 @@
         }
     },
     {
+        "desc"    : "Blazer",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; PalmSource/hspr-H102; Blazer/4.0) 16;320x320",
+        "expect"  :
+        {
+            "name"    : "Blazer",
+            "version" : "4.0",
+            "major"   : "4"
+        }
+    },
+    {
         "desc"    : "Bolt",
         "ua"      : "Mozilla/5.0 (X11; 78; CentOS; US-en) AppleWebKit/527+ (KHTML, like Gecko) Bolt/0.862 Version/3.0 Safari/523.15",
         "expect"  :
@@ -390,6 +400,26 @@
         }
     },
     {
+        "desc"    : "Comodo Dragon",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.7 (KHTML, like Gecko) Comodo_Dragon/16.1.1.0 Chrome/16.0.912.63 Safari/535.7",
+        "expect"  :
+        {
+            "name"    : "Comodo Dragon",
+            "version" : "16.1.1.0",
+            "major"   : "16"
+        }
+    },
+    {
+        "desc"    : "Conkeror",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:6.0.1) Gecko/20110831 conkeror/0.9.3",
+        "expect"  :
+        {
+            "name"    : "conkeror",
+            "version" : "0.9.3",
+            "major"   : "0"
+        }
+    },
+    {
         "desc"    : "Dillo",
         "ua"      : "Dillo/2.2",
         "expect"  :
@@ -457,6 +487,16 @@
             "name"    : "Flow",
             "version" : "5.7.4",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Go Browser",
+        "ua"      : "NokiaE66/GoBrowser/2.0.297",
+        "expect"  :
+        {
+            "name"    : "GoBrowser",
+            "version" : "2.0.297",
+            "major"   : "2"
         }
     },
     {
@@ -769,6 +809,26 @@
         }
     },
     {
+        "desc"    : "Iron",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1250.0 Iron/22.0.2150.0 Safari/537.4",
+        "expect"  :
+        {
+            "name"    : "Iron",
+            "version" : "22.0.2150.0",
+            "major"   : "22"
+        }
+    },
+    {
+        "desc"    : "Jasmine",
+        "ua"      : "SAMSUNG-S8000/S8000XXIF3 SHP/VPP/R5 Jasmine/1.0 Nextreaming SMM-MMS/1.2.0 profile/MIDP-2.1 configuration/CLDC-1.1",
+        "expect"  :
+        {
+            "name"    : "Jasmine",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "K-Meleon",
         "ua"      : "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.5) Gecko/20031016 K-Meleon/0.8.2",
         "expect"  :
@@ -999,6 +1059,26 @@
         }
     },
     {
+        "desc"    : "NetSurf in Plan9",
+        "ua"      : "Mozilla/5.0 (Plan9) NetSurf/3.12",
+        "expect"  :
+        {
+            "name"    : "NetSurf",
+            "version" : "3.12",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "NetSurf in Linux",
+        "ua"      : "NetSurf/3.10 (Linux; Arch Linux)",
+        "expect"  :
+        {
+            "name"    : "NetSurf",
+            "version" : "3.10",
+            "major"   : "3"
+        }
+    },
+    {
         "desc"    : "Nokia Browser",
         "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/025.007; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.37 Mobile Safari/533.4 3gpp-gba",
         "expect"  :
@@ -1179,6 +1259,16 @@
         }
     },
     {
+        "desc"    : "OviBrowser",
+        "ua"      : "Mozilla/5.0 (Series40; NokiaX3-02/le6.32; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/1.0.0.11.8",
+        "expect"  :
+        {
+            "name"    : "OviBrowser",
+            "version" : "1.0.0.11.8",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "PhantomJS",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34",
         "expect"  :
@@ -1209,13 +1299,33 @@
         }
     },
     {
-        "desc"    : "QQ",
+        "desc"    : "QQBrowser",
         "ua"      : "Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; OPPO R7s Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.1 Mobile Safari/537.36",
         "expect"  :
         {
             "name"    : "QQBrowser",
             "version" : "7.1",
             "major"   : "7"
+        }
+    },
+    {
+        "desc"    : "QQBrowser",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 9; zh-cn; vivo X21 Build/PKQ1.180819.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/9.9 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "QQBrowser",
+            "version" : "9.9",
+            "major"   : "9"
+        }
+    },
+    {
+        "desc"    : "Quark",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; JLH-AN00 Build/HONORJLH-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Quark/5.8.2.221 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Quark",
+            "version" : "5.8.2.221",
+            "major"   : "5"
         }
     },
     {
@@ -1226,6 +1336,16 @@
             "name"    : "QupZilla",
             "version" : "1.8.9",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Rekonq 2",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) rekonq/2.2.1 Safari/537.21",
+        "expect"  :
+        {
+            "name"    : "rekonq",
+            "version" : "2.2.1",
+            "major"   : "2"
         }
     },
     {
@@ -1449,7 +1569,7 @@
         }
     },
     {
-        "desc"    : "UPBrowser",
+        "desc"    : "UP.Browser",
         "ua"      : "BenQ-CF61/1.00/WAP2.0/MIDP2.0/CLDC1.0 UP.Browser/6.3.0.4.c.1.102 (GUI) MMP/2.0",
         "expect"  :
         {
@@ -1526,6 +1646,16 @@
             "name"    : "VIERA",
             "version" : "undefined",
             "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "w3m",
+        "ua"      : "w3m/0.5.1",
+        "expect"  :
+        {
+            "name"    : "w3m",
+            "version" : "0.5.1",
+            "major"   : "0"
         }
     },
     {
@@ -1872,6 +2002,46 @@
         "expect"  :
         {
             "name"    : "LinkedIn"
+        }
+    },
+    {
+        "desc"    : "Links in Linux",
+        "ua"      : "Links (2.xpre7; Linux 2.4.18 i586; x)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.xpre7",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Links in Mac",
+        "ua"      : "Links (2.1pre33; Darwin 8.11.0 Power Macintosh; 169x55)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.1pre33",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Links in NetBSD",
+        "ua"      : "Links (2.29; NetBSD 10.0 i386; GNU C 10.5; x)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.29",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Links in FreeBSD",
+        "ua"      : "Links (2.1pre15; FreeBSD 5.3-RELEASE i386; 196x84)",
+        "expect"  :
+        {
+            "name"    : "Links",
+            "version" : "2.1pre15",
+            "major"   : "2"
         }
     },
     {
