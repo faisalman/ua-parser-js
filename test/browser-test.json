@@ -699,6 +699,26 @@
         }
     },
     {
+        "desc"    : "Helio",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Safari/537.36 Helio/0.98.20",
+        "expect"  :
+        {
+            "name"    : "Helio",
+            "version" : "0.98.20",
+            "major"   : "0"
+        }
+    },
+    {
+        "desc"    : "HeyTap",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.61 Safari/537.36 HeyTapBrowser/40.8.10.1",
+        "expect"  :
+        {
+            "name"    : "HeyTap",
+            "version" : "40.8.10.1",
+            "major"   : "40"
+        }
+    },
+    {
         "desc"    : "HuaweiBrowser",
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00；HMSCore/4.0.0 GMS/10.4 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
         "expect"  :
