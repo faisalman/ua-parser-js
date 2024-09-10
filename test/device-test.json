@@ -1872,6 +1872,24 @@
         }
     },
     {
+        "desc": "Echo Show 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.2; AEOCW) AppleWebKit/537.36 (KHTML, like Gecko) Silk/106.3.3 like Chrome/106.0.5249.170 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEOCW",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Echo Show 15",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AEOHY) AppleWebKit/537.36 (KHTML, like Gecko) Silk/112.6.3 like Chrome/112.0.5615.213 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEOHY",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Echo Dot",
         "ua": "Dalvik/2.1.0 (Linux; U; Android 5.1.1; AEOBC Build/LVY48F)",
         "expect": {

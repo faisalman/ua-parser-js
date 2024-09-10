@@ -506,7 +506,7 @@
 
             // Amazon
             /(alexa)webm/i,
-            /(kf[a-z]{2}wi|aeo[c-r]{2})( bui|\))/i,                             // Kindle Fire without Silk / Echo Show
+            /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i,                           // Kindle Fire without Silk / Echo Show
             /(kf[a-z]+)( bui|\)).+silk\//i                                      // Kindle Fire HD
             ], [MODEL, [VENDOR, AMAZON], [TYPE, TABLET]], [
             /((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i                     // Fire Phone
