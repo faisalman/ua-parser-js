@@ -1399,6 +1399,16 @@
         }
     },
     {
+        "desc"    : "Quark",
+        "ua"      : "mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/112.0.0.0 safari/537.36 quarkpc/1.5.5.75",
+        "expect"  :
+        {
+            "name"    : "Quark",
+            "version" : "1.5.5.75",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "QupZilla",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) QupZilla/1.8.9 Safari/538.1",
         "expect"  :
