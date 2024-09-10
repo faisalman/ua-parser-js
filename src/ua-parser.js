@@ -239,7 +239,7 @@
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
             // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo|klar)\/([-\w\.]+)/i,
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar)\/([-\w\.]+)/i,
                                                                                 // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar
             /(heytap|ovi)browser\/([\d\.]+)/i,                                  // HeyTap/Ovi
             /(weibo)__([\d\.]+)/i                                               // Weibo
@@ -277,7 +277,9 @@
             /fxios\/([-\w\.]+)/i                                                // Firefox for iOS
             ], [VERSION, [NAME, FIREFOX]], [
             /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
-            ], [[NAME, '360 ' + BROWSER]], [
+            ], [[NAME, '360' + SUFFIX_BROWSER]], [
+            /\b(qq)\/([\w\.]+)/i                                                // QQ
+            ], [[NAME, /(.+)/, '$1Browser'], VERSION], [
             /(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i
             ], [[NAME, /(.+)/, '$1 ' + BROWSER], VERSION], [                    // Oculus/Sailfish/HuaweiBrowser/VivoBrowser
             /samsungbrowser\/([\w\.]+)/i                                        // Samsung Internet
