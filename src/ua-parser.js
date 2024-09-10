@@ -539,6 +539,10 @@
             /droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i
             ], [MODEL, [VENDOR, 'TCL'], [TYPE, TABLET]], [
 
+            // itel
+            /(itel) ((\w+))/i
+            ], [[VENDOR, lowerize], MODEL, [TYPE, strMapper, { 'tablet' : ['p10001l', 'w7001'], '*' : 'mobile' }]], [
+
             // Acer
             /droid.+; ([ab][1-7]-?[0178a]\d\d?)/i
             ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
