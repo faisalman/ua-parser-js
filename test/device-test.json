@@ -2088,6 +2088,42 @@
         }
     },
     {
+        "desc": "Samsung Galaxy Watch",
+        "ua": "Mozilla/5.0 (Linux; Tizen 5.5; SAMSUNG SM-R805W) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.0 Chrome/69.0.3497.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R805W",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch Active 2",
+        "ua": "Mozilla/5.0 (Linux; Tizen 5.5; SAMSUNG SM-R820) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.0 Chrome/69.0.3497.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R820",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch4",
+        "ua": "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-R875U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.2. Chrome/102.0.5005.125 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R875U",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch5 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-R925U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.2. Chrome/111.0.5563.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R925U",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Samsung Note 10.1",
         "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-P605) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36",
         "expect": {

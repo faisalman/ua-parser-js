@@ -406,8 +406,8 @@
             // Samsung
             /\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, TABLET]], [
-            /\b((?:s[cgp]h|gt|sm)-\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
-            /samsung[- ]([-\w]+)/i,
+            /\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
+            /samsung[- ]((?!sm-[lr])[-\w]+)/i,
             /sec-(sgh\w+)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, MOBILE]], [
 
@@ -686,6 +686,8 @@
             // WEARABLES
             ///////////////////
 
+            /\b(sm-[lr]\d\d[05][fnuw]?s?)\b/i                                   // Samsung Galaxy Watch
+            ], [MODEL, [VENDOR, SAMSUNG], [TYPE, WEARABLE]], [
             /((pebble))app/i                                                    // Pebble
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
             /(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i                              // Apple Watch
