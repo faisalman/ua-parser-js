@@ -280,8 +280,8 @@
             ], [[NAME, '360' + SUFFIX_BROWSER]], [
             /\b(qq)\/([\w\.]+)/i                                                // QQ
             ], [[NAME, /(.+)/, '$1Browser'], VERSION], [
-            /(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1 ' + BROWSER], VERSION], [                    // Oculus/Sailfish/HuaweiBrowser/VivoBrowser
+            /(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i
+            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/HuaweiBrowser/VivoBrowser/PicoBrowser
             /samsungbrowser\/([\w\.]+)/i                                        // Samsung Internet
             ], [VERSION, [NAME, SAMSUNG + ' Internet']], [
             /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
@@ -340,6 +340,8 @@
             // Gecko based
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
+            /(wolvic)\/([\w\.]+)/i                                              // Wolvic
+            ], [NAME, VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
             ], [VERSION, [NAME, FIREFOX+' Reality']], [
             /ekiohf.+(flow)\/([\w\.]+)/i,                                       // Flow
