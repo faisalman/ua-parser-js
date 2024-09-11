@@ -1,29 +1,27 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment",
   "keywords": [
+    "ua-parser-js",
     "user-agent",
-    "parser",
     "browser",
     "engine",
     "os",
     "device",
+    "mobile",
     "cpu",
-    "jquery-plugin",
-    "ecosystem:jquery",
-    "ua-parser-js",
-    "client-hints",
-    "user-agent-detection",
-    "device-detection",
-    "platform-detection",
-    "mobile-detection",
-    "browser-detection",
-    "architecture-detection"
+    "platform",
+    "detect",
+    "javascript",
+    "jquery",
+    "typescript",
+    "node-js",
+    "client-hints"
   ],
-  "homepage": "https://github.com/faisalman/ua-parser-js",
+  "homepage": "https://uaparser.dev",
   "contributors": [
     "Aamir Poonawalla <aamir@urx.com>",
     "Admas <mollases@users.noreply.github.com>",
@@ -153,6 +151,7 @@
     "dist",
     "src"
   ],
+  "bin": "./script/cli.js",
   "scripts": {
     "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle",
     "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
@@ -195,7 +194,7 @@
     "test": "test"
   },
   "bugs": "https://github.com/faisalman/ua-parser-js/issues",
-  "demo": "https://faisalman.github.io/ua-parser-js",
+  "demo": "https://uaparser.dev",
   "download": "https://raw.github.com/faisalman/ua-parser-js/master/dist/ua-parser.min.js",
   "funding": [
     {
