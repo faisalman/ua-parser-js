@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v0.7.38
+/* UAParser.js v0.7.39
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -17,7 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '0.7.38',
+    var LIBVERSION  = '0.7.39',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -60,7 +60,8 @@
         ZEBRA   = 'Zebra',
         FACEBOOK    = 'Facebook',
         CHROMIUM_OS = 'Chromium OS',
-        MAC_OS  = 'Mac OS';
+        MAC_OS  = 'Mac OS',
+        SUFFIX_BROWSER = ' Browser';
 
     ///////////
     // Helper
@@ -171,7 +172,7 @@
                     return (i === UNKNOWN) ? undefined : i;
                 }
             }
-            return str;
+            return map.hasOwnProperty('*') ? map['*'] : str;
     };
 
     ///////////////

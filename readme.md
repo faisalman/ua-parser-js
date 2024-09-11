@@ -15,11 +15,11 @@
 JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
 
 * Author    : Faisal Salman <<f@faisalman.com>>
-* Demo      : https://faisalman.github.io/ua-parser-js
+* Demo      : https://uaparser.dev
 * Source    : https://github.com/faisalman/ua-parser-js
 * Documentation : 
-  * v1 : https://github.com/faisalman/ua-parser-js/tree/1.0.35#documentation
-  * v2 : https://faisalman.github.io/ua-parser-js-docs/v2
+  * v1 : https://github.com/faisalman/ua-parser-js/tree/1.0.39#documentation
+  * v2 : https://docs.uaparser.dev
 
 ***
 
@@ -35,6 +35,8 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 </tr>
 </tbody>
 </table>
+
+<a href="https://uaparser.dev"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
 
 ---
 
@@ -102,19 +104,19 @@ The methods are self explanatory, here's a small overview on all the available m
 AVG, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Cobalt, Comodo Dragon, Dillo,
 Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
-Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Heytap, 
+Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Helio, Heytap, 
 Huawei Browser, iCab, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, 
 Iceweasel, Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, 
 Kindle, Klar, Klarna, Konqueror, LBBROWSER, Line, LinkedIn, Links, Lunascape, 
 Lynx, MIUI Browser, Maemo, Maxthon, Midori, Minimo, Mobile Safari, Mosaic, 
 Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, 
 Oculus Browser, OmniWeb, Opera Coast, Opera [GX/Mini/Mobi/Tablet], PaleMoon, 
-PhantomJS, Phoenix, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, Quark, 
-QupZilla, RockMelt, Safari, Sailfish Browser, Samsung Internet, SeaMonkey, Silk, 
-Skyfire, Sleipnir, Slim, SlimBrowser, Smart Lenovo Browser, Snapchat, 
+PhantomJS, Phoenix, Pico Browser, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, 
+Quark, QupZilla, RockMelt, Safari, Sailfish Browser, Samsung Internet, SeaMonkey, 
+Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Smart Lenovo Browser, Snapchat, 
 Sogou [Explorer/Mobile], Swiftfox, Tesla, TikTok, Tizen Browser, Twitter, 
-UCBrowser, UP.Browser, Viera, Vivaldi, Vivo Browser, Waterfox, WeChat, Weibo, 
-Yandex, w3m, Whale Browser, ...
+UCBrowser, UP.Browser, Vivaldi, Vivo Browser, w3m, Waterfox, WeChat, Weibo, 
+Whale Browser, Wolvic, Yandex, ...
 
 # 'browser.version' determined dynamically
 ```
@@ -136,10 +138,10 @@ console, mobile, tablet, smarttv, wearable, embedded
 # Possible 'device.vendor':
 Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
 Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Infinix, 
-Jolla, Kobo, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, Nintendo, Nokia, 
-Nvidia, OnePlus, OPPO, Ouya, Palm, Panasonic, Pebble, Polytron, Realme, RIM, 
-Roku, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, Tecno, Tesla, Ulefone, 
-Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
+itel, Jolla, Kobo, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, Nintendo, 
+Nokia, Nothing, Nvidia, OnePlus, OPPO, Ouya, Palm, Panasonic, Pebble, Polytron, 
+Realme, RIM, Roku, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, TCL, Tecno, 
+Tesla, Ulefone, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -321,6 +323,14 @@ console.log(parseInt($.ua.browser.version.split('.')[0], 10));  // 4
 $('body').addClass('ua-browser-' + $.ua.browser.name + ' ua-devicetype-' + $.ua.device.type);
 ```
 
+## Using npx
+
+UAParser.js can be executed as a command that returns the parsed data in JSON format:
+
+```sh
+$ npx ua-parser-js "[INSERT-UA-HERE]"
+```
+
 ## Using Extension
 
 * `UAParser([uastring,] extensions)`
@@ -364,7 +374,7 @@ Made with [contributors-img](https://contrib.rocks).
 
 MIT License
 
-Copyright (c) 2012-2021 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2012-2024 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
