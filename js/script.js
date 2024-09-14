@@ -1,16 +1,16 @@
 $(document)
   .ready(function() {
-    var labels = ['{ browser.name }', '{ os.version }', '{ device.type }', '{ cpu.arch }', '{ device.model }', '{ browser.version }', '{ device.vendor }', '{ engine.name }', '{ engine.version }'];
+    var labels = ['{ browser.name }', '{ os.version }', '{ device.type }'];
     var counter = 0;
     var rotateLabel = function () {
         $('.masthead h3 .label').transition('fly down', function () {
             $(this).text(labels[counter++]).transition('fade up', 100, function (){
             if(counter>=labels.length)counter=0;
-            $(this).transition('tada');
+            $(this).transition('jiggle');
             });
         });
     };
-    $('.masthead h3').transition({animation: 'slide up', interval: 9000});
+    $('.masthead h3').transition({animation: 'slide up', interval: 5000});
     rotateLabel();
     setInterval(rotateLabel, 1000);
 
@@ -108,7 +108,7 @@ $(document)
         qs = new URLSearchParams(window.location.search).get('ua');
     }
     if (qs) {
-        $('#ua-txt-info').text('What the browser provides = 😱😵‍💫❌');
+        $('#ua-txt-info').text('What your browser tells you = 😵‍💫 🤯 ❌');
         $('#demo-result').get(0).scrollIntoView();
         updateDemo(UAParser(qs));
     } else {

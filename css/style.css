@@ -21,6 +21,7 @@ color: rgba(255, 255, 255, 0.3);
     color: #fff;
     font-weight: bold;
     font-size: 5rem;
+    padding: 2em 0 0 0;
 }
 .masthead h2 {
     font-weight: normal;
