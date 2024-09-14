@@ -9,6 +9,7 @@
 
 const { CPU, OS, Engine } = require('../enums/ua-parser-enums');
 const { UAParser } = require('../main/ua-parser');
+const { isFromEU } = require('detect-europe-js');
 
 const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${model}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36`).device.vendor;
 
@@ -50,6 +51,7 @@ module.exports = {
     getDeviceVendor,
     isAppleSilicon,
     isChromeFamily,
+    isFromEU,
     isFrozenUA,
     isStandalonePWA
 }
