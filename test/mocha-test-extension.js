@@ -9,7 +9,7 @@ const crawlers = require('./specs/browser-crawlers.json');
 const emails = require('./specs/browser-emails.json');
 const fetchers = require('./specs/browser-fetchers.json');
 const modules = require('./specs/browser-modules.json');
-const { CLIs, Crawlers, Emails, Fetchers, Modules } = require('../src/extensions/ua-parser-extensions');
+const { Bots, CLIs, Crawlers, Emails, Fetchers, Modules } = require('../src/extensions/ua-parser-extensions');
 
 describe('Extensions', () => {
     [   
@@ -37,6 +37,8 @@ describe('Extensions', () => {
     const axios = 'axios/1.3.5';
     const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
     const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
+
+    assert.equal(UAParser(scrapy, Bots).browser.name, 'Scrapy');
 
     const emailParser = new UAParser(Emails);
     assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
@@ -67,7 +69,7 @@ describe('Merge', () => {
     });
 });
 
-describe('Testing regexes', () => {
+describe('Testing the safety of regexes', () => {
 
     let regexes;
     let code = fs.readFileSync('src/extensions/ua-parser-extensions.js', 'utf8').toString();

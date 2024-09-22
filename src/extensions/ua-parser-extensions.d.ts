@@ -4,6 +4,7 @@
 
 import type { UAParserExt } from "../main/ua-parser";
 
+export const Bots: UAParserExt;
 export const CLIs: UAParserExt;
 export const Crawlers: UAParserExt;
 export const ExtraDevices: UAParserExt;

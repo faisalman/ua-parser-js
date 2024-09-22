@@ -342,7 +342,21 @@ const Modules = Object.freeze({
     ]
 });
 
+//////////
+// BOTS
+/////////
+
+const Bots = Object.freeze({
+    browser : [
+        ...CLIs.browser,
+        ...Crawlers.browser,
+        ...Fetchers.browser,
+        ...Modules.browser
+    ]
+});
+
 module.exports = { 
+    Bots,
     CLIs,
     Crawlers,
     ExtraDevices,
