@@ -208,6 +208,7 @@ const Vendor = Object.freeze({
     HP: 'HP',
     HTC: 'HTC',
     HUAWEI: 'Huawei',
+    HONOR: 'Honor',
     INFINIX: 'Infinix',
     ITEL: 'itel',
     JOLLA: 'Jolla',
