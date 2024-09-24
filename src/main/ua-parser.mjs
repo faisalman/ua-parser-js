@@ -70,6 +70,7 @@
         BLACKBERRY  = 'BlackBerry',
         GOOGLE      = 'Google',
         HUAWEI      = 'Huawei',
+        HONOR       = 'Honor',
         LG          = 'LG',
         MICROSOFT   = 'Microsoft',
         MOTOROLA    = 'Motorola',
@@ -287,6 +288,7 @@
             // Mixed
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,      // Lunascape/Maxthon/Netfront/Jasmine/Blazer
+            /(webmaf)\/([a-z0-9\.-]+)/i,                                        // Sony/Playstation WebMAF
             // Trident based
             /(avant |iemobile|slim)(?:browser)?[\/ ]?([\w\.]*)/i,               // Avant/IEMobile/SlimBrowser
             /(ba?idubrowser)[\/ ]?([\w\.]+)/i,                                  // Baidu Browser
@@ -468,10 +470,14 @@
             /\b(sh-?[altvz]?\d\d[a-ekm]?)/i
             ], [MODEL, [VENDOR, SHARP], [TYPE, MOBILE]], [
 
+            // Honor
+            /(?:honor)([-\w ]+)[;\)]/i
+            ], [MODEL, [VENDOR, HONOR], [TYPE, MOBILE]], [
+
             // Huawei
             /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
-            /(?:huawei|honor)([-\w ]+)[;\)]/i,
+            /(?:huawei)([-\w ]+)[;\)]/i,
             /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
@@ -629,7 +635,7 @@
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
             /crkey/i                                                            // Google Chromecast
             ], [[MODEL, CHROME+'cast'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
-            /droid.+aft(\w)( bui|\))/i                                          // Fire TV
+            /droid.+aft(\w+)( bui|\))/i                                         // Fire TV
             ], [MODEL, [VENDOR, AMAZON], [TYPE, SMARTTV]], [
             /\(dtv[\);].+(aquos)/i,
             /(aquos-tv[\w ]+)\)/i                                               // Sharp
@@ -927,7 +933,6 @@
             setProps.call(this, [
                 [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [FULLVERLIST, itemListToArray(uach[CH_HEADER_FULL_VER_LIST])],
-                [BRANDS, itemListToArray(uach[CH_HEADER])],
                 [MOBILE, /\?1/.test(uach[CH_HEADER_MOBILE])],
                 [MODEL, stripQuotes(uach[CH_HEADER_MODEL])],
                 [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
@@ -1149,7 +1154,8 @@
             ['getResult', createItemFunc(UA_RESULT)],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
-                userAgent = (typeof ua === STR_TYPE && ua.length > UA_MAX_LENGTH) ? trim(ua, UA_MAX_LENGTH) : ua;
+                if (typeof ua === STR_TYPE)
+                    userAgent = ua.length > UA_MAX_LENGTH ? trim(ua, UA_MAX_LENGTH) : ua;
                 return this;
             }]
         ])

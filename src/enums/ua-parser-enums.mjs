@@ -56,6 +56,7 @@ const DeviceVendor = Object.freeze({
     APPLE   : 'Apple',
     SAMSUNG : 'Samsung',
     HUAWEI  : 'Huawei',
+    HONOR   : 'Honor',
     XIAOMI  : 'Xiaomi',
     OPPO    : 'OPPO',
     VIVO    : 'Vivo',
