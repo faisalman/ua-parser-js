@@ -130,6 +130,16 @@
         }
     },
     {
+        "desc"    : "OpenAI Search",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",
+        "expect"  :
+        {
+            "name"    : "OAI-SearchBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "SemrushBot",
         "ua"      : "Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)",
         "expect"  :
