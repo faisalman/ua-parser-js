@@ -8,8 +8,8 @@
 /*jshint esversion: 6 */ 
 
 const Browser = Object.freeze({
-    _2345_EXPLORER: '2345Explorer',
-    _360: '360 Browser',
+    '2345_EXPLORER': '2345Explorer',
+    '360': '360 Browser',
     ALIPAY: 'Alipay',
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
@@ -158,6 +158,7 @@ const BrowserType = Object.freeze({
 });
 
 const CPU = Object.freeze({
+    '68K': '68k',
     ARM : 'arm',
     ARM_64: 'arm64',
     ARM_HF: 'armhf',
@@ -168,7 +169,6 @@ const CPU = Object.freeze({
     IRIX_64: 'irix64',
     MIPS: 'mips',
     MIPS_64: 'mips64',
-    M68K: '68k',
     PA_RISC: 'pa-risc',
     PPC: 'ppc',
     SPARC: 'sparc',
