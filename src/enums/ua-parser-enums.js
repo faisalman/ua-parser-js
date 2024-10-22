@@ -255,6 +255,7 @@ const Vendor = Object.freeze({
 
 const Engine = Object.freeze({
     AMAYA: 'Amaya',
+    ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
     EDGEHTML: 'EdgeHTML',
     FLOW: 'Flow',
@@ -321,6 +322,7 @@ const OS = Object.freeze({
     NETRANGE: 'NetRange',
     NETTV: 'NetTV',
     NINTENDO: 'Nintendo',
+    OPENHARMONY: 'OpenHarmony',
     OPENBSD: 'OpenBSD',
     OPENVMS: 'OpenVMS',
     OS2: 'OS/2',
