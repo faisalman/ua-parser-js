@@ -8,7 +8,7 @@ declare namespace UAParser {
         is(val: string): boolean;
         toString(): string;
         withClientHints(): PromiseLike<T> | T;
-        withFeatureCheck(): T;
+        withFeatureCheck(): PromiseLike<T> | T;
     }
 
     interface IBrowser extends IData<IBrowser> {

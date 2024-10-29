@@ -32,8 +32,8 @@ expectType<'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | '
 expectType<boolean>(browser.is(''));
 expectType<string>(browser.toString());
 expectType<IBrowser | PromiseLike<IBrowser>>(browser.withClientHints());
-expectType<IBrowser>((<IBrowser>browser.withClientHints()).withFeatureCheck());
-expectType<boolean>((<IBrowser>browser.withClientHints()).withFeatureCheck().is(''));
+expectType<IBrowser | PromiseLike<IBrowser>>((<IBrowser>browser.withClientHints()).withFeatureCheck());
+expectType<boolean>((<IBrowser>(<IBrowser>browser.withClientHints()).withFeatureCheck()).is(''));
 
 expectType<ICPU>(parser.getCPU());
 expectType<IDevice>(parser.getDevice());
