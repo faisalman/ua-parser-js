@@ -1,5 +1,25 @@
 # UAParser.js Changelog
 
+## Version 2.0.0-rc.1
+
+- Fix Python Request mistakenly identified as Meta Quest
+- Add new browser: Helio
+- Add new device: itel, Nothing, Pico, TCL
+- Add new engine: ArkWeb
+- Add new OS: OpenHarmony, Pico
+- Improve browser detection: Quark
+- Improve device detection: Xiaomi, Amazon Echo Show, Google Chromecast, Samsung Galaxy Watch
+- `ua-parser-js/helpers` submodule:
+    - Add new method: 
+        - `getDeviceVendor()` to guess for a device vendor based on its model name
+        - `isElectron()` to check if current window is running inside Electron
+        - `isFromEU()` to check if current window is from an EU (European Union) country
+        - `isStandalonePWA()` to check if current window is a standalone PWA
+    - Rename `isChromiumBased()` to `isChromeFamily()`
+    - Update `isAppleSilicon()` to also checks for WebGL renderer info
+- `ua-parser-js/extensions` submodule:
+    - Restore `bots` as a compilation of all these browser types: `clis`, `crawlers`, `fetchers`, and `modules`
+
 ## Version 2.0.0-beta.3
 
 - Breaking:

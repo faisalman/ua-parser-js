@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0-beta.3
+/*  Enums for UAParser.js v2.0.0-rc.1
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -12,8 +12,8 @@
 /*jshint esversion: 6 */ 
 
 const Browser = Object.freeze({
-    _2345_EXPLORER: '2345Explorer',
-    _360: '360 Browser',
+    '2345_EXPLORER': '2345Explorer',
+    '360': '360 Browser',
     ALIPAY: 'Alipay',
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
@@ -56,6 +56,7 @@ const Browser = Object.freeze({
     FLOW: 'Flow',
     GO: 'GoBrowser',
     GOOGLE_SEARCH: 'GSA',
+    HELIO: 'Helio',
     HEYTAP: 'HeyTap',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
@@ -161,6 +162,7 @@ const BrowserType = Object.freeze({
 });
 
 const CPU = Object.freeze({
+    '68K': '68k',
     ARM : 'arm',
     ARM_64: 'arm64',
     ARM_HF: 'armhf',
@@ -171,7 +173,6 @@ const CPU = Object.freeze({
     IRIX_64: 'irix64',
     MIPS: 'mips',
     MIPS_64: 'mips64',
-    M68K: '68k',
     PA_RISC: 'pa-risc',
     PPC: 'ppc',
     SPARC: 'sparc',
@@ -212,6 +213,7 @@ const Vendor = Object.freeze({
     HTC: 'HTC',
     HUAWEI: 'Huawei',
     INFINIX: 'Infinix',
+    ITEL: 'itel',
     JOLLA: 'Jolla',
     KOBO: 'Kobo',
     LENOVO: 'Lenovo',
@@ -222,6 +224,7 @@ const Vendor = Object.freeze({
     NEXIAN: 'Nexian',
     NINTENDO: 'Nintendo',
     NOKIA: 'Nokia',
+    NOTHING: 'Nothing',
     NVIDIA: 'Nvidia',
     ONEPLUS: 'OnePlus',
     OPPO: 'OPPO',
@@ -239,6 +242,7 @@ const Vendor = Object.freeze({
     SIEMENS: 'Siemens',
     SONY: 'Sony',
     SPRINT: 'Sprint',
+    TCL: 'TCL',
     TECHNISAT: 'TechniSAT',
     TECNO: 'Tecno',
     TESLA: 'Tesla',
@@ -255,6 +259,7 @@ const Vendor = Object.freeze({
 
 const Engine = Object.freeze({
     AMAYA: 'Amaya',
+    ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
     EDGEHTML: 'EdgeHTML',
     FLOW: 'Flow',
@@ -321,6 +326,7 @@ const OS = Object.freeze({
     NETRANGE: 'NetRange',
     NETTV: 'NetTV',
     NINTENDO: 'Nintendo',
+    OPENHARMONY: 'OpenHarmony',
     OPENBSD: 'OpenBSD',
     OPENVMS: 'OpenVMS',
     OS2: 'OS/2',
@@ -347,7 +353,6 @@ const OS = Object.freeze({
     UBUNTU: 'Ubuntu',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
-    VIERA: 'Viera',
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',

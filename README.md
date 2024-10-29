@@ -19,81 +19,14 @@ The most comprehensive, compact, & up-to-date isomorphic JavaScript library to d
 user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser 
 (client-side) or node.js (server-side).
 
-# Overview
-
-```js
-import { UAParser } from 'ua-parser-js';
-
-// 1. Problem: 
-// Imagine getting this wild user-agent string from a visitor:
-const ua = `Mozilla/5.0 (Linux; Android 10; STK-LX1 
-Build/HONORSTK-LX1; wv) AppleWebKit/537.36 (KHTML, 
-like Gecko) Version/4.0 Chrome/110.0.5481.153 Mobile 
-Safari/537.36 musical_ly_2022803040 JsSdk/1.0 
-NetType/WIFI Channel/huaweiadsglobal_int 
-AppName/musical_ly app_version/28.3.4 ByteLocale/en 
-ByteFullLocale/en Region/IQ Spark/1.2.7-alpha.8 
-AppVersion/28.3.4 PIA/1.5.11 BytedanceWebview/d8a21c6`;
-// Note: this is a real user-agent (what???)
-
-// 2. Solution:
-// Just pass the complex user-agent string to `UAParser`
-const parser = new UAParser(ua);
-
-// 3. Result:
-// And voila!
-console.log(parser.getBrowser());
-// { name : "TikTok", version : "28.3.4", major : "28", type: undefined }
-
-console.log(parser.getCPU());
-// { architecture : undefined }
-
-console.log(parser.getEngine());
-// { name : "Blink", version : "110.0.5481.153" }
-
-console.log(parser.getDevice());
-// { type : "mobile", vendor : "Huawei", model : "STK-LX1" }
-
-console.log(parser.getOS());
-// { name : "Android", version : "10" }
-
-console.log(parser.getResult());
-/*
-{
-    ua: "Mozilla/5.0 (Linux; Android 10; STK-LX1 Build/HONORSTK-LX1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.153 Mobile Safari/537.36 musical_ly_2022803040 JsSdk/1.0 NetType/WIFI Channel/huaweiadsglobal_int AppName/musical_ly app_version/28.3.4 ByteLocale/en ByteFullLocale/en Region/IQ Spark/1.2.7-alpha.8 AppVersion/28.3.4 PIA/1.5.11 BytedanceWebview/d8a21c6",
-    browser: {
-        name: "TikTok",
-        version: "28.3.4",
-        major: "28"
-    },
-    cpu: {},
-    device: {
-        type: "mobile",
-        model: "STK-LX1",
-        vendor: "Huawei"
-    },
-    engine: {
-        name: "Blink",
-        version: "110.0.5481.153"
-    },
-    os: {
-        name: "Android",
-        version: "10"
-    }
-}
-*/
-
-// 4. Conclusion:
-// The visitor is browsing from a TikTok app using an Android-powered Huawei device
-// Phew! Thanks, UAParser.js!
-```
+# Demo
 
   * Live demo: https://uaparser.dev
 
 # Documentation
 
-  * v1.0: https://github.com/faisalman/ua-parser-js/tree/1.0.38#documentation
-  * v2.0: https://docs.uaparser.dev
+  * `version 1.x` : https://github.com/faisalman/ua-parser-js/tree/1.0.x#documentation
+  * `version 2.x` : https://docs.uaparser.dev
 
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
 see what's new & breaking.
@@ -234,7 +167,7 @@ see what's new & breaking.
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
-            <td><strong title="1 project per 1 license">⚠️</strong></td>
+            <td><strong title="1 project per 1 license">⛔️</strong></td>
             <td>✅</td>
         </tr>
         <tr>
@@ -257,9 +190,9 @@ see what's new & breaking.
             <td>Price</td>
             <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/1.0.x/license.md">License</a>)</strong></td>
             <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
-            <td><strong title="$12 (one-time fee)">$12 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-personal/LICENSE.md">License</a>)</strong></td>
-            <td><strong title="$25 (one-time fee)">$25 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-business/LICENSE.md">License</a>)</strong></td>
-            <td><strong title="$500 (one-time fee)">$500 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$14 (one-time fee)">$14 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-personal/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$29 (one-time fee)">$29 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-business/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$588 (one-time fee)">$588 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
         </tr>
     </tbody>
     <tfoot>
@@ -287,3 +220,5 @@ Made with [contributors-img](https://contrib.rocks).
 
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
+
+Support the open-source versions of UAParser.js on [OpenCollective](https://opencollective.com/ua-parser-js) or [GitHub Sponsors](https://github.com/sponsors/faisalman).
