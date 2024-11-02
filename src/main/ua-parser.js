@@ -40,6 +40,7 @@
         WEARABLE    = 'wearable',
         XR          = 'xr',
         EMBEDDED    = 'embedded',
+        INAPP       = 'inapp',
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 500,
         BRANDS      = 'brands',
@@ -385,13 +386,12 @@
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
             /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i                        // QQBrowser/2345 Browser
             ], [NAME, VERSION], [
-            /(lbbrowser|rekonq)/i,                                              // LieBao Browser/Rekonq
-            /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
+            /(lbbrowser|rekonq)/i                                               // LieBao Browser/Rekonq
             ], [NAME], [
 
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
-            ], [[NAME, FACEBOOK], VERSION], [
+            ], [[NAME, FACEBOOK], VERSION, [TYPE, INAPP]], [
             /(Klarna)\/([\w\.]+)/i,                                             // Klarna Shopping Browser for iOS & Android
             /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
@@ -399,12 +399,17 @@
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i                     // Chromium/Instagram/Snapchat
-            ], [NAME, VERSION], [
+            /(instagram|snapchat)[\/ ]([-\w\.]+)/i                              // Instagram/Snapchat
+            ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
-            ], [VERSION, [NAME, 'GSA']], [
+            ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
             /musical_ly(?:.+app_?version\/|_)([\w\.]+)/i                        // TikTok
-            ], [VERSION, [NAME, 'TikTok']], [
+            ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
+            /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
+            ], [NAME, [TYPE, INAPP]], [
+
+            /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
+            ], [NAME, VERSION], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [

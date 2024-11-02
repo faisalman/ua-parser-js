@@ -16,7 +16,8 @@
         {
             "name"    : "Alipay",
             "version" : "10.2.51.7100",
-            "major"   : "10"
+            "major"   : "10",
+            "type"    : "inapp"
         }
     },
     {
@@ -26,7 +27,8 @@
         {
             "name"    : "Alipay",
             "version" : "10.3.50.9999",
-            "major"   : "10"
+            "major"   : "10",
+            "type"    : "inapp"
         }
     },
     {
@@ -536,7 +538,8 @@
         {
             "name"    : "Facebook",
             "version" : "35.0.0.48.273",
-            "major"   : "35"
+            "major"   : "35",
+            "type"    : "inapp"
         }
     },
     {
@@ -546,7 +549,8 @@
         {
             "name"    : "Facebook",
             "version" : "91.0.0.41.73",
-            "major"   : "91"
+            "major"   : "91",
+            "type"    : "inapp"
         }
     },
     {
@@ -556,7 +560,8 @@
         {
             "name"    : "Facebook",
             "version" : "undefined",
-            "major"   : "undefined"
+            "major"   : "undefined",
+            "type"    : "inapp"
         }
     },
     {
@@ -566,7 +571,8 @@
         {
             "name"    : "Klarna",
             "version" : "23.36.223",
-            "major"   : "23"
+            "major"   : "23",
+            "type"    : "inapp"
         }
     },
     {
@@ -576,7 +582,8 @@
         {
             "name"    : "Klarna",
             "version" : "23.36.215",
-            "major"   : "23"
+            "major"   : "23",
+            "type"    : "inapp"
         }
     },
     {
@@ -586,7 +593,8 @@
         {
             "name"    : "Instagram",
             "version" : "142.0.0.22.109",
-            "major"   : "142"
+            "major"   : "142",
+            "type"    : "inapp"
         }
     },
     {
@@ -975,7 +983,8 @@
         {
             "name"    : "Line",
             "version" : "6.5.1",
-            "major"   : "6"
+            "major"   : "6",
+            "type"    : "inapp"
         }
     },
     {
@@ -985,7 +994,8 @@
         {
             "name"    : "Line",
             "version" : "8.4.1",
-            "major"   : "8"
+            "major"   : "8",
+            "type"    : "inapp"
         }
     },
     {
@@ -2056,7 +2066,8 @@
         {
             "name"    : "GSA",
             "version" : "30.1.161623614",
-            "major"   : "30"
+            "major"   : "30",
+            "type"    : "inapp"
         }
     },
     {
@@ -2152,7 +2163,8 @@
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]",
         "expect"  :
         {
-            "name"    : "LinkedIn"
+            "name"    : "LinkedIn",
+            "type"    : "inapp"
         }
     },
     {
@@ -2257,7 +2269,8 @@
         "expect"   : {
             "name"   : "KAKAOTALK",
             "version": "2409760",
-            "major"  : "2409760"
+            "major"  : "2409760",
+            "type"    : "inapp"
         }
     },
     {
@@ -2266,7 +2279,8 @@
         "expect"   : {
             "name"   : "KAKAOSTORY",
             "version": "6.8.3_21046",
-            "major"  : "6"
+            "major"  : "6",
+            "type"    : "inapp"
         }
     },
     {
@@ -2275,7 +2289,8 @@
         "expect"   : {
             "name"   : "KAKAOTALK",
             "version": "9.7.6",
-            "major"  : "9"
+            "major"  : "9",
+            "type"    : "inapp"
         }
     },
     {
@@ -2284,7 +2299,8 @@
         "expect"   : {
             "name"   : "NAVER",
             "version": "11.11.2",
-            "major"  : "11"
+            "major"  : "11",
+            "type"    : "inapp"
         }
     },
     {
@@ -2293,7 +2309,8 @@
         "expect"   : {
             "name"   : "NAVER",
             "version": "10.25.0",
-            "major"  : "10"
+            "major"  : "10",
+            "type"    : "inapp"
         }
     },
     {
@@ -2302,7 +2319,8 @@
         "expect"   : {
             "name"   : "TikTok",
             "version": "21.9.4",
-            "major"  : "21"
+            "major"  : "21",
+            "type"    : "inapp"
         }
     },
     {
@@ -2311,7 +2329,8 @@
         "expect"   : {
             "name"   : "TikTok",
             "version": "21.1.0",
-            "major"  : "21"
+            "major"  : "21",
+            "type"    : "inapp"
         }
     },
     {
@@ -2320,7 +2339,8 @@
         "expect"   : {
             "name"   : "TikTok",
             "version": "28.3.4",
-            "major"  : "28"
+            "major"  : "28",
+            "type"    : "inapp"
         }
     },
     {
@@ -2360,7 +2380,8 @@
         {
             "name"    : "Snapchat",
             "version" : "12.33.0.36",
-            "major"   : "12"
+            "major"   : "12",
+            "type"    : "inapp"
         }
     },
     {
@@ -2370,7 +2391,8 @@
         {
             "name"    : "Twitter",
             "version" : "undefined",
-            "major"   : "undefined"
+            "major"   : "undefined",
+            "type"    : "inapp"
         }
     },
     {
@@ -2380,7 +2402,8 @@
         {
             "name"    : "Twitter",
             "version" : "10.34",
-            "major"   : "10"
+            "major"   : "10",
+            "type"    : "inapp"
         }
     }
 ]
