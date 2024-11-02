@@ -8,6 +8,7 @@
 /*jshint esversion: 6 */ 
 
 const Browser = Object.freeze({
+    '115': '115',
     '2345': '2345',
     '360': '360',
     ALIPAY: 'Alipay',
