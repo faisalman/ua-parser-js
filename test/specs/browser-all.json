@@ -857,6 +857,26 @@
         }
     },
     {
+        "desc"    : "Iron",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Iron Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Iron",
+            "version" : "129.0.0.0",
+            "major"   : "129"
+        }
+    },
+    {
+        "desc"    : "Iron",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Iron Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Iron",
+            "version" : "113.0.0.0",
+            "major"   : "113"
+        }
+    },
+    {
         "desc"    : "Jasmine",
         "ua"      : "SAMSUNG-S8000/S8000XXIF3 SHP/VPP/R5 Jasmine/1.0 Nextreaming SMM-MMS/1.2.0 profile/MIDP-2.1 configuration/CLDC-1.1",
         "expect"  :
