@@ -1,6 +1,7 @@
 const assert = require('assert');
 const { UAParser } = require('../src/main/ua-parser');
-const { getDeviceVendor, isAppleSilicon, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
+const { getDeviceVendor, isAppleSilicon, isBot, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
+const { Bots, Emails } = require('../src/extensions/ua-parser-extensions');
 
 describe('getDeviceVendor', () => {
     it('Can guess the device vendor from a model name', () => {
@@ -28,6 +29,23 @@ describe('isAppleSilicon', () => {
 
         assert.equal(isAppleSilicon(UAParser(macIntel)), false);
         assert.equal(isAppleSilicon(UAParser(macARM)), true);
+    });
+});
+
+describe('isBot', () => {
+    it('Can detect Bots', () => {
+        
+        // non-real ua
+        const ahrefsBot = 'Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)';
+        const firefox = 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0';
+        const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
+        const thunderbird = 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0';
+
+        const botParser = new UAParser(firefox, { Bots, Emails });
+        assert.equal(isBot(botParser.getResult()), false);
+        assert.equal(isBot(botParser.setUA(ahrefsBot).getResult()), true);
+        assert.equal(isBot(botParser.setUA(scrapy).getResult()), true);
+        assert.equal(isBot(botParser.setUA(thunderbird).getResult()), false);
     });
 });
 

@@ -33,6 +33,8 @@ const isAppleSilicon = (res) => {
     return false;
 }
 
+const isBot = (res) => ['cli', 'crawler', 'fetcher', 'module'].includes(res.browser.type);
+
 const isChromeFamily = (res) => res.engine.is(Engine.BLINK);
 
 const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
@@ -53,6 +55,7 @@ const isStandalonePWA = () => window && (window.matchMedia('(display-mode: stand
 module.exports = { 
     getDeviceVendor,
     isAppleSilicon,
+    isBot,
     isChromeFamily,
     isElectron,
     isFromEU,

@@ -6,6 +6,7 @@ import { IResult } from "../main/ua-parser";
 
 declare function getDeviceVendor(model: string): string | undefined;
 declare function isAppleSilicon(res: IResult): boolean;
+declare function isBot(res: IResult): boolean;
 declare function isChromeFamily(res: IResult): boolean;
 declare function isElectron(): boolean;
 declare function isFromEU(): boolean;
@@ -15,6 +16,7 @@ declare function isStandalonePWA(): boolean;
 export {
     getDeviceVendor,
     isAppleSilicon,
+    isBot,
     isChromeFamily,
     isElectron,
     isFromEU,
