@@ -321,6 +321,8 @@
             // Mixed
             /\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i            // Baidu
             ], [VERSION, [NAME, 'Baidu']], [
+            /\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i                       // Maxthon
+            ], [VERSION, [NAME, 'Maxthon']], [
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i,      
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer/Sleipnir

@@ -1119,13 +1119,73 @@
         }
     },
     {
-        "desc"    : "Maxthon",
+        "desc"    : "Maxthon on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; KFAUWI Build/LVY48F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Safari/537.36 MxBrowser/4.3.5.2000",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "4.3.5.2000",
+            "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "Maxthon on iOS",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/10.0 Mobile/15E148 Safari/602.1 MXiOS/5.4.5.2",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "5.4.5.2",
+            "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Linux",
+        "ua"      : "Mozilla/5.0 (X11; Linux i686; Ubuntu 14.04.3 LTS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.0 Maxthon/1.0.5.3 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "1.0.5.3",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Maxthon on macOS",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6 Maxthon/5.1.102",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "5.1.102",
+            "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Windows Server 2003",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; MyIE2; .NET CLR 1.1.4322)",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Windows XP",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; SV1; Maxthon; .NET CLR 1.1.4322)",
         "expect"  :
         {
             "name"    : "Maxthon",
             "version" : "undefined",
             "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36 Maxthon/5.2.7.2000",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "5.2.7.2000",
+            "major"   : "5"
         }
     },
     {
