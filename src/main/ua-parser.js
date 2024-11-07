@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-rc.1
+/* UAParser.js v2.0.0-rc.2
    Copyright © 2012-2024 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -19,7 +19,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.0-rc.1',
+    var LIBVERSION  = '2.0.0-rc.2',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',

@@ -1,4 +1,4 @@
-// Type definitions for Helpers submodule of UAParser.js v2.0.0-beta.3
+// Type definitions for Helpers submodule of UAParser.js v2.0.0-rc.2
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 

@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.0-rc.1
+/*  Helpers for UAParser.js v2.0.0-rc.2
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */

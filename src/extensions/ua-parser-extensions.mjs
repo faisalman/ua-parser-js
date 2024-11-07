@@ -3,7 +3,7 @@
 // Source: /src/extensions/ua-parser-extensions.js
 
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.0-rc.1
+/*  Extensions for UAParser.js v2.0.0-rc.2
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */

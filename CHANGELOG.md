@@ -1,5 +1,46 @@
 # UAParser.js Changelog
 
+## Migrating from v1 to v2
+
+- What's breaking:
+  - Licensed under AGPLv3 (open-source) or PRO License (commercial)
+  - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
+  - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
+- What's new:
+  - New device type: `xr`, to identify AR/VR devices 
+  - New browser property: `browser.type`, to identify the type of the browser: `crawler`, `cli`, `email`, `fetcher`, `inapp`, `mediaplayer`, `module`
+  - New methods in result object (all of `get*()` return value): 
+    - Support for client hints: `withClientHints()`
+    - Support for feature detection: `withFeatureCheck()`
+    - Utility for easy comparison: `is()`
+    - Utility to print full-name: `toString()`
+  - Parse directly from command line using `npx ua-parser-js`
+  - Extensions can be passed as a list to `UAParser()`
+  - Support for ES module & TypeScript `import { UAParser } from 'ua-parser-js'`
+  - Provided Enums submodule `'ua-parser-js/enums'`
+  - Provided Extensions submodule `'ua-parser-js/extensions'`
+  - Provided Helpers submodule `'ua-parser-js/helpers'`:
+    - `getDeviceVendor()` to guess for a device vendor based on its model name
+    - `isAppleSilicon()` to check if the device has Apple Silicon Mac device properties
+    - `isBot()` to check if the browser is identified as a bot
+    - `isChromeFamily()` to check if the browser is Chrome-based / has Blink engine (i.e: New Opera, New Edge, Vivaldi, Brave, Arc, etc.)
+    - `isElectron()` to check if current window is running inside Electron
+    - `isFromEU()` to check if current window is from an EU (European Union) country
+    - `isFrozenUA()` to check if a user-agent string match with the reduced/frozen user-agent pattern
+    - `isStandalonePWA()` to check if current window is a standalone PWA
+
+--
+
+## Version 2.0.0-rc.2
+
+- Fix incorrect import path in ESM files
+- Add new browser: 115, SlimBoat, Slimjet, LibreWolf
+- Improve browser detection: 2345, 360, Dragon, Iron, Maxthon
+- `ua-parser-js/enums` submodule:
+    - Add Chromecast OS variants: Android/Fuchsia/Linux/SmartSpeaker
+- `ua-parser-js/helpers` submodule:
+    - Add new method: `isBot()` to check if the browser is identified as a bot
+
 ## Version 2.0.0-rc.1
 
 - Fix Python Request mistakenly identified as Meta Quest
@@ -67,27 +108,6 @@
 ## Version 2.0.0-alpha.1
 
 - Initial work on new major version
-
-## Version 2.0
-
-- What's breaking:
-  - Dual-licensed under AGPLv3 or PRO License
-  - Browser detection on mobile device: `"Chrome" => "Mobile Chrome"`, `"Firefox" => "Mobile Firefox"`
-  - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
-  - AR/VR devices moved to new device type: `xr`
-  - New property in `browser`: `type`
-- What's new:
-  - Some new methods in result object: 
-    - Support for client hints: `withClientHints()`
-    - Support for feature detection: `withFeatureCheck()`
-    - Utility for easy comparison: `is()`
-    - Utility to print full-name: `toString()`
-  - Parse directly from command line using `npx ua-parser-js`
-  - Extensions can be passed as a list to `UAParser()`
-  - Support for ES module `import { UAParser } from 'ua-parser-js'`
-  - Provided Enums submodule `'ua-parser-js/enums'`
-  - Provided Extensions submodule `'ua-parser-js/extensions'`
-  - Provided Helpers submodule `'ua-parser-js/helpers'`
 
 ---
 

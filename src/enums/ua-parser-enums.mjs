@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0-rc.1
+/*  Enums for UAParser.js v2.0.0-rc.2
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -12,8 +12,9 @@
 /*jshint esversion: 6 */ 
 
 const Browser = Object.freeze({
-    '2345_EXPLORER': '2345Explorer',
-    '360': '360 Browser',
+    '115': '115',
+    '2345': '2345',
+    '360': '360',
     ALIPAY: 'Alipay',
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
@@ -36,11 +37,11 @@ const Browser = Object.freeze({
     CHROMIUM: 'Chromium',
     COBALT: 'Cobalt',
     COC_COC: 'Coc Coc',
-    COMODO_DRAGON: 'Comodo Dragon',
     CONKEROR: 'Conkeror',
     DILLO: 'Dillo',
     DOLPHIN: 'Dolphin',
     DORIS: 'Doris',
+    DRAGON: 'Dragon',
     DUCKDUCKGO: 'DuckDuckGo',
     EDGE: 'Edge',
     EPIPHANY: 'Epiphany',
@@ -78,6 +79,7 @@ const Browser = Object.freeze({
     KLARNA: 'Klarna',
     KINDLE: 'Kindle',
     LENOVO: 'Smart Lenovo Browser',
+    LIBREWOLF: 'LibreWolf',
     LIEBAO: 'LBBROWSER',
     LINE: 'Line',
     LINKEDIN: 'LinkedIn',
@@ -126,7 +128,9 @@ const Browser = Object.freeze({
     SILK: 'Silk',
     SKYFIRE: 'Skyfire',
     SLEIPNIR: 'Sleipnir',
+    SLIMBOAT: 'SlimBoat',
     SLIMBROWSER: 'SlimBrowser',
+    SLIMJET: 'Slimjet',
     SNAPCHAT: 'Snapchat',
     SOGOU_EXPLORER: 'Sogou Explorer',
     SOGOU_MOBILE: 'Sogou Mobile',
@@ -291,6 +295,10 @@ const OS = Object.freeze({
     CENTOS: 'CentOS',
     CHROME_OS: 'Chrome OS',
     CHROMECAST: 'Chromecast',
+    CHROMECAST_ANDROID: 'Chromecast Android',
+    CHROMECAST_FUCHSIA: 'Chromecast Fuchsia',
+    CHROMECAST_LINUX: 'Chromecast Linux',
+    CHROMECAST_SMARTSPEAKER: 'Chromecast SmartSpeaker',
     CONTIKI: 'Contiki',
     DEBIAN: 'Debian',
     DEEPIN: 'Deepin',

@@ -3,7 +3,7 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-rc.1
+/* UAParser.js v2.0.0-rc.2
    Copyright © 2012-2024 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -21,7 +21,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.0-rc.1',
+    var LIBVERSION  = '2.0.0-rc.2',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -42,6 +42,7 @@
         WEARABLE    = 'wearable',
         XR          = 'xr',
         EMBEDDED    = 'embedded',
+        INAPP       = 'inapp',
         USER_AGENT  = 'user-agent',
         UA_MAX_LENGTH = 500,
         BRANDS      = 'brands',
@@ -322,17 +323,19 @@
             // Mixed
             /\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i            // Baidu
             ], [VERSION, [NAME, 'Baidu']], [
+            /\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i                       // Maxthon
+            ], [VERSION, [NAME, 'Maxthon']], [
             /(kindle)\/([\w\.]+)/i,                                             // Kindle
             /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i,      
                                                                                 // Lunascape/Maxthon/Netfront/Jasmine/Blazer/Sleipnir
             // Trident based
-            /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,             // Avant/IEMobile/SlimBrowser
+            /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i,        // Avant/IEMobile/SlimBrowser/SlimBoat/Slimjet
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
-            // Webkit/KHTML based                                               // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio)\/([-\w\.]+)/i,
-                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio
-            /(heytap|ovi)browser\/([\d\.]+)/i,                                  // HeyTap/Ovi
+            // Blink/Webkit/KHTML based                                         // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon
+            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i,
+                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio/Dragon
+            /(heytap|ovi|115)browser\/([\d\.]+)/i,                              // HeyTap/Ovi/115
             /(weibo)__([\d\.]+)/i                                               // Weibo
             ], [NAME, VERSION], [
             /quark(?:pc)?\/([-\w\.]+)/i                                         // Quark
@@ -369,31 +372,31 @@
             ], [VERSION, [NAME, 'MIUI' + SUFFIX_BROWSER]], [
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
             ], [VERSION, [NAME, PREFIX_MOBILE + FIREFOX]], [
-            /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
-            ], [[NAME, '360' + SUFFIX_BROWSER]], [
+            /\bqihoobrowser\/?([\w\.]*)/i                                       // 360
+            ], [VERSION, [NAME, '360']], [
             /\b(qq)\/([\w\.]+)/i                                                // QQ
             ], [[NAME, /(.+)/, '$1Browser'], VERSION], [
             /(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i
             ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/HuaweiBrowser/VivoBrowser/PicoBrowser
             /samsungbrowser\/([\w\.]+)/i                                        // Samsung Internet
             ], [VERSION, [NAME, SAMSUNG + ' Internet']], [
-            /(comodo_dragon)\/([\w\.]+)/i                                       // Comodo Dragon
-            ], [[NAME, /_/g, ' '], VERSION], [
             /metasr[\/ ]?([\d\.]+)/i                                            // Sogou Explorer
             ], [VERSION, [NAME, SOGOU + ' Explorer']], [
             /(sogou)mo\w+\/([\d\.]+)/i                                          // Sogou Mobile
             ], [[NAME, SOGOU + ' Mobile'], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
-            /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i                        // QQBrowser/2345 Browser
+            /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i   // QQ/2345
             ], [NAME, VERSION], [
-            /(lbbrowser|rekonq)/i,                                              // LieBao Browser/Rekonq
-            /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
+            /(lbbrowser|rekonq)/i                                               // LieBao Browser/Rekonq
             ], [NAME], [
+            /ome\/([\w\.]+) \w* ?(iron) saf/i,                                  // Iron
+            /ome\/([\w\.]+).+qihu (360)[es]e/i                                  // 360
+            ], [VERSION, NAME], [
 
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
-            ], [[NAME, FACEBOOK], VERSION], [
+            ], [[NAME, FACEBOOK], VERSION, [TYPE, INAPP]], [
             /(Klarna)\/([\w\.]+)/i,                                             // Klarna Shopping Browser for iOS & Android
             /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
@@ -401,12 +404,17 @@
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i                     // Chromium/Instagram/Snapchat
-            ], [NAME, VERSION], [
+            /(instagram|snapchat)[\/ ]([-\w\.]+)/i                              // Instagram/Snapchat
+            ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
-            ], [VERSION, [NAME, 'GSA']], [
+            ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
             /musical_ly(?:.+app_?version\/|_)([\w\.]+)/i                        // TikTok
-            ], [VERSION, [NAME, 'TikTok']], [
+            ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
+            /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
+            ], [NAME, [TYPE, INAPP]], [
+
+            /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
+            ], [NAME, VERSION], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
@@ -440,7 +448,7 @@
             ], [[NAME, PREFIX_MOBILE + FIREFOX], VERSION], [
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
-            /(wolvic)\/([\w\.]+)/i                                              // Wolvic
+            /(wolvic|librewolf)\/([\w\.]+)/i                                    // Wolvic/LibreWolf
             ], [NAME, VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
             ], [VERSION, [NAME, FIREFOX+' Reality']], [

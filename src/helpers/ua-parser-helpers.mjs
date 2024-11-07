@@ -3,7 +3,7 @@
 // Source: /src/helpers/ua-parser-helpers.js
 
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.0-rc.1
+/*  Helpers for UAParser.js v2.0.0-rc.2
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -11,9 +11,11 @@
 
 /*jshint esversion: 6 */ 
 
-import { CPU, OS, Engine } from './enums/ua-parser-enums.mjs';
-import { UAParser } from './main/ua-parser.mjs';
+import { UAParser } from '../main/ua-parser.mjs';
+import { CPU, OS, Engine } from '../enums/ua-parser-enums.mjs';
 import { isFromEU } from 'detect-europe-js';
+import { isFrozenUA } from 'ua-is-frozen';
+import { isStandalonePWA } from 'is-standalone-pwa';
 
 const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${model}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36`).device.vendor;
 
@@ -37,26 +39,17 @@ const isAppleSilicon = (res) => {
     return false;
 }
 
+const isBot = (res) => ['cli', 'crawler', 'fetcher', 'module'].includes(res.browser.type);
+
 const isChromeFamily = (res) => res.engine.is(Engine.BLINK);
 
 const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
                             / electron\//i.test(navigator?.userAgent));         // browser
 
-const isFrozenUA = (ua) => /^Mozilla\/5\.0 \((Windows NT 10\.0; Win64; x64|Macintosh; Intel Mac OS X 10_15_7|X11; Linux x86_64|X11; CrOS x86_64 14541\.0\.0|Fuchsia|Linux; Android 10; K)\) AppleWebKit\/537\.36 \(KHTML, like Gecko\) Chrome\/\d+\.0\.0\.0 (Mobile )?Safari\/537\.36/.test(ua);
-
-const isStandalonePWA = () => window && (window.matchMedia('(display-mode: standalone)').matches || 
-                                // iOS
-                                navigator.standalone ||
-                                // Android
-                                document.referrer.startsWith('android-app://') ||
-                                // Windows
-                                window.Windows ||
-                                /trident.+(msapphost|webview)\//i.test(navigator.userAgent) ||
-                                document.referrer.startsWith('app-info://platform/microsoft-store'));
-
 export { 
     getDeviceVendor,
     isAppleSilicon,
+    isBot,
     isChromeFamily,
     isElectron,
     isFromEU,
