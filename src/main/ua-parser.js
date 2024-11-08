@@ -68,7 +68,6 @@
         BLACKBERRY  = 'BlackBerry',
         GOOGLE      = 'Google',
         HUAWEI      = 'Huawei',
-        HONOR       = 'Honor',
         LG          = 'LG',
         MICROSOFT   = 'Microsoft',
         MOTOROLA    = 'Motorola',
@@ -468,14 +467,10 @@
             /\b(sh-?[altvz]?\d\d[a-ekm]?)/i
             ], [MODEL, [VENDOR, SHARP], [TYPE, MOBILE]], [
 
-            // Honor
-            /(?:honor)([-\w ]+)[;\)]/i
-            ], [MODEL, [VENDOR, HONOR], [TYPE, MOBILE]], [
-
             // Huawei
             /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
-            /(?:huawei)([-\w ]+)[;\)]/i,
+            /(?:huawei|honor)([-\w ]+)[;\)]/i,
             /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
