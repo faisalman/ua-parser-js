@@ -5,7 +5,7 @@
 import { IResult } from "../main/ua-parser";
 
 declare function getDeviceVendor(model: string): string | undefined;
-declare function isAppleSilicon(res: IResult): boolean;
+declare function isAppleSilicon(res: IResult, useFeatureDetection?: boolean): boolean;
 declare function isBot(res: IResult): boolean;
 declare function isChromeFamily(res: IResult): boolean;
 declare function isElectron(): boolean;
