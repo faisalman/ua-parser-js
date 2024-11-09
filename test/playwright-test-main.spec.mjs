@@ -124,3 +124,20 @@ test.describe('withFeatureCheck() tests', () => {
         expect(uap).toHaveProperty('device.type', 'tablet');
     });
 });
+
+test.describe('request.headers can be passed in form of a Headers object', () => {
+
+    test('Headers automatically converted into a plain key-value object', async ({ page }) => {
+        await page.addInitScript(() => {
+            Object.defineProperty(window, 'req', {
+                value : {
+                    headers: new Headers([["User-Agent", "myBrowser/1.0"]])
+                }
+            });
+        });
+        await page.goto(localHtml);
+        // @ts-ignore
+        const uap = await page.evaluate(() => UAParser(req.headers));
+        expect(uap.ua).toBe('myBrowser/1.0');
+    });
+});

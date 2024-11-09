@@ -1236,14 +1236,21 @@
             headers = extensions;                       // case UAParser(ua, headers)
             extensions = undefined;
         }
+
+        // Convert Headers object into a plain object
+        if (headers && typeof headers.append === FUNC_TYPE) {
+            var kv = {};
+            headers.forEach(function (v, k) { kv[k] = v; });
+            headers = kv;
+        }
         
         if (!(this instanceof UAParser)) {
             return new UAParser(ua, extensions, headers).getResult();
         }
 
         var userAgent = typeof ua === STR_TYPE ? ua :                                       // Passed user-agent string
-                            ((NAVIGATOR && NAVIGATOR.userAgent) ? NAVIGATOR.userAgent :     // navigator.userAgent
                                 (headers && headers[USER_AGENT] ? headers[USER_AGENT] :     // User-Agent from passed headers
+                                ((NAVIGATOR && NAVIGATOR.userAgent) ? NAVIGATOR.userAgent : // navigator.userAgent
                                     EMPTY)),                                                // empty string
 
             httpUACH = new UACHData(headers, true),
