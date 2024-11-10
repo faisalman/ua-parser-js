@@ -195,8 +195,8 @@ const ExtraDevices = Object.freeze({
 
 const Emails = Object.freeze({
     browser : [
-        // Microsoft Outlook / Thunderbird
-        [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
+        // Evolution / Kontact/KMail / [Microsoft/Mac] Outlook / Thunderbird
+        [/(evolution|kmail2?|kontact|(?:microsoft |mac)outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
