@@ -20,7 +20,7 @@ const EMAIL     = 'email';
 const FETCHER   = 'fetcher';
 const INAPP     = 'inapp';
 const MEDIAPLAYER = 'mediaplayer';
-const MODULE    = 'module';
+const LIBRARY    = 'library';
 
 //////////////////////
 // COMMAND LINE APPS
@@ -332,14 +332,14 @@ const MediaPlayers = Object.freeze({
     ]
 });
 
-////////////////////////
-// MODULES / LIBRARIES
-///////////////////////
+/////////////
+// LIBRARIES
+//////////////
 
-const Modules = Object.freeze({
+const Libraries = Object.freeze({
     browser : [
         // Axios/jsdom/Scrapy
-        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, MODULE]]
+        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
     ]
 });
 
@@ -352,7 +352,7 @@ const Bots = Object.freeze({
         ...CLIs.browser,
         ...Crawlers.browser,
         ...Fetchers.browser,
-        ...Modules.browser
+        ...Libraries.browser
     ]
 });
 
@@ -364,6 +364,6 @@ module.exports = {
     Emails,
     Fetchers,
     InApps,
-    MediaPlayers,
-    Modules
+    Libraries,
+    MediaPlayers
 };

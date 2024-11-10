@@ -15,7 +15,7 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
-        type?: 'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | 'module';
+        type?: 'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | 'library';
     }
 
     interface ICPU extends IData<ICPU> {

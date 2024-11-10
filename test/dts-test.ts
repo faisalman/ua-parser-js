@@ -28,7 +28,7 @@ expectType<IBrowser>(browser);
 expectType<string | undefined>(browser.name);
 expectType<string | undefined>(browser.version);
 expectType<string | undefined>(browser.major);
-expectType<'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | 'module' | undefined>(browser.type);
+expectType<'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | 'library' | undefined>(browser.type);
 expectType<boolean>(browser.is(''));
 expectType<string>(browser.toString());
 expectType<IBrowser | PromiseLike<IBrowser>>(browser.withClientHints());

@@ -11,5 +11,5 @@ export const ExtraDevices: UAParserExt;
 export const Emails: UAParserExt;
 export const Fetchers: UAParserExt;
 export const InApps: UAParserExt;
+export const Libraries: UAParserExt;
 export const MediaPlayers: UAParserExt;
-export const Modules: UAParserExt;

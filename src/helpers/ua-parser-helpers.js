@@ -37,7 +37,7 @@ const isAppleSilicon = (res, useFeatureDetection) => {
     return false;
 }
 
-const isBot = (res) => ['cli', 'crawler', 'fetcher', 'module'].includes(res.browser.type);
+const isBot = (res) => ['cli', 'crawler', 'fetcher', 'library'].includes(res.browser.type);
 
 const isChromeFamily = (res) => res.engine.is(Engine.BLINK);
 
