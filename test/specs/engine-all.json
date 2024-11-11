@@ -90,6 +90,15 @@
         }
     },
     {
+        "desc"    : "Servo",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Servo/1.0 Firefox/111.0",
+        "expect"  :
+        {
+            "name"    : "Servo",
+            "version" : "1.0"
+        }
+    },
+    {
         "desc"    : "Tasman",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; PPC Mac OS X 10.4.7; Tasman 1.0)",
         "expect"  :
