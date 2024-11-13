@@ -3,7 +3,7 @@
 // Source: /src/extensions/ua-parser-extensions.js
 
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.0-rc.2
+/*  Extensions for UAParser.js v2.0.0-rc.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -24,7 +24,7 @@ const EMAIL     = 'email';
 const FETCHER   = 'fetcher';
 const INAPP     = 'inapp';
 const MEDIAPLAYER = 'mediaplayer';
-const MODULE    = 'module';
+const LIBRARY    = 'library';
 
 //////////////////////
 // COMMAND LINE APPS
@@ -48,26 +48,36 @@ const Crawlers = Object.freeze({
             // Amazonbot - https://developer.amazon.com/amazonbot
             // Applebot - http://apple.com/go/applebot
             // Bingbot - http://www.bing.com/bingbot.htm
+            // CCBot - https://commoncrawl.org/faq
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
             // MJ12bot - https://mj12bot.com/
-            // OpenAI Search - https://platform.openai.com/docs/bots
+            // MojeekBot - https://www.mojeek.com/bot.html
+            // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
+            // PerplexityBot - https://perplexity.ai/perplexitybot
             // SemrushBot - http://www.semrush.com/bot.html
-            /((?:ahrefs|amazon|apple|bing|dot|duckduck|facebook|gpt|mj12|oai-search|semrush)bot)\/([\w\.]+)/i,
+            /((?:ahrefs|amazon|apple|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush)bot)\/([\w\.]+)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
             /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
 
-            // ClaudeBot
+            // ClaudeBot (Anthropic)
             /(claude(?:bot|-web))\/([\w\.]+)/i, 
 
             // Coc Coc Bot - https://help.coccoc.com/en/search-engine
             /(coccocbot-(?:image|web))\/([\w\.]+)/i, 
 
+            // Facebook / Meta 
+            // https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
+            /(facebook(?:externalhit|catalog)|meta-externalagent)\/([\w\.]+)/i,
+
             // Googlebot - http://www.google.com/bot.html
-            /(google(?:bot|other)(?:-image|-video|-news|-extended)?|(?:storebot-)?google(?:-inspectiontool)?)\/?([\w\.]*)/i, 
+            /(google(?:bot|other|-inspectiontool)(?:-image|-video|-news)?|storebot-google)\/?([\w\.]*)/i, 
+
+            // Internet Archive (archive.org)
+            /(ia_archiver|archive\.org_bot)\/?([\w\.]*)/i,
 
             // Sogou Spider
             /(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i, 
@@ -76,14 +86,29 @@ const Crawlers = Object.freeze({
             /(y!?j-(?:asr|br[uw]|dscv|mmp|vsidx|wsc))\/([\w\.]+)/i, 
 
             // Yandex Bots - https://yandex.com/bots
-            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i 
+            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i,
+
+            // Yeti (Naver)
+            /(yeti)\/([\w\.]+)/i,
+
+            // YisouSpider
+            /(yisouspider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
 
-        // Bytespider
-        // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-        [/((?:bytespider|(?=yahoo! )slurp))/i], 
+        [
+            // Google Bots
+            /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|safety))/i,
+
+            // Bytespider
+            // DataForSeoBot - https://dataforseo.com/dataforseo-bot
+            // Huawei AspiegelBot / PetalBot https://aspiegel.com/petalbot
+            // Qihoo 360Spider
+            // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
+            // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
+            /(360spider-?(?:image|video)?|bytespider|(?:aspiegel|dataforseo|petal|turnitin)bot|(?=yahoo! )slurp)/i
+        ], 
         [NAME, [TYPE, CRAWLER]]
     ]
 });
@@ -174,8 +199,8 @@ const ExtraDevices = Object.freeze({
 
 const Emails = Object.freeze({
     browser : [
-        // Microsoft Outlook / Thunderbird
-        [/(microsoft outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
+        // Evolution / Kontact/KMail / [Microsoft/Mac] Outlook / Thunderbird
+        [/(evolution|kmail2?|kontact|(?:microsoft |mac)outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
@@ -188,8 +213,15 @@ const Fetchers = Object.freeze({
         [
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
+            // DuckAssistBot - https://duckduckgo.com/duckassistbot/
             // BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / Telegrambot / Twitterbot / UptimeRobot
-            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot)\/([\w\.]+)/i,
+            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot)\/([\w\.]+)/i,
+
+            // Google Site Verifier
+            /(google-site-verification)\/([\w\.]+)/i,
+
+            // Meta
+            /(meta-externalfetcher)\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
             /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
@@ -207,7 +239,7 @@ const Fetchers = Object.freeze({
         [NAME, VERSION, [TYPE, FETCHER]],
 
         // Google Bots / Snapchat
-        [/(feedfetcher-google|google-read-aloud|(?=bot; )snapchat)/i], 
+        [/(feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
         [NAME, [TYPE, FETCHER]],
     ]
 });
@@ -256,8 +288,8 @@ const MediaPlayers = Object.freeze({
         /(flrp)\/([\w\.-]+)/i                                               // Flip Player
         ], [[NAME, 'Flip Player'], VERSION, [TYPE, MEDIAPLAYER]], [
 
-        /(fstream|nativehost|queryseekspider|ia-archiver|facebookexternalhit)/i
-                                                                            // FStream/NativeHost/QuerySeekSpider/IA Archiver/facebookexternalhit
+        /(fstream|nativehost|queryseekspider)/i
+                                                                            // FStream/NativeHost/QuerySeekSpider
         ], [NAME, [TYPE, MEDIAPLAYER]], [
 
         /(gstreamer) souphttpsrc.+libsoup\/([\w\.-]+)/i
@@ -336,14 +368,14 @@ const MediaPlayers = Object.freeze({
     ]
 });
 
-////////////////////////
-// MODULES / LIBRARIES
-///////////////////////
+/////////////
+// LIBRARIES
+//////////////
 
-const Modules = Object.freeze({
+const Libraries = Object.freeze({
     browser : [
         // Axios/jsdom/Scrapy
-        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, MODULE]]
+        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
     ]
 });
 
@@ -356,7 +388,7 @@ const Bots = Object.freeze({
         ...CLIs.browser,
         ...Crawlers.browser,
         ...Fetchers.browser,
-        ...Modules.browser
+        ...Libraries.browser
     ]
 });
 
@@ -368,6 +400,6 @@ export {
     Emails,
     Fetchers,
     InApps,
-    MediaPlayers,
-    Modules
+    Libraries,
+    MediaPlayers
 };

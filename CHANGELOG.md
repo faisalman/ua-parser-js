@@ -1,5 +1,6 @@
 # UAParser.js Changelog
 
+# Version 2.0 
 ## Migrating from v1 to v2
 
 - What's breaking:
@@ -8,28 +9,38 @@
   - OS detection: `"Mac OS" => "macOS"`, `"Chromium OS" => "Chrome OS"`
 - What's new:
   - New device type: `xr`, to identify AR/VR devices 
-  - New browser property: `browser.type`, to identify the type of the browser: `crawler`, `cli`, `email`, `fetcher`, `inapp`, `mediaplayer`, `module`
+  - New browser property: `browser.type`, to identify the type of the browser: `crawler`, `cli`, `email`, `fetcher`, `inapp`, `library`, `mediaplayer`
   - New methods in result object (all of `get*()` return value): 
-    - Support for client hints: `withClientHints()`
-    - Support for feature detection: `withFeatureCheck()`
+    - Enhance detection using client hints: `withClientHints()`
+    - Enhance detection using feature check: `withFeatureCheck()`
     - Utility for easy comparison: `is()`
     - Utility to print full-name: `toString()`
-  - Parse directly from command line using `npx ua-parser-js`
+  - Parse user-agent directly from command line using `npx ua-parser-js "[User-Agent]"`
   - Extensions can be passed as a list to `UAParser()`
   - Support for ES module & TypeScript `import { UAParser } from 'ua-parser-js'`
   - Provided Enums submodule `'ua-parser-js/enums'`
   - Provided Extensions submodule `'ua-parser-js/extensions'`
   - Provided Helpers submodule `'ua-parser-js/helpers'`:
-    - `getDeviceVendor()` to guess for a device vendor based on its model name
-    - `isAppleSilicon()` to check if the device has Apple Silicon Mac device properties
-    - `isBot()` to check if the browser is identified as a bot
-    - `isChromeFamily()` to check if the browser is Chrome-based / has Blink engine (i.e: New Opera, New Edge, Vivaldi, Brave, Arc, etc.)
-    - `isElectron()` to check if current window is running inside Electron
-    - `isFromEU()` to check if current window is from an EU (European Union) country
-    - `isFrozenUA()` to check if a user-agent string match with the reduced/frozen user-agent pattern
-    - `isStandalonePWA()` to check if current window is a standalone PWA
+    - `getDeviceVendor()`: guess for a device vendor based on its model name
+    - `isAppleSilicon()`: check if the device has Apple Silicon Mac device properties
+    - `isBot()`: check if the browser is identified as a bot
+    - `isChromeFamily()`: check if the browser is Chrome-based (has Blink engine, i.e: New Opera, New Edge, Vivaldi, Brave, Arc, etc.)
+    - `isElectron()`: check if current window is running inside Electron
+    - `isFromEU()`: check if current window is from an EU (European Union) country
+    - `isFrozenUA()`: check if a user-agent string match with the reduced/frozen user-agent pattern
+    - `isStandalonePWA()`: check if current window is a standalone PWA
 
---
+---
+
+## Version 2.0.0-rc.3
+
+- Add support for Headers object
+- Add new device: Advan, Cat, Energizer, Honor, IMO, Micromax, Smartfren
+- Add new engine: Servo
+- `ua-parser-js/extensions` submodule:
+    - Breaking change: rename `module` to `library`
+    - Add new email clients: Evolution, KMail, Kontact
+    - Add new bots: 360Spider, Archive.org Bots, CCBot, DataForSeoBot, DuckAssistBot, Exabot, Google Bots, Meta Bots, MojeekBot, PerplexityBot, PetalBot, TurnitinBot, Yeti, YisouSpider
 
 ## Version 2.0.0-rc.2
 
@@ -59,7 +70,7 @@
     - Rename `isChromiumBased()` to `isChromeFamily()`
     - Update `isAppleSilicon()` to also checks for WebGL renderer info
 - `ua-parser-js/extensions` submodule:
-    - Restore `bots` as a compilation of all these browser types: `clis`, `crawlers`, `fetchers`, and `modules`
+    - Restore `Bots` as a compilation of all these browser types: `cli`, `crawler`, `fetcher`, and `library`
 
 ## Version 2.0.0-beta.3
 

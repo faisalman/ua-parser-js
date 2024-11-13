@@ -44,15 +44,15 @@ see what's new & breaking.
     <tbody>
         <tr>
             <td>License options</td>
-            <td>MIT (v1.x)</td>
-            <td>AGPL (v2.x)</td>
+            <td>MIT (v0.7~v1.0)</td>
+            <td>AGPL (&gt;=v2.0)</td>
             <td>PRO Personal</td>
             <td>PRO Business</td>
             <td>PRO Enterprise</td>
         </tr>
         <tr>
             <td>Browser detection</td>
-            <td><strong title="Basic detection">⚠️</strong></td>
+            <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -60,7 +60,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>CPU detection</td>
-            <td><strong title="Basic detection">⚠️</strong></td>
+            <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -68,7 +68,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Device detection</td>
-            <td><strong title="Basic detection">⚠️</strong></td>
+            <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -76,7 +76,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Engine detection</td>
-            <td><strong title="Basic detection">⚠️</strong></td>
+            <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -84,15 +84,31 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>OS detection</td>
-            <td><strong title="Basic detection">⚠️</strong></td>
+            <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Enhanced detection</td>
-            <td>⛔️</td>
+            <td>Bot detection</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Extras (Apps, Libs, Emails, Media Players, etc)</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Enhanced detection result</td>
+            <td>❌</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -100,15 +116,7 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Client Hints support</td>
-            <td>⛔️</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>Extras (Apps, Bots, Libs, Emails, Media Players, etc)</td>
-            <td>⛔️</td>
+            <td>❌</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -124,14 +132,14 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>ES modules support</td>
-            <td>⛔️</td>
+            <td>❌</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>npm module available</td>
+            <td>npm module</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -139,25 +147,25 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>TypeScript declarations available</td>
-            <td><strong title="Community version">⚠️</strong></td>
+            <td>TypeScript declarations</td>
+            <td><a href="#demo" title="Community version">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Allowed for commercial use</td>
+            <td>Allows commercial use</td>
             <td>✅</td>
             <td>✅</td>
-            <td>⛔️</td>
+            <td>❌</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
             <td>Permissive (non-copyleft) license</td>
             <td>✅</td>
-            <td><strong title="Copyleft license">⛔️</strong></td>
+            <td><strong title="Copyleft license">❌</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -167,13 +175,13 @@ see what's new & breaking.
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
-            <td><strong title="1 project per 1 license">⛔️</strong></td>
+            <td><strong title="1 project per 1 license">❌</strong></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>1-year support</td>
-            <td>⛔️</td>
-            <td>⛔️</td>
+            <td>1-year product support</td>
+            <td>❌</td>
+            <td>❌</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -192,13 +200,13 @@ see what's new & breaking.
             <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$14 (one-time fee)">$14 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-personal/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$29 (one-time fee)">$29 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-business/LICENSE.md">License</a>)</strong></td>
-            <td><strong title="$588 (one-time fee)">$588 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="$599 (one-time fee)">$599 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
         </tr>
     </tbody>
     <tfoot>
         <tr>
             <th align="right" colspan="6">
-                <a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a>
+                <h3><a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a></h3>
             </th>
         </tr>
     </tfoot>
@@ -221,4 +229,4 @@ Made with [contributors-img](https://contrib.rocks).
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
 
-Support the open-source versions of UAParser.js on [OpenCollective](https://opencollective.com/ua-parser-js) or [GitHub Sponsors](https://github.com/sponsors/faisalman).
+Support the open-source editions of UAParser.js on [OpenCollective](https://opencollective.com/ua-parser-js) or [GitHub Sponsors](https://github.com/sponsors/faisalman).

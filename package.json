@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0-rc.3",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
   "keywords": [
@@ -211,9 +211,9 @@
     "test:playwright": "playwright test"
   },
   "dependencies": {
-    "detect-europe-js": "^0.1.1",
-    "is-standalone-pwa": "^0.1.0",
-    "ua-is-frozen": "^0.1.1"
+    "detect-europe-js": "^0.1.2",
+    "is-standalone-pwa": "^0.1.1",
+    "ua-is-frozen": "^0.1.2"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",

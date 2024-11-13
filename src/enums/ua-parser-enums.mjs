@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0-rc.2
+/*  Enums for UAParser.js v2.0.0-rc.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -59,6 +59,7 @@ const Browser = Object.freeze({
     GOOGLE_SEARCH: 'GSA',
     HELIO: 'Helio',
     HEYTAP: 'HeyTap',
+    HONOR: 'Honor',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
     ICE: 'ICE Browser',
@@ -162,7 +163,7 @@ const BrowserType = Object.freeze({
     FETCHER: 'fetcher',
     INAPP: 'inapp',
     MEDIAPLAYER: 'mediaplayer',
-    MODULE: 'module'
+    LIBRARY: 'library'
 });
 
 const CPU = Object.freeze({
@@ -198,6 +199,7 @@ const Device = Object.freeze({
 
 const Vendor = Object.freeze({
     ACER: 'Acer',
+    ADVAN: 'Advan',
     ALCATEL: 'Alcatel',
     APPLE: 'Apple',
     AMAZON: 'Amazon',
@@ -206,7 +208,9 @@ const Vendor = Object.freeze({
     ATT: 'AT&T',
     BENQ: 'BenQ',
     BLACKBERRY: 'BlackBerry',
+    CAT: 'Cat',
     DELL: 'Dell',
+    ENERGIZER: 'Energizer',
     ESSENTIAL: 'Essential',
     FACEBOOK: 'Facebook',
     FAIRPHONE: 'Fairphone',
@@ -216,6 +220,7 @@ const Vendor = Object.freeze({
     HP: 'HP',
     HTC: 'HTC',
     HUAWEI: 'Huawei',
+    IMO: 'IMO',
     INFINIX: 'Infinix',
     ITEL: 'itel',
     JOLLA: 'Jolla',
@@ -223,6 +228,7 @@ const Vendor = Object.freeze({
     LENOVO: 'Lenovo',
     LG: 'LG',
     MEIZU: 'Meizu',
+    MICROMAX: 'Micromax',
     MICROSOFT: 'Microsoft',
     MOTOROLA: 'Motorola',
     NEXIAN: 'Nexian',
@@ -244,6 +250,7 @@ const Vendor = Object.freeze({
     SAMSUNG: 'Samsung',
     SHARP: 'Sharp',
     SIEMENS: 'Siemens',
+    SMARTFREN: 'Smartfren',
     SONY: 'Sony',
     SPRINT: 'Sprint',
     TCL: 'TCL',
@@ -277,6 +284,7 @@ const Engine = Object.freeze({
     NETFRONT: 'NetFront',
     NETSURF: 'NetSurf',
     PRESTO: 'Presto',
+    SERVO: 'Servo',
     TASMAN: 'Tasman',
     TRIDENT: 'Trident',
     W3M: 'w3m',

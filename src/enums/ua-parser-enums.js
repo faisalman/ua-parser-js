@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0-rc.2
+/*  Enums for UAParser.js v2.0.0-rc.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */

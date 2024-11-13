@@ -3,7 +3,7 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.0-rc.2
+/* UAParser.js v2.0.0-rc.3
    Copyright © 2012-2024 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -21,7 +21,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.0-rc.2',
+    var LIBVERSION  = '2.0.0-rc.3',
         EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
@@ -74,6 +74,7 @@
         GOOGLE      = 'Google',
         HUAWEI      = 'Huawei',
         LENOVO      = 'Lenovo',
+        HONOR       = 'Honor',
         LG          = 'LG',
         MICROSOFT   = 'Microsoft',
         MOTOROLA    = 'Motorola',
@@ -529,10 +530,14 @@
             /\b(sh-?[altvz]?\d\d[a-ekm]?)/i
             ], [MODEL, [VENDOR, SHARP], [TYPE, MOBILE]], [
 
+            // Honor
+            /(?:honor)([-\w ]+)[;\)]/i
+            ], [MODEL, [VENDOR, HONOR], [TYPE, MOBILE]], [
+
             // Huawei
             /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
-            /(?:huawei|honor)([-\w ]+)[;\)]/i,
+            /(?:huawei)([-\w ]+)[;\)]/i,
             /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
@@ -597,7 +602,7 @@
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, MOBILE]], [
 
             // Sony
-            /droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
+            /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
             ], [MODEL, [VENDOR, SONY], [TYPE, MOBILE]], [
             /sony tablet [ps]/i,
             /\b(?:sony)?sgp\w+(?: bui|\))/i
@@ -663,13 +668,28 @@
             /; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i
             ], [MODEL, [VENDOR, 'Ulefone'], [TYPE, MOBILE]], [
 
+            // Energizer
+            /; (energy ?\w+)(?: bui|\))/i,
+            /; energizer ([\w ]+)(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Energizer'], [TYPE, MOBILE]], [
+
+            // Cat
+            /; cat (b35);/i,
+            /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Cat'], [TYPE, MOBILE]], [
+
+            // Smartfren
+            /((?:new )?andromax[\w- ]+)(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Smartfren'], [TYPE, MOBILE]], [
+
             // Nothing
             /droid.+; (a(?:015|06[35]|142p?))/i
             ], [MODEL, [VENDOR, 'Nothing'], [TYPE, MOBILE]], [
 
             // MIXED
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,
-                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
+                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax/Advan
+            /; (imo) ((?!tab)[\w ]+?)(?: bui|\))/i,                             // IMO
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(asus)-?(\w+)/i,                                                   // Asus
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
@@ -678,6 +698,7 @@
             /(oppo) ?([\w ]+) bui/i                                             // OPPO
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
+            /(imo) (tab \w+)/i,                                                 // IMO
             /(kobo)\s(ereader|touch)/i,                                         // Kobo
             /(archos) (gamepad2?)/i,                                            // Archos
             /(hp).+(touchpad(?!.+tablet)|tablet)/i,                             // HP TouchPad
@@ -811,7 +832,7 @@
             ], [VERSION, [NAME, 'Blink']], [
 
             /(presto)\/([\w\.]+)/i,                                             // Presto
-            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i, // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna
+            /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna/Servo
             /ekioh(flow)\/([\w\.]+)/i,                                          // Flow
             /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,                           // KHTML/Tasman/Links
             /(icab)[\/ ]([23]\.[\d\.]+)/i,                                      // iCab
@@ -1238,14 +1259,21 @@
             headers = extensions;                       // case UAParser(ua, headers)
             extensions = undefined;
         }
+
+        // Convert Headers object into a plain object
+        if (headers && typeof headers.append === FUNC_TYPE) {
+            var kv = {};
+            headers.forEach(function (v, k) { kv[k] = v; });
+            headers = kv;
+        }
         
         if (!(this instanceof UAParser)) {
             return new UAParser(ua, extensions, headers).getResult();
         }
 
         var userAgent = typeof ua === STR_TYPE ? ua :                                       // Passed user-agent string
-                            ((NAVIGATOR && NAVIGATOR.userAgent) ? NAVIGATOR.userAgent :     // navigator.userAgent
                                 (headers && headers[USER_AGENT] ? headers[USER_AGENT] :     // User-Agent from passed headers
+                                ((NAVIGATOR && NAVIGATOR.userAgent) ? NAVIGATOR.userAgent : // navigator.userAgent
                                     EMPTY)),                                                // empty string
 
             httpUACH = new UACHData(headers, true),

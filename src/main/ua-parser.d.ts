@@ -1,4 +1,4 @@
-// Type definitions for UAParser.js v2.0.0-rc.2
+// Type definitions for UAParser.js v2.0.0-rc.3
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
@@ -19,7 +19,7 @@ declare namespace UAParser {
     }
 
     interface ICPU extends IData<ICPU> {
-        architecture?: 'ia32' | 'ia64' | 'amd64' | 'arm' | 'arm64' | 'armhf' | 'avr' | 'irix' | 'irix64' | 'mips' | 'mips64' | '68k' | 'ppc' | 'sparc' | 'sparc64';
+        architecture?: 'ia32' | 'ia64' | 'amd64' | 'arm' | 'arm64' | 'armhf' | 'avr' | 'avr32' | 'irix' | 'irix64' | 'mips' | 'mips64' | '68k' | 'pa-risc' | 'ppc' | 'sparc' | 'sparc64';
     }
 
     interface IDevice extends IData<IDevice> {
@@ -29,7 +29,7 @@ declare namespace UAParser {
     }
 
     interface IEngine extends IData<IEngine> {
-        name?: 'Amaya' | 'Blink' | 'EdgeHTML' | 'Flow' | 'Gecko' | 'Goanna' | 'iCab' | 'KHTML' | 'LibWeb' | 'Links' | 'Lynx' | 'NetFront' | 'NetSurf' | 'Presto' | 'Tasman' | 'Trident' | 'w3m' | 'WebKit';
+        name?: 'Amaya' | 'ArkWeb' | 'Blink' | 'EdgeHTML' | 'Flow' | 'Gecko' | 'Goanna' | 'iCab' | 'KHTML' | 'LibWeb' | 'Links' | 'Lynx' | 'NetFront' | 'NetSurf' | 'Presto' | 'Servo' | 'Tasman' | 'Trident' | 'w3m' | 'WebKit';
         version?: string;
     }
 
