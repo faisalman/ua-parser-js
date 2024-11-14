@@ -7,7 +7,8 @@ const generateMJS = (module) => {
     let text = fs.readFileSync(src, 'utf-8');
 
     replacements.push(
-        [/const (.+?)\s*=\s*require\((.+)\)/ig, 'import $1 from $2'],
+        [/const (.+?)\s*=\s*require\(\'\.(.+)\'\)/ig, 'import $1 from \'\.$2.mjs\''],
+        [/const (.+?)\s*=\s*require\(\'(.+)\'\)/ig, 'import $1 from \'$2\''],
         [/module\.exports =/ig, 'export']
     );
     replacements.forEach(rep => {

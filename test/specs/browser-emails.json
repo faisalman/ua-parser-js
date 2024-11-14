@@ -1,5 +1,65 @@
 [
     {
+        "desc"    : "Evolution",
+        "ua"      : "Evolution/3.52.3",
+        "expect"  :
+        {
+            "name"    : "Evolution",
+            "version" : "3.52.3",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "KMail",
+        "ua"      : "KMail/4.14.10 (FreeBSD/12.0-CURRENT; KDE/4.14.10; amd64; ; )",
+        "expect"  :
+        {
+            "name"    : "KMail",
+            "version" : "4.14.10",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "KMail2",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/5.7.3 Safari/534.34",
+        "expect"  :
+        {
+            "name"    : "kmail2",
+            "version" : "5.7.3",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Kontact",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kontact/4.13.3 Safari/534.34",
+        "expect"  :
+        {
+            "name"    : "kontact",
+            "version" : "4.13.3",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Microsoft Outlook",
+        "ua"      : "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.5431; Pro)",
+        "expect"  :
+        {
+            "name"    : "Microsoft Outlook",
+            "version" : "16.0.5431",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Microsoft Outlook for Mac",
+        "ua"      : "MacOutlook/14.7.1.161129 (Intel Mac OS X 10.9.6)",
+        "expect"  :
+        {
+            "name"    : "MacOutlook",
+            "version" : "14.7.1.161129",
+            "type"    : "email"
+        }
+    },
+    {
         "desc"    : "Thunderbird",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0",
         "expect"  :
