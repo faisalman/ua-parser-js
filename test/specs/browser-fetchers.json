@@ -1,11 +1,121 @@
 [
     {
+        "desc"    : "AhrefsSiteAudit",
+        "ua"      : "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36 (compatible; AhrefsSiteAudit/6.1; +http://ahrefs.com/robot/site-audit)",
+        "expect"  :
+        {
+            "name"    : "AhrefsSiteAudit",
+            "version" : "6.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "BingPreview",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
         "expect"  :
         {
             "name"    : "BingPreview",
             "version" : "1.0b",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "ChatGPT-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+        "expect"  :
+        {
+            "name"    : "ChatGPT-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "DuckAssistBot",
+        "ua"      : "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)",
+        "expect"  :
+        {
+            "name"    : "DuckAssistBot",
+            "version" : "1.2",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google FeedFetcher",
+        "ua"      : "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
+        "expect"  :
+        {
+            "name"    : "FeedFetcher-Google",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Read Aloud - Mobile agent",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
+        "expect"  :
+        {
+            "name"    : "Google-Read-Aloud",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Read Aloud - Desktop agent",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
+        "expect"  :
+        {
+            "name"    : "Google-Read-Aloud",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Publisher Center",
+        "ua"      : "GoogleProducer; (+https://developers.google.com/search/docs/crawling-indexing/google-producer)",
+        "expect"  :
+        {
+            "name"    : "GoogleProducer",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Site Verifier",
+        "ua"      : "Mozilla/5.0 (compatible; Google-Site-Verification/1.0)",
+        "expect"  :
+        {
+            "name"    : "Google-Site-Verification",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Meta-ExternalFetcher",
+        "ua"      : "meta-externalfetcher/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-externalfetcher",
+            "version" : "1.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Rogerbot",
+        "ua"      : "Mozilla/5.0 (compatible; rogerBot/1.0; UrlCrawler; http://www.seomoz.org/dp/rogerbot)",
+        "expect"  :
+        {
+            "name"    : "rogerBot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "UptimeRobot",
+        "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
+        "expect"  :
+        {
+            "name"    : "UptimeRobot",
+            "version" : "2.0",
             "type"    : "fetcher"
         }
     }
