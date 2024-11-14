@@ -643,7 +643,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                 </div>
             <div class="ui tall stacked segment" id="showcase">
                 <div class="ui basic centered segment">
-                    <h2 class="ui dividing header">Case Studies<div class="sub header">Hover over the company logo to preview the project that uses UAParser.js</div>
+                    <h2 class="ui dividing header">Case Studies<div class="sub header">Hover over the company logo to see projects that use UAParser.js</div>
                     </h2>
                 </div>
                 <div class="ui basic centered segment">
@@ -1337,7 +1337,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
         </div>
         <div class="ui tall stacked segment" id="download">
             <div class="ui basic centered segment">
-                <h2 class="ui dividing header">Package Options<div class="sub header">Comparison between our regular open-source & PRO licenses</div>
+                <h2 class="ui dividing header">Package Options<div class="sub header">Comparison between our open-source & commercial editions</div>
                 </h2>
                 <table class="ui center aligned collapsing celled unstackable table">
                     <thead>
@@ -1350,8 +1350,8 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     <tbody>
                         <tr>
                             <td class="left aligned">License</td>
-                            <td>MIT</td>
-                            <td>AGPL</td>
+                            <td>MIT (v1.0)</td>
+                            <td>AGPL (>=v2.0)</td>
                             <td>PRO Personal</td>
                             <td>PRO Business</td>
                             <td>PRO Enterprise</td>
@@ -1397,7 +1397,23 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">Enhanced detection</td>
+                            <td class="left aligned">Bot detection</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Extras (Apps, Libs, Emails, Media Players, etc)</td>
+                            <td class="negative"><i class="large red minus circle icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                            <td class="positive"><i class="large green checkmark icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left aligned">Enhanced detection result</td>
                             <td class="negative"><i class="large red minus circle icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
@@ -1406,14 +1422,6 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                         </tr>
                         <tr>
                             <td class="left aligned">Client Hints support</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Extras (Apps, Bots, Libs, Emails, Media Players, etc)</td>
                             <td class="negative"><i class="large red minus circle icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
@@ -1437,7 +1445,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">TypeScript declarations available</td>
+                            <td class="left aligned">TypeScript declarations</td>
                             <td class="warning" data-tooltip="Community version" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
@@ -1445,7 +1453,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">Public npm module available</td>
+                            <td class="left aligned">npm module</td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
@@ -1461,7 +1469,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">Allowed for commercial use</td>
+                            <td class="left aligned">Allows commercial use</td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="negative" data-tooltip="Non-commercial use only (personal/educational/non-profit/etc)" data-inverted=""><i class="large red minus circle icon"></i></td>
@@ -1469,7 +1477,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">Permissive license</td>
+                            <td class="left aligned">Permissive (non-copyleft) license</td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="negative" data-tooltip="Copyleft license" data-inverted=""><i class="large red minus circle icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
@@ -1485,7 +1493,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">1-year limited support</td>
+                            <td class="left aligned">1-year product support</td>
                             <td class="negative" data-tooltip="GitHub issue"><i class="large red minus circle icon"></i></td>
                             <td class="negative" data-tooltip="GitHub issue"><i class="large red minus circle icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
@@ -1506,7 +1514,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
                             <td data-tooltip="$14 (one-time fee)" data-inverted="">$14</td>
                             <td data-tooltip="$29 (one-time fee)" data-inverted="">$29</td>
-                            <td data-tooltip="$588 (one-time fee)" data-inverted="">$588</td>
+                            <td data-tooltip="$599 (one-time fee)" data-inverted="">$599</td>
                         </tr>
                     </tbody>
                     <tfoot>
@@ -1518,6 +1526,10 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     </tfoot>
                 </table>
             </div>
+        </div>
+        <div class="ui buttons">
+            <a href="#demo" class="ui blue button"><i class="magic icon"></i>Try Demo</a>
+            <a href="https://docs.uaparser.dev" class="ui green button"><i class="book icon"></i>Read Docs</a>
         </div>
         <div class="ui hidden divider">
         </div>
