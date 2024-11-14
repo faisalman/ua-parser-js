@@ -2,7 +2,7 @@
 /*  Helpers for UAParser.js v2.0.0-rc.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
-    UAParser.js PRO Personal License */
+    UAParser.js PRO Enterprise License */
 //////////////////////////////////////////////
 
 /*jshint esversion: 6 */ 
