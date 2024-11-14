@@ -1,5 +1,14 @@
 [
     {
+        "desc"    : "ArkWeb",
+        "ua"      : "Mozilla/5.0 (Phone; OpenHarmony 4.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 ArkWeb/4.1.6.1 Mobile",
+        "expect"  :
+        {
+            "name"    : "ArkWeb",
+            "version" : "4.1.6.1"
+        }
+    },
+    {
         "desc"    : "Blink",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G920I Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/3.4.9 SamsungBrowser/4.0 Chrome/57.0.2987.146 Mobile VR Safari/537.36",
         "expect"  :
@@ -78,6 +87,15 @@
         {
             "name"    : "Presto",
             "version" : "2.8.149"
+        }
+    },
+    {
+        "desc"    : "Servo",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Servo/1.0 Firefox/111.0",
+        "expect"  :
+        {
+            "name"    : "Servo",
+            "version" : "1.0"
         }
     },
     {

@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0-beta.3
+/*  Enums for UAParser.js v2.0.0-rc.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Personal License */
@@ -12,8 +12,9 @@
 /*jshint esversion: 6 */ 
 
 const Browser = Object.freeze({
-    _2345_EXPLORER: '2345Explorer',
-    _360: '360 Browser',
+    '115': '115',
+    '2345': '2345',
+    '360': '360',
     ALIPAY: 'Alipay',
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
@@ -36,11 +37,11 @@ const Browser = Object.freeze({
     CHROMIUM: 'Chromium',
     COBALT: 'Cobalt',
     COC_COC: 'Coc Coc',
-    COMODO_DRAGON: 'Comodo Dragon',
     CONKEROR: 'Conkeror',
     DILLO: 'Dillo',
     DOLPHIN: 'Dolphin',
     DORIS: 'Doris',
+    DRAGON: 'Dragon',
     DUCKDUCKGO: 'DuckDuckGo',
     EDGE: 'Edge',
     EPIPHANY: 'Epiphany',
@@ -56,7 +57,9 @@ const Browser = Object.freeze({
     FLOW: 'Flow',
     GO: 'GoBrowser',
     GOOGLE_SEARCH: 'GSA',
+    HELIO: 'Helio',
     HEYTAP: 'HeyTap',
+    HONOR: 'Honor',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
     ICE: 'ICE Browser',
@@ -77,6 +80,7 @@ const Browser = Object.freeze({
     KLARNA: 'Klarna',
     KINDLE: 'Kindle',
     LENOVO: 'Smart Lenovo Browser',
+    LIBREWOLF: 'LibreWolf',
     LIEBAO: 'LBBROWSER',
     LINE: 'Line',
     LINKEDIN: 'LinkedIn',
@@ -125,7 +129,9 @@ const Browser = Object.freeze({
     SILK: 'Silk',
     SKYFIRE: 'Skyfire',
     SLEIPNIR: 'Sleipnir',
+    SLIMBOAT: 'SlimBoat',
     SLIMBROWSER: 'SlimBrowser',
+    SLIMJET: 'Slimjet',
     SNAPCHAT: 'Snapchat',
     SOGOU_EXPLORER: 'Sogou Explorer',
     SOGOU_MOBILE: 'Sogou Mobile',
@@ -156,10 +162,12 @@ const BrowserType = Object.freeze({
     EMAIL: 'email',
     FETCHER: 'fetcher',
     INAPP: 'inapp',
-    MODULE: 'module'
+    MEDIAPLAYER: 'mediaplayer',
+    LIBRARY: 'library'
 });
 
 const CPU = Object.freeze({
+    '68K': '68k',
     ARM : 'arm',
     ARM_64: 'arm64',
     ARM_HF: 'armhf',
@@ -170,7 +178,6 @@ const CPU = Object.freeze({
     IRIX_64: 'irix64',
     MIPS: 'mips',
     MIPS_64: 'mips64',
-    M68K: '68k',
     PA_RISC: 'pa-risc',
     PPC: 'ppc',
     SPARC: 'sparc',
@@ -192,6 +199,7 @@ const Device = Object.freeze({
 
 const Vendor = Object.freeze({
     ACER: 'Acer',
+    ADVAN: 'Advan',
     ALCATEL: 'Alcatel',
     APPLE: 'Apple',
     AMAZON: 'Amazon',
@@ -200,7 +208,9 @@ const Vendor = Object.freeze({
     ATT: 'AT&T',
     BENQ: 'BenQ',
     BLACKBERRY: 'BlackBerry',
+    CAT: 'Cat',
     DELL: 'Dell',
+    ENERGIZER: 'Energizer',
     ESSENTIAL: 'Essential',
     FACEBOOK: 'Facebook',
     FAIRPHONE: 'Fairphone',
@@ -210,17 +220,21 @@ const Vendor = Object.freeze({
     HP: 'HP',
     HTC: 'HTC',
     HUAWEI: 'Huawei',
+    IMO: 'IMO',
     INFINIX: 'Infinix',
+    ITEL: 'itel',
     JOLLA: 'Jolla',
     KOBO: 'Kobo',
     LENOVO: 'Lenovo',
     LG: 'LG',
     MEIZU: 'Meizu',
+    MICROMAX: 'Micromax',
     MICROSOFT: 'Microsoft',
     MOTOROLA: 'Motorola',
     NEXIAN: 'Nexian',
     NINTENDO: 'Nintendo',
     NOKIA: 'Nokia',
+    NOTHING: 'Nothing',
     NVIDIA: 'Nvidia',
     ONEPLUS: 'OnePlus',
     OPPO: 'OPPO',
@@ -228,6 +242,7 @@ const Vendor = Object.freeze({
     PALM: 'Palm',
     PANASONIC: 'Panasonic',
     PEBBLE: 'Pebble',
+    PICO: 'Pico',
     POLYTRON: 'Polytron',
     REALME: 'Realme',
     RIM: 'RIM',
@@ -235,8 +250,10 @@ const Vendor = Object.freeze({
     SAMSUNG: 'Samsung',
     SHARP: 'Sharp',
     SIEMENS: 'Siemens',
+    SMARTFREN: 'Smartfren',
     SONY: 'Sony',
     SPRINT: 'Sprint',
+    TCL: 'TCL',
     TECHNISAT: 'TechniSAT',
     TECNO: 'Tecno',
     TESLA: 'Tesla',
@@ -253,6 +270,7 @@ const Vendor = Object.freeze({
 
 const Engine = Object.freeze({
     AMAYA: 'Amaya',
+    ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
     EDGEHTML: 'EdgeHTML',
     FLOW: 'Flow',
@@ -266,6 +284,7 @@ const Engine = Object.freeze({
     NETFRONT: 'NetFront',
     NETSURF: 'NetSurf',
     PRESTO: 'Presto',
+    SERVO: 'Servo',
     TASMAN: 'Tasman',
     TRIDENT: 'Trident',
     W3M: 'w3m',
@@ -284,6 +303,10 @@ const OS = Object.freeze({
     CENTOS: 'CentOS',
     CHROME_OS: 'Chrome OS',
     CHROMECAST: 'Chromecast',
+    CHROMECAST_ANDROID: 'Chromecast Android',
+    CHROMECAST_FUCHSIA: 'Chromecast Fuchsia',
+    CHROMECAST_LINUX: 'Chromecast Linux',
+    CHROMECAST_SMARTSPEAKER: 'Chromecast SmartSpeaker',
     CONTIKI: 'Contiki',
     DEBIAN: 'Debian',
     DEEPIN: 'Deepin',
@@ -319,12 +342,14 @@ const OS = Object.freeze({
     NETRANGE: 'NetRange',
     NETTV: 'NetTV',
     NINTENDO: 'Nintendo',
+    OPENHARMONY: 'OpenHarmony',
     OPENBSD: 'OpenBSD',
     OPENVMS: 'OpenVMS',
     OS2: 'OS/2',
     PALM: 'Palm',
     PC_BSD: 'PC-BSD',
     PCLINUXOS: 'PCLinuxOS',
+    PICO: 'Pico',
     PLAN9: 'Plan9',
     PLAYSTATION: 'PlayStation',
     QNX: 'QNX',
@@ -344,7 +369,6 @@ const OS = Object.freeze({
     UBUNTU: 'Ubuntu',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
-    VIERA: 'Viera',
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',

@@ -17,7 +17,7 @@ var methods     = [
         title       : 'getBrowser',
         label       : 'browser',
         list        : browsers,
-        properties  : ['name', 'major', 'version']
+        properties  : ['name', 'major', 'version', 'type']
     },
     {
         title       : 'getCPU',

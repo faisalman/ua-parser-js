@@ -414,11 +414,38 @@
         }
     },
     {
-        "desc"    : "Google Chromecast",
+        "desc"    : "Google Chromecast with Google TV",
+        "ua"      : "Mozilla/5.0 (Linux; Android 12.0; Build/STTL.240206.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.0 Safari/537.36 CrKey/1.56.500000 DeviceType/AndroidTV",
+        "expect"  :
+        {
+            "name"    : "Chromecast Android",
+            "version" : "12.0"
+        }
+    },
+    {
+        "desc"    : "Google Chromecast Nest Hub",
+        "ua"      : "Mozilla/5.0 (Fuchsia) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 CrKey/1.56.500000",
+        "expect"  :
+        {
+            "name"    : "Chromecast Fuchsia",
+            "version" : "1.56.500000"
+        }
+    },
+    {
+        "desc"    : "Google Chromecast Mini Smart Speaker",
+        "ua"      : "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.225 Safari/537.36 CrKey/1.56.500000 DeviceType/SmartSpeaker",
+        "expect"  :
+        {
+            "name"    : "Chromecast SmartSpeaker",
+            "version" : "1.56.500000"
+        }
+    },
+    {
+        "desc"    : "Google Chromecast Legacy Linux-Based",
         "ua"      : "Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.81 Safari/537.36 CrKey/1.42.183786",
         "expect"  :
         {
-            "name"    : "Chromecast",
+            "name"    : "Chromecast Linux",
             "version" : "1.42.183786"
         }
     },
@@ -438,6 +465,39 @@
         {
             "name"    : "PlayStation",
             "version" : "4"
+        }
+    },
+    {
+        "desc"    : "PlayStation 5",
+        "ua"      : "Mozilla/5.0 (PlayStation 5/SmartTV) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+        "expect"  :
+        {
+            "name"    : "PlayStation",
+            "version" : "5"
+        }
+    },
+    {
+        "desc": "Pico 4",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; PICO 4 OS5.8.2 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.38 Chrome/105.0.5195.68 VR Safari/537.36",
+        "expect": {
+            "name"    : "PICO",
+            "version" : "5.8.2"
+        }
+    },
+    {
+        "desc": "Pico 4",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; PICO 4 OS5.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36 OculusBrowser/7.0",
+        "expect": {
+            "name"    : "PICO",
+            "version" : "5.4.0"
+        }
+    },
+    {
+        "desc": "Pico Neo3 Link",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; Pico Neo3 Link OS5.8.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36",
+        "expect": {
+            "name"    : "Pico",
+            "version" : "5.8.4.0"
         }
     },
     {
@@ -474,6 +534,15 @@
         {
             "name"    : "Xbox",
             "version" : "Series X"
+        }
+    },
+    {
+        "desc"    : "Xbox Series S",
+        "ua"      : "Mozilla/5.0 (Compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Xbox; Xbox Series S)",
+        "expect"  :
+        {
+            "name"    : "Xbox",
+            "version" : "Series S"
         }
     },
     {
@@ -1239,6 +1308,15 @@
         {
             "name"    : "SerenityOS",
             "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "OpenHarmony",
+        "ua"      : "Mozilla/5.0 (Phone; OpenHarmony 4.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 ArkWeb/4.1.6.1 Mobile",
+        "expect"  :
+        {
+            "name"    : "OpenHarmony",
+            "version" : "4.1"
         }
     }
 ]

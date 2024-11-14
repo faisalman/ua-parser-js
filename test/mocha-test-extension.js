@@ -8,8 +8,8 @@ const clis = require('./specs/browser-clis.json');
 const crawlers = require('./specs/browser-crawlers.json');
 const emails = require('./specs/browser-emails.json');
 const fetchers = require('./specs/browser-fetchers.json');
-const modules = require('./specs/browser-modules.json');
-const { CLIs, Crawlers, Emails, Fetchers, Modules } = require('../src/extensions/ua-parser-extensions');
+const libraries = require('./specs/browser-libraries.json');
+const { Bots, CLIs, Crawlers, Emails, Fetchers, Libraries } = require('../src/extensions/ua-parser-extensions');
 
 describe('Extensions', () => {
     [   
@@ -17,7 +17,7 @@ describe('Extensions', () => {
         ['Crawlers', crawlers, Crawlers], 
         ['Emails', emails, Emails], 
         ['Fetchers', fetchers, Fetchers],
-        ['Modules', modules, Modules]
+        ['Libraries', libraries, Libraries]
     ]
     .forEach((list) => {
         describe(list[0], () => {
@@ -38,14 +38,16 @@ describe('Extensions', () => {
     const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
     const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
 
+    assert.equal(UAParser(scrapy, Bots).browser.name, 'Scrapy');
+
     const emailParser = new UAParser(Emails);
     assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
     assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: "Thunderbird", version: "78.13.0", major: "78", type: "email"});
 
-    const moduleParser = new UAParser(Modules);
-    assert.deepEqual(moduleParser.setUA(axios).getBrowser(), {name: "axios", version: "1.3.5", major: "1", type: "module"});
-    assert.deepEqual(moduleParser.setUA(jsdom).getBrowser(), {name: "jsdom", version: "20.0.3", major: "20", type: "module"});
-    assert.deepEqual(moduleParser.setUA(scrapy).getBrowser(), {name: "Scrapy", version: "1.5.0", major: "1", type: "module"});
+    const libraryParser = new UAParser(Libraries);
+    assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: "axios", version: "1.3.5", major: "1", type: "library"});
+    assert.deepEqual(libraryParser.setUA(jsdom).getBrowser(), {name: "jsdom", version: "20.0.3", major: "20", type: "library"});
+    assert.deepEqual(libraryParser.setUA(scrapy).getBrowser(), {name: "Scrapy", version: "1.5.0", major: "1", type: "library"});
 });
 
 describe('Merge', () => {
@@ -67,7 +69,7 @@ describe('Merge', () => {
     });
 });
 
-describe('Testing regexes', () => {
+describe('Testing the safety of regexes', () => {
 
     let regexes;
     let code = fs.readFileSync('src/extensions/ua-parser-extensions.js', 'utf8').toString();
