@@ -1,5 +1,55 @@
 [
     {
+        "desc"    : "Axios",
+        "ua"      : "axios/1.7.2",
+        "expect"  :
+        {
+            "name"    : "axios",
+            "version" : "1.7.2",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Java",
+        "ua"      : "Java/1.6.0_14",
+        "expect"  :
+        {
+            "name"    : "Java",
+            "version" : "1.6.0_14",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "jsdom",
+        "ua"      : "Mozilla/5.0 (unknown OS) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.12.0",
+        "expect"  :
+        {
+            "name"    : "jsdom",
+            "version" : "11.12.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Python urllib",
+        "ua"      : "Python-urllib/2.6",
+        "expect"  :
+        {
+            "name"    : "Python-urllib",
+            "version" : "2.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Python requests",
+        "ua"      : "python-requests/2.32",
+        "expect"  :
+        {
+            "name"    : "python-requests",
+            "version" : "2.32",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Scrapy",
         "ua"      : "Scrapy/1.5.0 (+https://scrapy.org)",
         "expect"  :

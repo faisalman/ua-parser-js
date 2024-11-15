@@ -293,8 +293,6 @@ const MediaPlayers = Object.freeze({
         ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(htc streaming player)\s[\w_]+\s\/\s([\d\.]+)/i,                   // HTC Streaming Player
-        /(java|python-urllib|python-requests|wget|libcurl)\/([\w\.-_]+)/i,
-                                                                            // Java/urllib/requests/wget/cURL
         /(lavf)([\d\.]+)/i                                                  // Lavf (FFMPEG)
         ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
@@ -370,8 +368,8 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Axios/jsdom/Scrapy
-        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
+        // Axios/jsdom/Scrapy/Java/urllib/requests
+        [/\b(axios|jsdom|scrapy|java|python-urllib|python-requests)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
     ]
 });
 
