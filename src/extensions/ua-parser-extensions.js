@@ -42,7 +42,6 @@ const Crawlers = Object.freeze({
         [
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
-            // Applebot - http://apple.com/go/applebot
             // Bingbot - http://www.bing.com/bingbot.htm
             // CCBot - https://commoncrawl.org/faq
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
@@ -54,7 +53,10 @@ const Crawlers = Object.freeze({
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SemrushBot - http://www.semrush.com/bot.html
-            /((?:ahrefs|amazon|apple|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush)bot)\/([\w\.]+)/i,
+            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush)bot)\/([\w\.]+)/i,
+
+            // Applebot - http://apple.com/go/applebot
+            /(applebot(?:-extended)?)\/([\w\.]+)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
             /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
@@ -195,8 +197,10 @@ const ExtraDevices = Object.freeze({
 
 const Emails = Object.freeze({
     browser : [
+        [
         // Evolution / Kontact/KMail / [Microsoft/Mac] Outlook / Thunderbird
-        [/(evolution|kmail2?|kontact|(?:microsoft |mac)outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
+        /(airmail|bluemail|emclient|evolution|foxmail|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|thunderbird|yahoo)(?:m.+ail; |[\/ ])([\w\.]+)/i
+        ], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
