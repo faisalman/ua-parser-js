@@ -15,12 +15,12 @@ const { isStandalonePWA } = require('is-standalone-pwa');
 
 const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${model}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36`).device.vendor;
 
-const isAppleSilicon = (res, useFeatureDetection) => {
+const isAppleSilicon = (res) => {
     if (res.os.is(OS.MACOS)) {
         if (res.cpu.is(CPU.ARM)) {
             return true;
         }
-        if (useFeatureDetection) {
+        if (typeof window !== 'undefined') {
             try {
                 const canvas = document.createElement('canvas');
                 const webgl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
