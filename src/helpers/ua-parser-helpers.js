@@ -41,6 +41,77 @@ const isAppleSilicon = (resultOrUA) => {
     return false;
 }
 
+const isAIBot = (resultOrUA) => [
+
+    // AI2
+    'ai2bot',
+
+    // Amazon
+    'amazonbot',
+
+    // Anthropic
+    'anthropic-ai',
+    'claude-web',
+    'claudebot',
+
+    // Apple
+    'applebot',
+    'applebot-extended',
+
+    // ByteDance
+    'bytespider',
+
+    // Common Crawl
+    'ccbot',
+
+    // DataForSeo
+    'dataforseobot',
+
+    // Diffbot
+    'diffbot',
+
+    // Google
+    'googleother',
+    'googleother-image',
+    'googleother-video',
+    'google-extended',
+
+    // Hive AI
+    'imagesiftbot',
+
+    // Huawei
+    'petalbot',
+
+    // Meta
+    'facebookbot',
+    'meta-externalagent',
+
+    // OpenAI
+    'gptbot',
+    'oai-searchbot',
+
+    // Perplexity
+    'perplexitybot',
+
+    // Timpi
+    'timpibot',
+
+    // Velen.io
+    'velenpublicwebcrawler',
+
+    // Webz.io
+    'omgili',
+    'omgilibot',
+    'webzio-extended',
+
+    // You.com
+    'youbot',
+
+    // Zyte
+    'scrapy'
+
+    ].includes(String(toResult(resultOrUA, Bots).browser.name).toLowerCase());
+
 const isBot = (resultOrUA) => [
     'cli', 
     'crawler', 
@@ -56,6 +127,7 @@ const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    
 module.exports = { 
     getDeviceVendor,
     isAppleSilicon,
+    isAIBot,
     isBot,
     isChromeFamily,
     isElectron,

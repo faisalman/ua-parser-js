@@ -99,7 +99,15 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Extras (Apps, Libs, Emails, Media Players, etc)</td>
+            <td>AI Bot detection</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Extras (Apps, Libs, Emails, Media Players, etc) detection</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>

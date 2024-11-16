@@ -90,8 +90,8 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Cohere-AI / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
-            /((?:aihit|diff|timpi|you)bot|cohere-ai|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
+            // aiHitBot / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
+            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
@@ -241,8 +241,8 @@ const Fetchers = Object.freeze({
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
-        // Google Bots / Snapchat / Vercelbot
-        [/(vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
+        // Google Bots / Cohere / Snapchat / Vercelbot
+        [/(cohere-ai|vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
         [NAME, [TYPE, FETCHER]],
     ]
 });
