@@ -9,18 +9,22 @@
 
 const { UAParser } = require('../main/ua-parser');
 const { CPU, OS, Engine } = require('../enums/ua-parser-enums');
+const { Bots } = require('../extensions/ua-parser-extensions');
 const { isFromEU } = require('detect-europe-js');
 const { isFrozenUA } = require('ua-is-frozen');
 const { isStandalonePWA } = require('is-standalone-pwa');
 
+const toResult = (value, head, ext) => typeof value === 'string' ? UAParser(value, head, ext) : value;
+
 const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${model}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36`).device.vendor;
 
-const isAppleSilicon = (res) => {
+const isAppleSilicon = (resultOrUA) => {
+    const res = toResult(resultOrUA);
     if (res.os.is(OS.MACOS)) {
         if (res.cpu.is(CPU.ARM)) {
             return true;
         }
-        if (typeof window !== 'undefined') {
+        if (typeof resultOrUA !== 'string' && typeof window !== 'undefined') {
             try {
                 const canvas = document.createElement('canvas');
                 const webgl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -37,9 +41,14 @@ const isAppleSilicon = (res) => {
     return false;
 }
 
-const isBot = (res) => ['cli', 'crawler', 'fetcher', 'library'].includes(res.browser.type);
+const isBot = (resultOrUA) => [
+    'cli', 
+    'crawler', 
+    'fetcher', 
+    'library'
+    ].includes(toResult(resultOrUA, Bots).browser.type);
 
-const isChromeFamily = (res) => res.engine.is(Engine.BLINK);
+const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(Engine.BLINK);
 
 const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
                             / electron\//i.test(navigator?.userAgent));         // browser

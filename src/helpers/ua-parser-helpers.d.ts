@@ -5,9 +5,9 @@
 import { IResult } from "../main/ua-parser";
 
 declare function getDeviceVendor(model: string): string | undefined;
-declare function isAppleSilicon(res: IResult, useFeatureDetection?: boolean): boolean;
-declare function isBot(res: IResult): boolean;
-declare function isChromeFamily(res: IResult): boolean;
+declare function isAppleSilicon(resultOrUA: IResult | string): boolean;
+declare function isBot(resultOrUA: IResult | string): boolean;
+declare function isChromeFamily(resultOrUA: IResult | string): boolean;
 declare function isElectron(): boolean;
 declare function isFromEU(): boolean;
 declare function isFrozenUA(ua: string): boolean;
