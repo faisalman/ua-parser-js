@@ -50,6 +50,26 @@
         }
     },
     {
+        "desc"    : "AI2Bot",
+        "ua"      : "Mozilla/5.0 (compatible) AI2Bot (+https://www.allenai.org/crawler)",
+        "expect"  :
+        {
+            "name"    : "AI2Bot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "aiHitBot",
+        "ua"      : "Mozilla/5.0 (compatible; aiHitBot/2.9; +https://www.aihitdata.com/about)",
+        "expect"  :
+        {
+            "name"    : "aiHitBot",
+            "version" : "2.9",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Applebot",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1;+http://www.apple.com/go/applebot)",
         "expect"  :
@@ -131,11 +151,21 @@
     },
     {
         "desc"    : "DataForSEO",
-        "ua"      : "Mozilla/5.0 (compatible; DataForSeoBot; +https://dataforseo.com/dataforseo-bot) ",
+        "ua"      : "Mozilla/5.0 (compatible; DataForSeoBot; +https://dataforseo.com/dataforseo-bot)",
         "expect"  :
         {
             "name"    : "DataForSeoBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Diffbot",
+        "ua"      : "Diffbot/0.1",
+        "expect"  :
+        {
+            "name"    : "Diffbot",
+            "version" : "0.1",
             "type"    : "crawler"
         }
     },
@@ -330,6 +360,26 @@
         }
     },
     {
+        "desc"    : "ImagesiftBot",
+        "ua"      : "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)",
+        "expect"  :
+        {
+            "name"    : "ImagesiftBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "magpie-crawler",
+        "ua"      : "magpie-crawler/1.1 (robots-txt-checker; +http://www.brandwatch.net)",
+        "expect"  :
+        {
+            "name"    : "magpie-crawler",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Meta-ExternalAgent",
         "ua"      : "meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
         "expect"  :
@@ -357,6 +407,26 @@
         {
             "name"    : "MojeekBot",
             "version" : "0.11",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Omgili",
+        "ua"      : "omgili/0.5 +https://omgili.com",
+        "expect"  :
+        {
+            "name"    : "omgili",
+            "version" : "0.5",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Omgilibot",
+        "ua"      : "omgilibot/0.3 +http://www.omgili.com/Crawler.html",
+        "expect"  :
+        {
+            "name"    : "omgilibot",
+            "version" : "0.3",
             "type"    : "crawler"
         }
     },
@@ -411,12 +481,52 @@
         }
     },
     {
+        "desc"    : "SeznamBot",
+        "ua"      : "Mozilla/5.0 (compatible; SeznamBot/4.0-RC1; +http://napoveda.seznam.cz/seznambot-intro/)",
+        "expect"  :
+        {
+            "name"    : "SeznamBot",
+            "version" : "4.0-RC1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Teoma",
+        "ua"      : "Mozilla/2.0 (compatible; Ask Jeeves/Teoma; +http://sp.ask.com/docs/about/tech_crawling.html)",
+        "expect"  :
+        {
+            "name"    : "Teoma",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Timpibot",
+        "ua"      : "Timpibot/0.8 (+http://www.timpi.io)",
+        "expect"  :
+        {
+            "name"    : "Timpibot",
+            "version" : "0.8",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "TurnitinBot",
         "ua"      : "TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)",
         "expect"  :
         {
             "name"    : "TurnitinBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "VelenPublicWebCrawler",
+        "ua"      : "Mozilla/5.0 (compatible; VelenPublicWebCrawler/1.0; +https://velen.io)",
+        "expect"  :
+        {
+            "name"    : "VelenPublicWebCrawler",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -466,6 +576,16 @@
         "expect"  :
         {
             "name"    : "YisouSpider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YouBot",
+        "ua"      : "YouBot (+http://www.you.com)",
+        "expect"  :
+        {
+            "name"    : "YouBot",
             "version" : "undefined",
             "type"    : "crawler"
         }

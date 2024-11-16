@@ -53,7 +53,8 @@ const Crawlers = Object.freeze({
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SemrushBot - http://www.semrush.com/bot.html
-            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush)bot)\/([\w\.]+)/i,
+            // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
+            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
             /(applebot(?:-extended)?)\/([\w\.]+)/i,
@@ -62,7 +63,7 @@ const Crawlers = Object.freeze({
             /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
 
             // ClaudeBot (Anthropic)
-            /(claude(?:bot|-web))\/([\w\.]+)/i, 
+            /(claude(?:bot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
 
             // Coc Coc Bot - https://help.coccoc.com/en/search-engine
             /(coccocbot-(?:image|web))\/([\w\.]+)/i, 
@@ -89,8 +90,8 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // YisouSpider
-            /(yisouspider)\/?([\w\.]*)/i
+            // aiHitBot / Cohere-AI / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
+            /((?:aihit|diff|timpi|you)bot|cohere-ai|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
@@ -99,13 +100,15 @@ const Crawlers = Object.freeze({
             // Google Bots
             /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|safety))/i,
 
+            // AI2Bot - https://allenai.org/crawler
             // Bytespider
             // DataForSeoBot - https://dataforseo.com/dataforseo-bot
             // Huawei AspiegelBot / PetalBot https://aspiegel.com/petalbot
+            // ImagesiftBot - https://imagesift.com/about
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /(360spider-?(?:image|video)?|bytespider|(?:aspiegel|dataforseo|petal|turnitin)bot|(?=yahoo! )slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|(?=yahoo! )slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -238,8 +241,8 @@ const Fetchers = Object.freeze({
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
-        // Google Bots / Snapchat
-        [/(feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
+        // Google Bots / Snapchat / Vercelbot
+        [/(vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
         [NAME, [TYPE, FETCHER]],
     ]
 });
