@@ -1,7 +1,11 @@
 <p align="center">
-    <a href="https://uaparser.dev"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
+    <a href="https://uaparser.dev">
+        <img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png">
+    </a>
 </p>
 
+[![https://uaparser.dev](https://github.com/user-attachments/assets/9f30f3d4-5cfe-441c-8f86-ead7c955f940)](https://uaparser.dev)
+    
 <p align="center">
 <a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://img.shields.io/jsdelivr/gh/hw/faisalman/ua-parser-js?logo=jsdelivr&style=for-the-badge"></a>
@@ -22,6 +26,7 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
 # Demo
 
   * Live demo: https://uaparser.dev
+
 
 # Documentation
 
