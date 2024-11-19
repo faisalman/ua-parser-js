@@ -1,12 +1,7 @@
-<p align="center">
-    <a href="https://uaparser.dev">
-        <img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png">
-    </a>
-</p>
-
+[![https://uaparser.dev](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png)](https://uaparser.dev)
 [![https://uaparser.dev](https://github.com/user-attachments/assets/9f30f3d4-5cfe-441c-8f86-ead7c955f940)](https://uaparser.dev)
-
 [![https://uaparser.dev](https://github.com/user-attachments/assets/50da50fc-7c8a-46e3-a2bc-6a8249914372)](https://uaparser.dev)
+[![https://uaparser.dev](https://github.com/user-attachments/assets/9f2aaff0-a9b4-4ac9-bdf3-eea8081a2582)](https://uaparser.dev)
     
 <p align="center">
 <a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
