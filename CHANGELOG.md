@@ -166,6 +166,14 @@
 
 ---
 
+## Version 0.7.39 / 1.0.39
+- Add new feature: executable command using `npx ua-parser-js "[INSERT-UA-HERE]"`
+- Add new browser: Helio, Pico Browser, Wolvic
+- Add new device vendor: itel, Nothing, TCL
+- Improve browser detection: ICEBrowser, Klar, QQBrowser, Quark, Rekonq, Sleipnir
+- Improve device detection: Xiaomi Pro, Amazon Echo Show, Samsung Galaxy Watch
+- Removed from browser: Viera
+  
 ## Version 0.7.38 / 1.0.38
 - Fix error on getOS() when userAgentData.platform is undefined
 - Add new browser: Opera GX, Twitter
