@@ -2592,6 +2592,33 @@
         }
     },
     {
+        "desc": "OnePlus Pad Go 11.35",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 14; OPD2304) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.629 YaApp_Android/24.101/apad YaSearchBrowser/24.101/apad BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2304",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Pad 2 12.1 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; OPD2403 Build/UKQ1.231108.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2403",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Pad 11.61 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; OPD2203 Build/UKQ1.230924.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2203",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "OPPO Pad",
         "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; OPD2101 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.3.9.1290 Mobile Safari/537.36",
         "expect": {
@@ -4005,6 +4032,15 @@
         }
     },
     {
+        "desc": "Xiaomi MI PAD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.4; en-us; MI PAD Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.146 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.3.2",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Xiaomi MI PAD 2",
         "ua": "Mozilla/5.0 (Linux; Android 5.1; MI PAD 2 Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Safari/537.36 [FB_IAB/FB4A;FBAV/137.0.0.24.91;]",
         "expect": {
@@ -4014,11 +4050,101 @@
         }
     },
     {
+        "desc": "Xiaomi MI PAD 2",
+        "ua": "Mozilla/5.0 (Linux; x86_64; Android 5.1; MI PAD 2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 YaBrowser/20.11.2.69.01 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 3",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 7.0; MI PAD 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.216 YaBrowser/21.5.6.56.01 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 3",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 4",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 8.1.0; MI PAD 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 YaBrowser/19.9.1.126.01 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 4",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Xiaomi MI PAD 4 PLUS",
         "ua": "Mozilla/5.0 (Linux; Android 8.1; MI PAD 4 PLUS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
         "expect": {
             "vendor": "Xiaomi",
             "model": "MI PAD 4 PLUS",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 4 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; Mi Pad4 Wi-Fi) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Mobile Safari/537.36 EdgA/86.0.622.61",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Mi Pad4 Wi-Fi",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 5",
+        "ua": "Mozilla/5.0 (Linux; Android 13; 21051182G Build/TKQ1.221013.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 Flipboard/4.3.31/5486,4.3.31.5486",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "21051182G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 5 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; M2105K81AC Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Safari/537.36 Line/13.15.1/IAB",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2105K81AC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 5 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; M2105K81C) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2105K81C",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 6 Max 14",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; zh-tw; 2307BRPDCC Build/UKQ1.230804.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36 Device/yudi Model/2307BRPDCC XiaoMi/MiuiBrowser/14.10.6",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "2307BRPDCC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 6 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; en-US; 23046RP50C Build/TKQ1.221114.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.6.2.1316 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "23046RP50C",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Pad 6S Pro 12.4",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 24018RPACC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "24018RPACC",
             "type": "tablet"
         }
     },
@@ -4182,6 +4308,51 @@
             "vendor": "Xiaomi",
             "model": "23049RAD8C",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; id-id; Redmi Pad Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.136 Mobile Safari/537.36 XiaoMi/MiuiBrowser/14.1.1-gn",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi Pad",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 22081283G Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 Flipboard/4.3.31/5486,4.3.31.5486",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "22081283G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 2405CRPFDG Build/UKQ1.240116.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.97 Safari/537.36 [FB_IAB/FB4A;FBAV/476.0.0.49.74;] FBNV/1",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "2405CRPFDG",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad SE",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 14; 23073RPBFG Build/UKQ1.231003.002)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "23073RPBFG",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad SE 8.7",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 24076RP19G Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Mobile Safari/537.36 Line/14.18.1/IAB",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "24076RP19G",
+            "type": "tablet"
         }
     },
     {
