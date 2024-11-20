@@ -500,7 +500,7 @@
             ], [[MODEL, /_/g, ' '], [TYPE, MOBILE], [VENDOR, 'Nokia']], [
 
             // Google
-            /(pixel c)\b/i                                                      // Google Pixel C
+            /(pixel (c|tablet))\b/i                                             // Google Pixel C/Tablet
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, TABLET]], [
             /droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i                         // Google Pixel
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, MOBILE]], [

@@ -4545,6 +4545,15 @@
         }
     },
     {
+        "desc": "Google Pixel Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel Tablet Build/AP2A.240905.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Tablet",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Google Pixel XL",
         "ua": "Mozilla/5.0 (Linux; Android 7.1; Pixel XL Build/NDE63X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.85 Mobile Safari/537.36",
         "expect": {
