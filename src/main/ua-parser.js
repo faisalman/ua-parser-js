@@ -697,7 +697,7 @@
 
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
                                                                                 // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax/Advan
-            /; (imo) ([\w ]+?)(?: bui|\))/i,                             // IMO
+            /; (hmd|imo) ([\w ]+?)(?: bui|\))/i,                                // HMD/IMO
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(asus)-?(\w+)/i,                                                   // Asus
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
