@@ -593,9 +593,11 @@
             ], [MODEL, [VENDOR, LENOVO], [TYPE, TABLET]], [
 
             // Nokia
+            /(nokia) (t[12][01])/i
+            ], [VENDOR, MODEL, [TYPE, TABLET]], [
             /(?:maemo|nokia).*(n900|lumia \d+)/i,
-            /nokia[-_ ]?([-\w\.]*)/i
-            ], [[MODEL, /_/g, ' '], [VENDOR, 'Nokia'], [TYPE, MOBILE]], [
+            /nokia[-_ ]?(([-\w\.]*))/i
+            ], [[MODEL, /_/g, ' '], [TYPE, MOBILE], [VENDOR, 'Nokia']], [
 
             // Google
             /(pixel (c|tablet))\b/i                                             // Google Pixel C/Tablet
