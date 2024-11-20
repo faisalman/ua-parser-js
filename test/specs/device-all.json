@@ -4770,6 +4770,24 @@
         }
     },
     {
+        "desc": "Google Pixel Watch",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch Build/TWD4.231005.002)",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Watch",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Google Pixel Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch 2 Build/TWD9.240605.001.A1)",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Watch 2",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Google Pixel XL",
         "ua": "Mozilla/5.0 (Linux; Android 7.1; Pixel XL Build/NDE63X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.85 Mobile Safari/537.36",
         "expect": {

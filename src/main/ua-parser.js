@@ -782,7 +782,8 @@
 
             /\b(sm-[lr]\d\d[05][fnuw]?s?)\b/i                                   // Samsung Galaxy Watch
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, WEARABLE]], [
-            /((pebble))app/i                                                    // Pebble
+            /((pebble))app/i,                                                   // Pebble
+            /(google) (pixel watch[\w ]*)( bui|\))/i                            // Pixel Watch
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
             /(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i                              // Apple Watch
             ], [MODEL, [VENDOR, APPLE], [TYPE, WEARABLE]], [
