@@ -1,11 +1,61 @@
 [
     {
+        "desc"    : "Airmail",
+        "ua"      : "Airmail 1.0 rv:148 (Macintosh; Mac OS X 10.8.3; en_BE)",
+        "expect"  :
+        {
+            "name"    : "Airmail",
+            "version" : "1.0",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "BlueMail",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) BlueMail/0.10.31 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "BlueMail",
+            "version" : "0.10.31",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "BlueMail",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A405 BlueMail iOS",
+        "expect"  :
+        {
+            "name"    : "BlueMail",
+            "version" : "iOS",
+            "type"    : "email"
+        }
+    },
+    {
         "desc"    : "Evolution",
         "ua"      : "Evolution/3.52.3",
         "expect"  :
         {
             "name"    : "Evolution",
             "version" : "3.52.3",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "eM Client",
+        "ua"      : "eMClient/9.2.2157.0",
+        "expect"  :
+        {
+            "name"    : "eMClient",
+            "version" : "9.2.2157.0",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Foxmail",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 foxmail/7.2.15.80",
+        "expect"  :
+        {
+            "name"    : "foxmail",
+            "version" : "7.2.15.80",
             "type"    : "email"
         }
     },
@@ -60,12 +110,52 @@
         }
     },
     {
+        "desc"    : "NaverMailApp",
+        "ua"      : "NaverMailApp/2.1.23 (Android 10; SM-N960N)",
+        "expect"  :
+        {
+            "name"    : "NaverMailApp",
+            "version" : "2.1.23",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Sparrow",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Sparrow/1043.1",
+        "expect"  :
+        {
+            "name"    : "Sparrow",
+            "version" : "1043.1",
+            "type"    : "email"
+        }
+    },
+    {
         "desc"    : "Thunderbird",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0",
         "expect"  :
         {
             "name"    : "Thunderbird",
             "version" : "78.13.0",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Mail",
+        "ua"      : "YahooMobile/1.0 (mail; 3.0.5.1311380); (Linux; U; Android 4.0.3; htc_runnymede Build/ICE_CREAM_SANDWICH_MR1);",
+        "expect"  :
+        {
+            "name"    : "Yahoo",
+            "version" : "3.0.5.1311380",
+            "type"    : "email"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Mail",
+        "ua"      : "YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90) ",
+        "expect"  :
+        {
+            "name"    : "Yahoo",
+            "version" : "1.3.10",
             "type"    : "email"
         }
     }

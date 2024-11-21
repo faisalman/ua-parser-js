@@ -10,6 +10,36 @@
         }
     },
     {
+        "desc"    : "ELinks",
+        "ua"      : "ELinks/0.11.4-3-lite (textmode; Debian; Linux 2.6.26-1-686 i686;",
+        "expect"  :
+        {
+            "name"    : "ELinks",
+            "version" : "0.11.4-3-lite",
+            "type"    : "cli"
+        }
+    },
+    {
+        "desc"    : "ELinks",
+        "ua"      : "ELinks (0.11.3; Linux 2.6.23-hardened-r4 i686; 166x55)",
+        "expect"  :
+        {
+            "name"    : "ELinks",
+            "version" : "0.11.3",
+            "type"    : "cli"
+        }
+    },
+    {
+        "desc"    : "HTTPie",
+        "ua"      : "HTTPie/0.9.9",
+        "expect"  :
+        {
+            "name"    : "HTTPie",
+            "version" : "0.9.9",
+            "type"    : "cli"
+        }
+    },
+    {
         "desc"    : "lynx",
         "ua"      : "Lynx 2.8.8dev.3",
         "expect"  :

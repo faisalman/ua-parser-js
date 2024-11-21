@@ -3,7 +3,7 @@
 // Source: /src/extensions/ua-parser-extensions.js
 
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.0-rc.3
+/*  Extensions for UAParser.js v2.0.0
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Enterprise License */
@@ -32,8 +32,8 @@ const LIBRARY    = 'library';
 
 const CLIs = Object.freeze({
     browser : [
-        // wget / curl / lynx
-        [/(wget|curl|lynx)[\/ ]([\w\.]+)/i], [NAME, VERSION, [TYPE, CLI]]
+        // wget / curl / Lynx / ELinks / HTTPie
+        [/(wget|curl|lynx|elinks|httpie)[\/ ]\(?([\w\.-]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
 
@@ -46,7 +46,6 @@ const Crawlers = Object.freeze({
         [
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
-            // Applebot - http://apple.com/go/applebot
             // Bingbot - http://www.bing.com/bingbot.htm
             // CCBot - https://commoncrawl.org/faq
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
@@ -58,13 +57,17 @@ const Crawlers = Object.freeze({
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SemrushBot - http://www.semrush.com/bot.html
-            /((?:ahrefs|amazon|apple|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush)bot)\/([\w\.]+)/i,
+            // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
+            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+
+            // Applebot - http://apple.com/go/applebot
+            /(applebot(?:-extended)?)\/([\w\.]+)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
             /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
 
             // ClaudeBot (Anthropic)
-            /(claude(?:bot|-web))\/([\w\.]+)/i, 
+            /(claude(?:bot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
 
             // Coc Coc Bot - https://help.coccoc.com/en/search-engine
             /(coccocbot-(?:image|web))\/([\w\.]+)/i, 
@@ -91,8 +94,8 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // YisouSpider
-            /(yisouspider)\/?([\w\.]*)/i
+            // aiHitBot / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
+            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
@@ -101,13 +104,15 @@ const Crawlers = Object.freeze({
             // Google Bots
             /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|safety))/i,
 
+            // AI2Bot - https://allenai.org/crawler
             // Bytespider
             // DataForSeoBot - https://dataforseo.com/dataforseo-bot
             // Huawei AspiegelBot / PetalBot https://aspiegel.com/petalbot
+            // ImagesiftBot - https://imagesift.com/about
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /(360spider-?(?:image|video)?|bytespider|(?:aspiegel|dataforseo|petal|turnitin)bot|(?=yahoo! )slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|(?=yahoo! )slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -199,8 +204,10 @@ const ExtraDevices = Object.freeze({
 
 const Emails = Object.freeze({
     browser : [
+        [
         // Evolution / Kontact/KMail / [Microsoft/Mac] Outlook / Thunderbird
-        [/(evolution|kmail2?|kontact|(?:microsoft |mac)outlook|thunderbird)[\s\/]([\w\.]+)/i], [NAME, VERSION, [TYPE, EMAIL]]
+        /(airmail|bluemail|emclient|evolution|foxmail|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|thunderbird|yahoo)(?:m.+ail; |[\/ ])([\w\.]+)/i
+        ], [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
@@ -238,8 +245,8 @@ const Fetchers = Object.freeze({
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
-        // Google Bots / Snapchat
-        [/(feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
+        // Google Bots / Cohere / Snapchat / Vercelbot
+        [/(cohere-ai|vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
         [NAME, [TYPE, FETCHER]],
     ]
 });
@@ -297,8 +304,6 @@ const MediaPlayers = Object.freeze({
         ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(htc streaming player)\s[\w_]+\s\/\s([\d\.]+)/i,                   // HTC Streaming Player
-        /(java|python-urllib|python-requests|wget|libcurl)\/([\w\.-_]+)/i,
-                                                                            // Java/urllib/requests/wget/cURL
         /(lavf)([\d\.]+)/i                                                  // Lavf (FFMPEG)
         ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
@@ -374,8 +379,8 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Axios/jsdom/Scrapy
-        [/\b(axios|jsdom|scrapy)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
+        // Axios/jsdom/Scrapy/Java/urllib/requests
+        [/\b(axios|jsdom|scrapy|java|python-urllib|python-requests)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
     ]
 });
 

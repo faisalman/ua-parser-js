@@ -1,6 +1,6 @@
 const assert = require('assert');
 const { UAParser } = require('../src/main/ua-parser');
-const { getDeviceVendor, isAppleSilicon, isBot, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
+const { getDeviceVendor, isAppleSilicon, isAIBot, isBot, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
 const { Bots, Emails } = require('../src/extensions/ua-parser-extensions');
 
 describe('getDeviceVendor', () => {
@@ -28,7 +28,23 @@ describe('isAppleSilicon', () => {
         const macIntel = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:97.0) Gecko/20100101 Firefox/97.0';
 
         assert.equal(isAppleSilicon(UAParser(macIntel)), false);
+        assert.equal(isAppleSilicon(macIntel), false);
         assert.equal(isAppleSilicon(UAParser(macARM)), true);
+        assert.equal(isAppleSilicon(macARM), true);
+    });
+});
+
+describe('isAIBot', () => {
+    it('Can detect AI Bots', () => {
+        
+        const claudeBot = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)';
+        const firefox = 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0';
+        const searchGPT = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot';
+
+        assert.equal(isAIBot(UAParser(claudeBot, Bots)), true);
+        assert.equal(isAIBot(claudeBot), true);
+        assert.equal(isAIBot(firefox), false);
+        assert.equal(isAIBot(searchGPT), true);
     });
 });
 
@@ -46,6 +62,11 @@ describe('isBot', () => {
         assert.equal(isBot(botParser.setUA(ahrefsBot).getResult()), true);
         assert.equal(isBot(botParser.setUA(scrapy).getResult()), true);
         assert.equal(isBot(botParser.setUA(thunderbird).getResult()), false);
+
+        assert.equal(isBot(ahrefsBot), true);
+        assert.equal(isBot(firefox), false);
+        assert.equal(isBot(scrapy), true);
+        assert.equal(isBot(thunderbird), false);
     });
 });
 
@@ -57,5 +78,7 @@ describe('isChromeFamily', () => {
 
         assert.equal(isChromeFamily(UAParser(edge)), true);
         assert.equal(isChromeFamily(UAParser(firefox)), false);
+        assert.equal(isChromeFamily(edge), true);
+        assert.equal(isChromeFamily(firefox), false);
     });
 });
