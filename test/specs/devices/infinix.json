@@ -1,0 +1,56 @@
+[
+    {
+        "desc": "Infinix Hot 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Infinix X625C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X625C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Infinix Hot 10T",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Infinix X689C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X689C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Infinix Hot 11s",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Infinix X6812 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X6812",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Infinix Smart 5",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Infinix X657C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X657C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Infinix XPad",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Infinix X1101B Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.99 Safari/537.36 [FB_IAB/FB4A;FBAV/489.0.0.66.81;IABMV/1;]",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X1101B",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Infinix Zero 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Infinix X6815B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X6815B",
+            "type": "mobile"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Nvidia Shield Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SHIELD Tablet Build/LVY48E; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/45.0.2454.19 Safari/537.36",
+        "expect": {
+            "vendor": "Nvidia",
+            "model": "SHIELD Tablet",
+            "type": "tablet"
+        }
+    }
+]

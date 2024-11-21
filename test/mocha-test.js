@@ -7,9 +7,17 @@ var traverse    = require('@babel/traverse').default;
 var {UAParser}  = require('../src/main/ua-parser');
 var browsers    = require('./specs/browser-all.json');
 var cpus        = require('./specs/cpu-all.json');
-var devices     = require('./specs/device-all.json');
+var devices     = readJsonFiles('test/specs/devices');
 var engines     = require('./specs/engine-all.json');
 var os          = require('./specs/os-all.json');
+
+function readJsonFiles(dir) {
+    var list = [];
+    fs.readdirSync(dir).forEach(function (file) {
+        list.push(...JSON.parse(fs.readFileSync(`${dir}/${file}`, 'utf-8')));
+    });
+    return list;
+};
 
 var parser      = new UAParser();
 var methods     = [

@@ -1,0 +1,947 @@
+[
+    {
+        "desc": "Huawei Honor",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.3; xx-xx; U8860 Build/HuaweiU8860) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "U8860",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L41) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L41",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-AL10",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nexus 6P",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 6P Build/MTC19V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Mobile Safari/537",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "Nexus 6P",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P10",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; VTR-L09 Build/HUAWEIVTR-L09; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "VTR-L09",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y3II",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.1; xx-xx; HUAWEI LUA-L03 Build/HUAWEILUA-L03) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LUA-L03",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad C5 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; MON-AL19B Build/HUAWEIMON-AL19; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.83 Mobile Safari/537.36 T7/11.7 baiduboxapp/11.7.0.10 (Baidu; P1 7.0)",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MON-AL19B",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M2 10.1",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; HUAWEI M2-A01L Build/HUAWEIM2-A01L; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Safari/537.36[FBAN/EMA;FBLC/fr_FR;FBAV/421.0.0.14.100;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "M2-A01L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0; en-US; BTV-DL09 Build/HUAWEIBEETHOVEN-DL09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.5.0.1015 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTV-DL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; HUAWEI BTV-W09 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.96 Mobile Safari/537.36 AlohaBrowser/3.1.1",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTV-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; CPN-L09 Build/HUAWEICPN-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36[FBAN/EMA;FBLC/ru_RU;FBAV/233.0.0.12.118;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CPN-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; CPN-W09 Build/HUAWEICPN-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/374.0.0.20.109;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CPN-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 Lite 10",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; BAH-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 10.8",
+        "ua": "Mozilla/5.0 (Linux; Android 9; CMR-W09 Build/HUAWEICMR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.102 Safari/537.36 Line/14.18.1/IAB",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CMR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; BAH2-W19 Build/HUAWEIBAH2-W19; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH2-W19",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 9; JDN2-W09 Build/HUAWEIJDN2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.210 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/318.0.0.39.154;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "JDN2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 9; JDN2-AL50 Build/HUAWEIJDN2-AL50; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 T7/12.13.0 SP-engine/2.29.0 matrixstyle/0 lite baiduboxapp/5.8.0.10 (Baidu; P1 9) NABar/1.",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "JDN2-AL50",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 8.4",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SHT-W09 Build/HUAWEISHT-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SHT-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SHT-AL09 Build/HUAWEISHT-AL09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SHT-AL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M6 10.8",
+        "ua": "Mozilla/5.0 (Linux; Android 14; SCM-W09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6612.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SCM-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M6 8.4",
+        "ua": "Mozilla/5.0 (Linux; Android 9; VRD-W09; HMSCore 6.14.0.321; GMSCore 22.26.15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "VRD-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T5",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; AGS2-L09 Build/HUAWEIAGS2-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/84.0.4147.125 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS2-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; en-US; AGR-L09 Build/HUAWEIAGR-L09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.3.8.1305 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGR-W09 Build/HUAWEIAGR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3-W09 Build/HUAWEIAGS3-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T 8.0",
+        "ua": "Mozilla/5.0 (Linux; Android 10; KOB2-L09 Build/HUAWEIKOB2-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB2-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T 8.0",
+        "ua": "Mozilla/5.0 (Linux; Android 10; KOB2-W09 Build/HUAWEIKOB2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 Mobile Safari/537.36 HuaweiBrowser/15.0.4.312 HMSCore/6.14.0.301",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 10",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; T1-A21w Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Safari/537.36 SputnikBrowser/1.2.8.161",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-A21w",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 10",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; T1-A23L Build/HuaweiMediaPad; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 BingWeb/6.9.10",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-A23L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 10",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; T1-A21L Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-A21L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 7",
+        "ua": "Mozilla/5.0 (Linux; 4.4.2; T1-701u) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-701u",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 8",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9.0; MediaPad T1 8.0 Build/HuaweiMediaPad) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30 OPR/28.0.2254.119224",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MediaPad T1 8.0",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10 9.7",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; en-US; AGRK-L09 Build/HUAWEIAGRK-L09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.6.0.1315 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGRK-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10 9.7 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGRK-W09; HMSCore 6.14.0.321) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGRK-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s 10.1 LTE",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3K-L09 Build/HUAWEIAGS3K-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36 [FB_IAB/FB4A;FBAV/362.0.0.27.109;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3K-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s 10.1 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3K-W09; HMSCore 6.14.0.321) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3K-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T2 10.0 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; 605HW Build/HuaweiMediaPad; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.5005.78 Safari/537.36 [FB_IAB/FB4A;FBAV/436.0.0.35.101;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "605HW",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T2 7.0 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; BGO-DL09 Build/HuaweiBAGGIO; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/106.0.5249.126 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/407.0.0.30.97;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BGO-DL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T3 10",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; AGS-W09 Build/HUAWEIAGS-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.90 Safari/537.36 GSA/10.83.10.21.arm64",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T3 7",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; BG2-U03 Build/HUAWEIBG2-U03; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/84.0.4147.111 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BG2-U03",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T3 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; KOB-W09 Build/HUAWEIKOB-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/69.0.3497.100 Safari/537.36 [FB_IAB/Orca-Android;FBAV/354.0.0.10.113;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T5 10",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; AGS2-W09 Build/HUAWEIAGS2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 Flipboard/4.3.31/5486,4.3.31.5486",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad X2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0; GEM-703L Build/HUAWEIGEM-703L; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/043906 Mobile Safari/537.36 MicroMessenger/6.6.3.1260(0x26060339) NetType/WIFI Language/zh_",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "GEM-703L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; BAH3-W09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH3-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; BAH3-L09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH3-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BAH3-W59 Build/HUAWEIBAH3-W59; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36HiSearch/22.0.6.315",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH3-W59",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 (2022)",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BAH4-L09 Build/HUAWEIBAH4-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH4-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 (2022) WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; BAH4-W09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH4-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 SE",
+        "ua": "Mozilla/5.0 (Linux; Android 12; AGS5-L09 Build/HUAWEIAGS5-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.88 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS5-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 SE WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; AGS5-W09 Build/HUAWEIAGS5-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.88 Safari/537.36 [FB_IAB/FB4A;FBAV/480.0.0.54.88;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS5-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11 (2023) WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; DBR-W10 Build/HUAWEIDBR-W10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 Quark/6.9.6.501 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DBR-W10",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; DBY-W09 Build/HUAWEIDBY-W09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046801",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DBY-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 Air WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; DBY2-W00 Build/HUAWEIDBY2-W00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 Quark/7.3.8.663 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DBY2-W00",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 LTE",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BTK-AL09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTK-AL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 S WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; TGR-W09; HMSCore 6.14.0.322; GMSCore 0.3.3.1.240913) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.88 HuaweiBrowser/14.0.2.317 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "TGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BTK-W09; HMSCore 6.14.0.322; GMSCore 214816056) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTK-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad C5 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; MON-W19 Build/HUAWEIMON-W19; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 [Pinterest/Android]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MON-W19",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 11",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 12; GOT-AL09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 YaBrowser/23.5.5.60.01 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "GOT-AL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; GOT-W09 Build/HUAWEIGOT-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/97.0.4692.98 Safari/537.36 T7/13.19 BDOS/1.0 (HarmonyOS 3.0.0) SP-engine/2.57.0 baiduboxapp/13.19.0.12 (Baidu; P1 12) NABar/1.0",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "GOT-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 12.6 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; WGR-W09 Build/HUAWEIWGR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/412.0.0.8.106;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "WGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad SE 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; AGS6-W09; HMSCore 6.12.2.309) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 HuaweiBrowser/11.1.5.315 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS6-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 13.2",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; PCE-W29; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "PCE-W29",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T 10",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGR-L09; HMSCore 5.0.4.301) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11.0.3.304 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T10s",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; zh-cn; AGS3-AL00 Build/HUAWEIAGS3-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/11.4 Mobile Safari/537.36 COVC/045530",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-AL00",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T10s WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; AGS3-W09 Build/HUAWEIAGS3-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.93 Safari/537.36 OPR/60.0.2254.59405",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T8 8 LTE",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; KOB2K-L09 Build/HUAWEIKOB2K-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36 OPR/83.0.2254.73002",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB2K-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei M3",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; BTV-W09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTV-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei Mate 10 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0; BLA-L29 Build/HUAWEIBLA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3236.6 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BLA-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate X",
+        "ua": "Mozilla/5.0 (Linux; Android 9; TAH-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "TAH-AN00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate X2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; TET-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "TET-AN00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 X",
+        "ua": "Mozilla/5.0 (Linux; Android 9; EVR-L29 Build/HUAWEIEVR-L29; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "EVR-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L09",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-AL00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-AL10",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L0C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L0C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LYA-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LYA-TL00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 50 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 12; DCO-LX9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DCO-LX9",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P20 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ANE-LX1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P20",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; EML-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "EML-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P20 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; CLT-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CLT-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P30",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ELE-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ELE-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P30 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; VOG-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "VOG-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P40",
+        "ua": "Mozilla/5.0 (Linux; Android 10; ANA-AN00 Build/HUAWEIANA-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 T7/11.26 SP-engine/2.22.0 baiduboxapp/11.26.0.10 (Baidu; P1 10) NABar/1.0",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ANA-AN00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P40 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; ELS-AN00 Build/HUAWEIELS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36 mailapp/6.0.0",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ELS-AN00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei 30 Pro+",
+        "ua": "Mozilla/5.0 (Linux; Android 10; EBG-AN10 Build/HUAWEIEBG-AN10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36 EdgA/42.0.0.2741",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "EBG-AN10",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei 30S",
+        "ua": "Mozilla/5.0 (Linux; Android 10; CDY-AN90 Build/HUAWEICDY-AN90; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36 mailapp/5.8.0",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CDY-AN90",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L21",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L61) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L61",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L71) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L71",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YAL-L61D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YAL-L61D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L61A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L61A",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L61D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L61D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova 5T",
+        "ua": "Mozilla/5.0 (Linux; Android 10; YALE-L71A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "YALE-L71A",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Enjoy10e",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 10; MED-AL00 Build/HUAWEIMED-AL00)",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MED-AL00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y7 2018",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; LDN-L01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.62 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "LDN-L01",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 8X",
+        "ua": "Mozilla/5.0 (Linux; Android 9; JSN-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "JSN-L21",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y6 2019",
+        "ua": "Mozilla/5.0 (Linux; Android 9; MRD-LX1N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MRD-LX1N",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y9 2019",
+        "ua": "Mozilla/5.0 (Linux; Android 9; JKM-LX2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "JKM-LX2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y5",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AMN-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AMN-LX3",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y7p",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ART-L29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ART-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Mate 20 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; SNE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SNE-LX1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P10 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; WAS-LX1A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.90 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "WAS-LX1A",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y5 Lite 2018",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; DRA-LX5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DRA-LX5",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Honor 8C",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; BKK-LX2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BKK-LX2",
+            "type": "mobile"
+        }
+    }
+]

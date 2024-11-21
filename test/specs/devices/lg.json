@@ -1,0 +1,164 @@
+[
+    {
+        "desc": "LG V40 ThinQ",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LM-V405) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-V405",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG K30",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; LM-X410.F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-X410.F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG K30",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LM-X410.FGN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-X410.FGN",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG K40",
+        "ua": "Mozilla/5.0 (Linux; Android 10; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.57 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-X420",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Stylo 4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.57 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "LM-Q710(FGN)",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Stylo 5",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-Q720",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG G7 ThinQ",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LM-G710VM Build/PKQ1.181105.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-G710VM",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG K20",
+        "ua": "Mozilla/5.0 (Android 13; Mobile; LG-M255; rv:111.0) Gecko/111.0 Firefox/111.0",
+        "expect": {
+            "vendor": "LG",
+            "model": "M255",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG K500",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; LG-K500 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "K500",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Nexus 4",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.1; Nexus 4 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19",
+        "expect": {
+            "vendor": "LG",
+            "model": "Nexus 4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Nexus 4",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.3; en-us; Google Nexus 4 - 4.3 - API 18 - 768x1280 Build/JLS36G) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "LG",
+            "model": "Nexus 4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Nexus 5",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19",
+        "expect": {
+            "vendor": "LG",
+            "model": "Nexus 5",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Wing",
+        "ua": "Mozilla/5.0 (Linux; Android 10; LM-F100N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LM-F100N",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "LG Smart TV",
+        "ua": "Mozilla/5.0 (DirectFB; U; Linux mips; en) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) LG Browser (; LG NetCast.TV-2011)",
+        "expect": {
+            "vendor": "LG",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "LG Smart TV",
+        "ua": "Mozilla/5.0 (Linux; NetCast; U) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/53.0.2785 34 Safari/537.31 SmartTV/8.5",
+        "expect": {
+            "vendor": "LG",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "LG Android TV",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; LG Android TV Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect": {
+            "vendor": "LG",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "LG VK Series Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.2; VK700 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.84 Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "VK700",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "LG LK Series Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; LGLK430 Build/LRX21Y) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "LK430",
+            "type": "tablet"
+        }
+    }
+]

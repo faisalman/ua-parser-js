@@ -1,0 +1,250 @@
+[
+    {
+        "desc": "Generic Android Device",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; i980 Build/MRA58K)",
+        "expect": {
+            "vendor": "Generic",
+            "model": "Android 6.0.1"
+        }
+    },
+    {
+        "desc": "K",
+        "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Desktop (IE11 with Tablet string)",
+        "ua": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "undefined"
+        }
+    },
+    {
+        "desc": "Mobile (DuckDuckGo mobile browser)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile DuckDuckGo/5 Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "JVC LT-43V55LFA Smart TV",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB211 VSTVB MB200 HbbTV/1.2.1 (; JVC; MB211; 3.19.4.2; _TV_NT72563_2017 SmartTvA/3.0.0",
+        "expect": {
+            "vendor": "JVC",
+            "model": "MB211",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "JVC LT-43V65LUA Smart TV",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 OPR/40.0.2207.0 OMI/4.9.0.237.DOM3-OPT.245 Model/Vestel-MB130 VSTVB MB100 HbbTV/1.2.1 (; JVC; MB130; 5.7.20.0; _TV_G10_2017;) SmartTvA/3.0.0",
+        "expect": {
+            "vendor": "JVC",
+            "model": "MB130",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Loewe Smart TV",
+        "ua": "Mozilla/5.0 (Linux; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36 OPR/46.0.2207.0 LOEWE-SL410/5.2.0.0 HbbTV/1.4.1 (; LOEWE; SL410; LOH/5.2.0.0;;) FVC/3.0 (LOEWE; SL410;) CE-HTML/1.0 Config (L:deu,CC:DEU) NETRANGEMMH",
+        "expect": {
+            "vendor": "LOEWE",
+            "model": "SL410",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Issue #747",
+        "ua": "python-requests/2.25.1",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "undefined"
+        }
+    },
+    {
+        "desc": "Issue #454",
+        "ua": "Mosamzilla/5.0 (Windows; U; Win98; en-US; rv:1.7.5) Gecko/20050603 Netscape/8.0.2",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "undefined"
+        }
+    },
+    {
+        "desc": "OnePlus 7T Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HD1913) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.57 Mobile Safari/537.36 EdgA/110.0.1587.66",
+        "expect": {
+            "vendor": "undefined",
+            "model": "HD1913",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Philips SmartTV",
+        "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PFL6606K/02 SmartTV (2011)",
+        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PFL6606K/02 SmartTV (2013)",
+        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PHS5301/12 SmartTV (2016)",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36 OPR/29.0.1803.0 OMI/4.5.23.37.MOT2.13 HbbTV/1.2.1 (;Philips;32PHS5301/12;;_TV_MT5800;) Firmware/TPM161E_012.002.045.001 en",
+        "expect": {
+            "vendor": "Philips",
+            "model": "32PHS5301/12",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV",
+        "ua": "Mozilla/5.0 (SMART-TV; X11; Linux armv7l) AppleWebkit/537.42 (KHTML, like Gecko) Safari/537.42",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Android Phone Unidentified Vendor (docomo F-04K)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; F-04K Build/V15R060P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",
+        "expect": {
+            "model": "F-04K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Android Tablet Unidentified Vendor (docomo F-02K)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; F-02K Build/V44R059G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Safari/537.36",
+        "expect": {
+            "model": "F-02K",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Android Tablet Unidentified Vendor (docomo d-02K)",
+        "ua": "Mozilla/5.0 (Linux; Android 9; d-02K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Safari/537.36",
+        "expect": {
+            "model": "d-02K",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Android TV",
+        "ua": "Mozilla/5.0 (Linux; Android 10; 2020/2021 UHD Android TV Build/QTG3.201102.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) version/4.0 Chrome/83.0.4103.101 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Unknown Mobile using Firefox",
+        "ua": "Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Unknown Tablet using Firefox",
+        "ua": "Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Unknown Mobile using Focus for Android",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Unknown Tablet using Focus for Android",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Unknown Device using Focus for Android with GeckoView",
+        "ua": "Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Unknown Mobile using Firefox OS",
+        "ua": "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Unknown Tablet using Firefox OS",
+        "ua": "Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Unknown TV using Firefox OS",
+        "ua": "Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "PDA with Windows CE",
+        "ua": "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "mobile"
+        }
+    }
+]

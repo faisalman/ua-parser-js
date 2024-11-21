@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "HMD Pulse",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Pulse",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Pulse Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Pulse Plus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Pulse Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Pulse Pro",
+            "type": "mobile"
+        }
+    }
+]

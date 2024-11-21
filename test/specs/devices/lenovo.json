@@ -1,0 +1,74 @@
+[
+    {
+        "desc": "Lenovo Tab 2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A7",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Phone",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Lenovo PB2-650M Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/311.0.0.44.117;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "PB2-650M",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo YT3-X90F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.99 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-X90F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Lenovo TB-X304F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.99 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X304F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Lenovo TAB 2 A7-30HC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A7",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 7 Essential",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; Lenovo TB-7304X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7304X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 9; Lenovo TB-X606F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 YaBrowser/20.9.4.99.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X606F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo IdeaTab S6000",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.1.1011.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "IdeaTab S6000-H",
+            "type": "tablet"
+        }
+    }
+]

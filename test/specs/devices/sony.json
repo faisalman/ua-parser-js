@@ -1,0 +1,209 @@
+[
+    {
+        "desc": "SONY Xperia 1 III",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A101SO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "A101SO",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony G8141 (Xperia XZ1)",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SO-01K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SO-01K",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony G8141 (Xperia XZ Premium)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; G8141) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "G8141",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony C5303 (Xperia SP)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.3; C5303 Build/12.1.A.1.205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.93 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "C5303",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony SO-02F (Xperia Z1 F)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; SO-02F Build/14.1.H.2.119) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SO-02F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony D6653 (Xperia Z3)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; D6653 Build/23.0.A.0.376) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "D6653",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia SOL25 (ZL2)",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4; SOL25 Build/17.1.1.C.1.64) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SOL25",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia SP",
+        "ua": "Mozilla/5.0 (Linux; Android 4.3; C5302 Build/12.1.A.1.201) AppleWebkit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "C5302",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia L4",
+        "ua": "Mozilla/5.0 (Linux; Android 9; XQ-AD51) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AD51",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia 1ii",
+        "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AT51) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AT51",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia 1ii",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SOG01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SOG01",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia 10ii",
+        "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AU52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AU52",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AQ52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.185 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AQ52",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony SGP521 (Xperia Z2 Tablet)",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; SGP521 Build/17.1.A.0.432) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Tablet",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Sony Xperia Z2 Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SGP561) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.99 Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Tablet",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Sony Tablet S",
+        "ua": "Mozilla/5.0 (Linux; U; Android 3.1; Sony Tablet S Build/THMAS10000) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Tablet",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Sony Tablet Z LTE",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.1; SonySGP321 Build/10.2.C.0.143) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Xperia Tablet",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Andr0id 9; BRAVIA 4K GB ATV3 Build/PTT1.190515.001.S38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.0.180.DIA5.104 Model/Sony-BRAVIA-4K-GB-ATV3",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony BRAVIA 4K GB ATV3",
+        "ua": "Mozilla/5.0 (Linux; Android 9; BRAVIA 4K GB ATV3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K GB ATV3",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony Bravia 4k UR2",
+        "ua": "Mozilla/5.0 (Linux: Andr0id 9: BRAVIA 4K UR2 Build/PTT1.190515.001.S104) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 OPR/46.0.2207.0 OMI/4.13.5.431.DIA5HBBTV.250 Model/Sony-BRAVIA-4K-UR2",
+        "expect": {
+            "vendor": "Sony",
+            "model": "BRAVIA 4K UR2",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "PlayStation 4",
+        "ua": "Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",
+        "expect": {
+            "vendor": "Sony",
+            "model": "PlayStation 4",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "PlayStation 5",
+        "ua": "Mozilla/5.0 (Playstation; Playstation 5/1.05) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15",
+        "expect": {
+            "vendor": "Sony",
+            "model": "Playstation 5",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "PlayStation Vita",
+        "ua": "Mozilla/5.0 (PlayStation Vita 3.52) AppleWebKit/537.73 (KHTML, like Gecko) Silk/3.2",
+        "expect": {
+            "vendor": "Sony",
+            "model": "PlayStation Vita",
+            "type": "console"
+        }
+    }
+]

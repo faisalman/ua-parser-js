@@ -1,0 +1,137 @@
+[
+    {
+        "desc": "OnePlus 10RT",
+        "ua": "Mozilla/5.0 (Linux; Android 13; CPH2413) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "CPH2413",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Pad",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; OPD2101 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.3.9.1290 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OPD2101",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OPPO Neo",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; R831T Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 OppoBrowser/3.3.2 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "R831T",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO R7s",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; OPPO R7s Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.1 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "R7s",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO A3s",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; CPH1803 Build/OPM1.171019.026; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "CPH1803",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO A12",
+        "ua": "Mozilla/5.0 (Linux; Android 9; CPH2083) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "CPH2083",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Reno",
+        "ua": "Mozilla/5.0 (Linux; Android 9; PCAT00 Build/PKQ1.190101.001; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PCAT00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Reno3 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; PCLM50) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PCLM50",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Reno4 SE",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; xx-xx; PEAM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PEAM00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Reno4 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; PDPM00 Build/QKQ1.200216.002; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PDPM00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Reno4 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; xx-xx; PDNT00 Build/QKQ1.200216.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PDNT00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Reno5 A",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A101OP) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "A101OP",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Find X",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; PAFM00 Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PAFM00",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Find 7a",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.3; xx-xx; X9007 Build/JLS36C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "X9007",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO F5",
+        "ua": "ozilla/5.0 (Linux; Android 7.1.1; CPH1723) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "CPH1723",
+            "type": "mobile"
+        }
+    }
+]
