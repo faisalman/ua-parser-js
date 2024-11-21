@@ -55,7 +55,8 @@
   - **`'ua-parser-js/helpers'`**: Provides utility methods to extend detection functionality:
     - `getDeviceVendor()`: Guesses the device vendor based on its model name
     - `isAppleSilicon()`: Detects Apple Silicon device properties
-    - `isBot()`: Checks if the browser is a bot
+    - `isAIBot()`: Checks if the user-agent is an AI bot
+    - `isBot()`: Checks if the user-agent is a bot
     - `isChromeFamily()`: Checks if the browser is Chrome-based (uses Blink engine) — e.g., New Opera, New Edge, Vivaldi, Brave, Arc, etc.
     - `isElectron()`: Detects if current window is running within Electron
     - `isFromEU()`: Detects if current browser's timezone is from an EU country
@@ -63,6 +64,17 @@
     - `isStandalonePWA()`: Detects if current window is a standalone PWA
 
 --- 
+
+## Version 2.0.0
+
+- `ua-parser-js/extensions` submodule:
+    - Add new CLI: ELinks, HTTPie
+    - Add new crawler: AI2Bot, aiHitBot, anthropic-ai, Diffbot, ImagesiftBot, magpie-crawler, Omgilibot, Screaming Frog SEO Spider, Seznambot, Teoma, Timpibot, VelenPublicWebCrawler, Webzio-Extended, YouBot
+    - Add new email: Airmail, BlueMail, eMClient, NaverMailApp, Sparrow, Yahoo
+    - Add new fetcher: cohere-ai, Vercelbot
+    - Add new library: java, python-urllib, python-requests
+- `ua-parser-js/helpers` submodule:
+    - Add new method `isAIBot()`: Checks if the user-agent is an AI bot
 
 ## Version 2.0.0-rc.3
 

@@ -118,5 +118,15 @@
             "version" : "2.0",
             "type"    : "fetcher"
         }
+    },
+    {
+        "desc"    : "Vercelbot",
+        "ua"      : "Vercelbot (+https://vercel.com)",
+        "expect"  :
+        {
+            "name"    : "Vercelbot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
     }
 ]

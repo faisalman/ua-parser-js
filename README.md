@@ -1,10 +1,12 @@
-<p align="center">
-    <a href="https://uaparser.dev"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png"></a>
-</p>
+# UAParser.js PRO Business License
 
-# UAParser.js
+Thank you for choosing the UAParser.js PRO Business License. 
 
-Thank you for purchasing UAParser.js PRO Business License, if you haven't please order here: https://store.faisalman.com
+Please be aware that using this package without a valid license purchase is strictly prohibited and constitutes a violation of applicable copyright laws. 
+
+An exception applies if the package is used solely as a part of a product developed by a valid license holder, in accordance with their license terms. 
+
+If you have not yet purchased a license, you may do so at https://store.faisalman.com.
 
 # Download
 
@@ -16,8 +18,12 @@ npm install @ua-parser-js/pro-business
 
 https://docs.uaparser.dev 
 
+```js
+import { UAParser } from '@ua-parser-js/pro-business';
+```
+
 # License
 
 UAParser.js PRO Business
 
-Copyright (c) 2012-2024 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2023-2024 Faisal Salman <<f@faisalman.com>>
