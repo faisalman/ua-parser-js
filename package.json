@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js PRO Personal",
   "name": "@ua-parser-js/pro-personal",
-  "version": "2.0.0-rc.3",
+  "version": "2.0.0",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
   "keywords": [
@@ -180,7 +180,8 @@
     },
     "./enums": {
       "require": "./src/enums/ua-parser-enums.js",
-      "import": "./src/enums/ua-parser-enums.mjs"
+      "import": "./src/enums/ua-parser-enums.mjs",
+      "types": "./src/enums/ua-parser-enums.d.ts"
     },
     "./extensions": {
       "require": "./src/extensions/ua-parser-extensions.js",
