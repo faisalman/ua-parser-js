@@ -10,6 +10,7 @@ var cpus        = require('./specs/cpu-all.json');
 var devices     = readJsonFiles('test/specs/devices');
 var engines     = require('./specs/engine-all.json');
 var os          = require('./specs/os-all.json');
+var { Headers } = require('node-fetch');
 
 function readJsonFiles(dir) {
     var list = [];
@@ -353,6 +354,13 @@ describe('Read user-agent data from req.headers', function () {
     it('Can be called with UAParser(headers)', function () {    
         let engine = UAParser(req.headers).engine;
         assert.strictEqual(engine.name, "EdgeHTML");
+    });
+
+    it('Fetch API\'s Header can be passed directly into headers', () => {
+        const reqHeaders = new Headers();
+        reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
+        const { browser } = UAParser(reqHeaders);
+        assert.strictEqual(browser.is('Midori'), true);
     });
 });
 
