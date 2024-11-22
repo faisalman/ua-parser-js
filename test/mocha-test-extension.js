@@ -4,11 +4,11 @@ const parseJS = require('@babel/parser').parse;
 const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
 const { UAParser } = require('../src/main/ua-parser');
-const clis = require('./specs/browser-clis.json');
-const crawlers = require('./specs/browser-crawlers.json');
-const emails = require('./specs/browser-emails.json');
-const fetchers = require('./specs/browser-fetchers.json');
-const libraries = require('./specs/browser-libraries.json');
+const clis = require('./specs/extension/cli.json');
+const crawlers = require('./specs/extension/crawler.json');
+const emails = require('./specs/extension/email.json');
+const fetchers = require('./specs/extension/fetcher.json');
+const libraries = require('./specs/extension/library.json');
 const { Bots, CLIs, Crawlers, Emails, Fetchers, Libraries } = require('../src/extensions/ua-parser-extensions');
 
 describe('Extensions', () => {

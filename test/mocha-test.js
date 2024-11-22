@@ -5,11 +5,11 @@ var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
 var {UAParser}  = require('../src/main/ua-parser');
-var browsers    = require('./specs/browser-all.json');
-var cpus        = require('./specs/cpu-all.json');
-var devices     = readJsonFiles('test/specs/devices');
-var engines     = require('./specs/engine-all.json');
-var os          = require('./specs/os-all.json');
+var browsers    = require('./specs/browser/browser-all.json');
+var cpus        = require('./specs/cpu/cpu-all.json');
+var devices     = readJsonFiles('test/specs/device');
+var engines     = require('./specs/engine/engine-all.json');
+var os          = require('./specs/os/os-all.json');
 var { Headers } = require('node-fetch');
 
 function readJsonFiles(dir) {
@@ -19,39 +19,6 @@ function readJsonFiles(dir) {
     });
     return list;
 };
-
-var parser      = new UAParser();
-var methods     = [
-    {
-        title       : 'getBrowser',
-        label       : 'browser',
-        list        : browsers,
-        properties  : ['name', 'major', 'version', 'type']
-    },
-    {
-        title       : 'getCPU',
-        label       : 'cpu',
-        list        : cpus,
-        properties  : ['architecture']
-    },
-    {
-        title       : 'getDevice',
-        label       : 'device',
-        list        : devices,
-        properties  : ['model', 'type', 'vendor']
-    },
-    {
-        title       : 'getEngine',
-        label       : 'engine',
-        list        : engines,
-        properties  : ['name', 'version']
-    },
-    {
-        title       : 'getOS',
-        label       : 'os',
-        list        : os,
-        properties  : ['name', 'version']
-}];
 
 describe('UAParser()', function () {
     var ua = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
@@ -66,26 +33,50 @@ describe('UAParser.setUA method does not throw with undefined ua argument', func
     assert.doesNotThrow(() => new UAParser().setUA(undefined).getResult());
 });
 
-for (var i in methods) {
-    describe(methods[i]['title'], function () {
-        for (var j in methods[i]['list']) {
-            if (!!methods[i]['list'][j].ua) {
-                describe('[' + methods[i]['list'][j].desc + ']', function () {
-                    describe('"' + methods[i]['list'][j].ua + '"', function () {
-                        var expect = methods[i]['list'][j].expect;
-                        var result = parser.setUA(methods[i]['list'][j].ua).getResult()[methods[i]['label']];
-
-                        methods[i]['properties'].forEach(function(m) {
-                            it('should return ' + methods[i]['label'] + ' ' + m + ': ' + expect[m], function () {
-                                assert.strictEqual(result[m], expect[m] != 'undefined' ? expect[m] : undefined);
-                            });
+describe('UAParser get*() methods', () => {
+    [
+        {
+            title       : 'getBrowser()',
+            label       : 'browser',
+            list        : browsers
+        },
+        {
+            title       : 'getCPU()',
+            label       : 'cpu',
+            list        : cpus
+        },
+        {
+            title       : 'getDevice()',
+            label       : 'device',
+            list        : devices
+        },
+        {
+            title       : 'getEngine()',
+            label       : 'engine',
+            list        : engines
+        },
+        {
+            title       : 'getOS()',
+            label       : 'os',
+            list        : os
+        }
+    ]
+    .forEach(method => {
+        describe(`[${method.title}]`, () => {
+            method.list.forEach(unit => {
+                describe(`[${unit.desc}]: "${unit.ua}"`, () => {
+                    const actual = UAParser(unit.ua)[method.label];
+                    Object.entries(unit.expect).forEach(entry => {
+                        const [key, val] = entry;
+                        it(`Should return ${key}: ${val}`, () => {
+                            assert.strictEqual(String(val), String(actual[key]));
                         });
                     });
                 });
-            }
-        }
+            });
+        });
     });
-}
+});
 
 describe('Returns', function () {
     it('getResult() should returns JSON', function(done) {
@@ -192,9 +183,9 @@ describe('Testing regexes', function () {
 
     describe('Begin testing', function () {
         it('all regexes in main file', function () {
-            regexes.forEach(function (regex) {
-                describe('Test against `safe-regex` : ' + regex, function () {
-                    it('should be safe from potentially vulnerable regex', function () {
+            describe('Test against `safe-regex` module', function () {
+                regexes.forEach(function (regex) {
+                    it(`Should pass \`safe-regex\`: ${regex}`, function () {
                         assert.strictEqual(safe(regex), true);
                     });
                 });
