@@ -22,7 +22,7 @@ describe('Extensions', () => {
     .forEach((list) => {
         describe(list[0], () => {
             list[1].forEach((agent) => {
-                it(`Can detect ${agent.desc}`, () => {
+                it(`Can detect ${agent.desc}: "${agent.ua}"`, () => {
                     let browser = UAParser(agent.ua, list[2]).browser;
                     assert.strictEqual(String(browser.name), agent.expect.name);
                     assert.strictEqual(String(browser.version), agent.expect.version);

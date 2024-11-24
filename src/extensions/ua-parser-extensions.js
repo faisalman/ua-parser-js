@@ -375,8 +375,11 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Axios/jsdom/Scrapy/Java/urllib/requests
-        [/\b(axios|jsdom|scrapy|java|python-urllib|python-requests)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
+        // Apache-HttpClient/Axios/go-http-client/got/GuzzleHttp/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/Scrapy/superagent
+        [
+            /^(apache-httpclient|axios|(?:go|java)-http-client|got|guzzlehttp|java|libwww-perl|lua-resty-http|needle|node-(?:fetch|superagent)|okhttp|php-soap|postmanruntime|python-(?:urllib|requests)|scrapy)\/([\w\.]+)/i,
+            /(jsdom|(?<=\()java)\/([\w\.]+)/i
+        ], [NAME, VERSION, [TYPE, LIBRARY]]
     ]
 });
 
