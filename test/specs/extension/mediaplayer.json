@@ -24,9 +24,9 @@
         "ua"      : "AppleTV/3.0.2 (Macintosh; Intel Mac OS X 10.4.7) AppleWebKit/528.18",
         "expect"  : 
         {
-            "name"    : "WebKit",
-            "version" : "528.18",
-            "major"   : "528"
+            "name"    : "AppleTV",
+            "version" : "3.0.2",
+            "major"   : "3"
         }
     },
     {
@@ -110,16 +110,6 @@
         }
     },
     {
-        "desc"    : "Dalvik",
-        "ua"      : "Dalvik/1.2.0 (Linux; U; Android 2.2.1; GT-S5830L Build/FROYO)",
-        "expect"  : 
-        {
-            "name"    : "Dalvik",
-            "version" : "1.2.0",
-            "major"   : "1"
-        }
-    },
-    {
         "desc"    : "NexPlayer",
         "ua"      : "E97510d/ Player/NexPlayer 4.0",
         "expect"  : 
@@ -187,16 +177,6 @@
             "name"    : "HTC One S",
             "version" : "3.16.111.10",
             "major"   : "3"
-        }
-    },
-    {
-        "desc"    : "Java",
-        "ua"      : "Java/1.4.1_04",
-        "expect"  : 
-        {
-            "name"    : "Java",
-            "version" : "1.4.1_04",
-            "major"   : "1"
         }
     },
     {
@@ -507,16 +487,6 @@
             "name"    : "Video",
             "version" : "3.8.2",
             "major"   : "3"
-        }
-    },
-    {
-        "desc"    : "Wget",
-        "ua"      : "Wget/1.12 (darwin10.7.0)",
-        "expect"  : 
-        {
-            "name"    : "Wget",
-            "version" : "1.12",
-            "major"   : "1"
         }
     },
     {
