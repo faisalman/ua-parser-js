@@ -1,0 +1,56 @@
+[
+    {
+        "desc"    : "iOS in App",
+        "ua"      : "AppName/version CFNetwork/version Darwin/version",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "iOS with Chrome",
+        "ua"      : "Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "5.1.1"
+        }
+    },
+    {
+        "desc"    : "iOS with Opera Mini",
+        "ua"      : "Opera/9.80 (iPhone; Opera Mini/7.1.32694/27.1407; U; en) Presto/2.8.119 Version/11.10",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc": "iOS with FaceBook Mobile App",
+        "ua": "[FBAN/FBIOS;FBAV/283.0.0.44.117;FBBV/238386386;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/13.6.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/240127608]",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "13.6.1"
+        }
+    },
+    {
+        "desc": "iOS with Slack App",
+        "ua": "com.tinyspeck.chatlyio/23.04.10 (iPhone; iOS 16.4.1; Scale/3.00)",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "16.4.1"
+        }
+    },
+    {
+        "desc"    : "iOS BE App",
+        "ua"      : "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "7.0.2"
+        }
+    }
+]

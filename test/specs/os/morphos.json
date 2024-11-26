@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "MorphOS",
+        "ua"      : "AmigaVoyager/3.4.4 (MorphOS/PPC native)",
+        "expect"  :
+        {
+            "name"    : "MorphOS",
+            "version" : "undefined"
+        }
+    }
+]

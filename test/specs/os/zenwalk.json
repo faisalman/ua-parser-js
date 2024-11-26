@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Zenwalk",
+        "ua"      : "Flock/2.16 (Zenwalk 7.3; es_PR;)",
+        "expect"  :
+        {
+            "name"    : "Zenwalk",
+            "version" : "7.3"
+        }
+    }
+]

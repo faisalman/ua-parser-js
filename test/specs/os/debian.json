@@ -1,0 +1,56 @@
+[
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.7 (like Gecko) (Debian)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Debian GNU/Linux 8.1 (jessie)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.0 Maxthon/1.0.5.3 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "8.1"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "ELinks/0.12~pre5-4 (textmode; Debian; Linux 3.2.0-4-amd64 x86_64 192x47-2)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "w3m/0.5.3+debian-19",
+        "expect"  :
+        {
+            "name"    : "debian",
+            "version" : "19"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.3) Gecko/2008092814 (Debian-3.0.1-1)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "3.0.1-1"
+        }
+    },
+    {
+        "desc"    : "Debian",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/3.5; Linux 2.6.24.4; X11) KHTML/3.5.9 (like Gecko) (Debian package 4:3.5.9.dfsg.1-2+b1)",
+        "expect"  :
+        {
+            "name"    : "Debian",
+            "version" : "undefined"
+        }
+    }
+]

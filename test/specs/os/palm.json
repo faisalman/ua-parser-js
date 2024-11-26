@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Palm OS",
+        "ua"      : "Mozilla/4.76 [en] (PalmOS; U; WebPro3.0; Palm-Arz1)",
+        "expect"  :
+        {
+            "name"    : "Palm",
+            "version" : "undefined"
+        }
+    }
+]

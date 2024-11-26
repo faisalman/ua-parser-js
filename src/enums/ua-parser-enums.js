@@ -323,6 +323,7 @@ const OS = Object.freeze({
     IOS: 'iOS',
     JOLI: 'Joli',
     KAIOS: 'KaiOS',
+    KUBUNTU: 'Kubuntu',
     LINPUS: 'Linpus',
     LINSPIRE: 'Linspire',
     LINUX: 'Linux',

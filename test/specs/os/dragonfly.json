@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "DragonFly",
+        "ua"      : "Mozilla/5.0 (X11; U; DragonFly i386; de; rv:1.9.1) Gecko/20090720 Firefox/3.5.1",
+        "expect"  :
+        {
+            "name"    : "DragonFly",
+            "version" : "undefined"
+        }
+    }
+]

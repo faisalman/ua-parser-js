@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Mandriva",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.22) Gecko/20110907 Mandriva Linux/1.9.2.22-0.1mdv2010.2 (2010.2) Firefox/3.6.22",
+        "expect"  :
+        {
+            "name"    : "Mandriva",
+            "version" : "1.9.2.22-0.1mdv2010.2"
+        }
+    }
+]

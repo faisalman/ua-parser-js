@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "OpenSUSE",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.17) Gecko/20110420 SUSE/3.6.17-0.2.1 Firefox/3.6.17",
+        "expect"  :
+        {
+            "name"    : "SUSE",
+            "version" : "3.6.17-0.2.1"
+        }
+    }
+]

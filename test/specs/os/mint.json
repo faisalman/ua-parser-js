@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "Mint",
+        "ua"      : "Opera/9.80 (X11; Linux x86_64; Edition Linux Mint) Presto/2.12.388 Version/12.16",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Opera/9.64 (X11; Linux i686; U; Linux Mint; nb) Presto/2.1.1",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.5) Gecko/2008121622 Linux Mint/6 (Felicia) Firefox/3.0.4",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "6"
+        }
+    }
+]

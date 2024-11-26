@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Minix",
+        "ua"      : "Mozilla/5.0 (X11; Original ; Minix 3.3 ; rv:3.0)",
+        "expect"  :
+        {
+            "name"    : "Minix",
+            "version" : "3.3"
+        }
+    }
+]
