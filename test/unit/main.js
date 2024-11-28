@@ -4,12 +4,12 @@ var assert      = require('assert');
 var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
-var {UAParser}  = require('../src/main/ua-parser');
-var browsers    = require('./specs/browser/browser-all.json');
-var cpus        = require('./specs/cpu/cpu-all.json');
-var devices     = readJsonFiles('test/specs/device');
-var engines     = require('./specs/engine/engine-all.json');
-var os          = readJsonFiles('test/specs/os');
+var {UAParser}  = require('../../src/main/ua-parser');
+var browsers    = require('../data/ua/browser/browser-all.json');
+var cpus        = require('../data/ua/cpu/cpu-all.json');
+var devices     = readJsonFiles('test/data/ua/device');
+var engines     = require('../data/ua/engine/engine-all.json');
+var os          = readJsonFiles('test/data/ua/os');
 var { Headers } = require('node-fetch');
 
 function readJsonFiles(dir) {

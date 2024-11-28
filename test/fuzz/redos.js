@@ -1,6 +1,6 @@
 const { FuzzedDataProvider } = require('@jazzer.js/core');
-const { UAParser } = require('../src/main/ua-parser');
-const UA_MAX_LENGTH = 350;
+const { UAParser } = require('../../dist/main');
+const UA_MAX_LENGTH = 500;
 
 module.exports.fuzz = function (buffer) {
     const data = new FuzzedDataProvider(buffer);

@@ -202,14 +202,14 @@
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-esm.js",
     "build+test": "npm run build && npm run test",
-    "fuzz": "jazzer ./test/jazzer-fuzz-test.js --sync",
+    "fuzz": "jazzer ./test/fuzz/redos.js --sync",
     "test": "./script/test-all.sh",
-    "test:dts-lint": "tsd --typings src/main/ua-parser.d.ts --files test/dts-test.ts",
+    "test:dts-lint": "tsd --typings src/main/ua-parser.d.ts --files test/static/dts-lint.ts",
     "test:eslint": "eslint src && eslint script",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
-    "test:mocha": "mocha test/mocha*js",
-    "test:playwright": "playwright test"
+    "test:mocha": "mocha test/unit",
+    "test:playwright": "playwright test test/e2e --browser all"
   },
   "dependencies": {
     "detect-europe-js": "^0.1.2",

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import path from 'path';
 import url from 'url';
 
-const localHtml = `file://${path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '../')}/dist/ua-parser.html`;
+const localHtml = `file://${path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '../../')}/dist/ua-parser.html`;
 
 test.describe('Custom navigator.userAgent tests', () => {
 
@@ -83,7 +83,7 @@ test.describe('withClientHints() tests', () => {
 
 test.describe('withFeatureCheck() tests', () => {
 
-    test('Detect Brave', async ({ page }) => {
+    test('Detect Brave', async ({ page, browserName }) => {
         await page.addInitScript(() => {
             Object.defineProperty(navigator, 'brave', {
                 value: {
@@ -94,7 +94,12 @@ test.describe('withFeatureCheck() tests', () => {
         await page.goto(localHtml);
         // @ts-ignore
         let uap = await page.evaluate(() => UAParser());
-        expect(uap).toHaveProperty('browser.name', 'Chrome Headless');
+        const browserMap = {
+            chromium: 'Chrome Headless',
+            firefox: 'Firefox',
+            webkit: 'Safari'
+        }
+        expect(uap).toHaveProperty('browser.name', browserMap[browserName]);
         // @ts-ignore
         uap = await page.evaluate(() => UAParser().withFeatureCheck());
         expect(uap).toHaveProperty('browser.name', 'Brave');

@@ -1,7 +1,7 @@
 const assert = require('assert');
-const { UAParser } = require('../src/main/ua-parser');
-const { getDeviceVendor, isAppleSilicon, isAIBot, isBot, isChromeFamily } = require('../src/helpers/ua-parser-helpers');
-const { Bots, Emails } = require('../src/extensions/ua-parser-extensions');
+const { UAParser } = require('../../src/main/ua-parser');
+const { getDeviceVendor, isAppleSilicon, isAIBot, isBot, isChromeFamily } = require('../../src/helpers/ua-parser-helpers');
+const { Bots, Emails } = require('../../src/extensions/ua-parser-extensions');
 
 describe('getDeviceVendor', () => {
     it('Can guess the device vendor from a model name', () => {

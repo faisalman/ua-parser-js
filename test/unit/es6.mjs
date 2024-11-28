@@ -1,5 +1,5 @@
-import { UAParser } from '../src/main/ua-parser.mjs';
-import { CPU, Device, Engine } from '../src/enums/ua-parser-enums.mjs';
+import { UAParser } from '../../src/main/ua-parser.mjs';
+import { CPU, Device, Engine } from '../../src/enums/ua-parser-enums.mjs';
 import * as assert from 'assert';
 
 describe('Returns', () => {
