@@ -9,7 +9,7 @@ var browsers    = require('./specs/browser/browser-all.json');
 var cpus        = require('./specs/cpu/cpu-all.json');
 var devices     = readJsonFiles('test/specs/device');
 var engines     = require('./specs/engine/engine-all.json');
-var os          = require('./specs/os/os-all.json');
+var os          = readJsonFiles('test/specs/os');
 var { Headers } = require('node-fetch');
 
 function readJsonFiles(dir) {
@@ -395,9 +395,9 @@ describe('Map UA-CH headers', function () {
         assert.strictEqual(device.model, "Pixel 99");
         assert.strictEqual(device.vendor, undefined);
         assert.strictEqual(uap.engine.name, 'Blink');
-        assert.strictEqual(uap.engine.version, '110.0.0.0');
+        assert.strictEqual(uap.engine.version, '93.0.1.2');
         assert.strictEqual(engine.name, 'Blink');
-        assert.strictEqual(engine.version, '110.0.0.0');
+        assert.strictEqual(engine.version, '93.0.1.2');
         assert.strictEqual(uap.os.name, "Windows");
         assert.strictEqual(uap.os.version, "11");
         assert.strictEqual(os.name, "Windows");

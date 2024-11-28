@@ -85,6 +85,7 @@
         PREFIX_MOBILE  = 'Mobile ',
         SUFFIX_BROWSER = ' Browser',
         CHROME      = 'Chrome',
+        CHROMIUM    = 'Chromium',
         CHROMECAST  = 'Chromecast',
         EDGE        = 'Edge',
         FIREFOX     = 'Firefox',
@@ -1161,16 +1162,20 @@
     
             switch (this.itemType) {
                 case UA_BROWSER:
+                case UA_ENGINE:
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
                         for (var i in brands) {
                             var brandName = strip(/(Google|Microsoft) /, brands[i].brand || brands[i]),
                                 brandVersion = brands[i].version;
-                            if (!/not.a.brand/i.test(brandName) && (!prevName || (/chrom/i.test(prevName) && !/chromi/i.test(brandName)))) {
+                            if (this.itemType == UA_BROWSER && !/not.a.brand/i.test(brandName) && (!prevName || (/chrom/i.test(prevName) && brandName != CHROMIUM))) {
                                 this.set(NAME, brandName)
                                     .set(VERSION, brandVersion)
                                     .set(MAJOR, majorize(brandVersion));
                                 prevName = brandName;
+                            }
+                            if (this.itemType == UA_ENGINE && brandName == CHROMIUM) {
+                                this.set(VERSION, brandVersion);
                             }
                         }
                     }
