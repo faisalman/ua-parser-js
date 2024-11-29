@@ -8,6 +8,14 @@
         }
     },
     {
+        "desc"    : "i686",
+        "ua"      : "Mozilla/5.0 (X11; U; CrOS i686 9.10.0; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.253.0 Safari/532.5",
+        "expect"  :
+        {
+            "architecture"  : "ia32"
+        }
+    },
+    {
         "desc"    : "i386",
         "ua"      : "Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.7) Gecko/20040628 Epiphany/1.2.6",
         "expect"  :
