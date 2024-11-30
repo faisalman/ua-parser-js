@@ -1167,9 +1167,15 @@
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
                         for (var i in brands) {
-                            var brandName = strip(/(Google|Microsoft) /, brands[i].brand || brands[i]),
+                            var brandName = brands[i].brand || brands[i],
                                 brandVersion = brands[i].version;
                             if (this.itemType == UA_BROWSER && !/not.a.brand/i.test(brandName) && (!prevName || (/chrom/i.test(prevName) && brandName != CHROMIUM))) {
+                                brandName = strMapper(brandName, {
+                                    'Chrome' : 'Google Chrome',
+                                    'Edge' : 'Microsoft Edge',
+                                    'Chrome WebView' : 'Android WebView',
+                                    'Chrome Headless' : 'HeadlessChrome'
+                                });
                                 this.set(NAME, brandName)
                                     .set(VERSION, brandVersion)
                                     .set(MAJOR, majorize(brandVersion));
