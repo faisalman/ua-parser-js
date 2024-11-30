@@ -405,6 +405,15 @@
         }
     },
     {
+        "desc": "ASUS ZenWatch",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; ASUS ZenWatch Build/LWX48S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZenWatch",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Acer Iconia A1-810",
         "ua": "Mozilla/5.0 (Linux; Android 4.2.2; A1-810 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Safari/537.36",
         "expect": {
@@ -3159,6 +3168,24 @@
         }
     },
     {
+        "desc": "LG Watch Urbane",
+        "ua": "Mozilla/5.0 Linux; Android 7.1.1; LG Watch Urbane Build/NWD1.180306.004 AppleWebKit/537.36 KHTML, like Gecko Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "Watch Urbane",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "LG G Watch R",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; G Watch R Build/LCA44B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Crosswalk/15.44.384.12 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "G Watch R",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Loewe Smart TV",
         "ua": "Mozilla/5.0 (Linux; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36 OPR/46.0.2207.0 LOEWE-SL410/5.2.0.0 HbbTV/1.4.1 (; LOEWE; SL410; LOH/5.2.0.0;;) FVC/3.0 (LOEWE; SL410;) CE-HTML/1.0 Config (L:deu,CC:DEU) NETRANGEMMH",
         "expect": {
@@ -3237,6 +3264,15 @@
             "vendor": "Motorola",
             "model": "Moto Z3 Play",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto 360",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; Moto 360 Build/KNX01S) AppleWebKit/537.36 (KHTML, like Gecko) WIB/0.9.8 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "Moto 360",
+            "type": "wearable"
         }
     },
     {
@@ -3708,6 +3744,15 @@
         }
     },
     {
+        "desc": "OnePlus Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; OPWWE231 Build/TWR7.231113.001.OPWWE231_11_A.117.240703)",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPWWE231",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "OPPO Pad",
         "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; OPD2101 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.3.9.1290 Mobile Safari/537.36",
         "expect": {
@@ -3822,6 +3867,42 @@
             "vendor": "OPPO",
             "model": "X9007",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Watch 46mm",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; OW19W3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OW19W3",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "OPPO Watch 41mm",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; OW19W2 Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OW19W2",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "OPPO Watch 2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; OW20W1 Build/OPM1.171019.026.11_A.37.210713172937; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OW20W1",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "OPPO Watch X",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; OWWE231 Build/TWR7.231113.001.OWWE231_11_A.117.240703)",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OWWE231",
+            "type": "wearable"
         }
     },
     {
@@ -4383,6 +4464,15 @@
         }
     },
     {
+        "desc": "Samsung Galaxy Watch7",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 14; SM-L300 Build/AW2E.240318.016)",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-L300",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Samsung Note 10.1",
         "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-P605) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36",
         "expect": {
@@ -4695,6 +4785,15 @@
             "vendor": "Sony",
             "model": "BRAVIA 4K UR2",
             "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sony SmartWatch 3",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.2; SmartWatch 3 Build/LWX49K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SmartWatch 3",
+            "type": "wearable"
         }
     },
     {
