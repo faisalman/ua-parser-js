@@ -79,5 +79,14 @@
             "model": "Moto E (4)",
             "type": "mobile"
         }
+    },
+    {
+        "desc": "Motorola Moto 360",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; Moto 360 Build/KNX01S) AppleWebKit/537.36 (KHTML, like Gecko) WIB/0.9.8 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "Moto 360",
+            "type": "wearable"
+        }
     }
 ]

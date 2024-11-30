@@ -115,5 +115,14 @@
             "model": "OPD2203",
             "type": "tablet"
         }
+    },
+    {
+        "desc": "OnePlus Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; OPWWE231 Build/TWR7.231113.001.OPWWE231_11_A.117.240703)",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPWWE231",
+            "type": "wearable"
+        }
     }
 ]

@@ -151,5 +151,14 @@
             "model": "Z00ED",
             "type": "mobile"
         }
+    },
+    {
+        "desc": "ASUS ZenWatch",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; ASUS ZenWatch Build/LWX48S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZenWatch",
+            "type": "wearable"
+        }
     }
 ]

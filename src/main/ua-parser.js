@@ -76,6 +76,7 @@
         LG          = 'LG',
         MICROSOFT   = 'Microsoft',
         MOTOROLA    = 'Motorola',
+        ONEPLUS     = 'OnePlus',
         OPPO        = 'OPPO',
         SAMSUNG     = 'Samsung',
         SHARP       = 'Sharp',
@@ -576,7 +577,7 @@
             // Motorola
             /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
             /\bmot(?:orola)?[- ](\w*)/i,
-            /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i
+            /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, MOBILE]], [
             /\b(mz60\d|xoom[2 ]{0,2}) build\//i
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, TABLET]], [
@@ -585,7 +586,7 @@
             /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
-            /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i,
+            /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i,
             /\blg-?([\d\w]+) bui/i
             ], [MODEL, [VENDOR, LG], [TYPE, MOBILE]], [
 
@@ -617,7 +618,7 @@
             // OnePlus
             / (kb2005|in20[12]5|be20[12][59])\b/i,
             /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i
-            ], [MODEL, [VENDOR, 'OnePlus'], [TYPE, MOBILE]], [
+            ], [MODEL, [VENDOR, ONEPLUS], [TYPE, MOBILE]], [
 
             // Amazon
             /(alexa)webm/i,
@@ -697,14 +698,12 @@
             /(infinix) (x1101b?)/i                                              // Infinix XPad
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
                                                                                 // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax/Advan
             /; (hmd|imo) ([\w ]+?)(?: bui|\))/i,                                // HMD/IMO
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
-            /(asus)-?(\w+)/i,                                                   // Asus
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
             /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i,                          // Lenovo
-            /(jolla)/i,                                                         // Jolla
             /(oppo) ?([\w ]+) bui/i                                             // OPPO
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
@@ -784,13 +783,23 @@
             // WEARABLES
             ///////////////////
 
-            /\b(sm-[lr]\d\d[05][fnuw]?s?)\b/i                                   // Samsung Galaxy Watch
+            /\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i                       // Samsung Galaxy Watch
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, WEARABLE]], [
             /((pebble))app/i,                                                   // Pebble
-            /(google) (pixel watch[\w ]*)( bui|\))/i                            // Pixel Watch
+            /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i        // Asus ZenWatch / LG Watch / Pixel Watch
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
+            /(ow(?:19|20)?we?[1-3]{1,3})/i                                      // Oppo Watch
+            ], [MODEL, [VENDOR, OPPO], [TYPE, WEARABLE]], [
             /(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i                              // Apple Watch
             ], [MODEL, [VENDOR, APPLE], [TYPE, WEARABLE]], [
+            /(opwwe\d{3})/i                                                     // OnePlus Watch
+            ], [MODEL, [VENDOR, ONEPLUS], [TYPE, WEARABLE]], [
+            /(moto 360)/i                                                       // Motorola 360
+            ], [MODEL, [VENDOR, MOTOROLA], [TYPE, WEARABLE]], [
+            /(smartwatch 3)/i                                                   // Sony SmartWatch
+            ], [MODEL, [VENDOR, SONY], [TYPE, WEARABLE]], [
+            /(g watch r)/i                                                      // LG G Watch R
+            ], [MODEL, [VENDOR, LG], [TYPE, WEARABLE]], [
             /droid.+; (wt63?0{2,3})\)/i
             ], [MODEL, [VENDOR, ZEBRA], [TYPE, WEARABLE]], [
 
