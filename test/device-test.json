@@ -4941,6 +4941,33 @@
         }
     },
     {
+        "desc": "MIUI Xiaomi Mi MIX 3 5G",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 9; Mi MIX 3 5G MIUI/V10.3.2.0.PEMEUVF)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Mi MIX 3 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "MIUI POCOPHONE F1",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 9; POCOPHONE F1 MIUI/9.6.27)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "POCOPHONE F1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "MIUI Xiaomi M2006C3MT",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 10; M2006C3MT MIUI/V12.0.7.0.QCRMIXM)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2006C3MT",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi 2201117TG",
         "ua": "Mozilla/5.0 (Linux; Android 11; 2201117TG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.98 Mobile Safari/537.36",
         "expect": {

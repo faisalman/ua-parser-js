@@ -234,6 +234,15 @@
         }
     },
     {
+        "desc"    : "MIUI",
+        "ua"      : "Dalvik/2.1.0 (Linux; U; Android 9; Mi MIX 3 5G MIUI/V10.3.2.0.PEMEUVF)",
+        "expect"  :
+        {
+            "name"    : "Android",
+            "version" : "9"
+        }
+    },
+    {
         "desc"    : "HarmonyOS",
         "ua"      : "Mozilla/5.0 (Linux; Android 10; HarmonyOS; YAL-AL10; HMSCore 6.3.0.327; GMSCore 21.48.15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 HuaweiBrowser/12.0.3.310 Mobile Safari/537.36",
         "expect"  :
