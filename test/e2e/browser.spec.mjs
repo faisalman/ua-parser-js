@@ -3,6 +3,11 @@ import path from 'path';
 import url from 'url';
 
 const localHtml = `file://${path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '../../')}/dist/ua-parser.html`;
+const browserMap = {
+    chromium: 'Chrome Headless',
+    firefox: 'Firefox',
+    webkit: 'Safari'
+}
 
 test.describe('Custom navigator.userAgent tests', () => {
 
@@ -42,42 +47,48 @@ test.describe('User-defined user-agent tests', () => {
 
 test.describe('withClientHints() tests', () => {
 
-    test('Detect custom Client Hints data', async ({ page }) => {
-        await page.addInitScript(() => {
-            Object.defineProperty(navigator, 'userAgentData', {
-                value: {
-                    brands: [],
-                    platform: '',
-                    mobile: false,
-                    getHighEntropyValues: () => {
-                        return Promise.resolve({
-                            brands: [
-                                {
-                                    brand: 'Chromium',
-                                    version: '110'
-                                },
-                                {
-                                    brand: 'Not(A:Brand',
-                                    version: '110'
-                                },
-                                {
-                                    brand: 'New Browser',
-                                    version: '110'
-                                }
-                            ],
-                            platform: 'New OS',
-                            formFactors: 'New Form Factor'
-                        });
+    test('Detect custom Client Hints data', async ({ page, browserName }) => {        
+        await page.addInitScript((browserName) => {
+            if (browserName == 'chromium') {
+                Object.defineProperty(navigator, 'userAgentData', {
+                    value: {
+                        brands: [],
+                        platform: '',
+                        mobile: false,
+                        getHighEntropyValues: () => {
+                            return Promise.resolve({
+                                brands: [
+                                    {
+                                        brand: 'Chromium',
+                                        version: '110'
+                                    },
+                                    {
+                                        brand: 'Not(A:Brand',
+                                        version: '110'
+                                    },
+                                    {
+                                        brand: 'New Browser',
+                                        version: '110'
+                                    }
+                                ],
+                                platform: 'New OS',
+                                formFactors: 'New Form Factor'
+                            });
+                        }
                     }
-                }
-            });
-        });
+                });
+            }
+        }, browserName);
         await page.goto(localHtml);
         // @ts-ignore
         const uap = await page.evaluate(async () => await UAParser().withClientHints());
-        expect(uap).toHaveProperty('browser.name', 'New Browser');
-        expect(uap).toHaveProperty('os.name', 'New OS');
-        expect(uap).toHaveProperty('device.type', undefined);
+        if (browserName == 'chromium') {
+            expect(uap).toHaveProperty('browser.name', 'New Browser');
+            expect(uap).toHaveProperty('os.name', 'New OS');
+            expect(uap).toHaveProperty('device.type', undefined);
+        } else {
+            expect(uap).toHaveProperty('browser.name', browserMap[browserName]);
+        }
     });
 });
 
@@ -94,11 +105,6 @@ test.describe('withFeatureCheck() tests', () => {
         await page.goto(localHtml);
         // @ts-ignore
         let uap = await page.evaluate(() => UAParser());
-        const browserMap = {
-            chromium: 'Chrome Headless',
-            firefox: 'Firefox',
-            webkit: 'Safari'
-        }
         expect(uap).toHaveProperty('browser.name', browserMap[browserName]);
         // @ts-ignore
         uap = await page.evaluate(() => UAParser().withFeatureCheck());
