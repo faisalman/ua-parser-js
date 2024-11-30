@@ -390,10 +390,10 @@ describe('Map UA-CH headers', function () {
         assert.strictEqual(cpu.architecture, "arm64");
         assert.strictEqual(uap.device.type, "mobile");
         assert.strictEqual(uap.device.model, "Pixel 99");
-        assert.strictEqual(uap.device.vendor, undefined);
+        assert.strictEqual(uap.device.vendor, "Google");
         assert.strictEqual(device.type, "mobile");
         assert.strictEqual(device.model, "Pixel 99");
-        assert.strictEqual(device.vendor, undefined);
+        assert.strictEqual(device.vendor, "Google");
         assert.strictEqual(uap.engine.name, 'Blink');
         assert.strictEqual(uap.engine.version, '93.0.1.2');
         assert.strictEqual(engine.name, 'Blink');

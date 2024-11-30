@@ -1200,11 +1200,16 @@
                     }
                     if (uaCH[MODEL]) {
                         this.set(MODEL, uaCH[MODEL]);
-                    }
-                    // Xbox-Specific Detection
-                    if (uaCH[MODEL] == 'Xbox') {
-                        this.set(TYPE, CONSOLE)
-                            .set(VENDOR, MICROSOFT);
+                        if (!this.get(TYPE) || !this.get(VENDOR)) {
+                            var reParse = {};
+                            rgxMapper.call(reParse, 'droid 9; ' + uaCH[MODEL] + ')', rgxMap);
+                            if (!this.get(TYPE) && !!reParse.type) {
+                                this.set(TYPE, reParse.type);
+                            }
+                            if (!this.get(VENDOR) && !!reParse.vendor) {
+                                this.set(VENDOR, reParse.vendor);
+                            }
+                        }
                     }
                     if (uaCH[FORMFACTORS]) {
                         var ff;
