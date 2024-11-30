@@ -161,7 +161,7 @@ const ExtraDevices = Object.freeze({
         /\b(zur\d{3}) b/i                                                   // Swiss ZUR Tablet
         ], [MODEL, [VENDOR, 'Swiss'], [TYPE, TABLET]], [
 
-        /\b((zeki)?tb.*\b) b/i                                              // Zeki Tablets
+        /^((zeki)?tb.*\b) b/i                                               // Zeki Tablets
         ], [MODEL, [VENDOR, 'Zeki'], [TYPE, TABLET]], [
 
         /\b([yr]\d{2}) b/i,
