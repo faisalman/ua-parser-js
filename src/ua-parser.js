@@ -54,6 +54,7 @@
         LG      = 'LG',
         MICROSOFT = 'Microsoft',
         MOTOROLA  = 'Motorola',
+        ONEPLUS = 'OnePlus',
         OPERA   = 'Opera',
         OPPO    = 'OPPO',
         SAMSUNG = 'Samsung',
@@ -701,7 +702,7 @@
             ], [MODEL, [VENDOR, SHARP], [TYPE, SMARTTV]],[
             /(bravia[\w ]+)( bui|\))/i                                              // Sony
             ], [MODEL, [VENDOR, SONY], [TYPE, SMARTTV]], [
-            /(mitv-\w{5}) bui/i                                                 // Xiaomi
+            /(mi(tv|box)-?\w+) bui/i                                            // Xiaomi
             ], [MODEL, [VENDOR, XIAOMI], [TYPE, SMARTTV]], [
             /Hbbtv.*(technisat) (.*);/i                                         // TechniSAT
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
