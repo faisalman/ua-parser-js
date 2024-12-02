@@ -547,5 +547,23 @@
             "model": "MiTV-MOOQ0",
             "type": "smarttv"
         }
+    },
+    {
+        "desc": "Xiaomi Mi TV",
+        "ua": "Mozilla/5.0 (Linux; Android 9; MiTV4I Build/PI; en-in) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36 Puffin/7.8.3.40913AP",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MiTV4I",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Box",
+        "ua": "Mozilla/5.0 (Linux; Android 9; MIBOX3 Build/PI; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/119.0.6045.193 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MIBOX3",
+            "type": "smarttv"
+        }
     }
 ]
