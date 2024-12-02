@@ -4,6 +4,7 @@
 
 import type { IResult, IDevice } from "../main/ua-parser";
 
+declare function getMarketingName(model: string, vendor: string): boolean;
 declare function isMobile(val: IResult | IDevice | string): boolean;
 declare function isSmartTV(val: IResult | IDevice | string): boolean;
 declare function isTablet(val: IResult | IDevice | string): boolean;
@@ -11,6 +12,7 @@ declare function isWearable(val: IResult | IDevice | string): boolean;
 declare function isXR(val: IResult | IDevice | string): boolean;
 
 export {
+    getMarketingName,
     isMobile,
     isSmartTV,
     isTablet,

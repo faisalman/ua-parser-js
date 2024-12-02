@@ -1,6 +1,7 @@
 const assert = require('assert');
 const { UAParser } = require('../../src/main/ua-parser');
-const { isMobile, isSmartTV, isTablet, isWearable, isXR } = require('../../src/device-utils/ua-parser-device-utils');
+const { getMarketingName, isMobile, isSmartTV, isTablet, isWearable, isXR } = require('../../src/device-utils/ua-parser-device-utils');
+const { Vendor } = require('../../src/enums/ua-parser-enums');
 
 describe('Device type check', () => {
 
@@ -43,5 +44,13 @@ describe('Device type check', () => {
     it('isXR()', () => {
         assert.strictEqual(isXR(advanM4), false);
         assert.strictEqual(isXR(questPro), true);
+    });
+});
+
+describe('getMarketingName()', () => {
+
+    it('Returns marketing name from given model name', () => {
+        assert.strictEqual(getMarketingName('M2101K9C', Vendor.XIAOMI), 'Mi 11 Lite 5G');
+        assert.strictEqual(getMarketingName('SM-S928N', Vendor.SAMSUNG), 'Galaxy S24 Ultra');
     });
 });
