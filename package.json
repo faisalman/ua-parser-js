@@ -178,6 +178,11 @@
       "import": "./src/main/ua-parser.mjs",
       "types": "./src/main/ua-parser.d.ts"
     },
+    "./device-utils": {
+      "require": "./src/device-utils/ua-parser-device-utils.js",
+      "import": "./src/device-utils/ua-parser-device-utils.mjs",
+      "types": "./src/device-utils/ua-parser-device-utils.d.ts"
+    },
     "./enums": {
       "require": "./src/enums/ua-parser-enums.js",
       "import": "./src/enums/ua-parser-enums.mjs",

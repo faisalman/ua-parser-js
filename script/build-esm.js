@@ -36,7 +36,14 @@ const modules = [
             [/esversion\: 3/ig, 'esversion: 6'],
             [/\/[\/\s]+export[\s\S]+/ig,'export {UAParser};']
         ]
-    },{
+    },
+    {
+        src : 'src/device-utils/ua-parser-device-utils.js',
+        dest :'src/device-utils/ua-parser-device-utils.mjs',
+        title : 'ua-parser-js/device-utils',
+        replacements : []
+    },
+    {
         src : 'src/enums/ua-parser-enums.js',
         dest :'src/enums/ua-parser-enums.mjs',
         title : 'ua-parser-js/enums',
