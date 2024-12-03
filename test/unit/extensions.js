@@ -48,6 +48,15 @@ describe('Extensions', () => {
     assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: "axios", version: "1.3.5", major: "1", type: "library"});
     assert.deepEqual(libraryParser.setUA(jsdom).getBrowser(), {name: "jsdom", version: "20.0.3", major: "20", type: "library"});
     assert.deepEqual(libraryParser.setUA(scrapy).getBrowser(), {name: "Scrapy", version: "1.5.0", major: "1", type: "library"});
+
+    // Bluesky
+    const bluesky = 'Mozilla/5.0 (compatible; Bluesky Cardyb/1.1; +mailto:support@bsky.app)';
+    assert.deepEqual(new UAParser(bluesky, Bots).getBrowser(), {
+        name: 'Bluesky',
+        version: '1.1',
+        major: '1',
+        type: 'fetcher'
+    });
 });
 
 describe('Merge', () => {

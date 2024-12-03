@@ -218,31 +218,25 @@ const Fetchers = Object.freeze({
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
             // BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / Telegrambot / Twitterbot / UptimeRobot
-            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot)\/([\w\.]+)/i,
+            // Google Site Verifier / Meta / Yahoo! Japan
+            // Yandex Bots - https://yandex.com/bots
+            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
-            // Google Site Verifier
-            /(google-site-verification)\/([\w\.]+)/i,
-
-            // Meta
-            /(meta-externalfetcher)\/([\w\.]+)/i,
+            // Bluesky
+            /(bluesky) cardyb\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
             /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
             
             // WhatsApp
-            /(whatsapp)\/([\w\.]+)[\/ ][ianw]/i,
-
-            // Yahoo! Japan
-            /(y!?j-dlc)\/([\w\.]+)/i,
-
-            // Yandex Bots - https://yandex.com/bots
-            /(yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
-            /(yandex(?:sitelinks|userproxy))/i
+            /(whatsapp)\/([\w\.]+)[\/ ][ianw]/i
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
-        // Google Bots / Cohere / Snapchat / Vercelbot
-        [/(cohere-ai|vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
+        [
+            // Google Bots / Cohere / Snapchat / Vercelbot / Yandex Bots
+            /(cohere-ai|vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat|yandex(?:sitelinks|userproxy))/i
+        ], 
         [NAME, [TYPE, FETCHER]],
     ]
 });
