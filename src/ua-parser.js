@@ -364,9 +364,9 @@
             /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i,                         // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
-                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Obigo/Mosaic/Go/ICE/UP.Browser
-            /(links) \(([\w\.]+)/i                                              // Links
+            /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
+                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Obigo/Mosaic/Go/ICE/UP.Browser/Ladybird
+            /\b(links) \(([\w\.]+)/i                                            // Links
             ], [NAME, [VERSION, /_/g, '.']], [
             
             /(cobalt)\/([\w\.]+)/i                                              // Cobalt
@@ -804,8 +804,11 @@
             /ekioh(flow)\/([\w\.]+)/i,                                          // Flow
             /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,                           // KHTML/Tasman/Links
             /(icab)[\/ ]([23]\.[\d\.]+)/i,                                      // iCab
-            /\b(libweb)/i
+
+            /\b(libweb)/i                                                       // LibWeb
             ], [NAME, VERSION], [
+            /ladybird\//i
+            ], [[NAME, 'LibWeb']], [
 
             /rv\:([\w\.]{1,9})\b.+(gecko)/i                                     // Gecko
             ], [VERSION, NAME]

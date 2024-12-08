@@ -1059,6 +1059,16 @@
         }
     },
     {
+        "desc"    : "Ladybird",
+        "ua"      : "Mozilla/5.0 (Linux; x86_64) Ladybird/1.0",
+        "expect"  :
+        {
+            "name"    : "Ladybird",
+            "version" : "1.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "LibreWolf",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0 LibreWolf/97.0.1",
         "expect"  :
