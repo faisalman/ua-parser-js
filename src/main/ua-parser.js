@@ -19,20 +19,35 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.0',
+    var LIBVERSION  = '2.0.0',      // UAParser.version
+        UA_MAX_LENGTH = 500,        // UA string over this length will be trimmed
+        USER_AGENT  = 'user-agent',
         EMPTY       = '',
         UNKNOWN     = '?',
+
+        // typeof
         FUNC_TYPE   = 'function',
         UNDEF_TYPE  = 'undefined',
         OBJ_TYPE    = 'object',
         STR_TYPE    = 'string',
-        MAJOR       = 'major',
-        MODEL       = 'model',
+
+        // properties
+        UA_BROWSER  = 'browser',
+        UA_CPU      = 'cpu',
+        UA_DEVICE   = 'device',
+        UA_ENGINE   = 'engine',
+        UA_OS       = 'os',
+        UA_RESULT   = 'result',
+        
         NAME        = 'name',
         TYPE        = 'type',
         VENDOR      = 'vendor',
         VERSION     = 'version',
         ARCHITECTURE= 'architecture',
+        MAJOR       = 'major',
+        MODEL       = 'model',
+
+        // device types
         CONSOLE     = 'console',
         MOBILE      = 'mobile',
         TABLET      = 'tablet',
@@ -40,9 +55,11 @@
         WEARABLE    = 'wearable',
         XR          = 'xr',
         EMBEDDED    = 'embedded',
+
+        // browser types
         INAPP       = 'inapp',
-        USER_AGENT  = 'user-agent',
-        UA_MAX_LENGTH = 500,
+
+        // client hints
         BRANDS      = 'brands',
         FORMFACTORS = 'formFactors',
         FULLVERLIST = 'fullVersionList',
@@ -59,12 +76,8 @@
         CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
         CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
         CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTORS, BITNESS],
-        UA_BROWSER  = 'browser',
-        UA_CPU      = 'cpu',
-        UA_DEVICE   = 'device',
-        UA_ENGINE   = 'engine',
-        UA_OS       = 'os',
-        UA_RESULT   = 'result',
+
+        // device vendors
         AMAZON      = 'Amazon',
         APPLE       = 'Apple',
         ASUS        = 'ASUS',
@@ -83,8 +96,8 @@
         SONY        = 'Sony',
         XIAOMI      = 'Xiaomi',
         ZEBRA       = 'Zebra',
-        PREFIX_MOBILE  = 'Mobile ',
-        SUFFIX_BROWSER = ' Browser',
+
+        // browsers
         CHROME      = 'Chrome',
         CHROMIUM    = 'Chromium',
         CHROMECAST  = 'Chromecast',
@@ -93,6 +106,11 @@
         OPERA       = 'Opera',
         FACEBOOK    = 'Facebook',
         SOGOU       = 'Sogou',
+
+        PREFIX_MOBILE  = 'Mobile ',
+        SUFFIX_BROWSER = ' Browser',
+
+        // os
         WINDOWS     = 'Windows';
    
     var isWindow            = typeof window !== UNDEF_TYPE,
@@ -464,8 +482,8 @@
             /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i,                         // Mozilla
 
             // Other
-            /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
-                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Obigo/Mosaic/Go/ICE/UP.Browser
+            /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
+                                                                                // Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf/Obigo/Mosaic/Go/ICE/UP.Browser/Ladybird
             /\b(links) \(([\w\.]+)/i                                            // Links
             ], [NAME, [VERSION, /_/g, '.']], [
             
@@ -855,8 +873,11 @@
             /ekioh(flow)\/([\w\.]+)/i,                                          // Flow
             /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,                           // KHTML/Tasman/Links
             /(icab)[\/ ]([23]\.[\d\.]+)/i,                                      // iCab
-            /\b(libweb)/i
+
+            /\b(libweb)/i                                                       // LibWeb
             ], [NAME, VERSION], [
+            /ladybird\//i
+            ], [[NAME, 'LibWeb']], [
 
             /rv\:([\w\.]{1,9})\b.+(gecko)/i                                     // Gecko
             ], [VERSION, NAME]

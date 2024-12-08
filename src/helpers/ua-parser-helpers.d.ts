@@ -2,7 +2,7 @@
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
-import { IResult } from "../main/ua-parser";
+import type { IResult } from "../main/ua-parser";
 
 declare function getDeviceVendor(model: string): string | undefined;
 declare function isAppleSilicon(resultOrUA: IResult | string): boolean;
