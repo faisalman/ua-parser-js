@@ -239,4 +239,13 @@ Made with [contributors-img](https://contrib.rocks).
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
 
-Support the open-source editions of UAParser.js on [OpenCollective](https://opencollective.com/ua-parser-js) or [GitHub Sponsors](https://github.com/sponsors/faisalman).
+You can support the open-source editions of UAParser.js through one of the following options:
+
+[![OpenCollective](https://img.shields.io/badge/OpenCollective-dddddd?style=for-the-badge&logo=opencollective&color=dddddd
+)](https://opencollective.com/ua-parser-js)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-333333?style=for-the-badge&logo=githubsponsors&color=333333
+)](https://github.com/sponsors/faisalman)
+[![PayPal](https://img.shields.io/badge/Paypal-003087?style=for-the-badge&logo=paypal&color=003087
+)](https://paypal.me/faisalman)
+[![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
+)](https://store.faisalman.com/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
