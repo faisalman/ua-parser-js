@@ -769,6 +769,8 @@
             ], [VENDOR, [TYPE, EMBEDDED]], [
             /(aeobc)\b/i                                                        // Echo Dot
             ], [MODEL, [VENDOR, AMAZON], [TYPE, EMBEDDED]], [
+            /windows iot/i
+            ], [[TYPE, EMBEDDED]], [
 
             ////////////////////
             // MIXED (GENERIC)
@@ -814,10 +816,10 @@
             // Windows
             /microsoft (windows) (vista|xp)/i                                   // Windows (iTunes)
             ], [NAME, VERSION], [
-            /(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i             // Windows Phone
+            /(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i         // Windows Phone
             ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
-            /windows nt 6\.2; (arm)/i,                                        // Windows RT
-            /windows[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i,
+            /windows nt 6\.2; (arm)/i,                                          // Windows RT
+            /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i,
             /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i
             ], [[VERSION, strMapper, windowsVersionMap], [NAME, 'Windows']], [
 

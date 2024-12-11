@@ -81,6 +81,15 @@
         }
     },
     {
+        "desc"    : "Windows IoT",
+        "ua"      : "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
+        "expect"  :
+        {
+            "name"    : "Windows IoT",
+            "version" : "10.0"
+        }
+    },
+    {
         "desc"    : "WeChat Desktop for Windows Built-in Browser",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.901.400 QQBrowser/9.0.2524.400",
         "expect"  :
