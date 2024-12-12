@@ -366,6 +366,7 @@ const OS = Object.freeze({
     SYMBIAN: 'Symbian',
     TIZEN: 'Tizen',
     UBUNTU: 'Ubuntu',
+    UBUNTU_TOUCH: 'Ubuntu Touch',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
     WATCHOS: 'watchOS',

@@ -922,7 +922,10 @@
 
             // Mobile OSes
             /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
-            ], [VERSION, NAME], [                                               // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS/OpenHarmony
+            ], [VERSION, NAME], [                                               
+            /(ubuntu) ([\w\.]+) like android/i                                  // Ubuntu Touch
+            ], [[NAME, /(.+)/, '$1 Touch'], VERSION], [
+                                                                                // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS/OpenHarmony
             /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish|openharmony)[-\/ ]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,                                      // Blackberry
             /(tizen|kaios)[\/ ]([\w\.]+)/i,                                     // Tizen/KaiOS
