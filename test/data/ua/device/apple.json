@@ -117,6 +117,15 @@
         }
     },
     {
+        "desc": "Apple HomePod",
+        "ua": "AppleCoreMedia/1.0.0.15D61 (HomePod; U; CPU OS 11_2_5 like Mac OS X; en_us)",
+        "expect": {
+            "vendor": "Apple",
+            "model": "HomePod",
+            "type": "embedded"
+        }
+    },
+    {
         "desc": "Issue #519",
         "ua": "ios/iPhone/14.2/SOME_CUSTOM_APP_VERSION",
         "expect": {

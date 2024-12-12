@@ -840,6 +840,8 @@
             ], [VENDOR, [TYPE, EMBEDDED]], [
             /(aeobc)\b/i                                                        // Echo Dot
             ], [MODEL, [VENDOR, AMAZON], [TYPE, EMBEDDED]], [
+            /(homepod).+mac os/i                                                // Apple HomePod
+            ], [MODEL, [VENDOR, APPLE], [TYPE, EMBEDDED]], [
             /windows iot/i
             ], [[TYPE, EMBEDDED]], [
 
@@ -898,7 +900,7 @@
             ], [[VERSION, strMapper, windowsVersionMap], [NAME, WINDOWS]], [
 
             // iOS/macOS
-            /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,              // iOS
+            /[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i,             // iOS
             /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i,
             /cfnetwork\/.+darwin/i
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [

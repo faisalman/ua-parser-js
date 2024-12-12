@@ -52,5 +52,14 @@
             "name"    : "iOS",
             "version" : "7.0.2"
         }
+    },
+    {
+        "desc": "Apple HomePod",
+        "ua": "AppleCoreMedia/1.0.0.15D61 (HomePod; U; CPU OS 11_2_5 like Mac OS X; en_us)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "11.2.5"
+        }
     }
 ]
