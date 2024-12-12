@@ -420,6 +420,7 @@
             /(Klarna)\/([\w\.]+)/i,                                             // Klarna Shopping Browser for iOS & Android
             /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
+            /(daum)apps[\/ ]([\w\.]+)/i,                                        // Daum App
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay

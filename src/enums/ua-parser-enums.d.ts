@@ -29,6 +29,7 @@ export const Browser: Readonly<{
     COBALT: "Cobalt";
     COC_COC: "Coc Coc";
     CONKEROR: "Conkeror";
+    DAUM: "Daum";
     DILLO: "Dillo";
     DOLPHIN: "Dolphin";
     DORIS: "Doris";
