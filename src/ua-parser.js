@@ -843,7 +843,7 @@
             /(ubuntu) ([\w\.]+) like android/i                                  // Ubuntu Touch
             ], [[NAME, /(.+)/, '$1 Touch'], VERSION], [
                                                                                 // Android/Blackberry/WebOS/QNX/Bada/RIM/KaiOS/Maemo/MeeGo/S40/Sailfish OS/OpenHarmony/Tizen
-            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i
+            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/\.; ]?([\d\.]*)/i
             ], [NAME, VERSION], [
             /\(bb(10);/i                                                        // BlackBerry 10
             ], [VERSION, [NAME, BLACKBERRY]], [

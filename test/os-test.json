@@ -540,6 +540,15 @@
         }
     },
     {
+        "desc"    : "Ubuntu Touch",
+        "ua"      : "Mozilla/5.0 (Linux; Ubuntu 16.04 like Android 4.4) AppleWebKit/537.36 Chromium/65.0.3325.151 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Ubuntu Touch",
+            "version" : "16.04"
+        }
+    },
+    {
         "desc"    : "Kubuntu",
         "ua"      : "Mozilla/5.0 (compatible; Konqueror/4.4; Linux 2.6.32-22-generic; X11; en_US) KHTML/4.4.3 (like Gecko) Kubuntu",
         "expect"  :
