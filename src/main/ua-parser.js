@@ -784,7 +784,10 @@
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,                          // Roku
             /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i         // HbbTV devices
             ], [[VENDOR, trim], [MODEL, trim], [TYPE, SMARTTV]], [
-            /\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i                   // SmartTV from Unidentified Vendors
+                                                                                // SmartTV from Unidentified Vendors
+            /droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i
+            ], [MODEL, [TYPE, SMARTTV]], [
+            /\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i
             ], [[TYPE, SMARTTV]], [
 
             ///////////////////
