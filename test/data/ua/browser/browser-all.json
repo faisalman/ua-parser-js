@@ -2504,6 +2504,26 @@
         }
     },
     {
+      "desc"     : "Daum App Android",
+      "ua"       : "Mozilla/5.0 (Linux; Android 11; SM-G970N Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36 DaumApps/7.5.0 DaumDevice/mobile",
+      "expect"   : {
+        "name"   : "DaumApps",
+        "version": "7.5.0",
+        "major"  : "7",
+        "type"    : "inapp"
+      }
+    },
+    {
+      "desc"     : "Daum App iOS",
+      "ua"       : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari/605.1.15 Mobile/15E148 DaumApps/7.5.1 DaumDevice/mobile",
+      "expect"   : {
+        "name"   : "DaumApps",
+        "version": "7.5.1",
+        "major"  : "7",
+        "type"    : "inapp"
+      }
+    },
+    {
         "desc"     : "TikTok",
         "ua"       : "Mozilla/5.0 (Linux; Android 11; 21061119AG Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile Safari/537.36 trill_2022109040 JsSdk/1.0 NetType/MOBILE Channel/googleplay AppName/musical_ly app_version/21.9.4 ByteLocale/ru-RU ByteFullLocale/ru-RU Region/KG BytedanceWebview/d8a21c6",
         "expect"   : {

@@ -38,6 +38,7 @@ const Browser = Object.freeze({
     COBALT: 'Cobalt',
     COC_COC: 'Coc Coc',
     CONKEROR: 'Conkeror',
+    DAUM: 'Daum',
     DILLO: 'Dillo',
     DOLPHIN: 'Dolphin',
     DORIS: 'Doris',
