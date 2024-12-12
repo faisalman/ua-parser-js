@@ -6408,7 +6408,7 @@
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; 4ife 4K Smart TV Box Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36 Vinebre",
         "expect": {
             "vendor": "undefined",
-            "model": "undefined",
+            "model": "4ife 4K",
             "type": "smarttv"
         }
     },
@@ -6688,6 +6688,33 @@
             "vendor": "undefined",
             "model": "undefined",
             "type": "embedded"
+        }
+    },
+    {
+        "desc": "ChangHong Android TV",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; ChangHong Android TV Build/LMY49J) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/10.8 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "ChangHong",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "MStar Android TV",
+        "ua": "Mozilla/5.0 (Linux; Android 4.3.1; MStar Android TV Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "MStar",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "ONIDA Android TV",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; ONIDA Android TV Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2542.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "ONIDA",
+            "type": "smarttv"
         }
     }
 ]
