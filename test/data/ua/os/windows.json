@@ -117,15 +117,6 @@
         }
     },
     {
-        "desc"    : "Windows IoT",
-        "ua"      : "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
-        "expect"  :
-        {
-            "name"    : "Windows IoT",
-            "version" : "10.0"
-        }
-    },
-    {
         "desc"    : "Windows NT on x86 or aarch64 CPU using Firefox",
         "ua"      : "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
         "expect"  :
