@@ -1845,6 +1845,15 @@
         }
     },
     {
+        "desc": "Apple HomePod",
+        "ua": "AppleCoreMedia/1.0.0.15D61 (HomePod; U; CPU OS 11_2_5 like Mac OS X; en_us)",
+        "expect": {
+            "vendor": "Apple",
+            "model": "HomePod",
+            "type": "embedded"
+        }
+    },
+    {
         "desc": "Apple Watch",
         "ua": "atc/1.0 watchOS/7.3.3 model/Watch4,2 hwp/t8006 build/18S830 (6; dt:191)",
         "expect": {

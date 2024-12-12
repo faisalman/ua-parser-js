@@ -819,6 +819,15 @@
         }
     },
     {
+        "desc": "Apple HomePod",
+        "ua": "AppleCoreMedia/1.0.0.15D61 (HomePod; U; CPU OS 11_2_5 like Mac OS X; en_us)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "11.2.5"
+        }
+    },
+    {
         "desc"    : "watchOS",
         "ua"      : "server-bag [Watch OS,8.4,19S546,Watch3,4]",
         "expect"  :
