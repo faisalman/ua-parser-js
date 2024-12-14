@@ -377,30 +377,30 @@
 
         cpu : [[
 
-            /(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i                     // AMD64 (x64)
+            /\b((amd|x|x86[-_]?|wow|win)64)\b/i                                 // AMD64 (x64)
             ], [[ARCHITECTURE, 'amd64']], [
 
             /(ia32(?=;))/i,                                                     // IA32 (quicktime)
             /\b((i[346]|x)86)(pc)?\b/i                                          // IA32 (x86)
             ], [[ARCHITECTURE, 'ia32']], [
 
-            /\b(aarch64|arm(v?8e?l?|_?64))\b/i                                 // ARM64
+            /\b(aarch64|arm(v?[89]e?l?|_?64))\b/i                               // ARM64
             ], [[ARCHITECTURE, 'arm64']], [
 
-            /\b(arm(?:v[67])?ht?n?[fl]p?)\b/i                                   // ARMHF
+            /\b(arm(v[67])?ht?n?[fl]p?)\b/i                                     // ARMHF
             ], [[ARCHITECTURE, 'armhf']], [
 
             // PocketPC mistakenly identified as PowerPC
-            /windows (ce|mobile); ppc;/i
+            /( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i
             ], [[ARCHITECTURE, 'arm']], [
 
-            /((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i                            // PowerPC
+            /((ppc|powerpc)(64)?)( mac|;|\))/i                                  // PowerPC
             ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
 
-            /(sun4\w)[;\)]/i                                                    // SPARC
+            / sun4\w[;\)]/i                                                     // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
 
-            /((?:avr32|ia64(?=;))|68k(?=\))|\barm(?=v(?:[1-7]|[5-7]1)l?|;|eabi)|(?=atmel )avr|(?:irix|mips|sparc)(?:64)?\b|pa-risc)/i
+            /\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i
                                                                                 // IA64, 68K, ARM/64, AVR/32, IRIX/64, MIPS/64, SPARC/64, PA-RISC
             ], [[ARCHITECTURE, lowerize]]
         ],
