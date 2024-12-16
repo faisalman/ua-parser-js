@@ -19,8 +19,8 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.0',      // UAParser.version
-        UA_MAX_LENGTH = 500,        // UA string over this length will be trimmed
+    var LIBVERSION  = '2.0.0',
+        UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
         UNKNOWN     = '?',
@@ -864,7 +864,7 @@
             ], [[TYPE, TABLET]], [
             /(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i    // Unidentifiable Mobile
             ], [[TYPE, MOBILE]], [
-            /(android[-\w\. ]{0,9});.+buil/i                                    // Generic Android Device
+            /droid .+?; ([\w\. -]+)( bui|\))/i                                  // Generic Android Device
             ], [MODEL, [VENDOR, 'Generic']]
         ],
 
