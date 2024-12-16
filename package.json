@@ -229,7 +229,7 @@
     "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",
     "tsd": "^0.29.0",
-    "uglify-js": "~3.12.0"
+    "uglify-js": "~3.19.3"
   },
   "repository": {
     "type": "git",
