@@ -793,7 +793,7 @@
             ], [[TYPE, TABLET]], [
             /(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i    // Unidentifiable Mobile
             ], [[TYPE, MOBILE]], [
-            /(android[-\w\. ]{0,9});.+buil/i                                    // Generic Android Device
+            /droid .+?; ([\w\. -]+)( bui|\))/i                                  // Generic Android Device
             ], [MODEL, [VENDOR, 'Generic']]
         ],
 

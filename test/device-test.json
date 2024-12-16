@@ -5944,7 +5944,14 @@
         "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; i980 Build/MRA58K)",
         "expect": {
             "vendor": "Generic",
-            "model": "Android 6.0.1"
+            "model": "i980"
+        }
+    },{
+        "desc": "Generic Android Device",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 9; X96mini_RP Build/X96mini_RP)",
+        "expect": {
+            "vendor": "Generic",
+            "model": "X96mini_RP"
         }
     },
     {
