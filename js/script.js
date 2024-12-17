@@ -99,7 +99,7 @@ $(document)
         $('#demo-result').get(0).scrollIntoView();
         updateDemo(UAParser(qs));
     } else {
-        UAParser().withClientHints().then(function(result) {
+        (UAParser().withFeatureCheck()).withClientHints().then(function(result) {
             updateDemo(result);
         });
     }

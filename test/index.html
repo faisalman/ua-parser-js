@@ -1,9 +1,30 @@
 <script src="../js/ua-parser.js"></script>
 <script>
     try {
-        var result = JSON.stringify(UAParser(), null, "\t");
-        document.write("<pre>" + result + "</pre>");
-        console.log(result);
+        UAParser().withClientHints().then(function (result) {
+            var uap = JSON.stringify(result.withFeatureCheck(), null, "\t");
+            document.write("<p><pre>UAParser.js:\n" + uap + "</pre></p>");
+            console.log('UAParser.js result: ', uap);
+            if (navigator.userAgentData) {
+                navigator.userAgentData
+                    .getHighEntropyValues([
+                        "brands",
+                        "mobile",
+                        "platform",
+                        "architecture",
+                        "bitness",
+                        "formFactors",
+                        "model",
+                        "platformVersion",
+                        "fullVersionList",
+                        "wow64"
+                    ])
+                    .then(function (values) {
+                        document.write("<pre>Client Hints:\n" + JSON.stringify(values, null, "\t") + "</pre>");
+                        console.log('Client Hints result: ', values);
+                    });
+            };
+        });
     } catch (e) {
         document.write("Error: " + e);
     }
