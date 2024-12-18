@@ -25,6 +25,14 @@
         }
     },
     {
+        "desc": "Unknown VR Device",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.2; Unknown Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile VR Safari/537.36",
+        "expect": {
+            "model": "Unknown",
+            "type": "xr"
+        }
+    },
+    {
         "desc": "Desktop (IE11 with Tablet string)",
         "ua": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect": {
