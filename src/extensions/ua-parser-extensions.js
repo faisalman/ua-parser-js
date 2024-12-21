@@ -321,6 +321,24 @@ const Libraries = Object.freeze({
     ]
 });
 
+/////////////
+// VEHICLES
+////////////
+
+const Vehicles = Object.freeze({
+    device : [
+        [
+            /dilink.+(byd) auto/i,                                              // BYD
+        ], [VENDOR], [
+
+            /(rivian) (r1t)/i,                                                  // Rivian
+        ], [VENDOR, MODEL], [
+
+            /vcc.+netfront/i,                                                   // Volvo
+        ], [[VENDOR, 'Volvo']]
+    ]
+});
+
 //////////
 // BOTS
 /////////
@@ -343,5 +361,6 @@ module.exports = {
     Fetchers,
     InApps,
     Libraries,
-    MediaPlayers
+    MediaPlayers,
+    Vehicles
 };
