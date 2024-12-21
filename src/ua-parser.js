@@ -280,7 +280,7 @@
             /miuibrowser\/([\w\.]+)/i                                           // MIUI Browser
             ], [VERSION, [NAME, 'MIUI' + SUFFIX_BROWSER]], [
             /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
-            ], [VERSION, [NAME, PREFIX_MOBILE + FIREFOX]], [
+            ], [VERSION, [NAME, FIREFOX]], [
             /\bqihoobrowser\/?([\w\.]*)/i                                       // 360
             ], [VERSION, [NAME, '360']], [
             /\b(qq)\/([\w\.]+)/i                                                // QQ
@@ -429,10 +429,14 @@
             /\b(sh-?[altvz]?\d\d[a-ekm]?)/i
             ], [MODEL, [VENDOR, SHARP], [TYPE, MOBILE]], [
 
+            // Honor
+            /(?:honor)([-\w ]+)[;\)]/i
+            ], [MODEL, [VENDOR, 'Honor'], [TYPE, MOBILE]], [
+
             // Huawei
             /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, TABLET]], [
-            /(?:huawei|honor)([-\w ]+)[;\)]/i,
+            /(?:huawei)([-\w ]+)[;\)]/i,
             /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i
             ], [MODEL, [VENDOR, HUAWEI], [TYPE, MOBILE]], [
 
