@@ -566,7 +566,7 @@
 
             // Energizer
             /; (energy ?\w+)(?: bui|\))/i,
-            /; energizer ([\w ]+?)(?: bui|\))/i
+            /; energizer ([\w ]+)(?: bui|\))/i
             ], [MODEL, [VENDOR, 'Energizer'], [TYPE, MOBILE]], [
 
             // Cat
@@ -574,13 +574,18 @@
             /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i
             ], [MODEL, [VENDOR, 'Cat'], [TYPE, MOBILE]], [
 
+            // Smartfren
+            /((?:new )?andromax[\w- ]+)(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Smartfren'], [TYPE, MOBILE]], [
+
             // Nothing
             /droid.+; (a(?:015|06[35]|142p?))/i
             ], [MODEL, [VENDOR, 'Nothing'], [TYPE, MOBILE]], [
 
             // MIXED
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax)[-_ ]?([-\w]*)/i,
-                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
+                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax/Advan
+            /; (imo) ((?!tab)[\w ]+?)(?: bui|\))/i,                             // IMO
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(asus)-?(\w+)/i,                                                   // Asus
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
@@ -589,6 +594,7 @@
             /(oppo) ?([\w ]+) bui/i                                             // OPPO
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
+            /(imo) (tab \w+)/i,                                                 // IMO
             /(kobo)\s(ereader|touch)/i,                                         // Kobo
             /(archos) (gamepad2?)/i,                                            // Archos
             /(hp).+(touchpad(?!.+tablet)|tablet)/i,                             // HP TouchPad
