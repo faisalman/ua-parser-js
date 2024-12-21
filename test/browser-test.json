@@ -1,5 +1,15 @@
 [
     {
+        "desc"    : "115 Browser",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36 115Browser/24.3.0.3",
+        "expect"  :
+        {
+            "name"    : "115",
+            "version" : "24.3.0.3",
+            "major"   : "24"
+        }
+    },
+    {
         "desc"    : "2345 Browser",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.0; MI NOTE Pro Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36 Mb2345Browser/15.6.2",
         "expect"  :
