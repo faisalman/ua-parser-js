@@ -1,12 +1,62 @@
 [
     {
+        "desc"    : "2345 Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; MI NOTE Pro Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36 Mb2345Browser/15.6.2",
+        "expect"  :
+        {
+            "name"    : "2345",
+            "version" : "15.6.2",
+            "major"   : "15"
+        }
+    },
+    {
+        "desc"    : "2345 Chrome",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML like Gecko) Chrome/39.0.2171.99 Safari/537.36 2345chrome v3.0.0.9739",
+        "expect"  :
+        {
+            "name"    : "2345",
+            "version" : "3.0.0.9739",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "2345 Explorer",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.2.1.17116",
+        "expect"  :
+        {
+            "name"    : "2345",
+            "version" : "9.2.1.17116",
+            "major"   : "9"
+        }
+    },
+    {
         "desc"    : "360 Browser on iOS",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/607.3.9 (KHTML, like Gecko) Mobile/16G102 QHBrowser/317 QihooBrowser/4.0.10",
         "expect"  :
         {
-            "name"    : "360 Browser",
-            "version" : "undefined",
-            "major"   : "undefined"
+            "name"    : "360",
+            "version" : "4.0.10",
+            "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "360 Secure Browser on Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 QIHU 360SE",
+        "expect"  :
+        {
+            "name"    : "360",
+            "version" : "86.0.4240.198",
+            "major"   : "86"
+        }
+    },
+    {
+        "desc"    : "360 Speed Browser on Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 QIHU 360EE",
+        "expect"  :
+        {
+            "name"    : "360",
+            "version" : "86.0.4240.198",
+            "major"   : "86"
         }
     },
     {
@@ -2095,16 +2145,6 @@
         "expect"  :
         {
             "name"    : "LBBROWSER"
-        }
-    },
-    {
-        "desc"    : "2345 Browser",
-        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.2.1.17116",
-        "expect"  :
-        {
-            "name"    : "2345Explorer",
-            "version" : "9.2.1.17116",
-            "major"   : "9"
         }
     },
     {

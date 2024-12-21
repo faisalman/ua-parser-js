@@ -276,11 +276,11 @@
             /coast\/([\w\.]+)/i                                                 // Opera Coast
             ], [VERSION, [NAME, OPERA+' Coast']], [
             /miuibrowser\/([\w\.]+)/i                                           // MIUI Browser
-            ], [VERSION, [NAME, 'MIUI '+BROWSER]], [
-            /fxios\/([-\w\.]+)/i                                                // Firefox for iOS
-            ], [VERSION, [NAME, FIREFOX]], [
-            /\bqihu|(qi?ho?o?|360)browser/i                                     // 360
-            ], [[NAME, '360' + SUFFIX_BROWSER]], [
+            ], [VERSION, [NAME, 'MIUI' + SUFFIX_BROWSER]], [
+            /fxios\/([\w\.-]+)/i                                                // Firefox for iOS
+            ], [VERSION, [NAME, PREFIX_MOBILE + FIREFOX]], [
+            /\bqihoobrowser\/?([\w\.]*)/i                                       // 360
+            ], [VERSION, [NAME, '360']], [
             /\b(qq)\/([\w\.]+)/i                                                // QQ
             ], [[NAME, /(.+)/, '$1Browser'], VERSION], [
             /(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i
@@ -293,12 +293,13 @@
             ], [[NAME, 'Sogou Mobile'], VERSION], [
             /(electron)\/([\w\.]+) safari/i,                                    // Electron-based App
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
-            /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i                        // QQBrowser/2345 Browser
+            /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i   // QQ/2345
             ], [NAME, VERSION], [
             /(lbbrowser|rekonq)/i,                                              // LieBao Browser/Rekonq
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME], [
-            /ome\/([\w\.]+) \w* ?(iron) saf/i                                   // Iron
+            /ome\/([\w\.]+) \w* ?(iron) saf/i,                                  // Iron
+            /ome\/([\w\.]+).+qihu (360)[es]e/i                                  // 360
             ], [VERSION, NAME], [
 
             // WebView
