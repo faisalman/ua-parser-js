@@ -346,7 +346,7 @@
             // Gecko based
             /(navigator|netscape\d?)\/([-\w\.]+)/i                              // Netscape
             ], [[NAME, 'Netscape'], VERSION], [
-            /(wolvic)\/([\w\.]+)/i                                              // Wolvic
+            /(wolvic|librewolf)\/([\w\.]+)/i                                    // Wolvic/LibreWolf
             ], [NAME, VERSION], [
             /mobile vr; rv:([\w\.]+)\).+firefox/i                               // Firefox Reality
             ], [VERSION, [NAME, FIREFOX+' Reality']], [
