@@ -1629,6 +1629,15 @@
         }
     },
     {
+        "desc": "Issue #747",
+        "ua": "python-requests/2.25.1",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "undefined"
+        }
+    },
+    {
         "desc": "OnePlus One",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.4; A0001 Build/KTU84Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36",
         "expect": {
@@ -2012,7 +2021,7 @@
         "expect": {
             "vendor": "PICO",
             "model": "4",
-            "type": "xr"
+            "type": "wearable"
         }
     },
     {
@@ -2021,7 +2030,7 @@
         "expect": {
             "vendor": "PICO",
             "model": "4",
-            "type": "xr"
+            "type": "wearable"
         }
     },
     {
@@ -2030,7 +2039,7 @@
         "expect": {
             "vendor": "Pico",
             "model": "Neo3 Link",
-            "type": "xr"
+            "type": "wearable"
         }
     },
     {
