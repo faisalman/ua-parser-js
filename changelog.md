@@ -4,6 +4,15 @@
 
 Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
 
+## Version 0.7.40 / 1.0.40
+- Add new browser: 115, LibreWolf, Slimboat, Slimjet
+- Add new device: Advan, Cat, Energizer, IMO, Micromax, Smartfren
+- Add new engine: ArkWeb, Servo
+- Add new os: OpenHarmony
+- Improve browser detection: 2345, 360, Dragon, Iron, Maxthon
+- Recognize Honor as a separate device vendor from Huawei
+- Fix Python Request mistakenly identified as Meta Quest
+
 ## Version 0.7.39 / 1.0.39
 - Add new feature: executable command using `npx ua-parser-js "[INSERT-UA-HERE]"`
 - Add new browser: Helio, Pico Browser, Wolvic

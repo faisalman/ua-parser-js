@@ -18,7 +18,7 @@ JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model fro
 * Demo      : https://uaparser.dev
 * Source    : https://github.com/faisalman/ua-parser-js
 * Documentation : 
-  * v1 : https://github.com/faisalman/ua-parser-js/tree/1.0.39#documentation
+  * v1 : https://github.com/faisalman/ua-parser-js/tree/1.0.x#documentation
   * v2 : https://docs.uaparser.dev
 
 ***
@@ -100,20 +100,20 @@ The methods are self explanatory, here's a small overview on all the available m
 
 ```sh
 # Possible 'browser.name':
-2345Explorer, 360 Browser, Alipay, Amaya, Android Browser, Arora, Avant, Avast, 
-AVG, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
+115 Browser, 2345Explorer, 360 Browser, Alipay, Amaya, Android Browser, Arora, 
+Avant, Avast, AVG, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
 Chrome Headless, Chrome WebView, Chrome, Chromium, Cobalt, Comodo Dragon, Dillo,
 Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
 Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Helio, Heytap, 
 Huawei Browser, iCab, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, 
 Iceweasel, Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, 
-Kindle, Klar, Klarna, Konqueror, LBBROWSER, Line, LinkedIn, Links, Lunascape, 
-Lynx, MIUI Browser, Maemo, Maxthon, Midori, Minimo, Mobile Safari, Mosaic, 
-Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, 
+Kindle, Klar, Klarna, Konqueror, LBBROWSER, LibreWolf, Line, LinkedIn, Links, 
+Lunascape, Lynx, MIUI Browser, Maemo, Maxthon, Midori, Minimo, Mobile Safari, 
+Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, 
 Oculus Browser, OmniWeb, Opera Coast, Opera [GX/Mini/Mobi/Tablet], PaleMoon, 
 PhantomJS, Phoenix, Pico Browser, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, 
 Quark, QupZilla, RockMelt, Safari, Sailfish Browser, Samsung Internet, SeaMonkey, 
-Silk, Skyfire, Sleipnir, Slim, SlimBrowser, Smart Lenovo Browser, Snapchat, 
+Silk, Skyfire, Sleipnir, Slim[Browser/Boat/Jet], Smart Lenovo Browser, Snapchat, 
 Sogou [Explorer/Mobile], Swiftfox, Tesla, TikTok, Tizen Browser, Twitter, 
 UCBrowser, UP.Browser, Vivaldi, Vivo Browser, w3m, Waterfox, WeChat, Weibo, 
 Whale Browser, Wolvic, Yandex, ...
@@ -136,12 +136,13 @@ console, mobile, tablet, smarttv, wearable, embedded
 ##########
 
 # Possible 'device.vendor':
-Acer, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Dell,
-Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HTC, Huawei, Infinix, 
-itel, Jolla, Kobo, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, Nintendo, 
-Nokia, Nothing, Nvidia, OnePlus, OPPO, Ouya, Palm, Panasonic, Pebble, Polytron, 
-Realme, RIM, Roku, Samsung, Sharp, Siemens, Sony[Ericsson], Sprint, TCL, Tecno, 
-Tesla, Ulefone, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
+Acer, Advan, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Cat, 
+Dell, Energizer, Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HTC, 
+Huawei, IMO, Infinix, itel, Jolla, Kobo, Lenovo, LG, Meizu, Micromax, Microsoft, 
+Motorola, Nexian, Nintendo, Nokia, Nothing, Nvidia, OnePlus, OPPO, Ouya, Palm, 
+Panasonic, Pebble, Polytron, Realme, RIM, Roku, Samsung, Sharp, Siemens, 
+Smartfren, Sony[Ericsson], Sprint, TCL, Tecno, Tesla, Ulefone, Vivo, Vodafone, 
+Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -151,8 +152,8 @@ Tesla, Ulefone, Vivo, Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 ```sh
 # Possible 'engine.name'
-Amaya, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, LibWeb, Links, Lynx, 
-NetFront, NetSurf, Presto, Tasman, Trident, w3m, WebKit
+Amaya, ArkWeb, Blink, EdgeHTML, Flow, Gecko, Goanna, iCab, KHTML, LibWeb, Links, 
+Lynx, NetFront, NetSurf, Presto, Servo, Tasman, Trident, w3m, WebKit
 
 # 'engine.version' determined dynamically
 ```
@@ -166,10 +167,10 @@ AIX, Amiga OS, Android[-x86], Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS,
 Contiki, Fedora, Firefox OS, FreeBSD, Debian, Deepin, DragonFly, elementary OS, 
 Fuchsia, Gentoo, GhostBSD, GNU, Haiku, HarmonyOS, HP-UX, Hurd, iOS, Joli, KaiOS, 
 Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix, 
-Mint, Morph OS, NetBSD, NetRange, NetTV, Nintendo, OpenBSD, OpenVMS, OS/2, Palm, 
-PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, RIM Tablet OS, 
-RISC OS, Sabayon, Sailfish, SerenityOS, Series40, Slackware, Solaris, SUSE, 
-Symbian, Tizen, Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, 
+Mint, Morph OS, NetBSD, NetRange, NetTV, Nintendo, OpenBSD, OpenHarmony, OpenVMS, 
+OS/2, Palm, PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, 
+RIM Tablet OS, RISC OS, Sabayon, Sailfish, SerenityOS, Series40, Slackware, 
+Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, 
 Windows [Phone/Mobile], Zenwalk, ...
 
 # 'os.version' determined dynamically
