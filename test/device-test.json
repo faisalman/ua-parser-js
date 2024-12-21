@@ -9,6 +9,33 @@
         }
     },
     {
+        "desc": "Advan M4",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0; ADVAN M4 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/44.0.2403.119 Mobile Safari/537.36 OPR/28.0.2254.119214",
+        "expect": {
+            "vendor": "ADVAN",
+            "model": "M4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Advan S40",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; ADVAN S40 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Mobile Safari/537.36 EdgA/79.0.309.58",
+        "expect": {
+            "vendor": "ADVAN",
+            "model": "S40",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Advan Sketsa 2",
+        "ua": "Mozilla/5.0 (Linux; Android 11; ADVAN 1011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Safari/537.36",
+        "expect": {
+            "vendor": "ADVAN",
+            "model": "1011",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "ASUS Nexus 7",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 7 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
         "expect": {
@@ -207,6 +234,42 @@
         }
     },
     {
+        "desc": "Cat B15Q",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; B15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Cat",
+            "model": "B15Q",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Cat B35",
+        "ua": "Mozilla/5.0 (Mobile; CAT B35; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5.1",
+        "expect": {
+            "vendor": "Cat",
+            "model": "B35",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Cat S22 Flip",
+        "ua": "Mozilla/5.0 (Linux; Android 11; S22 FLIP Build/RKQ1.210416.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.165 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Cat",
+            "model": "S22 FLIP",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Cat S62 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; S62 Pro Build/RKQ1.210406.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36 GSA/12.34.17.23.arm64",
+        "expect": {
+            "vendor": "Cat",
+            "model": "S62 Pro",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Desktop (IE11 with Tablet string)",
         "ua": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect": {
@@ -221,6 +284,33 @@
         "expect": {
             "vendor": "undefined",
             "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Energizer Energy 400",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Energy400 Build/MRA58K test-keys; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.158 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/172.0.0.66.93;]",
+        "expect": {
+            "vendor": "Energizer",
+            "model": "Energy400",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Energizer Energy 400S",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Energy 400S Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.85 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Energizer",
+            "model": "Energy 400S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Energizer Ultimate 65G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Energizer Ultimate 65G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Energizer",
+            "model": "Ultimate 65G",
             "type": "mobile"
         }
     },
@@ -669,7 +759,7 @@
         "desc": "Huawei Honor 6A",
         "ua": "Mozilla/5.0 (Linux; Android 7.0; DLI-L22 Build/HONORDLI-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.116 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/252.0.0.22.355;]",
         "expect": {
-            "vendor": "Huawei",
+            "vendor": "Honor",
             "model": "DLI-L22",
             "type": "mobile"
         }
@@ -678,7 +768,7 @@
         "desc": "Huawei Honor 7",
         "ua": "Mozilla/5.0 (Linux; Android 6.0; PLK-L01 Build/HONORPLK-L01; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.116 Mobile Safari/537.36",
         "expect": {
-            "vendor": "Huawei",
+            "vendor": "Honor",
             "model": "PLK-L01",
             "type": "mobile"
         }
@@ -687,7 +777,7 @@
         "desc": "Huawei 10 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 9; HRY-LX1 Build/HONORHRY-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.91 Mobile Safari/537.36",
         "expect": {
-            "vendor": "Huawei",
+            "vendor": "Honor",
             "model": "HRY-LX1",
             "type": "mobile"
         }
@@ -780,6 +870,42 @@
             "vendor": "Huawei",
             "model": "BKK-LX2",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "IMO FEEL A2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; IMO FEEL A2 Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/49.0.2623.105 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "IMO",
+            "model": "FEEL A2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "IMO Q2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; IMO Q2 Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 GSA/7.22.24.21.arm",
+        "expect": {
+            "vendor": "IMO",
+            "model": "Q2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "IMO S2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; IMO S2 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.162 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "IMO",
+            "model": "S2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "IMO Tab X9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; id-id; IMO TAB X9 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect": {
+            "vendor": "IMO",
+            "model": "TAB X9",
+            "type": "tablet"
         }
     },
     {
@@ -1143,6 +1269,33 @@
         }
     },
     {
+        "desc": "Micromax Bharat 2 Plus",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.0; en-US; Micromax Q402Plus Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Micromax",
+            "model": "Q402Plus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Micromax Canvas Infinity",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.1.2; en-US; Micromax HS2 Build/N2G47H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/13.2.0.1296 (SpeedMode) U4/1.0 UCWEB/2.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Micromax",
+            "model": "HS2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Micromax In 1b",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; Micromax E7533 Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 OPR/54.0.2254.56148",
+        "expect": {
+            "vendor": "Micromax",
+            "model": "E7533",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Microsoft Lumia 950",
         "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586",
         "expect": {
@@ -1473,6 +1626,15 @@
             "vendor": "Facebook",
             "model": "Quest Pro",
             "type": "wearable"
+        }
+    },
+    {
+        "desc": "Issue #747",
+        "ua": "python-requests/2.25.1",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "undefined"
         }
     },
     {
@@ -1851,6 +2013,69 @@
             "vendor": "Philips",
             "model": "32PHS5301/12",
             "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Pico 4",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; PICO 4 OS5.8.2 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.38 Chrome/105.0.5195.68 VR Safari/537.36",
+        "expect": {
+            "vendor": "PICO",
+            "model": "4",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Pico 4",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; PICO 4 OS5.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36 OculusBrowser/7.0",
+        "expect": {
+            "vendor": "PICO",
+            "model": "4",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Pico Neo3 Link",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; Pico Neo3 Link OS5.8.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36",
+        "expect": {
+            "vendor": "Pico",
+            "model": "Neo3 Link",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Polytron Prime 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.0; POLYTRON_P552 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 OPR/50.0.2254.149182",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "P552",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Polytron Rocket T1",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.0; en-US; POLYTRON R2501 Build/LRX21M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/13.1.2.1293 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "R2501",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Polytron Rocket T6",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; POLYTRON R2509) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.92 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "R2509",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Polytron Zap 6 Posh",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.1; in-ID; POLYTRON_4G501 Build/LMY47D) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.10.0.1163 UCTurbo/1.9.9.900 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "4G501",
+            "type": "mobile"
         }
     },
     {
@@ -2300,6 +2525,33 @@
         "expect": {
             "vendor": "Sharp",
             "model": "SHV42",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Smartfren Andromax L",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Andromax B26D2H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Smartfren",
+            "model": "Andromax B26D2H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Smartfren Andromax G2",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Smartfren Andromax AD9A1H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Smartfren",
+            "model": "Andromax AD9A1H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Smartfren New Andromax I",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.1.2; id-id; New Andromax-i Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Smartfren",
+            "model": "New Andromax-i",
             "type": "mobile"
         }
     },

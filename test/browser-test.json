@@ -1,12 +1,72 @@
 [
     {
+        "desc"    : "115 Browser",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36 115Browser/24.3.0.3",
+        "expect"  :
+        {
+            "name"    : "115",
+            "version" : "24.3.0.3",
+            "major"   : "24"
+        }
+    },
+    {
+        "desc"    : "2345 Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; MI NOTE Pro Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36 Mb2345Browser/15.6.2",
+        "expect"  :
+        {
+            "name"    : "2345",
+            "version" : "15.6.2",
+            "major"   : "15"
+        }
+    },
+    {
+        "desc"    : "2345 Chrome",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML like Gecko) Chrome/39.0.2171.99 Safari/537.36 2345chrome v3.0.0.9739",
+        "expect"  :
+        {
+            "name"    : "2345",
+            "version" : "3.0.0.9739",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "2345 Explorer",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.2.1.17116",
+        "expect"  :
+        {
+            "name"    : "2345",
+            "version" : "9.2.1.17116",
+            "major"   : "9"
+        }
+    },
+    {
         "desc"    : "360 Browser on iOS",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/607.3.9 (KHTML, like Gecko) Mobile/16G102 QHBrowser/317 QihooBrowser/4.0.10",
         "expect"  :
         {
-            "name"    : "360 Browser",
-            "version" : "undefined",
-            "major"   : "undefined"
+            "name"    : "360",
+            "version" : "4.0.10",
+            "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "360 Secure Browser on Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 QIHU 360SE",
+        "expect"  :
+        {
+            "name"    : "360",
+            "version" : "86.0.4240.198",
+            "major"   : "86"
+        }
+    },
+    {
+        "desc"    : "360 Speed Browser on Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 QIHU 360EE",
+        "expect"  :
+        {
+            "name"    : "360",
+            "version" : "86.0.4240.198",
+            "major"   : "86"
         }
     },
     {
@@ -404,9 +464,19 @@
         "ua"      : "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.7 (KHTML, like Gecko) Comodo_Dragon/16.1.1.0 Chrome/16.0.912.63 Safari/535.7",
         "expect"  :
         {
-            "name"    : "Comodo Dragon",
+            "name"    : "Dragon",
             "version" : "16.1.1.0",
             "major"   : "16"
+        }
+    },
+    {
+        "desc"    : "Comodo Dragon",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Dragon/98.0.4758.102 Chrome/98.0.4758.102 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Dragon",
+            "version" : "98.0.4758.102",
+            "major"   : "98"
         }
     },
     {
@@ -849,6 +919,26 @@
         }
     },
     {
+        "desc"    : "Iron",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Iron Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Iron",
+            "version" : "129.0.0.0",
+            "major"   : "129"
+        }
+    },
+    {
+        "desc"    : "Iron",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Iron Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Iron",
+            "version" : "113.0.0.0",
+            "major"   : "113"
+        }
+    },
+    {
         "desc"    : "Jasmine",
         "ua"      : "SAMSUNG-S8000/S8000XXIF3 SHP/VPP/R5 Jasmine/1.0 Nextreaming SMM-MMS/1.2.0 profile/MIDP-2.1 configuration/CLDC-1.1",
         "expect"  :
@@ -959,6 +1049,26 @@
         }
     },
     {
+        "desc"    : "LibreWolf",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 LibreWolf/91.0",
+        "expect"  :
+        {
+            "name"    : "LibreWolf",
+            "version" : "91.0",
+            "major"   : "91"
+        }
+    },
+    {
+        "desc"    : "LibreWolf",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0 LibreWolf/97.0.1",
+        "expect"  :
+        {
+            "name"    : "LibreWolf",
+            "version" : "97.0.1",
+            "major"   : "97"
+        }
+    },
+    {
         "desc"    : "LINE on Android",
         "ua"      : "Mozilla/5.0 (Linux; Android 5.0; ASUS_Z00AD Build/LRX21V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.81 Mobile Safari/537.36 Line/6.5.1/IAB",
         "expect"  :
@@ -1009,13 +1119,73 @@
         }
     },
     {
-        "desc"    : "Maxthon",
+        "desc"    : "Maxthon on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.1.1; KFAUWI Build/LVY48F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Safari/537.36 MxBrowser/4.3.5.2000",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "4.3.5.2000",
+            "major"   : "4"
+        }
+    },
+    {
+        "desc"    : "Maxthon on iOS",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/10.0 Mobile/15E148 Safari/602.1 MXiOS/5.4.5.2",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "5.4.5.2",
+            "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Linux",
+        "ua"      : "Mozilla/5.0 (X11; Linux i686; Ubuntu 14.04.3 LTS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.0 Maxthon/1.0.5.3 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "1.0.5.3",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Maxthon on macOS",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6 Maxthon/5.1.102",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "5.1.102",
+            "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Windows Server 2003",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; MyIE2; .NET CLR 1.1.4322)",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Windows XP",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; SV1; Maxthon; .NET CLR 1.1.4322)",
         "expect"  :
         {
             "name"    : "Maxthon",
             "version" : "undefined",
             "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Maxthon on Windows 10",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36 Maxthon/5.2.7.2000",
+        "expect"  :
+        {
+            "name"    : "Maxthon",
+            "version" : "5.2.7.2000",
+            "major"   : "5"
         }
     },
     {
@@ -1570,13 +1740,33 @@
         }
     },
     {
+        "desc"    : "SlimBoat",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/534.34 (KHTML, like Gecko) SlimBoat/1.1.23 Chrome/11.0.696.7 Version/5.1 Safari/534.34",
+        "expect"  :
+        {
+            "name"    : "SlimBoat",
+            "version" : "1.1.23",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "SlimBrowser",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SlimBrowser)",
         "expect"  :
         {
-            "name"    : "Slim",
+            "name"    : "SlimBrowser",
             "version" : "undefined",
             "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Slimjet",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36 Slimjet/20.0.2.0",
+        "expect"  :
+        {
+            "name"    : "Slimjet",
+            "version" : "20.0.2.0",
+            "major"   : "20"
         }
     },
     {
@@ -2045,16 +2235,6 @@
         "expect"  :
         {
             "name"    : "LBBROWSER"
-        }
-    },
-    {
-        "desc"    : "2345 Browser",
-        "ua"      : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.2.1.17116",
-        "expect"  :
-        {
-            "name"    : "2345Explorer",
-            "version" : "9.2.1.17116",
-            "major"   : "9"
         }
     },
     {

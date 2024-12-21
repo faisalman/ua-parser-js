@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js",
   "name": "ua-parser-js",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment",
   "keywords": [
@@ -206,8 +206,8 @@
       "url": "https://paypal.me/faisalman"
     },
     {
-        "type": "github",
-        "url": "https://github.com/sponsors/faisalman"
+      "type": "github",
+      "url": "https://github.com/sponsors/faisalman"
     }
   ]
 }
