@@ -501,7 +501,7 @@
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, MOBILE]], [
 
             // Sony
-            /droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
+            /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
             ], [MODEL, [VENDOR, SONY], [TYPE, MOBILE]], [
             /sony tablet [ps]/i,
             /\b(?:sony)?sgp\w+(?: bui|\))/i
@@ -564,13 +564,23 @@
             /; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i
             ], [MODEL, [VENDOR, 'Ulefone'], [TYPE, MOBILE]], [
 
+            // Energizer
+            /; (energy ?\w+)(?: bui|\))/i,
+            /; energizer ([\w ]+?)(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Energizer'], [TYPE, MOBILE]], [
+
+            // Cat
+            /; cat (b35);/i,
+            /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i
+            ], [MODEL, [VENDOR, 'Cat'], [TYPE, MOBILE]], [
+
             // Nothing
             /droid.+; (a(?:015|06[35]|142p?))/i
             ], [MODEL, [VENDOR, 'Nothing'], [TYPE, MOBILE]], [
 
             // MIXED
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,
-                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax)[-_ ]?([-\w]*)/i,
+                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(asus)-?(\w+)/i,                                                   // Asus
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia

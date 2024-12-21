@@ -207,6 +207,42 @@
         }
     },
     {
+        "desc": "Cat B15Q",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; B15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Cat",
+            "model": "B15Q",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Cat B35",
+        "ua": "Mozilla/5.0 (Mobile; CAT B35; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5.1",
+        "expect": {
+            "vendor": "Cat",
+            "model": "B35",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Cat S22 Flip",
+        "ua": "Mozilla/5.0 (Linux; Android 11; S22 FLIP Build/RKQ1.210416.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.165 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Cat",
+            "model": "S22 FLIP",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Cat S62 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; S62 Pro Build/RKQ1.210406.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36 GSA/12.34.17.23.arm64",
+        "expect": {
+            "vendor": "Cat",
+            "model": "S62 Pro",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Desktop (IE11 with Tablet string)",
         "ua": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; Tablet PC 2.0; GWX:MANAGED; rv:11.0) like Gecko",
         "expect": {
@@ -221,6 +257,33 @@
         "expect": {
             "vendor": "undefined",
             "model": "undefined",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Energizer Energy 400",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Energy400 Build/MRA58K test-keys; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.158 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/172.0.0.66.93;]",
+        "expect": {
+            "vendor": "Energizer",
+            "model": "Energy400",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Energizer Energy 400S",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Energy 400S Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.85 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Energizer",
+            "model": "Energy 400S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Energizer Ultimate 65G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Energizer Ultimate 65G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Energizer",
+            "model": "Ultimate 65G",
             "type": "mobile"
         }
     },
@@ -1139,6 +1202,33 @@
         "expect": {
             "vendor": "Meizu",
             "model": "M5 Note",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Micromax Bharat 2 Plus",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.0; en-US; Micromax Q402Plus Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Micromax",
+            "model": "Q402Plus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Micromax Canvas Infinity",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.1.2; en-US; Micromax HS2 Build/N2G47H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/13.2.0.1296 (SpeedMode) U4/1.0 UCWEB/2.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Micromax",
+            "model": "HS2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Micromax In 1b",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; Micromax E7533 Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 OPR/54.0.2254.56148",
+        "expect": {
+            "vendor": "Micromax",
+            "model": "E7533",
             "type": "mobile"
         }
     },
