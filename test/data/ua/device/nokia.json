@@ -18,6 +18,15 @@
         }
     },
     {
+        "desc": "Nokia 5800 XpressMusic",
+        "ua": "Mozilla/5.0 (SymbianOS/9.4; U; Series60/5.0 Nokia5800d-1/10.4.016; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "5800d-1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Nokia 7",
         "ua": "Mozilla/5.0 (Linux; Android 11; Nokia 7.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
         "expect": {
@@ -27,11 +36,47 @@
         }
     },
     {
+        "desc": "Nokia 808 PureView",
+        "ua": "Mozilla/5.0 (Symbian; U; Nokia808 PureView; en-GB) AppleWebKit/534.3 (KHTML, like Gecko) Version/3.0 Mobile/1A543a Mobile Safari/534.3",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "808 PureView",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia 808 PureView",
+        "ua": "Mozilla/5.0 (Symbian/3; Series60/5.5 Nokia808PureView/113.010.1508; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/8.3.2.21 Mobile Safari/535.1 3gpp-gba",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "808PureView",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia Lumia 630",
+        "ua": "UCWEB/2.0 (Windows; U; wds 8.10; en-IN; NOKIA; RM-978_1046) U2/1.0.0 UCBrowser/4.2.0.524 U2/1.0.0 Mobile",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "RM-978",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Nokia N9",
         "ua": "Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13",
         "expect": {
             "vendor": "Nokia",
             "model": "N9",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia N900",
+        "ua": "Mozilla/5.0 (Linux; Maemo 5.0; Nokia N900; Build/4.0.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "N900",
             "type": "mobile"
         }
     },

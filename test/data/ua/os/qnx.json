@@ -5,7 +5,7 @@
         "expect"  :
         {
             "name"    : "QNX",
-            "version" : "x86pc"
+            "version" : "undefined"
         }
     }
 ]

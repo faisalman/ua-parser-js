@@ -7,5 +7,23 @@
             "name"    : "Maemo",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "Nokia N900 Linux mobile, on the Maemo browser",
+        "ua"      : "Mozilla/5.0(X11; U; Linux armv7l; fr-FR; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900",
+        "expect"  :
+        {
+            "name"    : "Maemo",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Nokia N900 Linux mobile, on the Maemo browser",
+        "ua"      : "Mozilla/5.0 (Linux; Maemo 5.0; Nokia N900; Build/4.0.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Maemo",
+            "version" : "5.0"
+        }
     }
 ]

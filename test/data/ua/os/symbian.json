@@ -1,6 +1,6 @@
 [
     {
-        "desc"    : "Symbian",
+        "desc"    : "Nokia 5250",
         "ua"      : "Nokia5250/10.0.011 (SymbianOS/9.4; U; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/525 (KHTML, like Gecko) Safari/525 3gpp-gba",
         "expect"  :
         {
@@ -9,12 +9,57 @@
         }
     },
     {
-        "desc"    : "Symbian",
+        "desc"    : "Nokia N79",
+        "ua"      : "Mozilla/5.0 (SymbianOS/9.3; U; Series60/3.2 NokiaN79-1/32.001; Profile/MIDP-2.1 Configuration/CLDC-1",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "9.3"
+        }
+    },
+    {
+        "desc"    : "Nokia E71",
+        "ua"      : "Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE71-1/110.07.127; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "9.2"
+        }
+    },
+    {
+        "desc"    : "Opera Mini on S60",
+        "ua"      : "Opera/9.80 (Series 60; Opera Mini/7.1.32444/191.361; U; de) Presto/2.12.423 Version/12.16",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "NokiaBrowser on Nokia C7",
         "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaC7-00/024.001; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.37 Mobile Safari/533.4 3gpp-gba",
         "expect"  :
         {
             "name"    : "Symbian",
-            "version" : "5.2"
+            "version" : "3"
+        }
+    },
+    {
+        "desc"    : "Nokia 808 PureView",
+        "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.5 Nokia808PureView/113.010.1508; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/8.3.2.21 Mobile Safari/535.1 3gpp-gba",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "3"
+        }
+    },
+    {
+        "desc"    : "Nokia 808 PureView",
+        "ua"      : "Mozilla/5.0 (Symbian; U; Nokia808 PureView; en-GB) AppleWebKit/534.3 (KHTML, like Gecko) Version/3.0 Mobile/1A543a Mobile Safari/534.3",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "undefined"
         }
     }
 ]

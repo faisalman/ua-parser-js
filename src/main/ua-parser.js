@@ -618,8 +618,8 @@
             // Nokia
             /(nokia) (t[12][01])/i
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
-            /(?:maemo|nokia).*(n900|lumia \d+)/i,
-            /nokia[-_ ]?(([-\w\.]*))/i
+            /(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i,
+            /nokia[-_ ]?(([-\w\. ]*))/i
             ], [[MODEL, /_/g, ' '], [TYPE, MOBILE], [VENDOR, 'Nokia']], [
 
             // Google
@@ -930,15 +930,12 @@
             ], [VERSION, NAME], [                                               
             /(ubuntu) ([\w\.]+) like android/i                                  // Ubuntu Touch
             ], [[NAME, /(.+)/, '$1 Touch'], VERSION], [
-                                                                                // Android/WebOS/QNX/Bada/RIM/Maemo/MeeGo/Sailfish OS/OpenHarmony
-            /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish|openharmony)[-\/ ]?([\w\.]*)/i,
-            /(blackberry)\w*\/([\w\.]*)/i,                                      // Blackberry
-            /(tizen|kaios)[\/ ]([\w\.]+)/i,                                     // Tizen/KaiOS
-            /\((series40);/i                                                    // Series 40
+                                                                                // Android/Blackberry/WebOS/QNX/Bada/RIM/KaiOS/Maemo/MeeGo/S40/Sailfish OS/OpenHarmony/Tizen
+            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i
             ], [NAME, VERSION], [
             /\(bb(10);/i                                                        // BlackBerry 10
             ], [VERSION, [NAME, BLACKBERRY]], [
-            /(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i         // Symbian
+            /(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i       // Symbian
             ], [VERSION, [NAME, 'Symbian']], [
             /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
             ], [VERSION, [NAME, FIREFOX+' OS']], [
