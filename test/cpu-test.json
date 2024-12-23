@@ -246,5 +246,21 @@
         {
             "architecture"  : "irix64"
         }
+    },
+    {
+        "desc"    : "68k",
+        "ua"      : "'Mozilla/1.1 (Macintosh; U; 68K)'",
+        "expect"  : 
+        {
+            "architecture"  : "68k"
+        }
+    },
+    {
+        "desc"    : "x86",
+        "ua"      : "Mozilla/5.0 (Photon; U; QNX x86pc; en-US; rv:1.8.1.20) Gecko/20090127 BonEcho/2.0.0.20",
+        "expect"  : 
+        {
+            "architecture"  : "ia32"
+        }
     }
 ]

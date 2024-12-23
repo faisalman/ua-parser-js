@@ -374,10 +374,8 @@
             /(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i                     // AMD64 (x64)
             ], [[ARCHITECTURE, 'amd64']], [
 
-            /(ia32(?=;))/i                                                      // IA32 (quicktime)
-            ], [[ARCHITECTURE, lowerize]], [
-
-            /((?:i[346]|x)86)[;\)]/i                                            // IA32 (x86)
+            /(ia32(?=;))/i,                                                     // IA32 (quicktime)
+            /\b((i[346]|x)86)(pc)?\b/i                                          // IA32 (x86)
             ], [[ARCHITECTURE, 'ia32']], [
 
             /\b(aarch64|arm(v?8e?l?|_?64))\b/i                                 // ARM64
