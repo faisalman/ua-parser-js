@@ -320,7 +320,7 @@
         "expect"  :
         {
             "name"    : "QNX",
-            "version" : "x86pc"
+            "version" : "undefined"
         }
     },
     {
@@ -374,7 +374,7 @@
         "expect"  :
         {
             "name"    : "Symbian",
-            "version" : "5.2"
+            "version" : "3"
         }
     },
     {
