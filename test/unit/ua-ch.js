@@ -68,7 +68,7 @@ describe('Map UA-CH headers', () => {
         assert.strictEqual(uap.engine.name, 'Blink');
         assert.strictEqual(uap.engine.version, '110.0.0.0');
         assert.strictEqual(uap.os.name, "Linux");
-        assert.strictEqual(uap.os.version, "x86_64");
+        assert.strictEqual(uap.os.version, undefined);
     });
 
     it('Fallback to user-agent header when using `withClientHints()` but found no client hints-related headers',  () => {  
@@ -90,7 +90,7 @@ describe('Map UA-CH headers', () => {
         assert.strictEqual(uap.engine.name, 'Blink');
         assert.strictEqual(uap.engine.version, '110.0.0.0');
         assert.strictEqual(uap.os.name, "Linux");
-        assert.strictEqual(uap.os.version, "x86_64");
+        assert.strictEqual(uap.os.version, undefined);
     });
 
     it('Can detect Apple silicon from client hints data', () => {  
