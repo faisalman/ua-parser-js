@@ -1103,7 +1103,7 @@
         "expect"  :
         {
             "name"    : "Linux",
-            "version" : "x86_64"
+            "version" : "undefined"
         }
     },
     {
