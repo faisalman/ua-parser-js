@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.0
+/*  Enums for UAParser.js v2.0.1
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -38,6 +38,7 @@ const Browser = Object.freeze({
     COBALT: 'Cobalt',
     COC_COC: 'Coc Coc',
     CONKEROR: 'Conkeror',
+    DAUM: 'Daum',
     DILLO: 'Dillo',
     DOLPHIN: 'Dolphin',
     DORIS: 'Doris',
@@ -370,11 +371,13 @@ const OS = Object.freeze({
     SYMBIAN: 'Symbian',
     TIZEN: 'Tizen',
     UBUNTU: 'Ubuntu',
+    UBUNTU_TOUCH: 'Ubuntu Touch',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',
+    WINDOWS_IOT: 'Windows IoT',
     WINDOWS_MOBILE: 'Windows Mobile',
     WINDOWS_PHONE: 'Windows Phone',
     XBOX: 'Xbox',

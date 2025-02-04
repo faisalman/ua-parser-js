@@ -65,6 +65,37 @@
 
 --- 
 
+## Version 2.0.1
+
+- Add new browser: Ladybird, Daum
+- Add new device: Apple HomePod
+- Add new device vendor: HMD
+- Add new OS: Ubuntu Touch, Windows IoT
+- Improve CPU detection: ARM, x86
+- Improve device detection: Lenovo, Nokia, Nvidia, Xiaomi
+    - Tablet: Google, Honor, Huawei, Infinix, Nokia, OnePlus, Xiaomi
+    - Wearable: Asus, Google, LG, Motorola, OnePlus, Oppo, Samsung, Sony
+    - Smart-TV: Xiaomi, unidentified vendors
+    - Improve detection for unknown VR devices
+    - Improve device model detection for Generic devices
+- Improve OS detection: Linux, Symbian
+- Improve TypeScript definitions for Headers
+- Improve `withClientHints()`:
+    - `engine.version` also get updated
+    - Infer `device.vendor` & `device.type` by guessing from `device.model`
+    - Browser naming adjustments:
+        - `Google Chrome` => `Chrome`
+        - `Microsoft Edge` => `Edge`
+        - `Android WebView` => `Chrome WebView`
+        - `HeadlessChrome` => `Chrome Headless`
+- `enums` submodule:
+    - Add TypeScript definitions
+- `extensions` submodule:
+    - Add new list: 
+        - `Vehicles`: BYD, Rivian, Volvo
+    - Add new Fetcher: Bluesky
+    - Add new Library: Apache-HttpClient, go-http-client, got, GuzzleHttp, Java-http-client, libwww-perl, lua-resty-http, Needle, OkHttp, node-fetch, PHP-SOAP, PostmanRuntime, superagent
+
 ## Version 2.0.0
 
 - `ua-parser-js/extensions` submodule:
@@ -165,6 +196,15 @@
 - Initial work on new major version
 
 ---
+
+## Version 0.7.40 / 1.0.40
+- Add new browser: 115, LibreWolf, Slimboat, Slimjet
+- Add new device: Advan, Cat, Energizer, IMO, Micromax, Smartfren
+- Add new engine: ArkWeb, Servo
+- Add new os: OpenHarmony
+- Improve browser detection: 2345, 360, Dragon, Iron, Maxthon
+- Recognize Honor as a separate device vendor from Huawei
+- Fix Python Request mistakenly identified as Meta Quest
 
 ## Version 0.7.39 / 1.0.39
 - Add new feature: executable command using `npx ua-parser-js "[INSERT-UA-HERE]"`

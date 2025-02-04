@@ -1,4 +1,4 @@
-// Type definitions for UAParser.js v2.0.0
+// Type definitions for UAParser.js v2.0.1
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
