@@ -214,15 +214,14 @@
   "dependencies": {
     "detect-europe-js": "^0.1.2",
     "is-standalone-pwa": "^0.1.1",
-    "ua-is-frozen": "^0.1.2"
+    "ua-is-frozen": "^0.1.2",
+    "@types/node-fetch": "^2.6.12"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
     "@babel/traverse": "7.23.2",
     "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "^1.49.0",
-    "@types/node": "^22.9.1",
-    "@types/node-fetch": "^2.6.12",
     "jshint": "~2.13.6",
     "mocha": "~8.2.0",
     "node-fetch": "^2.7.0",
