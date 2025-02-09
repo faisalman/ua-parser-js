@@ -65,6 +65,10 @@
 
 --- 
 
+## Version 2.0.2
+
+- Fix TypeScript dependency issue
+
 ## Version 2.0.1
 
 - Add new browser: Ladybird, Daum

@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.1
+/*  Enums for UAParser.js v2.0.2
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
