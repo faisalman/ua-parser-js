@@ -209,7 +209,7 @@
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
     "test:mocha": "mocha test/unit",
-    "test:playwright": "playwright test test/e2e --browser all"
+    "test:playwright": "npx playwright install && playwright test test/e2e --browser all"
   },
   "dependencies": {
     "detect-europe-js": "^0.1.2",
