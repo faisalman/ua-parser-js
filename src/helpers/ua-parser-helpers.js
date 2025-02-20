@@ -93,6 +93,9 @@ const isAIBot = (resultOrUA) => [
     // Perplexity
     'perplexitybot',
 
+    // Semrush
+    'semrushbot-ocob',
+
     // Timpi
     'timpibot',
 

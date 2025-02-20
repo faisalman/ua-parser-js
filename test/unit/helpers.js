@@ -40,11 +40,13 @@ describe('isAIBot', () => {
         const claudeBot = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)';
         const firefox = 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0';
         const searchGPT = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot';
+        const semrushAI = 'Mozilla/5.0 (compatible; SemrushBot-OCOB/1; +https://www.semrush.com/bot/)';
 
         assert.equal(isAIBot(UAParser(claudeBot, Bots)), true);
         assert.equal(isAIBot(claudeBot), true);
         assert.equal(isAIBot(firefox), false);
         assert.equal(isAIBot(searchGPT), true);
+        assert.equal(isAIBot(semrushAI), true);
     });
 });
 

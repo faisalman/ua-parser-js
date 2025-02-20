@@ -481,6 +481,16 @@
         }
     },
     {
+        "desc"    : "SemrushBot for ContentShake AI tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-OCOB/1; +https://www.semrush.com/bot/)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-OCOB",
+            "version" : "1",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "SeznamBot",
         "ua"      : "Mozilla/5.0 (compatible; SeznamBot/4.0-RC1; +http://napoveda.seznam.cz/seznambot-intro/)",
         "expect"  :

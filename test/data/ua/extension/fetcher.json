@@ -120,6 +120,16 @@
         }
     },
     {
+        "desc"    : "SiteAuditBot",
+        "ua"      : "Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SiteAuditBot",
+            "version" : "0.97",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "UptimeRobot",
         "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
         "expect"  :
