@@ -224,7 +224,7 @@
     "@jazzer.js/core": "^1.4.0",
     "@playwright/test": "^1.49.0",
     "jshint": "~2.13.6",
-    "mocha": "~8.2.0",
+    "mocha": "~11.1.0",
     "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",
     "tsd": "^0.29.0",
