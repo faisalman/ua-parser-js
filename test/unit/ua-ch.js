@@ -220,45 +220,220 @@ describe('Map UA-CH headers', () => {
     });
 });
 
-describe('Browser naming adjustments', () => {
+describe('UA-CH Headers tests', () => {
     [
         {
-            ua_ch: '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+            headers : {
+                'sec-ch-ua': '"Avast Secure Browser";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
+            },
             expect: {
-                before: 'Google Chrome',
-                after: 'Chrome'
+                browser : {
+                    name : 'Avast Secure Browser',
+                    version : '131',
+                    major : '131',
+                    type : undefined
+                }
             }
         },
         {
-            ua_ch: '"Not_A Brand";v="8", "Chromium";v="120", "Microsoft Edge";v="120"',
+            headers : {
+                'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Brave";v="132"'
+            },
             expect: {
-                before: "Microsoft Edge",
-                after: "Edge"
+                browser : {
+                    name : 'Brave',
+                    version : '132',
+                    major : '132',
+                    type : undefined
+                }
             }
         },
         {
-            ua_ch: '"Android WebView";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
+            headers : {
+                'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"'
+            },
             expect: {
-                before: "Android WebView",
-                after: "Chrome WebView"
+                browser : {
+                    name : 'Chrome',
+                    version : '111',
+                    major : '111',
+                    type : undefined
+                }
             }
         },
         {
-            ua_ch: '"Chromium";v="124", "HeadlessChrome";v="124", "Not-A.Brand";v="99"',
+            headers : {
+                'sec-ch-ua': '"Chromium";v="124", "HeadlessChrome";v="124", "Not-A.Brand";v="99"'
+            },
             expect: {
-                before: "HeadlessChrome",
-                after: "Chrome Headless"
+                browser : {
+                    name : 'Chrome Headless',
+                    version : '124',
+                    major : '124',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Android WebView";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
+            },
+            expect: {
+                browser : {
+                    name : 'Chrome WebView',
+                    version : '123',
+                    major : '123',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"DuckDuckGo";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
+            },
+            expect : {
+                browser : {
+                    name : 'DuckDuckGo',
+                    version : '131',
+                    major : '131',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Microsoft Edge";v="120"'
+            },
+            expect: {
+                browser : {
+                    name : 'Edge',
+                    version : '120',
+                    major : '120',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "HuaweiBrowser";v="114"'
+            },
+            expect: {
+                browser : {
+                    name : 'Huawei Browser',
+                    version : '114',
+                    major : '114',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Miui Browser";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
+            },
+            expect: {
+                browser : {
+                    name : 'MIUI Browser',
+                    version : '123',
+                    major : '123',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Chromium";v="130", "Oculus Browser";v="36", "Not?A_Brand";v="99"'
+            },
+            expect: {
+                browser : {
+                    name : 'Oculus Browser',
+                    version : '36',
+                    major : '36',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Opera";v="116", "Chromium";v="131", "Not_A Brand";v="24"'
+            },
+            expect: {
+                browser : {
+                    name : 'Opera',
+                    version : '116',
+                    major : '116',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Opera GX";v="114"'
+            },
+            expect: {
+                browser : {
+                    name : 'Opera GX',
+                    version : '114',
+                    major : '114',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"OperaMobile";v="86", ";Not A Brand";v="99", "Opera";v="115", "Chromium";v="130"'
+            },
+            expect: {
+                browser : {
+                    name : 'Opera Mobi',
+                    version : '86',
+                    major : '86',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Chromium";v="132", "OperaMobile";v="87", "Opera";v="117", " Not A;Brand";v="99"'
+            },
+            expect: {
+                browser : {
+                    name : 'Opera Mobi',
+                    version : '87',
+                    major : '87',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Chromium";v="125", "Not.A/Brand";v="24", "Samsung Internet";v="27.0"'
+            },
+            expect: {
+                browser : {
+                    name : 'Samsung Internet',
+                    version : '27.0',
+                    major : '27',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
+                'sec-ch-ua': '"Chromium";v="130", "YaBrowser";v="24.12", "Not?A_Brand";v="99", "Yowser";v="2.5"'
+            },
+            expect: {
+                browser : {
+                    name : 'Yandex',
+                    version : '24.12',
+                    major : '24',
+                    type : undefined
+                }
             }
         },
     ]
     .forEach(test => {
-        it(`"${test.expect.before}" => "${test.expect.after}"`, () => {
-            const headers = {
-                'sec-ch-ua' : test.ua_ch,
-            };
-            const { browser } = UAParser(headers).withClientHints();
-            assert.strictEqual(browser.name, test.expect.after);
-        });
+        const { browser } = UAParser(test.headers).withClientHints();
+        assert.deepEqual(browser, test.expect.browser);
     });
 });
 

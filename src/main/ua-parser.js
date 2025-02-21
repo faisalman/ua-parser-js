@@ -1213,7 +1213,11 @@
                                     'Chrome' : 'Google Chrome',
                                     'Edge' : 'Microsoft Edge',
                                     'Chrome WebView' : 'Android WebView',
-                                    'Chrome Headless' : 'HeadlessChrome'
+                                    'Chrome Headless' : 'HeadlessChrome',
+                                    'Huawei Browser' : 'HuaweiBrowser',
+                                    'MIUI Browser' : 'Miui Browser',
+                                    'Opera Mobi' : 'OperaMobile',
+                                    'Yandex' : 'YaBrowser'
                                 });
                                 this.set(NAME, brandName)
                                     .set(VERSION, brandVersion)

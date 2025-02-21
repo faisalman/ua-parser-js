@@ -97,6 +97,7 @@ export const Browser: Readonly<{
     OMNIWEB: "OmniWeb";
     OPERA: "Opera";
     OPERA_COAST: "Opera Coast";
+    OPERA_GX: "Opera GX",
     OPERA_MINI: "Opera Mini";
     OPERA_MOBI: "Opera Mobi";
     OPERA_TABLET: "Opera Tablet";
