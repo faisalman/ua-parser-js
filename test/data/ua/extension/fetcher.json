@@ -60,6 +60,16 @@
         }
     },
     {
+        "desc"    : "Google Image Proxy",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)",
+        "expect"  :
+        {
+            "name"    : "GoogleImageProxy",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Google Read Aloud - Mobile agent",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
         "expect"  :
@@ -75,6 +85,16 @@
         "expect"  :
         {
             "name"    : "Google-Read-Aloud",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Page Renderer",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 Google-PageRenderer Google (+https://developers.google.com/+/web/snippet/) ",
+        "expect"  :
+        {
+            "name"    : "Google-PageRenderer",
             "version" : "undefined",
             "type"    : "fetcher"
         }
@@ -130,6 +150,36 @@
         }
     },
     {
+        "desc"    : "Snap URL Preview",
+        "ua"      : "Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots  ",
+        "expect"  :
+        {
+            "name"    : "Snap URL Preview",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "SkypeUriPreview",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5 skype-url-preview@microsoft.com",
+        "expect"  :
+        {
+            "name"    : "SkypeUriPreview",
+            "version" : "0.5",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "TelegramBot",
+        "ua"      : "TelegramBot (like TwitterBot)",
+        "expect"  :
+        {
+            "name"    : "TelegramBot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "UptimeRobot",
         "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
         "expect"  :
@@ -146,6 +196,16 @@
         {
             "name"    : "Vercelbot",
             "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "WhatsApp",
+        "ua"      : "WhatsApp/2.23.20.0",
+        "expect"  :
+        {
+            "name"    : "WhatsApp",
+            "version" : "2.23.20.0",
             "type"    : "fetcher"
         }
     }
