@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arch: [amd64, ppc64le]
-        node-version: ['10.x', 'lts/*', 'node']
+        arch: [amd64]
+        node-version: ['22.13', 'lts/*']
+        include:
+          - arch: ppc64le
+            node-version: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,6 +22,7 @@ jobs:
           node-version:  ${{ matrix.node-version }}
       - name: Run the test
         run: |
+          echo "Running on ubuntu-latest-${{ matrix.arch }} with node version set as ${{ matrix.node-version }}"
           npm ci
           npx playwright install --with-deps
           npm test
