@@ -10,6 +10,16 @@
         }
     },
     {
+        "desc"    : "Better Uptime Bot",
+        "ua"      : "Better Uptime Bot Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Better Uptime Bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "BingPreview",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
         "expect"  :

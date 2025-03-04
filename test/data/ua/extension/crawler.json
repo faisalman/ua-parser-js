@@ -481,6 +481,26 @@
         }
     },
     {
+        "desc"    : "SemrushBot for Backlink Audit tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-BA; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-BA",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot for On Page SEO Checker tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-SI/0.97; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-SI",
+            "version" : "0.97",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "SemrushBot for ContentShake AI tool",
         "ua"      : "Mozilla/5.0 (compatible; SemrushBot-OCOB/1; +https://www.semrush.com/bot/)",
         "expect"  :
@@ -547,6 +567,16 @@
         {
             "name"    : "Y!J-BRW",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Slurp",
+        "ua"      : "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)  ",
+        "expect"  :
+        {
+            "name"    : "Yahoo! Slurp",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },

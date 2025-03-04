@@ -78,7 +78,7 @@ const Crawlers = Object.freeze({
             /(ia_archiver|archive\.org_bot)\/?([\w\.]*)/i,
 
             // SemrushBot - http://www.semrush.com/bot.html
-            /((?:semrush|splitsignal)bot[-abcfimostw]*)\/([\w\.-]+)/i,
+            /((?:semrush|splitsignal)bot[-abcfimostw]*)\/?([\w\.-]*)/i,
 
             // Sogou Spider
             /(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i, 
@@ -110,7 +110,7 @@ const Crawlers = Object.freeze({
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|(?=yahoo! )slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -219,7 +219,7 @@ const Fetchers = Object.freeze({
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
-            // BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Better Uptime / BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // Google Site Verifier / Meta / Yahoo! Japan
             // Yandex Bots - https://yandex.com/bots
             /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
@@ -240,7 +240,7 @@ const Fetchers = Object.freeze({
 
         [
             // Google Bots / Cohere / Snapchat / Vercelbot / Yandex Bots
-            /(cohere-ai|vercelbot|feedfetcher-google|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|telegrambot|yandex(?:sitelinks|userproxy))/i
+            /((?:better uptime |telegram|vercel)bot|cohere-ai|feedfetcher-google|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ]
