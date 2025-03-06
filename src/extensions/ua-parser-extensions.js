@@ -253,10 +253,12 @@ const Fetchers = Object.freeze({
 const InApps = Object.freeze({
     browser : [
         // Slack
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]],
+        [/(?:slack(?=.+electron|.+ios)|chatlyio)\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Slack'], [TYPE, INAPP]],
 
         // Yahoo! Japan
-        [/jp\.co\.yahoo\.android\.yjtop\/([\d\.]+)/i], [VERSION, 'Yahoo! Japan', [TYPE, INAPP]]
+        [/jp\.co\.yahoo\.(?:android\.yjtop|ipn\.appli)\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Yahoo! Japan'], [TYPE, INAPP]]
     ]
 });
 

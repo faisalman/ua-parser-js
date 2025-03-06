@@ -8,8 +8,9 @@ const clis = require('../data/ua/extension/cli.json');
 const crawlers = require('../data/ua/extension/crawler.json');
 const emails = require('../data/ua/extension/email.json');
 const fetchers = require('../data/ua/extension/fetcher.json');
+const inapps = require('../data/ua/extension/inapp.json');
 const libraries = require('../data/ua/extension/library.json');
-const { Bots, CLIs, Crawlers, Emails, Fetchers, Libraries } = require('../../src/extensions/ua-parser-extensions');
+const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries } = require('../../src/extensions/ua-parser-extensions');
 
 describe('Extensions', () => {
     [   
@@ -17,6 +18,7 @@ describe('Extensions', () => {
         ['Crawlers', crawlers, Crawlers], 
         ['Emails', emails, Emails], 
         ['Fetchers', fetchers, Fetchers],
+        ['InApps', inapps, InApps],
         ['Libraries', libraries, Libraries]
     ]
     .forEach((list) => {
