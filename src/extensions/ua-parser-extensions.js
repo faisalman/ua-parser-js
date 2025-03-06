@@ -42,24 +42,25 @@ const Crawlers = Object.freeze({
         [
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
-            // Bingbot - http://www.bing.com/bingbot.htm
+            // Bingbot / AdIdxBot - https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
             // CCBot - https://commoncrawl.org/faq
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
+            // LinkedInBot - http://www.linkedin.com
             // MJ12bot - https://mj12bot.com/
             // MojeekBot - https://www.mojeek.com/bot.html
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
-            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|linkedin|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
-            /(applebot(?:-extended)?)\/([\w\.]+)/i,
+            /(applebot(?:-extended)?)\/?([\w\.]*)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
-            /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
+            /(baiduspider[-imagevdonwsfcpr]{0,7})\/?([\w\.]*)/i,
 
             // ClaudeBot (Anthropic)
             /(claude(?:bot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
@@ -92,8 +93,8 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
-            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
+            // aiHitBot / Diffbot / Linespider / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
+            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|openai image downloader|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |line|yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
@@ -219,10 +220,10 @@ const Fetchers = Object.freeze({
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
-            // Better Uptime / BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Better Uptime / BingPreview / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // Google Site Verifier / Meta / Yahoo! Japan
             // Yandex Bots - https://yandex.com/bots
-            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(ahrefssiteaudit|(?:bing|microsoft)preview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,

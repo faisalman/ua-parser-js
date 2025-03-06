@@ -10,6 +10,16 @@
         }
     },
     {
+        "desc"    : "AdIdxBot",
+        "ua"      : "Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)",
+        "expect"  :
+        {
+            "name"    : "adidxbot",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "AdsBot Mobile Web",
         "ua"      : "AdsBot-Google (+http://www.google.com/adsbot.html)",
         "expect"  :
@@ -80,12 +90,142 @@
         }
     },
     {
+        "desc"    : "Applebot-Extended",
+        "ua"      : "Applebot-Extended",
+        "expect"  :
+        {
+            "name"    : "Applebot-Extended",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Amazonbot",
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot)",
         "expect"  :
         {
             "name"    : "Amazonbot",
             "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Anthropic AI",
+        "ua"      : "anthropic-ai",
+        "expect"  :
+        {
+            "name"    : "anthropic-ai",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Archive.org Bot",
+        "ua"      : "ia_archiver/8.1 (Windows 2000 1.9; en-US;)",
+        "expect"  :
+        {
+            "name"    : "ia_archiver",
+            "version" : "8.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Archive.org Bot",
+        "ua"      : "Mozilla/5.0 (compatible; archive.org_bot/3.3.0 +https://archive.org/details/archive.org_bot)",
+        "expect"  :
+        {
+            "name"    : "archive.org_bot",
+            "version" : "3.3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider",
+        "ua"      : "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-ads",
+        "ua"      : "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:17.0; Baiduspider-ads) Gecko/17.0 Firefox/17.0",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-ads",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-cpro",
+        "ua"      : "Mozilla/5.0 (compatible; Baiduspider-cpro; +http://www.baidu.com/search/spider.html)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-cpro",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-favo",
+        "ua"      : "Baiduspider-favo",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-favo",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-image",
+        "ua"      : "Baiduspider-image+(+http://www.baidu.com/search/spider.htm)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-image",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-news",
+        "ua"      : "Baiduspider-news",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-news",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-render",
+        "ua"      : "Mozilla/5.0 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-render",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-video",
+        "ua"      : "Baiduspider-video",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-video",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Bingbot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/",
+        "expect"  :
+        {
+            "name"    : "bingbot",
+            "version" : "2.0",
             "type"    : "crawler"
         }
     },
@@ -176,6 +316,16 @@
         {
             "name"    : "DotBot",
             "version" : "1.2",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "DuckDuckBot",
+        "ua"      : "DuckDuckBot/1.1; ( http://duckduckgo.com/duckduckbot.html)",
+        "expect"  :
+        {
+            "name"    : "DuckDuckBot",
+            "version" : "1.1",
             "type"    : "crawler"
         }
     },
@@ -340,32 +490,32 @@
         }
     },
     {
-        "desc"    : "Archive.org Bot",
-        "ua"      : "ia_archiver/8.1 (Windows 2000 1.9; en-US;)",
-        "expect"  :
-        {
-            "name"    : "ia_archiver",
-            "version" : "8.1",
-            "type"    : "crawler"
-        }
-    },
-    {
-        "desc"    : "Archive.org Bot",
-        "ua"      : "Mozilla/5.0 (compatible; archive.org_bot/3.3.0 +https://archive.org/details/archive.org_bot)",
-        "expect"  :
-        {
-            "name"    : "archive.org_bot",
-            "version" : "3.3.0",
-            "type"    : "crawler"
-        }
-    },
-    {
         "desc"    : "ImagesiftBot",
         "ua"      : "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)",
         "expect"  :
         {
             "name"    : "ImagesiftBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Linespider",
+        "ua"      : "Mozilla/5.0 (compatible; Linespider/1.1; +https://lin.ee/4dwXkTH)",
+        "expect"  :
+        {
+            "name"    : "Linespider",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "LinkedInBot",
+        "ua"      : "LinkedInBot/1.0 (compatible; Mozilla/5.0; Apache-HttpClient +http://www.linkedin.com)",
+        "expect"  :
+        {
+            "name"    : "LinkedInBot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -462,7 +612,7 @@
     },
     {
         "desc"    : "PetalBot",
-        "ua"      : "Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot) ",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)",
         "expect"  :
         {
             "name"    : "PetalBot",
@@ -517,6 +667,16 @@
         {
             "name"    : "SeznamBot",
             "version" : "4.0-RC1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Sogou",
+        "ua"      : "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)",
+        "expect"  :
+        {
+            "name"    : "Sogou web spider",
+            "version" : "4.0",
             "type"    : "crawler"
         }
     },

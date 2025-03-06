@@ -140,6 +140,26 @@
         }
     },
     {
+        "desc"    : "MicrosoftPreview",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MicrosoftPreview/2.0; +https://aka.ms/MicrosoftPreview) Chrome/W.X.Y.Z Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "MicrosoftPreview",
+            "version" : "2.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Pinterestbot",
+        "ua"      : "Mozilla/5.0 (compatible; Pinterestbot/1.0; +http://www.pinterest.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Pinterestbot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Rogerbot",
         "ua"      : "Mozilla/5.0 (compatible; rogerBot/1.0; UrlCrawler; http://www.seomoz.org/dp/rogerbot)",
         "expect"  :
