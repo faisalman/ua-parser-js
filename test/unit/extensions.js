@@ -4,31 +4,33 @@ const parseJS = require('@babel/parser').parse;
 const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
 const { UAParser } = require('../../src/main/ua-parser');
-const clis = require('../data/ua/extension/cli.json');
-const crawlers = require('../data/ua/extension/crawler.json');
-const emails = require('../data/ua/extension/email.json');
-const fetchers = require('../data/ua/extension/fetcher.json');
-const inapps = require('../data/ua/extension/inapp.json');
-const libraries = require('../data/ua/extension/library.json');
-const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries } = require('../../src/extensions/ua-parser-extensions');
+const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries, Vehicles } = require('../../src/extensions/ua-parser-extensions');
 
 describe('Extensions', () => {
     [   
-        ['CLIs', clis, CLIs], 
-        ['Crawlers', crawlers, Crawlers], 
-        ['Emails', emails, Emails], 
-        ['Fetchers', fetchers, Fetchers],
-        ['InApps', inapps, InApps],
-        ['Libraries', libraries, Libraries]
+        ['CLIs', 'cli', CLIs], 
+        ['Crawlers', 'crawler', Crawlers], 
+        ['Emails', 'email', Emails], 
+        ['Fetchers', 'fetcher', Fetchers],
+        ['InApps', 'inapp', InApps],
+        ['Libraries', 'library', Libraries],
+        ['Vehicles', 'vehicle', Vehicles]
     ]
-    .forEach((list) => {
-        describe(list[0], () => {
-            list[1].forEach((agent) => {
-                it(`Can detect ${agent.desc}: "${agent.ua}"`, () => {
-                    let browser = UAParser(agent.ua, list[2]).browser;
-                    assert.strictEqual(String(browser.name), agent.expect.name);
-                    assert.strictEqual(String(browser.version), agent.expect.version);
-                    assert.strictEqual(String(browser.type), agent.expect.type);
+    .forEach(([desc, path, ext]) => {
+        const tests = require(`../data/ua/extension/${path}.json`);
+        describe(desc, () => {
+            tests.forEach((test) => {
+                it(`Can detect ${test.desc}: "${test.ua}"`, () => {
+                    const { browser, device } = UAParser(test.ua, ext);
+                    if ('browser' in ext) {
+                        assert.strictEqual(String(browser.name), test.expect.name);
+                        assert.strictEqual(String(browser.version), test.expect.version);
+                        assert.strictEqual(String(browser.type), test.expect.type);
+                    } else if ('device' in ext) {
+                        assert.strictEqual(String(device.vendor), test.expect.vendor);
+                        assert.strictEqual(String(device.model), test.expect.model);
+                        assert.strictEqual(String(device.type), test.expect.type);
+                    }
                 });
             });
         });

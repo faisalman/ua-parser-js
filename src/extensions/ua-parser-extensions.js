@@ -335,15 +335,20 @@ const Libraries = Object.freeze({
 
 const Vehicles = Object.freeze({
     device : [
-        [
-            /dilink.+(byd) auto/i,                                              // BYD
-        ], [VENDOR], [
+        [/aftlbt962e2/i],                                                   // BMW
+        [[VENDOR, 'BMW']],
 
-            /(rivian) (r1t)/i,                                                  // Rivian
-        ], [VENDOR, MODEL], [
+        [/dilink.+(byd) auto/i],                                            // BYD
+        [VENDOR],
 
-            /vcc.+netfront/i,                                                   // Volvo
-        ], [[VENDOR, 'Volvo']]
+        [/aftlft962x3/i],                                                   // Jeep
+        [[VENDOR, 'Jeep'], [MODEL, 'Wagooner']],
+        
+        [/(rivian) (r1t)/i],                                                // Rivian
+        [VENDOR, MODEL],
+
+        [/vcc.+netfront/i],                                                 // Volvo
+        [[VENDOR, 'Volvo']]
     ]
 });
 
