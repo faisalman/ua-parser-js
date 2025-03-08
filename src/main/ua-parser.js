@@ -713,6 +713,14 @@
             /droid.+; (a(?:015|06[35]|142p?))/i
             ], [MODEL, [VENDOR, 'Nothing'], [TYPE, MOBILE]], [
 
+            // Archos
+            /; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i,
+            /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i
+            ], [MODEL, [VENDOR, 'Archos'], [TYPE, TABLET]], [
+            /archos ([\w ]+)( b|\))/i,
+            /; (ac[3-6]\d\w{2,8})( b|\))/i 
+            ], [MODEL, [VENDOR, 'Archos'], [TYPE, MOBILE]], [
+
             // MIXED
             /(imo) (tab \w+)/i,                                                 // IMO
             /(infinix) (x1101b?)/i                                              // Infinix XPad
@@ -728,7 +736,6 @@
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /(kobo)\s(ereader|touch)/i,                                         // Kobo
-            /(archos) (gamepad2?)/i,                                            // Archos
             /(hp).+(touchpad(?!.+tablet)|tablet)/i,                             // HP TouchPad
             /(kindle)\/([\w\.]+)/i                                              // Kindle
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
