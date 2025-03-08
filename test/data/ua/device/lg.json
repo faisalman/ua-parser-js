@@ -135,6 +135,15 @@
         }
     },
     {
+        "desc": "LG Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.41 (KHTML, like Gecko) Large Screen Safari/537.41 LG Browser/7.00.00(LGE; 42LB670V-ZA; 05.05.90; 1); webOS.TV-2014; LG NetCast.TV-2013 Compatible (LGE, 42LB670V-ZA, wireless)",
+        "expect": {
+            "vendor": "LG",
+            "model": "42LB670V-ZA",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "LG Android TV",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; LG Android TV Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
         "expect": {

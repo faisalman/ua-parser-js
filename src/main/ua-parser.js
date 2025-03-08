@@ -606,7 +606,7 @@
             /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
-            /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i,
+            /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch))(\w+)/i,
             /\blg-?([\d\w]+) bui/i
             ], [MODEL, [VENDOR, LG], [TYPE, MOBILE]], [
 
@@ -763,7 +763,9 @@
             ], [VENDOR, [TYPE, SMARTTV]], [
             /hbbtv.+maple;(\d+)/i
             ], [[MODEL, /^/, 'SmartTV'], [VENDOR, SAMSUNG], [TYPE, SMARTTV]], [
-            /(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i        // LG SmartTV
+            /tcast.+(lg)e?. ([-\w]+)/i                                          // LG SmartTV
+            ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
+            /(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i
             ], [[VENDOR, LG], [TYPE, SMARTTV]], [
             /(apple) ?tv/i                                                      // Apple TV
             ], [VENDOR, [MODEL, APPLE+' TV'], [TYPE, SMARTTV]], [
@@ -938,7 +940,7 @@
             /(ubuntu) ([\w\.]+) like android/i                                  // Ubuntu Touch
             ], [[NAME, /(.+)/, '$1 Touch'], VERSION], [
                                                                                 // Android/Blackberry/WebOS/QNX/Bada/RIM/KaiOS/Maemo/MeeGo/S40/Sailfish OS/OpenHarmony/Tizen
-            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i
+            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/\.; ]?([\d\.]*)/i
             ], [NAME, VERSION], [
             /\(bb(10);/i                                                        // BlackBerry 10
             ], [VERSION, [NAME, BLACKBERRY]], [
