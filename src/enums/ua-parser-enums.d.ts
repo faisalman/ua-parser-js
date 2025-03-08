@@ -73,6 +73,7 @@ export const Browser: Readonly<{
     KINDLE: "Kindle";
     LENOVO: "Smart Lenovo Browser";
     LADYBIRD: "Ladybird";
+    LG: "LG Browser";
     LIBREWOLF: "LibreWolf";
     LIEBAO: "LBBROWSER";
     LINE: "Line";

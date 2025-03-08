@@ -78,6 +78,7 @@ const Browser = Object.freeze({
     KINDLE: 'Kindle',
     LENOVO: 'Smart Lenovo Browser',
     LADYBIRD: 'Ladybird',
+    LG: 'LG Browser',
     LIBREWOLF: 'LibreWolf',
     LIEBAO: 'LBBROWSER',
     LINE: 'Line',

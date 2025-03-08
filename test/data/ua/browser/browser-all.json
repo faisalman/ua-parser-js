@@ -1067,13 +1067,13 @@
         }
     },
     {
-        "desc"    : "LibreWolf",
-        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 LibreWolf/91.0",
+        "desc"    : "LG Browser",
+        "ua"      : "Mozilla/5.0 (Unknown; Linux armv7l) AppleWebKit/537.1+ (KHTML, like Gecko) Safari/537.1+ LG Browser/6.00.00(+mouse+3D+SCREEN+TUNER; LGE; 47LA621V-ZD; 04.28.17; 0x00000001;); LG NetCast.TV-2013 /04.28.17 (LG, 47LA621V-ZD, wired)",
         "expect"  :
         {
-            "name"    : "LibreWolf",
-            "version" : "91.0",
-            "major"   : "91"
+            "name"    : "LG Browser",
+            "version" : "6.00.00",
+            "major"   : "6"
         }
     },
     {
