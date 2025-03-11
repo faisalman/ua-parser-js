@@ -847,7 +847,7 @@
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, XR]], [
             /(pico) (4|neo3(?: link|pro)?)/i                                    // Pico
             ], [VENDOR, MODEL, [TYPE, XR]], [
-            /; (quest( \d| pro)?)/i                                             // Oculus Quest
+            /(quest( \d| pro)?s?).+vr/i                                         // Meta Quest
             ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
 
             ///////////////////

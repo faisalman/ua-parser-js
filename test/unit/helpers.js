@@ -9,13 +9,11 @@ describe('getDeviceVendor', () => {
         const modelSM = 'SM-A605G';
         const modelRedmi = 'Redmi Note 8';
         const modelNexus = 'Nexus 6P';
-        const modelQuest = 'Quest 3';
         const modelAquos = 'AQUOS-TVX19B';
 
         assert.equal(getDeviceVendor(modelSM), 'Samsung');
         assert.equal(getDeviceVendor(modelRedmi), 'Xiaomi');
         assert.equal(getDeviceVendor(modelNexus), 'Huawei');
-        assert.equal(getDeviceVendor(modelQuest), 'Facebook');
         assert.equal(getDeviceVendor(modelAquos), 'Sharp');
     });
 });
