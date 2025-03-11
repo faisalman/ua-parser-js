@@ -777,6 +777,8 @@
             ], [[MODEL, CHROMECAST+' Nest Hub'], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
             /crkey/i                                                            // Google Chromecast, Linux-based or unknown
             ], [[MODEL, CHROMECAST], [VENDOR, GOOGLE], [TYPE, SMARTTV]], [
+            /(portaltv)/i                                                       // Facebook Portal TV
+            ], [MODEL, [VENDOR, FACEBOOK], [TYPE, SMARTTV]], [
             /droid.+aft(\w+)( bui|\))/i                                         // Fire TV
             ], [MODEL, [VENDOR, AMAZON], [TYPE, SMARTTV]], [
             /(shield \w+ tv)/i                                                  // Nvidia Shield TV
