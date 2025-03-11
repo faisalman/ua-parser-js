@@ -244,6 +244,11 @@ const Fetchers = Object.freeze({
             /((?:better uptime |telegram|vercel)bot|cohere-ai|feedfetcher-google|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
+    ],
+
+    os : [
+        [/whatsapp\/[\d\.]+ (a|i)/i],
+        [[NAME, os => os == 'A' ? 'Android' : 'iOS' ]]
     ]
 });
 
@@ -362,6 +367,9 @@ const Bots = Object.freeze({
         ...Crawlers.browser,
         ...Fetchers.browser,
         ...Libraries.browser
+    ],
+    os : [
+        ...Fetchers.os
     ]
 });
 

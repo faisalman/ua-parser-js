@@ -61,6 +61,12 @@ describe('Extensions', () => {
         major: '1',
         type: 'fetcher'
     });
+
+    const whatsapp = "WhatsApp/2.0 A";
+    assert.deepEqual(new UAParser(whatsapp, Fetchers).getOS(), {
+        name : 'Android',
+        version : undefined
+    });
 });
 
 describe('Merge', () => {
