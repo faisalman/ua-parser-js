@@ -16,6 +16,7 @@ export const Browser: Readonly<{
     BAIDU: "Baidu Browser";
     BASILISK: "Basilisk";
     BLAZER: "Blazer";
+    BLU: "BLU";
     BOLT: "Bolt";
     BOWSER: "Bowser";
     BRAVE: "Brave";

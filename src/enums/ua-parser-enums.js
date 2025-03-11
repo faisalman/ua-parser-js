@@ -21,6 +21,7 @@ const Browser = Object.freeze({
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
     BLAZER: 'Blazer',
+    BLU: 'BLU',
     BOLT: 'Bolt',
     BOWSER: 'Bowser',
     BRAVE: 'Brave',

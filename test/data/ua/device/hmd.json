@@ -1,5 +1,14 @@
 [
     {
+        "desc": "HMD Barbie Phone",
+        "ua": "Mozilla/5.0 (Mobile; HMD Barbie Phone; rv:84.0) Gecko/84.0 Firefox/84.0 KAIOS/3.1",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Barbie Phone",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "HMD Pulse",
         "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
         "expect": {
