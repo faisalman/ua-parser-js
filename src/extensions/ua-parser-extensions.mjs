@@ -3,7 +3,7 @@
 // Source: /src/extensions/ua-parser-extensions.js
 
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.2
+/*  Extensions for UAParser.js v2.0.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -46,25 +46,25 @@ const Crawlers = Object.freeze({
         [
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
-            // Bingbot - http://www.bing.com/bingbot.htm
+            // Bingbot / AdIdxBot - https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
             // CCBot - https://commoncrawl.org/faq
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
+            // LinkedInBot - http://www.linkedin.com
             // MJ12bot - https://mj12bot.com/
             // MojeekBot - https://www.mojeek.com/bot.html
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
-            // SemrushBot - http://www.semrush.com/bot.html
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
-            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|linkedin|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
-            /(applebot(?:-extended)?)\/([\w\.]+)/i,
+            /(applebot(?:-extended)?)\/?([\w\.]*)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
-            /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
+            /(baiduspider[-imagevdonwsfcpr]{0,7})\/?([\w\.]*)/i,
 
             // ClaudeBot (Anthropic)
             /(claude(?:bot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
@@ -82,6 +82,9 @@ const Crawlers = Object.freeze({
             // Internet Archive (archive.org)
             /(ia_archiver|archive\.org_bot)\/?([\w\.]*)/i,
 
+            // SemrushBot - http://www.semrush.com/bot.html
+            /((?:semrush|splitsignal)bot[-abcfimostw]*)\/?([\w\.-]*)/i,
+
             // Sogou Spider
             /(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i, 
 
@@ -94,8 +97,8 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
-            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
+            // aiHitBot / Diffbot / Linespider / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
+            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|openai image downloader|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |line|yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
@@ -112,7 +115,7 @@ const Crawlers = Object.freeze({
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|(?=yahoo! )slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -221,27 +224,35 @@ const Fetchers = Object.freeze({
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
-            // BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / Telegrambot / Twitterbot / UptimeRobot
+            // Better Uptime / BingPreview / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // Google Site Verifier / Meta / Yahoo! Japan
             // Yandex Bots - https://yandex.com/bots
-            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(ahrefssiteaudit|(?:bing|microsoft)preview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
+
+            // Skype
+            /(skypeuripreview) preview\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
             /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
             
             // WhatsApp
-            /(whatsapp)\/([\w\.]+)[\/ ][ianw]/i
+            /(whatsapp)\/([\w\.]+)/i
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
         [
             // Google Bots / Cohere / Snapchat / Vercelbot / Yandex Bots
-            /(cohere-ai|vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat|yandex(?:sitelinks|userproxy))/i
+            /((?:better uptime |telegram|vercel)bot|cohere-ai|feedfetcher-google|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
+    ],
+
+    os : [
+        [/whatsapp\/[\d\.]+ (a|i)/i],
+        [[NAME, os => os == 'A' ? 'Android' : 'iOS' ]]
     ]
 });
 
@@ -252,10 +263,12 @@ const Fetchers = Object.freeze({
 const InApps = Object.freeze({
     browser : [
         // Slack
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]],
+        [/(?:slack(?=.+electron|.+ios)|chatlyio)\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Slack'], [TYPE, INAPP]],
 
         // Yahoo! Japan
-        [/jp\.co\.yahoo\.android\.yjtop\/([\d\.]+)/i], [VERSION, 'Yahoo! Japan', [TYPE, INAPP]]
+        [/jp\.co\.yahoo\.(?:android\.yjtop|ipn\.appli)\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Yahoo! Japan'], [TYPE, INAPP]]
     ]
 });
 
@@ -331,15 +344,20 @@ const Libraries = Object.freeze({
 
 const Vehicles = Object.freeze({
     device : [
-        [
-            /dilink.+(byd) auto/i,                                              // BYD
-        ], [VENDOR], [
+        [/aftlbt962e2/i],                                                   // BMW
+        [[VENDOR, 'BMW']],
 
-            /(rivian) (r1t)/i,                                                  // Rivian
-        ], [VENDOR, MODEL], [
+        [/dilink.+(byd) auto/i],                                            // BYD
+        [VENDOR],
 
-            /vcc.+netfront/i,                                                   // Volvo
-        ], [[VENDOR, 'Volvo']]
+        [/aftlft962x3/i],                                                   // Jeep
+        [[VENDOR, 'Jeep'], [MODEL, 'Wagooner']],
+        
+        [/(rivian) (r1t)/i],                                                // Rivian
+        [VENDOR, MODEL],
+
+        [/vcc.+netfront/i],                                                 // Volvo
+        [[VENDOR, 'Volvo']]
     ]
 });
 
@@ -353,6 +371,9 @@ const Bots = Object.freeze({
         ...Crawlers.browser,
         ...Fetchers.browser,
         ...Libraries.browser
+    ],
+    os : [
+        ...Fetchers.os
     ]
 });
 

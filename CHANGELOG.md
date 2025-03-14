@@ -65,6 +65,24 @@
 
 --- 
 
+## Version 2.0.3
+
+- Add new browser: Dooble, Ecosia, LG Browser, Otter, qutebrowser, Surf
+- Add new device: BLU, Facebook Portal TV
+- Improve device detection: Archos, LG, Meta Quest
+- Remove jazzer.js fuzz test
+- Improve `withClientHints()`:
+    - Browser naming adjustments:
+        - `HuaweiBrowser` => `Huawei Browser`
+        - `Miui Browser` => `MIUI Browser`
+        - `OperaMobile` => `Opera Mobi`
+        - `YaBrowser` => `Yandex`
+- `extensions` submodule:
+    - Add new Crawler: AdIdxBot, Linespider, LinkedInBot, OpenAI Image Downloader, SemrushBot, Yahoo! Slurp
+    - Add new Fetcher: Better Uptime Bot, Google-PageRenderer, GoogleImageProxy, MicrosoftPreview, Snap URL Preview, SkypeUriPreview, TelegramBot
+    - Add new Vehicles: BMW, Jeep
+    - Add OS detection of WhatsApp user-agent
+
 ## Version 2.0.2
 
 - Fix TypeScript dependency issue

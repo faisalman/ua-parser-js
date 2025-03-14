@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.2
-   Copyright © 2012-2024 Faisal Salman <f@faisalman.com>
+/* UAParser.js v2.0.3
+   Copyright © 2012-2025 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
@@ -19,7 +19,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.2',
+    var LIBVERSION  = '2.0.3',
         UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',

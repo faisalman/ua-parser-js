@@ -1,4 +1,4 @@
-// Type definitions for Enums submodule of UAParser.js v2.0.2
+// Type definitions for Enums submodule of UAParser.js v2.0.3
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 

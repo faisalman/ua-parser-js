@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.2
+/*  Enums for UAParser.js v2.0.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -25,6 +25,7 @@ const Browser = Object.freeze({
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
     BLAZER: 'Blazer',
+    BLU: 'BLU',
     BOLT: 'Bolt',
     BOWSER: 'Bowser',
     BRAVE: 'Brave',
@@ -41,9 +42,11 @@ const Browser = Object.freeze({
     DAUM: 'Daum',
     DILLO: 'Dillo',
     DOLPHIN: 'Dolphin',
+    DOOBLE: 'Dooble',
     DORIS: 'Doris',
     DRAGON: 'Dragon',
     DUCKDUCKGO: 'DuckDuckGo',
+    ECOSIA: 'Ecosia',
     EDGE: 'Edge',
     EPIPHANY: 'Epiphany',
     FACEBOOK: 'Facebook',
@@ -82,6 +85,7 @@ const Browser = Object.freeze({
     KINDLE: 'Kindle',
     LENOVO: 'Smart Lenovo Browser',
     LADYBIRD: 'Ladybird',
+    LG: 'LG Browser',
     LIBREWOLF: 'LibreWolf',
     LIEBAO: 'LBBROWSER',
     LINE: 'Line',
@@ -106,10 +110,12 @@ const Browser = Object.freeze({
     OMNIWEB: 'OmniWeb',
     OPERA: 'Opera',
     OPERA_COAST: 'Opera Coast',
+    OPERA_GX: 'Opera GX',
     OPERA_MINI: 'Opera Mini',
     OPERA_MOBI: 'Opera Mobi',
     OPERA_TABLET: 'Opera Tablet',
     OPERA_TOUCH: 'Opera Touch',
+    OTTER: 'Otter',
     OVI: 'OviBrowser',
     PALEMOON: 'PaleMoon',
     PHANTOMJS: 'PhantomJS',
@@ -121,6 +127,7 @@ const Browser = Object.freeze({
     QQ_LITE: 'QQBrowserLite',
     QUARK: 'Quark',
     QUPZILLA: 'QupZilla',
+    QUTEBROWSER: 'qutebrowser',
     REKONQ: 'rekonq',
     ROCKMELT: 'Rockmelt',
     SAFARI: 'Safari',
@@ -137,6 +144,7 @@ const Browser = Object.freeze({
     SNAPCHAT: 'Snapchat',
     SOGOU_EXPLORER: 'Sogou Explorer',
     SOGOU_MOBILE: 'Sogou Mobile',
+    SURF: 'Surf',
     SWIFTFOX: 'Swiftfox',
     TESLA: 'Tesla',
     TIKTOK: 'TikTok',
