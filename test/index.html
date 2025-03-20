@@ -2,7 +2,7 @@
 <script>
     try {
         UAParser().withClientHints().then(function (result) {
-            var uap = JSON.stringify(result.withFeatureCheck(), null, "\t");
+            var uap = JSON.stringify(result, null, "\t");
             document.write("<p><pre>UAParser.js:\n" + uap + "</pre></p>");
             console.log('UAParser.js result: ', uap);
             if (navigator.userAgentData) {

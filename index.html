@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Abstract away the hassle of user-agent detection">
     <meta property="og:locale" content="en_US">
-    <title>UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data using JavaScript. Supports browser & node.js environment. Also available as jQuery plugin & TypeScript-ready development.</title>
+    <title>UAParser.js | Detect Browser, Engine, OS, CPU, and Device type/model.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/srcery.min.css">
     <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.css">
@@ -37,13 +37,12 @@
     <div class="pusher">
         <div class="ui inverted instagram vertical masthead center aligned segment">
             <div class="ui text container">
-                    <a href="https://uaparser.dev"><h1>UAParser.js</h1></a>
-                    <h2>Abstracts Away The Hassle of User-Agent Detection</h2>
-                <div class="ui massive buttons">
-                    <a href="#demo" class="ui violet button"><i class="magic icon"></i>Try Demo</a>
-                    <a href="https://docs.uaparser.dev" class="ui green button"><i class="book icon"></i>Read Docs</a>
-                    <a href="#download" class="ui blue button"><i class="download icon"></i>Download</a>
-                </div>
+                <a href="https://uaparser.dev"><h1>UAParser.js</h1></a>
+                <h2>Abstracts Away The Hassle of User-Agent Detection</h2>
+                        <a href="#demo" class="ui violet large button"><i class="magic icon"></i>Demo</a>
+                        <a href="#download" class="ui blue large button"><i class="download icon"></i>Download</a>
+                        <a href="#cloud" class="ui red large button"><i class="cloud icon"></i>@cloud</a>
+                        <a href="https://docs.uaparser.dev" class="ui green large button" target="_blank"><i class="book icon"></i>Docs  <i class="icon arrow circle right"></i></a>
             </div>
             <img alt="UAParser.js Illustration" class="ui centered image illustration" src="images/uap-illustrations.png" />
         </div>
@@ -315,7 +314,7 @@ console.log(device.vendor);         // Nokia
 console.log(device.model);          // N900
 </code></pre>
                         
-                        <a href="https://docs.uaparser.dev/intro/quick-start/using-es-modules-typescript.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-es-modules-typescript.html" class="ui large violet button" target="_blank">READ DOCS <i class="icon arrow circle right"></i></a>
                     </div>
                 </div>
                 <div class="ui bottom attached tab tall stacked segment" data-tab="html">
@@ -402,7 +401,7 @@ console.log(uap.getBrowser().name); // "Safari"
 &lt;/html&gt;
 </code></pre>
 
-                        <a href="https://docs.uaparser.dev/intro/quick-start/using-html.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-html.html" class="ui large violet button" target="_blank">READ DOCS <i class="icon arrow circle right"></i></a>
                     </div>
                 </div>
                 <div class="ui bottom attached tab tall stacked segment" data-tab="node">
@@ -446,7 +445,7 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
 </code></pre>
 
-                        <a href="https://docs.uaparser.dev/intro/quick-start/using-node-js.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-node-js.html" class="ui large violet button" target="_blank">READ DOCS <i class="icon arrow circle right"></i></a>
 
                     </div>
                 </div>
@@ -510,7 +509,7 @@ $('body')
         $.ua.device.type);
 </code></pre>
 
-                        <a href="https://docs.uaparser.dev/intro/quick-start/using-jquery.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-jquery.html" class="ui large violet button" target="_blank">READ DOCS <i class="icon arrow circle right"></i></a>
                     </div>
                 </div>
                 <div class="ui bottom attached tab tall stacked segment" data-tab="cli">
@@ -545,7 +544,7 @@ $('body')
 $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
 </code></pre>
 
-                        <a href="https://docs.uaparser.dev/intro/quick-start/using-cli.html" class="ui large violet button"><i class="external alternate icon"></i>READ THE DOCS</a>
+                        <a href="https://docs.uaparser.dev/intro/quick-start/using-cli.html" class="ui large violet button" target="_blank">READ DOCS <i class="icon arrow circle right"></i></a>
                     </div>
                 </div>
             <div class="ui horizontal divider">
@@ -648,7 +647,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     </h2>
                 </div>
                 <div class="ui basic centered segment">
-                    <div class="ui equal width stackable grid"">
+                    <div class="ui equal width stackable grid">
                     <div class=" row">
                         <div class="column">
                             <img alt="Microsoft logo" src="images/companies/microsoft.png" />
@@ -1307,7 +1306,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                         the value from using this library</div>
                 </h2>
                 <div class="description">
-                    <a href="https://opencollective.com/ua-parser-js"><img alt="organization backer photos" class="ui image"
+                    <a href="https://opencollective.com/ua-parser-js" target="_blank"><img alt="organization backer photos" class="ui image"
                             src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64" />
                         <img alt="individual backer photos" class="ui image"
                             src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64" /></a>
@@ -1317,19 +1316,19 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                 <h2 class="ui dividing header">Contributors <div class="sub header">Those who collaborate and
                         continuously improve this library to be awesome</div>
                 </h2>
-                <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img alt="contributor photos" class="ui centered image"
+                <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors" target="_blank"><img alt="contributor photos" class="ui centered image"
                         src="https://opencollective.com/ua-parser-js/contributors.svg?avatarHeight=32&width=640" /></a>
             </div>
             <div class="ui basic left aligned segment">
                 <h3 class="ui dividing header">Support UAParser.js<div class="sub header">Feel free to contribute if you find it helpful</div>
                 </h3>
                 <a href="https://opencollective.com/ua-parser-js/donate?interval=oneTime"
-                    class="ui labeled icon black large button">
+                    class="ui labeled icon black large button" target="_blank">
                     <i class="dollar sign icon"></i>ONE-TIME DONATION</a>
                 <a href="https://opencollective.com/ua-parser-js/donate?interval=month"
-                    class="ui labeled icon black large button">
+                    class="ui labeled icon black large button" target="_blank">
                     <i class="sync icon"></i>MONTHLY</a>
-                <a href="https://github.com/sponsors/faisalman" class="ui labeled icon black large button">
+                <a href="https://github.com/sponsors/faisalman" class="ui labeled icon black large button" target="_blank">
                     <i class="github alternate icon"></i>GITHUB SPONSORS</a>
             </div>
         </div>
@@ -1338,7 +1337,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
         </div>
         <div class="ui tall stacked segment" id="download">
             <div class="ui basic centered segment">
-                <h2 class="ui dividing header">Package Options<div class="sub header">Comparison between our open-source & commercial editions</div>
+                <h2 class="ui dividing header">UAParser.js Package Options<div class="sub header">Comparison between our open-source & commercial editions</div>
                 </h2>
                 <table class="ui center aligned collapsing celled unstackable table">
                     <thead>
@@ -1534,6 +1533,30 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+        </div>
+        <div class="ui horizontal divider">
+            New: UAParser @Cloud
+        </div>
+        <div class="ui tall stacked segment">
+            <div class="ui basic centered segment" id="cloud">
+                <h2 class="ui dividing header">UAParser @cloud<div class="floating ui red massive label">NEW</div><div class="sub header">Our @cloud REST API web service offers seamless integration with any tech stack</div>
+                </h2>
+                <a href="/cloud" target="_blank"><img alt="UAParser.js Illustration" class="ui centered image illustration" src="images/uap-cloud-api.png" /></a>
+                <pre><code># Example
+POST https://api.uaparser.dev/cloud/v1/identify/device
+
+Content-Type: application/json
+Authorization: Bearer YOUR_API_KEY
+
+{
+  "headers": {
+    "User-Agent" : "Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3"
+  }
+}</code></pre>
+                <div class="ui large buttons">
+                    <a href="/cloud" class="ui red large button" target="_blank">LEARN MORE <i class="icon arrow circle right"></i></a>
+                </div>
             </div>
         </div>
         <div class="ui horizontal divider">

@@ -143,6 +143,17 @@ $(document)
           hide: 300
         }
     });
+    $(window).on('scroll', function () {
+        if ($('#showcase img').offset().top < $(window).scrollTop() + $(window).height()) {
+            $('#showcase img')
+                .transition({
+                    animation : 'jiggle',
+                    duration  : 1000,
+                    interval  : 500
+            });
+            $(window).off('scroll');
+        }
+    });
 
     var clipboard = new ClipboardJS('#btn-clipboard');
     clipboard.on('success', function(e) {
