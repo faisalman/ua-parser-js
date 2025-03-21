@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "Windows Mobile",
+        "ua"      : "Mozilla/5.0 (ZTE-E_N72/N72V1.0.0B02;U;Windows Mobile/6.1;Profile/MIDP-2.0 Configuration/CLDC-1.1;320*240;CTC/2.0) IE/6.0 (compatible; MSIE 4.01; Windows CE; PPC)/UC Browser7.7.1.88",
+        "expect"  :
+        {
+            "name"    : "Windows Mobile",
+            "version" : "6.1"
+        }
+    },
+    {
+        "desc"    : "Windows Mobile",
+        "ua"      : "Opera/9.80 (Windows Mobile; WCE; Opera Mobi/WMD-50433; U; en) Presto/2.4.13 Version/10.00",
+        "expect"  :
+        {
+            "name"    : "Windows Mobile",
+            "version" : "undefined"
+        }
+    }
+]

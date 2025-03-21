@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "Fedora",
+        "ua"      : "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0",
+        "expect"  :
+        {
+            "name"    : "Fedora",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Fedora",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:2.0) Gecko/20110404 Fedora/16-dev Firefox/4.0",
+        "expect"  :
+        {
+            "name"    : "Fedora",
+            "version" : "16-dev"
+        }
+    },
+    {
+        "desc"    : "Fedora",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; sk; rv:1.9.0.4) Gecko/2008111217 Fedora/3.0.4-1.fc10 Firefox/3.0.4",
+        "expect"  :
+        {
+            "name"    : "Fedora",
+            "version" : "3.0.4-1.fc10"
+        }
+    }
+]

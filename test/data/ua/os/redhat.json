@@ -1,0 +1,38 @@
+[
+    {
+        "desc"    : "RedHat",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/4.3; Linux) KHTML/4.3.4 (like Gecko) Red Hat Enterprise Linux/4.3.4-11.el6_1.4",
+        "expect"  :
+        {
+            "name"    : "Red Hat",
+            "version" : "4.3.4-11.el6_1.4"
+        }
+    },
+    {
+        "desc"    : "RedHat",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.13pre) Gecko/20070717 Red Hat/1.0.9-4.el4 SeaMonkey/1.0.9",
+        "expect"  :
+        {
+            "name"    : "Red Hat",
+            "version" : "1.0.9-4.el4"
+        }
+    },
+    {
+        "desc"    : "RedHat",
+        "ua"      : "iTunes/4.7.1 (Linux; N; Red Hat; x86_64-linux; EN; utf8) SqueezeCenter, Squeezebox Server, Logitech Media Server/7.9.1/1522157629",
+        "expect"  :
+        {
+            "name"    : "Red Hat",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "RedHat",
+        "ua"      : "curl/7.20.0 (x86_64-redhat-linux-gnu) libcurl/7.20.0 OpenSSL/0.9.8b zlib/1.2.3 libidn/0.6.5",
+        "expect"  :
+        {
+            "name"    : "redhat",
+            "version" : "undefined"
+        }
+    }
+]

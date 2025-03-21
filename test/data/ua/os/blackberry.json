@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "BlackBerry",
+        "ua"      : "BlackBerry9300/5.0.0.912 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/378",
+        "expect"  :
+        {
+            "name"    : "BlackBerry",
+            "version" : "5.0.0.912"
+        }
+    },
+    {
+        "desc"    : "BlackBerry 10",
+        "ua"      : "Mozilla/5.0 (BB10; Touch) AppleWebKit/537.3+ (KHTML, like Gecko) Version/10.0.9.386 Mobile Safari/537.3+",
+        "expect"  :
+        {
+            "name"    : "BlackBerry",
+            "version" : "10"
+        }
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "desc": "Panasonic T31",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Panasonic T31 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.170 Mobile Safari/537.36 ",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "T31",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Panasonic TX-32CSW514 SmartTV",
+        "ua": "HbbTV/1.2.1 (;Panasonic;VIERA 2015;3.014;a001-003 4000-0000;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "VIERA 2015",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Panasonic TX-40FXW724 SmartTV",
+        "ua": "HbbTV/1.4.1 (+DRM;Panasonic;SmartTV2018mid;3.024;4301-0003 0002-0000;SmartTV2018;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "SmartTV2018mid",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Panasonic TX-43HXW904 SmartTV",
+        "ua": "HbbTV/1.5.1 (+DRM;Panasonic;SmartTV2020mid;3.326;4301-0003 0008-0000;com.panasonic.SmartTV2020mid;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "SmartTV2020mid",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Panasonic DMR-HST130 SAT receiver",
+        "ua": "HbbTV/1.1.1 (+PVR;Panasonic;DIGA WebKit M8658;3.420;;)",
+        "expect": {
+            "vendor": "Panasonic",
+            "model": "DIGA WebKit M8658",
+            "type": "smarttv"
+        }
+    }
+]

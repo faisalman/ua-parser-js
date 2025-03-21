@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Joli",
+        "ua"      : "Mozilla/5.0 (X11; Jolicloud Linux i686) AppleWebKit/537.6 (KHTML, like Gecko) Joli OS/1.2 Chromium/23.0.1240.0 Chrome/23.0.1240.0 Safari/537.6",
+        "expect"  :
+        {
+            "name"    : "Joli",
+            "version" : "1.2"
+        }
+    }
+]

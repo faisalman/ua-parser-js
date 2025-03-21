@@ -1,0 +1,47 @@
+[
+    {
+        "desc": "Nintendo Switch",
+        "ua": "Mozilla/5.0 (Nintendo Switch; WifiWebAuthApplet) AppleWebKit/606.4 (KHTML, like Gecko) NF/6.0.1.15.4 NintendoBrowser/5.1.0.20393",
+        "expect": {
+            "vendor": "Nintendo",
+            "model": "Switch",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "Nintendo WiiU",
+        "ua": "Mozilla/5.0 (Nintendo WiiU) AppleWebKit/536.30 (KHTML, like Gecko) NX/3.0.4.2.9 NintendoBrowser/4.2.0.11146.EU",
+        "expect": {
+            "vendor": "Nintendo",
+            "model": "WiiU",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "Nintendo Wii",
+        "ua": "Opera/9.10 (Nintendo Wii; U; ; 1621; en)",
+        "expect": {
+            "vendor": "Nintendo",
+            "model": "Wii",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "Nintendo 3DS",
+        "ua": "Mozilla/5.0 (Nintendo 3DS; U; ; en) Version/1.7610.EU",
+        "expect": {
+            "vendor": "Nintendo",
+            "model": "3DS",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "Nintendo 3DS",
+        "ua": "Mozilla/5.0 (New Nintendo 3DS like iPhone) AppleWebKit/536.30 (KHTML, like Gecko) NX/3.0.0.5.15 Mobile NintendoBrowser/1.3.10126.EU",
+        "expect": {
+            "vendor": "Nintendo",
+            "model": "3DS",
+            "type": "console"
+        }
+    }
+]

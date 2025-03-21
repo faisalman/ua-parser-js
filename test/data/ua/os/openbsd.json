@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "OpenBSD",
+        "ua"      : "Mozilla/5.0 (X11; U; OpenBSD i386; en-US; rv:1.9.1) Gecko/20090702 Firefox/3.5",
+        "expect"  :
+        {
+            "name"    : "OpenBSD",
+            "version" : "undefined"
+        }
+    }
+]

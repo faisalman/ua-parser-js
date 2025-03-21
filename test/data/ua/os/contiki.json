@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Contiki",
+        "ua"      : "Contiki/1.0 (Commodore 64; http://dunkels.com/adam/contiki/)",
+        "expect"  :
+        {
+            "name"    : "Contiki",
+            "version" : "1.0"
+        }
+    }
+]

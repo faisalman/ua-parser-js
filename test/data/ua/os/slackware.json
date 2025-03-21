@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Slackware",
+        "ua"      : "Mozilla/5.0 Slackware/13.37 (X11; U; Linux x86_64; en-US) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41",
+        "expect"  :
+        {
+            "name"    : "Slackware",
+            "version" : "13.37"
+        }
+    }
+]

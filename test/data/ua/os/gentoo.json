@@ -1,0 +1,39 @@
+[
+
+    {
+        "desc"    : "Gentoo",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.16) Gecko/20080716 (Gentoo) Galeon/2.0.6",
+        "expect"  :
+        {
+            "name"    : "Gentoo",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Gentoo",
+        "ua"      : "Xombrero (X11; U; Gentoo Linux amd64; en-US) Webkit/2.8.5",
+        "expect"  :
+        {
+            "name"    : "Gentoo",
+            "version" : "amd64"
+        }
+    },
+    {
+        "desc"    : "Gentoo",
+        "ua"      : "Xombrero/1.6.4 (Linux amd64; en; Gentoo)",
+        "expect"  :
+        {
+            "name"    : "Gentoo",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Gentoo",
+        "ua"      : "Links (2.8; Linux 3.17.2-gentoo-x86 i686; GNU C 4.8.2; x)",
+        "expect"  :
+        {
+            "name"    : "gentoo",
+            "version" : "x86"
+        }
+    }
+]

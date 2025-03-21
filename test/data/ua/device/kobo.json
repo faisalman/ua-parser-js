@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Kobo eReader",
+        "ua": "Mozilla/5.0 (Unknown; Linux) AppleWebKit/538.1 (KHTML, like Gecko) Kobo eReader Safari/538.1",
+        "expect": {
+            "vendor": "Kobo",
+            "model": "eReader",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Kobo Touch",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.0; en-us;) AppleWebKit/538.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/538.1 (Kobo Touch 0377/4.20.14622)",
+        "expect": {
+            "vendor": "Kobo",
+            "model": "Touch",
+            "type": "tablet"
+        }
+    }
+]

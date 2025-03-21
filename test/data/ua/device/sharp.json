@@ -1,0 +1,56 @@
+[
+    {
+        "desc": "Sharp AQUOS-TVX19B",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AQUOS-TVX19B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "AQUOS-TVX19B",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Sharp Aquos B10",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-A01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SH-A01",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sharp Aquos L2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02 Build/S4045) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SH-L02",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sharp Aquos L2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SH-L02) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SH-L02",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sharp Aquos R2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0; SHV42) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SHV42",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Docomo SH-02M",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SH-02M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sharp",
+            "model": "SH-02M",
+            "type": "mobile"
+        }
+    }
+]

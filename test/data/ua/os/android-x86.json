@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Android-x86",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Generic Android-x86) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 OPR/61.2.3076.56749",
+        "expect"  :
+        {
+            "name"    : "Android-x86",
+            "version" : "7.1.2"
+        }
+    }
+]

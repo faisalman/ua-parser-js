@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Manjaro",
+        "ua"      : "Mozilla/5.0 (X11; Manjaro 19.0.2; Arch; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
+        "expect"  :
+        {
+            "name"    : "Manjaro",
+            "version" : "19.0.2"
+        }
+    }
+]

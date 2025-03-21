@@ -1,0 +1,65 @@
+[
+    {
+        "desc"    : "WebOS",
+        "ua"      : "Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.5; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.83 Safari/534.6 TouchPad/1.0",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "3.0.5"
+        }
+    },
+    {
+        "desc"    : "WebOS",
+        "ua"      : "Mozilla/5.0 (webOS/1.4.5; U; en-US) AppleWebKit/532.2 (KHTML, like Gecko) Version/1.0 Safari/532.2 Pre/1.0",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "1.4.5"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 5.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 WebAppManager",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "TV"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 4.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.34 Safari/537.36 WebAppManager",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "TV"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 3.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.2.1 Chrome/38.0.2125.122 Safari/537.36 WebAppManager",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "TV"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 2.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/538.2 (KHTML, like Gecko) Large Screen WebAppManager Safari/538.2",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "TV"
+        }
+    },
+    {
+        "desc"    : "WebOS TV 1.x",
+        "ua"      : "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.41 (KHTML, like Gecko) Large Screen WebAppManager Safari/537.41",
+        "expect"  :
+        {
+            "name"    : "webOS",
+            "version" : "TV"
+        }
+    }
+]

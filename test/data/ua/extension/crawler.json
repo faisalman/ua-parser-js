@@ -1,0 +1,793 @@
+[
+    {
+        "desc"    : "360Spider",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0); 360Spider",
+        "expect"  :
+        {
+            "name"    : "360Spider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AdIdxBot",
+        "ua"      : "Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)",
+        "expect"  :
+        {
+            "name"    : "adidxbot",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AdsBot Mobile Web",
+        "ua"      : "AdsBot-Google (+http://www.google.com/adsbot.html)",
+        "expect"  :
+        {
+            "name"    : "AdsBot-Google",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AdsBot Mobile Web",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)",
+        "expect"  :
+        {
+            "name"    : "AdsBot-Google-Mobile",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AdSense",
+        "ua"      : "Mediapartners-Google",
+        "expect"  :
+        {
+            "name"    : "Mediapartners-Google",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AhrefsBot",
+        "ua"      : "Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)",
+        "expect"  :
+        {
+            "name"    : "AhrefsBot",
+            "version" : "7.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AI2Bot",
+        "ua"      : "Mozilla/5.0 (compatible) AI2Bot (+https://www.allenai.org/crawler)",
+        "expect"  :
+        {
+            "name"    : "AI2Bot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "aiHitBot",
+        "ua"      : "Mozilla/5.0 (compatible; aiHitBot/2.9; +https://www.aihitdata.com/about)",
+        "expect"  :
+        {
+            "name"    : "aiHitBot",
+            "version" : "2.9",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Applebot",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1;+http://www.apple.com/go/applebot)",
+        "expect"  :
+        {
+            "name"    : "Applebot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Applebot-Extended",
+        "ua"      : "Applebot-Extended",
+        "expect"  :
+        {
+            "name"    : "Applebot-Extended",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Amazonbot",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot)",
+        "expect"  :
+        {
+            "name"    : "Amazonbot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Anthropic AI",
+        "ua"      : "anthropic-ai",
+        "expect"  :
+        {
+            "name"    : "anthropic-ai",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Archive.org Bot",
+        "ua"      : "ia_archiver/8.1 (Windows 2000 1.9; en-US;)",
+        "expect"  :
+        {
+            "name"    : "ia_archiver",
+            "version" : "8.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Archive.org Bot",
+        "ua"      : "Mozilla/5.0 (compatible; archive.org_bot/3.3.0 +https://archive.org/details/archive.org_bot)",
+        "expect"  :
+        {
+            "name"    : "archive.org_bot",
+            "version" : "3.3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider",
+        "ua"      : "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-ads",
+        "ua"      : "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:17.0; Baiduspider-ads) Gecko/17.0 Firefox/17.0",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-ads",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-cpro",
+        "ua"      : "Mozilla/5.0 (compatible; Baiduspider-cpro; +http://www.baidu.com/search/spider.html)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-cpro",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-favo",
+        "ua"      : "Baiduspider-favo",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-favo",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-image",
+        "ua"      : "Baiduspider-image+(+http://www.baidu.com/search/spider.htm)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-image",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-news",
+        "ua"      : "Baiduspider-news",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-news",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-render",
+        "ua"      : "Mozilla/5.0 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-render",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baiduspider-video",
+        "ua"      : "Baiduspider-video",
+        "expect"  :
+        {
+            "name"    : "Baiduspider-video",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Bingbot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/",
+        "expect"  :
+        {
+            "name"    : "bingbot",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Bytespider",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.1511.1269 Mobile Safari/537.36; Bytespider",
+        "expect"  :
+        {
+            "name"    : "Bytespider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ClaudeBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "ClaudeBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "CCBot",
+        "ua"      : "CCBot/1.0 (+https://commoncrawl.org/bot.html)",
+        "expect"  :
+        {
+            "name"    : "CCBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Coc Coc Bot (web)",
+        "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
+        "expect"  :
+        {
+            "name"    : "coccocbot-web",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Coc Coc Bot (image)",
+        "ua"      : "Mozilla/5.0 (compatible; coccocbot-image/1.0; +http://help.coccoc.com/searchengine)",
+        "expect"  :
+        {
+            "name"    : "coccocbot-image",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ClaudeWeb",
+        "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-Web",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "DataForSEO",
+        "ua"      : "Mozilla/5.0 (compatible; DataForSeoBot; +https://dataforseo.com/dataforseo-bot)",
+        "expect"  :
+        {
+            "name"    : "DataForSeoBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Diffbot",
+        "ua"      : "Diffbot/0.1",
+        "expect"  :
+        {
+            "name"    : "Diffbot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Dotbot",
+        "ua"      : "Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)",
+        "expect"  :
+        {
+            "name"    : "DotBot",
+            "version" : "1.2",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "DuckDuckBot",
+        "ua"      : "DuckDuckBot/1.1; ( http://duckduckgo.com/duckduckbot.html)",
+        "expect"  :
+        {
+            "name"    : "DuckDuckBot",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Exabot",
+        "ua"      : "Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)",
+        "expect"  :
+        {
+            "name"    : "Exabot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "FacebookBot",
+        "ua"      : "Mozilla/5.0 (compatible; FacebookBot/1.0; +https://developers.facebook.com/docs/sharing/webmasters/facebookbot/",
+        "expect"  :
+        {
+            "name"    : "FacebookBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "FacebookExternalHit",
+        "ua"      : "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+        "expect"  :
+        {
+            "name"    : "facebookexternalhit",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "FacebookExternalHit",
+        "ua"      : "facebookcatalog/1.0",
+        "expect"  :
+        {
+            "name"    : "facebookcatalog",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Googlebot-Video",
+        "ua"      : "Googlebot-Video/1.0",
+        "expect"  :
+        {
+            "name"    : "Googlebot-Video",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Googlebot",
+        "ua"      : "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Googlebot",
+            "version" : "2.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Googlebot Image",
+        "ua"      : "Googlebot-Image/1.0",
+        "expect"  :
+        {
+            "name"    : "Googlebot-Image",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Googlebot Video",
+        "ua"      : "Googlebot-Video/1.0",
+        "expect"  :
+        {
+            "name"    : "Googlebot-Video",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Googlebot News",
+        "ua"      : "Googlebot-News/1.0",
+        "expect"  :
+        {
+            "name"    : "Googlebot-News",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Google Storebot",
+        "ua"      : "Storebot-Google/1.0",
+        "expect"  :
+        {
+            "name"    : "Storebot-Google",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Google InspectionTool",
+        "ua"      : "Mozilla/5.0 (compatible; Google-InspectionTool/1.0;)",
+        "expect"  :
+        {
+            "name"    : "Google-InspectionTool",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "GoogleOther",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GoogleOther) Chrome/41.0.2272.96 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "GoogleOther",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "GoogleOther-Image",
+        "ua"      : "GoogleOther-Image/1.0",
+        "expect"  :
+        {
+            "name"    : "GoogleOther-Image",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "GoogleOther-Video",
+        "ua"      : "GoogleOther-Video/1.0",
+        "expect"  :
+        {
+            "name"    : "GoogleOther-Video",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Google-Safety",
+        "ua"      : "Google-Safety",
+        "expect"  :
+        {
+            "name"    : "Google-Safety",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "GPTBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.0; +https://openai.com/gptbot)",
+        "expect"  :
+        {
+            "name"    : "GPTBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ImagesiftBot",
+        "ua"      : "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)",
+        "expect"  :
+        {
+            "name"    : "ImagesiftBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Linespider",
+        "ua"      : "Mozilla/5.0 (compatible; Linespider/1.1; +https://lin.ee/4dwXkTH)",
+        "expect"  :
+        {
+            "name"    : "Linespider",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "LinkedInBot",
+        "ua"      : "LinkedInBot/1.0 (compatible; Mozilla/5.0; Apache-HttpClient +http://www.linkedin.com)",
+        "expect"  :
+        {
+            "name"    : "LinkedInBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "magpie-crawler",
+        "ua"      : "magpie-crawler/1.1 (robots-txt-checker; +http://www.brandwatch.net)",
+        "expect"  :
+        {
+            "name"    : "magpie-crawler",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Meta-ExternalAgent",
+        "ua"      : "meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-externalagent",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "MJ12bot",
+        "ua"      : "Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)",
+        "expect"  :
+        {
+            "name"    : "MJ12bot",
+            "version" : "v1.4.8",
+            "major"   : "1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "MojeekBot",
+        "ua"      : "Mozilla/5.0 (compatible; MojeekBot/0.11; +https://www.mojeek.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "MojeekBot",
+            "version" : "0.11",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Omgili",
+        "ua"      : "omgili/0.5 +https://omgili.com",
+        "expect"  :
+        {
+            "name"    : "omgili",
+            "version" : "0.5",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Omgilibot",
+        "ua"      : "omgilibot/0.3 +http://www.omgili.com/Crawler.html",
+        "expect"  :
+        {
+            "name"    : "omgilibot",
+            "version" : "0.3",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "OpenAI Search",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",
+        "expect"  :
+        {
+            "name"    : "OAI-SearchBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "PerplexityBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
+        "expect"  :
+        {
+            "name"    : "PerplexityBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "PetalBot",
+        "ua"      : "Mozilla/5.0 (compatible;PetalBot; +https://webmaster.petalsearch.com/site/petalbot) ",
+        "expect"  :
+        {
+            "name"    : "PetalBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "PetalBot",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)",
+        "expect"  :
+        {
+            "name"    : "PetalBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot",
+            "version" : "7",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot for Backlink Audit tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-BA; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-BA",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot for On Page SEO Checker tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-SI/0.97; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-SI",
+            "version" : "0.97",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot for ContentShake AI tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-OCOB/1; +https://www.semrush.com/bot/)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-OCOB",
+            "version" : "1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SeznamBot",
+        "ua"      : "Mozilla/5.0 (compatible; SeznamBot/4.0-RC1; +http://napoveda.seznam.cz/seznambot-intro/)",
+        "expect"  :
+        {
+            "name"    : "SeznamBot",
+            "version" : "4.0-RC1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Sogou",
+        "ua"      : "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)",
+        "expect"  :
+        {
+            "name"    : "Sogou web spider",
+            "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Teoma",
+        "ua"      : "Mozilla/2.0 (compatible; Ask Jeeves/Teoma; +http://sp.ask.com/docs/about/tech_crawling.html)",
+        "expect"  :
+        {
+            "name"    : "Teoma",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Timpibot",
+        "ua"      : "Timpibot/0.8 (+http://www.timpi.io)",
+        "expect"  :
+        {
+            "name"    : "Timpibot",
+            "version" : "0.8",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "TurnitinBot",
+        "ua"      : "TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)",
+        "expect"  :
+        {
+            "name"    : "TurnitinBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "VelenPublicWebCrawler",
+        "ua"      : "Mozilla/5.0 (compatible; VelenPublicWebCrawler/1.0; +https://velen.io)",
+        "expect"  :
+        {
+            "name"    : "VelenPublicWebCrawler",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Japan",
+        "ua"      : "Y!J-BRW/1.0 (https://www.yahoo-help.jp/app/answers/detail/p/595/a_id/42716)",
+        "expect"  :
+        {
+            "name"    : "Y!J-BRW",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Slurp",
+        "ua"      : "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)  ",
+        "expect"  :
+        {
+            "name"    : "Yahoo! Slurp",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Yeti",
+        "ua"      : "Mozilla/5.0 (compatible; Yeti/1.1; +http://naver.me/spd)",
+        "expect"  :
+        {
+            "name"    : "Yeti",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YisouSpider",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 YisouSpider/5.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "YisouSpider",
+            "version" : "5.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YisouSpider",
+        "ua"      : "YisouSpider",
+        "expect"  :
+        {
+            "name"    : "YisouSpider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YouBot",
+        "ua"      : "YouBot (+http://www.you.com)",
+        "expect"  :
+        {
+            "name"    : "YouBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    }
+]

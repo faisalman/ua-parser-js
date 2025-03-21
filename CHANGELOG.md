@@ -65,6 +65,59 @@
 
 --- 
 
+## Version 2.0.3
+
+- Add new browser: Dooble, Ecosia, LG Browser, Otter, qutebrowser, Surf
+- Add new device: BLU, Facebook Portal TV
+- Improve device detection: Archos, LG, Meta Quest
+- Remove jazzer.js fuzz test
+- Improve `withClientHints()`:
+    - Browser naming adjustments:
+        - `HuaweiBrowser` => `Huawei Browser`
+        - `Miui Browser` => `MIUI Browser`
+        - `OperaMobile` => `Opera Mobi`
+        - `YaBrowser` => `Yandex`
+- `extensions` submodule:
+    - Add new Crawler: AdIdxBot, Linespider, LinkedInBot, OpenAI Image Downloader, SemrushBot, Yahoo! Slurp
+    - Add new Fetcher: Better Uptime Bot, Google-PageRenderer, GoogleImageProxy, MicrosoftPreview, Snap URL Preview, SkypeUriPreview, TelegramBot
+    - Add new Vehicles: BMW, Jeep
+    - Add OS detection of WhatsApp user-agent
+
+## Version 2.0.2
+
+- Fix TypeScript dependency issue
+
+## Version 2.0.1
+
+- Add new browser: Ladybird, Daum
+- Add new device: Apple HomePod
+- Add new device vendor: HMD
+- Add new OS: Ubuntu Touch, Windows IoT
+- Improve CPU detection: ARM, x86
+- Improve device detection: Lenovo, Nokia, Nvidia, Xiaomi
+    - Tablet: Google, Honor, Huawei, Infinix, Nokia, OnePlus, Xiaomi
+    - Wearable: Asus, Google, LG, Motorola, OnePlus, Oppo, Samsung, Sony
+    - Smart-TV: Xiaomi, unidentified vendors
+    - Improve detection for unknown VR devices
+    - Improve device model detection for Generic devices
+- Improve OS detection: Linux, Symbian
+- Improve TypeScript definitions for Headers
+- Improve `withClientHints()`:
+    - `engine.version` also get updated
+    - Infer `device.vendor` & `device.type` by guessing from `device.model`
+    - Browser naming adjustments:
+        - `Google Chrome` => `Chrome`
+        - `Microsoft Edge` => `Edge`
+        - `Android WebView` => `Chrome WebView`
+        - `HeadlessChrome` => `Chrome Headless`
+- `enums` submodule:
+    - Add TypeScript definitions
+- `extensions` submodule:
+    - Add new list: 
+        - `Vehicles`: BYD, Rivian, Volvo
+    - Add new Fetcher: Bluesky
+    - Add new Library: Apache-HttpClient, go-http-client, got, GuzzleHttp, Java-http-client, libwww-perl, lua-resty-http, Needle, OkHttp, node-fetch, PHP-SOAP, PostmanRuntime, superagent
+
 ## Version 2.0.0
 
 - `ua-parser-js/extensions` submodule:
@@ -166,6 +219,23 @@
 
 ---
 
+## Version 0.7.40 / 1.0.40
+- Add new browser: 115, LibreWolf, Slimboat, Slimjet
+- Add new device: Advan, Cat, Energizer, IMO, Micromax, Smartfren
+- Add new engine: ArkWeb, Servo
+- Add new os: OpenHarmony
+- Improve browser detection: 2345, 360, Dragon, Iron, Maxthon
+- Recognize Honor as a separate device vendor from Huawei
+- Fix Python Request mistakenly identified as Meta Quest
+
+## Version 0.7.39 / 1.0.39
+- Add new feature: executable command using `npx ua-parser-js "[INSERT-UA-HERE]"`
+- Add new browser: Helio, Pico Browser, Wolvic
+- Add new device vendor: itel, Nothing, TCL
+- Improve browser detection: ICEBrowser, Klar, QQBrowser, Quark, Rekonq, Sleipnir
+- Improve device detection: Xiaomi Pro, Amazon Echo Show, Samsung Galaxy Watch
+- Removed from browser: Viera
+  
 ## Version 0.7.38 / 1.0.38
 - Fix error on getOS() when userAgentData.platform is undefined
 - Add new browser: Opera GX, Twitter

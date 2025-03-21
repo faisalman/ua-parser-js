@@ -1,0 +1,74 @@
+[
+    {
+        "desc": "Realme C1",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; RMX1811 Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX1811",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme C2",
+        "ua": "Mozilla/5.0 (Linux; Android 9; RMX1941) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX1941",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme Narzo 20",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; xx-xx; RMX2193 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX2193",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme 2 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; RMX1801) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX1801",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme 3 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; RMX1851) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX1851",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme 8",
+        "ua": "Mozilla/5.0 (Linux; Android 12; RMX3085) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX3085",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme 9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; RMX3471) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX3471",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Realme GT Master",
+        "ua": "Mozilla/5.0 (Linux; Android 13; RMX3363) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Realme",
+            "model": "RMX3363",
+            "type": "mobile"
+        }
+    }
+]

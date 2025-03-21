@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "watchOS",
+        "ua"      : "server-bag [Watch OS,8.4,19S546,Watch3,4]",
+        "expect"  :
+        {
+            "name"    : "watchOS",
+            "version" : "8.4"
+        }
+    },
+    {
+        "desc"    : "watchOS",
+        "ua"      : "atc/1.0 watchOS/7.4.1 model/Watch3,3 hwp/t8004 build/18T201 (6; dt:155)",
+        "expect"  :
+        {
+            "name"    : "watchOS",
+            "version" : "7.4.1"
+        }
+    },
+    {
+        "desc"    : "watchOS",
+        "ua"      : "Watch4,3/5.3.8 (16U680)",
+        "expect"  :
+        {
+            "name"    : "watchOS",
+            "version" : "5.3.8"
+        }
+    }
+]

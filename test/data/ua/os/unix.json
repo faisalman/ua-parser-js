@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "UNIX",
+        "ua"      : "Surf/0.4.1 (X11; U; Unix; en-US) AppleWebKit/531.2+ Compatible (Safari)",
+        "expect"  :
+        {
+            "name"    : "Unix",
+            "version" : "undefined"
+        }
+    }
+]

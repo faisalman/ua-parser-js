@@ -1,0 +1,227 @@
+[
+    {
+        "desc": "Archos 5",
+        "ua": "Mozilla/5.0 (Linux; U; Android 1.6; fr-fr; Archos5 Build/Donut) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
+        "expect": {
+            "vendor": "Archos",
+            "model": "5",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 40b Titanium Surround",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Archos 40b Titanium Surround Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "40b Titanium Surround",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 40c Titanium v2",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; ARCHOS 40C TIv2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "40C TIv2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45 Neon",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Archos 45 Neon Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "45 Neon",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45 Neon",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; AC45NE Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 YaBrowser/15.6.2311.6088.00 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC45NE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45B Helium",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; AC45BHE Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.109 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC45BHE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45B Titanium",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Archos 45B Titanium) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "45B Titanium",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 50 Cesium",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; ARCHOS; AC50CE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC50CE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 50B Helium 4G",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; AC50BHE Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC50BHE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 55 diamond Selfie",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Archos 55 diamond Selfie Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "55 diamond Selfie",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 80 G9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.0.4; zh-tw; ARCHOS 80G9 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect": {
+            "vendor": "Archos",
+            "model": "80G9",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 80 Xenon",
+        "ua": "Mozilla/5.0 (Linux; Android 4.1.2; Archos 80 Xenon Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Safari/537.36 OPR/50.6.2426.201126",
+        "expect": {
+            "vendor": "Archos",
+            "model": "80 Xenon",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 97c Platinum",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Archos 97c Platinum Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "97c Platinum",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101 Access 3G V2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; Archos Access 101 3G V2 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.130 Safari/537.36[FBAN/EMA;FBLC/pt_PT;FBAV/360.0.0.7.53;]",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Access 101 3G V2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101 Oxygen 4G",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Archos 101 Oxygen 4G Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Safari/537.36 [FB_IAB/FB4A;FBAV/374.0.0.20.109;]",
+        "expect": {
+            "vendor": "Archos",
+            "model": "101 Oxygen 4G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101 Platinum 3G V2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; AC101PL3GV2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC101PL3GV2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101B Helium 4G",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; AC101BHE Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC101BHE",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101s Oxygen Ardoiz",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Archos Oxygen 101S ARDOIZ Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.102 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Oxygen 101S ARDOIZ",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos GAMEPAD2",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; ARCHOS GAMEPAD2 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "GAMEPAD2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos Hello 7",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Archos Hello 7 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.53 Safari/537.36 GoogleApp/13.24.9.26.arm64",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Hello 7",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos Sense 101 X",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 7.0; Archos Sense 101 X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 YaBrowser/20.2.0.215.01 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Sense 101 X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos T101 FHD WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 13; ARCHOS T101 FHD WiFi Build/T00624; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/124.0.6367.159 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "T101 FHD WiFi",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos Tikeasy 10d",
+        "ua": "Mozilla/5.0 (Linux; Android 13; Tikeasy 10d Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.260 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Tikeasy 10d",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos T96 WIFI",
+        "ua": "Mozilla/5.0 (Linux; Android 11; ARCHOS T96 WIFI_EEA Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.5005.78 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "T96 WIFI_EEA",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos X67 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; X67 5G Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.58 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "X67 5G",
+            "type": "tablet"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Kubuntu",
+        "ua"      : "Mozilla/5.0 (compatible; Konqueror/4.4; Linux 2.6.32-22-generic; X11; en_US) KHTML/4.4.3 (like Gecko) Kubuntu",
+        "expect"  :
+        {
+            "name"    : "Kubuntu",
+            "version" : "undefined"
+        }
+    }
+]

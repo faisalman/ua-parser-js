@@ -14,6 +14,7 @@ If you have not yet purchased a license, you may do so at https://store.faisalma
 npm install @ua-parser-js/pro-business
 ```
 
+
 # Documentation
 
 https://docs.uaparser.dev 
