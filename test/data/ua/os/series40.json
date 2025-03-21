@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Series40",
+        "ua"      : "Mozilla/5.0 (Series40; Nokia2055/03.20; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/2.2.0.0.34",
+        "expect"  :
+        {
+            "name"    : "Series40",
+            "version" : "undefined"
+        }
+    }
+]

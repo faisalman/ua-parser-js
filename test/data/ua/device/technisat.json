@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "TechniSAT Digit ISIO S SAT receiver",
+        "ua": "Opera/9.80 (Linux sh4; U; HbbTV/1.1.1 (;;;;;); CE-HTML; TechniSat Digit ISIO S; de) Presto/2.9.167 Version/11.50",
+        "expect": {
+            "vendor": "TechniSat",
+            "model": "Digit ISIO S",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "TechniSAT MultyVision SmartTV",
+        "ua": "Opera/9.80 (Linux i686; U; HbbTV/1.1.1 (;;;;;); CE-HTML; TechniSat MultyVision ISIO; de) Presto/2.9.167 Version/11.50",
+        "expect": {
+            "vendor": "TechniSat",
+            "model": "MultyVision ISIO",
+            "type": "smarttv"
+        }
+    }
+]

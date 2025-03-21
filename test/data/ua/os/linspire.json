@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Linspire",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/20060803 Firefox/1.5.0.4 Linspire/1.5.0.4",
+        "expect"  :
+        {
+            "name"    : "Linspire",
+            "version" : "1.5.0.4"
+        }
+    }
+]

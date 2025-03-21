@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Google Chromecast Mini Smart Speaker",
+        "ua"      : "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.225 Safari/537.36 CrKey/1.56.500000 DeviceType/SmartSpeaker",
+        "expect"  :
+        {
+            "name"    : "Chromecast SmartSpeaker",
+            "version" : "1.56.500000"
+        }
+    }
+]

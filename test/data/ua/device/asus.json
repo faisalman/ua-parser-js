@@ -1,0 +1,164 @@
+[
+    {
+        "desc": "ASUS Nexus 7",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 7 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "Nexus 7",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "ASUS Padfone",
+        "ua": "Mozilla/5.0 (Linux; Android 4.1.1; PadFone 2 Build/JRO03L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.117 Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "PadFone",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "ASUS ZenPad 10",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; P00C Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "P00C",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "ASUS ZenPad Z8s",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; ASUS_P00J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Safari/537.36\n",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "P00J",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "ASUS ROG",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; ZS600KL Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZS600KL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS ROG II",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ASUS_I001DA Build/PKQ1.190414.001; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "I001DA",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone 2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0; ASUS ZenFone 2 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZenFone 2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone 3 Deluxe",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; ASUS_Z016D Build/MXB48T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.132 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "Z016D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone 5",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0; ZE620KL Build/OPR1.170623.032) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZE620KL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone 7",
+        "ua": "Mozilla/5.0 (Linux; Android 10; ASUS_I002D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.81 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "I002D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; ZS671KS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZS671KS",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone Max Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ZB602KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZB602KL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone Max Pro (M1)",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; ASUS_X00TD Build/OPM1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "X00TD",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone Max M2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; ASUS_X01AD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "X01AD",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone Max Pro M2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; ASUS_X01BDA) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "X01BDA",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone Go",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; ASUS_X009DA Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "X009DA",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS Zenfone 2 Laser",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; ASUS_Z00ED) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "Z00ED",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS ZenWatch",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; ASUS ZenWatch Build/LWX48S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZenWatch",
+            "type": "wearable"
+        }
+    }
+]

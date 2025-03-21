@@ -1,0 +1,242 @@
+[
+    {
+        "desc"    : "AhrefsSiteAudit",
+        "ua"      : "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36 (compatible; AhrefsSiteAudit/6.1; +http://ahrefs.com/robot/site-audit)",
+        "expect"  :
+        {
+            "name"    : "AhrefsSiteAudit",
+            "version" : "6.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Better Uptime Bot",
+        "ua"      : "Better Uptime Bot Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Better Uptime Bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "BingPreview",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
+        "expect"  :
+        {
+            "name"    : "BingPreview",
+            "version" : "1.0b",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Bluesky",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Bluesky Cardyb/1.1; +mailto:support@bsky.app) Chrome/100.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Bluesky",
+            "version" : "1.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "ChatGPT-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+        "expect"  :
+        {
+            "name"    : "ChatGPT-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "DuckAssistBot",
+        "ua"      : "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)",
+        "expect"  :
+        {
+            "name"    : "DuckAssistBot",
+            "version" : "1.2",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google FeedFetcher",
+        "ua"      : "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
+        "expect"  :
+        {
+            "name"    : "FeedFetcher-Google",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Image Proxy",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)",
+        "expect"  :
+        {
+            "name"    : "GoogleImageProxy",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Read Aloud - Mobile agent",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
+        "expect"  :
+        {
+            "name"    : "Google-Read-Aloud",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Read Aloud - Desktop agent",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
+        "expect"  :
+        {
+            "name"    : "Google-Read-Aloud",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Page Renderer",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 Google-PageRenderer Google (+https://developers.google.com/+/web/snippet/) ",
+        "expect"  :
+        {
+            "name"    : "Google-PageRenderer",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Publisher Center",
+        "ua"      : "GoogleProducer; (+https://developers.google.com/search/docs/crawling-indexing/google-producer)",
+        "expect"  :
+        {
+            "name"    : "GoogleProducer",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Site Verifier",
+        "ua"      : "Mozilla/5.0 (compatible; Google-Site-Verification/1.0)",
+        "expect"  :
+        {
+            "name"    : "Google-Site-Verification",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Meta-ExternalFetcher",
+        "ua"      : "meta-externalfetcher/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-externalfetcher",
+            "version" : "1.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "MicrosoftPreview",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MicrosoftPreview/2.0; +https://aka.ms/MicrosoftPreview) Chrome/W.X.Y.Z Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "MicrosoftPreview",
+            "version" : "2.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Pinterestbot",
+        "ua"      : "Mozilla/5.0 (compatible; Pinterestbot/1.0; +http://www.pinterest.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Pinterestbot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Rogerbot",
+        "ua"      : "Mozilla/5.0 (compatible; rogerBot/1.0; UrlCrawler; http://www.seomoz.org/dp/rogerbot)",
+        "expect"  :
+        {
+            "name"    : "rogerBot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "SiteAuditBot",
+        "ua"      : "Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SiteAuditBot",
+            "version" : "0.97",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Snap URL Preview",
+        "ua"      : "Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots  ",
+        "expect"  :
+        {
+            "name"    : "Snap URL Preview",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "SkypeUriPreview",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5 skype-url-preview@microsoft.com",
+        "expect"  :
+        {
+            "name"    : "SkypeUriPreview",
+            "version" : "0.5",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "TelegramBot",
+        "ua"      : "TelegramBot (like TwitterBot)",
+        "expect"  :
+        {
+            "name"    : "TelegramBot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "UptimeRobot",
+        "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
+        "expect"  :
+        {
+            "name"    : "UptimeRobot",
+            "version" : "2.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Vercelbot",
+        "ua"      : "Vercelbot (+https://vercel.com)",
+        "expect"  :
+        {
+            "name"    : "Vercelbot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "WhatsApp",
+        "ua"      : "WhatsApp/2.23.20.0",
+        "expect"  :
+        {
+            "name"    : "WhatsApp",
+            "version" : "2.23.20.0",
+            "type"    : "fetcher"
+        }
+    }
+]

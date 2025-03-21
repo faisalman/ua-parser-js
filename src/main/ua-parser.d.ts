@@ -1,6 +1,9 @@
-// Type definitions for UAParser.js v2.0.0
+// Type definitions for UAParser.js v2.0.3
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
+
+import type { IncomingHttpHeaders } from 'http';
+import type { Headers as FetchAPIHeaders } from 'node-fetch';
 
 declare namespace UAParser {
     
@@ -50,11 +53,12 @@ declare namespace UAParser {
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
     type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
     type UAParserExt = Partial<Record<UAParserProps, RegexMap>> | Partial<Record<UAParserProps, RegexMap>>[];
+    type UAParserHeaders = Record<string, string> | IncomingHttpHeaders | FetchAPIHeaders;
 
-    export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: Record<string, string>): IResult;
-    export function UAParser(uastring?: string, headers?: Record<string, string>): IResult;
-    export function UAParser(extensions?: UAParserExt, headers?: Record<string, string>): IResult;
-    export function UAParser(headers?: Record<string, string>): IResult;
+    export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: UAParserHeaders): IResult;
+    export function UAParser(uastring?: string, headers?: UAParserHeaders): IResult;
+    export function UAParser(extensions?: UAParserExt, headers?: UAParserHeaders): IResult;
+    export function UAParser(headers?: UAParserHeaders): IResult;
 
     export class UAParser {
         

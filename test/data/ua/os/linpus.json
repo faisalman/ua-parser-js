@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Linpus",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9b5pre) Gecko/2008032619 Linpus/3.0-0.49",
+        "expect"  :
+        {
+            "name"    : "Linpus",
+            "version" : "3.0-0.49"
+        }
+    }
+]

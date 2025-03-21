@@ -1,0 +1,192 @@
+[
+    {
+        "desc"    : "Apache-HttpClient",
+        "ua"      : "Apache-HttpClient/4.5.14 (Java/17.0.12)",
+        "expect"  :
+        {
+            "name"    : "Apache-HttpClient",
+            "version" : "4.5.14",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Axios",
+        "ua"      : "axios/1.7.2",
+        "expect"  :
+        {
+            "name"    : "axios",
+            "version" : "1.7.2",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "go-http-client",
+        "ua"      : "go-http-client/1.1",
+        "expect"  :
+        {
+            "name"    : "go-http-client",
+            "version" : "1.1",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "got",
+        "ua"      : "got/9.6.0 (https://github.com/sindresorhus/got)",
+        "expect"  :
+        {
+            "name"    : "got",
+            "version" : "9.6.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "GuzzleHttp",
+        "ua"      : "GuzzleHttp/6.5.5 curl/7.70.0 PHP/7.4.22",
+        "expect"  :
+        {
+            "name"    : "GuzzleHttp",
+            "version" : "6.5.5",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Java",
+        "ua"      : "Java/1.6.0_14",
+        "expect"  :
+        {
+            "name"    : "Java",
+            "version" : "1.6.0_14",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Java HTTPClient",
+        "ua"      : "Java-http-client/11.0.6",
+        "expect"  :
+        {
+            "name"    : "Java-http-client",
+            "version" : "11.0.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "jsdom",
+        "ua"      : "Mozilla/5.0 (unknown OS) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.12.0",
+        "expect"  :
+        {
+            "name"    : "jsdom",
+            "version" : "11.12.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "libwww-perl",
+        "ua"      : "libwww-perl/6.05",
+        "expect"  :
+        {
+            "name"    : "libwww-perl",
+            "version" : "6.05",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "lua-resty-http",
+        "ua"      : "lua-resty-http/0.07 (Lua)",
+        "expect"  :
+        {
+            "name"    : "lua-resty-http",
+            "version" : "0.07",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Needle",
+        "ua"      : "Needle/3.2.0 (Node.js v18.14.2; win32 x64)",
+        "expect"  :
+        {
+            "name"    : "Needle",
+            "version" : "3.2.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "OkHttp",
+        "ua"      : "okhttp/3.2.0",
+        "expect"  :
+        {
+            "name"    : "okhttp",
+            "version" : "3.2.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "node-fetch",
+        "ua"      : "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+        "expect"  :
+        {
+            "name"    : "node-fetch",
+            "version" : "1.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "PHP-SOAP",
+        "ua"      : "PHP-SOAP/7.4.33",
+        "expect"  :
+        {
+            "name"    : "PHP-SOAP",
+            "version" : "7.4.33",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "PostmanRuntime",
+        "ua"      : "PostmanRuntime/7.26.5",
+        "expect"  :
+        {
+            "name"    : "PostmanRuntime",
+            "version" : "7.26.5",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Python urllib",
+        "ua"      : "Python-urllib/2.6",
+        "expect"  :
+        {
+            "name"    : "Python-urllib",
+            "version" : "2.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Python requests",
+        "ua"      : "python-requests/2.32",
+        "expect"  :
+        {
+            "name"    : "python-requests",
+            "version" : "2.32",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Scrapy",
+        "ua"      : "Scrapy/1.5.0 (+https://scrapy.org)",
+        "expect"  :
+        {
+            "name"    : "Scrapy",
+            "version" : "1.5.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "superagent",
+        "ua"      : "node-superagent/5.0.2",
+        "expect"  :
+        {
+            "name"    : "node-superagent",
+            "version" : "5.0.2",
+            "type"    : "library"
+        }
+    }
+]

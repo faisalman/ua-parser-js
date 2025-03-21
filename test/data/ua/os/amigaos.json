@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "AmigaOS",
+        "ua"      : "Mozilla/4.0 (compatible; AWEB 3.4 SE; AmigaOS)",
+        "expect"  :
+        {
+            "name"    : "AmigaOS",
+            "version" : "undefined"
+        }
+    }
+]

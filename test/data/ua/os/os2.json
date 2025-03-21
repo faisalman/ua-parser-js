@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "OS/2",
+        "ua"      : "Links (2.1pre14; OS/2 1 i386; 80x33)",
+        "expect"  :
+        {
+            "name"    : "OS/2",
+            "version" : "undefined"
+        }
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "desc"    : "BMW",
+        "ua"      : "Mozilla/5.0 (Linux; Android 9; AFTLBT962E2) AppleWebKit/537.36 (KHTML, like Gecko) Silk/118.3.1 like Chrome/118.0.5993.155 Safari/537.36",
+        "expect"  :
+        {
+            "vendor" : "BMW",
+            "model"  : "undefined",
+            "type"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "BYD",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; DiLink3.0 For BYD AUTO Build/QKQ1.200816.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Safari/537.36",
+        "expect"  :
+        {
+            "vendor" : "BYD",
+            "model"  : "undefined",
+            "type"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Jeep",
+        "ua"      : "Mozilla/5.0 (Linux; Android 9; AFTLFT962X3) AppleWebKit/537.36 (KHTML, like Gecko) Silk/124.5.2 like Chrome/124.0.6367.248 Safari/537.36",
+        "expect"  :
+        {
+            "vendor" : "Jeep",
+            "model"  : "Wagooner",
+            "type"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Rivian",
+        "ua"      : "Dalvik/2.1.0 (Linux; U; Android 10; Rivian R1T Build/QQ3A.200605.002)",
+        "expect"  :
+        {
+            "vendor" : "Rivian",
+            "model"  : "R1T",
+            "type"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Tesla",
+        "ua"      : "Mozilla/5.0 (X11; GNU/Linux) AppleWebKit/537.36 (KHTML, like Gecko) Chromium/79.0.3945.130 Chrome/79.0.3945.130 Safari/537.36 Tesla/2020.36.16-3e9e4e8dd287",
+        "expect"  :
+        {
+            "vendor" : "Tesla",
+            "model"  : "undefined",
+            "type"   : "embedded"
+        }
+    },
+    {
+        "desc"    : "Volvo",
+        "ua"      : "Mozilla/5.0 (VCC; 1.0; like Gecko) NetFront/4.2",
+        "expect"  :
+        {
+            "vendor" : "Volvo",
+            "model"  : "undefined",
+            "type"   : "undefined"
+        }
+    }
+]

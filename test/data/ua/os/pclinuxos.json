@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "PCLinuxOS",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.13) Gecko/20101209 PCLinuxOS/1.9.2.13-1pclos2010 (2010) Firefox/3.6.13",
+        "expect"  :
+        {
+            "name"    : "PCLinuxOS",
+            "version" : "1.9.2.13-1pclos2010"
+        }
+    }
+]

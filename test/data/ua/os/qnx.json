@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "QNX",
+        "ua"      : "Mozilla/5.0 (Photon; U; QNX x86pc; en-US; rv:1.8.1.20) Gecko/20090127 BonEcho/2.0.0.20",
+        "expect"  :
+        {
+            "name"    : "QNX",
+            "version" : "undefined"
+        }
+    }
+]

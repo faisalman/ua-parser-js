@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "Raspbian",
+        "ua"      : "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Raspbian Chromium/72.0.3626.121 HeadlessChrome/72.0.3626.121 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Raspbian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Raspbian",
+        "ua"      : "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/538.15 (KHTML, like Gecko) Version/8.0 Safari/538.15 Raspbian/9.0 (1:3.8.2.0-0rpi28) Epiphany/3.8.2",
+        "expect"  :
+        {
+            "name"    : "Raspbian",
+            "version" : "9.0"
+        }
+    }
+]

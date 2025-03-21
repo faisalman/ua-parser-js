@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Hurd",
+        "ua"      : "Mozilla/5.0 (X11; Hurd 0.9 i386; en-US) libwww-FM/2.14 SSL-MM/1.4.1 GNUTLS/3.7.0 Safari/696.96",
+        "expect"  :
+        {
+            "name"    : "Hurd",
+            "version" : "0.9"
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "HTC Desire 820",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; HTC Desire 820 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HTC",
+            "model": "Desire 820",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HTC Evo Shift 4G",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0",
+        "expect": {
+            "vendor": "Sprint",
+            "model": "APA7373KT",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HTC Nexus 9",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21R) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Mobile Crosswalk/7.36.154.13 Safari/537.36",
+        "expect": {
+            "vendor": "HTC",
+            "model": "Nexus 9",
+            "type": "tablet"
+        }
+    }
+]

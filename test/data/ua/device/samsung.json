@@ -1,0 +1,389 @@
+[
+    {
+        "desc": "Samsung Galaxy A21s",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A217F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.0 Chrome/75.0.3770.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A217F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy A31",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SM-A315G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A315G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy A50",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-A505F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.105 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A505F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy A50s",
+        "ua": "Mozilla/5.0 (Linux; Android 11; SM-A507FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A507FN",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy A52s",
+        "ua": "Mozilla/5.0 (Linux; Android 13; SM-A528B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A528B",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy A80",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-A805F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.112 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-A805F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Fold",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-F900U Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.2 Chrome/67.0.3396.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-F900U",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Z Flip",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SM-F700N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-F700N",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Z Fold2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SM-F916B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-F916B",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S10E",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-G970F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-G970F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S20 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SCG01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SCG01",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Note 10+",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SM-N976V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.89 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-N976V",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung SM-C5000",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; SM-C5000 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.81 Mobile Safari/537.36 wkbrowser 4.1.35 3065",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-C5000",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung C8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; SM-C7108) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-C7108",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Note 8",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; GT-N5100 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "GT-N5100",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung SM-T231",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-T231 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-T231",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab 6 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-P610) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/12.0 Chrome/79.0.3945.136 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-P610",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab A 9.7",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; SM-P550 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.90 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-P550",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab A 10.1",
+        "ua": " Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-T515) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.0 Chrome/83.0.4103.106 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-T515",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab S7",
+        "ua": "Mozilla/5.0 (Linux; Android 10; SM-T870) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-T870",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab S8",
+        "ua": "Mozilla/5.0 (Linux; Android 12; SM-X706B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-X706B",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab S",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-T700 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-T700",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Tab Pro 10.1",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-T520 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-T520",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch",
+        "ua": "Mozilla/5.0 (Linux; Tizen 5.5; SAMSUNG SM-R805W) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.0 Chrome/69.0.3497.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R805W",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch Active 2",
+        "ua": "Mozilla/5.0 (Linux; Tizen 5.5; SAMSUNG SM-R820) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.0 Chrome/69.0.3497.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R820",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch4",
+        "ua": "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-R875U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.2. Chrome/102.0.5005.125 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R875U",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch5 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-R925U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.2. Chrome/111.0.5563.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-R925U",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch7",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 14; SM-L300 Build/AW2E.240318.016)",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-L300",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Note 10.1",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-P605) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-P605",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV2011",
+        "ua": "HbbTV/1.1.1 (;;;;;) Maple;2011",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2011",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV2012",
+        "ua": "HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2012",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV2014",
+        "ua": "HbbTV/1.1.1 (;Samsung;SmartTV2014;T-NT14UDEUC-1060.4;;) WebKit",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2014",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV",
+        "ua": "Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Samsung SmartTV HBBTV",
+        "ua": "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SmartTV2021:UAU7000",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Galaxy Nexus",
+        "ua": "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "Galaxy Nexus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy C9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; SAMSUNG SM-C900F Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.2 Chrome/44.0.2403.133 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-C900F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S5",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0; SM-G900F Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.78 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-G900F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy J7 Prime",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-G610F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S6",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-G920I Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-G920I",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy S6 Edge",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; SM-G925I Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-G925I",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Note 5 Chrome",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-N920C Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.91 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-N920C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Note 5 Samsung Browser",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SAMSUNG SM-N920C Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-N920C",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Gear Live",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; Gear Live Build/KMV78X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "Gear Live",
+            "type": "wearable"
+        }
+    }
+]

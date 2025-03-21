@@ -1,0 +1,38 @@
+[
+    {
+        "desc": "Polytron Prime 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.0; POLYTRON_P552 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 OPR/50.0.2254.149182",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "P552",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Polytron Rocket T1",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.0; en-US; POLYTRON R2501 Build/LRX21M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/13.1.2.1293 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "R2501",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Polytron Rocket T6",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; POLYTRON R2509) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.92 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "R2509",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Polytron Zap 6 Posh",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.1; in-ID; POLYTRON_4G501 Build/LMY47D) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.10.0.1163 UCTurbo/1.9.9.900 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "POLYTRON",
+            "model": "4G501",
+            "type": "mobile"
+        }
+    }
+]

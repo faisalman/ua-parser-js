@@ -1,0 +1,47 @@
+[
+    {
+        "desc": "Microsoft Lumia 950",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Lumia 950",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Microsoft Surface Duo",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 10; Surface Duo Build/2020.1014.61)",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Surface Duo",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Microsoft Lumia 950",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Lumia 950",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Xbox",
+        "ua": "Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Xbox",
+            "type": "console"
+        }
+    },
+    {
+        "desc": "Xbox One",
+        "ua": "Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; Xbox; Xbox One)",
+        "expect": {
+            "vendor": "Microsoft",
+            "model": "Xbox One",
+            "type": "console"
+        }
+    }
+]
