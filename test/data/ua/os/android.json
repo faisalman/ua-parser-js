@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "Android",
+        "ua"      : "Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; VM670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko)",
+        "expect"  :
+        {
+            "name"    : "Android",
+            "version" : "2.2.2"
+        }
+    },
+    {
+        "desc"    : "MIUI",
+        "ua"      : "Dalvik/2.1.0 (Linux; U; Android 9; Mi MIX 3 5G MIUI/V10.3.2.0.PEMEUVF)",
+        "expect"  :
+        {
+            "name"    : "Android",
+            "version" : "9"
+        }
+    },
+    {
+        "desc"    : "KTB-Nexus 5",
+        "ua"      : "APP-My App/1.0 (Linux; Android 4.2.1; Nexus 5 Build/JOP40D)",
+        "expect"  :
+        {
+            "name"    : "Android",
+            "version" : "4.2.1"
+        }
+    }
+]

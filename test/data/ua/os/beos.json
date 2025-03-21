@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "BeOS",
+        "ua"      : "Mozilla/5.0 (BeOS; U; BeOS BePC; en-US; rv:1.8.1.8pre) Gecko/20070926 SeaMonkey/1.1.5pre",
+        "expect"  :
+        {
+            "name"    : "BeOS",
+            "version" : "undefined"
+        }
+    }
+]

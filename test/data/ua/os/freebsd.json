@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "FreeBSD",
+        "ua"      : "Mozilla/5.0 (X11; U; FreeBSD x86_64; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.204 Safari/534.16",
+        "expect"  :
+        {
+            "name"    : "FreeBSD",
+            "version" : "undefined"
+        }
+    }
+]

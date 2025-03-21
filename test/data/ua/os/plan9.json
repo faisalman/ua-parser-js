@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Plan9",
+        "ua"      : "NCSA_Mosaic/5.0 (X11;Plan 9 4.0)",
+        "expect"  :
+        {
+            "name"    : "Plan 9",
+            "version" : "4.0"
+        }
+    }
+]

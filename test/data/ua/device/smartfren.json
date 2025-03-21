@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "Smartfren Andromax L",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Andromax B26D2H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Smartfren",
+            "model": "Andromax B26D2H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Smartfren Andromax G2",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Smartfren Andromax AD9A1H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Smartfren",
+            "model": "Andromax AD9A1H",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Smartfren New Andromax I",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.1.2; id-id; New Andromax-i Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Smartfren",
+            "model": "New Andromax-i",
+            "type": "mobile"
+        }
+    }
+]

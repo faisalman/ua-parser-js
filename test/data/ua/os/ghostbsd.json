@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "GhostBSD",
+        "ua"      : "Mozilla/5.0 (X11; GhostBSD/10.3; x86_64; rv:50.0.1) Gecko/20100101 Firefox/50.0.1",
+        "expect"  :
+        {
+            "name"    : "GhostBSD",
+            "version" : "10.3"
+        }
+    }
+]

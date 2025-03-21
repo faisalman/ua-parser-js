@@ -1,0 +1,128 @@
+[
+    {
+        "desc": "OnePlus One",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; A0001 Build/KTU84Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "A0001",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus One",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; OnePlus One A0001 Build/KVT49L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.117 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "A0001",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 2",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; ONE A2003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "A2003",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 3",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; ONEPLUS A3000 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "A3000",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 6",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ONEPLUS A6003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.89 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "A6003",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 6T",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ONEPLUS A6010) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "A6010",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 8T",
+        "ua": "Mozilla/5.0 (Linux; Android 11; KB2005) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "KB2005",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 8 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; IN2025) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.119 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "IN2025",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Nord N100",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BE2015 Build/QKQ1.200719.002; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "BE2015",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Nord N10 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BE2029) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.185 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "BE2029",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Pad Go 11.35",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 14; OPD2304) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.629 YaApp_Android/24.101/apad YaSearchBrowser/24.101/apad BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2304",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Pad 2 12.1 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; OPD2403 Build/UKQ1.231108.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2403",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Pad 11.61 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; OPD2203 Build/UKQ1.230924.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2203",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; OPWWE231 Build/TWR7.231113.001.OPWWE231_11_A.117.240703)",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPWWE231",
+            "type": "wearable"
+        }
+    }
+]

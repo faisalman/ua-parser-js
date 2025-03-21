@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "Windows Phone",
+        "ua"      : "Opera/9.80 (Windows Phone; Opera Mini/7.6.8/35.7518; U; ru) Presto/2.8.119 Version/11.10",
+        "expect"  :
+        {
+            "name"    : "Windows Phone",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Windows Phone OS",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; DELL; Venue Pro)",
+        "expect"  :
+        {
+            "name"    : "Windows Phone OS",
+            "version" : "7.0"
+        }
+    },
+    {
+        "desc"    : "Windows Phone 8",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; HTC; Windows Phone 8X by HTC)",
+        "expect"  :
+        {
+            "name"    : "Windows Phone",
+            "version" : "8.0"
+        }
+    }
+]

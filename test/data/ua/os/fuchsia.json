@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Fuchsia",
+        "ua"      : "Mozilla/5.0 (X11; Fuchsia x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3557.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Fuchsia",
+            "version" : "undefined"
+        }
+    }
+]

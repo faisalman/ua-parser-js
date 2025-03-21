@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "Tizen",
+        "ua"      : "Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1",
+        "expect"  :
+        {
+            "name"    : "Tizen",
+            "version" : "2.3"
+        }
+    },
+    {
+        "desc"    : "Tizen",
+        "ua"      : "Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) Version/2.3 Mobile Safari/537.3",
+        "expect"  :
+        {
+            "name"    : "Tizen",
+            "version" : "2.3"
+        }
+    },
+    {
+        "desc"    : "Tizen 6.0",
+        "ua"      : "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
+        "expect"  :
+        {
+            "name"    : "Tizen",
+            "version" : "6.0"
+        }
+    }
+]

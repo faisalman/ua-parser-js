@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "RISC OS",
+        "ua"      : "Mozilla/1.10 [en] (Compatible; RISC OS 3.70; Oregano 1.10)",
+        "expect"  :
+        {
+            "name"    : "RISC OS",
+            "version" : "3.70"
+        }
+    }
+]

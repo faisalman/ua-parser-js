@@ -1,4 +1,4 @@
-// Type definitions for Helpers submodule of UAParser.js v2.0.0
+// Type definitions for Helpers submodule of UAParser.js v2.0.3
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
@@ -13,3 +13,4 @@ export const Fetchers: UAParserExt;
 export const InApps: UAParserExt;
 export const Libraries: UAParserExt;
 export const MediaPlayers: UAParserExt;
+export const Vehicles: UAParserExt;

@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "ZTE Blade A6",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; ZTE BLADE A0620 Build/NMF26F; ru-ru) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 Puffin/9.2.0.50586AP",
+        "expect": {
+            "vendor": "ZTE",
+            "model": "BLADE A0620",
+            "type": "mobile"
+        }
+    }
+]

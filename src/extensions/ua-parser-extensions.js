@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.0
+/*  Extensions for UAParser.js v2.0.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Enterprise License */
@@ -42,25 +42,25 @@ const Crawlers = Object.freeze({
         [
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
-            // Bingbot - http://www.bing.com/bingbot.htm
+            // Bingbot / AdIdxBot - https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
             // CCBot - https://commoncrawl.org/faq
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
+            // LinkedInBot - http://www.linkedin.com
             // MJ12bot - https://mj12bot.com/
             // MojeekBot - https://www.mojeek.com/bot.html
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
-            // SemrushBot - http://www.semrush.com/bot.html
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
-            /((?:ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|linkedin|mj12|mojeek|oai-search|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
-            /(applebot(?:-extended)?)\/([\w\.]+)/i,
+            /(applebot(?:-extended)?)\/?([\w\.]*)/i,
 
             // Baiduspider https://help.baidu.com/question?prod_id=99&class=0&id=3001
-            /(baiduspider)[-imagevdonsfcpr]{0,6}\/([\w\.]+)/i,
+            /(baiduspider[-imagevdonwsfcpr]{0,7})\/?([\w\.]*)/i,
 
             // ClaudeBot (Anthropic)
             /(claude(?:bot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
@@ -78,6 +78,9 @@ const Crawlers = Object.freeze({
             // Internet Archive (archive.org)
             /(ia_archiver|archive\.org_bot)\/?([\w\.]*)/i,
 
+            // SemrushBot - http://www.semrush.com/bot.html
+            /((?:semrush|splitsignal)bot[-abcfimostw]*)\/?([\w\.-]*)/i,
+
             // Sogou Spider
             /(sogou (?:pic|head|web|orion|news) spider)\/([\w\.]+)/i, 
 
@@ -90,8 +93,8 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Diffbot / Magpie-Crawler / Omgilibot / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
-            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |yisou)spider)\/?([\w\.]*)/i
+            // aiHitBot / Diffbot / Linespider / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / Webzio-Extended / Screaming Frog SEO Spider / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
+            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|openai image downloader|(?:magpie-|velenpublicweb)crawler|webzio-extended|(?:screaming frog seo |line|yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],
@@ -108,7 +111,7 @@ const Crawlers = Object.freeze({
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|(?=yahoo! )slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -161,7 +164,7 @@ const ExtraDevices = Object.freeze({
         /\b(zur\d{3}) b/i                                                   // Swiss ZUR Tablet
         ], [MODEL, [VENDOR, 'Swiss'], [TYPE, TABLET]], [
 
-        /\b((zeki)?tb.*\b) b/i                                              // Zeki Tablets
+        /^((zeki)?tb.*\b) b/i                                               // Zeki Tablets
         ], [MODEL, [VENDOR, 'Zeki'], [TYPE, TABLET]], [
 
         /\b([yr]\d{2}) b/i,
@@ -217,33 +220,35 @@ const Fetchers = Object.freeze({
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
-            // BingPreview / Mastodon / Pinterestbot / Redditbot / Rogerbot / Telegrambot / Twitterbot / UptimeRobot
-            /(ahrefssiteaudit|bingpreview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|telegram|twitter|uptimero)bot)\/([\w\.]+)/i,
+            // Better Uptime / BingPreview / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Google Site Verifier / Meta / Yahoo! Japan
+            // Yandex Bots - https://yandex.com/bots
+            /(ahrefssiteaudit|(?:bing|microsoft)preview|chatgpt-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
-            // Google Site Verifier
-            /(google-site-verification)\/([\w\.]+)/i,
+            // Bluesky
+            /(bluesky) cardyb\/([\w\.]+)/i,
 
-            // Meta
-            /(meta-externalfetcher)\/([\w\.]+)/i,
+            // Skype
+            /(skypeuripreview) preview\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
             /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
             
             // WhatsApp
-            /(whatsapp)\/([\w\.]+)[\/ ][ianw]/i,
-
-            // Yahoo! Japan
-            /(y!?j-dlc)\/([\w\.]+)/i,
-
-            // Yandex Bots - https://yandex.com/bots
-            /(yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
-            /(yandex(?:sitelinks|userproxy))/i
+            /(whatsapp)\/([\w\.]+)/i
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
-        // Google Bots / Cohere / Snapchat / Vercelbot
-        [/(cohere-ai|vercelbot|feedfetcher-google|google(?:-read-aloud|producer)|(?=bot; )snapchat)/i], 
+        [
+            // Google Bots / Cohere / Snapchat / Vercelbot / Yandex Bots
+            /((?:better uptime |telegram|vercel)bot|cohere-ai|feedfetcher-google|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|yandex(?:sitelinks|userproxy))/i
+        ], 
         [NAME, [TYPE, FETCHER]],
+    ],
+
+    os : [
+        [/whatsapp\/[\d\.]+ (a|i)/i],
+        [[NAME, os => os == 'A' ? 'Android' : 'iOS' ]]
     ]
 });
 
@@ -254,10 +259,12 @@ const Fetchers = Object.freeze({
 const InApps = Object.freeze({
     browser : [
         // Slack
-        [/chatlyio\/([\d\.]+)/i], [VERSION, 'Slack', [TYPE, INAPP]],
+        [/(?:slack(?=.+electron|.+ios)|chatlyio)\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Slack'], [TYPE, INAPP]],
 
         // Yahoo! Japan
-        [/jp\.co\.yahoo\.android\.yjtop\/([\d\.]+)/i], [VERSION, 'Yahoo! Japan', [TYPE, INAPP]]
+        [/jp\.co\.yahoo\.(?:android\.yjtop|ipn\.appli)\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Yahoo! Japan'], [TYPE, INAPP]]
     ]
 });
 
@@ -267,104 +274,48 @@ const InApps = Object.freeze({
 
 const MediaPlayers = Object.freeze({
     browser : [[
-
-        /(apple(?:coremedia|))\/([\w\._]+)/i,                               // Generic Apple CoreMedia
-        /(coremedia) v([\w\._]+)/i
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(aqualung|lyssna|bsplayer)\/([\w\.-]+)/i                           // Aqualung/Lyssna/BSPlayer
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(ares|ossproxy)\s([\w\.-]+)/i                                      // Ares/OSSProxy
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(audacious|audimusicstream|amarok|bass|core|dalvik|gnomemplayer|music on console|nsplayer|psp-internetradioplayer|videos)\/([\w\.-]+)/i,
-                                                                            // Audacious/AudiMusicStream/Amarok/BASS/OpenCORE/Dalvik/GnomeMplayer/MoC
+        /(apple(?:coremedia|tv))\/([\w\._]+)/i,                             // Generic Apple CoreMedia
+        /(coremedia) v([\w\._]+)/i,         
+                                                                            // Ares/Nexplayer/OSSProxy
+        /(ares|clementine|music player daemon|nexplayer|ossproxy) ([\w\.-]+)/i, 
+                                                                            // Aqualung/Lyssna/BSPlayer/Clementine/MPD
+                                                                            // Audacious/AudiMusicStream/Amarok/BASS/OpenCORE/GnomeMplayer/MoC
                                                                             // NSPlayer/PSP-InternetRadioPlayer/Videos
-        /(clementine|music player daemon)\s([\w\.-]+)/i,                    // Clementine/MPD
-        /(lg player|nexplayer)\s([\d\.]+)/i,
-        /player\/(nexplayer|lg player)\s([\w\.-]+)/i                        // NexPlayer/LG Player
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-        /(nexplayer)\s([\w\.-]+)/i                                          // Nexplayer
+                                                                            // Nero Home/Nero Scout/Nokia
+                                                                            // QuickTime/RealMedia/RadioApp/RadioClientApplication/
+                                                                            // SoundTap/Totem/Stagefright/Streamium
+                                                                            // XBMC/gvfs/Xine/XMMS/irapp
+        /^(aqualung|audacious|audimusicstream|amarok|bass|bsplayer|core|gnomemplayer|gvfs|irapp|lyssna|music on console|nero (?:home|scout)|nokia\d+|nsplayer|psp-internetradioplayer|quicktime|rma|radioapp|radioclientapplication|soundtap|stagefright|streamium|totem|videos|xbmc|xine|xmms)\/([\w\.-]+)/i,
+        /(lg player|nexplayer) ([\d\.]+)/i,
+        /player\/(nexplayer|lg player) ([\w\.-]+)/i,                        // NexPlayer/LG Player
+        /(gstreamer) souphttpsrc.+libsoup\/([\w\.-]+)/i,                    // Gstreamer
+        /(htc streaming player) [\w_]+ \/ ([\d\.]+)/i,                      // HTC Streaming Player
+        /(lavf)([\d\.]+)/i,                                                 // Lavf (FFMPEG)
+                                                                            // MPlayer SVN
+        /(mplayer)(?: |\/)(?:(?:sherpya-){0,1}svn)(?:-| )(r\d+(?:-\d+[\w\.-]+))/i,
+        / (songbird)\/([\w\.-]+)/i,                                         // Songbird/Philips-Songbird
+        /(winamp)(?:3 version|mpeg| ) ([\w\.-]+)/i,                         // Winamp
+        /(vlc)(?:\/| media player - version )([\w\.-]+)/i,                  // VLC Videolan
+        /^(foobar2000|itunes|smp)\/([\d\.]+)/i,                             // Foobar2000/iTunes/SMP
+        /com\.(riseupradioalarm)\/([\d\.]*)/i,                              // RiseUP Radio Alarm
+        /(mplayer)(?:\s|\/| unknown-)([\w\.\-]+)/i,                         // MPlayer
+                                                                            // Windows Media Server
+        /(windows)\/([\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ home media server/i
         ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
 
         /(flrp)\/([\w\.-]+)/i                                               // Flip Player
         ], [[NAME, 'Flip Player'], VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(fstream|nativehost|queryseekspider)/i
                                                                             // FStream/NativeHost/QuerySeekSpider
+                                                                            // MPlayer (no other info)/Media Player Classic/Nero ShowTime
+                                                                            // OCMS-bot/tap in radio/tunein/unknown/winamp (no other info)
+                                                                            // inlight radio / YourMuze
+        /(fstream|media player classic|inlight radio|mplayer|nativehost|nero showtime|ocms-bot|queryseekspider|tapinradio|tunein radio|winamp|yourmuze)/i                                                                          
         ], [NAME, [TYPE, MEDIAPLAYER]], [
 
-        /(gstreamer) souphttpsrc.+libsoup\/([\w\.-]+)/i
-                                                                            // Gstreamer
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
+        /(htc_one_s|windows-media-player|wmplayer)\/([\w\.-]+)/i,           // HTC One S / Windows Media Player
+        ], [[NAME, /[_-]/g, ' '], VERSION, [TYPE, MEDIAPLAYER]], [
 
-        /(htc streaming player)\s[\w_]+\s\/\s([\d\.]+)/i,                   // HTC Streaming Player
-        /(lavf)([\d\.]+)/i                                                  // Lavf (FFMPEG)
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(htc_one_s)\/([\d\.]+)/i,                                          // HTC One S
-        ], [[NAME, /_/g, ' '], VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(mplayer)(?:\s|\/)(?:(?:sherpya-){0,1}svn)(?:-|\s)(r\d+(?:-\d+[\w\.-]+))/i,
-                                                                            // MPlayer SVN
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(mplayer)(?:\s|\/)([\w\.-]+)/i,                                    // MPlayer
-        /(mplayer) unknown-([\w\.\-]+)/i                                    // MPlayer UNKNOWN
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(mplayer)/i,                                                       // MPlayer (no other info)
-        /(yourmuze)/i,                                                      // YourMuze
-        /(media player classic|nero showtime)/i                             // Media Player Classic/Nero ShowTime
-        ], [NAME, [TYPE, MEDIAPLAYER]], [
-
-        /(nero (?:home|scout))\/([\w\.-]+)/i                                // Nero Home/Nero Scout
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(nokia\d+)\/([\w\.-]+)/i                                           // Nokia
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /\s(songbird)\/([\w\.-]+)/i                                         // Songbird/Philips-Songbird
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(winamp)3 version ([\w\.-]+)/i,                                    // Winamp
-        /(winamp)\s([\w\.-]+)/i,
-        /(winamp)mpeg\/([\w\.-]+)/i
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(ocms-bot|tapinradio|tunein radio|unknown|winamp|inlight radio)/i  // OCMS-bot/tap in radio/tunein/unknown/winamp (no other info)
-                                                                            // inlight radio
-        ], [NAME, [TYPE, MEDIAPLAYER]], [
-
-        /(quicktime|rma|radioapp|radioclientapplication|soundtap|totem|stagefright|streamium)\/([\w\.-]+)/i
-                                                                            // QuickTime/RealMedia/RadioApp/RadioClientApplication/
-                                                                            // SoundTap/Totem/Stagefright/Streamium
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(smp)([\d\.]+)/i                                                   // SMP
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(vlc) media player - version ([\w\.]+)/i,                          // VLC Videolan
-        /(vlc)\/([\w\.-]+)/i,
-        /(xbmc|gvfs|xine|xmms|irapp)\/([\w\.-]+)/i,                         // XBMC/gvfs/Xine/XMMS/irapp
-        /(foobar2000)\/([\d\.]+)/i,                                         // Foobar2000
-        /(itunes)\/([\d\.]+)/i                                              // iTunes
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(wmplayer)\/([\w\.-]+)/i,                                          // Windows Media Player
-        /(windows-media-player)\/([\w\.-]+)/i
-        ], [[NAME, /-/g, ' '], VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /windows\/([\w\.-]+) upnp\/[\d\.]+ dlnadoc\/[\d\.]+ (home media server)/i,
-                                                                            // Windows Media Server
-        ], [VERSION, [NAME, 'Windows'], [TYPE, MEDIAPLAYER]], [
-
-        /(com\.riseupradioalarm)\/([\d\.]*)/i                               // RiseUP Radio Alarm
-        ], [NAME, VERSION, [TYPE, MEDIAPLAYER]], [
-
-        /(rad.io)\s([\d\.]+)/i,                                             // Rad.io
-        /(radio.(?:de|at|fr))\s([\d\.]+)/i
+        /(rad.io|radio.(?:de|at|fr)) ([\d\.]+)/i                            // Rad.io
         ], [[NAME, 'rad.io'], VERSION, [TYPE, MEDIAPLAYER]]
     ]
 });
@@ -375,8 +326,34 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Axios/jsdom/Scrapy/Java/urllib/requests
-        [/\b(axios|jsdom|scrapy|java|python-urllib|python-requests)\/([\w\.]+)/i], [NAME, VERSION, [TYPE, LIBRARY]]
+        // Apache-HttpClient/Axios/go-http-client/got/GuzzleHttp/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/Scrapy/superagent
+        [
+            /^(apache-httpclient|axios|(?:go|java)-http-client|got|guzzlehttp|java|libwww-perl|lua-resty-http|needle|node-(?:fetch|superagent)|okhttp|php-soap|postmanruntime|python-(?:urllib|requests)|scrapy)\/([\w\.]+)/i,
+            /(jsdom|(?<=\()java)\/([\w\.]+)/i
+        ], [NAME, VERSION, [TYPE, LIBRARY]]
+    ]
+});
+
+/////////////
+// VEHICLES
+////////////
+
+const Vehicles = Object.freeze({
+    device : [
+        [/aftlbt962e2/i],                                                   // BMW
+        [[VENDOR, 'BMW']],
+
+        [/dilink.+(byd) auto/i],                                            // BYD
+        [VENDOR],
+
+        [/aftlft962x3/i],                                                   // Jeep
+        [[VENDOR, 'Jeep'], [MODEL, 'Wagooner']],
+        
+        [/(rivian) (r1t)/i],                                                // Rivian
+        [VENDOR, MODEL],
+
+        [/vcc.+netfront/i],                                                 // Volvo
+        [[VENDOR, 'Volvo']]
     ]
 });
 
@@ -390,6 +367,9 @@ const Bots = Object.freeze({
         ...Crawlers.browser,
         ...Fetchers.browser,
         ...Libraries.browser
+    ],
+    os : [
+        ...Fetchers.os
     ]
 });
 
@@ -402,5 +382,6 @@ module.exports = {
     Fetchers,
     InApps,
     Libraries,
-    MediaPlayers
+    MediaPlayers,
+    Vehicles
 };

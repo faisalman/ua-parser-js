@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Deepin",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Deepin 15.5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 NFSBrowser/5.0.0.1886",
+        "expect"  :
+        {
+            "name"    : "Deepin",
+            "version" : "15.5"
+        }
+    }
+]

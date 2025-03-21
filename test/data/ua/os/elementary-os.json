@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "elementary OS",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/604.1 (KHTML, like Gecko) Version/11.0 Safari/604.1 elementary OS/0.4 (Loki) Epiphany/3.18.11",
+        "expect"  :
+        {
+            "name"    : "elementary OS",
+            "version" : "0.4"
+        }
+    }
+]

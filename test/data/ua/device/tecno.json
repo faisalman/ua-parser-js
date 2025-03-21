@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Tecno KC8",
+        "ua": "Mozilla/5.0 (Linux; Android 10; TECNO KC8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TECNO",
+            "model": "KC8",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Tecno Spark 8C",
+        "ua": "Mozilla/5.0 (Linux; Android 11; TECNO KG5n) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "TECNO",
+            "model": "KG5n",
+            "type": "mobile"
+        }
+    }
+]

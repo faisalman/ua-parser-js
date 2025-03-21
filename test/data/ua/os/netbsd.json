@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "NetBSD",
+        "ua"      : "ELinks (0.4.3; NetBSD 3.0.2PATCH sparc64; 141x19)",
+        "expect"  :
+        {
+            "name"    : "NetBSD",
+            "version" : "3.0.2PATCH"
+        }
+    }
+]

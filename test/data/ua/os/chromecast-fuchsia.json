@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Google Chromecast Nest Hub",
+        "ua"      : "Mozilla/5.0 (Fuchsia) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 CrKey/1.56.500000",
+        "expect"  :
+        {
+            "name"    : "Chromecast Fuchsia",
+            "version" : "1.56.500000"
+        }
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "Solaris",
+        "ua"      : "Mozilla/5.0 (X11; U; SunOS sun4u; en-US; rv:1.7) Gecko/20070606",
+        "expect"  :
+        {
+            "name"    : "Solaris",
+            "version" : "sun4u"
+        }
+    },
+    {
+        "desc"    : "Solaris",
+        "ua"      : "NCSA Mosaic/1.0 (X11;SunOS 4.1.4 sun4m)",
+        "expect"  :
+        {
+            "name"    : "Solaris",
+            "version" : "4.1.4"
+        }
+    }
+]

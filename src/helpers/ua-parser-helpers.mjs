@@ -3,7 +3,7 @@
 // Source: /src/helpers/ua-parser-helpers.js
 
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.0
+/*  Helpers for UAParser.js v2.0.3
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Enterprise License */
@@ -96,6 +96,9 @@ const isAIBot = (resultOrUA) => [
 
     // Perplexity
     'perplexitybot',
+
+    // Semrush
+    'semrushbot-ocob',
 
     // Timpi
     'timpibot',

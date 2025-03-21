@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Google Chromecast with Google TV",
+        "ua"      : "Mozilla/5.0 (Linux; Android 12.0; Build/STTL.240206.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.0 Safari/537.36 CrKey/1.56.500000 DeviceType/AndroidTV",
+        "expect"  :
+        {
+            "name"    : "Chromecast Android",
+            "version" : "12.0"
+        }
+    }
+]

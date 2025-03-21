@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "Arch",
+        "ua"      : "Uzbl (Webkit 1.1.10) (Arch Linux)",
+        "expect"  :
+        {
+            "name"    : "Arch",
+            "version" : "undefined"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "desc"    : "CentOS",
+        "ua"      : "Konqueror/15.13 (CentOS Linux 7.4; cs-CZ;)",
+        "expect"  :
+        {
+            "name"    : "CentOS",
+            "version" : "7.4"
+        }
+    }
+]

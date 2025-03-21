@@ -1,0 +1,92 @@
+[
+    {
+        "desc": "Ulefone Armor",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Armor Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.107 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Armor",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 6.0; Armor) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 YaBrowser/20.4.2.101.00 SA/1 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Armor 8 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Armor 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.192 Mobile Safari/537.36 OPR/74.1.3922.71199",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor 8 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Armor 12 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Armor 12 5G Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.166 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor 12 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Armor 20WT",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Armor 20WT) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/22.0 Chrome/111.0.5563.116 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor 20WT",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Armor Pad",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Armor Pad Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/431.0.0.30.108;]",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor Pad",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Armor X5 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Armor X5 Pro Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/430.0.0.23.113;]",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Armor X5 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Power Armor 14 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Power Armor14 Pro Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Power Armor14 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Power Armor 18T",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Power Armor 18T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Power Armor 18T",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Ulefone Power Armor 19T",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Power Armor 19T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.192 Mobile Safari/537.36 OPR/74.3.3922.71982",
+        "expect": {
+            "vendor": "Ulefone",
+            "model": "Power Armor 19T",
+            "type": "mobile"
+        }
+    }
+]

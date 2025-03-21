@@ -1,0 +1,137 @@
+[
+    {
+        "desc": "Kindle Fire HD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFTT",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Kindle Fire HD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Mobile Safari/535.19 Silk-Accelerated=true",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFTT",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Echo Show 5",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; AEORK Build/LVY48F; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEORK",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Echo Show 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1; AEOCH) AppleWebKit/537.36 (KHTML, like Gecko) Silk/77.2.21 like Chrome/77.0.3865.92 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEOCH",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Echo Show 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.2; AEOCW) AppleWebKit/537.36 (KHTML, like Gecko) Silk/106.3.3 like Chrome/106.0.5249.170 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEOCW",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Echo Show 15",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AEOHY) AppleWebKit/537.36 (KHTML, like Gecko) Silk/112.6.3 like Chrome/112.0.5615.213 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEOHY",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Echo Dot",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 5.1.1; AEOBC Build/LVY48F)",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "AEOBC",
+            "type": "embedded"
+        }
+    },
+    {
+        "desc": "Amazon Kindle Fire Tablet",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.3; en-us; KFSAWI Build/KTU84M) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.66 like Chrome/39.0.2171.93 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFSAWI",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Amazon Kindle Fire Tablet",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.3; en-us; KFSAWI) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.66 like Chrome/39.0.2171.93 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFSAWI",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Amazon Kindle Fire Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 9; KFMAWI Build/PS7312; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFMAWI",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Amazon Fire TV",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; AFTB Build/JDQ39) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.173 Mobile Safari/537.22",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "B",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Amazon Fire TV",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; AFTT) AppleWebKit/537.36 (KHTML, like Gecko) Silk/86.3.20 like Chrome/86.0.4240.198 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "T",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Amazon Fire TV",
+        "ua": "Mozilla/5.0 (Linux; Android 9; AFTKA Build/PS7633.3445N; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.160 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KA",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Amazon Fire 7",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; KFAUWI) AppleWebKit/537.36 (KHTML, like Gecko) Silk/80.5.3 like Chrome/80.0.3987.162 Safari/537.36",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "KFAUWI",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Amazon Alexa Echo Show",
+        "ua": "AlexaWebMediaPlayer/1.0.200641.0 (Linux;Android 5.1.1)",
+        "expect": {
+            "vendor": "Amazon",
+            "model": "Alexa",
+            "type": "tablet"
+        }
+    }
+]

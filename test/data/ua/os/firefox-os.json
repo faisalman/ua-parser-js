@@ -1,0 +1,29 @@
+[
+    {
+        "desc"    : "Firefox OS",
+        "ua"      : "Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "14.0"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on Tablet",
+        "ua"      : "Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "26.0"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on TV",
+        "ua"      : "Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "44.0"
+        }
+    }
+]
