@@ -924,7 +924,7 @@
             /cfnetwork\/.+darwin/i
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x) ?([\w\. ]*)/i,
-            /(macintosh|mac_powerpc\b)(?!.+haiku)/i                             // Mac OS
+            /(macintosh|mac_powerpc\b)(?!.+(haiku|morphos))/i                   // Mac OS
             ], [[NAME, 'macOS'], [VERSION, /_/g, '.']], [
 
             // Google Chromecast
@@ -940,10 +940,11 @@
             ], [VERSION, [NAME, CHROMECAST]], [
 
             // Mobile OSes
-            /droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i                    // Android-x86/HarmonyOS
+            /droid ([\w\.]+)\b.+(android[- ]x86)/i                              // Android-x86
             ], [VERSION, NAME], [                                               
             /(ubuntu) ([\w\.]+) like android/i                                  // Ubuntu Touch
             ], [[NAME, /(.+)/, '$1 Touch'], VERSION], [
+            /(harmonyos)[\/ ]?([\d\.]*)/i,                                      // HarmonyOS
                                                                                 // Android/Blackberry/WebOS/QNX/Bada/RIM/KaiOS/Maemo/MeeGo/S40/Sailfish OS/OpenHarmony/Tizen
             /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/\.; ]?([\d\.]*)/i
             ], [NAME, VERSION], [
@@ -979,7 +980,7 @@
             /(mageia|vectorlinux)[; ]/i,                                        // Mageia/VectorLinux
             /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i,
                                                                                 // Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware/Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus/Raspbian/Plan9/Minix/RISCOS/Contiki/Deepin/Manjaro/elementary/Sabayon/Linspire
-            /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i,                     // Hurd/Linux
+            /(hurd|linux|morphos)(?: (?:arm|x86|ppc)\w*| ?)([\w\.]*)/i,         // Hurd/Linux/MorphOS
             /(gnu) ?([\w\.]*)/i,                                                // GNU
             /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, // FreeBSD/NetBSD/OpenBSD/PC-BSD/GhostBSD/DragonFly
             /(haiku) (\w+)/i                                                    // Haiku
@@ -988,7 +989,7 @@
             ], [[NAME, 'Solaris'], VERSION], [
             /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,                              // Solaris
             /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,                                  // AIX
-            /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, // BeOS/OS2/AmigaOS/MorphOS/OpenVMS/Fuchsia/HP-UX/SerenityOS
+            /\b(beos|os\/2|amigaos|openvms|fuchsia|hp-ux|serenityos)/i,         // BeOS/OS2/AmigaOS/OpenVMS/Fuchsia/HP-UX/SerenityOS
             /(unix) ?([\w\.]*)/i                                                // UNIX
             ], [NAME, VERSION]
         ]

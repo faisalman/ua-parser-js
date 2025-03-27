@@ -5,7 +5,52 @@
         "expect"  :
         {
             "name"    : "HarmonyOS",
-            "version" : "10"
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "HarmonyOS 2",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; STK-AL00 Build/HUAWEISTK-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.93 Mobile Safari/537.36 BDOS/1.0 (HarmonyOS 2.2.0) SP-engine/2.72.0 baiduboxapp/13.34.5.10 (Baidu; P1 10) NABar/1.0",
+        "expect"  :
+        {
+            "name"    : "HarmonyOS",
+            "version" : "2.2.0"
+        }
+    },
+    {
+        "desc"    : "HarmonyOS 3",
+        "ua"      : "Mozilla/5.0 (Linux; Android 12; Huawei P60 Pro Build/HarmonyOS 3.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.1.6136.139 Mobile Safari/537.36 OPR/111.11",
+        "expect"  :
+        {
+            "name"    : "HarmonyOS",
+            "version" : "3.1.0"
+        }
+    },
+    {
+        "desc"    : "HarmonyOS 4",
+        "ua"      : "Mozilla/5.0 (Android 12; HarmonyOS 4.0.0.118; OXF-AN00 Build/HUAWEIOXF-AN00; HMSCore 6.13.0.302; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36 EdgA/125.0.0.0 Language/zh_TW ABI/arm64-v8a",
+        "expect"  :
+        {
+            "name"    : "HarmonyOS",
+            "version" : "4.0.0.118"
+        }
+    },
+    {
+        "desc"    : "HarmonyOS 4",
+        "ua"      : "Mozilla/5.0 (Linux; Android 12; HarmonyOS/4.0.3.601; JAD-AL50; HMSCore/6.13.0.320 Build/AP31.240223.016.A3; x64; ARM64) AppleWebKit/537.36 (KHTML, like Gecko) HuaweiBrowser/14.0.7.302 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "HarmonyOS",
+            "version" : "4.0.3.601"
+        }
+    },
+    {
+        "desc"    : "HarmonyOS 5",
+        "ua"      : "Mozilla/5.0 (PC; OpenHarmony 5.0; HarmonyOS 5.0) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/114.0.0.0 Safari/537.36 ArkWeb/4.1.6.1 Browser/harmony360Browser/1.0.0",
+        "expect"  :
+        {
+            "name"    : "HarmonyOS",
+            "version" : "5.0"
         }
     }
 ]
