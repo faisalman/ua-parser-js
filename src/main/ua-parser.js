@@ -977,19 +977,19 @@
             // Other
             /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i,                            // Joli/Palm
             /(mint)[\/\(\) ]?(\w*)/i,                                           // Mint
-            /(mageia|vectorlinux)[; ]/i,                                        // Mageia/VectorLinux
+            /(mageia|vectorlinux|fuchsia)[; ]/i,                                // Mageia/VectorLinux/Fuchsia
             /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i,
                                                                                 // Ubuntu/Debian/SUSE/Gentoo/Arch/Slackware/Fedora/Mandriva/CentOS/PCLinuxOS/RedHat/Zenwalk/Linpus/Raspbian/Plan9/Minix/RISCOS/Contiki/Deepin/Manjaro/elementary/Sabayon/Linspire
+            /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,                              // Solaris
+            /\b(aix)[; ]([1-9\.]{0,4})/i,                                       // AIX
             /(hurd|linux|morphos)(?: (?:arm|x86|ppc)\w*| ?)([\w\.]*)/i,         // Hurd/Linux/MorphOS
             /(gnu) ?([\w\.]*)/i,                                                // GNU
             /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, // FreeBSD/NetBSD/OpenBSD/PC-BSD/GhostBSD/DragonFly
-            /(haiku) (\w+)/i                                                    // Haiku
+            /(haiku) ?(r\d)?/i                                                  // Haiku
             ], [NAME, VERSION], [
-            /(sunos) ?([\w\.\d]*)/i                                             // Solaris
+            /(sunos) ?([\d\.]*)/i                                               // Solaris
             ], [[NAME, 'Solaris'], VERSION], [
-            /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,                              // Solaris
-            /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,                                  // AIX
-            /\b(beos|os\/2|amigaos|openvms|fuchsia|hp-ux|serenityos)/i,         // BeOS/OS2/AmigaOS/OpenVMS/Fuchsia/HP-UX/SerenityOS
+            /\b(beos|os\/2|amigaos|openvms|hp-ux|serenityos)/i,                 // BeOS/OS2/AmigaOS/OpenVMS/HP-UX/SerenityOS
             /(unix) ?([\w\.]*)/i                                                // UNIX
             ], [NAME, VERSION]
         ]
