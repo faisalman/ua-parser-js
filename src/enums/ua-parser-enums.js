@@ -303,6 +303,7 @@ const OS = Object.freeze({
     AMIGA_OS: 'Amiga OS',
     ANDROID: 'Android',
     ANDROID_X86: 'Android-x86',
+    ARCAOS: 'ArcaOS',
     ARCH: 'Arch',
     BADA: 'Bada',
     BEOS: 'BeOS',
