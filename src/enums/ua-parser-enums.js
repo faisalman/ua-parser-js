@@ -334,6 +334,7 @@ const OS = Object.freeze({
     IOS: 'iOS',
     JOLI: 'Joli',
     KAIOS: 'KaiOS',
+    KNOPPIX: 'Knoppix',
     KUBUNTU: 'Kubuntu',
     LINPUS: 'Linpus',
     LINSPIRE: 'Linspire',
@@ -386,6 +387,7 @@ const OS = Object.freeze({
     WINDOWS_MOBILE: 'Windows Mobile',
     WINDOWS_PHONE: 'Windows Phone',
     XBOX: 'Xbox',
+    XUBUNTU: 'Xubuntu',
     ZENWALK: 'Zenwalk'
 
     // TODO : test!

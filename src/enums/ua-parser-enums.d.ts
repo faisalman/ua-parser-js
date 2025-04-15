@@ -319,6 +319,7 @@ export const OS: Readonly<{
     IOS: "iOS";
     JOLI: "Joli";
     KAIOS: "KaiOS";
+    KNOPPIX: "Knoppix";
     KUBUNTU: "Kubuntu";
     LINPUS: "Linpus";
     LINSPIRE: "Linspire";
@@ -371,5 +372,6 @@ export const OS: Readonly<{
     WINDOWS_MOBILE: "Windows Mobile";
     WINDOWS_PHONE: "Windows Phone";
     XBOX: "Xbox";
+    XUBUNTU: "Xubuntu";
     ZENWALK: "Zenwalk";
 }>;
