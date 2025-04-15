@@ -7,5 +7,14 @@
             "name"    : "SUSE",
             "version" : "3.6.17-0.2.1"
         }
+    },
+    {
+        "desc"    : "SUSE",
+        "ua"      : "Mozilla/5.0 (X11; SUSE; Linux amd64; rv:86.0) Gecko/20100101 Firefox/86.0",
+        "expect"  :
+        {
+            "name"    : "SUSE",
+            "version" : "undefined"
+        }
     }
 ]

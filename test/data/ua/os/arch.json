@@ -1,6 +1,24 @@
 [
     {
         "desc"    : "Arch",
+        "ua"      : "Mozilla/5.0 (X11; Arch Linux i686; rv:2.0) Gecko/20100101 Firefox/126.1",
+        "expect"  :
+        {
+            "name"    : "Arch",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Arch",
+        "ua"      : "Mozilla/5.0 ArchLinux (X11; Linux x86_64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1",
+        "expect"  :
+        {
+            "name"    : "Arch",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Arch",
         "ua"      : "Uzbl (Webkit 1.1.10) (Arch Linux)",
         "expect"  :
         {

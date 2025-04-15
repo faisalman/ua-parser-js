@@ -25,5 +25,104 @@
             "name"    : "Mint",
             "version" : "6"
         }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.5) Gecko/2008121622 Linux Mint/6 (Felicia) Firefox/3.0.4",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "6"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Opera/9.80 (X11; Linux i686; Edition Linux Mint) Presto/2.12.388 Version/12.15",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Opera/9.51 (X11; Linux i686; U; Linux Mint; en)",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; Linux Mint/19.3 x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/83.0.4103.97 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "19.3"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; Linux Mint/20 x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/100.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "20"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; Linux Mint/20.2; x86_64) Gecko/20100101 Firefox/92.0.1",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "20.2"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; es-ES; rv:1.9.0.10) Gecko/2009042513 Linux Mint/5 (Elyssa) Firefox/3.0.10",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "5"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.11) Gecko/2009060308 Linux Mint/7 (Gloria) Firefox/54.0",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "7"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20091020 Linux Mint/8 (Helena) Firefox/3.5.3",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "8"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; es-ES; rv:2.0) Gecko/20100101 Linux Mint 16/Petra Firefox/25.0.1.",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "16"
+        }
+    },
+    {
+        "desc"    : "Mint",
+        "ua"      : "Mozilla/5.0 (Linux x86_64; Mint 21.3) AppleWebKit/537.36 (KHTML, like Gecko) Brave/128.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Mint",
+            "version" : "21.3"
+        }
     }
 ]
