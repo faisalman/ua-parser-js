@@ -255,6 +255,7 @@ export const Vendor: Readonly<{
     TESLA: "Tesla";
     ULEFONE: "Ulefone";
     VIVO: "Vivo";
+    VIZIO: "Vizio";
     VODAFONE: "Vodafone";
     XBOX: "Xbox";
     XIAOMI: "Xiaomi";

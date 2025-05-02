@@ -266,6 +266,7 @@ const Vendor = Object.freeze({
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
     VIVO: 'Vivo',
+    VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
     XBOX: 'Xbox',
     XIAOMI: 'Xiaomi',

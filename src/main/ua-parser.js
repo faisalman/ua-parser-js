@@ -766,6 +766,7 @@
             ], [VENDOR, [TYPE, SMARTTV]], [
             /hbbtv.+maple;(\d+)/i
             ], [[MODEL, /^/, 'SmartTV'], [VENDOR, SAMSUNG], [TYPE, SMARTTV]], [
+            /(vizio)(?: |.+model\/)(\w+-\w+)/i,                                 // Vizio
             /tcast.+(lg)e?. ([-\w]+)/i                                          // LG SmartTV
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
             /(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i
