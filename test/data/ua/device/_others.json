@@ -282,6 +282,24 @@
         }
     },
     {
+        "desc": "Unknown TV",
+        "ua": "Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/ 162671",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Unknown TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.41 (KHTML, like Gecko) Large Screen WebAppManager Safari/537.41",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "PDA with Windows CE",
         "ua": "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
         "expect": {
