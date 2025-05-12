@@ -16,7 +16,6 @@ export const Browser: Readonly<{
     BAIDU: "Baidu Browser";
     BASILISK: "Basilisk";
     BLAZER: "Blazer";
-    BLU: "BLU";
     BOLT: "Bolt";
     BOWSER: "Bowser";
     BRAVE: "Brave";
@@ -203,6 +202,7 @@ export const Vendor: Readonly<{
     ATT: "AT&T";
     BENQ: "BenQ";
     BLACKBERRY: "BlackBerry";
+    BLU: "BLU";
     CAT: "Cat";
     DELL: "Dell";
     ENERGIZER: "Energizer";
