@@ -470,7 +470,7 @@ describe('Identify vendor & type of device from given model name', () => {
         {
             model: 'CPH2389',
             expect: {
-                vendor : 'OPPO',
+                vendor : 'OnePlus',
                 type : 'mobile'
             }
         },

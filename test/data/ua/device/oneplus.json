@@ -54,11 +54,20 @@
         }
     },
     {
-        "desc": "OnePlus 8T",
-        "ua": "Mozilla/5.0 (Linux; Android 11; KB2005) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
+        "desc": "OnePlus 7T Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HD1913) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.57 Mobile Safari/537.36 EdgA/110.0.1587.66",
         "expect": {
             "vendor": "OnePlus",
-            "model": "KB2005",
+            "model": "HD1913",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 8 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 10; OnePlus 8 Lite) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4741.47 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "8 Lite",
             "type": "mobile"
         }
     },
@@ -72,11 +81,191 @@
         }
     },
     {
-        "desc": "OnePlus Nord N100",
-        "ua": "Mozilla/5.0 (Linux; Android 10; BE2015 Build/QKQ1.200719.002; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36",
+        "desc": "OnePlus 8T",
+        "ua": "Mozilla/5.0 (Linux; Android 11; KB2005) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36",
         "expect": {
             "vendor": "OnePlus",
-            "model": "BE2015",
+            "model": "KB2005",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 9",
+        "ua": "Mozilla/5.0 (Android 14; SDK 28; OnePlus 9) Gecko/128.0 Firefox/128.0",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "9",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 9",
+        "ua": "Mozilla/5.0 (Linux; Android 13; LE2113 Build/TP1A.220905.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.162 Mobile Safari/537.36 Flipboard/4.3.14/5377,4.3.14.5377",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "LE2113",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; LE2123) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36 OPR/73.0.3832.69371",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "LE2123",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 9R",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 11; LE2100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaApp_Android/21.114.1 YaSearchBrowser/21.114.1 BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "LE2100",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 9RT 5G",
+        "ua": "Mozilla/5.0 (Linux; U; Android 11; en-in; MT2111 Build/RKQ1.210614.002) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30 GSA/13.14.15.23.arm64",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "MT2111",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 10 Pro",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 12; NE2213) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.148 YaBrowser/22.7.5.90.00 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "NE2213",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 10RT",
+        "ua": "Mozilla/5.0 (Linux; Android 13; CPH2413) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "CPH2413",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 11R",
+        "ua": "Mozilla/5.0 (Linux; Android 14; CPH2487) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "CPH2487",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus 13",
+        "ua": "Mozilla/5.0 (Linux; Android 15; CPH2653 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6998.92 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/504.0.0.69.64;IABMV/1;] FBNV/5",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "CPH2653",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace",
+        "ua": "Mozilla/5.0 (Linux; U; Android 15; zh-cn; PGKM10 Build/AP3A.240617.008) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.168 Mobile Safari/537.36 HeyTapBrowser/40.9.6.2",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PGKM10",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 2",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; zh-CN; PHK110 Build/UKQ1.231108.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/17.3.6.1367 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PHK110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 2 Pro",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 13; PJA110) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaBrowser/23.1.0.284.00 (beta) SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PJA110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 2V",
+        "ua": "Mozilla/5.0 (Linux; U; Android 15; zh-cn; PHP110 Build/AP3A.240617.008) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.71 MQQBrowser/16.3 Mobile Safari/537.36 COVC/047707",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PHP110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 3",
+        "ua": "Mozilla/5.0 (Linux; U; Android 15; zh-CN; PJE110 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.80 Quark/7.9.7.782 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PJE110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 3 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; U; Android 15; zh-CN; PJX110 Build/UKQ1.231108.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.80 Quark/7.11.4.814 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PJX110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 3V",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; zh-cn; PJF110 Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.61 Mobile Safari/537.36 HeyTapBrowser/40.8.33.1.2beta",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PJF110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace 5",
+        "ua": "Mozilla/5.0 (Linux; U; Android 15; zh-cn; PKG110 Build/UKQ1.231108.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.168 Mobile Safari/537.36 HeyTapBrowser/40.9.9.2",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PKG110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; zh-CN; PGP110 Build/UKQ1.230924.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/17.2.9.1360 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PGP110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Ace Racing Edition",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; PGZ110 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/17.3.6.1367 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "PGZ110",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Nord CE 4",
+        "ua": "Mozilla/5.0 (Linux; Android 14; CPH2613) AppleWebKit/537.36 (KHTML, like Gecko) JioSphere/5.0.4 Chrome/119.0.6045.193 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "CPH2613",
             "type": "mobile"
         }
     },
@@ -86,6 +275,33 @@
         "expect": {
             "vendor": "OnePlus",
             "model": "BE2029",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Nord N30 SE 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; CPH2605 Build/TP1A.220905.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.92 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/509.0.0.67.28;IABMV/1;]",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "CPH2605",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Nord N100",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BE2015 Build/QKQ1.200719.002; xx-xx) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "BE2015",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "OnePlus Open",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 15; CPH2551 Build/AP3A.240617.008)",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "CPH2551",
             "type": "mobile"
         }
     },
