@@ -630,8 +630,11 @@
             // Google
             /(pixel (c|tablet))\b/i                                             // Google Pixel C/Tablet
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, TABLET]], [
-            /droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i                         // Google Pixel
+                                                                                // Google Pixel
+            /droid.+;(?: google)? (g(01[13]a|020[aem]|025[jn]|1b60|1f8f|2ybb|4s1m|576d|5nz6|8hhn|8vou|a02099|c15s|d1yq|e2ae|ec77|gh2x|kv4x|p4bc|pj41|r83y|tt9q|ur25|wvk6)|pixel[\d ]*a?( pro)?( xl)?( fold)?( \(5g\))?)( bui|\))/i
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, MOBILE]], [
+            /(google) (pixelbook( go)?)/i
+            ], [VENDOR, MODEL], [
 
             // Sony
             /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
