@@ -232,6 +232,7 @@ const Vendor = Object.freeze({
     ITEL: 'itel',
     JOLLA: 'Jolla',
     KOBO: 'Kobo',
+    LAVA: 'Lava',
     LENOVO: 'Lenovo',
     LG: 'LG',
     MEIZU: 'Meizu',
