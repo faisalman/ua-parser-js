@@ -156,7 +156,8 @@ const Browser = Object.freeze({
     WEIBO: 'Weibo',
     WHALE: 'Whale',
     WOLVIC: 'Wolvic',
-    YANDEX: 'Yandex'
+    YANDEX: 'Yandex',
+    ZALO: 'Zalo'
 
     // TODO : test!
 });
