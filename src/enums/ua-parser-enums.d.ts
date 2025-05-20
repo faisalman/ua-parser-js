@@ -152,6 +152,7 @@ export const Browser: Readonly<{
     WHALE: "Whale";
     WOLVIC: "Wolvic";
     YANDEX: "Yandex";
+    ZALO: "Zalo";
 }>;
 export const BrowserType: Readonly<{
     CRAWLER: "crawler";
