@@ -729,14 +729,18 @@
             /; (ac[3-6]\d\w{2,8})( b|\))/i 
             ], [MODEL, [VENDOR, 'Archos'], [TYPE, MOBILE]], [
 
+            // HMD
+            /; (n159v)/i
+            ], [MODEL, [VENDOR, 'HMD'], [TYPE, MOBILE]], [
+
             // MIXED
             /(imo) (tab \w+)/i,                                                 // IMO
-            /(infinix) (x1101b?)/i                                              // Infinix XPad
+            /(infinix|tecno) (x1101b?|p904|dp(7c|8d|10a)( pro)?|p70[1-3]a?|p904|t1101)/i                     // Infinix XPad / Tecno
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
 
-            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
-                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Infinix/Tecno/Micromax/Advan
-            /; (blu|hmd|imo|lava|oneplus|tcl)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,  // BLU/HMD/IMO/Lava/OnePlus/TCL
+            /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
+                                                                                // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Tecno/Micromax/Advan
+            /; (blu|hmd|imo|infinix|lava|oneplus|tcl)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,  // BLU/HMD/IMO/Infinix/Lava/OnePlus/TCL
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
             /(oppo) ?([\w ]+) bui/i                                             // OPPO
