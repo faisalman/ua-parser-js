@@ -43,6 +43,8 @@ const Browser = Object.freeze({
     DUCKDUCKGO: 'DuckDuckGo',
     ECOSIA: 'Ecosia',
     EDGE: 'Edge',
+    EDGE_WEBVIEW: 'Edge WebView',
+    EDGE_WEBVIEW2: 'Edge WebView2',
     EPIPHANY: 'Epiphany',
     FACEBOOK: 'Facebook',
     FALKON: 'Falkon',

@@ -152,11 +152,11 @@
         has = function (str1, str2) {
             if (typeof str1 === OBJ_TYPE && str1.length > 0) {
                 for (var i in str1) {
-                    if (lowerize(str1[i]) == lowerize(str2)) return true;
+                    if (lowerize(str2) == lowerize(str1[i])) return true;
                 }
                 return false;
             }
-            return isString(str1) ? lowerize(str2).indexOf(lowerize(str1)) !== -1 : false;
+            return isString(str1) ? lowerize(str2) == lowerize(str1) : false;
         },
         isExtensions = function (obj, deep) {
             for (var prop in obj) {
@@ -326,7 +326,9 @@
             // Most common regardless engine
             /\b(?:crmo|crios)\/([\w\.]+)/i                                      // Chrome for Android/iOS
             ], [VERSION, [NAME, PREFIX_MOBILE + 'Chrome']], [
-            /edg(?:e|ios|a)?\/([\w\.]+)/i                                       // Microsoft Edge
+            /webview.+edge\/([\w\.]+)/i                                         // Microsoft Edge
+            ], [VERSION, [NAME, EDGE+' WebView']], [
+            /edg(?:e|ios|a)?\/([\w\.]+)/i                                       
             ], [VERSION, [NAME, 'Edge']], [
 
             // Presto based
@@ -440,6 +442,9 @@
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
+
+            /wv\).+chrome\/([\w\.]+).+edgw\//i                                  // Edge WebView2
+            ], [VERSION, [NAME, EDGE+' WebView2']], [
 
             / wv\).+(chrome)\/([\w\.]+)/i                                       // Chrome WebView
             ], [[NAME, CHROME+' WebView'], VERSION], [
@@ -1232,10 +1237,16 @@
                         for (var i in brands) {
                             var brandName = brands[i].brand || brands[i],
                                 brandVersion = brands[i].version;
-                            if (this.itemType == UA_BROWSER && !/not.a.brand/i.test(brandName) && (!prevName || (/chrom/i.test(prevName) && brandName != CHROMIUM))) {
+                            if (this.itemType == UA_BROWSER && 
+                                !/not.a.brand/i.test(brandName) && 
+                                (!prevName || 
+                                    (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
+                                    (prevName == EDGE && /WebView2/.test(brandName))
+                                )) {
                                 brandName = strMapper(brandName, {
                                     'Chrome' : 'Google Chrome',
                                     'Edge' : 'Microsoft Edge',
+                                    'Edge WebView2' : 'Microsoft Edge WebView2',
                                     'Chrome WebView' : 'Android WebView',
                                     'Chrome Headless' : 'HeadlessChrome',
                                     'Huawei Browser' : 'HuaweiBrowser',
