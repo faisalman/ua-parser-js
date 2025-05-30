@@ -130,6 +130,16 @@
         }
     },
     {
+        "desc"    : "Iframely",
+        "ua"      : "Iframely/1.3.1 (+https://iframely.com/docs/about)",
+        "expect"  :
+        {
+            "name"    : "Iframely",
+            "version" : "1.3.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Meta-ExternalFetcher",
         "ua"      : "meta-externalfetcher/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
         "expect"  :
