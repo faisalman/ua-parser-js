@@ -110,6 +110,9 @@ const isAIBot = (resultOrUA) => [
     // You.com
     'youbot',
 
+    // Zhipu AI
+    'chatglm-spider',
+
     // Zyte
     'scrapy'
 

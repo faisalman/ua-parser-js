@@ -260,6 +260,16 @@
         }
     },
     {
+        "desc"    : "ChatGLM-Spider",
+        "ua"      : "Mozilla/5.0 (compatible; ChatGLM-Spider/1.0; +https://chatglm.cn/)",
+        "expect"  :
+        {
+            "name"    : "ChatGLM-Spider",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Coc Coc Bot (web)",
         "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
         "expect"  :
@@ -621,6 +631,16 @@
         }
     },
     {
+        "desc"    : "Onespot",
+        "ua"      : "Mozilla/5.0 (compatible; Onespot-ScraperBot/1.0; +https://www.onespot.com/identifying-traffic.html)",
+        "expect"  :
+        {
+            "name"    : "Onespot-ScraperBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "OpenAI Search",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",
         "expect"  :
@@ -747,6 +767,16 @@
         {
             "name"    : "Sogou web spider",
             "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Startpage",
+        "ua"      : "StartpagePrivateImageProxy/3.0 (https://www.startpage.com/; support@startpage.com) aiohttp.client/3.11.11",
+        "expect"  :
+        {
+            "name"    : "StartpagePrivateImageProxy",
+            "version" : "3.0",
             "type"    : "crawler"
         }
     },
