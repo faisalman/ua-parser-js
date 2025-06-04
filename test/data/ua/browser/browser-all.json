@@ -2230,6 +2230,26 @@
         }
     },
     {
+        "desc"    : "Microsoft Edge WebView",
+        "ua"      : "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
+        "expect"  :
+        {
+            "name"    : "Edge WebView",
+            "version" : "18.17763",
+            "major"   : "18"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge WebView2",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; SM-G991B Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.120 Mobile Safari/537.36 EdgW/1.0",
+        "expect"  :
+        {
+            "name"    : "Edge WebView2",
+            "version" : "91.0.4472.120",
+            "major"   : "91"
+        }
+    },
+    {
         "desc"    : "Iridium",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Iridium/43.8 Safari/537.36 Chrome/43.0.2357.132",
         "expect"  :
