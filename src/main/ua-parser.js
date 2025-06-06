@@ -313,6 +313,18 @@
             'xr'        : ['VR', 'XR'],
             '?'         : ['Desktop', 'Unknown'],
             '*'         : undefined
+        },
+
+        browserHintsMap = {
+            'Chrome'        : 'Google Chrome',
+            'Edge'          : 'Microsoft Edge',
+            'Edge WebView2' : 'Microsoft Edge WebView2',
+            'Chrome WebView': 'Android WebView',
+            'Chrome Headless':'HeadlessChrome',
+            'Huawei Browser': 'HuaweiBrowser',
+            'MIUI Browser'  : 'Miui Browser',
+            'Opera Mobi'    : 'OperaMobile',
+            'Yandex'        : 'YaBrowser'
     };
 
     //////////////
@@ -1243,21 +1255,14 @@
                                     (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
                                     (prevName == EDGE && /WebView2/.test(brandName))
                                 )) {
-                                brandName = strMapper(brandName, {
-                                    'Chrome' : 'Google Chrome',
-                                    'Edge' : 'Microsoft Edge',
-                                    'Edge WebView2' : 'Microsoft Edge WebView2',
-                                    'Chrome WebView' : 'Android WebView',
-                                    'Chrome Headless' : 'HeadlessChrome',
-                                    'Huawei Browser' : 'HuaweiBrowser',
-                                    'MIUI Browser' : 'Miui Browser',
-                                    'Opera Mobi' : 'OperaMobile',
-                                    'Yandex' : 'YaBrowser'
-                                });
-                                this.set(NAME, brandName)
-                                    .set(VERSION, brandVersion)
-                                    .set(MAJOR, majorize(brandVersion));
-                                prevName = brandName;
+                                    brandName = strMapper(brandName, browserHintsMap);
+                                    prevName = this.get(NAME);
+                                    if (!(prevName && !/Chrom/.test(prevName) && /Chrom/.test(brandName))) {
+                                        this.set(NAME, brandName)
+                                            .set(VERSION, brandVersion)
+                                            .set(MAJOR, majorize(brandVersion));
+                                    }
+                                    prevName = brandName;
                             }
                             if (this.itemType == UA_ENGINE && brandName == CHROMIUM) {
                                 this.set(VERSION, brandVersion);
