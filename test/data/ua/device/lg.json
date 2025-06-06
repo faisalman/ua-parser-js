@@ -144,6 +144,24 @@
         }
     },
     {
+        "desc": "LG Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chr0me/53.0.2785.34 Safari/537.36 LG Browser/8.00.00(LGE; 32LM627BPSB; 05.40.45; 1; DTV_W19R); webOS.TV-2019; LG NetCast.TV-2013 Compatible (LGE, 32LM627BPSB, wireless)",
+        "expect": {
+            "vendor": "LG",
+            "model": "32LM627BPSB",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "LG Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36 HbbTV/1.3.1 ( DRM; LGE; OLED55B7V_Z; WEBOS3.5 06.10.60; W3_M16P; ) FVC/2.0 (LGE; WEBOS3.5 ;)",
+        "expect": {
+            "vendor": "LG",
+            "model": "OLED55B7V_Z",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "LG Android TV",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; LG Android TV Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
         "expect": {

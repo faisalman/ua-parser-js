@@ -247,17 +247,25 @@
                                         // assign given value, ignore regex match
                                         this[q[0]] = q[1];
                                     }
-                                } else if (q.length === 3) {
-                                    // check whether function or regex
+                                } else if (q.length >= 3) {
+                                    // Check whether q[1] FUNCTION or REGEX
                                     if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) {
-                                        // call function (usually string mapper)
-                                        this[q[0]] = match ? q[1].call(this, match, q[2]) : undefined;
+                                        if (q.length > 3) {
+                                            this[q[0]] = match ? q[1].apply(this, q.slice(2)) : undefined;
+                                        } else {
+                                            // call function (usually string mapper)
+                                            this[q[0]] = match ? q[1].call(this, match, q[2]) : undefined;
+                                        }
                                     } else {
-                                        // sanitize match using given regex
-                                        this[q[0]] = match ? match.replace(q[1], q[2]) : undefined;
+                                        if (q.length == 3) {
+                                            // sanitize match using given regex
+                                            this[q[0]] = match ? match.replace(q[1], q[2]) : undefined;
+                                        } else if (q.length == 4) {
+                                            this[q[0]] = match ? q[3].call(this, match.replace(q[1], q[2])) : undefined;
+                                        } else if (q.length > 4) {
+                                            this[q[0]] = match ? q[3].apply(this, [match.replace(q[1], q[2])].concat(q.slice(4))) : undefined;
+                                        }
                                     }
-                                } else if (q.length === 4) {
-                                        this[q[0]] = match ? q[3].call(this, match.replace(q[1], q[2])) : undefined;
                                 }
                             } else {
                                 this[q] = match ? match : undefined;
@@ -432,7 +440,6 @@
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
             ], [[NAME, FACEBOOK], VERSION, [TYPE, INAPP]], [
-            /(Klarna)\/([\w\.]+)/i,                                             // Klarna Shopping Browser for iOS & Android
             /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /(daum)apps[\/ ]([\w\.]+)/i,                                        // Daum App
@@ -440,7 +447,7 @@
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(instagram|snapchat)[\/ ]([-\w\.]+)/i                              // Instagram/Snapchat
+            /(instagram|snapchat|klarna)[\/ ]([-\w\.]+)/i                       // Instagram/Snapchat/Klarna
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
@@ -550,7 +557,7 @@
             /\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, TABLET]], [
             /\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
-            /samsung[- ]((?!sm-[lr])[-\w]+)/i,
+            /samsung[- ]((?!sm-[lr]|browser)[-\w]+)/i,
             /sec-(sgh\w+)/i
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, MOBILE]], [
 
@@ -607,9 +614,10 @@
             /\b(opd2(\d{3}a?))(?: bui|\))/i
             ], [MODEL, [VENDOR, strMapper, { 'OnePlus' : ['203', '304', '403', '404', '413', '415'], '*' : OPPO }], [TYPE, TABLET]], [
 
-            // BLU Vivo Series
-            /(vivo (5r?|6|8l?|go|one|s|x[il]?[2-4]?)[\w\+ ]*)(?: bui|\))/i
-            ], [MODEL, [VENDOR, 'BLU'], [TYPE, MOBILE]], [            
+            // BLU
+            /(vivo (5r?|6|8l?|go|one|s|x[il]?[2-4]?)[\w\+ ]*)(?: bui|\))/i  // Vivo series
+            ], [MODEL, [VENDOR, 'BLU'], [TYPE, MOBILE]], [    
+
             // Vivo
             /; vivo (\w+)(?: bui|\))/i,
             /\b(v[12]\d{3}\w?[at])(?: bui|;)/i
@@ -638,7 +646,7 @@
             /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
-            /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch))(\w+)/i,
+            /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch|webos))(\w+)/i,
             /\blg-?([\d\w]+) bui/i
             ], [MODEL, [VENDOR, LG], [TYPE, MOBILE]], [
 
@@ -823,7 +831,7 @@
             ], [VENDOR, MODEL, [TYPE, SMARTTV]], [
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,                          // Roku
             /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i         // HbbTV devices
-            ], [[VENDOR, trim], [MODEL, trim], [TYPE, SMARTTV]], [
+            ], [[VENDOR, /.+\/(\w+)/, '$1', strMapper, {'LG':'lge'}], [MODEL, trim], [TYPE, SMARTTV]], [
                                                                                 // SmartTV from Unidentified Vendors
             /droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i
             ], [MODEL, [TYPE, SMARTTV]], [
@@ -972,7 +980,7 @@
             ], [[NAME, /(.+)/, '$1 Touch'], VERSION], [
             /(harmonyos)[\/ ]?([\d\.]*)/i,                                      // HarmonyOS
                                                                                 // Android/Blackberry/WebOS/QNX/Bada/RIM/KaiOS/Maemo/MeeGo/S40/Sailfish OS/OpenHarmony/Tizen
-            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/\.; ]?([\d\.]*)/i
+            /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen)\w*[-\/\.; ]?([\d\.]*)/i
             ], [NAME, VERSION], [
             /\(bb(10);/i                                                        // BlackBerry 10
             ], [VERSION, [NAME, BLACKBERRY]], [
@@ -980,9 +988,12 @@
             ], [VERSION, [NAME, 'Symbian']], [
             /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
             ], [VERSION, [NAME, FIREFOX+' OS']], [
-            /web0s;.+rt(tv)/i,
-            /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i                              // WebOS
+            /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i,                             // WebOS
+            /webos(?:[ \/]?|\.tv-20(?=2[2-9]))(\d[\d\.]*)/i
             ], [VERSION, [NAME, 'webOS']], [
+            /web0s;.+?(?:chr[o0]me|safari)\/(\d+)/i
+                                                                                // https://webostv.developer.lge.com/develop/specifications/web-api-and-web-engine
+            ], [[VERSION, strMapper, {'25':'120','24':'108','23':'94','22':'87','6':'79','5':'68','4':'53','3':'38','2':'538','1':'537','*':'TV'}], [NAME, 'webOS']], [                   
             /watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i                              // watchOS
             ], [VERSION, [NAME, 'watchOS']], [
 

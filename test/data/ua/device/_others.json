@@ -291,6 +291,33 @@
         }
     },
     {
+        "desc": "Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 ( DRM; LGE/ATMACA/GRAETZ; GR32S1470; WEBOS22 04.41.53; W22_K8AP; DTV_C22L;) LaTivu_1.0.1_2022",
+        "expect": {
+            "vendor": "GRAETZ",
+            "model": "GR32S1470",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 HbbTV/1.5.1 (+DRM; LGE/DUALSHINE/SKYTECH; ST-5090; WEBOS5.0 04.50.63; W50_K6LP; DTV_C20P;)",
+        "expect": {
+            "vendor": "SKYTECH",
+            "model": "ST-5090",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 (+DRM; LGE/SILICONPLAYER/Hyundai; 50HYN3205; WEBOS22 04.42.26; W22_K8LP; DTV_C22P;)",
+        "expect": {
+            "vendor": "Hyundai",
+            "model": "50HYN3205",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "PDA with Windows CE",
         "ua": "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
         "expect": {
