@@ -943,7 +943,7 @@
         os : [[
 
             // Windows
-            /microsoft (windows) (vista|xp)/i                                   // Windows (iTunes)
+            /microsoft (windows) (7|vista|xp)/i                                 // Windows
             ], [NAME, VERSION], [
             /(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i         // Windows Phone
             ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
