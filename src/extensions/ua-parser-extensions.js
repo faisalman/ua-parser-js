@@ -268,13 +268,31 @@ const Fetchers = Object.freeze({
 ///////////////////
 
 const InApps = Object.freeze({
-    browser : [
+    browser : [[
+        // Discord/Figma/Flipboard/Mattermost/Notion/Postman/Rambox/Rocket.Chat/Slack/Teams
+        /\b(discord|figma|mattermost|notion|postman|rambox|rocket.chat|slack|teams)\/([\w\.]+).+(electron\/|; ios)/i,
+        /(flipboard)\/([\w\.]+)/i
+        ], [NAME, VERSION, [TYPE, INAPP]], [
+
+        // Evernote/Teams on mobile
+        /(evernote) win/i,
+        /(teams)mobile-(ios|and)/i
+        ], [NAME, [TYPE, INAPP]], [
+
         // Slack
-        [/(?:slack(?=.+electron|.+ios)|chatlyio)\/([\d\.]+)/i], 
-        [VERSION, [NAME, 'Slack'], [TYPE, INAPP]],
+        /chatlyio\/([\d\.]+)/i], 
+        [VERSION, [NAME, 'Slack'], [TYPE, INAPP]], [
+
+        // TikTok Lite
+        /ultralite app_version\/([\w\.]+)/i], 
+        [VERSION, [NAME, 'TikTok Lite'], [TYPE, INAPP]], [
+
+        // VS Code
+        /\) code\/([\d\.]+).+electron\//i], 
+        [VERSION, [NAME, 'VS Code'], [TYPE, INAPP]], [
 
         // Yahoo! Japan
-        [/jp\.co\.yahoo\.(?:android\.yjtop|ipn\.appli)\/([\d\.]+)/i], 
+        /jp\.co\.yahoo\.(?:android\.yjtop|ipn\.appli)\/([\d\.]+)/i], 
         [VERSION, [NAME, 'Yahoo! Japan'], [TYPE, INAPP]]
     ]
 });
