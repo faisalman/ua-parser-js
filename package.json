@@ -227,7 +227,6 @@
     "detect-europe-js": "^0.1.2",
     "is-standalone-pwa": "^0.1.1",
     "ua-is-frozen": "^0.1.2",
-    "node-fetch": "^2.7.0",
     "@types/node-fetch": "^2.6.12"
   },
   "devDependencies": {
@@ -236,6 +235,7 @@
     "@playwright/test": "^1.49.0",
     "jshint": "~2.13.6",
     "mocha": "~8.2.0",
+    "node-fetch": "^2.7.0",
     "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",
     "tsd": "^0.29.0",
