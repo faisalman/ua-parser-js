@@ -212,9 +212,18 @@ const ExtraDevices = Object.freeze({
 const Emails = Object.freeze({
     browser : [
         [
-        // Evolution / Kontact/KMail / [Microsoft/Mac] Outlook / Thunderbird
-        /(airmail|bluemail|emclient|evolution|foxmail|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|thunderbird|yahoo)(?:m.+ail; |[\/ ])([\w\.]+)/i
-        ], [NAME, VERSION, [TYPE, EMAIL]]
+        // Evolution / Kontact/KMail[2] / [Microsoft/Mac] Outlook / Thunderbird
+        // Airmail / BlueMail / DaumMail / eMClient / Foxmail / NaverMailApp / Polymail
+        // ProtonMail / SparkDesktop / Sparrow / Yahoo! Mail / Zimbra / ZohoMail-Desktop
+        /((?:air|blue|daum|fox|poly|proton)mail|emclient|evolution|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|sparkdesktop|thunderbird|yahoo|zohomail-desktop)(?:m.+ail; |[\/ ])([\w\.]+)/i,
+
+        // Apple's Mail
+        /(mail)\/([\w\.]+) cf/i
+        ], [NAME, VERSION, [TYPE, EMAIL]], [
+        
+        // Zimbra
+        /zdesktop\/([\w\.]+)/i
+        ], [VERSION, [NAME, 'Zimbra'], [TYPE, EMAIL]]
     ]
 });
 
