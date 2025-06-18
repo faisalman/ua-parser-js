@@ -886,6 +886,8 @@
             ], [VENDOR, MODEL, [TYPE, XR]], [
             /(quest( \d| pro)?s?).+vr/i                                         // Meta Quest
             ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
+            /mobile vr; rv.+firefox/i                                           // Unidentifiable VR device using Firefox Reality / Wolvic
+            ], [[TYPE, XR]], [
 
             ///////////////////
             // EMBEDDED
@@ -897,7 +899,7 @@
             ], [MODEL, [VENDOR, AMAZON], [TYPE, EMBEDDED]], [
             /(homepod).+mac os/i                                                // Apple HomePod
             ], [MODEL, [VENDOR, APPLE], [TYPE, EMBEDDED]], [
-            /windows iot/i
+            /windows iot/i                                                      // Unidentifiable embedded device using Windows IoT
             ], [[TYPE, EMBEDDED]], [
 
             ////////////////////

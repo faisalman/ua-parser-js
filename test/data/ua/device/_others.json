@@ -291,6 +291,24 @@
         }
     },
     {
+        "desc": "Unknown VR Device using Firefox Reality",
+        "ua": "Mozilla/5.0 (Android 10; Mobile VR; rv:123.0) Gecko/123.0 Firefox/123.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "xr"
+        }
+    },
+    {
+        "desc": "Unknown VR Device using Wolvic",
+        "ua": "Mozilla/5.0 (Android 14; Mobile VR; rv:128.0) Gecko/128.0 Firefox/128.0 Wolvic/1.8",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "xr"
+        }
+    },
+    {
         "desc": "Smart TV",
         "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 ( DRM; LGE/ATMACA/GRAETZ; GR32S1470; WEBOS22 04.41.53; W22_K8AP; DTV_C22L;) LaTivu_1.0.1_2022",
         "expect": {
