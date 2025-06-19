@@ -842,15 +842,16 @@
             // CONSOLES
             ///////////////////
 
-            /(ouya)/i,                                                          // Ouya
-            /(nintendo) (\w+)/i                                                 // Nintendo
-            ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
-            /droid.+; (shield)( bui|\))/i                                       // Nvidia Portable
-            ], [MODEL, [VENDOR, NVIDIA], [TYPE, CONSOLE]], [
             /(playstation \w+)/i                                                // Playstation
             ], [MODEL, [VENDOR, SONY], [TYPE, CONSOLE]], [
             /\b(xbox(?: one)?(?!; xbox))[\); ]/i                                // Microsoft Xbox
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
+            /(ouya)/i,                                                          // Ouya
+            /(nintendo) (\w+)/i,                                                // Nintendo
+            /(retroid) (pocket ([^\)]+))/i                                      // Retroid Pocket
+            ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
+            /droid.+; (shield)( bui|\))/i                                       // Nvidia Portable
+            ], [MODEL, [VENDOR, NVIDIA], [TYPE, CONSOLE]], [
 
             ///////////////////
             // WEARABLES

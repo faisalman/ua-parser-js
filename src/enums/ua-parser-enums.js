@@ -255,6 +255,7 @@ const Vendor = Object.freeze({
     PICO: 'Pico',
     POLYTRON: 'Polytron',
     REALME: 'Realme',
+    RETROID: 'Retroid',
     RIM: 'RIM',
     ROKU: 'Roku',
     SAMSUNG: 'Samsung',

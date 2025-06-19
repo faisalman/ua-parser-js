@@ -244,6 +244,7 @@ export const Vendor: Readonly<{
     PICO: "Pico";
     POLYTRON: "Polytron";
     REALME: "Realme";
+    RETROID: "Retroid";
     RIM: "RIM";
     ROKU: "Roku";
     SAMSUNG: "Samsung";
