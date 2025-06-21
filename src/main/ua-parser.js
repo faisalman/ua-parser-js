@@ -299,17 +299,17 @@
     //////////////
 
     var windowsVersionMap = {
-            'ME'        : '4.90',
-            'NT 3.11'   : 'NT3.51',
-            'NT 4.0'    : 'NT4.0',
-            '2000'      : 'NT 5.0',
-            'XP'        : ['NT 5.1', 'NT 5.2'],
-            'Vista'     : 'NT 6.0',
-            '7'         : 'NT 6.1',
-            '8'         : 'NT 6.2',
-            '8.1'       : 'NT 6.3',
-            '10'        : ['NT 6.4', 'NT 10.0'],
-            'RT'        : 'ARM'
+            'ME'    : '4.90',
+            'NT 3.51': '3.51',
+            'NT 4.0': '4.0',
+            '2000'  : ['5.0', '5.01'],
+            'XP'    : ['5.1', '5.2'],
+            'Vista' : '6.0',
+            '7'     : '6.1',
+            '8'     : '6.2',
+            '8.1'   : '6.3',
+            '10'    : ['6.4', '10.0'],
+            'NT'    : ''
         },
         
         formFactorsMap = {
@@ -946,14 +946,17 @@
         os : [[
 
             // Windows
-            /microsoft (windows) (7|vista|xp)/i                                 // Windows
+            /(windows nt) (6\.[23]); arm/i                                      // Windows RT
+            ], [[NAME, /N/, 'R'], [VERSION, strMapper, windowsVersionMap]], [
+            /(windows (?:phone|mobile|iot))(?: os)?[\/ ]?([\d\.]*( se)?)/i,     // Windows IoT/Mobile/Phone
+                                                                                // Windows NT/3.1/95/98/ME/2000/XP/Vista/7/8/8.1/10/11
+            /(windows)[\/ ](1[01]|2000|3\.1|7|8(\.1)?|9[58]|me|vista|xp)/i
             ], [NAME, VERSION], [
-            /(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i         // Windows Phone
-            ], [NAME, [VERSION, strMapper, windowsVersionMap]], [
-            /windows nt 6\.2; (arm)/i,                                          // Windows RT
-            /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i,
-            /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i
-            ], [[VERSION, strMapper, windowsVersionMap], [NAME, WINDOWS]], [
+            /windows nt ?([\d\.\)]*)(?!.+xbox)/i,
+            /\bwin(?=3| ?9|n)(?:nt| 9x )?([\d\.;]*)/i
+            ], [[VERSION, /(;|\))/g, '', strMapper, windowsVersionMap], [NAME, WINDOWS]], [
+            /(windows ce)\/?([\d\.]*)/i                                         // Windows CE
+            ], [NAME, VERSION], [
 
             // iOS/macOS
             /[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i,             // iOS

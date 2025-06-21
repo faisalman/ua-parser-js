@@ -388,9 +388,11 @@ const OS = Object.freeze({
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',
+    WINDOWS_CE: 'Windows CE',
     WINDOWS_IOT: 'Windows IoT',
     WINDOWS_MOBILE: 'Windows Mobile',
     WINDOWS_PHONE: 'Windows Phone',
+    WINDOWS_RT: 'Windows RT',
     XBOX: 'Xbox',
     XUBUNTU: 'Xubuntu',
     ZENWALK: 'Zenwalk'
