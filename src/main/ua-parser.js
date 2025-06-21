@@ -950,7 +950,7 @@
             ], [[NAME, /N/, 'R'], [VERSION, strMapper, windowsVersionMap]], [
             /(windows (?:phone|mobile|iot))(?: os)?[\/ ]?([\d\.]*( se)?)/i,     // Windows IoT/Mobile/Phone
                                                                                 // Windows NT/3.1/95/98/ME/2000/XP/Vista/7/8/8.1/10/11
-            /(windows)[\/ ](1[01]|2000|3\.1|7|8(\.1)?|9[58]|me|vista|xp)/i
+            /(windows)[\/ ](1[01]|2000|3\.1|7|8(\.1)?|9[58]|me|server 20\d\d( r2)?|vista|xp)/i
             ], [NAME, VERSION], [
             /windows nt ?([\d\.\)]*)(?!.+xbox)/i,
             /\bwin(?=3| ?9|n)(?:nt| 9x )?([\d\.;]*)/i

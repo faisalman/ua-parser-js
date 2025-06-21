@@ -244,6 +244,15 @@
     },
     {
         "desc"    : "Windows 7",
+        "ua"      : "Mozilla/5.0 (Windows 7 Enterprise; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6099.71 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "7"
+        }
+    },
+    {
+        "desc"    : "Windows 7",
         "ua"      : "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
         "expect"  :
         {
@@ -276,6 +285,15 @@
         {
             "name"    : "Windows",
             "version" : "10"
+        }
+    },
+    {
+        "desc"    : "Windows Server 2012 R2",
+        "ua"      : "Mozilla/5.0 (Windows Server 2012 R2 Standard; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5975.80 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Windows",
+            "version" : "Server 2012 R2"
         }
     },
     {
