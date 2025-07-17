@@ -190,6 +190,8 @@
         },
         setProps = function (arr) {
             for (var i in arr) {
+                if (!arr.hasOwnProperty(i)) continue;
+
                 var propName = arr[i];
                 if (typeof propName == OBJ_TYPE && propName.length == 2) {
                     this[propName[0]] = propName[1];
@@ -1265,7 +1267,7 @@
                 case UA_ENGINE:
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
-                        for (var i in brands) {
+                        for (var i=0; i<brands.length; i++) {
                             var brandName = brands[i].brand || brands[i],
                                 brandVersion = brands[i].version;
                             if (this.itemType == UA_BROWSER && 
