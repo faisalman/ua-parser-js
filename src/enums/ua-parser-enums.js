@@ -175,6 +175,7 @@ const BrowserType = Object.freeze({
 
 const CPU = Object.freeze({
     '68K': '68k',
+    ALPHA: 'alpha',
     ARM : 'arm',
     ARM_64: 'arm64',
     ARM_HF: 'armhf',
