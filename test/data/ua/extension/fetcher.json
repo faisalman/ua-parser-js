@@ -30,12 +30,32 @@
         }
     },
     {
+        "desc"    : "Blueno",
+        "ua"      : "acebookexternalhit/1.1 (compatible; Blueno/1.0; +http://naver.me/scrap)",
+        "expect"  :
+        {
+            "name"    : "Blueno",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Bluesky",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Bluesky Cardyb/1.1; +mailto:support@bsky.app) Chrome/100.0.0.0 Safari/537.36",
         "expect"  :
         {
             "name"    : "Bluesky",
             "version" : "1.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "BufferLinkPreviewBot",
+        "ua"      : "BufferLinkPreviewBot/1.0 (+https://scraper.buffer.com/about/bots/link-preview-bot)",
+        "expect"  :
+        {
+            "name"    : "BufferLinkPreviewBot",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     },

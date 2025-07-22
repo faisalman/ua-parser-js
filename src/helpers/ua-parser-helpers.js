@@ -52,6 +52,7 @@ const isAIBot = (resultOrUA) => [
     // Anthropic
     'anthropic-ai',
     'claude-web',
+    'claude-searchbot',
     'claudebot',
 
     // Apple
@@ -63,6 +64,9 @@ const isAIBot = (resultOrUA) => [
 
     // Common Crawl
     'ccbot',
+    
+    // Coveo
+    'coveobot',
 
     // DataForSeo
     'dataforseobot',

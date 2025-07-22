@@ -270,6 +270,16 @@
         }
     },
     {
+        "desc"    : "ClaudeWeb",
+        "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-Web",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Coc Coc Bot (web)",
         "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
         "expect"  :
@@ -290,12 +300,22 @@
         }
     },
     {
-        "desc"    : "ClaudeWeb",
-        "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
+        "desc"    : "Coveobot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) (compatible; Coveobot/2.0;+http://www.coveo.com/bot.html)",
         "expect"  :
         {
-            "name"    : "Claude-Web",
-            "version" : "1.0",
+            "name"    : "Coveobot",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "CriteoBot",
+        "ua"      : "CriteoBot/0.1 (+https://www.criteo.com/criteo-crawler/)",
+        "expect"  :
+        {
+            "name"    : "CriteoBot",
+            "version" : "0.1",
             "type"    : "crawler"
         }
     },
