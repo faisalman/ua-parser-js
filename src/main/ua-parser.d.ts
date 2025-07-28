@@ -2,8 +2,8 @@
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
-import type { IncomingHttpHeaders } from 'http';
-import type { Headers as FetchAPIHeaders } from 'node-fetch';
+import type { Headers as FetchAPIHeaders } from "undici";
+import { IncomingHttpHeaders } from "undici/types/header";
 
 declare namespace UAParser {
     
