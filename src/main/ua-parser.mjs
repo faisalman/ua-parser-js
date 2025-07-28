@@ -538,15 +538,15 @@
             /( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i
             ], [[ARCHITECTURE, 'arm']], [
 
-            /((ppc|powerpc)(64)?)( mac|;|\))/i                                  // PowerPC
-            ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
-
             / sun4\w[;\)]/i                                                     // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
-
-            /\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i
                                                                                 // IA64, 68K, ARM/64, AVR/32, IRIX/64, MIPS/64, SPARC/64, PA-RISC
-            ], [[ARCHITECTURE, lowerize]]
+            /\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i,
+            /((ppc|powerpc)(64)?)( mac|;|\))/i,                                 // PowerPC
+            /(?:osf1|[freopnt]{3,4}bsd) (alpha)/i                               // Alpha
+            ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
+            /winnt.+\[axp/i
+            ], [[ARCHITECTURE, 'alpha']]
         ],
 
         device : [[
@@ -885,7 +885,7 @@
 
             /droid.+; (glass) \d/i                                              // Google Glass
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, XR]], [
-            /(pico) (4|neo3(?: link|pro)?)/i                                    // Pico
+            /(pico) ([\w ]+) os\d/i                                             // Pico
             ], [VENDOR, MODEL, [TYPE, XR]], [
             /(quest( \d| pro)?s?).+vr/i                                         // Meta Quest
             ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
