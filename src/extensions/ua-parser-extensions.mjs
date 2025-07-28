@@ -48,6 +48,8 @@ const Crawlers = Object.freeze({
             // Amazonbot - https://developer.amazon.com/amazonbot
             // Bingbot / AdIdxBot - https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
             // CCBot - https://commoncrawl.org/faq
+            // Coveobot - https://connect.coveo.com/s/article/19648
+            // CriteoBot - https://www.criteo.com/criteo-crawler/
             // Dotbot - https://moz.com/help/moz-procedures/crawlers/dotbot
             // DuckDuckBot - http://duckduckgo.com/duckduckbot.html
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
@@ -60,7 +62,7 @@ const Crawlers = Object.freeze({
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
-            /((?:adidx|ahrefs|amazon|bing|cc|dot|duckduck|exa|facebook|gpt|iask|linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|cc|coveo|criteo|dot|duckduck|exa|facebook|gpt|iask|linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
             /(applebot(?:-extended)?)\/?([\w\.]*)/i,
@@ -69,7 +71,7 @@ const Crawlers = Object.freeze({
             /(baiduspider[-imagevdonwsfcpr]{0,7})\/?([\w\.]*)/i,
 
             // ClaudeBot (Anthropic)
-            /(claude(?:bot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
+            /(claude(?:bot|-searchbot|-web)|anthropic-ai)\/?([\w\.]*)/i, 
 
             // Coc Coc Bot - https://help.coccoc.com/en/search-engine
             /(coccocbot-(?:image|web))\/([\w\.]+)/i, 
@@ -239,15 +241,16 @@ const Fetchers = Object.freeze({
     browser : [
         [
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
+            // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
-            // Better Uptime / BingPreview / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Better Uptime / BingPreview / Blueno / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // Google Site Verifier / Meta / Yahoo! Japan
             // Iframely - https://iframely.com/docs/about
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(ahrefssiteaudit|(?:bing|microsoft)preview|(?:chatgpt|mistralai|perplexity)-user|mastodon|(?:discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|iframely|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|mastodon|(?:bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|iframely|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
@@ -408,8 +411,8 @@ const Vehicles = Object.freeze({
 const Bots = Object.freeze({
     browser : [
         ...CLIs.browser,
-        ...Crawlers.browser,
         ...Fetchers.browser,
+        ...Crawlers.browser,
         ...Libraries.browser
     ],
     os : [

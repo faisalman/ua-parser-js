@@ -3,7 +3,7 @@
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import type { Headers as FetchAPIHeaders } from "undici";
-import { IncomingHttpHeaders } from "undici/types/header";
+import type { IncomingHttpHeaders } from "undici/types/header";
 
 declare namespace UAParser {
     
