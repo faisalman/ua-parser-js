@@ -2,8 +2,8 @@
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
-import type { IncomingHttpHeaders } from 'http';
-import type { Headers as FetchAPIHeaders } from 'node-fetch';
+import type { Headers } from "undici";
+import type { IncomingHttpHeaders } from "undici/types/header";
 
 declare namespace UAParser {
     
@@ -53,7 +53,7 @@ declare namespace UAParser {
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
     type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
     type UAParserExt = Partial<Record<UAParserProps, RegexMap>> | Partial<Record<UAParserProps, RegexMap>>[];
-    type UAParserHeaders = Record<string, string> | IncomingHttpHeaders | FetchAPIHeaders;
+    type UAParserHeaders = Record<string, string> | IncomingHttpHeaders | Headers;
 
     export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: UAParserHeaders): IResult;
     export function UAParser(uastring?: string, headers?: UAParserHeaders): IResult;
