@@ -455,6 +455,8 @@
             ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME, [TYPE, INAPP]], [
+            /(zalo(?:app)?)[\/\sa-z]*([\w\.-]+)/i                               // Zalo 
+            ], [[NAME, /(.+)/, 'Zalo'], VERSION, [TYPE, INAPP]], [
 
             /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
             ], [NAME, VERSION], [
