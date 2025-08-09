@@ -360,6 +360,16 @@
         }
     },
     {
+        "desc"    : "DeepSeekBot",
+        "ua"      : "DeepSeekBot",
+        "expect"  :
+        {
+            "name"    : "DeepSeekBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Diffbot",
         "ua"      : "Diffbot/0.1",
         "expect"  :
@@ -386,6 +396,26 @@
         {
             "name"    : "DuckDuckBot",
             "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "DuckDuckGo-Favicons-Bot",
+        "ua"      : "DuckDuckGo-Favicons-Bot/1.0",
+        "expect"  :
+        {
+            "name"    : "DuckDuckGo-Favicons-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Elastic",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/124.0.6367.29 Safari/537.36 Elastic/Synthetics",
+        "expect"  :
+        {
+            "name"    : "Elastic",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },

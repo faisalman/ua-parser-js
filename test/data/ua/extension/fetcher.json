@@ -10,6 +10,16 @@
         }
     },
     {
+        "desc"    : "Asana",
+        "ua"      : "Asana/1.4.0 WebsiteMetadataRetriever",
+        "expect"  :
+        {
+            "name"    : "Asana",
+            "version" : "1.4.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Better Uptime Bot",
         "ua"      : "Better Uptime Bot Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
         "expect"  :
@@ -26,6 +36,16 @@
         {
             "name"    : "BingPreview",
             "version" : "1.0b",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Bit.ly",
+        "ua"      : "bitlybot/3.0 (+http://bit.ly/)",
+        "expect"  :
+        {
+            "name"    : "bitlybot",
+            "version" : "3.0",
             "type"    : "fetcher"
         }
     },
@@ -66,6 +86,16 @@
         {
             "name"    : "ChatGPT-User",
             "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Chrome-Lighthouse",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse",
+        "expect"  :
+        {
+            "name"    : "Chrome-Lighthouse",
+            "version" : "undefined",
             "type"    : "fetcher"
         }
     },
@@ -286,6 +316,16 @@
         {
             "name"    : "WhatsApp",
             "version" : "2.23.20.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Zoombot",
+        "ua"      : "Mozilla/5.0 (compatible; Zoombot/1.0; +https://zoom.us; crawler@domain.com)",
+        "expect"  :
+        {
+            "name"    : "Zoombot",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     }

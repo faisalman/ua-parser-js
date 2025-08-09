@@ -71,6 +71,9 @@ const isAIBot = (resultOrUA) => [
     // DataForSeo
     'dataforseobot',
 
+    // DeepSeek
+    'deepseekbot',
+
     // Diffbot
     'diffbot',
 
