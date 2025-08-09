@@ -772,7 +772,8 @@
             /; (blu|hmd|imo|infinix|lava|oneplus|tcl)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,  // BLU/HMD/IMO/Infinix/Lava/OnePlus/TCL
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
-            /(oppo) ?([\w ]+) bui/i                                             // OPPO
+            /(oppo) ?([\w ]+) bui/i,                                            // OPPO
+            /droid[^;]+; (philips)[_ ]([sv-x][\d]{3,4}[xz]?)/i                  // Philips
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /(kobo)\s(ereader|touch)/i,                                         // Kobo
@@ -799,6 +800,7 @@
             // SMARTTVS
             ///////////////////
 
+            /(philips)[\w ]+tv/i,                                               // Philips
             /smart-tv.+(samsung)/i                                              // Samsung
             ], [VENDOR, [TYPE, SMARTTV]], [
             /hbbtv.+maple;(\d+)/i
@@ -836,11 +838,6 @@
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,                          // Roku
             /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i         // HbbTV devices
             ], [[VENDOR, /.+\/(\w+)/, '$1', strMapper, {'LG':'lge'}], [MODEL, trim], [TYPE, SMARTTV]], [
-                                                                                // SmartTV from Unidentified Vendors
-            /droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i
-            ], [MODEL, [TYPE, SMARTTV]], [
-            /\b(android tv|smart[- ]?tv|opera tv|tv; rv:|large screen[\w ]+safari)\b/i
-            ], [[TYPE, SMARTTV]], [
 
             ///////////////////
             // CONSOLES
@@ -911,6 +908,10 @@
             // MIXED (GENERIC)
             ///////////////////
 
+            /droid.+; ([\w- ]+) (4k|android|smart|google)[- ]?tv/i              // Unidentifiable SmartTV
+            ], [MODEL, [TYPE, SMARTTV]], [
+            /\b((4k|android|smart|opera)[- ]?tv|tv; rv:|large screen[\w ]+safari)\b/i
+            ], [[TYPE, SMARTTV]], [
             /droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+?(mobile|vr|\d) safari/i
             ], [MODEL, [TYPE, strMapper, { 'mobile' : 'Mobile', 'xr' : 'VR', '*' : TABLET }]], [
             /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i                      // Unidentifiable Tablet

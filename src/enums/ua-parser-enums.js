@@ -254,6 +254,7 @@ const Vendor = Object.freeze({
     PALM: 'Palm',
     PANASONIC: 'Panasonic',
     PEBBLE: 'Pebble',
+    PHILIPS: 'Philips',
     PICO: 'Pico',
     POLYTRON: 'Polytron',
     REALME: 'Realme',
