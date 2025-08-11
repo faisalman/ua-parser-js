@@ -62,6 +62,9 @@ const isAIBot = (resultOrUA) => [
     // ByteDance
     'bytespider',
 
+    // Cohere
+    'cohere-training-data-crawler',
+
     // Common Crawl
     'ccbot',
     

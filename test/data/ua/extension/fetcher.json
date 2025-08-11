@@ -110,6 +110,16 @@
         }
     },
     {
+        "desc"    : "Gemini-Deep-Research",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Gemini-Deep-Research; +https://gemini.google/overview/deep-research/) Chrome/135.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Gemini-Deep-Research",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Google FeedFetcher",
         "ua"      : "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
         "expect"  :
@@ -186,6 +196,16 @@
         {
             "name"    : "Iframely",
             "version" : "1.3.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "kakaotalk-scrap",
+        "ua"      : "facebookexternalhit/1.1; kakaotalk-scrap/1.0; +https://devtalk.kakao.com/t/scrap/33984",
+        "expect"  :
+        {
+            "name"    : "kakaotalk-scrap",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     },
@@ -285,6 +305,16 @@
         "expect"  :
         {
             "name"    : "TelegramBot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "TikTokSpider",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; TikTokSpider; ttspider-feedback@tiktok.com)",
+        "expect"  :
+        {
+            "name"    : "TikTokSpider",
             "version" : "undefined",
             "type"    : "fetcher"
         }

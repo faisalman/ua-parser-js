@@ -58,7 +58,7 @@ const Crawlers = Object.freeze({
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
-            /((?:adidx|ahrefs|amazon|bing|cc|coveo|criteo|dot|duckduck|exa|facebook|gpt|iask|linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|cc|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
             /(applebot(?:-extended)?)\/?([\w\.]*)/i,
@@ -116,12 +116,13 @@ const Crawlers = Object.freeze({
             // AI2Bot - https://allenai.org/crawler
             // Bytespider
             // DataForSeoBot - https://dataforseo.com/dataforseo-bot
+            // DeepSeekBot
             // Huawei AspiegelBot / PetalBot https://aspiegel.com/petalbot
             // ImagesiftBot - https://imagesift.com/about
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /\b(360spider-?(?:image|video)?|bytespider|(?:ai2|aspiegel|dataforseo|imagesift|petal|turnitin)bot|teoma|yahoo! slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|cohere-training-data-crawler|elastic(?=\/s)|(?:ai2|aspiegel|dataforseo|deepseek|imagesift|petal|turnitin)bot|teoma|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -236,17 +237,17 @@ const Emails = Object.freeze({
 const Fetchers = Object.freeze({
     browser : [
         [
+            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
-            // Better Uptime / BingPreview / Blueno / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // Google Site Verifier / Meta / Yahoo! Japan
             // Iframely - https://iframely.com/docs/about
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|mastodon|(?:bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero)bot|google-site-verification|iframely|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
@@ -263,8 +264,8 @@ const Fetchers = Object.freeze({
         [NAME, VERSION, [TYPE, FETCHER]],
 
         [
-            // Google Bots / Cohere / Snapchat / Vercelbot / Yandex Bots
-            /((?:better uptime |telegram|vercel)bot|cohere-ai|feedfetcher-google|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|yandex(?:sitelinks|userproxy))/i
+            // Google Bots / Chrome-Lighthouse / Cohere / Gemini-Deep-Research / Snapchat / TikTokSpider / Vercelbot / Yandex Bots
+            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|cohere-ai|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|tiktokspider|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],

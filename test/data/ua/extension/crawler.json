@@ -300,6 +300,16 @@
         }
     },
     {
+        "desc"    : "cohere-training-data-crawler",
+        "ua"      : "cohere-training-data-crawler (+crawler@cohere.ai)",
+        "expect"  :
+        {
+            "name"    : "cohere-training-data-crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Coveobot",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) (compatible; Coveobot/2.0;+http://www.coveo.com/bot.html)",
         "expect"  :
