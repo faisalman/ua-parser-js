@@ -59,6 +59,9 @@ const isAIBot = (resultOrUA) => [
     'applebot',
     'applebot-extended',
 
+    // Brave
+    'bravebot',
+
     // ByteDance
     'bytespider',
     'tiktokspider',
@@ -92,6 +95,16 @@ const isAIBot = (resultOrUA) => [
 
     // Huawei
     'petalbot',
+    'pangubot',
+
+    // Hugging Face
+    'huggingface-bot',
+
+    // Kangaroo
+    'kangaroo bot',
+
+    // Mendable.ai
+    'firecrawlagent',
 
     // Meta
     'facebookbot',
@@ -104,11 +117,20 @@ const isAIBot = (resultOrUA) => [
     // Perplexity
     'perplexitybot',
 
+    // Replicate
+    'replicate-bot',
+
+    // Runpod
+    'runpod-bot',
+
     // Semrush
     'semrushbot-ocob',
 
     // Timpi
     'timpibot',
+
+    // Together AI
+    'together-bot',
 
     // Velen.io
     'velenpublicwebcrawler',
@@ -120,6 +142,9 @@ const isAIBot = (resultOrUA) => [
     'omgili',
     'omgilibot',
     'webzio-extended',
+
+    // X
+    'xai-bot',
 
     // You.com
     'youbot',

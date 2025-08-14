@@ -43,6 +43,7 @@ const Crawlers = Object.freeze({
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
             // Bingbot / AdIdxBot - https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
+            // Bravebot - https://search.brave.com/help/brave-search-crawler
             // CCBot - https://commoncrawl.org/faq
             // Coveobot - https://connect.coveo.com/s/article/19648
             // CriteoBot - https://www.criteo.com/criteo-crawler/
@@ -51,6 +52,7 @@ const Crawlers = Object.freeze({
             // FacebookBot - https://developers.facebook.com/docs/sharing/bot/
             // GPTBot - https://platform.openai.com/docs/gptbot
             // iAskBot - https://iask.ai
+            // Kangaroo Bot - https://kangaroollm.com.au/kangaroo-bot/
             // LinkedInBot - http://www.linkedin.com
             // MJ12bot - https://mj12bot.com/
             // MojeekBot - https://www.mojeek.com/bot.html
@@ -58,7 +60,7 @@ const Crawlers = Object.freeze({
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
-            /((?:adidx|ahrefs|amazon|bing|cc|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|brave|cc|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam)bot)\/([\w\.-]+)/i,
 
             // Applebot - http://apple.com/go/applebot
             /(applebot(?:-extended)?)\/?([\w\.]*)/i,
@@ -103,8 +105,9 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Diffbot / Linespider / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / Webzio-Extended / Screaming Frog SEO Spider / Startpage / Timpibot / VelenPublicWebCrawler / YisouSpider / YouBot
-            /((?:aihit|diff|timpi|you)bot|omgili(?:bot)?|openai image downloader|(?:magpie-|velenpublicweb)crawler|startpageprivateimageproxy|webzio-extended|(?:chatglm-|line|screaming frog seo |yisou)spider)\/?([\w\.]*)/i
+            // aiHitBot / Diffbot / FirecrawlAgent / HuggingFace-Bot / Linespider / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / PanguBot / Replicate-Bot / RunPod-Bot / Webzio-Extended / Screaming Frog SEO Spider / Startpage / Timpibot / Together-Bot / VelenPublicWebCrawler / xAI-Bot / YisouSpider / YouBot
+            // Cotoyogi - https://ds.rois.ac.jp/en_center8/en_crawler/
+            /((?:aihit|diff|huggingface-|pangu|replicate-|runpod-|timpi|together-|xai-|you)bot|omgili(?:bot)?|cotoyogi|firecrawlagent|openai image downloader|(?:magpie-|velenpublicweb)crawler|startpageprivateimageproxy|webzio-extended|(?:chatglm-|line|screaming frog seo |yisou)spider)\/?([\w\.]*)/i
         ],
 
         [NAME, VERSION, [TYPE, CRAWLER]],

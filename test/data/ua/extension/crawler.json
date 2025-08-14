@@ -230,6 +230,16 @@
         }
     },
     {
+        "desc"    : "Bravebot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Bravebot/1.0; +https://search.brave.com/help/brave-search-crawler) Chrome/W.X.Y.Z Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Bravebot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Bytespider",
         "ua"      : "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.1511.1269 Mobile Safari/537.36; Bytespider",
         "expect"  :
@@ -306,6 +316,16 @@
         {
             "name"    : "cohere-training-data-crawler",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Cotoyogi",
+        "ua"      : "Mozilla/5.0 (compatible; Cotoyogi/4.0; +https://ds.rois.ac.jp/center8/crawler/)",
+        "expect"  :
+        {
+            "name"    : "Cotoyogi",
+            "version" : "4.0",
             "type"    : "crawler"
         }
     },
@@ -470,6 +490,16 @@
         }
     },
     {
+        "desc"    : "FirecrawlAgent",
+        "ua"      : "Mozilla/5.0 (compatible; FirecrawlAgent/1.0)",
+        "expect"  :
+        {
+            "name"    : "FirecrawlAgent",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Googlebot-Video",
         "ua"      : "Googlebot-Video/1.0",
         "expect"  :
@@ -590,6 +620,16 @@
         }
     },
     {
+        "desc"    : "HuggingFace-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; HuggingFace-Bot/1.0; +https://huggingface.co/)",
+        "expect"  :
+        {
+            "name"    : "HuggingFace-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "iAskBot",
         "ua"      : "Mozilla/5.0 AppleWebKit/605.1.15 (KHTML, like Gecko; compatible; iAskBot/1.0; +https://iask.ai/) Chrome/120.0.6099.119 Safari/605.1.15",
         "expect"  :
@@ -606,6 +646,16 @@
         {
             "name"    : "ImagesiftBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Kangaroo Bot",
+        "ua"      : "Mozilla/5.0 (compatible; Kangaroo Bot/1.0)",
+        "expect"  :
+        {
+            "name"    : "Kangaroo Bot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -711,6 +761,16 @@
         }
     },
     {
+        "desc"    : "PanguBot",
+        "ua"      : "Mozilla/5.0 (compatible; PanguBot/1.0)",
+        "expect"  :
+        {
+            "name"    : "PanguBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "PerplexityBot",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
         "expect"  :
@@ -767,6 +827,26 @@
         {
             "name"    : "Qwantbot",
             "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Replicate-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; Replicate-Bot/1.0; +https://replicate.com/)",
+        "expect"  :
+        {
+            "name"    : "Replicate-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "RunPod-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; RunPod-Bot/1.0; +https://runpod.io/)",
+        "expect"  :
+        {
+            "name"    : "RunPod-Bot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -861,12 +941,32 @@
         }
     },
     {
+        "desc"    : "Together-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; Together-Bot/1.0; +https://together.ai/)",
+        "expect"  :
+        {
+            "name"    : "Together-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "TurnitinBot",
         "ua"      : "TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)",
         "expect"  :
         {
             "name"    : "TurnitinBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "xAI-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; xAI-Bot/1.0; +https://x.ai/)",
+        "expect"  :
+        {
+            "name"    : "xAI-Bot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
