@@ -61,6 +61,7 @@ const isAIBot = (resultOrUA) => [
 
     // ByteDance
     'bytespider',
+    'tiktokspider',
 
     // Cohere
     'cohere-training-data-crawler',
@@ -111,6 +112,9 @@ const isAIBot = (resultOrUA) => [
 
     // Velen.io
     'velenpublicwebcrawler',
+
+    // Vercel
+    'v0bot',
 
     // Webz.io
     'omgili',

@@ -121,8 +121,9 @@ const Crawlers = Object.freeze({
             // ImagesiftBot - https://imagesift.com/about
             // Qihoo 360Spider
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
+            // v0bot - https://vercel.com/docs/bot-management
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            /\b(360spider-?(?:image|video)?|bytespider|cohere-training-data-crawler|elastic(?=\/s)|(?:ai2|aspiegel|dataforseo|deepseek|imagesift|petal|turnitin)bot|teoma|yahoo! slurp)/i
+            /\b(360spider-?(?:image|video)?|bytespider|cohere-training-data-crawler|elastic(?=\/s)|(?:ai2|aspiegel|dataforseo|deepseek|imagesift|petal|turnitin|v0)bot|teoma|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -265,7 +266,7 @@ const Fetchers = Object.freeze({
 
         [
             // Google Bots / Chrome-Lighthouse / Cohere / Gemini-Deep-Research / Snapchat / TikTokSpider / Vercelbot / Yandex Bots
-            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|cohere-ai|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|tiktokspider|yandex(?:sitelinks|userproxy))/i
+            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|cohere-ai|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|tiktokspider|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],

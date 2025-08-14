@@ -330,11 +330,51 @@
         }
     },
     {
+        "desc"    : "vercel-favicon-bot",
+        "ua"      : "vercel-favicon-bot",
+        "expect"  :
+        {
+            "name"    : "vercel-favicon-bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "vercel-screenshot-bot",
+        "ua"      : "vercel-screenshot-bot",
+        "expect"  :
+        {
+            "name"    : "vercel-screenshot-bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Vercelbot",
         "ua"      : "Vercelbot (+https://vercel.com)",
         "expect"  :
         {
             "name"    : "Vercelbot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "vercelflags",
+        "ua"      : "vercelflags",
+        "expect"  :
+        {
+            "name"    : "vercelflags",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "verceltracing",
+        "ua"      : "verceltracing",
+        "expect"  :
+        {
+            "name"    : "verceltracing",
             "version" : "undefined",
             "type"    : "fetcher"
         }

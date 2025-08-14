@@ -881,6 +881,16 @@
         }
     },
     {
+        "desc"    : "v0bot",
+        "ua"      : "v0bot",
+        "expect"  :
+        {
+            "name"    : "v0bot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Yahoo! Japan",
         "ua"      : "Y!J-BRW/1.0 (https://www.yahoo-help.jp/app/answers/detail/p/595/a_id/42716)",
         "expect"  :
