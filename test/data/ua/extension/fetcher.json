@@ -190,6 +190,16 @@
         }
     },
     {
+        "desc"    : "HubSpot Page Fetcher",
+        "ua"      : "HubSpot Page Fetcher/1.0 http://www.hubspot.com/ web-crawlers@hubspot.com",
+        "expect"  :
+        {
+            "name"    : "HubSpot Page Fetcher",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Iframely",
         "ua"      : "Iframely/1.3.1 (+https://iframely.com/docs/about)",
         "expect"  :

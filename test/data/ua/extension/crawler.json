@@ -80,6 +80,16 @@
         }
     },
     {
+        "desc"    : "Algolia Crawler",
+        "ua"      : "Algolia Crawler/v2.183.0",
+        "expect"  :
+        {
+            "name"    : "Algolia Crawler",
+            "version" : "v2.183.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Applebot",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1;+http://www.apple.com/go/applebot)",
         "expect"  :
@@ -316,6 +326,16 @@
         {
             "name"    : "cohere-training-data-crawler",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "contxbot",
+        "ua"      : "Mozilla/5.0 (compatible;contxbot/1.0)",
+        "expect"  :
+        {
+            "name"    : "contxbot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -646,6 +666,16 @@
         {
             "name"    : "ImagesiftBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Kagibot",
+        "ua"      : "Mozilla/5.0 (compatible; Kagibot/1.0; +https://kagi.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Kagibot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
