@@ -81,6 +81,15 @@
         }
     },
     {
+        "desc"    : "Windows IoT",
+        "ua"      : "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
+        "expect"  :
+        {
+            "name"    : "Windows IoT",
+            "version" : "10.0"
+        }
+    },
+    {
         "desc"    : "WeChat Desktop for Windows Built-in Browser",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.901.400 QQBrowser/9.0.2524.400",
         "expect"  :
@@ -234,6 +243,15 @@
         }
     },
     {
+        "desc"    : "MIUI",
+        "ua"      : "Dalvik/2.1.0 (Linux; U; Android 9; Mi MIX 3 5G MIUI/V10.3.2.0.PEMEUVF)",
+        "expect"  :
+        {
+            "name"    : "Android",
+            "version" : "9"
+        }
+    },
+    {
         "desc"    : "HarmonyOS",
         "ua"      : "Mozilla/5.0 (Linux; Android 10; HarmonyOS; YAL-AL10; HMSCore 6.3.0.327; GMSCore 21.48.15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 HuaweiBrowser/12.0.3.310 Mobile Safari/537.36",
         "expect"  :
@@ -320,7 +338,7 @@
         "expect"  :
         {
             "name"    : "QNX",
-            "version" : "x86pc"
+            "version" : "undefined"
         }
     },
     {
@@ -351,6 +369,24 @@
         }
     },
     {
+        "desc"    : "Nokia N900 Linux mobile, on the Maemo browser",
+        "ua"      : "Mozilla/5.0(X11; U; Linux armv7l; fr-FR; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900",
+        "expect"  :
+        {
+            "name"    : "Maemo",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Nokia N900 Linux mobile, on the Maemo browser",
+        "ua"      : "Mozilla/5.0 (Linux; Maemo 5.0; Nokia N900; Build/4.0.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Maemo",
+            "version" : "5.0"
+        }
+    },
+    {
         "desc"    : "MeeGo",
         "ua"      : "Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13",
         "expect"  :
@@ -360,7 +396,7 @@
         }
     },
     {
-        "desc"    : "Symbian",
+        "desc"    : "Nokia 5250",
         "ua"      : "Nokia5250/10.0.011 (SymbianOS/9.4; U; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/525 (KHTML, like Gecko) Safari/525 3gpp-gba",
         "expect"  :
         {
@@ -369,12 +405,57 @@
         }
     },
     {
-        "desc"    : "Symbian",
+        "desc"    : "Nokia N79",
+        "ua"      : "Mozilla/5.0 (SymbianOS/9.3; U; Series60/3.2 NokiaN79-1/32.001; Profile/MIDP-2.1 Configuration/CLDC-1",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "9.3"
+        }
+    },
+    {
+        "desc"    : "Nokia E71",
+        "ua"      : "Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE71-1/110.07.127; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "9.2"
+        }
+    },
+    {
+        "desc"    : "Opera Mini on S60",
+        "ua"      : "Opera/9.80 (Series 60; Opera Mini/7.1.32444/191.361; U; de) Presto/2.12.423 Version/12.16",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "NokiaBrowser on Nokia C7",
         "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaC7-00/024.001; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.37 Mobile Safari/533.4 3gpp-gba",
         "expect"  :
         {
             "name"    : "Symbian",
-            "version" : "5.2"
+            "version" : "3"
+        }
+    },
+    {
+        "desc"    : "Nokia 808 PureView",
+        "ua"      : "Mozilla/5.0 (Symbian/3; Series60/5.5 Nokia808PureView/113.010.1508; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/8.3.2.21 Mobile Safari/535.1 3gpp-gba",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "3"
+        }
+    },
+    {
+        "desc"    : "Nokia 808 PureView",
+        "ua"      : "Mozilla/5.0 (Symbian; U; Nokia808 PureView; en-GB) AppleWebKit/534.3 (KHTML, like Gecko) Version/3.0 Mobile/1A543a Mobile Safari/534.3",
+        "expect"  :
+        {
+            "name"    : "Symbian",
+            "version" : "undefined"
         }
     },
     {
@@ -519,6 +600,15 @@
         {
             "name"    : "Ubuntu",
             "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Ubuntu Touch",
+        "ua"      : "Mozilla/5.0 (Linux; Ubuntu 16.04 like Android 4.4) AppleWebKit/537.36 Chromium/65.0.3325.151 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Ubuntu Touch",
+            "version" : "16.04"
         }
     },
     {
@@ -798,6 +888,15 @@
         {
             "name"    : "iOS",
             "version" : "16.4.1"
+        }
+    },
+    {
+        "desc": "Apple HomePod",
+        "ua": "AppleCoreMedia/1.0.0.15D61 (HomePod; U; CPU OS 11_2_5 like Mac OS X; en_us)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "11.2.5"
         }
     },
     {
@@ -1103,7 +1202,7 @@
         "expect"  :
         {
             "name"    : "Linux",
-            "version" : "x86_64"
+            "version" : "undefined"
         }
     },
     {

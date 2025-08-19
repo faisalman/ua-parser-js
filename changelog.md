@@ -4,6 +4,16 @@
 
 Version 1.0.x is basically the equivalent of version 0.7.x. See [#536](https://github.com/faisalman/ua-parser-js/issues/536) for the reason behind this confusion.
 
+## Version 0.7.41 / 1.0.41
+- Add new browser: Daum, Ladybird
+- Add new device vendor: HMD
+- Add new engine: LibWeb
+- Add new os: Windows IoT, Ubuntu Touch
+- Improve cpu detection: ARM, x86
+- Improve device vendor detection: Apple, Archos, Generic, Google, Honor, Huawei, Infinix, Nvidia, Lenovo, Nokia, OnePlus, Xiaomi
+- Improve device type detection: smarttv, wearables
+- Improve os detection: Linux, Symbian
+
 ## Version 0.7.40 / 1.0.40
 - Add new browser: 115, LibreWolf, Slimboat, Slimjet
 - Add new device: Advan, Cat, Energizer, IMO, Micromax, Smartfren

@@ -8,6 +8,14 @@
         }
     },
     {
+        "desc"    : "i686",
+        "ua"      : "Mozilla/5.0 (X11; U; CrOS i686 9.10.0; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.253.0 Safari/532.5",
+        "expect"  :
+        {
+            "architecture"  : "ia32"
+        }
+    },
+    {
         "desc"    : "i386",
         "ua"      : "Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.7) Gecko/20040628 Epiphany/1.2.6",
         "expect"  :
@@ -168,6 +176,22 @@
         }
     },
     {
+        "desc"    : "Google Search App",
+        "ua"      : "Mozilla/5.0 (Linux; Android 9; JAT-LX1 Build/HONORJAT-LX1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.96 Mobile Safari/537.36 GoogleApp/11.11.10.21.arm",
+        "expect"  :
+        {
+            "architecture"  : "arm"
+        }
+    },
+    {
+        "desc"    : "Google Search App",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0; M5s Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/44.0.2403.147 Mobile Safari/537.36 GSA/12.40.17.23.arm64",
+        "expect"  :
+        {
+            "architecture"  : "arm64"
+        }
+    },
+    {
         "desc"    : "Pocket PC",
         "ua"      : "Opera/9.7 (Windows Mobile; PPC; Opera Mobi/35166; U; en) Presto/2.2.1",
         "expect"  :
@@ -245,6 +269,22 @@
         "expect"  : 
         {
             "architecture"  : "irix64"
+        }
+    },
+    {
+        "desc"    : "68k",
+        "ua"      : "'Mozilla/1.1 (Macintosh; U; 68K)'",
+        "expect"  : 
+        {
+            "architecture"  : "68k"
+        }
+    },
+    {
+        "desc"    : "x86",
+        "ua"      : "Mozilla/5.0 (Photon; U; QNX x86pc; en-US; rv:1.8.1.20) Gecko/20090127 BonEcho/2.0.0.20",
+        "expect"  : 
+        {
+            "architecture"  : "ia32"
         }
     }
 ]

@@ -64,6 +64,15 @@
     },
     {
         "desc"    : "LibWeb",
+        "ua"      : "Mozilla/5.0 (Linux; x86_64) Ladybird/1.0",
+        "expect"  :
+        {
+            "name"    : "LibWeb",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "LibWeb",
         "ua"      : "Mozilla/4.0 (SerenityOS; x86) LibWeb+LibJS (Not KHTML, nor Gecko) LibWeb",
         "expect"  :
         {

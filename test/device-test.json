@@ -36,6 +36,231 @@
         }
     },
     {
+        "desc": "Archos 5",
+        "ua": "Mozilla/5.0 (Linux; U; Android 1.6; fr-fr; Archos5 Build/Donut) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
+        "expect": {
+            "vendor": "Archos",
+            "model": "5",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 40b Titanium Surround",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Archos 40b Titanium Surround Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "40b Titanium Surround",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 40c Titanium v2",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; ARCHOS 40C TIv2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "40C TIv2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45 Neon",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Archos 45 Neon Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "45 Neon",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45 Neon",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; AC45NE Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 YaBrowser/15.6.2311.6088.00 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC45NE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45B Helium",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; AC45BHE Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.109 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC45BHE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 45B Titanium",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Archos 45B Titanium) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "45B Titanium",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 50 Cesium",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; ARCHOS; AC50CE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC50CE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 50B Helium 4G",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; AC50BHE Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC50BHE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 55 diamond Selfie",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Archos 55 diamond Selfie Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "55 diamond Selfie",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Archos 80 G9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.0.4; zh-tw; ARCHOS 80G9 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "expect": {
+            "vendor": "Archos",
+            "model": "80G9",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 80 Xenon",
+        "ua": "Mozilla/5.0 (Linux; Android 4.1.2; Archos 80 Xenon Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Safari/537.36 OPR/50.6.2426.201126",
+        "expect": {
+            "vendor": "Archos",
+            "model": "80 Xenon",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 97c Platinum",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Archos 97c Platinum Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "97c Platinum",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101 Access 3G V2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; Archos Access 101 3G V2 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.130 Safari/537.36[FBAN/EMA;FBLC/pt_PT;FBAV/360.0.0.7.53;]",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Access 101 3G V2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101 Oxygen 4G",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Archos 101 Oxygen 4G Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Safari/537.36 [FB_IAB/FB4A;FBAV/374.0.0.20.109;]",
+        "expect": {
+            "vendor": "Archos",
+            "model": "101 Oxygen 4G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101 Platinum 3G V2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; AC101PL3GV2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC101PL3GV2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101B Helium 4G",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; AC101BHE Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "AC101BHE",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos 101s Oxygen Ardoiz",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Archos Oxygen 101S ARDOIZ Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.102 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Oxygen 101S ARDOIZ",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos GAMEPAD2",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; ARCHOS GAMEPAD2 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "GAMEPAD2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos Hello 7",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Archos Hello 7 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.53 Safari/537.36 GoogleApp/13.24.9.26.arm64",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Hello 7",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos Sense 101 X",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 7.0; Archos Sense 101 X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 YaBrowser/20.2.0.215.01 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Sense 101 X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos T101 FHD WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 13; ARCHOS T101 FHD WiFi Build/T00624; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/124.0.6367.159 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "T101 FHD WiFi",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos Tikeasy 10d",
+        "ua": "Mozilla/5.0 (Linux; Android 13; Tikeasy 10d Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.260 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "Tikeasy 10d",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos T96 WIFI",
+        "ua": "Mozilla/5.0 (Linux; Android 11; ARCHOS T96 WIFI_EEA Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.5005.78 Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "T96 WIFI_EEA",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Archos X67 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 10; X67 5G Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.58 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Archos",
+            "model": "X67 5G",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "ASUS Nexus 7",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 7 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Safari/537.36",
         "expect": {
@@ -177,6 +402,15 @@
             "vendor": "ASUS",
             "model": "X009DA",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "ASUS ZenWatch",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; ASUS ZenWatch Build/LWX48S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "ASUS",
+            "model": "ZenWatch",
+            "type": "wearable"
         }
     },
     {
@@ -351,6 +585,168 @@
         }
     },
     {
+        "desc": "HMD Pulse",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Pulse",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Pulse Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Pulse Plus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Pulse Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Pulse Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Honor MagicPad 13 WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; GDI-W09 Build/HONORGDI-W09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.3.9.1290 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "GDI-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad 2",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; en-nz; JDN-W09 Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/6.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "JDN-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad 2",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9; zh-Hans-CN; JDN2-W09HN Build/HUAWEIJDN2-W09HN) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Quark/4.6.6.164 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "JDN2-W09HN",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad 7 10.1",
+        "ua": "Mozilla/5.0 (Linux; Android 12; AGM3-AL09HN Build/HONORAGM3-AL09HN; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.46 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/490.0.0.63.82;IABMV/1;]",
+        "expect": {
+            "vendor": "Honor",
+            "model": "AGM3-AL09HN",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad 8 12.0",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HEY-W09 Build/HONORHEY-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "HEY-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad 9 12.1",
+        "ua": "Mozilla/5.0 (Linux; Android 13; HEY2-N09 Build/HONORHEY2-N09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 [FB_IAB/FB4A;FBAV/465.0.0.63.83;]",
+        "expect": {
+            "vendor": "Honor",
+            "model": "HEY2-N09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad 9 12.1 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HEY2-W09 Build/HONORHEY2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/129.0.6668.102 Safari/537.36 [FB_IAB/FB4A;FBAV/489.0.0.66.81;IABMV/1;]",
+        "expect": {
+            "vendor": "Honor",
+            "model": "HEY2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad V7 Pro 11",
+        "ua": "Mozilla/5.0 (Linux; Android 12; BRT-AN09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 EdgA/109.0.1518.53",
+        "expect": {
+            "vendor": "Honor",
+            "model": "BRT-AN09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad V7 Pro 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; BRT-W09 Build/HONORBRT-W09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 Quark/6.5.0.336 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "BRT-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad X6",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGR-W09HN Build/HUAWEIAGR-W09HN; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 T7/12.9 SP-engine/2.28.0 baiduboxapp/12.9.0.11 (Baidu; P1 10) NABar/1.0",
+        "expect": {
+            "vendor": "Honor",
+            "model": "AGR-W09HN",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad X7 8 LTE",
+        "ua": "Mozilla/5.0 (Linux; Android 10; KOB2-AL00HN; HMSCore 6.0.0.306) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 HuaweiBrowser/11.1.3.300 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "KOB2-AL00HN",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad X7 8 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; KOB2-W09HN; HMSCore 6.1.0.314) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 HuaweiBrowser/12.0.0.301 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "KOB2-W09HN",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad X8 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 12; AGM-W09HN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "AGM-W09HN",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad X9 11.5 LTE",
+        "ua": "Mozilla/5.0 (Linux; Android 13; ELN-L09 Build/HONORELN-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.86 Mobile Safari/537.36[FBAN/EMA;FBLC/zh_CN;FBAV/432.0.0.9.110;FBCX/modulariab;]",
+        "expect": {
+            "vendor": "Honor",
+            "model": "ELN-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Honor Pad X9 11.5 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 13; ELN-W09 Build/HONORELN-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.86 Safari/537.36",
+        "expect": {
+            "vendor": "Honor",
+            "model": "ELN-W09",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "HTC Desire 820",
         "ua": "Mozilla/5.0 (Linux; Android 6.0.1; HTC Desire 820 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36",
         "expect": {
@@ -432,11 +828,74 @@
         }
     },
     {
+        "desc": "HUAWEI MediaPad C5 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; MON-AL19B Build/HUAWEIMON-AL19; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.83 Mobile Safari/537.36 T7/11.7 baiduboxapp/11.7.0.10 (Baidu; P1 7.0)",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MON-AL19B",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M2 10.1",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; HUAWEI M2-A01L Build/HUAWEIM2-A01L; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Safari/537.36[FBAN/EMA;FBLC/fr_FR;FBAV/421.0.0.14.100;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "M2-A01L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0; en-US; BTV-DL09 Build/HUAWEIBEETHOVEN-DL09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.5.0.1015 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTV-DL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; HUAWEI BTV-W09 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.96 Mobile Safari/537.36 AlohaBrowser/3.1.1",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTV-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; CPN-L09 Build/HUAWEICPN-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36[FBAN/EMA;FBLC/ru_RU;FBAV/233.0.0.12.118;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CPN-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M3 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; CPN-W09 Build/HUAWEICPN-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/374.0.0.20.109;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CPN-W09",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "HUAWEI MediaPad M3 Lite 10",
         "ua": "Mozilla/5.0 (Linux; Android 7.0; BAH-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Safari/537.36",
         "expect": {
             "vendor": "Huawei",
             "model": "BAH-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 10.8",
+        "ua": "Mozilla/5.0 (Linux; Android 9; CMR-W09 Build/HUAWEICMR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.102 Safari/537.36 Line/14.18.1/IAB",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CMR-W09",
             "type": "tablet"
         }
     },
@@ -450,6 +909,33 @@
         }
     },
     {
+        "desc": "HUAWEI MediaPad M5 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 9; JDN2-W09 Build/HUAWEIJDN2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.210 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/318.0.0.39.154;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "JDN2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 9; JDN2-AL50 Build/HUAWEIJDN2-AL50; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 T7/12.13.0 SP-engine/2.29.0 matrixstyle/0 lite baiduboxapp/5.8.0.10 (Baidu; P1 9) NABar/1.",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "JDN2-AL50",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M5 8.4",
+        "ua": "Mozilla/5.0 (Linux; Android 9; SHT-W09 Build/HUAWEISHT-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SHT-W09",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "HUAWEI MediaPad M5",
         "ua": "Mozilla/5.0 (Linux; Android 9; SHT-AL09 Build/HUAWEISHT-AL09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.90 Mobile Safari/537.36",
         "expect": {
@@ -459,11 +945,38 @@
         }
     },
     {
+        "desc": "HUAWEI MediaPad M6 10.8",
+        "ua": "Mozilla/5.0 (Linux; Android 14; SCM-W09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6612.143 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "SCM-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad M6 8.4",
+        "ua": "Mozilla/5.0 (Linux; Android 9; VRD-W09; HMSCore 6.14.0.321; GMSCore 22.26.15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "VRD-W09",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "HUAWEI MediaPad T5",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; AGS2-L09 Build/HUAWEIAGS2-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/84.0.4147.125 Safari/537.36",
         "expect": {
             "vendor": "Huawei",
             "model": "AGS2-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; en-US; AGR-L09 Build/HUAWEIAGR-L09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.3.8.1305 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGR-L09",
             "type": "tablet"
         }
     },
@@ -486,11 +999,371 @@
         }
     },
     {
+        "desc": "HUAWEI MediaPad T 8.0",
+        "ua": "Mozilla/5.0 (Linux; Android 10; KOB2-L09 Build/HUAWEIKOB2-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB2-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T 8.0",
+        "ua": "Mozilla/5.0 (Linux; Android 10; KOB2-W09 Build/HUAWEIKOB2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 Mobile Safari/537.36 HuaweiBrowser/15.0.4.312 HMSCore/6.14.0.301",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 10",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; T1-A21w Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Safari/537.36 SputnikBrowser/1.2.8.161",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-A21w",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 10",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; T1-A23L Build/HuaweiMediaPad; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 BingWeb/6.9.10",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-A23L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 10",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; T1-A21L Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-A21L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 7",
+        "ua": "Mozilla/5.0 (Linux; 4.4.2; T1-701u) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "T1-701u",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T1 8",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9.0; MediaPad T1 8.0 Build/HuaweiMediaPad) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30 OPR/28.0.2254.119224",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MediaPad T1 8.0",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10 9.7",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; en-US; AGRK-L09 Build/HUAWEIAGRK-L09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.6.0.1315 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGRK-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10 9.7 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGRK-W09; HMSCore 6.14.0.321) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGRK-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s 10.1 LTE",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3K-L09 Build/HUAWEIAGS3K-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36 [FB_IAB/FB4A;FBAV/362.0.0.27.109;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3K-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T10s 10.1 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; AGS3K-W09; HMSCore 6.14.0.321) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3K-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T2 10.0 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; 605HW Build/HuaweiMediaPad; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.5005.78 Safari/537.36 [FB_IAB/FB4A;FBAV/436.0.0.35.101;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "605HW",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T2 7.0 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; BGO-DL09 Build/HuaweiBAGGIO; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/106.0.5249.126 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/407.0.0.30.97;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BGO-DL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T3 10",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; AGS-W09 Build/HUAWEIAGS-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.90 Safari/537.36 GSA/10.83.10.21.arm64",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T3 7",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; BG2-U03 Build/HUAWEIBG2-U03; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/84.0.4147.111 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BG2-U03",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T3 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; KOB-W09 Build/HUAWEIKOB-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/69.0.3497.100 Safari/537.36 [FB_IAB/Orca-Android;FBAV/354.0.0.10.113;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad T5 10",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; AGS2-W09 Build/HUAWEIAGS2-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 Flipboard/4.3.31/5486,4.3.31.5486",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS2-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "HUAWEI MediaPad X2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0; GEM-703L Build/HUAWEIGEM-703L; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/043906 Mobile Safari/537.36 MicroMessenger/6.6.3.1260(0x26060339) NetType/WIFI Language/zh_",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "GEM-703L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; BAH3-W09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH3-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; BAH3-L09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH3-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BAH3-W59 Build/HUAWEIBAH3-W59; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36HiSearch/22.0.6.315",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH3-W59",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 (2022)",
+        "ua": "Mozilla/5.0 (Linux; Android 10; BAH4-L09 Build/HUAWEIBAH4-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH4-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 (2022) WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; BAH4-W09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BAH4-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 SE",
+        "ua": "Mozilla/5.0 (Linux; Android 12; AGS5-L09 Build/HUAWEIAGS5-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.88 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS5-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 10.4 SE WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; AGS5-W09 Build/HUAWEIAGS5-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.88 Safari/537.36 [FB_IAB/FB4A;FBAV/480.0.0.54.88;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS5-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11 (2023) WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; DBR-W10 Build/HUAWEIDBR-W10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 Quark/6.9.6.501 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DBR-W10",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; DBY-W09 Build/HUAWEIDBY-W09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046801",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DBY-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 Air WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-Hans-CN; DBY2-W00 Build/HUAWEIDBY2-W00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 Quark/7.3.8.663 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "DBY2-W00",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 LTE",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BTK-AL09; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTK-AL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 S WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; TGR-W09; HMSCore 6.14.0.322; GMSCore 0.3.3.1.240913) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.88 HuaweiBrowser/14.0.2.317 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "TGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad 11.5 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BTK-W09; HMSCore 6.14.0.322; GMSCore 214816056) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "BTK-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad C5 8",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; MON-W19 Build/HUAWEIMON-W19; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 [Pinterest/Android]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "MON-W19",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 11",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 12; GOT-AL09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 YaBrowser/23.5.5.60.01 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "GOT-AL09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 12; GOT-W09 Build/HUAWEIGOT-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/97.0.4692.98 Safari/537.36 T7/13.19 BDOS/1.0 (HarmonyOS 3.0.0) SP-engine/2.57.0 baiduboxapp/13.19.0.12 (Baidu; P1 12) NABar/1.0",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "GOT-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 12.6 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; WGR-W09 Build/HUAWEIWGR-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/412.0.0.8.106;]",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "WGR-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad SE 11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 10; HarmonyOS; AGS6-W09; HMSCore 6.12.2.309) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 HuaweiBrowser/11.1.5.315 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS6-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad Pro 13.2",
+        "ua": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; PCE-W29; HMSCore 6.14.0.322) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.4.312 Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "PCE-W29",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Huawei MatePad T 10",
         "ua": "Mozilla/5.0 (Linux; Android 10; AGR-L09; HMSCore 5.0.4.301) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11.0.3.304 Safari/537.36",
         "expect": {
             "vendor": "Huawei",
             "model": "AGR-L09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T10s",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; zh-cn; AGS3-AL00 Build/HUAWEIAGS3-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/11.4 Mobile Safari/537.36 COVC/045530",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-AL00",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T10s WiFi",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; AGS3-W09 Build/HUAWEIAGS3-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.93 Safari/537.36 OPR/60.0.2254.59405",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "AGS3-W09",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Huawei MatePad T8 8 LTE",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; KOB2K-L09 Build/HUAWEIKOB2K-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Safari/537.36 OPR/83.0.2254.73002",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "KOB2K-L09",
             "type": "tablet"
         }
     },
@@ -945,6 +1818,15 @@
         }
     },
     {
+        "desc": "Infinix XPad",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Infinix X1101B Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.99 Safari/537.36 [FB_IAB/FB4A;FBAV/489.0.0.66.81;IABMV/1;]",
+        "expect": {
+            "vendor": "Infinix",
+            "model": "X1101B",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Infinix Zero 5G",
         "ua": "Mozilla/5.0 (Linux; Android 12; Infinix X6815B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
         "expect": {
@@ -960,6 +1842,15 @@
             "vendor": "Apple",
             "model": "Macintosh",
             "type": "undefined"
+        }
+    },
+    {
+        "desc": "Apple HomePod",
+        "ua": "AppleCoreMedia/1.0.0.15D61 (HomePod; U; CPU OS 11_2_5 like Mac OS X; en_us)",
+        "expect": {
+            "vendor": "Apple",
+            "model": "HomePod",
+            "type": "embedded"
         }
     },
     {
@@ -1044,11 +1935,155 @@
         }
     },
     {
-        "desc": "Lenovo Tab 2",
-        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
+        "desc": "Lenovo A7",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9; en-US; Lenovo L19111 Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/13.2.8.1301 Mobile Safari/537.36",
         "expect": {
             "vendor": "Lenovo",
-            "model": "TAB 2 A7",
+            "model": "L19111",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo A8",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Lenovo L10041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.73 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L10041",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo dtab Compact 42A",
+        "ua": "Mozilla/5.0 (Linux; Android 12; d-42A Build/SKQ1.220201.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.5005.125 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "d-42A",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo IdeaTab A7-50",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Lenovo A3500-HV Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "A3500-HV",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo IdeaTab A2109A",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; ru-ru; A2109A Build/JDQ39; CyanogenMod-10.1) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "A2109A",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo IdeaTab S6000",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; S6000 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "S6000",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo IdeaTab S6000",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.1.1011.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "IdeaTab S6000-H",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo K5 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9;zh-cn; Lenovo L38041 Build/PKQ1.190127.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.117 MobileLenovoBrowser/9.1.3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L38041",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo K9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 8.1.0; en-US; Lenovo L38043 Build/O11019) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.4.8.1012 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L38043",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo K10 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo L39051) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.66 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L39051",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo K12",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Lenovo XT2081-4 Build/QCZ30.30-Q3-45-17; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/409.0.0.27.106;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "XT2081-4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo K12",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; Lenovo K12 Build/QOGS30.569-83-18; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.130 Mobile Safari/537.36 OPR/69.0.2254.66073",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "K12",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo Legion 2 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Lenovo L70081 Build/RKQ1.201112.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.58 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L70081",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo Legion Y90",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12;en-us; Lenovo L71061/SKQ1.211113.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.132 MobileLenovoBrowser/8.6.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L71061",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo Legion Y700",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13;zh-cn; Lenovo TB-9707F Build/TKQ1.221013.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.117 MobileLenovoBrowser/2.1.7 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-9707F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Legion Y700",
+        "ua": "Mozilla/5.0 (Linux; Android 12; TB320FC) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB320FC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Moto Tab",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; TB-X704A Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.162 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X704A",
             "type": "tablet"
         }
     },
@@ -1059,6 +2094,141 @@
             "vendor": "Lenovo",
             "model": "PB2-650M",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo S5 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo L58041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L58041",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo Smart Tab M8",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 10; Lenovo TB-8505XS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.7.71.00 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8505XS",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Smart Tab M8",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 10; Lenovo TB-8505FS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.166 YaBrowser/21.8.4.111.00 (beta) SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8505FS",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 2",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.1; Lenovo TAB 2 A7-30HC Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A7-30HC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 2 A7",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0.99; Lenovo TAB 2 A7-30DC Build/LRX21M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.141 Safari/537.36 OPR/45.1.2246.125351",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A7-30DC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 2 A10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.0.1; Lenovo TAB 2 A10-70L Build/LRX21M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.116 Safari/537.36 OPR/29.0.2254.120398",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TAB 2 A10-70L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 2 A10-30",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; TB2-X30F Build/LenovoTB2-X30F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Mobile Safari/537.36 EdgA/90.0.818.49",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB2-X30F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 7",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Lenovo TB3-730X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB3-730X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 7 Essential",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; Lenovo TB3-710I Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/85.0.4183.127 Safari/537.36 GSA/5.4.28.19.arm",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB3-710I",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 7 Plus",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; Lenovo TB-7703X Build/S100) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.2.5.1102 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7703X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 8 Dual",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; 602LV Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/93.0.4577.82 Safari/537.36 GSA/12.36.22.23.arm64",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "602LV",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 8 Plus",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; Lenovo TB-8703F Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/9.8 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8703F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 8 Plus",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; Lenovo TB-8703X Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Safari/537.36 OPR/33.0.2254.125672",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8703X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 10 Business",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0; Lenovo TB3-X70F Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Safari/537.36 OPR/32.0.2254.123747",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB3-X70F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 3 10 Plus",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0; Lenovo TB3-X70L Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.185 Safari/537.36 OPR/52.1.2254.54298",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB3-X70L",
+            "type": "tablet"
         }
     },
     {
@@ -1084,7 +2254,115 @@
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Lenovo TAB 2 A7-30HC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
         "expect": {
             "vendor": "Lenovo",
-            "model": "TAB 2 A7",
+            "model": "TAB 2 A7-30HC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 8",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Lenovo TB-8504F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Mobile Safari/537.36 OPR/64.2.3282.60128",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8504F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 8",
+        "ua": "Mozilla/5.0 (Linux; U; Android 8.1.0; Lenovo TB-8504X Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36 OPR/52.2.2254.54723",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8504X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 8 Plus",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 8.1.0; Lenovo TB-8704F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 YaApp_Android/21.21.0/apad YaSearchBrowser/21.21.0/apad BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8704F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 8 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; TB-8704V Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/104.0.5112.97 Safari/537.36 [FB_IAB/FB4A;FBAV/380.0.0.29.109;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8704V",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 8 Plus",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 8.1.0; Lenovo TB-8704X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 YaBrowser/19.10.4.187.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8704X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 8 REL",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Lenovo TB-8X04F Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8X04F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 8.1.0; Lenovo TB-X304L Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.149 Safari/537.36 OPR/47.0.2254.146760",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X304L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 10 Plus",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 7.1.1; Lenovo TB-X704L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 YaBrowser/20.12.4.100.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X704L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 4 10 Plus",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 7.1.1; Lenovo TB-X704F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 YaBrowser/20.8.5.97.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X704F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 6",
+        "ua": "Mozilla/5.0 (Linux; Android 11; A101LV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.61 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "A101LV",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 7",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; Lenovo TB-7504X Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/119.0.6045.193 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/436.0.0.35.101;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7504X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab 7 Essential",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.0; Lenovo TB-7304I Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Safari/537.36 OPR/54.0.2254.56148",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7304I",
             "type": "tablet"
         }
     },
@@ -1098,12 +2376,660 @@
         }
     },
     {
+        "desc": "Lenovo Tab 10 10.1",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo TB-X103F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X103F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab E7",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 8.1.0; Lenovo TB-7104I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 BroPP/1.0 SA/3 Mobile Safari/537.36 YandexSearch/7.52/apad YandexSearchBrowser/7.52",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7104I",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab E8",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 7.0; Lenovo TB-8304F1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 YaBrowser/19.7.4.97.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8304F1",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab K10",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Lenovo TB-X6C6X Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X6C6X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab K10",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Lenovo TB-X6C6F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.83 Safari/537.36 [FB_IAB/FB4A;FBAV/488.0.0.78.79;IABMV/1;] FBNV/5",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X6C6F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab K11",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 10; Lenovo TB-J606N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 YaApp_Android/22.31.1/apad YaSearchBrowser/22.31.1/apad BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J606N",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab K11 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Lenovo TB-J607Z Build/SKQ1.211103.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.58 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J607Z",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M7",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo TB-7305X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36 OPR/63.3.3216.58675",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7305X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M7",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 9; Lenovo TB-7305I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 YaApp_Android/20.85.0/apad YaSearchBrowser/20.85.0/apad BroPP/1.0 SA/1 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7305I",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M7 (Gen 3)",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Lenovo TB-7306F Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.86 Safari/537.36 [FB_IAB/FB4A;FBAV/489.0.0.66.81;IABMV/1;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7306F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M7 (Gen 3)",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 11; Lenovo TB-7306X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 YaBrowser/20.12.5.127.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-7306X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M8",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Lenovo TB-8505X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8505X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M8",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo TB-8505F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 GSA/10.82.8.21.arm64",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8505F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M8 (Gen 3)",
+        "ua": "Mozilla/5.0 (Linux; U; Android 11; zh-TW; Lenovo TB-8506X Build/RP1A.200720.011) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.4.0.1306 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8506X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M8 (Gen 4)",
+        "ua": "Mozilla/5.0 (Linux; Android 13; TB300FU Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.86 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/417.0.0.9.97;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB300FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M8 (Gen 4) (2024)",
+        "ua": "Mozilla/5.0 (Linux; Android 13; TB301FU Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.170 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/472.0.0.45.79;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB301FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M8 FHD",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo TB-8705X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-8705X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; Android 12; TB310FU) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB310FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; 13; TB310XU) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB310XU",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Lenovo Tab M10",
         "ua": "Mozilla/5.0 (Linux; arm_64; Android 9; Lenovo TB-X606F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 YaBrowser/20.9.4.99.01 Safari/537.36",
         "expect": {
             "vendor": "Lenovo",
             "model": "TB-X606F",
             "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Android 14; Mobile; Lenovo TB-X505F; rv:131.0) Gecko/131.0 Firefox/131.0",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X505F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Lenovo TB-X505L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.6554.180 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X505L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo TB-X605F Build/PKQ1.190319.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Safari/537.36 [FB_IAB/FB4A;FBAV/298.0.0.46.116;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X605F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; Lenovo TB-X505X Build/QKQ1.191224.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Safari/537.36 OPR/52.2.2254.54723",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X505X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 (Gen 3) ",
+        "ua": "Mozilla/5.0 (Linux; Android 12; TB328XU Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.58 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB328XU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 (Gen 3) ",
+        "ua": "Mozilla/5.0 (Linux; Android 12; TB328FU Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.57 Safari/537.36 [FB_IAB/FB4A;FBAV/418.0.0.33.69;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB328FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 FHD",
+        "ua": "Mozilla/5.0 (Linux; Android 13; Lenovo TB-X605FC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.6481.193 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X605FC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 FHD",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo TB-X605LC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X605LC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 FHD",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 9; Lenovo TB-X605L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 YaBrowser/20.12.0.141.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X605L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 FHD Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Lenovo TB-X606F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6496.93 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X606F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 FHD Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo TB-X606FA) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5813.205 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X606FA",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 FHD Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Lenovo TB-X606X Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X606X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 HD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; it-it; Lenovo TB-X306F Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36 PHX/6.2",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X306F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 HD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; it-it; Lenovo TB-X306F Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36 PHX/6.2",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X306F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M10 Plus (Gen 3)",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; Lenovo TB-X306X Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.210 Safari/537.36 OPR/55.1.2254.56965",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X306X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab M11",
+        "ua": "Mozilla/5.0 (Linux; Android 14; TB330FU Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.60 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB330FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P10",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 9; Lenovo TB-X705L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 YaBrowser/21.3.3.160.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-X705L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 11; Lenovo TB-J606L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.2311.135 YaBrowser/21.11.5.121.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J606L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11",
+        "ua": "Mozilla/5.0 (Linux; U; Android 11; zh-cn; Lenovo TB-J606F Build/RKQ1.210303.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/12.1 Mobile Safari/537.36 COVC/045830",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J606F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Lenovo TB-J616X Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.162 Safari/537.36 [FB_IAB/FB4A;FBAV/418.0.0.33.69;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J616X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11 (Gen 2)",
+        "ua": "Mozilla/5.0 (Linux; Android 14; TB350FU Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.46 Safari/537.36 [FB_IAB/FB4A;FBAV/490.0.0.63.82;IABMV/1;]",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB350FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Lenovo TB-J616F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/129.0.6668.9 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J616F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 11; zh-CN; Lenovo TB-J706F Build/RKQ1.201112.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Quark/5.8.6.223 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J706F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Lenovo TB-J706L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 EdgA/103.0.1264.71",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J706L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P11 Pro (Gen 2)",
+        "ua": "Mozilla/5.0 (Linux; Android 13; TB132FU Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB132FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P12",
+        "ua": "Mozilla/5.0 (Linux; Android 14; TB370FU Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.106 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB370FU",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P12 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; Lenovo TB-Q706F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-Q706F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab P12 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; Lenovo TB-Q706Z Build/TKQ1.221013.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.103 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-Q706Z",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab QT K11 WiFi",
+        "ua": "Mozilla/5.0 (Linux; arm; Android 12; Lenovo TB-J6C6F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.114 YaBrowser/22.9.3.82.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J6C6F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab QT K11 Pro WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Lenovo TB-J607F Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.86 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "TB-J607F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab V7",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9; en-US; Lenovo PB-6505M Build/PKQ1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.9.9.1155 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "PB-6505M",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Tab V7",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 9; Lenovo PB-6505Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 YaBrowser/20.9.3.85.00 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "PB-6505Y",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo X3 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo X3 Lite) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.88 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "X3 Lite",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Smart Tab",
+        "ua": "Mozilla/5.0 (Android 11; Mobile; Lenovo YT-X705X; rv:129.0) Gecko/129.0 Firefox/129.0",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT-X705X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Smart Tab",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 10; Lenovo YT-X705F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 YaBrowser/20.2.4.153.01 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT-X705F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Smart Tab",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Lenovo YT-X705L Build/PKQ1.181218.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Safari/537.36 GSA/11.38.8.23.arm64",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT-X705L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; Lenovo YT3-X50L Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.149 Safari/537.36 OPR/46.0.2254.145391",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-X50L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; Lenovo YT3-X50L Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.149 Safari/537.36 OPR/46.0.2254.145391",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-X50L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0.1; Lenovo YT3-X50M Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-X50M",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3 8",
+        "ua": "Mozilla/5.0(Linux; U; Android 5.1.1; pt-BR; Lenovo YT3-850F Build/LMY47V) AppleWebKit/537.36(KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-850F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3 8",
+        "ua": "Mozilla/5.0(Linux; U; Android 5.1.1; lv-LV; Lenovo YT3-850L Build/LMY47V) AppleWebKit/537.36(KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-850L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3 10",
+        "ua": "Mozilla/5.0(Linux; U; Android 5.1.1; vi-VN; Lenovo YT3-850M Build/LMY47V) AppleWebKit/537.36(KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT3-850M",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Lenovo YT-X703L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36 OPR/64.2.3282.60128",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT-X703L",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 3 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.2; YT-X703F Build/NJH47F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.141 Safari/537.36 OPR/45.0.2246.125120",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT-X703F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tab 11",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 12; Lenovo YT-J706X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.42 YaBrowser/24.1.1.42.01 (beta) Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "YT-J706X",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 8",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.2; ru-ru; Lenovo B6000; Android/4.4.2; Release/08.26.2015) AppleWebKit/534.30 (KHTML, like Gecko) Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B6000",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 8",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.2; Lenovo B6000-H Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36 GSA/7.24.32.16.arm",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B6000-H",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 8",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; es-us; Lenovo B6000-F/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.2.2 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B6000-F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; ru-ru; Lenovo B8000-F Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B8000-F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 10",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; ru-ru; Lenovo B8000-H Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30 Mobile UCBrowser/3.4.3.532",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B8000-H",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 10 HD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.2; en-US; Lenovo B8080-H Build/KVT49L) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.0.0.1088 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B8080-H",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Yoga Tablet 10 HD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.3; ru-ru; Lenovo B8080-F/JLS36C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.3 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "B8080-F",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Lenovo Z6",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9;zh-cn; Lenovo L78121 Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.117 MobileLenovoBrowser/9.1.3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Lenovo",
+            "model": "L78121",
+            "type": "mobile"
         }
     },
     {
@@ -1251,6 +3177,24 @@
         }
     },
     {
+        "desc": "LG Watch Urbane",
+        "ua": "Mozilla/5.0 Linux; Android 7.1.1; LG Watch Urbane Build/NWD1.180306.004 AppleWebKit/537.36 KHTML, like Gecko Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "Watch Urbane",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "LG G Watch R",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; G Watch R Build/LCA44B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Crosswalk/15.44.384.12 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LG",
+            "model": "G Watch R",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Loewe Smart TV",
         "ua": "Mozilla/5.0 (Linux; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36 OPR/46.0.2207.0 LOEWE-SL410/5.2.0.0 HbbTV/1.4.1 (; LOEWE; SL410; LOH/5.2.0.0;;) FVC/3.0 (LOEWE; SL410;) CE-HTML/1.0 Config (L:deu,CC:DEU) NETRANGEMMH",
         "expect": {
@@ -1329,6 +3273,15 @@
             "vendor": "Motorola",
             "model": "Moto Z3 Play",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto 360",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; Moto 360 Build/KNX01S) AppleWebKit/537.36 (KHTML, like Gecko) WIB/0.9.8 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "Moto 360",
+            "type": "wearable"
         }
     },
     {
@@ -1539,11 +3492,47 @@
         }
     },
     {
+        "desc": "Nokia 5800 XpressMusic",
+        "ua": "Mozilla/5.0 (SymbianOS/9.4; U; Series60/5.0 Nokia5800d-1/10.4.016; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "5800d-1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Nokia 7",
         "ua": "Mozilla/5.0 (Linux; Android 11; Nokia 7.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36",
         "expect": {
             "vendor": "Nokia",
             "model": "7.2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia 808 PureView",
+        "ua": "Mozilla/5.0 (Symbian; U; Nokia808 PureView; en-GB) AppleWebKit/534.3 (KHTML, like Gecko) Version/3.0 Mobile/1A543a Mobile Safari/534.3",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "808 PureView",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia 808 PureView",
+        "ua": "Mozilla/5.0 (Symbian/3; Series60/5.5 Nokia808PureView/113.010.1508; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/8.3.2.21 Mobile Safari/535.1 3gpp-gba",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "808PureView",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia Lumia 630",
+        "ua": "UCWEB/2.0 (Windows; U; wds 8.10; en-IN; NOKIA; RM-978_1046) U2/1.0.0 UCBrowser/4.2.0.524 U2/1.0.0 Mobile",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "RM-978",
             "type": "mobile"
         }
     },
@@ -1554,6 +3543,42 @@
             "vendor": "Nokia",
             "model": "N9",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia N900",
+        "ua": "Mozilla/5.0 (Linux; Maemo 5.0; Nokia N900; Build/4.0.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "N900",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nokia T20",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Nokia T20) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "T20",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Nokia T20",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Nokia T20 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/93.0.4577.62 Safari/537.36",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "T20",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Nokia T21",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Nokia T21 Build/TP1A.220624.014)",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "T21",
+            "type": "tablet"
         }
     },
     {
@@ -1746,6 +3771,42 @@
         }
     },
     {
+        "desc": "OnePlus Pad Go 11.35",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 14; OPD2304) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.629 YaApp_Android/24.101/apad YaSearchBrowser/24.101/apad BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2304",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Pad 2 12.1 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; OPD2403 Build/UKQ1.231108.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2403",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Pad 11.61 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 14; OPD2203 Build/UKQ1.230924.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPD2203",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "OnePlus Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; OPWWE231 Build/TWR7.231113.001.OPWWE231_11_A.117.240703)",
+        "expect": {
+            "vendor": "OnePlus",
+            "model": "OPWWE231",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "OPPO Pad",
         "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; OPD2101 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.3.9.1290 Mobile Safari/537.36",
         "expect": {
@@ -1860,6 +3921,42 @@
             "vendor": "OPPO",
             "model": "X9007",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "OPPO Watch 46mm",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; OW19W3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OW19W3",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "OPPO Watch 41mm",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; OW19W2 Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OW19W2",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "OPPO Watch 2",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; OW20W1 Build/OPM1.171019.026.11_A.37.210713172937; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OW20W1",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "OPPO Watch X",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; OWWE231 Build/TWR7.231113.001.OWWE231_11_A.117.240703)",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "OWWE231",
+            "type": "wearable"
         }
     },
     {
@@ -2111,6 +4208,24 @@
         "expect": {
             "vendor": "Xiaomi",
             "model": "MiTV-MOOQ0",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi TV",
+        "ua": "Mozilla/5.0 (Linux; Android 9; MiTV4I Build/PI; en-in) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36 Puffin/7.8.3.40913AP",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MiTV4I",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Box",
+        "ua": "Mozilla/5.0 (Linux; Android 9; MIBOX3 Build/PI; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/119.0.6045.193 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MIBOX3",
             "type": "smarttv"
         }
     },
@@ -2417,6 +4532,15 @@
         "expect": {
             "vendor": "Samsung",
             "model": "SM-R925U",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Samsung Galaxy Watch7",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 14; SM-L300 Build/AW2E.240318.016)",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "SM-L300",
             "type": "wearable"
         }
     },
@@ -2736,6 +4860,15 @@
         }
     },
     {
+        "desc": "Sony SmartWatch 3",
+        "ua": "Mozilla/5.0 (Linux; Android 5.0.2; SmartWatch 3 Build/LWX49K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/19.77.34.5 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "SmartWatch 3",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "TCL 10 TabMax",
         "ua": "Mozilla/5.0 (Linux; Android 11; 9296Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
         "expect": {
@@ -2979,6 +5112,33 @@
         }
     },
     {
+        "desc": "MIUI Xiaomi Mi MIX 3 5G",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 9; Mi MIX 3 5G MIUI/V10.3.2.0.PEMEUVF)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Mi MIX 3 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "MIUI POCOPHONE F1",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 9; POCOPHONE F1 MIUI/9.6.27)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "POCOPHONE F1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "MIUI Xiaomi M2006C3MT",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 10; M2006C3MT MIUI/V12.0.7.0.QCRMIXM)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2006C3MT",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Xiaomi 2201117TG",
         "ua": "Mozilla/5.0 (Linux; Android 11; 2201117TG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.98 Mobile Safari/537.36",
         "expect": {
@@ -3159,6 +5319,15 @@
         }
     },
     {
+        "desc": "Xiaomi MI PAD",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.4.4; en-us; MI PAD Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.146 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.3.2",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Xiaomi MI PAD 2",
         "ua": "Mozilla/5.0 (Linux; Android 5.1; MI PAD 2 Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Safari/537.36 [FB_IAB/FB4A;FBAV/137.0.0.24.91;]",
         "expect": {
@@ -3168,11 +5337,101 @@
         }
     },
     {
+        "desc": "Xiaomi MI PAD 2",
+        "ua": "Mozilla/5.0 (Linux; x86_64; Android 5.1; MI PAD 2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 YaBrowser/20.11.2.69.01 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 2",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 3",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 7.0; MI PAD 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.216 YaBrowser/21.5.6.56.01 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 3",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 4",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 8.1.0; MI PAD 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 YaBrowser/19.9.1.126.01 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "MI PAD 4",
+            "type": "tablet"
+        }
+    },
+    {
         "desc": "Xiaomi MI PAD 4 PLUS",
         "ua": "Mozilla/5.0 (Linux; Android 8.1; MI PAD 4 PLUS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
         "expect": {
             "vendor": "Xiaomi",
             "model": "MI PAD 4 PLUS",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi MI PAD 4 WiFi",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1; Mi Pad4 Wi-Fi) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Mobile Safari/537.36 EdgA/86.0.622.61",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Mi Pad4 Wi-Fi",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 5",
+        "ua": "Mozilla/5.0 (Linux; Android 13; 21051182G Build/TKQ1.221013.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 Flipboard/4.3.31/5486,4.3.31.5486",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "21051182G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 5 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 11; M2105K81AC Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Safari/537.36 Line/13.15.1/IAB",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2105K81AC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 5 Pro 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; M2105K81C) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "M2105K81C",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 6 Max 14",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; zh-tw; 2307BRPDCC Build/UKQ1.230804.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36 Device/yudi Model/2307BRPDCC XiaoMi/MiuiBrowser/14.10.6",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "2307BRPDCC",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Mi Pad 6 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; en-US; 23046RP50C Build/TKQ1.221114.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.6.2.1316 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "23046RP50C",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Xiaomi Pad 6S Pro 12.4",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 24018RPACC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "24018RPACC",
             "type": "tablet"
         }
     },
@@ -3336,6 +5595,51 @@
             "vendor": "Xiaomi",
             "model": "23049RAD8C",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; id-id; Redmi Pad Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.136 Mobile Safari/537.36 XiaoMi/MiuiBrowser/14.1.1-gn",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "Redmi Pad",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 22081283G Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36 Flipboard/4.3.31/5486,4.3.31.5486",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "22081283G",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 2405CRPFDG Build/UKQ1.240116.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.97 Safari/537.36 [FB_IAB/FB4A;FBAV/476.0.0.49.74;] FBNV/1",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "2405CRPFDG",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad SE",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 14; 23073RPBFG Build/UKQ1.231003.002)",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "23073RPBFG",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "XiaoMi Redmi Pad SE 8.7",
+        "ua": "Mozilla/5.0 (Linux; Android 14; 24076RP19G Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Mobile Safari/537.36 Line/14.18.1/IAB",
+        "expect": {
+            "vendor": "Xiaomi",
+            "model": "24076RP19G",
+            "type": "tablet"
         }
     },
     {
@@ -3528,6 +5832,33 @@
         }
     },
     {
+        "desc": "Google Pixel Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel Tablet Build/AP2A.240905.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Tablet",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Google Pixel Watch",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch Build/TWD4.231005.002)",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Watch",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Google Pixel Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch 2 Build/TWD9.240605.001.A1)",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Watch 2",
+            "type": "wearable"
+        }
+    },
+    {
         "desc": "Google Pixel XL",
         "ua": "Mozilla/5.0 (Linux; Android 7.1; Pixel XL Build/NDE63X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.85 Mobile Safari/537.36",
         "expect": {
@@ -3658,7 +5989,14 @@
         "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; i980 Build/MRA58K)",
         "expect": {
             "vendor": "Generic",
-            "model": "Android 6.0.1"
+            "model": "i980"
+        }
+    },{
+        "desc": "Generic Android Device",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 9; X96mini_RP Build/X96mini_RP)",
+        "expect": {
+            "vendor": "Generic",
+            "model": "X96mini_RP"
         }
     },
     {
@@ -4122,7 +6460,7 @@
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; 4ife 4K Smart TV Box Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36 Vinebre",
         "expect": {
             "vendor": "undefined",
-            "model": "undefined",
+            "model": "4ife 4K",
             "type": "smarttv"
         }
     },
@@ -4197,6 +6535,23 @@
             "model": "Xbox",
             "type": "console"
         }
+    },{
+        "desc": "Tegra Note 7",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; TegraNote-P1640 Build/LMY47D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.133 Safari/537.36",
+        "expect": {
+            "vendor": "Nvidia",
+            "model": "TegraNote-P1640",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Nvidia Shield",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; SHIELD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.74 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nvidia",
+            "model": "SHIELD",
+            "type": "console"
+        }
     },
     {
         "desc": "Nvidia Shield Tablet",
@@ -4205,6 +6560,24 @@
             "vendor": "Nvidia",
             "model": "SHIELD Tablet",
             "type": "tablet"
+        }
+    },
+    {
+        "desc": "Nvidia Shield Tablet K1",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SHIELD Tablet K1 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Safari/537.36",
+        "expect": {
+            "vendor": "Nvidia",
+            "model": "SHIELD Tablet K1",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Nvidia Shield TV",
+        "ua": "Mozilla/5.0 (Linux; Android 11; SHIELD Android TV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36  ",
+        "expect": {
+            "vendor": "Nvidia",
+            "model": "SHIELD Android TV",
+            "type": "smarttv"
         }
     },
     {
@@ -4358,6 +6731,42 @@
             "vendor": "undefined",
             "model": "undefined",
             "type": "mobile"
+        }
+    },
+    {
+        "desc"    : "Windows IoT",
+        "ua"      : "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "embedded"
+        }
+    },
+    {
+        "desc": "ChangHong Android TV",
+        "ua": "Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; ChangHong Android TV Build/LMY49J) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/10.8 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "ChangHong",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "MStar Android TV",
+        "ua": "Mozilla/5.0 (Linux; Android 4.3.1; MStar Android TV Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "MStar",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "ONIDA Android TV",
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; ONIDA Android TV Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2542.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "undefined",
+            "model": "ONIDA",
+            "type": "smarttv"
         }
     }
 ]
