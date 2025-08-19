@@ -102,21 +102,21 @@ The methods are self explanatory, here's a small overview on all the available m
 # Possible 'browser.name':
 115 Browser, 2345Explorer, 360 Browser, Alipay, Amaya, Android Browser, Arora, 
 Avant, Avast, AVG, Baidu, Basilisk, Blazer, Bolt, Brave, Bowser, Camino, Chimera,
-Chrome Headless, Chrome WebView, Chrome, Chromium, Cobalt, Comodo Dragon, Dillo,
-Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, Fennec, 
-Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Helio, Heytap, 
-Huawei Browser, iCab, ICE Browser, IE, IEMobile, IceApe, IceCat, IceDragon, 
-Iceweasel, Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], K-Meleon, 
-Kindle, Klar, Klarna, Konqueror, LBBROWSER, LibreWolf, Line, LinkedIn, Links, 
-Lunascape, Lynx, MIUI Browser, Maemo, Maxthon, Midori, Minimo, Mobile Safari, 
-Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape, NokiaBrowser, Obigo, 
-Oculus Browser, OmniWeb, Opera Coast, Opera [GX/Mini/Mobi/Tablet], PaleMoon, 
-PhantomJS, Phoenix, Pico Browser, Polaris, Puffin, QQ, QQBrowser, QQBrowserLite, 
-Quark, QupZilla, RockMelt, Safari, Sailfish Browser, Samsung Internet, SeaMonkey, 
-Silk, Skyfire, Sleipnir, Slim[Browser/Boat/Jet], Smart Lenovo Browser, Snapchat, 
-Sogou [Explorer/Mobile], Swiftfox, Tesla, TikTok, Tizen Browser, Twitter, 
-UCBrowser, UP.Browser, Vivaldi, Vivo Browser, w3m, Waterfox, WeChat, Weibo, 
-Whale Browser, Wolvic, Yandex, ...
+Chrome Headless, Chrome WebView, Chrome, Chromium, Cobalt, Comodo Dragon, Daum,
+Dillo, Dolphin, Doris, DuckDuckGo, Edge, Electron, Epiphany, Facebook, Falkon, 
+Fennec, Firebird, Firefox [Focus/Reality], Flock, Flow, GSA, GoBrowser, Helio, 
+Heytap, Huawei Browser, iCab, ICE Browser, IE, IEMobile, IceApe, IceCat, 
+IceDragon, Iceweasel, Instagram, Iridium, Iron, Jasmine, Kakao[Story/Talk], 
+K-Meleon, Kindle, Klar, Klarna, Konqueror, Ladybird, LBBROWSER, LibreWolf, Line, 
+LinkedIn, Links, Lunascape, Lynx, MIUI Browser, Maemo, Maxthon, Midori, Minimo, 
+Mobile Safari, Mosaic, Mozilla, NetFront, NetSurf, Netfront, Netscape, 
+NokiaBrowser, Obigo, Oculus Browser, OmniWeb, Opera Coast, 
+Opera [GX/Mini/Mobi/Tablet], PaleMoon, PhantomJS, Phoenix, Pico Browser, Polaris, 
+Puffin, QQ, QQBrowser, QQBrowserLite, Quark, QupZilla, RockMelt, Safari, 
+Sailfish Browser, Samsung Internet, SeaMonkey, Silk, Skyfire, Sleipnir, 
+Slim[Browser/Boat/Jet], Smart Lenovo Browser, Snapchat, Sogou [Explorer/Mobile], 
+Swiftfox, Tesla, TikTok, Tizen Browser, Twitter, UCBrowser, UP.Browser, Vivaldi, 
+Vivo Browser, w3m, Waterfox, WeChat, Weibo, Whale Browser, Wolvic, Yandex, ...
 
 # 'browser.version' determined dynamically
 ```
@@ -137,12 +137,12 @@ console, mobile, tablet, smarttv, wearable, embedded
 
 # Possible 'device.vendor':
 Acer, Advan, Alcatel, Amazon, Apple, Archos, ASUS, AT&T, BenQ, BlackBerry, Cat, 
-Dell, Energizer, Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HTC, 
-Huawei, IMO, Infinix, itel, Jolla, Kobo, Lenovo, LG, Meizu, Micromax, Microsoft, 
-Motorola, Nexian, Nintendo, Nokia, Nothing, Nvidia, OnePlus, OPPO, Ouya, Palm, 
-Panasonic, Pebble, Polytron, Realme, RIM, Roku, Samsung, Sharp, Siemens, 
-Smartfren, Sony[Ericsson], Sprint, TCL, Tecno, Tesla, Ulefone, Vivo, Vodafone, 
-Xbox, Xiaomi, Zebra, ZTE, ...
+Dell, Energizer, Essential, Facebook, Fairphone, GeeksPhone, Google, HP, HMD, 
+HTC, Huawei, IMO, Infinix, itel, Jolla, Kobo, Lenovo, LG, Meizu, Micromax, 
+Microsoft, Motorola, Nexian, Nintendo, Nokia, Nothing, Nvidia, OnePlus, OPPO, 
+Ouya, Palm, Panasonic, Pebble, Polytron, Realme, RIM, Roku, Samsung, Sharp, 
+Siemens, Smartfren, Sony[Ericsson], Sprint, TCL, Tecno, Tesla, Ulefone, Vivo, 
+Vodafone, Xbox, Xiaomi, Zebra, ZTE, ...
 
 # 'device.model' determined dynamically
 ```
@@ -170,8 +170,8 @@ Linpus, Linspire,Linux, Mac OS, Maemo, Mageia, Mandriva, Manjaro, MeeGo, Minix,
 Mint, Morph OS, NetBSD, NetRange, NetTV, Nintendo, OpenBSD, OpenHarmony, OpenVMS, 
 OS/2, Palm, PC-BSD, PCLinuxOS, Plan9, PlayStation, QNX, Raspbian, RedHat, 
 RIM Tablet OS, RISC OS, Sabayon, Sailfish, SerenityOS, Series40, Slackware, 
-Solaris, SUSE, Symbian, Tizen, Ubuntu, Unix, VectorLinux, Viera, watchOS, WebOS, 
-Windows [Phone/Mobile], Zenwalk, ...
+Solaris, SUSE, Symbian, Tizen, Ubuntu [Touch], Unix, VectorLinux, Viera, watchOS, 
+WebOS, Windows [Phone/Mobile/IoT], Zenwalk, ...
 
 # 'os.version' determined dynamically
 ```
