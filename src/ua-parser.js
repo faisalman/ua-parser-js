@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v0.7.33
+/* UAParser.js v2.0.4
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
    MIT License */ /*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -15,7 +15,7 @@
   // Constants
   /////////////
 
-  var LIBVERSION = "0.7.33",
+  var LIBVERSION = "2.0.4",
     EMPTY = "",
     UNKNOWN = "?",
     FUNC_TYPE = "function",
