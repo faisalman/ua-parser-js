@@ -3,6 +3,7 @@
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import type { Headers } from "undici";
+import { BrowserType, CPU as CPUArch, Device as DeviceType, Engine as EngineName } from "../enums/ua-parser-enums";
 
 declare namespace UAParser {
     
@@ -17,21 +18,21 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
-        type?: 'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | 'library';
+        type?: typeof BrowserType[keyof typeof BrowserType];
     }
 
     interface ICPU extends IData<ICPU> {
-        architecture?: 'ia32' | 'ia64' | 'amd64' | 'arm' | 'arm64' | 'armhf' | 'avr' | 'avr32' | 'irix' | 'irix64' | 'mips' | 'mips64' | '68k' | 'pa-risc' | 'ppc' | 'sparc' | 'sparc64';
+        architecture?: typeof CPUArch[keyof typeof CPUArch];
     }
 
     interface IDevice extends IData<IDevice> {
-        type?: 'mobile' | 'tablet' | 'console' | 'smarttv' | 'wearable' | 'xr' | 'embedded';
+        type?: typeof DeviceType[keyof typeof DeviceType];
         vendor?: string;
         model?: string;
     }
 
     interface IEngine extends IData<IEngine> {
-        name?: 'Amaya' | 'ArkWeb' | 'Blink' | 'EdgeHTML' | 'Flow' | 'Gecko' | 'Goanna' | 'iCab' | 'KHTML' | 'LibWeb' | 'Links' | 'Lynx' | 'NetFront' | 'NetSurf' | 'Presto' | 'Servo' | 'Tasman' | 'Trident' | 'w3m' | 'WebKit';
+        name?: typeof EngineName[keyof typeof EngineName];
         version?: string;
     }
 
