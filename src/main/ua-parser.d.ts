@@ -3,7 +3,6 @@
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import type { Headers } from "undici";
-import type { IncomingHttpHeaders } from "undici/types/header";
 
 declare namespace UAParser {
     
@@ -53,7 +52,7 @@ declare namespace UAParser {
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
     type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
     type UAParserExt = Partial<Record<UAParserProps, RegexMap>> | Partial<Record<UAParserProps, RegexMap>>[];
-    type UAParserHeaders = Record<string, string> | IncomingHttpHeaders | Headers;
+    export type UAParserHeaders = Record<string, string | string[] | undefined> | Headers;
 
     export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: UAParserHeaders): IResult;
     export function UAParser(uastring?: string, headers?: UAParserHeaders): IResult;
