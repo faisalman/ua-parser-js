@@ -381,4 +381,12 @@ describe('Read user-agent data from req.headers', function () {
         const { browser } = UAParser(reqHeaders);
         assert.strictEqual(browser.is('Midori'), true);
     });
+
+    it('Headers field name should be case insensitive', function () {    
+        const hEaDeRs = {
+            'uSeR-aGenT' : 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+'
+        };
+        const { browser } = UAParser(hEaDeRs);
+        assert.strictEqual(browser.toString(), "Midori 0.2.2");
+    });
 });

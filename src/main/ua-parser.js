@@ -1390,11 +1390,20 @@
             extensions = undefined;
         }
 
-        // Convert Headers object into a plain object
-        if (headers && typeof headers.append === FUNC_TYPE) {
-            var kv = {};
-            headers.forEach(function (v, k) { kv[k] = v; });
-            headers = kv;
+        if (headers) {
+            if (typeof headers.append === FUNC_TYPE) {
+                // Convert Headers object into a plain object
+                var kv = {};
+                headers.forEach(function (v, k) { kv[String(k).toLowerCase()] = v; });
+                headers = kv;
+            } else {
+                // Normalize headers field name into lowercase
+                var normalized = {};
+                for (var header in headers) {
+                    normalized[String(header).toLowerCase()] = headers[header];
+                }
+                headers = normalized;
+            }
         }
         
         if (!(this instanceof UAParser)) {
