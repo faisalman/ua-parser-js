@@ -389,4 +389,10 @@ describe('Read user-agent data from req.headers', function () {
         const { browser } = UAParser(hEaDeRs);
         assert.strictEqual(browser.toString(), "Midori 0.2.2");
     });
+
+    it('Empty headers should not raise any error', function () {    
+        const emptyHeaders = {};
+        const { browser } = UAParser(emptyHeaders);
+        assert.strictEqual(browser.toString(), "undefined");
+    });
 });

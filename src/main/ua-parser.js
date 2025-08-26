@@ -1400,7 +1400,9 @@
                 // Normalize headers field name into lowercase
                 var normalized = {};
                 for (var header in headers) {
-                    normalized[String(header).toLowerCase()] = headers[header];
+                    if (headers.hasOwnProperty(header)) {
+                        normalized[String(header).toLowerCase()] = headers[header];
+                    }
                 }
                 headers = normalized;
             }
