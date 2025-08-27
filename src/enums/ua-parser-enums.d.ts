@@ -159,7 +159,7 @@ export const BrowserName: Readonly<{
 /**
  * @deprecated Use `BrowserName` instead
  */
-export const Browser = BrowserName;
+export const Browser: typeof BrowserName;
 
 export const BrowserType: Readonly<{
     CRAWLER: "crawler",
@@ -194,7 +194,7 @@ export const CPUName: Readonly<{
 /**
  * @deprecated Use `CPUName` instead
  */
-export const CPU = CPUName;
+export const CPU: typeof CPUName;
 
 export const DeviceType: Readonly<{
     CONSOLE: "console",
@@ -209,7 +209,7 @@ export const DeviceType: Readonly<{
 /**
  * @deprecated Use `DeviceType` instead
  */
-export const Device = DeviceType;
+export const Device: typeof DeviceType;
 
 export const DeviceVendor: Readonly<{
     ACER: "Acer",
@@ -288,7 +288,7 @@ export const DeviceVendor: Readonly<{
 /**
  * @deprecated Use `DeviceVendor` instead
  */
-export const Vendor = DeviceVendor;
+export const Vendor: typeof DeviceVendor;
 
 export const EngineName: Readonly<{
     AMAYA: "Amaya",
@@ -315,7 +315,7 @@ export const EngineName: Readonly<{
 /**
  * @deprecated Use `EngineName` instead
  */
-export const Engine = EngineName;
+export const Engine: typeof EngineName;
 
 export const OSName: Readonly<{
     AIX: "AIX",
@@ -414,7 +414,7 @@ export const OSName: Readonly<{
 /**
  * @deprecated Use `OSName` instead
  */
-export const OS = OSName;
+export const OS: typeof OSName;
 
 /*////////////////////////////////
  * Enums for Extensions submodule
