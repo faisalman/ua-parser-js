@@ -7,7 +7,7 @@
 
 /*jshint esversion: 6 */ 
 
-const Browser = Object.freeze({
+const BrowserName = Object.freeze({
     '115': '115',
     '2345': '2345',
     '360': '360',
@@ -163,6 +163,10 @@ const Browser = Object.freeze({
 
     // TODO : test!
 });
+/**
+ * @deprecated Use `BrowserName` instead
+ */
+const Browser = BrowserName;
 
 const BrowserType = Object.freeze({
     CRAWLER: 'crawler',
@@ -174,7 +178,7 @@ const BrowserType = Object.freeze({
     LIBRARY: 'library'
 });
 
-const CPU = Object.freeze({
+const CPUName = Object.freeze({
     '68K': '68k',
     ALPHA: 'alpha',
     ARM : 'arm',
@@ -194,8 +198,12 @@ const CPU = Object.freeze({
     X86: 'ia32',
     X86_64: 'amd64'
 });
+/**
+ * @deprecated Use `CPUName` instead
+ */
+const CPU = CPUName;
 
-const Device = Object.freeze({
+const DeviceType = Object.freeze({
     CONSOLE: 'console',
     DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
@@ -205,8 +213,12 @@ const Device = Object.freeze({
     WEARABLE: 'wearable',
     XR: 'xr'
 });
+/**
+ * @deprecated Use `DeviceType` instead
+ */
+const Device = DeviceType;
 
-const Vendor = Object.freeze({
+const DeviceVendor = Object.freeze({
     ACER: 'Acer',
     ADVAN: 'Advan',
     ALCATEL: 'Alcatel',
@@ -282,8 +294,12 @@ const Vendor = Object.freeze({
 
     // TODO : test!
 });
+/**
+ * @deprecated Use `DeviceVendor` instead
+ */
+const Vendor = DeviceVendor;
 
-const Engine = Object.freeze({
+const EngineName = Object.freeze({
     AMAYA: 'Amaya',
     ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
@@ -305,8 +321,12 @@ const Engine = Object.freeze({
     W3M: 'w3m',
     WEBKIT: 'WebKit'
 });
+/**
+ * @deprecated Use `EngineName` instead
+ */
+const Engine = EngineName;
 
-const OS = Object.freeze({
+const OSName = Object.freeze({
     AIX: 'AIX',
     AMIGA_OS: 'Amiga OS',
     ANDROID: 'Android',
@@ -402,13 +422,23 @@ const OS = Object.freeze({
 
     // TODO : test!
 });
+/**
+ * @deprecated Use `OSName` instead
+ */
+const OS = OSName;
 
 module.exports = { 
-    Browser,
+    Browser,// deprecated
+    CPU,    // deprecated
+    Device, // deprecated
+    Vendor, // deprecated
+    Engine, // deprecated
+    OS,     // deprecated
+    BrowserName,
     BrowserType, 
-    CPU, 
-    Device, 
-    Vendor,
-    Engine,
-    OS
+    CPUName,
+    DeviceType, 
+    DeviceVendor,
+    EngineName,
+    OSName
 };
