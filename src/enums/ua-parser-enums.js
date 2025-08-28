@@ -178,7 +178,7 @@ const BrowserType = Object.freeze({
     LIBRARY: 'library'
 });
 
-const CPUName = Object.freeze({
+const CPUArch = Object.freeze({
     '68K': '68k',
     ALPHA: 'alpha',
     ARM : 'arm',
@@ -199,9 +199,9 @@ const CPUName = Object.freeze({
     X86_64: 'amd64'
 });
 /**
- * @deprecated Use `CPUName` instead
+ * @deprecated Use `CPUArch` instead
  */
-const CPU = CPUName;
+const CPU = CPUArch;
 
 const DeviceType = Object.freeze({
     CONSOLE: 'console',
@@ -688,7 +688,7 @@ module.exports = {
     OS,     // deprecated
     BrowserName,
     BrowserType, 
-    CPUName,
+    CPUArch,
     DeviceType, 
     DeviceVendor,
     EngineName,

@@ -171,7 +171,7 @@ export const BrowserType: Readonly<{
     LIBRARY: "library",
 }>;
 
-export const CPUName: Readonly<{
+export const CPUArch: Readonly<{
     '68K': "68k",
     ALPHA: "alpha",
     ARM: "arm",
@@ -192,9 +192,9 @@ export const CPUName: Readonly<{
     X86_64: "amd64",
 }>;
 /**
- * @deprecated Use `CPUName` instead
+ * @deprecated Use `CPUArch` instead
  */
-export const CPU: typeof CPUName;
+export const CPU: typeof CPUArch;
 
 export const DeviceType: Readonly<{
     CONSOLE: "console",
