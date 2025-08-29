@@ -100,6 +100,26 @@
         }
     },
     {
+        "desc"    : "Claude-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-User/1.0; +Claude-User@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Cohere-AI",
+        "ua"      : "Mozilla/5.0 (compatible; Cohere-AI/1.0; +https://cohere.com/)",
+        "expect"  :
+        {
+            "name"    : "Cohere-AI",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "DuckAssistBot",
         "ua"      : "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)",
         "expect"  :

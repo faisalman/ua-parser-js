@@ -8,7 +8,7 @@
 /*jshint esversion: 6 */ 
 
 const { UAParser } = require('../main/ua-parser');
-const { CPU, OS, Engine } = require('../enums/ua-parser-enums');
+const { CPUArch, OSName, EngineName } = require('../enums/ua-parser-enums');
 const { Bots } = require('../extensions/ua-parser-extensions');
 const { isFromEU } = require('detect-europe-js');
 const { isFrozenUA } = require('ua-is-frozen');
@@ -20,8 +20,8 @@ const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${m
 
 const isAppleSilicon = (resultOrUA) => {
     const res = toResult(resultOrUA);
-    if (res.os.is(OS.MACOS)) {
-        if (res.cpu.is(CPU.ARM)) {
+    if (res.os.is(OSName.MACOS)) {
+        if (res.cpu.is(CPUArch.ARM)) {
             return true;
         }
         if (typeof resultOrUA !== 'string' && typeof window !== 'undefined') {
@@ -164,7 +164,7 @@ const isBot = (resultOrUA) => [
     'library'
     ].includes(toResult(resultOrUA, Bots).browser.type);
 
-const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(Engine.BLINK);
+const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(EngineName.BLINK);
 
 const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
                             / electron\//i.test(navigator?.userAgent));         // browser

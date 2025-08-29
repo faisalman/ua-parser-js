@@ -330,6 +330,16 @@
         }
     },
     {
+        "desc"    : "Claude-SearchBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-SearchBot/1.0; +Claude-SearchBot@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-SearchBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "ClaudeWeb",
         "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
         "expect"  :

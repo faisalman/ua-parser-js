@@ -250,7 +250,7 @@ const Emails = Object.freeze({
 const Fetchers = Object.freeze({
     browser : [
         [
-            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
@@ -260,7 +260,7 @@ const Fetchers = Object.freeze({
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
@@ -277,8 +277,8 @@ const Fetchers = Object.freeze({
         [NAME, VERSION, [TYPE, FETCHER]],
 
         [
-            // Google Bots / Chrome-Lighthouse / Cohere / Gemini-Deep-Research / Snapchat / TikTokSpider / Vercelbot / Yandex Bots
-            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|cohere-ai|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|tiktokspider|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
+            // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / Snapchat / TikTokSpider / Vercelbot / Yandex Bots
+            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|tiktokspider|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],

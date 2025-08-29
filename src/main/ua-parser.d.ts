@@ -3,7 +3,7 @@
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import type { Headers } from "undici";
-import { BrowserType, CPU as CPUArch, Device as DeviceType, Engine as EngineName } from "../enums/ua-parser-enums";
+import { BrowserType, CPUArch, DeviceType, EngineName } from "../enums/ua-parser-enums";
 
 declare namespace UAParser {
     

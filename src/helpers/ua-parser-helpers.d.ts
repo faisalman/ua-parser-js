@@ -4,24 +4,12 @@
 
 import type { IResult } from "../main/ua-parser";
 
-declare function getDeviceVendor(model: string): string | undefined;
-declare function isAppleSilicon(resultOrUA: IResult | string): boolean;
-declare function isAIBot(resultOrUA: IResult | string): boolean;
-declare function isBot(resultOrUA: IResult | string): boolean;
-declare function isChromeFamily(resultOrUA: IResult | string): boolean;
-declare function isElectron(): boolean;
-declare function isFromEU(): boolean;
-declare function isFrozenUA(ua: string): boolean;
-declare function isStandalonePWA(): boolean;
-
-export {
-    getDeviceVendor,
-    isAppleSilicon,
-    isAIBot,
-    isBot,
-    isChromeFamily,
-    isElectron,
-    isFromEU,
-    isFrozenUA,
-    isStandalonePWA
-}
+export function getDeviceVendor(model: string): string | undefined;
+export function isAppleSilicon(resultOrUA: IResult | string): boolean;
+export function isAIBot(resultOrUA: IResult | string): boolean;
+export function isBot(resultOrUA: IResult | string): boolean;
+export function isChromeFamily(resultOrUA: IResult | string): boolean;
+export function isElectron(): boolean;
+export function isFromEU(): boolean;
+export function isFrozenUA(ua: string): boolean;
+export function isStandalonePWA(): boolean;
