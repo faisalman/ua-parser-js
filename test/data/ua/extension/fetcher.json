@@ -420,6 +420,96 @@
         }
     },
     {
+        "desc"    : "YaDirectFetcher",
+        "ua"      : "Mozilla/5.0 (compatible; YaDirectFetcher/1.0; Dyatel; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YaDirectFetcher",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexCalendar",
+        "ua"      : "Mozilla/5.0 (compatible; YandexCalendar/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexCalendar",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexDirect",
+        "ua"      : "Mozilla/5.0 (compatible; YandexDirect/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexDirect",
+            "version" : "3.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexDirectDyn",
+        "ua"      : "Mozilla/5.0 (compatible; YandexDirectDyn/1.0; +http://yandex.com/bots",
+        "expect"  :
+        {
+            "name"    : "YandexDirectDyn",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexForDomain",
+        "ua"      : "Mozilla/5.0 (compatible; YandexForDomain/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexForDomain",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexPagechecker",
+        "ua"      : "Mozilla/5.0 (compatible; YandexPagechecker/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexPagechecker",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexSearchShop",
+        "ua"      : "Mozilla/5.0 (compatible; YandexSearchShop/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexSearchShop",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexSitelinks",
+        "ua"      : "Mozilla/5.0 (compatible; YandexSitelinks; Dyatel; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexSitelinks",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexUserproxy",
+        "ua"      : "Mozilla/5.0 (compatible; YandexUserproxy; robot; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexUserproxy",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Zoombot",
         "ua"      : "Mozilla/5.0 (compatible; Zoombot/1.0; +https://zoom.us; crawler@domain.com)",
         "expect"  :

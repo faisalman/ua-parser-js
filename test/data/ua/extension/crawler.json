@@ -1171,12 +1171,292 @@
         }
     },
     {
+        "desc"    : "YandexAccessibilityBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexAccessibilityBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexAdditionalBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexAdditionalBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexAdditionalBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexAdNet",
+        "ua"      : "Mozilla/5.0 (compatible; YandexAdNet/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexAdNet",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexBlogs",
+        "ua"      : "Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexBlogs",
+            "version" : "0.99",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "YandexBot",
         "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
         "expect"  :
         {
             "name"    : "YandexBot",
             "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexBot MirrorDetector",
+        "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; MirrorDetector; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexBot MirrorDetector",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexComBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexComBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexComBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexFavicons",
+        "ua"      : "Mozilla/5.0 (compatible; YandexFavicons/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexFavicons",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexImageResizer",
+        "ua"      : "Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexImageResizer",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexImages",
+        "ua"      : "Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexImages",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMarket",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMarket/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMarket",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMetrika",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMetrika",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMedia",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMedia/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMedia",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMobileBot",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexMobileBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMobileBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMobileScreenShotBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMobileScreenShotBot/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMobileScreenShotBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexNews",
+        "ua"      : "Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexNews",
+            "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexOntoDB",
+        "ua"      : "Mozilla/5.0 (compatible; YandexOntoDB/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexOntoDB",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexOntoDBAPI",
+        "ua"      : "Mozilla/5.0 (compatible; YandexOntoDBAPI/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexOntoDBAPI",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexPartner",
+        "ua"      : "Mozilla/5.0 (compatible; YandexPartner/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexPartner",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexRCA",
+        "ua"      : "Mozilla/5.0 (compatible; YandexRCA/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexRCA",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexRenderResourcesBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexRenderResourcesBot/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexRenderResourcesBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexScreenshotBot",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Safari/537.36 (compatible; YandexScreenshotBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexScreenshotBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexSpravBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexSpravBot/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexSpravBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexTracker",
+        "ua"      : "Mozilla/5.0 (compatible; YandexTracker/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexTracker",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVertis",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVertis/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVertis",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVerticals",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVerticals/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVerticals",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVideo",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVideo/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVideo",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVideoParser",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVideoParser",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexWebmaster",
+        "ua"      : "Mozilla/5.0 (compatible; YandexWebmaster/2.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexWebmaster",
+            "version" : "2.0",
             "type"    : "crawler"
         }
     },

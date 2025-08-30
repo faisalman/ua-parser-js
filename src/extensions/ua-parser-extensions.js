@@ -109,7 +109,7 @@ const Crawlers = Object.freeze({
             /(y!?j-(?:asr|br[uw]|dscv|mmp|vsidx|wsc))\/([\w\.]+)/i, 
 
             // Yandex Bots - https://yandex.com/bots
-            /(yandex(?:(?:mobile)?(?:accessibility|additional|renderresources|screenshot|sprav)?bot|image(?:s|resizer)|video(?:parser)?|blogs|adnet|favicons|fordomain|market|media|metrika|news|ontodb(?:api)?|pagechecker|partner|rca|tracker|turbo|vertis|webmaster|antivirus))\/([\w\.]+)/i,
+            /(yandex(?:(?:mobile)?(?:accessibility|additional|com|renderresources|screenshot|sprav)?bot(?!.+mirror)|image(?:s|resizer)|adnet|blogs|favicons|market|media|metrika|news|ontodb(?:api)?|partner|rca|tracker|turbo|verti(?:cal)?s|webmaster|video(?:parser)?))\/([\w\.]+)/i,
 
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
@@ -119,8 +119,13 @@ const Crawlers = Object.freeze({
             // Freespoke - https://docs.freespoke.com/search/bot/
             /((?:aihit|blex|diff|huggingface-|msn|pangu|replicate-|runpod-|timpi|together-|xai-|you|zum)bot|(?:magpie-|velenpublicweb)crawler|(?:chatglm-|line|screaming frog seo |yisou)spider|cotoyogi|firecrawlagent|freespoke|omgili(?:bot)?|openai image downloader|startpageprivateimageproxy|twinagent|webzio-extended)\/?([\w\.]*)/i
         ],
-
         [NAME, VERSION, [TYPE, CRAWLER]],
+
+        [
+            // YandexBot MirrorDetector
+            /(yandexbot\/([\w\.]+); mirrordetector)/i
+        ],
+        [[NAME, /\/.+;/ig, ''], VERSION, [TYPE, CRAWLER]],
 
         [
             // Google Bots
@@ -260,7 +265,7 @@ const Fetchers = Object.freeze({
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
