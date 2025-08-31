@@ -580,6 +580,16 @@
         }
     },
     {
+        "desc"    : "APIs-Google",
+        "ua"      : "APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)",
+        "expect"  :
+        {
+            "name"    : "APIs-Google",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Googlebot-Video",
         "ua"      : "Googlebot-Video/1.0",
         "expect"  :
@@ -676,6 +686,16 @@
         {
             "name"    : "GoogleOther-Video",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Google-CloudVertexBot",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.7204.183 Mobile Safari/537.36 (compatible; Google-CloudVertexBot; +https://cloud.google.com/enterprise-search)",
+        "expect"  :
+        {
+            "name"    : "Google-CloudVertexBot",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -971,6 +991,16 @@
         }
     },
     {
+        "desc"    : "SBIntuitionsBot",
+        "ua"      : "Mozilla/5.0 (compatible; SBIntuitionsBot/0.1;+https://www.sbintuitions.co.jp/bot/)",
+        "expect"  :
+        {
+            "name"    : "SBIntuitionsBot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "SeekportBot",
         "ua"      : "Mozilla/5.0 (compatible; SeekportBot; +https://bot.seekport.com)",
         "expect"  :
@@ -1081,6 +1111,16 @@
         }
     },
     {
+        "desc"    : "TikTokSpider",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; TikTokSpider; ttspider-feedback@tiktok.com)",
+        "expect"  :
+        {
+            "name"    : "TikTokSpider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Timpibot",
         "ua"      : "Timpibot/0.8 (+http://www.timpi.io)",
         "expect"  :
@@ -1147,6 +1187,26 @@
         {
             "name"    : "v0bot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "webzio",
+        "ua"      : "webzio (+https://webz.io/bot.html)",
+        "expect"  :
+        {
+            "name"    : "webzio",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Webzio-Extended",
+        "ua"      : "Mozilla/5.0 (compatible; Webzio-Extended/1.0; +https://www.webzio.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Webzio-Extended",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },

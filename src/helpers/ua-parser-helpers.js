@@ -88,6 +88,7 @@ const isAIBot = (resultOrUA) => [
     'googleother',
     'googleother-image',
     'googleother-video',
+    'google-cloudvertexbot',
     'google-extended',
 
     // Hive AI
@@ -122,6 +123,9 @@ const isAIBot = (resultOrUA) => [
 
     // Runpod
     'runpod-bot',
+
+    // SB Intuitions
+    'sbintuitionsbot',
 
     // Semrush
     'semrushbot-ocob',

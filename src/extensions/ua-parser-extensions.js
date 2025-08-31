@@ -61,9 +61,10 @@ const Crawlers = Object.freeze({
             // Onespot - https://www.onespot.com/identifying-traffic.html
             // OpenAI's SearchGPT - https://platform.openai.com/docs/bots
             // PerplexityBot - https://perplexity.ai/perplexitybot
+            // SBIntuitionsBot - https://www.sbintuitions.co.jp/bot/
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
             // YepBot - https://yep.com/yepbot/
-            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|semrush|seznam|yep)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|yep)bot)\/([\w\.-]+)/i,
 
             // Algolia Crawler
             /(algolia crawler(?: renderscript)?)\/?([\w\.]*)/i,
@@ -139,8 +140,8 @@ const Crawlers = Object.freeze({
             // TurnitinBot - https://www.turnitin.com/robot/crawlerinfo.html
             // v0bot - https://vercel.com/docs/bot-management
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
-            // Botify / Bytespider / DeepSeekBot / Qihoo 360Spider / SeekportBot
-            /\b((?:ai2|aspiegel|dataforseo|deepseek|imagesift|petal|seekport|turnitin|v0)bot|360spider-?(?:image|video)?|baidu-ads|botify|bytespider|cohere-training-data-crawler|elastic(?=\/s)|marginalia|siteimprove(?=bot|\.com)|teoma|yahoo! slurp)/i
+            // Botify / Bytespider / DeepSeekBot / Qihoo 360Spider / SeekportBot / TikTokSpider
+            /\b((ai2|aspiegel|dataforseo|deepseek|imagesift|petal|seekport|turnitin|v0)bot|360spider-?(image|video)?|baidu-ads|botify|(byte|tiktok)spider|cohere-training-data-crawler|elastic(?=\/s)|marginalia|siteimprove(?=bot|\.com)|teoma|webzio|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
