@@ -8,7 +8,7 @@
 /*jshint esversion: 6 */ 
 
 const { UAParser } = require('../main/ua-parser');
-const { CPUArch, OSName, EngineName } = require('../enums/ua-parser-enums');
+const { CPUArch, OSName, EngineName, Extension } = require('../enums/ua-parser-enums');
 const { Bots } = require('../extensions/ua-parser-extensions');
 const { isFromEU } = require('detect-europe-js');
 const { isFrozenUA } = require('ua-is-frozen');
@@ -41,125 +41,124 @@ const isAppleSilicon = (resultOrUA) => {
     return false;
 }
 
+const Crawler = Extension.BrowserName.Crawlers;
 const isAIBot = (resultOrUA) => [
 
     // AI2
-    'ai2bot',
+    Crawler.AI2_BOT,
 
     // Amazon
-    'amazonbot',
+    Crawler.AMAZON_BOT,
 
     // Anthropic
-    'anthropic-ai',
-    'claude-web',
-    'claude-searchbot',
-    'claudebot',
+    Crawler.ANTHROPIC_AI,
+    Crawler.ANTHROPIC_CLAUDE_BOT,
+    Crawler.ANTHROPIC_CLAUDE_SEARCHBOT,
+    Crawler.ANTHROPIC_CLAUDE_WEB,
 
     // Apple
-    'applebot',
-    'applebot-extended',
+    Crawler.APPLE_BOT,
+    Crawler.APPLE_BOT_EXTENDED,
 
     // Brave
-    'bravebot',
+    Crawler.BRAVE_BOT,
 
     // ByteDance
-    'bytespider',
-    'tiktokspider',
+    Crawler.BYTEDANCE_BYTESPIDER,
+    Crawler.BYTEDANCE_TIKTOKSPIDER,
 
     // Cohere
-    'cohere-training-data-crawler',
+    Crawler.COHERE_TRAINING_DATA_CRAWLER,
 
     // Common Crawl
-    'ccbot',
+    Crawler.COMMON_CRAWL_CCBOT,
     
     // Coveo
-    'coveobot',
+    Crawler.COVEO_BOT,
 
     // DataForSeo
-    'dataforseobot',
+    Crawler.DATAFORSEO_BOT,
 
     // DeepSeek
-    'deepseekbot',
+    Crawler.DEEPSEEK_BOT,
 
     // Diffbot
-    'diffbot',
+    Crawler.DIFFBOT,
 
     // Google
-    'googleother',
-    'googleother-image',
-    'googleother-video',
-    'google-cloudvertexbot',
-    'google-extended',
+    Crawler.GOOGLE_EXTENDED,
+    Crawler.GOOGLE_OTHER,
+    Crawler.GOOGLE_OTHER_IMAGE,
+    Crawler.GOOGLE_OTHER_VIDEO,
+    Crawler.GOOGLE_CLOUDVERTEXBOT,
 
     // Hive AI
-    'imagesiftbot',
+    Crawler.HIVE_IMAGESIFTBOT,
 
     // Huawei
-    'petalbot',
-    'pangubot',
+    Crawler.HUAWEI_PETALBOT,
+    Crawler.HUAWEI_PANGUBOT,
 
     // Hugging Face
-    'huggingface-bot',
+    Crawler.HUGGINGFACE_BOT,
 
     // Kangaroo
-    'kangaroo bot',
+    Crawler.KANGAROO_BOT,
 
     // Mendable.ai
-    'firecrawlagent',
+    Crawler.FIRECRAWL_AGENT,
 
     // Meta
-    'facebookbot',
-    'meta-externalagent',
+    Crawler.META_FACEBOOKBOT,
+    Crawler.META_EXTERNALAGENT,
 
     // OpenAI
-    'gptbot',
-    'oai-searchbot',
+    Crawler.OPENAI_GPTBOT,
+    Crawler.OPENAI_SEARCH_BOT,
 
     // Perplexity
-    'perplexitybot',
+    Crawler.PERPLEXITY_BOT,
 
     // Replicate
-    'replicate-bot',
+    Crawler.REPLICATE_BOT,
 
     // Runpod
-    'runpod-bot',
+    Crawler.RUNPOD_BOT,
 
     // SB Intuitions
-    'sbintuitionsbot',
+    Crawler.SB_INTUITIONS_BOT,
 
     // Semrush
-    'semrushbot-ocob',
+    Crawler.SEMRUSH_BOT_CONTENTSHAKE,
 
     // Timpi
-    'timpibot',
+    Crawler.TIMPI_BOT,
 
     // Together AI
-    'together-bot',
+    Crawler.TOGETHER_BOT,
 
     // Velen.io
-    'velenpublicwebcrawler',
+    Crawler.HUNTER_VELENPUBLICWEBCRAWLER,
 
     // Vercel
-    'v0bot',
+    Crawler.VERCEL_V0BOT,
 
     // Webz.io
-    'omgili',
-    'omgilibot',
-    'webzio-extended',
+    Crawler.WEBZIO_OMGILI,
+    Crawler.WEBZIO_OMGILI_BOT,
+    Crawler.WEBZIO_EXTENDED,
 
     // X
-    'xai-bot',
+    Crawler.XAI_BOT,
 
     // You.com
-    'youbot',
+    Crawler.YOU_BOT,
 
     // Zhipu AI
-    'chatglm-spider',
-
-    // Zyte
-    'scrapy'
-
-    ].includes(String(toResult(resultOrUA, Bots).browser.name).toLowerCase());
+    Crawler.ZHIPU_CHATGLM_SPIDER
+    ]
+    .map((s) => s.toLowerCase())
+    .includes(String(toResult(resultOrUA, Bots).browser.name).toLowerCase());
 
 const isBot = (resultOrUA) => [
     'cli', 
