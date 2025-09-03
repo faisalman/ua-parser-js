@@ -95,7 +95,7 @@ $(document)
         qs = new URLSearchParams(window.location.search).get('ua');
     }
     if (qs) {
-        $('#ua-txt-info').text('What your browser tells you = 😵‍💫 🤯 ❌');
+        $('#ua-txt-info').html('What your browser tells you = 😵‍💫💢 😭💸 <span class="ui mini red label">Complex</span> <span class="ui mini red label">Costly</span> <span class="ui mini red label">Expensive</span>');
         $('#demo-result').get(0).scrollIntoView();
         updateDemo(UAParser(qs));
     } else {
