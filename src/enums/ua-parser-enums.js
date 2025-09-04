@@ -281,7 +281,7 @@ const DeviceVendor = Object.freeze({
     SPRINT: 'Sprint',
     TCL: 'TCL',
     TECHNISAT: 'TechniSAT',
-    TECNO: 'Tecno',
+    TECNO: 'TECNO',
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
     VIVO: 'Vivo',
@@ -433,14 +433,14 @@ const OS = OSName;
 
 const Extension = Object.freeze({
     BrowserName: {
-        CLIs: {
+        CLI: {
             CURL: 'curl',
             ELINKS: 'ELinks',
             HTTPIE: 'HTTPie',
             LYNX: 'Lynx',
-            WGET: 'wget'
+            WGET: 'Wget'
         },
-        Crawlers: {
+        Crawler: {
             AHREFS_BOT: 'AhrefsBot',
             AI2_BOT: 'AI2Bot',
             AIHIT_BOT: 'aiHitBot',
@@ -595,7 +595,7 @@ const Extension = Object.freeze({
             ZHIPU_CHATGLM_SPIDER: 'ChatGLM-Spider',
             ZUM_BOT: 'ZumBot'
         },
-        Emails: {
+        Email: {
             AIRMAIL: 'Airmail',
             APPLE_MAIL: 'Mail',
             BLUEMAIL: 'BlueMail',
@@ -618,7 +618,7 @@ const Extension = Object.freeze({
             ZIMBRA: 'Zimbra',
             ZOHO_MAIL: 'ZohoMail-Desktop'
         },
-        Fetchers: {
+        Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
@@ -671,7 +671,7 @@ const Extension = Object.freeze({
             WHATSAPP: 'WhatsApp',
             ZOOMINFO_BOT: 'Zoombot'
         },
-        InApps: {
+        InApp: {
             DISCORD: 'Discord',
             EVERNOTE: 'Evernote',
             FIGMA: 'Figma',
@@ -687,7 +687,7 @@ const Extension = Object.freeze({
             VSCODE: 'VS Code',
             YAHOO_JAPAN: 'Yahoo! Japan'
         },
-        Libraries: {
+        Library: {
             ADOBE_AIR: 'AdobeAIR',
             AIOHTTP: 'aiohttp',
             APACHE_HTTPCLIENT: 'Apache-HttpClient',
@@ -715,7 +715,7 @@ const Extension = Object.freeze({
         }
     },
     DeviceVendor: {
-        Vehicles: {
+        Vehicle: {
             BMW: 'BMW',
             BYD: 'BYD',
             JEEP: 'Jeep',
