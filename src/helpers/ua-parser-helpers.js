@@ -8,11 +8,12 @@
 /*jshint esversion: 6 */ 
 
 const { UAParser } = require('../main/ua-parser');
-const { CPUArch, OSName, EngineName, Extension } = require('../enums/ua-parser-enums');
-const { Bots } = require('../extensions/ua-parser-extensions');
+const { CPUArch, OSName, EngineName, Extension, BrowserType } = require('../enums/ua-parser-enums');
+const { Bots, Crawlers } = require('../extensions/ua-parser-extensions');
 const { isFromEU } = require('detect-europe-js');
 const { isFrozenUA } = require('ua-is-frozen');
 const { isStandalonePWA } = require('is-standalone-pwa');
+const { Crawler } = Extension.BrowserName;
 
 const toResult = (value, head, ext) => typeof value === 'string' ? UAParser(value, head, ext) : value;
 
@@ -41,7 +42,6 @@ const isAppleSilicon = (resultOrUA) => {
     return false;
 }
 
-const Crawler = Extension.BrowserName.Crawlers;
 const isAIBot = (resultOrUA) => [
 
     // AI2
@@ -158,13 +158,13 @@ const isAIBot = (resultOrUA) => [
     Crawler.ZHIPU_CHATGLM_SPIDER
     ]
     .map((s) => s.toLowerCase())
-    .includes(String(toResult(resultOrUA, Bots).browser.name).toLowerCase());
+    .includes(String(toResult(resultOrUA, Crawlers).browser.name).toLowerCase());
 
 const isBot = (resultOrUA) => [
-    'cli', 
-    'crawler', 
-    'fetcher', 
-    'library'
+    BrowserType.CLI, 
+    BrowserType.CRAWLER, 
+    BrowserType.FETCHER, 
+    BrowserType.LIBRARY
     ].includes(toResult(resultOrUA, Bots).browser.type);
 
 const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(EngineName.BLINK);
