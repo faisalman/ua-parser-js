@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.4
+/*  Enums for UAParser.js v2.0.5
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -640,6 +640,7 @@ const Extension = Object.freeze({
             IFRAMELY: 'Iframely',
             KAKAOTALK_SCRAP: 'kakaotalk-scrap',
             META_EXTERNALFETCHER: 'meta-externalfetcher',
+            META_WHATSAPP: 'WhatsApp',
             MICROSOFT_BINGPREVIEW: 'BingPreview',
             MICROSOFT_PREVIEW: 'MicrosoftPreview',
             MISTRALAI_USER: 'MistralAI-User',
@@ -652,7 +653,6 @@ const Extension = Object.freeze({
             SNAP_URL_PREVIEW: 'Snap URL Preview',
             SKYPE_URIPREVIEW: 'SkypeUriPreview',
             TELEGRAM_BOT: 'TelegramBot',
-            TIKTOK_SPIDER: 'TikTokSpider',
             UPTIMEROBOT: 'UptimeRobot',
             VERCEL_FAVICON_BOT: 'vercel-favicon-bot',
             VERCEL_SCREENSHOT_BOT: 'vercel-screenshot-bot',
@@ -668,7 +668,6 @@ const Extension = Object.freeze({
             YANDEX_SEARCHSHOP: 'YandexSearchShop',
             YANDEX_SITELINKS: 'YandexSitelinks',
             YANDEX_USERPROXY: 'YandexUserproxy',
-            WHATSAPP: 'WhatsApp',
             ZOOMINFO_BOT: 'Zoombot'
         },
         InApp: {

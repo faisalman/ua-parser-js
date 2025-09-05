@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.4
+/*  Enums for UAParser.js v2.0.5
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -285,7 +285,7 @@ export const DeviceVendor: Readonly<{
     SPRINT: 'Sprint',
     TCL: 'TCL',
     TECHNISAT: 'TechniSAT',
-    TECNO: 'Tecno',
+    TECNO: 'TECNO',
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
     VIVO: 'Vivo',
@@ -437,15 +437,14 @@ export const OS: typeof OSName;
 
 export const Extension: Readonly<{
     BrowserName: {
-        CLIs: {
+        CLI: {
             CURL: 'curl',
             ELINKS: 'ELinks',
             HTTPIE: 'HTTPie',
             LYNX: 'Lynx',
-            WGET: 'wget'
+            WGET: 'Wget'
         },
-        Crawlers: {
-            '360_SPIDER': '360Spider',
+        Crawler: {
             AHREFS_BOT: 'AhrefsBot',
             AI2_BOT: 'AI2Bot',
             AIHIT_BOT: 'aiHitBot',
@@ -472,9 +471,9 @@ export const Extension: Readonly<{
             BLEX_BOT: 'BLEXBot',
             BOTIFY: 'botify',
             BRAVE_BOT: 'Bravebot',
-            BYTEDANCE_SPIDER: 'Bytespider',
-            CC_BOT: 'CCBot',
-            CHATGLM_SPIDER: 'ChatGLM-Spider',
+            BYTEDANCE_BYTESPIDER: 'Bytespider',
+            BYTEDANCE_TIKTOKSPIDER: 'TikTokSpider',
+            COMMON_CRAWL_CCBOT: 'CCBot',
             COCCOC_BOT_WEB: 'coccocbot-web',
             COCCOC_BOT_IMAGE: 'coccocbot-image',
             COHERE_TRAINING_DATA_CRAWLER: 'cohere-training-data-crawler',
@@ -496,10 +495,13 @@ export const Extension: Readonly<{
             GOOGLE_ADSBOT: 'AdsBot-Google',
             GOOGLE_ADSBOT_MOBILE: 'Adsbot-Google-Mobile',
             GOOGLE_ADSENSE: 'AdSense',
+            GOOGLE_APIS: 'APIs-Google',
             GOOGLE_BOT: 'Googlebot',
             GOOGLE_BOT_IMAGE: 'Googlebot-Image',
             GOOGLE_BOT_NEWS: 'Googlebot-News',
             GOOGLE_BOT_VIDEO: 'Googlebot-Video',
+            GOOGLE_CLOUDVERTEXBOT: 'Google-CloudVertexBot',
+            GOOGLE_EXTENDED: 'Google-Extended',
             GOOGLE_INSPECTIONTOOL: 'Google-InspectionTool',
             GOOGLE_OTHER: 'GoogleOther',
             GOOGLE_OTHER_IMAGE: 'GoogleOther-Image',
@@ -529,16 +531,16 @@ export const Extension: Readonly<{
             MICROSOFT_ADIDXBOT: 'adidxbot',
             MOJEEK_BOT: 'MojeekBot',
             MOZ_DOTBOT: 'DotBot',
-            OMGILI: 'omgili',
-            OMGILI_BOT: 'omgilibot',
             ONCRAWL: 'OnCrawl',
             ONESPOT_SCRAPERBOT: 'Onespot-ScraperBot',
             OPENAI_GPTBOT: 'GPTBot',
-            OPENAI_SEARCH: 'OAI-SearchBot',
+            OPENAI_SEARCH_BOT: 'OAI-SearchBot',
             PERPLEXITY_BOT: 'PerplexityBot',
+            QIHOO_360_SPIDER: '360Spider',
             QWANT_BOT: 'Qwantbot',
             REPLICATE_BOT: 'Replicate-Bot',
             RUNPOD_BOT: 'RunPod-Bot',
+            SB_INTUITIONS_BOT: 'SBIntuitionsBot',
             SEEKPORT_BOT: 'SeekportBot',
             SEMRUSH_BOT: 'SemrushBot',
             SEMRUSH_BOT_BACKLINK: 'SemrushBot-BA',
@@ -553,18 +555,51 @@ export const Extension: Readonly<{
             TOGETHER_BOT: 'Together-Bot',
             TURNITIN_BOT: 'TurnitinBot',
             TWIN_AGENT: 'TwinAgent',
-            XAI_BOT: 'xAI-Bot',
             VERCEL_V0BOT: 'v0bot',
+            WEBZIO: 'webzio',
+            WEBZIO_EXTENDED: 'Webzio-Extended',
+            WEBZIO_OMGILI: 'omgili',
+            WEBZIO_OMGILI_BOT: 'omgilibot',
+            XAI_BOT: 'xAI-Bot',
             YAHOO_JAPAN: 'Y!J-BRW',
             YAHOO_SLURP: 'Yahoo! Slurp',
+            YANDEX_ACCESSIBILITY_BOT: 'YandexAccessibilityBot',
+            YANDEX_ADDITIONAL_BOT: 'YandexAdditionalBot',
+            YANDEX_ADNET: 'YandexAdNet',
+            YANDEX_BLOGS: 'YandexBlogs',
             YANDEX_BOT: 'YandexBot',
+            YANDEX_BOT_MIRRORDETECTOR: 'YandexBot MirrorDetector',
+            YANDEX_COMBOT: 'YandexComBot',
+            YANDEX_FAVICONS: 'YandexFavicons',
+            YANDEX_IMAGE_RESIZER: 'YandexImageResizer',
+            YANDEX_IMAGES: 'YandexImages',
+            YANDEX_MARKET: 'YandexMarket',
+            YANDEX_MEDIA: 'YandexMedia',
+            YANDEX_METRIKA: 'YandexMetrika',
+            YANDEX_MOBILE_BOT: 'YandexMobileBot',
+            YANDEX_MOBILE_SCREENSHOT_BOT: 'YandexMobileScreenShotBot',
+            YANDEX_NEWS: 'YandexNews',
+            YANDEX_ONTODB: 'YandexOntoDB',
+            YANDEX_ONTODB_API: 'YandexOntoDBAPI',
+            YANDEX_PARTNER: 'YandexPartner',
+            YANDEX_RCA: 'YandexRCA',
+            YANDEX_RENDERRESOURCES_BOT: 'YandexRenderResourcesBot',
+            YANDEX_SCREENSHOT_BOT: 'YandexScreenshotBot',
+            YANDEX_SPRAV_BOT: 'YandexSpravBot',
+            YANDEX_TRACKER: 'YandexTracker',
+            YANDEX_VERTICALS: 'YandexVerticals',
+            YANDEX_VERTIS: 'YandexVertis',
+            YANDEX_VIDEO: 'YandexVideo',
+            YANDEX_VIDEO_PARSER: 'YandexVideoParser',
+            YANDEX_WEBMASTER: 'YandexWebmaster',
             YEP_BOT: 'YepBot',
             YETI: 'Yeti',
             YISOU_SPIDER: 'YisouSpider',
             YOU_BOT: 'YouBot',
+            ZHIPU_CHATGLM_SPIDER: 'ChatGLM-Spider',
             ZUM_BOT: 'ZumBot'
         },
-        Emails: {
+        Email: {
             AIRMAIL: 'Airmail',
             APPLE_MAIL: 'Mail',
             BLUEMAIL: 'BlueMail',
@@ -587,7 +622,7 @@ export const Extension: Readonly<{
             ZIMBRA: 'Zimbra',
             ZOHO_MAIL: 'ZohoMail-Desktop'
         },
-        Fetchers: {
+        Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
@@ -600,7 +635,7 @@ export const Extension: Readonly<{
             GOOGLE_CHROME_LIGHTHOUSE: 'Chrome-Lighthouse',
             GOOGLE_FEEDFETCHER: 'FeedFetcher-Google',
             GOOGLE_GEMINI_DEEP_RESEARCH: 'Gemini-Deep-Research',
-            GOOGLE_IMAGE_PROXY: 'GoogleImageProxy',
+            GOOGLE_IMAGEPROXY: 'GoogleImageProxy',
             GOOGLE_PAGERENDERER: 'Google-PageRenderer',
             GOOGLE_READ_ALOUD: 'Google-Read-Aloud',
             GOOGLE_PRODUCER: 'GoogleProducer',
@@ -609,6 +644,7 @@ export const Extension: Readonly<{
             IFRAMELY: 'Iframely',
             KAKAOTALK_SCRAP: 'kakaotalk-scrap',
             META_EXTERNALFETCHER: 'meta-externalfetcher',
+            META_WHATSAPP: 'WhatsApp',
             MICROSOFT_BINGPREVIEW: 'BingPreview',
             MICROSOFT_PREVIEW: 'MicrosoftPreview',
             MISTRALAI_USER: 'MistralAI-User',
@@ -621,17 +657,24 @@ export const Extension: Readonly<{
             SNAP_URL_PREVIEW: 'Snap URL Preview',
             SKYPE_URIPREVIEW: 'SkypeUriPreview',
             TELEGRAM_BOT: 'TelegramBot',
-            TIKTOK_SPIDER: 'TikTokSpider',
             UPTIMEROBOT: 'UptimeRobot',
             VERCEL_FAVICON_BOT: 'vercel-favicon-bot',
             VERCEL_SCREENSHOT_BOT: 'vercel-screenshot-bot',
             VERCEL_BOT: 'Vercelbot',
             VERCEL_FLAGS: 'vercelflags',
             VERCEL_TRACING: 'verceltracing',
-            WHATSAPP: 'WhatsApp',
+            YANDEX_CALENDAR: 'YandexCalendar',
+            YANDEX_DIRECT: 'YandexDirect',
+            YANDEX_DIRECTDYN: 'YandexDirectDyn',
+            YANDEX_DIRECTFETCHER: 'YaDirectFetcher',
+            YANDEX_FORDOMAIN: 'YandexForDomain',
+            YANDEX_PAGECHECKER: 'YandexPagechecker',
+            YANDEX_SEARCHSHOP: 'YandexSearchShop',
+            YANDEX_SITELINKS: 'YandexSitelinks',
+            YANDEX_USERPROXY: 'YandexUserproxy',
             ZOOMINFO_BOT: 'Zoombot'
         },
-        InApps: {
+        InApp: {
             DISCORD: 'Discord',
             EVERNOTE: 'Evernote',
             FIGMA: 'Figma',
@@ -647,7 +690,7 @@ export const Extension: Readonly<{
             VSCODE: 'VS Code',
             YAHOO_JAPAN: 'Yahoo! Japan'
         },
-        Libraries: {
+        Library: {
             ADOBE_AIR: 'AdobeAIR',
             AIOHTTP: 'aiohttp',
             APACHE_HTTPCLIENT: 'Apache-HttpClient',
@@ -675,7 +718,7 @@ export const Extension: Readonly<{
         }
     },
     DeviceVendor: {
-        Vehicles: {
+        Vehicle: {
             BMW: 'BMW',
             BYD: 'BYD',
             JEEP: 'Jeep',

@@ -12,13 +12,12 @@
 <a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
 <a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
 <img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge">
+<a target="_blank" href="https://discord.gg/stt86vmr"><img alt="Discord invite" src="https://dcbadge.limes.pink/api/server/https://discord.gg/stt86vmr"></a>
 </p>
 
 # UAParser.js
 
-The most comprehensive, compact, & up-to-date isomorphic JavaScript library to detect 
-user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser 
-(client-side) or node.js (server-side).
+The most comprehensive, compact, and up-to-date JavaScript library to detect user's browser, OS, CPU, and device type/model. Also detect bots, apps, and more. Runs seamlessly in the browser (client-side) or Node.js (server-side).
 
 # Demo
 
@@ -33,7 +32,7 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
 see what's new & breaking.
 
-# License Options
+# Package & Pricing
 
 <table>
     <thead>
@@ -46,8 +45,8 @@ see what's new & breaking.
     <tbody>
         <tr>
             <td>License options</td>
-            <td>MIT (v0.7~v1.0)</td>
-            <td>AGPL (&gt;=v2.0)</td>
+            <td>MIT (v1.x)</td>
+            <td>AGPL (v2.x)</td>
             <td>PRO Personal</td>
             <td>PRO Business</td>
             <td>PRO Enterprise</td>
@@ -149,14 +148,6 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>npm module</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
             <td>TypeScript declarations</td>
             <td><a href="#demo" title="Community version">⚠️</a></td>
             <td>✅</td>
@@ -165,7 +156,23 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Allows commercial use</td>
+            <td>npm module available</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Direct downloads available</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Allows commercial usage</td>
             <td>✅</td>
             <td>✅</td>
             <td>❌</td>
@@ -181,11 +188,27 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Unlimited use per 1 license</td>
+            <td>No open-source obligations</td>
+            <td>✅</td>
+            <td><strong title="Copyleft license">❌</strong></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
-            <td><strong title="1 project per 1 license">❌</strong></td>
+        </tr>
+        <tr>
+            <td>Unlimited end-products</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td><strong title="1 end-product per license">❌</strong></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Unlimited deployments</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td><strong title="1 TLD or deliverable per license">❌</strong></td>
             <td>✅</td>
         </tr>
         <tr>
@@ -206,8 +229,8 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Price</td>
-            <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/1.0.x/license.md">License</a>)</strong></td>
-            <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="Pay as you want">FREE<sup>*</sup> (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/1.0.x/license.md">License</a>)</strong></td>
+            <td><strong title="Pay as you want">FREE<sup>*</sup> (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$14 (one-time fee)">$14 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-personal/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$29 (one-time fee)">$29 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-business/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$599 (one-time fee)">$599 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
@@ -236,10 +259,7 @@ Made with [contributors-img](https://contrib.rocks).
 
 ## Backers & Sponsors
 
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
-
-You can support the open-source editions of UAParser.js through one of the following options:
+Support the **open-source editions** of UAParser.js through one of the following options:
 
 [![OpenCollective](https://img.shields.io/badge/OpenCollective-dddddd?style=for-the-badge&logo=opencollective&color=dddddd
 )](https://opencollective.com/ua-parser-js)
@@ -249,3 +269,6 @@ You can support the open-source editions of UAParser.js through one of the follo
 )](https://paypal.me/faisalman)
 [![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
 )](https://store.faisalman.com/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
+
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>

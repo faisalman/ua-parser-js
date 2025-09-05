@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.4
+/*  Extensions for UAParser.js v2.0.5
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -283,8 +283,8 @@ const Fetchers = Object.freeze({
         [NAME, VERSION, [TYPE, FETCHER]],
 
         [
-            // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / Snapchat / TikTokSpider / Vercelbot / Yandex Bots
-            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|tiktokspider|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
+            // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / Snapchat / Vercelbot / Yandex Bots
+            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],
