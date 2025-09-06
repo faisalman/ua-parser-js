@@ -109,18 +109,6 @@
                         </div>
                         <div class="column">
                             <div class="ui center aligned animated icon">
-                                <i class="cogs icon"></i>
-                                Engine
-                            </div>
-                            <div class="ui center aligned header">
-                                <div class="header" id="engine-txt"></div>
-                            </div>
-                            <div class="ui basic segment">
-                                <img alt="detected engine icon" class="ui tiny centered image" id="engine-img" src="">
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui center aligned animated icon">
                                 <i class="windows icon"></i>
                                 OS
                             </div>
@@ -131,12 +119,24 @@
                                 <img alt="detected os icon" class="ui tiny centered image" id="os-img" src="">
                             </div>
                         </div>
+                        <div class="column">
+                            <div class="ui center aligned animated icon">
+                                <i class="microchip icon"></i>
+                                CPU Architecture
+                            </div>
+                            <div class="ui center aligned header">
+                                <div id="cpu-txt"></div>
+                            </div>
+                            <div class="ui basic segment">
+                                <img alt="detected cpu icon" class="ui tiny centered image" id="cpu-img" src="">
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="column">
                             <div class="ui center aligned animated icon">
                                 <i class="tv icon"></i>
-                                Device
+                                Device Type
                             </div>
                             <div class="ui basic segment">
                                 <img alt="detected device type icon" class="ui tiny centered image" id="type-img" src="">
@@ -148,7 +148,7 @@
                         <div class="column">
                             <div class="ui center aligned animated icon">
                                 <i class="mobile alternate icon"></i>
-                                Series
+                                Vendor & Model
                             </div>
                             <div class="ui basic segment">
                                 <img alt="detected device vendor icon" class="ui tiny centered image" id="device-img" src="">
@@ -157,15 +157,53 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="column">
                             <div class="ui center aligned animated icon">
-                                <i class="microchip icon"></i>
-                                CPU
+                                <i class="globe icon"></i>
+                                Category
                             </div>
                             <div class="ui basic segment">
-                                <img alt="detected cpu icon" class="ui tiny centered image" id="cpu-img" src="">
                                 <div class="ui center aligned header">
-                                    <div id="cpu-txt"></div>
+                                    <div class="header" id="category-txt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui center aligned animated icon">
+                                <i class="cog icon"></i>
+                                Engine
+                            </div>
+                            <div class="ui center aligned header">
+                                <div class="header" id="engine-txt"></div>
+                            </div>
+                            <!--div class="ui basic segment">
+                                <img alt="detected engine icon" class="ui tiny centered image" id="engine-img" src="">
+                            </div-->
+                        </div>
+                        <div class="column">
+                            <div class="ui center aligned animated icon">
+                                <i class="user secret icon"></i>
+                                Bot
+                            </div>
+                            <div class="ui basic segment">
+                                <div class="ui center aligned header">
+                                    <div class="header" id="isbot-txt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui center aligned animated icon">
+                                <i class="bug icon"></i>
+                                AI Crawler
+                            </div>
+                            <div class="ui basic segment">
+                                <div class="ui center aligned header">
+                                    <div class="header" id="isaibot-txt">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1382,13 +1420,13 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     <div class="meta">$29 <span class="subtle">(one-time)</span></div>
                 </div>
                 <div class="content">
-                    <div class="ui sub header">1 License Per Project</div>
+                    <div class="ui sub header">1 End-Product per 1 License</div>
                     <div class="description">
                     <ul class="ui list">
                         <li>Full detection features</li>
                         <li>npm & downloadable</li>
                         <li>Commercial usage rights</li>
-                        <li>Limited deployment</li>
+                        <li><span data-tooltip="This license allows you to deliver the end-product as 1 client work, or to host the end-product on 1 top-level domain">1 TLD per 1 license</span></li>
                         <li>1 year support</li>
                         <li>Lifetime updates</li>
                     </ul>
@@ -1594,11 +1632,11 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
-                            <td class="left aligned">Unlimited projects</td>
+                            <td class="left aligned">Unlimited end-products</td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="negative" data-tooltip="1 project per 1 license" data-inverted=""><i class="large red minus circle icon"></i></td>
+                            <td class="negative" data-tooltip="1 product per 1 license" data-inverted=""><i class="large red minus circle icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
@@ -1606,7 +1644,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="negative" data-tooltip="1 project per 1 license" data-inverted=""><i class="large red minus circle icon"></i></td>
+                            <td class="warning" data-tooltip="Host on 1 top-level domain per 1 license" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
                             <td class="positive"><i class="large green checkmark icon"></i></td>
                         </tr>
                         <tr>
