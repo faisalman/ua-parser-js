@@ -5,7 +5,16 @@
         "expect"  :
         {
             "name"    : "Solaris",
-            "version" : "sun4u"
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Solaris",
+        "ua"      : "Mozilla/5.0 (Solaris; SPARC; w3m/0.5.3; rv:1.0) Gecko/20100101 w3m/0.5.3",
+        "expect"  :
+        {
+            "name"    : "Solaris",
+            "version" : "undefined"
         }
     },
     {
@@ -15,6 +24,24 @@
         {
             "name"    : "Solaris",
             "version" : "4.1.4"
+        }
+    },
+    {
+        "desc"    : "Solaris",
+        "ua"      : "Opera/5.0 (SunOS 5.8 sun4m; U) [en]",
+        "expect"  :
+        {
+            "name"    : "Solaris",
+            "version" : "5.8"
+        }
+    },
+    {
+        "desc"    : "Solaris",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.8) Gecko/20100215 Solaris/10.1 (GNU) Superswan/3.5.8 (Byte/me)",
+        "expect"  :
+        {
+            "name"    : "Solaris",
+            "version" : "10.1"
         }
     }
 ]

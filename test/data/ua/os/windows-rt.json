@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "Windows RT 8",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)",
+        "expect"  :
+        {
+            "name"    : "Windows RT",
+            "version" : "8"
+        }
+    },
+    {
+        "desc"    : "Windows RT 8.1",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.3; ARM; Trident/7.0; Touch; rv:11.0) like Gecko",
+        "expect"  :
+        {
+            "name"    : "Windows RT",
+            "version" : "8.1"
+        }
+    }
+]

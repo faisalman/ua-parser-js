@@ -99,6 +99,15 @@
         }
     },
     {
+        "desc": "Sony Xperia 1 VI",
+        "ua": "Mozilla/5.0 (Linux; Android 14; XQ-EC44) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-EC44",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sony Xperia 10ii",
         "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AU52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",
         "expect": {
@@ -108,11 +117,47 @@
         }
     },
     {
+        "desc": "Sony Xperia 10 III Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 12; XQ-BT44 Build/62.1.A.1.227; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/101.0.4951.61 Mobile Safari/537.36 Sleipnir/3.6.0",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-BT44",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia 10 VI",
+        "ua": "Mozilla/5.0 (Linux; Android 14; XQ-ES72 Build/70.0.A.2.233; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/129.0.6668.71 Mobile Safari/537.36 Line/14.16.0/IAB",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-ES72",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Sony Xperia Pro",
         "ua": "Mozilla/5.0 (Linux; Android 10; XQ-AQ52) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.185 Mobile Safari/537.36",
         "expect": {
             "vendor": "Sony",
             "model": "XQ-AQ52",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 12; Sony XQ-AQ52) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-AQ52",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Sony Xperia Pro I",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 11; XQ-BE72) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.148 YaBrowser/22.7.3.82.00 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Sony",
+            "model": "XQ-BE72",
             "type": "mobile"
         }
     },

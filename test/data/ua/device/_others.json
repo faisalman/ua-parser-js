@@ -123,15 +123,6 @@
         }
     },
     {
-        "desc": "OnePlus 7T Pro",
-        "ua": "Mozilla/5.0 (Linux; Android 10; HD1913) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.57 Mobile Safari/537.36 EdgA/110.0.1587.66",
-        "expect": {
-            "vendor": "undefined",
-            "model": "HD1913",
-            "type": "mobile"
-        }
-    },
-    {
         "desc": "Philips SmartTV",
         "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
         "expect": {
@@ -278,6 +269,69 @@
         "expect": {
             "vendor": "undefined",
             "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Unknown TV",
+        "ua": "Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/ 162671",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Unknown TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.41 (KHTML, like Gecko) Large Screen WebAppManager Safari/537.41",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Unknown VR Device using Firefox Reality",
+        "ua": "Mozilla/5.0 (Android 10; Mobile VR; rv:123.0) Gecko/123.0 Firefox/123.0",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "xr"
+        }
+    },
+    {
+        "desc": "Unknown VR Device using Wolvic",
+        "ua": "Mozilla/5.0 (Android 14; Mobile VR; rv:128.0) Gecko/128.0 Firefox/128.0 Wolvic/1.8",
+        "expect": {
+            "vendor": "undefined",
+            "model": "undefined",
+            "type": "xr"
+        }
+    },
+    {
+        "desc": "Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 ( DRM; LGE/ATMACA/GRAETZ; GR32S1470; WEBOS22 04.41.53; W22_K8AP; DTV_C22L;) LaTivu_1.0.1_2022",
+        "expect": {
+            "vendor": "GRAETZ",
+            "model": "GR32S1470",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 HbbTV/1.5.1 (+DRM; LGE/DUALSHINE/SKYTECH; ST-5090; WEBOS5.0 04.50.63; W50_K6LP; DTV_C20P;)",
+        "expect": {
+            "vendor": "SKYTECH",
+            "model": "ST-5090",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Smart TV",
+        "ua": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 HbbTV/1.6.1 (+DRM; LGE/SILICONPLAYER/Hyundai; 50HYN3205; WEBOS22 04.42.26; W22_K8LP; DTV_C22P;)",
+        "expect": {
+            "vendor": "Hyundai",
+            "model": "50HYN3205",
             "type": "smarttv"
         }
     },

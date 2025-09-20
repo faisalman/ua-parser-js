@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Retroid Pocket 4 Pro",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 13; Retroid Pocket 4 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.96 YaBrowser/24.4.3.96.00 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Retroid",
+            "model": "Pocket 4 Pro",
+            "type": "console"
+        }
+    }
+]

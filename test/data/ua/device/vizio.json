@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "VIZIO",
+        "ua": "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36 CrKey/1.0.999999 VIZIO SmartCast(Conjure/SX7B-4.6.419.12 FW/7.0.23.2-4 Model/M557-G0)",
+        "expect": {
+            "vendor": "VIZIO",
+            "model": "M557-G0",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "VIZIO",
+        "ua": "VIZIO V506-J09 ViziOS/1.4.512.847.1 WatchFree/24.06.13.2 FancyPlayer/1.1.30-qa ",
+        "expect": {
+            "vendor": "VIZIO",
+            "model": "V506-J09",
+            "type": "smarttv"
+        }
+    }
+]

@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.3
+/*  Helpers for UAParser.js v2.0.4
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Personal License */
@@ -109,6 +109,9 @@ const isAIBot = (resultOrUA) => [
 
     // You.com
     'youbot',
+
+    // Zhipu AI
+    'chatglm-spider',
 
     // Zyte
     'scrapy'

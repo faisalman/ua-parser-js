@@ -16,5 +16,23 @@
             "name"    : "Windows Mobile",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "Windows Mobile",
+        "ua"      : "Opera/9.7 (Windows Mobile; PPC; Opera Mobi/35166; U; en) Presto/2.2.1",
+        "expect"  :
+        {
+            "name"    : "Windows Mobile",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Windows Mobile 6.1",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11) 320x240; VZW; Motorola-Q9c; Windows Mobile 6.1 Standard",
+        "expect"  :
+        {
+            "name"    : "Windows Mobile",
+            "version" : "6.1"
+        }
     }
 ]

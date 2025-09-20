@@ -1,4 +1,4 @@
-// Type definitions for Enums submodule of UAParser.js v2.0.3
+// Type definitions for Enums submodule of UAParser.js v2.0.4
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
@@ -16,7 +16,6 @@ export const Browser: Readonly<{
     BAIDU: "Baidu Browser";
     BASILISK: "Basilisk";
     BLAZER: "Blazer";
-    BLU: "BLU";
     BOLT: "Bolt";
     BOWSER: "Bowser";
     BRAVE: "Brave";
@@ -39,6 +38,8 @@ export const Browser: Readonly<{
     DUCKDUCKGO: "DuckDuckGo";
     ECOSIA: "Ecosia";
     EDGE: "Edge";
+    EDGE_WEBVIEW: "Edge WebView";
+    EDGE_WEBVIEW2: "Edge WebView2";
     EPIPHANY: "Epiphany";
     FACEBOOK: "Facebook";
     FALKON: "Falkon";
@@ -203,6 +204,7 @@ export const Vendor: Readonly<{
     ATT: "AT&T";
     BENQ: "BenQ";
     BLACKBERRY: "BlackBerry";
+    BLU: "BLU";
     CAT: "Cat";
     DELL: "Dell";
     ENERGIZER: "Energizer";
@@ -221,6 +223,7 @@ export const Vendor: Readonly<{
     ITEL: "itel";
     JOLLA: "Jolla";
     KOBO: "Kobo";
+    LAVA: "Lava";
     LENOVO: "Lenovo";
     LG: "LG";
     MEIZU: "Meizu";
@@ -241,6 +244,7 @@ export const Vendor: Readonly<{
     PICO: "Pico";
     POLYTRON: "Polytron";
     REALME: "Realme";
+    RETROID: "Retroid";
     RIM: "RIM";
     ROKU: "Roku";
     SAMSUNG: "Samsung";
@@ -255,6 +259,7 @@ export const Vendor: Readonly<{
     TESLA: "Tesla";
     ULEFONE: "Ulefone";
     VIVO: "Vivo";
+    VIZIO: "Vizio";
     VODAFONE: "Vodafone";
     XBOX: "Xbox";
     XIAOMI: "Xiaomi";
@@ -288,6 +293,7 @@ export const OS: Readonly<{
     AMIGA_OS: "Amiga OS";
     ANDROID: "Android";
     ANDROID_X86: "Android-x86";
+    ARCAOS: "ArcaOS";
     ARCH: "Arch";
     BADA: "Bada";
     BEOS: "BeOS";
@@ -318,6 +324,7 @@ export const OS: Readonly<{
     IOS: "iOS";
     JOLI: "Joli";
     KAIOS: "KaiOS";
+    KNOPPIX: "Knoppix";
     KUBUNTU: "Kubuntu";
     LINPUS: "Linpus";
     LINSPIRE: "Linspire";
@@ -366,9 +373,12 @@ export const OS: Readonly<{
     WATCHOS: "watchOS";
     WEBOS: "WebOS";
     WINDOWS: "Windows";
+    WINDOWS_CE: "Windows CE";
     WINDOWS_IOT: "Windows IoT";
     WINDOWS_MOBILE: "Windows Mobile";
     WINDOWS_PHONE: "Windows Phone";
+    WINDOWS_RT: "Windows RT";
     XBOX: "Xbox";
+    XUBUNTU: "Xubuntu";
     ZENWALK: "Zenwalk";
 }>;

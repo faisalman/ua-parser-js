@@ -7,5 +7,32 @@
             "name"    : "AIX",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "AIX",
+        "ua"      : "Mozilla/5.0 (AIX; SPARC64; smart-thumbtack; Mosaic/2.7) Gecko/20100101 Mosaic/2.7",
+        "expect"  :
+        {
+            "name"    : "AIX",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "AIX",
+        "ua"      : "Mozilla/5.0 (X11; N; Linux i686; en-US; rv:1.8.1.12) Gecko/20080219 Firefox/2.0.0.12 Mozilla/3.0 (X11; I; AIX 2) Navigator/9.0.0.6",
+        "expect"  :
+        {
+            "name"    : "AIX",
+            "version" : "2"
+        }
+    },
+    {
+        "desc"    : "AIX",
+        "ua"      : "Mozilla/5.0 (X11; U; AIX 7.2; en-US; rv:1.7.12) Gecko/20100101 Firefox/126.0",
+        "expect"  :
+        {
+            "name"    : "AIX",
+            "version" : "7.2"
+        }
     }
 ]
