@@ -315,6 +315,19 @@ describe('UA-CH Headers tests', () => {
         },
         {
             headers : {
+                'sec-ch-ua': '" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103", "Microsoft Edge WebView2";v="104"'
+            },
+            expect: {
+                browser : {
+                    name : 'Edge WebView2',
+                    version : '104',
+                    major : '104',
+                    type : undefined
+                }
+            }
+        },
+        {
+            headers : {
                 'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "HuaweiBrowser";v="114"'
             },
             expect: {
@@ -470,7 +483,7 @@ describe('Identify vendor & type of device from given model name', () => {
         {
             model: 'CPH2389',
             expect: {
-                vendor : 'OPPO',
+                vendor : 'OnePlus',
                 type : 'mobile'
             }
         },

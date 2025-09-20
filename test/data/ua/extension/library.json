@@ -1,5 +1,25 @@
 [
     {
+        "desc"    : "AdobeAIR",
+        "ua"      : "Mozilla/5.0 (Windows; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/3.1",
+        "expect"  :
+        {
+            "name"    : "AdobeAIR",
+            "version" : "3.1",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "aiohttp",
+        "ua"      : "Python/3.9 aiohttp/3.8.1",
+        "expect"  :
+        {
+            "name"    : "aiohttp",
+            "version" : "3.8.1",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Apache-HttpClient",
         "ua"      : "Apache-HttpClient/4.5.14 (Java/17.0.12)",
         "expect"  :
@@ -110,6 +130,16 @@
         }
     },
     {
+        "desc"    : "Nutch",
+        "ua"      : "AliyunSecBot/Nutch-1.21-SNAPSHOT",
+        "expect"  :
+        {
+            "name"    : "Nutch",
+            "version" : "1.21-SNAPSHOT",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "OkHttp",
         "ua"      : "okhttp/3.2.0",
         "expect"  :
@@ -150,12 +180,32 @@
         }
     },
     {
+        "desc"    : "Python httpx",
+        "ua"      : "python-httpx/0.27.2",
+        "expect"  :
+        {
+            "name"    : "python-httpx",
+            "version" : "0.27.2",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Python urllib",
         "ua"      : "Python-urllib/2.6",
         "expect"  :
         {
             "name"    : "Python-urllib",
             "version" : "2.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Python urllib3",
+        "ua"      : "python-urllib3/1.26.18",
+        "expect"  :
+        {
+            "name"    : "python-urllib3",
+            "version" : "1.26.18",
             "type"    : "library"
         }
     },

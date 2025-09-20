@@ -65,6 +65,27 @@
 
 --- 
 
+## Version 2.0.4
+
+- Add new browser: Edge WebView, Edge WebView2
+- Add new device vendor: Lava, Retroid, Vizio
+- Add new OS: ArcaOS, Knoppix, Xubuntu, Windows CE, Windows RT
+- Improve device detection: Google Pixel & Pixelbook Series, HMD, Infinix, LG WebOS TV, Motorola, Nothing, OnePlus, Sony, Tecno
+- Improve OS detection: AIX, Arch, Fuchsia, Haiku, HarmonyOS, Mint, MorphOS, Solaris, Windows
+- Improve `withClientHints()` browser naming adjustments: `Microsoft Edge WebView2` => `Edge WebView2`
+- Identify device that uses Firefox Reality / Wolvic as `xr`
+- Identify device with large screen as `smarttv`
+- Identify Windows CE & Windows RT as distinct OS variants
+- `extensions` submodule:
+    - Remove lookbehind assertion to ensure regex compatibility
+    - Add new crawlers: ChatGLM, Daum, iAskBot, Onespot, Qwantbot, Startpage
+    - Add new emails: Apple's Mail, DaumMail, Polymail, ProtonMail, SparkDesktop, Zimbra, ZohoMail-Desktop
+    - Add new fetchers: Iframely, MistralAI-User, Perplexity-User
+    - Add new inApps: Discord, Evernote, Figma, Flipboard, Mattermost, Notion, Postman, Rambox, Rocket.Chat, Microsoft Teams, TikTok Lite, VS Code
+    - Add new libraries: AdobeAIR, aiohttp, nutch, httpx, urllib3
+- `enum` submodule:
+    - Fix mistakenly placed `BLU` categorized as browser name instead of device vendor
+
 ## Version 2.0.3
 
 - Add new browser: Dooble, Ecosia, LG Browser, Otter, qutebrowser, Surf

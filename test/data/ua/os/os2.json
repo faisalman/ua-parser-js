@@ -7,5 +7,23 @@
             "name"    : "OS/2",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "OS/2",
+        "ua"      : "Mozilla/5.0 (OS/2; OS/2 i386) AppleWebKit/538.36 (KHTML, like Gecko) QtWebEngine/5.15.2 Chrome/127.0.6533.72",
+        "expect"  :
+        {
+            "name"    : "OS/2",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "OS/2",
+        "ua"      : "Mozilla/5.0 (OS/2; Warp 4.5; rv:45.0) Gecko/20100101 Firefox/45.0",
+        "expect"  :
+        {
+            "name"    : "OS/2",
+            "version" : "undefined"
+        }
     }
 ]

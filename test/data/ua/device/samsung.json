@@ -297,6 +297,15 @@
         }
     },
     {
+        "desc": "Samsung SmartTV",
+        "ua": "Mozilla/5.0 (SMART-TV; Linux; Tizen 8.0) AppleWebKit/537.36 (KHTML, like Gecko) Samsung Browser/7.0 Chrome/108.0.5359.1 TV Safari/537.36",
+        "expect": {
+            "vendor": "Samsung",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
         "desc": "Samsung SmartTV HBBTV",
         "ua": "HbbTV/1.5.1 (+DRM;Samsung;SmartTV2021:UAU7000;T-KSU2EDEUC-1506.0;KantSU2e;urn:samsungtv:familyname:21_KANTSU2E_UHD_BASIC:2021;) Tizen/6.0 (+TVPLUS+SmartHubLink) Chrome/76 LaTivu_1.0.1_2021 RVID/17",
         "expect": {

@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "ArcaOS",
+        "ua"      : "Mozilla/5.0 (OS/2; ArcaOS 5.0.6; x86_64; rv:89.0) Gecko/20100101 Firefox/89.0",
+        "expect"  :
+        {
+            "name"    : "ArcaOS",
+            "version" : "5.0.6"
+        }
+    },
+    {
+        "desc"    : "ArcaOS",
+        "ua"      : "Mozilla/5.0 (OS/2; ArcaOS; x64; rv:89.0) Gecko/20100101 Firefox/89.0",
+        "expect"  :
+        {
+            "name"    : "ArcaOS",
+            "version" : "undefined"
+        }
+    }
+]

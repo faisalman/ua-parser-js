@@ -260,6 +260,16 @@
         }
     },
     {
+        "desc"    : "ChatGLM-Spider",
+        "ua"      : "Mozilla/5.0 (compatible; ChatGLM-Spider/1.0; +https://chatglm.cn/)",
+        "expect"  :
+        {
+            "name"    : "ChatGLM-Spider",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Coc Coc Bot (web)",
         "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
         "expect"  :
@@ -296,6 +306,36 @@
         {
             "name"    : "DataForSeoBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Daum",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE or Firefox mutant;) Daum 4.1",
+        "expect"  :
+        {
+            "name"    : "Daum",
+            "version" : "4.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Daumoa",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE or Firefox mutant; not on Windows server;) Daumoa 4.0",
+        "expect"  :
+        {
+            "name"    : "Daumoa",
+            "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Daumoa-image",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE or Firefox mutant; not on Windows server;) Daumoa-image/1.0",
+        "expect"  :
+        {
+            "name"    : "Daumoa-image",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -490,6 +530,16 @@
         }
     },
     {
+        "desc"    : "iAskBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/605.1.15 (KHTML, like Gecko; compatible; iAskBot/1.0; +https://iask.ai/) Chrome/120.0.6099.119 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "iAskBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "ImagesiftBot",
         "ua"      : "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)",
         "expect"  :
@@ -581,6 +631,16 @@
         }
     },
     {
+        "desc"    : "Onespot",
+        "ua"      : "Mozilla/5.0 (compatible; Onespot-ScraperBot/1.0; +https://www.onespot.com/identifying-traffic.html)",
+        "expect"  :
+        {
+            "name"    : "Onespot-ScraperBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "OpenAI Search",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",
         "expect"  :
@@ -617,6 +677,36 @@
         {
             "name"    : "PetalBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Qwantbot",
+        "ua"      : "Mozilla/5.0 (compatible; Qwantbot/1.0_12345; +https://help.qwant.com/bot/)",
+        "expect"  :
+        {
+            "name"    : "Qwantbot",
+            "version" : "1.0_12345",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Qwantbot",
+        "ua"      : "Mozilla/5.0 (compatible; Qwantbot-prod51071/1.0; +Qwantbot@qwant.com)",
+        "expect"  :
+        {
+            "name"    : "Qwantbot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Qwantbot",
+        "ua"      : "Mozilla/5.0 (compatible; Qwantbot-news/2.0;  +https://help.qwant.com/bot/)",
+        "expect"  :
+        {
+            "name"    : "Qwantbot",
+            "version" : "2.0",
             "type"    : "crawler"
         }
     },
@@ -677,6 +767,16 @@
         {
             "name"    : "Sogou web spider",
             "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Startpage",
+        "ua"      : "StartpagePrivateImageProxy/3.0 (https://www.startpage.com/; support@startpage.com) aiohttp.client/3.11.11",
+        "expect"  :
+        {
+            "name"    : "StartpagePrivateImageProxy",
+            "version" : "3.0",
             "type"    : "crawler"
         }
     },

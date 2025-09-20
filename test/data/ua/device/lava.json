@@ -1,0 +1,110 @@
+[
+    {
+        "desc": "Lava Agni 2 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; LAVA LXX504 Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/133.0.6943.46 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/499.0.0.31.60;IABMV/1;]",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LXX504",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Agni 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; LAVA LXX501 Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/122.0.6261.119 Mobile Safari/537.36[FBAN/EMA;FBLC/hi_IN;FBAV/396.0.0.9.115;]",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LXX501",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Blaze",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; en-US; LAVA Blaze Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.4.0.1306 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "Blaze",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Blaze 2",
+        "ua": "Mozilla/5.0 (Linux; Android 13; LAVA LZX409 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.97 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/497.0.0.47.36;IABMV/1;]",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LZX409",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Blaze 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; LAVA LXX503) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LXX503",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Blaze Curve",
+        "ua": "Mozilla/5.0 (Linux; Android 14; LAVA LXX505 Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6998.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/505.0.0.57.45;IABMV/1;]",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LXX505",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Blaze Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; LAVA LZX404 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6998.50 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/503.0.0.69.76;IABMV/1;]",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LZX404",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Iris 46",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LAVA LH9950) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/21.0 Chrome/110.0.5481.154 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LH9950",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Iris 54",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9; LAVA LH9931 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.116 Mobile Safari/537.36 OPR/39.1.2254.136708",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LH9931",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava Storm 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 13; LAVA LXX508 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/129.0.6668.100 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LXX508",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava V7 Prime",
+        "ua": "Mozilla/5.0 (Linux; Android 9; LAVA LE9940) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LE9940",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Lava V7s Prime",
+        "ua": "Mozilla/5.0 (Linux; U; Android 9; LAVA LE9940_W Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.116 Mobile Safari/537.36 OPR/43.2.2254.140294",
+        "expect": {
+            "vendor": "LAVA",
+            "model": "LE9940_W",
+            "type": "mobile"
+        }
+    }
+]

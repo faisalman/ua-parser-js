@@ -16,5 +16,32 @@
             "name"    : "Ubuntu",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "Ubuntu",
+        "ua"      : "Mozilla/5.0 (Wayland; Linux x86_64; Huawei) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Ubuntu/23.04 Edg/110.0.1587.41",
+        "expect"  :
+        {
+            "name"    : "Ubuntu",
+            "version" : "23.04"
+        }
+    },
+    {
+        "desc"    : "Ubuntu",
+        "ua"      : "Mozilla/5.0 (X11; Ubuntu 20.04; Linux arm; rv:99.0) Gecko/20100101 Firefox/99.0",
+        "expect"  :
+        {
+            "name"    : "Ubuntu",
+            "version" : "20.04"
+        }
+    },
+    {
+        "desc"    : "Ubuntu",
+        "ua"      : "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16",
+        "expect"  :
+        {
+            "name"    : "Ubuntu",
+            "version" : "14.10"
+        }
     }
 ]

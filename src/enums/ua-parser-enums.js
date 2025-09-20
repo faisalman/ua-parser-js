@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.3
+/*  Enums for UAParser.js v2.0.4
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Enterprise License */
@@ -21,7 +21,6 @@ const Browser = Object.freeze({
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
     BLAZER: 'Blazer',
-    BLU: 'BLU',
     BOLT: 'Bolt',
     BOWSER: 'Bowser',
     BRAVE: 'Brave',
@@ -44,6 +43,8 @@ const Browser = Object.freeze({
     DUCKDUCKGO: 'DuckDuckGo',
     ECOSIA: 'Ecosia',
     EDGE: 'Edge',
+    EDGE_WEBVIEW: 'Edge WebView',
+    EDGE_WEBVIEW2: 'Edge WebView2',
     EPIPHANY: 'Epiphany',
     FACEBOOK: 'Facebook',
     FALKON: 'Falkon',
@@ -214,6 +215,7 @@ const Vendor = Object.freeze({
     ATT: 'AT&T',
     BENQ: 'BenQ',
     BLACKBERRY: 'BlackBerry',
+    BLU: 'BLU',
     CAT: 'Cat',
     DELL: 'Dell',
     ENERGIZER: 'Energizer',
@@ -232,6 +234,7 @@ const Vendor = Object.freeze({
     ITEL: 'itel',
     JOLLA: 'Jolla',
     KOBO: 'Kobo',
+    LAVA: 'Lava',
     LENOVO: 'Lenovo',
     LG: 'LG',
     MEIZU: 'Meizu',
@@ -252,6 +255,7 @@ const Vendor = Object.freeze({
     PICO: 'Pico',
     POLYTRON: 'Polytron',
     REALME: 'Realme',
+    RETROID: 'Retroid',
     RIM: 'RIM',
     ROKU: 'Roku',
     SAMSUNG: 'Samsung',
@@ -266,6 +270,7 @@ const Vendor = Object.freeze({
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
     VIVO: 'Vivo',
+    VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
     XBOX: 'Xbox',
     XIAOMI: 'Xiaomi',
@@ -303,6 +308,7 @@ const OS = Object.freeze({
     AMIGA_OS: 'Amiga OS',
     ANDROID: 'Android',
     ANDROID_X86: 'Android-x86',
+    ARCAOS: 'ArcaOS',
     ARCH: 'Arch',
     BADA: 'Bada',
     BEOS: 'BeOS',
@@ -333,6 +339,7 @@ const OS = Object.freeze({
     IOS: 'iOS',
     JOLI: 'Joli',
     KAIOS: 'KaiOS',
+    KNOPPIX: 'Knoppix',
     KUBUNTU: 'Kubuntu',
     LINPUS: 'Linpus',
     LINSPIRE: 'Linspire',
@@ -381,10 +388,13 @@ const OS = Object.freeze({
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',
+    WINDOWS_CE: 'Windows CE',
     WINDOWS_IOT: 'Windows IoT',
     WINDOWS_MOBILE: 'Windows Mobile',
     WINDOWS_PHONE: 'Windows Phone',
+    WINDOWS_RT: 'Windows RT',
     XBOX: 'Xbox',
+    XUBUNTU: 'Xubuntu',
     ZENWALK: 'Zenwalk'
 
     // TODO : test!

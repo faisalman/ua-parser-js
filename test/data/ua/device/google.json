@@ -72,56 +72,29 @@
         }
     },
     {
-        "desc": "Google Pixel Tablet",
-        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel Tablet Build/AP2A.240905.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
-        "expect": {
-            "vendor": "Google",
-            "model": "Pixel Tablet",
-            "type": "tablet"
-        }
-    },
-    {
-        "desc": "Google Pixel Watch",
-        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch Build/TWD4.231005.002)",
-        "expect": {
-            "vendor": "Google",
-            "model": "Pixel Watch",
-            "type": "wearable"
-        }
-    },
-    {
-        "desc": "Google Pixel Watch 2",
-        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch 2 Build/TWD9.240605.001.A1)",
-        "expect": {
-            "vendor": "Google",
-            "model": "Pixel Watch 2",
-            "type": "wearable"
-        }
-    },
-    {
-        "desc": "Google Pixel XL",
-        "ua": "Mozilla/5.0 (Linux; Android 7.1; Pixel XL Build/NDE63X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.85 Mobile Safari/537.36",
-        "expect": {
-            "vendor": "Google",
-            "model": "Pixel XL",
-            "type": "mobile"
-        }
-    },
-    {
-        "desc": "Google Pixel XL",
-        "ua": "Mozilla/5.0 (Linux; Android 9; Pixel XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
-        "expect": {
-            "vendor": "Google",
-            "model": "Pixel XL",
-            "type": "mobile"
-        }
-    },
-    {
         "desc": "Google Pixel 2",
         "ua": "Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 Build/OPM1.171019.013) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Safari/537.36",
         "expect": {
             "vendor": "Google",
             "model": "Pixel 2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 2",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 2) AppleWebKit/537.36 (KHTML, like Gecko) Edg/57.0.986.6",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 2",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.2; G011A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.88 Safari/537.36 OPR/68.3.3557.64528",
+        "expect": {
+            "vendor": "Google",
+            "model": "G011A",
             "type": "mobile"
         }
     },
@@ -149,6 +122,24 @@
         "expect": {
             "vendor": "Google",
             "model": "Pixel 3",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 3",
+        "ua": "Mozilla/5.0 (Linux; Android 11; G013A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G013A",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 3a",
+        "ua": "Mozilla/5.0 (Linux; Android 14; G020E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G020E",
             "type": "mobile"
         }
     },
@@ -198,11 +189,56 @@
         }
     },
     {
+        "desc": "Google Pixel 4",
+        "ua": "Mozilla/5.0 (Linux; Android 12; G020M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G020M",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Google Pixel 4a",
         "ua": "Mozilla/5.0 (Linux; Android 10; Pixel 4a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.83 Mobile Safari/537.36",
         "expect": {
             "vendor": "Google",
             "model": "Pixel 4a",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4a",
+        "ua": "Mozilla/5.0 (Linux; Android 13; G025J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G025J",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4a",
+        "ua": "Mozilla/5.0 (Linux; Android 12; GA02099) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GA02099",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4a",
+        "ua": "Mozilla/5.0 (Linux; Android 13; G025N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G025N",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 4a (5G)",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 4a (5G) Build/UP1A.231105.001.B2; ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 EdgA/124.0.2478.64",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 4a (5G)",
             "type": "mobile"
         }
     },
@@ -217,10 +253,82 @@
     },
     {
         "desc": "Google Pixel 5",
+        "ua": "Mozilla/5.0 (Linux; Android 13; G5NZ6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G5NZ6",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 5",
+        "ua": "Mozilla/5.0 (Linux; Android 12; GD1YQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GD1YQ",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 5",
+        "ua": "Mozilla/5.0 (Linux; Android 12; GTT9Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GTT9Q",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 5",
         "ua": "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.120 Mobile Safari/537.36",
         "expect": {
             "vendor": "Google",
             "model": "Pixel 5",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 5a 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; G4S1M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G4S1M",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 5a 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; G1F8F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G1F8F",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 6",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Pixel 6 Build/QP1A.190711.020) AppleWebKit/545.31 (KHTML, like Gecko) Firefox/109.0.2318.118 Mobile Safari/545.22",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 6",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 6 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 15; Pixel 6 Pro Build/AP4A.241205.013; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.163 Mobile Safari/537.36 Line/15.0.0/IAB",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 6 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 6 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; G8VOU) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G8VOU",
             "type": "mobile"
         }
     },
@@ -231,6 +339,276 @@
             "vendor": "Google",
             "model": "Pixel 7",
             "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 15; Pixel 7 Pro Build/AP4A.250205.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/133.0.6943.121 Mobile Safari/537.36 musical_ly_2023808030 BytedanceWebview/d8a21c6",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 7 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; GP4BC) AppleWebKit/537.46 (KHTML, like Gecko) Chrome/118.0.5993.80 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GP4BC",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 7 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; GE2AE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.48 Mobile Safari/537.46",
+        "expect": {
+            "vendor": "Google",
+            "model": "GE2AE",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 7a",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 7a Build/AP2A.240905.003; ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 EdgA/124.0.2478.64",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 7a",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 8",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 8 Build/UPB2.230407.014) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.2.7822.95 Mobile Safari/537.36 Vivaldi/5.2.9076.131",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 8",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 8",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 8 Pro Build/UPB1.230309.017; Rooted) AppleWebKit/537.36 (KHTML, like Gecko) Puffin/10.9.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 8 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 8a",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Google Pixel 8a) Chrome/121.0.6167 Mobile",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 8a",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 8a",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GKV4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GKV4X",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 8a",
+        "ua": "Mozilla/5.0 (Linux; Android 15; G8HHN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G8HHN",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 8a",
+        "ua": "Mozilla/5.0 (Linux; Android 15; G576D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G576D",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.119 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 9",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9",
+        "ua": "Mozilla/5.0 (Linux; Android 15; G2YBB) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G2YBB",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GUR25) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GUR25",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GWVK6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GWVK6",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9",
+        "ua": "Mozilla/5.0 (Linux; Android 15; G1B60) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "G1B60",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 9 Pro Build/AD1A.240530.047; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6998.170 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/506.1.0.74.27;IABMV/1;]",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 9 Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GR83Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GR83Y",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GEC77) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GEC77",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro Fold",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 9 Pro Fold) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 9 Pro Fold",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro Fold",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GC15S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GC15S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro Fold",
+        "ua": "Mozilla/5.0 (Linux; Android 15; GGH2X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "GGH2X",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel 9 Pro XL",
+        "ua": "Mozilla/5.0 (Linux; U; Android 15; Pixel 9 Pro XL Build/AP4A.250105.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/133.0.6943.89 Mobile Safari/537.36 OPR/88.0.2254.75874",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel 9 Pro XL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel Fold",
+        "ua": "Mozilla/5.0 (Linux; Android 15; Pixel Fold Build/AP4A.250105.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.97 Safari/537.36 [FB_IAB/FB4A;FBAV/497.0.0.40.36;IABMV/1;]",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Fold",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel Tablet",
+        "ua": "Mozilla/5.0 (Linux; Android 14; Pixel Tablet Build/AP2A.240905.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Tablet",
+            "type": "tablet"
+        }
+    },
+    {
+        "desc": "Google Pixel Watch",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch Build/TWD4.231005.002)",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Watch",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Google Pixel Watch 2",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 13; Google Pixel Watch 2 Build/TWD9.240605.001.A1)",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel Watch 2",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Google Pixel XL",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1; Pixel XL Build/NDE63X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.85 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel XL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixel XL",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Pixel XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixel XL",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Google Pixelbook",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Google Pixelbook) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixelbook",
+            "type": "undefined"
+        }
+    },
+    {
+        "desc": "Google Pixelbook Go",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Google Pixelbook Go) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36 OPR/62.3.3146.57763",
+        "expect": {
+            "vendor": "Google",
+            "model": "Pixelbook Go",
+            "type": "undefined"
         }
     }
 ]

@@ -7,5 +7,14 @@
             "name"    : "Fuchsia",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "Fuchsia",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Mozilla/5.0 (X11; Linux; Fuchsia; GoogleTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Large Screen Safari/537.36 GoogleTV",
+        "expect"  :
+        {
+            "name"    : "Fuchsia",
+            "version" : "undefined"
+        }
     }
 ]
