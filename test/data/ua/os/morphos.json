@@ -7,5 +7,32 @@
             "name"    : "MorphOS",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "MorphOS",
+        "ua"      : "Mozilla/5.0 (Macintosh; PowerPC MorphOS 3.7; Odyssey Web Browser; rv:1.23) AppleWebKit/538.1 (KHTML, like Gecko) OWB/1.23 Safari/538.1",
+        "expect"  :
+        {
+            "name"    : "MorphOS",
+            "version" : "3.7"
+        }
+    },
+    {
+        "desc"    : "MorphOS",
+        "ua"      : "Mozilla/5.0 (X11; MorphOS ppc64; rv:88.0) Gecko/20100101 Firefox/88.0",
+        "expect"  :
+        {
+            "name"    : "MorphOS",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "MorphOS",
+        "ua"      : "Mozilla/5.0 (compatible; Origyn Web Browser; MorphOS; PPC; U) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+)",
+        "expect"  :
+        {
+            "name"    : "MorphOS",
+            "version" : "undefined"
+        }
     }
 ]

@@ -7,5 +7,14 @@
             "name"    : "Kubuntu",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "Kubuntu",
+        "ua"      : "Mozilla/5.0 (Kubuntu; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0",
+        "expect"  :
+        {
+            "name"    : "Kubuntu",
+            "version" : "undefined"
+        }
     }
 ]

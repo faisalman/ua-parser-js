@@ -9,12 +9,30 @@
         }
     },
     {
-        "desc"    : "Windows Phone OS",
+        "desc"    : "Windows Phone 6.5",
+        "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; HTC_Touch2_T3333; Windows Phone 6.5)",
+        "expect"  :
+        {
+            "name"    : "Windows Phone",
+            "version" : "6.5"
+        }
+    },
+    {
+        "desc"    : "Windows Phone 7.0",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; DELL; Venue Pro)",
         "expect"  :
         {
-            "name"    : "Windows Phone OS",
+            "name"    : "Windows Phone",
             "version" : "7.0"
+        }
+    },
+    {
+        "desc"    : "Windows Phone 7.5",
+        "ua"      : "Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; NOKIA; Lumia 800)",
+        "expect"  :
+        {
+            "name"    : "Windows Phone",
+            "version" : "7.5"
         }
     },
     {
@@ -24,6 +42,15 @@
         {
             "name"    : "Windows Phone",
             "version" : "8.0"
+        }
+    },
+    {
+        "desc"    : "Windows Phone 8.1",
+        "ua"      : "Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537",
+        "expect"  :
+        {
+            "name"    : "Windows Phone",
+            "version" : "8.1"
         }
     }
 ]

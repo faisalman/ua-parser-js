@@ -7,5 +7,14 @@
             "name"    : "Zenwalk",
             "version" : "7.3"
         }
+    },
+    {
+        "desc"    : "Zenwalk",
+        "ua"      : "Mozilla/5.0 (X11; U; Linux i686; de; rv:1.9.2.13) Gecko/20101221 IceCat/3.6.13 (like Firefox/3.6.13) (Zenwalk GNU Linux)",
+        "expect"  :
+        {
+            "name"    : "Zenwalk",
+            "version" : "undefined"
+        }
     }
 ]

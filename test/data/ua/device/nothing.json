@@ -18,11 +18,47 @@
         }
     },
     {
+        "desc": "Nothing 2",
+        "ua": "Mozilla/5.0 (Linux; Android 15; AIN065 Build/AQ3A.240929.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.90 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/496.0.0.45.65;IABMV/1;] FBNV/500",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "AIN065",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Nothing 2a",
         "ua": "Mozilla/5.0 (Linux; Android 14; A142 Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.71 Mobile Safari/537.36",
         "expect": {
             "vendor": "Nothing",
             "model": "A142",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nothing 2a Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 14; A142P Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.107 Mobile Safari/537.36 OPX/2.6",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "A142P",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nothing 3a",
+        "ua": "Mozilla/5.0 (Linux; Android 15; A059 Build/AQ3A.241015.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.103 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "A059",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Nothing 3a Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 15; A059P Build/AQ3A.241015.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/136.0.7103.57 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/511.0.0.73.36;IABMV/1;]",
+        "expect": {
+            "vendor": "Nothing",
+            "model": "A059P",
             "type": "mobile"
         }
     }

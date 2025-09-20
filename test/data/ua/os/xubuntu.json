@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "Xubuntu",
+        "ua"      : "Mozilla/5.0 (X11; Xubuntu Linux 21.10 x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.81 Safari/537.57 Vivaldi/5.1.2 (Blink)",
+        "expect"  :
+        {
+            "name"    : "Xubuntu",
+            "version" : "21.10"
+        }
+    },
+    {
+        "desc"    : "Xubuntu",
+        "ua"      : "Mozilla/5.0 (X11; Xubuntu 14.04.5 LTS) AppleWebKit/537.36 (KHTML, like Gecko) Xubuntu Chrome/66.0.2623.87 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Xubuntu",
+            "version" : "14.04.5"
+        }
+    }
+]
