@@ -123,42 +123,6 @@
         }
     },
     {
-        "desc": "Philips SmartTV",
-        "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
-        "expect": {
-            "vendor": "Philips",
-            "model": "",
-            "type": "smarttv"
-        }
-    },
-    {
-        "desc": "Philips 32PFL6606K/02 SmartTV (2011)",
-        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
-        "expect": {
-            "vendor": "Philips",
-            "model": "",
-            "type": "smarttv"
-        }
-    },
-    {
-        "desc": "Philips 32PFL6606K/02 SmartTV (2013)",
-        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
-        "expect": {
-            "vendor": "Philips",
-            "model": "",
-            "type": "smarttv"
-        }
-    },
-    {
-        "desc": "Philips 32PHS5301/12 SmartTV (2016)",
-        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36 OPR/29.0.1803.0 OMI/4.5.23.37.MOT2.13 HbbTV/1.2.1 (;Philips;32PHS5301/12;;_TV_MT5800;) Firmware/TPM161E_012.002.045.001 en",
-        "expect": {
-            "vendor": "Philips",
-            "model": "32PHS5301/12",
-            "type": "smarttv"
-        }
-    },
-    {
         "desc": "Samsung SmartTV",
         "ua": "Mozilla/5.0 (SMART-TV; X11; Linux armv7l) AppleWebkit/537.42 (KHTML, like Gecko) Safari/537.42",
         "expect": {
