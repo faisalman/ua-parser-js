@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js PRO Enterprise",
   "name": "@ua-parser-js/pro-enterprise",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
   "keywords": [
@@ -227,8 +227,7 @@
     "detect-europe-js": "^0.1.2",
     "is-standalone-pwa": "^0.1.1",
     "ua-is-frozen": "^0.1.2",
-    "node-fetch": "^2.7.0",
-    "@types/node-fetch": "^2.6.12"
+    "undici": "^7.12.0"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",

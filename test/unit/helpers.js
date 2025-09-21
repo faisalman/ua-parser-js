@@ -2,6 +2,7 @@ const assert = require('assert');
 const { UAParser } = require('../../src/main/ua-parser');
 const { getDeviceVendor, isAppleSilicon, isAIBot, isBot, isChromeFamily } = require('../../src/helpers/ua-parser-helpers');
 const { Bots, Emails } = require('../../src/extensions/ua-parser-extensions');
+const { DeviceVendor } = require('../../src/enums/ua-parser-enums');
 
 describe('getDeviceVendor', () => {
     it('Can guess the device vendor from a model name', () => {
@@ -11,10 +12,10 @@ describe('getDeviceVendor', () => {
         const modelNexus = 'Nexus 6P';
         const modelAquos = 'AQUOS-TVX19B';
 
-        assert.equal(getDeviceVendor(modelSM), 'Samsung');
-        assert.equal(getDeviceVendor(modelRedmi), 'Xiaomi');
-        assert.equal(getDeviceVendor(modelNexus), 'Huawei');
-        assert.equal(getDeviceVendor(modelAquos), 'Sharp');
+        assert.equal(getDeviceVendor(modelSM), DeviceVendor.SAMSUNG);
+        assert.equal(getDeviceVendor(modelRedmi), DeviceVendor.XIAOMI);
+        assert.equal(getDeviceVendor(modelNexus), DeviceVendor.HUAWEI);
+        assert.equal(getDeviceVendor(modelAquos), DeviceVendor.SHARP);
     });
 });
 

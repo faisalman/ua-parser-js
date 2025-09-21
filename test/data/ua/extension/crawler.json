@@ -80,6 +80,26 @@
         }
     },
     {
+        "desc"    : "Algolia Crawler",
+        "ua"      : "Algolia Crawler/v2.183.0",
+        "expect"  :
+        {
+            "name"    : "Algolia Crawler",
+            "version" : "v2.183.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Algolia Crawler Renderscript",
+        "ua"      : "Algolia Crawler Renderscript",
+        "expect"  :
+        {
+            "name"    : "Algolia Crawler Renderscript",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Applebot",
         "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1;+http://www.apple.com/go/applebot)",
         "expect"  :
@@ -136,6 +156,16 @@
         {
             "name"    : "archive.org_bot",
             "version" : "3.3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Baidu ADS",
+        "ua"      : "Baidu-ADS",
+        "expect"  :
+        {
+            "name"    : "Baidu-ADS",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -230,6 +260,36 @@
         }
     },
     {
+        "desc"    : "BLEXBot",
+        "ua"      : "Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)",
+        "expect"  :
+        {
+            "name"    : "BLEXBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "botify",
+        "ua"      : "Desktop: Mozilla/5.0 (compatible; botify; http://botify.com)",
+        "expect"  :
+        {
+            "name"    : "botify",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Bravebot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Bravebot/1.0; +https://search.brave.com/help/brave-search-crawler) Chrome/W.X.Y.Z Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Bravebot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Bytespider",
         "ua"      : "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.1511.1269 Mobile Safari/537.36; Bytespider",
         "expect"  :
@@ -270,6 +330,26 @@
         }
     },
     {
+        "desc"    : "Claude-SearchBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-SearchBot/1.0; +Claude-SearchBot@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-SearchBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ClaudeWeb",
+        "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-Web",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Coc Coc Bot (web)",
         "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
         "expect"  :
@@ -290,12 +370,52 @@
         }
     },
     {
-        "desc"    : "ClaudeWeb",
-        "ua"      : "Claude-Web/1.0 (web crawler; +https://www.anthropic.com/; bots@anthropic.com)",
+        "desc"    : "cohere-training-data-crawler",
+        "ua"      : "cohere-training-data-crawler (+crawler@cohere.ai)",
         "expect"  :
         {
-            "name"    : "Claude-Web",
+            "name"    : "cohere-training-data-crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "contxbot",
+        "ua"      : "Mozilla/5.0 (compatible;contxbot/1.0)",
+        "expect"  :
+        {
+            "name"    : "contxbot",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Cotoyogi",
+        "ua"      : "Mozilla/5.0 (compatible; Cotoyogi/4.0; +https://ds.rois.ac.jp/center8/crawler/)",
+        "expect"  :
+        {
+            "name"    : "Cotoyogi",
+            "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Coveobot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) (compatible; Coveobot/2.0;+http://www.coveo.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Coveobot",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "CriteoBot",
+        "ua"      : "CriteoBot/0.1 (+https://www.criteo.com/criteo-crawler/)",
+        "expect"  :
+        {
+            "name"    : "CriteoBot",
+            "version" : "0.1",
             "type"    : "crawler"
         }
     },
@@ -340,6 +460,16 @@
         }
     },
     {
+        "desc"    : "DeepSeekBot",
+        "ua"      : "DeepSeekBot",
+        "expect"  :
+        {
+            "name"    : "DeepSeekBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Diffbot",
         "ua"      : "Diffbot/0.1",
         "expect"  :
@@ -366,6 +496,26 @@
         {
             "name"    : "DuckDuckBot",
             "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "DuckDuckGo-Favicons-Bot",
+        "ua"      : "DuckDuckGo-Favicons-Bot/1.0",
+        "expect"  :
+        {
+            "name"    : "DuckDuckGo-Favicons-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Elastic",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/124.0.6367.29 Safari/537.36 Elastic/Synthetics",
+        "expect"  :
+        {
+            "name"    : "Elastic",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -406,6 +556,36 @@
         {
             "name"    : "facebookcatalog",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "FirecrawlAgent",
+        "ua"      : "Mozilla/5.0 (compatible; FirecrawlAgent/1.0)",
+        "expect"  :
+        {
+            "name"    : "FirecrawlAgent",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Freespoke",
+        "ua"      : "Mozilla/5.0 (compatible; Freespoke/2.0; +https://docs.freespoke.com/search/bot)",
+        "expect"  :
+        {
+            "name"    : "Freespoke",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "APIs-Google",
+        "ua"      : "APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)",
+        "expect"  :
+        {
+            "name"    : "APIs-Google",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -510,6 +690,16 @@
         }
     },
     {
+        "desc"    : "Google-CloudVertexBot",
+        "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.7204.183 Mobile Safari/537.36 (compatible; Google-CloudVertexBot; +https://cloud.google.com/enterprise-search)",
+        "expect"  :
+        {
+            "name"    : "Google-CloudVertexBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Google-Safety",
         "ua"      : "Google-Safety",
         "expect"  :
@@ -525,6 +715,16 @@
         "expect"  :
         {
             "name"    : "GPTBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "HuggingFace-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; HuggingFace-Bot/1.0; +https://huggingface.co/)",
+        "expect"  :
+        {
+            "name"    : "HuggingFace-Bot",
             "version" : "1.0",
             "type"    : "crawler"
         }
@@ -546,6 +746,26 @@
         {
             "name"    : "ImagesiftBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Kagibot",
+        "ua"      : "Mozilla/5.0 (compatible; Kagibot/1.0; +https://kagi.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Kagibot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Kangaroo Bot",
+        "ua"      : "Mozilla/5.0 (compatible; Kangaroo Bot/1.0)",
+        "expect"  :
+        {
+            "name"    : "Kangaroo Bot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -576,6 +796,16 @@
         {
             "name"    : "magpie-crawler",
             "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Marginalia Search",
+        "ua"      : "search.marginalia.nu",
+        "expect"  :
+        {
+            "name"    : "marginalia",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -611,6 +841,16 @@
         }
     },
     {
+        "desc"    : "msnbot",
+        "ua"      : "msnbot/2.0b (+http://search.msn.com/msnbot.htm)",
+        "expect"  :
+        {
+            "name"    : "msnbot",
+            "version" : "2.0b",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Omgili",
         "ua"      : "omgili/0.5 +https://omgili.com",
         "expect"  :
@@ -631,6 +871,16 @@
         }
     },
     {
+        "desc"    : "OnCrawl",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4 (compatible; OnCrawl Mobile/1.0; +http://www.oncrawl.com/)",
+        "expect"  :
+        {
+            "name"    : "OnCrawl",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Onespot",
         "ua"      : "Mozilla/5.0 (compatible; Onespot-ScraperBot/1.0; +https://www.onespot.com/identifying-traffic.html)",
         "expect"  :
@@ -646,6 +896,16 @@
         "expect"  :
         {
             "name"    : "OAI-SearchBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "PanguBot",
+        "ua"      : "Mozilla/5.0 (compatible; PanguBot/1.0)",
+        "expect"  :
+        {
+            "name"    : "PanguBot",
             "version" : "1.0",
             "type"    : "crawler"
         }
@@ -711,6 +971,46 @@
         }
     },
     {
+        "desc"    : "Replicate-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; Replicate-Bot/1.0; +https://replicate.com/)",
+        "expect"  :
+        {
+            "name"    : "Replicate-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "RunPod-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; RunPod-Bot/1.0; +https://runpod.io/)",
+        "expect"  :
+        {
+            "name"    : "RunPod-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SBIntuitionsBot",
+        "ua"      : "Mozilla/5.0 (compatible; SBIntuitionsBot/0.1;+https://www.sbintuitions.co.jp/bot/)",
+        "expect"  :
+        {
+            "name"    : "SBIntuitionsBot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SeekportBot",
+        "ua"      : "Mozilla/5.0 (compatible; SeekportBot; +https://bot.seekport.com)",
+        "expect"  :
+        {
+            "name"    : "SeekportBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "SemrushBot",
         "ua"      : "Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)",
         "expect"  :
@@ -761,7 +1061,27 @@
         }
     },
     {
-        "desc"    : "Sogou",
+        "desc"    : "Siteimprove",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; SiteCheck-sitecrawl by Siteimprove.com; +https://siteimprove.com/bots) Chrome/[VERSION] Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Siteimprove",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Sogou Pic Spider",
+        "ua"      : "Sogou Pic Spider/3.0( http://www.sogou.com/docs/help/webmasters.htm#07)",
+        "expect"  :
+        {
+            "name"    : "Sogou Pic Spider",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Sogou web spider",
         "ua"      : "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)",
         "expect"  :
         {
@@ -791,12 +1111,32 @@
         }
     },
     {
+        "desc"    : "TikTokSpider",
+        "ua"      : "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; TikTokSpider; ttspider-feedback@tiktok.com)",
+        "expect"  :
+        {
+            "name"    : "TikTokSpider",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Timpibot",
         "ua"      : "Timpibot/0.8 (+http://www.timpi.io)",
         "expect"  :
         {
             "name"    : "Timpibot",
             "version" : "0.8",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Together-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; Together-Bot/1.0; +https://together.ai/)",
+        "expect"  :
+        {
+            "name"    : "Together-Bot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -811,11 +1151,61 @@
         }
     },
     {
+        "desc"    : "TwinAgent",
+        "ua"      : "TwinAgent/1.0",
+        "expect"  :
+        {
+            "name"    : "TwinAgent",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "xAI-Bot",
+        "ua"      : "Mozilla/5.0 (compatible; xAI-Bot/1.0; +https://x.ai/)",
+        "expect"  :
+        {
+            "name"    : "xAI-Bot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "VelenPublicWebCrawler",
         "ua"      : "Mozilla/5.0 (compatible; VelenPublicWebCrawler/1.0; +https://velen.io)",
         "expect"  :
         {
             "name"    : "VelenPublicWebCrawler",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "v0bot",
+        "ua"      : "v0bot",
+        "expect"  :
+        {
+            "name"    : "v0bot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "webzio",
+        "ua"      : "webzio (+https://webz.io/bot.html)",
+        "expect"  :
+        {
+            "name"    : "webzio",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Webzio-Extended",
+        "ua"      : "Mozilla/5.0 (compatible; Webzio-Extended/1.0; +https://www.webzio.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Webzio-Extended",
             "version" : "1.0",
             "type"    : "crawler"
         }
@@ -841,12 +1231,302 @@
         }
     },
     {
+        "desc"    : "YandexAccessibilityBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexAccessibilityBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexAdditionalBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexAdditionalBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexAdditionalBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexAdNet",
+        "ua"      : "Mozilla/5.0 (compatible; YandexAdNet/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexAdNet",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexBlogs",
+        "ua"      : "Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexBlogs",
+            "version" : "0.99",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "YandexBot",
         "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
         "expect"  :
         {
             "name"    : "YandexBot",
             "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexBot MirrorDetector",
+        "ua"      : "Mozilla/5.0 (compatible; YandexBot/3.0; MirrorDetector; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexBot MirrorDetector",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexComBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexComBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexComBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexFavicons",
+        "ua"      : "Mozilla/5.0 (compatible; YandexFavicons/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexFavicons",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexImageResizer",
+        "ua"      : "Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexImageResizer",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexImages",
+        "ua"      : "Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexImages",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMarket",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMarket/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMarket",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMetrika",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMetrika",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMedia",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMedia/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMedia",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMobileBot",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexMobileBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMobileBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexMobileScreenShotBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexMobileScreenShotBot/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexMobileScreenShotBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexNews",
+        "ua"      : "Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexNews",
+            "version" : "4.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexOntoDB",
+        "ua"      : "Mozilla/5.0 (compatible; YandexOntoDB/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexOntoDB",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexOntoDBAPI",
+        "ua"      : "Mozilla/5.0 (compatible; YandexOntoDBAPI/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexOntoDBAPI",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexPartner",
+        "ua"      : "Mozilla/5.0 (compatible; YandexPartner/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexPartner",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexRCA",
+        "ua"      : "Mozilla/5.0 (compatible; YandexRCA/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexRCA",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexRenderResourcesBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexRenderResourcesBot/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexRenderResourcesBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexScreenshotBot",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Safari/537.36 (compatible; YandexScreenshotBot/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexScreenshotBot",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexSpravBot",
+        "ua"      : "Mozilla/5.0 (compatible; YandexSpravBot/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexSpravBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexTracker",
+        "ua"      : "Mozilla/5.0 (compatible; YandexTracker/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexTracker",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVertis",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVertis/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVertis",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVerticals",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVerticals/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVerticals",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVideo",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVideo/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVideo",
+            "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexVideoParser",
+        "ua"      : "Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexVideoParser",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YandexWebmaster",
+        "ua"      : "Mozilla/5.0 (compatible; YandexWebmaster/2.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexWebmaster",
+            "version" : "2.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YepBot",
+        "ua"      : "Mozilla/5.0 (compatible; YepBot/1.0; +http://yep.com/yepbot/)",
+        "expect"  :
+        {
+            "name"    : "YepBot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -887,6 +1567,16 @@
         {
             "name"    : "YouBot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "ZumBot",
+        "ua"      : "Mozilla/5.0 (compatible; ZumBot/1.0; http://help.zum.com/inquiry)",
+        "expect"  :
+        {
+            "name"    : "ZumBot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     }

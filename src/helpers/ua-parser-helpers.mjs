@@ -3,7 +3,7 @@
 // Source: /src/helpers/ua-parser-helpers.js
 
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.4
+/*  Helpers for UAParser.js v2.0.5
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Enterprise License */
@@ -12,11 +12,12 @@
 /*jshint esversion: 6 */ 
 
 import { UAParser } from '../main/ua-parser.mjs';
-import { CPU, OS, Engine } from '../enums/ua-parser-enums.mjs';
-import { Bots } from '../extensions/ua-parser-extensions.mjs';
+import { CPUArch, OSName, EngineName, Extension, BrowserType } from '../enums/ua-parser-enums.mjs';
+import { Bots, Crawlers } from '../extensions/ua-parser-extensions.mjs';
 import { isFromEU } from 'detect-europe-js';
 import { isFrozenUA } from 'ua-is-frozen';
 import { isStandalonePWA } from 'is-standalone-pwa';
+const { Crawler } = Extension.BrowserName;
 
 const toResult = (value, head, ext) => typeof value === 'string' ? UAParser(value, head, ext) : value;
 
@@ -24,8 +25,8 @@ const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${m
 
 const isAppleSilicon = (resultOrUA) => {
     const res = toResult(resultOrUA);
-    if (res.os.is(OS.MACOS)) {
-        if (res.cpu.is(CPU.ARM)) {
+    if (res.os.is(OSName.MACOS)) {
+        if (res.cpu.is(CPUArch.ARM)) {
             return true;
         }
         if (typeof resultOrUA !== 'string' && typeof window !== 'undefined') {
@@ -48,88 +49,129 @@ const isAppleSilicon = (resultOrUA) => {
 const isAIBot = (resultOrUA) => [
 
     // AI2
-    'ai2bot',
+    Crawler.AI2_BOT,
 
     // Amazon
-    'amazonbot',
+    Crawler.AMAZON_BOT,
 
     // Anthropic
-    'anthropic-ai',
-    'claude-web',
-    'claudebot',
+    Crawler.ANTHROPIC_AI,
+    Crawler.ANTHROPIC_CLAUDE_BOT,
+    Crawler.ANTHROPIC_CLAUDE_SEARCHBOT,
+    Crawler.ANTHROPIC_CLAUDE_WEB,
 
     // Apple
-    'applebot',
-    'applebot-extended',
+    Crawler.APPLE_BOT,
+    Crawler.APPLE_BOT_EXTENDED,
+
+    // Brave
+    Crawler.BRAVE_BOT,
 
     // ByteDance
-    'bytespider',
+    Crawler.BYTEDANCE_BYTESPIDER,
+    Crawler.BYTEDANCE_TIKTOKSPIDER,
+
+    // Cohere
+    Crawler.COHERE_TRAINING_DATA_CRAWLER,
 
     // Common Crawl
-    'ccbot',
+    Crawler.COMMON_CRAWL_CCBOT,
+    
+    // Coveo
+    Crawler.COVEO_BOT,
 
     // DataForSeo
-    'dataforseobot',
+    Crawler.DATAFORSEO_BOT,
+
+    // DeepSeek
+    Crawler.DEEPSEEK_BOT,
 
     // Diffbot
-    'diffbot',
+    Crawler.DIFFBOT,
 
     // Google
-    'googleother',
-    'googleother-image',
-    'googleother-video',
-    'google-extended',
+    Crawler.GOOGLE_EXTENDED,
+    Crawler.GOOGLE_OTHER,
+    Crawler.GOOGLE_OTHER_IMAGE,
+    Crawler.GOOGLE_OTHER_VIDEO,
+    Crawler.GOOGLE_CLOUDVERTEXBOT,
 
     // Hive AI
-    'imagesiftbot',
+    Crawler.HIVE_IMAGESIFTBOT,
 
     // Huawei
-    'petalbot',
+    Crawler.HUAWEI_PETALBOT,
+    Crawler.HUAWEI_PANGUBOT,
+
+    // Hugging Face
+    Crawler.HUGGINGFACE_BOT,
+
+    // Kangaroo
+    Crawler.KANGAROO_BOT,
+
+    // Mendable.ai
+    Crawler.FIRECRAWL_AGENT,
 
     // Meta
-    'facebookbot',
-    'meta-externalagent',
+    Crawler.META_FACEBOOKBOT,
+    Crawler.META_EXTERNALAGENT,
 
     // OpenAI
-    'gptbot',
-    'oai-searchbot',
+    Crawler.OPENAI_GPTBOT,
+    Crawler.OPENAI_SEARCH_BOT,
 
     // Perplexity
-    'perplexitybot',
+    Crawler.PERPLEXITY_BOT,
+
+    // Replicate
+    Crawler.REPLICATE_BOT,
+
+    // Runpod
+    Crawler.RUNPOD_BOT,
+
+    // SB Intuitions
+    Crawler.SB_INTUITIONS_BOT,
 
     // Semrush
-    'semrushbot-ocob',
+    Crawler.SEMRUSH_BOT_CONTENTSHAKE,
 
     // Timpi
-    'timpibot',
+    Crawler.TIMPI_BOT,
+
+    // Together AI
+    Crawler.TOGETHER_BOT,
 
     // Velen.io
-    'velenpublicwebcrawler',
+    Crawler.HUNTER_VELENPUBLICWEBCRAWLER,
+
+    // Vercel
+    Crawler.VERCEL_V0BOT,
 
     // Webz.io
-    'omgili',
-    'omgilibot',
-    'webzio-extended',
+    Crawler.WEBZIO_OMGILI,
+    Crawler.WEBZIO_OMGILI_BOT,
+    Crawler.WEBZIO_EXTENDED,
+
+    // X
+    Crawler.XAI_BOT,
 
     // You.com
-    'youbot',
+    Crawler.YOU_BOT,
 
     // Zhipu AI
-    'chatglm-spider',
-
-    // Zyte
-    'scrapy'
-
-    ].includes(String(toResult(resultOrUA, Bots).browser.name).toLowerCase());
+    Crawler.ZHIPU_CHATGLM_SPIDER
+    ]
+    .map((s) => s.toLowerCase())
+    .includes(String(toResult(resultOrUA, Crawlers).browser.name).toLowerCase());
 
 const isBot = (resultOrUA) => [
-    'cli', 
-    'crawler', 
-    'fetcher', 
-    'library'
+    BrowserType.CLI, 
+    BrowserType.CRAWLER, 
+    BrowserType.FETCHER, 
+    BrowserType.LIBRARY
     ].includes(toResult(resultOrUA, Bots).browser.type);
 
-const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(Engine.BLINK);
+const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(EngineName.BLINK);
 
 const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
                             / electron\//i.test(navigator?.userAgent));         // browser

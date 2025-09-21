@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.4
+/* UAParser.js v2.0.5
    Copyright © 2012-2025 Faisal Salman <f@faisalman.com>
    UAParser.js PRO Enterprise License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -19,7 +19,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.4',
+    var LIBVERSION  = '2.0.5',
         UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
@@ -188,6 +188,8 @@
         },
         setProps = function (arr) {
             for (var i in arr) {
+                if (!arr.hasOwnProperty(i)) continue;
+
                 var propName = arr[i];
                 if (typeof propName == OBJ_TYPE && propName.length == 2) {
                     this[propName[0]] = propName[1];
@@ -455,6 +457,8 @@
             ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME, [TYPE, INAPP]], [
+            /(zalo(?:app)?)[\/\sa-z]*([\w\.-]+)/i                               // Zalo 
+            ], [[NAME, /(.+)/, 'Zalo'], VERSION, [TYPE, INAPP]], [
 
             /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
             ], [NAME, VERSION], [
@@ -536,15 +540,15 @@
             /( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i
             ], [[ARCHITECTURE, 'arm']], [
 
-            /((ppc|powerpc)(64)?)( mac|;|\))/i                                  // PowerPC
-            ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
-
             / sun4\w[;\)]/i                                                     // SPARC
             ], [[ARCHITECTURE, 'sparc']], [
-
-            /\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i
                                                                                 // IA64, 68K, ARM/64, AVR/32, IRIX/64, MIPS/64, SPARC/64, PA-RISC
-            ], [[ARCHITECTURE, lowerize]]
+            /\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i,
+            /((ppc|powerpc)(64)?)( mac|;|\))/i,                                 // PowerPC
+            /(?:osf1|[freopnt]{3,4}bsd) (alpha)/i                               // Alpha
+            ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
+            /winnt.+\[axp/i
+            ], [[ARCHITECTURE, 'alpha']]
         ],
 
         device : [[
@@ -768,7 +772,8 @@
             /; (blu|hmd|imo|infinix|lava|oneplus|tcl)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,  // BLU/HMD/IMO/Infinix/Lava/OnePlus/TCL
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
-            /(oppo) ?([\w ]+) bui/i                                             // OPPO
+            /(oppo) ?([\w ]+) bui/i,                                            // OPPO
+            /droid[^;]+; (philips)[_ ]([sv-x][\d]{3,4}[xz]?)/i                  // Philips
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 
             /(kobo)\s(ereader|touch)/i,                                         // Kobo
@@ -795,6 +800,7 @@
             // SMARTTVS
             ///////////////////
 
+            /(philips)[\w ]+tv/i,                                               // Philips
             /smart-tv.+(samsung)/i                                              // Samsung
             ], [VENDOR, [TYPE, SMARTTV]], [
             /hbbtv.+maple;(\d+)/i
@@ -832,11 +838,6 @@
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,                          // Roku
             /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i         // HbbTV devices
             ], [[VENDOR, /.+\/(\w+)/, '$1', strMapper, {'LG':'lge'}], [MODEL, trim], [TYPE, SMARTTV]], [
-                                                                                // SmartTV from Unidentified Vendors
-            /droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i
-            ], [MODEL, [TYPE, SMARTTV]], [
-            /\b(android tv|smart[- ]?tv|opera tv|tv; rv:|large screen[\w ]+safari)\b/i
-            ], [[TYPE, SMARTTV]], [
 
             ///////////////////
             // CONSOLES
@@ -883,7 +884,7 @@
 
             /droid.+; (glass) \d/i                                              // Google Glass
             ], [MODEL, [VENDOR, GOOGLE], [TYPE, XR]], [
-            /(pico) (4|neo3(?: link|pro)?)/i                                    // Pico
+            /(pico) ([\w ]+) os\d/i                                             // Pico
             ], [VENDOR, MODEL, [TYPE, XR]], [
             /(quest( \d| pro)?s?).+vr/i                                         // Meta Quest
             ], [MODEL, [VENDOR, FACEBOOK], [TYPE, XR]], [
@@ -907,6 +908,10 @@
             // MIXED (GENERIC)
             ///////////////////
 
+            /droid.+; ([\w- ]+) (4k|android|smart|google)[- ]?tv/i              // Unidentifiable SmartTV
+            ], [MODEL, [TYPE, SMARTTV]], [
+            /\b((4k|android|smart|opera)[- ]?tv|tv; rv:|large screen[\w ]+safari)\b/i
+            ], [[TYPE, SMARTTV]], [
             /droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+?(mobile|vr|\d) safari/i
             ], [MODEL, [TYPE, strMapper, { 'mobile' : 'Mobile', 'xr' : 'VR', '*' : TABLET }]], [
             /\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i                      // Unidentifiable Tablet
@@ -1263,7 +1268,7 @@
                 case UA_ENGINE:
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
-                        for (var i in brands) {
+                        for (var i=0; i<brands.length; i++) {
                             var brandName = brands[i].brand || brands[i],
                                 brandVersion = brands[i].version;
                             if (this.itemType == UA_BROWSER && 
@@ -1385,11 +1390,22 @@
             extensions = undefined;
         }
 
-        // Convert Headers object into a plain object
-        if (headers && typeof headers.append === FUNC_TYPE) {
-            var kv = {};
-            headers.forEach(function (v, k) { kv[k] = v; });
-            headers = kv;
+        if (headers) {
+            if (typeof headers.append === FUNC_TYPE) {
+                // Convert Headers object into a plain object
+                var kv = {};
+                headers.forEach(function (v, k) { kv[String(k).toLowerCase()] = v; });
+                headers = kv;
+            } else {
+                // Normalize headers field name into lowercase
+                var normalized = {};
+                for (var header in headers) {
+                    if (headers.hasOwnProperty(header)) {
+                        normalized[String(header).toLowerCase()] = headers[header];
+                    }
+                }
+                headers = normalized;
+            }
         }
         
         if (!(this instanceof UAParser)) {

@@ -65,6 +65,35 @@
 
 --- 
 
+## Version 2.0.5
+
+- Add new browser: Zalo
+- Add new CPU arch: alpha
+- Add new device vendor: Philips
+- Improve device detection: Pico
+- Fix parsing error on pages with modified Array prototypes
+- Improve type declarations:
+    - Replace `node-fetch` dependency with `undici`
+    - Replace hardcoded string values with enum from `enum` submodule
+- `enums` submodule:
+    - Add `Extension` enum for `extensions` submodule
+    - Type declaration file now automatically generated using build script
+    - Naming adjustments:
+        - `Browser` => `BrowserName`
+        - `CPU` => `CPUArch`
+        - `Device` => `DeviceType`
+        - `Vendor` => `DeviceVendor`
+        - `Engine` => `EngineName`
+        - `OS` => `OSName`
+- `extensions` submodule:
+    - Add new crawlers: 
+        APIs-Google, Algolia Crawler, Algolia Crawler Renderscript, Baidu-ADS, BLEXBot, botify, Bravebot, Claude-Web, cohere-training-data-crawler, contxbot, Cotoyogi, Coveobot, CriteoBot, DeepSeekBot, DuckDuckGo-Favicons-Bot, Elastic, FirecrawlAgent, Freespoke, Google-CloudVertexBot, HuggingFace-Bot, Kagibot, Kangaroo Bot, marginalia, msnbot, OnCrawl, Replicate-Bot, RunPod-Bot, SBIntuitionsBot, SeekportBot, Siteimprove, Sogou Pic Spider, TikTokSpider, TwinAgent, v0bot, webzio, Webzio-Extended, xAI-Bot, YandexAccessibilityBot, YandexAdditionalBot, YandexAdNet, YandexBot MirrorDetector, YandexBlogs, YandexComBot, YandexFavicons, YandexImageResizer, YandexImages, YandexMarket, YandexMetrika, YandexMedia, YandexMobileBot, YandexMobileScreenShotBot, YandexNews, YandexOntoDB, YandexOntoDBAPI, YandexPartner, YandexRCA, YandexRenderResourcesBot, YandexScreenshotBot, YandexSpravBot, YandexTracker, YandexVertis, YandexVerticals, YandexVideo, YandexVideoParser, YandexWebmaster, YepBot, ZumBot
+    - Add new fetchers: 
+        Asana, bitlybot, Blueno, BufferLinkPreviewBot, Chrome-Lighthouse, Gemini-Deep-Research, HubSpot Page Fetcher, kakaotalk-scrap, vercel-favicon-bot, vercel-screenshot-bot, vercelflags, verceltracing, YaDirectFetcher, YandexCalendar, YandexDirect, YandexDirectDyn, YandexForDomain, YandexPagechecker, YandexSearchShop, YandexSitelinks, YandexUserproxy
+- `helpers` submodule:
+    - Add some crawler to `isAIBot()`: 
+        Bravebot, cohere-training-data-crawler, FirecrawlAgent, HuggingFace-Bot, Kangaroo Bot, PanguBot, Replicate-Bot, RunPod-Bot, TikTokSpider, Together-Bot, v0bot, xAI-Bot
+
 ## Version 2.0.4
 
 - Add new browser: Edge WebView, Edge WebView2
@@ -239,6 +268,16 @@
 - Initial work on new major version
 
 ---
+
+## Version 0.7.41 / 1.0.41
+- Add new browser: Daum, Ladybird
+- Add new device vendor: HMD
+- Add new engine: LibWeb
+- Add new os: Windows IoT, Ubuntu Touch
+- Improve cpu detection: ARM, x86
+- Improve device vendor detection: Apple, Archos, Generic, Google, Honor, Huawei, Infinix, Nvidia, Lenovo, Nokia, OnePlus, Xiaomi
+- Improve device type detection: smarttv, wearables
+- Improve os detection: Linux, Symbian
 
 ## Version 0.7.40 / 1.0.40
 - Add new browser: 115, LibreWolf, Slimboat, Slimjet
