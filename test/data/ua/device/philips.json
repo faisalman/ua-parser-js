@@ -1,0 +1,83 @@
+[
+    {
+        "desc": "Philips S616",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1; Philips S616 Build/LMY47D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Philips",
+            "model": "S616",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Philips W8510",
+        "ua": "Mozilla/5.0 (Linux; Android 4.2.2; Philips W8510 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.68 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Philips",
+            "model": "W8510",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Philips SmartTV",
+        "ua": "Mozilla/5.0 (Linux; Android 11; PHILIPS 4k TV Build/RTXC.231010.082.A1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.71 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "PHILIPS",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips SmartTV",
+        "ua": "Opera/9.80 HbbTV/1.1.1 (; Philips; ; ; ; ) NETTV/4.0.2; en) Version/11.60",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PFL6606K/02 SmartTV (2011)",
+        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PFL6606K/02 SmartTV (2013)",
+        "ua": "Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.1.0; en) Presto/2.6.33 Version/10.70",
+        "expect": {
+            "vendor": "Philips",
+            "model": "",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips 32PHS5301/12 SmartTV (2016)",
+        "ua": "Mozilla/5.0 (Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36 OPR/29.0.1803.0 OMI/4.5.23.37.MOT2.13 HbbTV/1.2.1 (;Philips;32PHS5301/12;;_TV_MT5800;) Firmware/TPM161E_012.002.045.001 en",
+        "expect": {
+            "vendor": "Philips",
+            "model": "32PHS5301/12",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips PH0M_EA_T32",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Philips FHD Android TV Build/QTG3.201102.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/125.0.6422.186 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Philips",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    },
+    {
+        "desc": "Philips PH3M_AL_T32",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Philips Google TV TA7 Build/RTM5.220609.199; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.58 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Philips",
+            "model": "undefined",
+            "type": "smarttv"
+        }
+    }
+]

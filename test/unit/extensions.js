@@ -5,6 +5,8 @@ const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
 const { UAParser } = require('../../src/main/ua-parser');
 const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries, Vehicles } = require('../../src/extensions/ua-parser-extensions');
+const { BrowserType, OSName, Extension } = require('../../src/enums/ua-parser-enums');
+const { CLI, Crawler, Email, Fetcher, Library } = Extension.BrowserName;
 
 describe('Extensions', () => {
     [   
@@ -42,29 +44,29 @@ describe('Extensions', () => {
     const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
     const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
 
-    assert.equal(UAParser(scrapy, Bots).browser.name, 'Scrapy');
+    assert.equal(UAParser(scrapy, Bots).browser.name, Library.SCRAPY);
 
     const emailParser = new UAParser(Emails);
-    assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: "Microsoft Outlook", version: "16.0.9126", major: "16", type: "email"});
-    assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: "Thunderbird", version: "78.13.0", major: "78", type: "email"});
+    assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: Email.MICROSOFT_OUTLOOK, version: "16.0.9126", major: "16", type: BrowserType.EMAIL});
+    assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: Email.THUNDERBIRD, version: "78.13.0", major: "78", type: BrowserType.EMAIL});
 
     const libraryParser = new UAParser(Libraries);
-    assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: "axios", version: "1.3.5", major: "1", type: "library"});
-    assert.deepEqual(libraryParser.setUA(jsdom).getBrowser(), {name: "jsdom", version: "20.0.3", major: "20", type: "library"});
-    assert.deepEqual(libraryParser.setUA(scrapy).getBrowser(), {name: "Scrapy", version: "1.5.0", major: "1", type: "library"});
+    assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: Library.AXIOS, version: "1.3.5", major: "1", type: BrowserType.LIBRARY});
+    assert.deepEqual(libraryParser.setUA(jsdom).getBrowser(), {name: Library.JSDOM, version: "20.0.3", major: "20", type: BrowserType.LIBRARY});
+    assert.deepEqual(libraryParser.setUA(scrapy).getBrowser(), {name: Library.SCRAPY, version: "1.5.0", major: "1", type: BrowserType.LIBRARY});
 
     // Bluesky
     const bluesky = 'Mozilla/5.0 (compatible; Bluesky Cardyb/1.1; +mailto:support@bsky.app)';
     assert.deepEqual(new UAParser(bluesky, Bots).getBrowser(), {
-        name: 'Bluesky',
+        name: Fetcher.BLUESKY,
         version: '1.1',
         major: '1',
-        type: 'fetcher'
+        type: BrowserType.FETCHER
     });
 
     const whatsapp = "WhatsApp/2.0 A";
     assert.deepEqual(new UAParser(whatsapp, Fetchers).getOS(), {
-        name : 'Android',
+        name : OSName.ANDROID,
         version : undefined
     });
 });
@@ -77,14 +79,14 @@ describe('Merge', () => {
         // try merging crawlers & CLIs
         const crawlersAndCLIs = { browser : [...Crawlers.browser, ...CLIs.browser]};
         const crawlersAndCLIsParser = new UAParser(crawlersAndCLIs);
-        assert.deepEqual(crawlersAndCLIsParser.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"cli"});
-        assert.deepEqual(crawlersAndCLIsParser.setUA(facebookBot).getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"crawler"});
+        assert.deepEqual(crawlersAndCLIsParser.setUA(wget).getBrowser(), {name: CLI.WGET, version: "1.21.1", major: "1", type: BrowserType.CLI});
+        assert.deepEqual(crawlersAndCLIsParser.setUA(facebookBot).getBrowser(), {name: Crawler.META_FACEBOOKBOT, version: "1.0", major: "1", type: BrowserType.CRAWLER});
 
         // alternative merge options
         const crawlersAndCLIsParser2 = new UAParser([Crawlers, CLIs]);
         const crawlersAndCLIsParser3 = new UAParser(facebookBot, [Crawlers, CLIs]);
-        assert.deepEqual(crawlersAndCLIsParser2.setUA(wget).getBrowser(), {name: "Wget", version: "1.21.1", major: "1", type:"cli"});
-        assert.deepEqual(crawlersAndCLIsParser3.getBrowser(), {name: "FacebookBot", version: "1.0", major: "1", type:"crawler"});
+        assert.deepEqual(crawlersAndCLIsParser2.setUA(wget).getBrowser(), {name: CLI.WGET, version: "1.21.1", major: "1", type: BrowserType.CLI});
+        assert.deepEqual(crawlersAndCLIsParser3.getBrowser(), {name: Crawler.META_FACEBOOKBOT, version: "1.0", major: "1", type: BrowserType.CRAWLER});
     });
 });
 

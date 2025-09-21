@@ -10,7 +10,7 @@ var cpus        = require('../data/ua/cpu/cpu-all.json');
 var devices     = readJsonFiles('test/data/ua/device');
 var engines     = require('../data/ua/engine/engine-all.json');
 var os          = readJsonFiles('test/data/ua/os');
-var { Headers } = require('node-fetch');
+var { Headers } = require('undici');
 
 function readJsonFiles(dir) {
     var list = [];
@@ -81,6 +81,34 @@ describe('UAParser get*() methods', () => {
 describe('Returns', function () {
     it('getResult() should returns JSON', function(done) {
         assert.deepEqual(new UAParser('').getResult(), 
+            {
+                ua : '',
+                browser: { name: undefined, version: undefined, major: undefined, type: undefined },
+                cpu: { architecture: undefined },
+                device: { vendor: undefined, model: undefined, type: undefined },
+                engine: { name: undefined, version: undefined},
+                os: { name: undefined, version: undefined }
+        });
+        done();
+    });
+
+    it('works even when Array.prototype has been mangled', function(done) {
+        const result = withMangledArrayProto(() => new UAParser('').getResult());
+
+        function withMangledArrayProto(fn, key = 'isEmpty', value = function() { return this.length === 0; }) {
+            const originalValue = Array.prototype[key];
+            const restore = Object.hasOwnProperty.call(Array.prototype, key)
+                ? () => Array.prototype[key] = originalValue
+                : () => delete Array.prototype[key];
+
+            Array.prototype[key] = value;
+            const result = fn();
+            restore();
+
+            return result;
+        }
+
+        assert.deepEqual(result,
             {
                 ua : '',
                 browser: { name: undefined, version: undefined, major: undefined, type: undefined },
@@ -352,5 +380,19 @@ describe('Read user-agent data from req.headers', function () {
         reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
         const { browser } = UAParser(reqHeaders);
         assert.strictEqual(browser.is('Midori'), true);
+    });
+
+    it('Headers field name should be case insensitive', function () {    
+        const hEaDeRs = {
+            'uSeR-aGenT' : 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+'
+        };
+        const { browser } = UAParser(hEaDeRs);
+        assert.strictEqual(browser.toString(), "Midori 0.2.2");
+    });
+
+    it('Empty headers should not raise any error', function () {    
+        const emptyHeaders = {};
+        const { browser } = UAParser(emptyHeaders);
+        assert.strictEqual(browser.toString(), "undefined");
     });
 });
