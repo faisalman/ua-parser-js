@@ -33,70 +33,103 @@
 </head>
 
 <body>
+
     <div class="pusher">
         <div class="ui inverted instagram vertical masthead center aligned segment">
             <div class="ui text container">
                 <a href="https://uaparser.dev"><h1>UAParser.js</h1></a>
                 <h2>Abstracts Away The Hassle of User-Agent Detection</h2>
                         <a href="#demo" class="ui violet large button"><i class="magic icon"></i>Demo</a>
-                        <a href="#download" class="ui blue large button"><i class="download icon"></i>Download</a>
-                        <a href="#cloud" class="ui red large button"><i class="cloud icon"></i>@Cloud API / MCP</a>
+                        <a href="#download" class="ui teal large button"><i class="download icon"></i>Download</a>
+                        <!--a href="#cloud" class="ui blue large button"><i class="cloud icon"></i>@Cloud API / MCP</a-->
                         <a href="https://docs.uaparser.dev" class="ui green large button" target="_blank"><i class="book icon"></i>Docs  <i class="icon arrow circle right"></i></a>
             </div>
             <img alt="UAParser.js Illustration" class="ui centered image illustration" src="images/uap-illustrations.png" />
         </div>
 
 
-        <!--div id="try" class="ui text container">
+        <div id="featured" class="ui text container">
             <div class="ui horizontal divider">
-                FEATURED : OUR SPONSORS
+                FEATURED SPONSORS
             </div>
-            <div class="ui tall stacked segment">
-                <div class="ui stackable grid">
-                    <div class="column">
-                        <a href="https://opencollective.com/ua-parser-js"
-                            class="ui right floated large labeled icon button">
-                            <i class="share icon"></i>PUT YOUR LOGO / TEXT HERE</a>
-                    </div>
+            <div class="ui piled segment">
+                <a class="ui red ribbon label" href="https://ref.wisprflow.ai/Rxj3n8H">WISPRFLOW.AI</a>
+                <div class="ui basic segment">
+                    <a href="https://ref.wisprflow.ai/Rxj3n8H">
+                    <h1 class="ui header">
+                        <img src="/images/Flow-symbol.svg">
+                        <div class="content">
+                            <span class="headline">Dictation that understands code</span>
+                            <div class="sub header">Ship 4x faster with developer-first dictation that works in every app.</div>
+                        </div>
+                    </h1>
+                    </a>
+                </div>  
+                <div class="ui clearing basic segment">
+                    <a href="https://ref.wisprflow.ai/Rxj3n8H"
+                        class="ui right floated labeled icon basic grey button">
+                        <i class="share icon"></i>TRY FLOW FOR DEVELOPERS
+                    </a>
                 </div>
             </div>
-        </div-->
+        </div>
 
-
-        <div class="ui text container">
+        <div class="ui container">
             <div id="demo" class="ui horizontal divider">
                 DEMO: USER-AGENT PLAYGROUND
             </div>
-            <div class="ui tall stacked segment">
+            <div class="ui tall stacked very padded segment">
                 <div class="ui basic segment">
-                    <div class="ui black massive label">
-                        <p id="ua-txt" class="code"></p><button id="btn-clipboard"
-                            class="ui right floated labeled icon violet large button" data-clipboard-target="#ua-txt"><i
-                                class="clipboard icon"></i>COPY TO CLIPBOARD</button>
-                    </div>
-                    <div class="ui basic segment center aligned">
-                        <div class="what-provides" id="ua-txt-info">
-                            What your browser tells you = 😵‍💫💢 😭💸
-                            <span class="ui mini red label">Complex</span>
-                            <span class="ui mini red label">Costly</span>
-                            <span class="ui mini red label">Expensive</span>
-                        </div>
-                        <div class="ui horizontal divider">
-                            VS
-                        </div>
-                        <div class="what-provides">
-                            What UAParser.js gives you = 🙂✨💡💰 ✅ 
-                            <span class="ui mini green label">Efficient</span>
-                            <span class="ui mini green label">Insightful</span>
-                            <span class="ui mini green label">Valuable</span>
-                        </div>
-                    </div>
-                    <pre><code id="ua-result" class="language-json"></code></pre>
-                </div>
-                <div id="demo-result" class="ui equal width stackable internally celled grid">
-                    <div class="row">
+                    <div class="ui two column very relaxed grid">
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui basic segment">
+                                <h2 class="ui header">
+                                    What your browser tells you:
+                                </h2>                       
+                            </div>       
+                            <div class="ui basic segment">
+                                <span class="ui large basic label">😵‍💫💢 Complex</span>
+                                <span class="ui large basic label">🫤❓ Unpredictable</span>
+                                <span class="ui large basic label">😭💸 Costly</span>
+                            </div>   
+                        </div>
+                        <div class="column">
+                            <div class="ui basic segment">
+                                <h2 class="ui header">
+                                    What UAParser.js gives you:
+                                </h2>                           
+                            </div>
+                            <div class="ui basic segment">
+                                <span class="ui large basic label">🙂✨ Concise</span>
+                                <span class="ui large basic label">🙂💡 Insightful</span>
+                                <span class="ui large basic label">🙂💰 Valuable</span>
+                            </div>      
+                        </div>
+                    </div>
+                    <div class="ui vertical divider">
+                        VS
+                    </div>
+                </div>
+                <div class="ui basic segment">
+                    <div class="ui two column very relaxed internally celled stackable grid">
+                        <div class="column">
+                            <div class="ui black big basic label">
+                            <p id="ua-txt" class="code"></p>
+                                <button id="btn-clipboard"
+                                class="ui labeled icon violet button" data-clipboard-target="#ua-txt"><i
+                                    class="clone icon"></i>COPY</button>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <pre><code id="ua-result" class="language-json"></code></pre>
+                        </div>             
+                    </div>
+                </div>
+                <div class="ui placeholder segment">
+                <div id="demo-result">
+                    <div class="ui equal width stackable internally celled grid">
+                        <div class="column">
+                            <div class="ui tag large label">
                                 <i class="edge icon"></i>
                                 Browser
                             </div>
@@ -108,7 +141,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="windows icon"></i>
                                 OS
                             </div>
@@ -120,7 +153,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="microchip icon"></i>
                                 CPU Architecture
                             </div>
@@ -132,9 +165,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="ui fitted divider"></div>
+                    <div class="ui equal width stackable internally celled grid">
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="tv icon"></i>
                                 Device Type
                             </div>
@@ -146,9 +180,9 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="mobile alternate icon"></i>
-                                Vendor & Model
+                                Device Vendor & Model
                             </div>
                             <div class="ui basic segment">
                                 <img alt="detected device vendor icon" class="ui tiny centered image" id="device-img" src="">
@@ -158,9 +192,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="ui fitted divider"></div>
+                    <div class="ui equal width stackable internally celled grid">
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="globe icon"></i>
                                 Category
                             </div>
@@ -172,21 +207,23 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="cog icon"></i>
                                 Engine
                             </div>
-                            <div class="ui center aligned header">
-                                <div class="header" id="engine-txt"></div>
+                            <div class="ui basic segment">
+                                <div class="ui center aligned header">
+                                    <div class="header" id="engine-txt"></div>
+                                </div>
                             </div>
                             <!--div class="ui basic segment">
                                 <img alt="detected engine icon" class="ui tiny centered image" id="engine-img" src="">
                             </div-->
                         </div>
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="user secret icon"></i>
-                                Bot
+                                isBot()
                             </div>
                             <div class="ui basic segment">
                                 <div class="ui center aligned header">
@@ -196,9 +233,9 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="ui center aligned animated icon">
+                            <div class="ui tag large label">
                                 <i class="bug icon"></i>
-                                AI Crawler
+                                isAICrawler()
                             </div>
                             <div class="ui basic segment">
                                 <div class="ui center aligned header">
@@ -208,6 +245,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div class="ui horizontal divider">
                     TRY MORE EXAMPLES
@@ -253,16 +291,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="ui text container">
             <div class="ui horizontal divider">
                 FEATURES
             </div>
-            <div class="ui tall stacked segment">
+            <div id="features" class="ui piled very padded segment">
                 <div class="ui equal width stackable grid">
                     <div class="row">
                         <div class="column">
                             <div class="ui basic segment">
                                 <h3 class="ui header">
-                                    <i class="tasks icon"></i>
+                                    <i class="teal tasks icon"></i>
                                     <div class="content">Clean & Well-Structured</div>
                                 </h3>
                                 <p>Effortless, intuitive API with clear output.</p>
@@ -271,21 +311,21 @@
                         <div class="column">
                             <div class="ui basic segment">
                                 <h3 class="ui header">
-                                    <i class="bolt icon"></i>
+                                    <i class="orange bolt icon"></i>
                                     <div class="content">Wide Detection Coverage</div>
                                 </h3>
-                                <p>Detect various devices, browsers, bots, and more.</p>
+                                <p>Detects various devices, browsers, bots, and more.</p>
                             </div>
                         </div>
                         <div class="column">
                             <div class="ui basic segment">
                                 <h3 class="ui header">
-                                    <i class="paper plane icon"></i>
+                                    <i class="blue paper plane icon"></i>
                                     <div class="content">
                                         Lightweight & Fast
                                     </div>
                                 </h3>
-                                <p>Keeps your bundle size small and performance snappy.</p>
+                                <p>Keeps your bundle size compact and efficient.</p>
                             </div>
                         </div>
                     </div>
@@ -293,7 +333,7 @@
                         <div class="column">
                             <div class="ui basic segment">
                                 <h3 class="ui header">
-                                    <i class="magic icon"></i>
+                                    <i class="brown magic icon"></i>
                                     <div class="content">
                                         Works Everywhere
                                     </div>
@@ -304,21 +344,21 @@
                         <div class="column">
                             <div class="ui basic segment">
                                 <h3 class="ui header">
-                                    <i class="npm icon"></i>
+                                    <i class="red npm icon"></i>
                                     <div class="content">
                                         npm-Ready Package
                                     </div>
                                 </h3>
-                                <p>Easily integrates into your workflow.</p>
+                                <p>Easily integrates into your existing workflow.</p>
                             </div>
                         </div>
                         <div class="column">
                             <div class="ui basic segment">
                                 <h3 class="ui header">
-                                    <i class="sync icon"></i>
+                                    <i class="olive sync icon"></i>
                                     <div class="content">Lifetime Updates</div>
                                 </h3>
-                                <p>Stay up to date with evolving trends.</p>
+                                <p>Stay up-to-date with the ever-evolving trends.</p>
                             </div>
                         </div>
                     </div>
@@ -593,7 +633,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
             <div class="ui horizontal divider">
                 LOVED BY DEVELOPERS
             </div>
-            <div class="ui tall stacked segment">
+            <div class="ui tall stacked very padded segment">
                 <div class="ui equal width stackable divided grid">
                     <div class="row">
                         <div class="column">
@@ -684,14 +724,18 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                 <div class="ui horizontal divider">
                     TRUSTED BY TOP TECH COMPANIES
                 </div>
-            <div class="ui tall stacked segment" id="showcase">
+            <div class="ui tall stacked very padded segment" id="showcase">
                 <div class="ui basic centered segment">
-                    <h2 class="ui dividing header">Case Studies<div class="sub header">Hover over the company logo to see projects that use UAParser.js</div>
+                    <h2 class="ui dividing header">
+                        <i class="flask icon"></i>
+                        <div class="content">
+                            Case Studies<div class="sub header">Hover over the company logo to see projects that use UAParser.js</div>
+                        </div>
                     </h2>
                 </div>
                 <div class="ui basic centered segment">
                     <div class="ui equal width stackable grid">
-                    <div class=" row">
+                    <div class="row">    
                         <div class="column">
                             <img alt="Microsoft logo" src="images/companies/microsoft.png" />
                             <div class="ui popup">
@@ -704,6 +748,44 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                                 </div>
                             </div>
                         </div>
+                        <div class="column">
+                            <img alt="Notion logo" src="images/companies/notion.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://www.notion.so/" target="_blank" class="ui blue button"><i
+                                            class="archive icon"></i>Web-based App</a>
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="column">
+                            <img alt="Snapchat logo" src="images/companies/snapchat.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://www.snapchat.com/" target="_blank" class="ui blue button"><i
+                                            class="snapchat ghost icon"></i>Website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="HTTPToolkit logo" src="images/companies/httptoolkit.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon buttons">
+                                    <a href="https://httptoolkit.com/" target="_blank" class="ui red button"><i
+                                            class="code icon"></i>HTTP Toolkit UI</a>
+                                </div>
+                            </div>
+                        </div>       
+                        <div class="column">
+                            <img alt="Gitpod logo" src="images/companies/gitpod.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://gitpod.io" target="_blank" class="ui teal button"><i
+                                            class="cube icon"></i>Web-based App</a>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row">
                         <div class="column">
                             <img alt="Amazon logo" src="images/companies/amazon.png" />
                             <div class="ui popup">
@@ -728,6 +810,90 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
+                            <img alt="Pinterest logo" src="images/companies/pinterest.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://www.pinterest.com/" target="_blank" class="ui red button"><i
+                                            class="pinterest icon"></i>Website</a>
+                                    <a href="https://github.com/pinterest/gestalt" target="_blank"
+                                        class="ui black button"><i class="paint brush icon"></i>Gestalt</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Slack logo" src="images/companies/slack.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://slack.com/libs/desktop" target="_blank" class="ui red button"><i
+                                            class="slack hash icon"></i>Web-based App</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Discord logo" src="images/companies/discord.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://discord.com/acknowledgements" target="_blank"
+                                        class="ui purple button"><i class="discord icon"></i>Web-based App</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img alt="Automattic logo" src="images/companies/automattic.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://github.com/Automattic/wp-calypso/tree/v6.12.0/client"
+                                        target="_blank" class="ui blue button"><i
+                                            class="wordpress icon"></i>WP-Calypso</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Amplitude logo" src="images/companies/amplitude.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://github.com/amplitude/Amplitude-JavaScript" target="_blank"
+                                        class="ui blue button"><i class="github icon"></i>JavaScript SDK</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Optimizely logo" src="images/companies/optimizely.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://github.com/optimizely/ua-parser-js" target="_blank"
+                                        class="ui blue button"><i class="circle outline icon"></i>Platform</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Shopify logo" src="images/companies/shopify.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://github.com/Shopify/quilt/tree/%40shopify/react-form%400.12.0/packages/browser"
+                                        target="_blank" class="ui green button"><i
+                                            class="shopping cart icon"></i>Browser Sniffer</a>
+                                    <a href="https://github.com/Shopify/blockchain-components/tree/main/packages/connect-wallet"
+                                        target="_blank" class="ui orange button"><i class="bitcoin icon"></i>Blockchain
+                                        Components</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="AutoDesk logo" src="images/companies/autodesk.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://www.autodesk.com/company/legal-notices-trademarks/autodesk-desktop-platform-components/2021"
+                                        target="_blank" class="ui blue button"><i class="desktop icon"></i>Desktop
+                                        Platform</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
                             <img alt="Instagram logo" src="images/companies/instagram.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
@@ -746,40 +912,11 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Slack logo" src="images/companies/slack.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://slack.com/libs/desktop" target="_blank" class="ui red button"><i
-                                            class="slack hash icon"></i>Web-based App</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
                             <img alt="Google logo" src="images/companies/google.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://github.com/google/tachometer" target="_blank"
                                         class="ui green button"><i class="thermometer icon"></i>Tachometer</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="HTTPToolkit logo" src="images/companies/httptoolkit.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon buttons">
-                                    <a href="https://httptoolkit.com/" target="_blank" class="ui red button"><i
-                                            class="code icon"></i>HTTP Toolkit UI</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="AliExpress logo" src="images/companies/aliexpress.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.aliexpress.com" target="_blank" class="ui orange button"><i
-                                            class="cart icon"></i>AliExpress Website</a>
                                 </div>
                             </div>
                         </div>
@@ -791,16 +928,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                                         class="ui black button"><i class="react icon"></i>Next.js</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Gitpod logo" src="images/companies/gitpod.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://gitpod.io" target="_blank" class="ui teal button"><i
-                                            class="cube icon"></i>Web-based App</a>
-                                </div>
-                            </div>
-                        </div>
+                        </div>   
                         <div class="column">
                             <img alt="Apple logo" src="images/companies/apple.png" />
                             <div class="ui popup">
@@ -815,52 +943,67 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img alt="Discord logo" src="images/companies/discord.png" />
+                            <img alt="Grab logo" src="images/companies/grab.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://discord.com/acknowledgements" target="_blank"
-                                        class="ui purple button"><i class="discord icon"></i>Web-based App</a>
+                                    <a href="https://food.grab.com" target="_blank" class="ui green button"><i
+                                            class="utensils icon"></i>GrabFood Web</a>
                                 </div>
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Mozilla logo" src="images/companies/mozilla.png" />
+                            <img alt="Traveloka logo" src="images/companies/traveloka.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://github.com/mozilla/addons-frontend/tree/2019.06.06" target="_blank"
-                                        class="ui orange button"><i class="firefox icon"></i>Add-on Frontend</a>
+                                    <a href="https://www.traveloka.com" target="_blank" class="ui blue button"><i
+                                            class="plane icon"></i>Web-based App</a>
                                 </div>
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Automattic logo" src="images/companies/automattic.png" />
+                            <img alt="Shopee logo" src="images/companies/shopee.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://github.com/Automattic/wp-calypso/tree/v6.12.0/client"
-                                        target="_blank" class="ui blue button"><i
-                                            class="wordpress icon"></i>WP-Calypso</a>
+                                    <a href="https://seller.shopee.co.id/" target="_blank" class="ui orange button"><i
+                                            class="shopping bag icon"></i>Seller Center</a>
                                 </div>
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Shopify logo" src="images/companies/shopify.png" />
+                            <img alt="Bukalapak logo" src="images/companies/bukalapak.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://github.com/Shopify/quilt/tree/%40shopify/react-form%400.12.0/packages/browser"
-                                        target="_blank" class="ui green button"><i
-                                            class="shopping cart icon"></i>Browser Sniffer</a>
-                                    <a href="https://github.com/Shopify/blockchain-components/tree/main/packages/connect-wallet"
-                                        target="_blank" class="ui orange button"><i class="bitcoin icon"></i>Blockchain
-                                        Components</a>
+                                    <a href="https://bukalapak.com/" target="_blank" class="ui red button"><i
+                                            class="blogger b icon"></i>Web-based App</a>
                                 </div>
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Amplitude logo" src="images/companies/amplitude.png" />
+                            <img alt="Tokopedia logo" src="images/companies/tokopedia.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://github.com/amplitude/Amplitude-JavaScript" target="_blank"
-                                        class="ui blue button"><i class="github icon"></i>JavaScript SDK</a>
+                                    <a href="https://tiket.tokopedia.com/" target="_blank" class="ui green button"><i
+                                            class="briefcase icon"></i>Ticket & Travel Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">     
+                        <div class="column">
+                            <img alt="ProtonMail logo" src="images/companies/protonmail.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://github.com/ProtonMail/WebClient/" target="_blank"
+                                        class="ui violet button"><i class="mail icon"></i>WebClient</a>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="column">
+                            <img alt="Expedia logo" src="images/companies/expedia.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://www.expedia.com/" target="_blank" class="ui blue button"><i
+                                            class="fighter jet icon"></i>Web-based App</a>
                                 </div>
                             </div>
                         </div>
@@ -870,6 +1013,25 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://line.me" target="_blank" class="ui green button"><i
                                             class="chat icon"></i>LINE Messenger</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Elastic logo" src="images/companies/elastic.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://www.elastic.co/guide/en/cloud-enterprise/current/ece-dependencies.html"
+                                        target="_blank" class="ui orange button"><i class="cloud icon"></i>Cloud
+                                        Enterprise</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Mozilla logo" src="images/companies/mozilla.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://github.com/mozilla/addons-frontend/tree/2019.06.06" target="_blank"
+                                        class="ui orange button"><i class="firefox icon"></i>Add-on Frontend</a>
                                 </div>
                             </div>
                         </div>
@@ -932,64 +1094,6 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img alt="ProtonMail logo" src="images/companies/protonmail.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://github.com/ProtonMail/WebClient/" target="_blank"
-                                        class="ui violet button"><i class="mail icon"></i>WebClient</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="AutoDesk logo" src="images/companies/autodesk.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.autodesk.com/company/legal-notices-trademarks/autodesk-desktop-platform-components/2021"
-                                        target="_blank" class="ui blue button"><i class="desktop icon"></i>Desktop
-                                        Platform</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Confluent logo" src="images/companies/confluent.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.confluent.io/third_party_software_CP_v5_0/" target="_blank"
-                                        class="ui blue button"><i class="cube icon"></i>Confluent Platform</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Elastic logo" src="images/companies/elastic.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.elastic.co/guide/en/cloud-enterprise/current/ece-dependencies.html"
-                                        target="_blank" class="ui orange button"><i class="cloud icon"></i>Cloud
-                                        Enterprise</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Optimizely logo" src="images/companies/optimizely.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://github.com/optimizely/ua-parser-js" target="_blank"
-                                        class="ui blue button"><i class="circle outline icon"></i>Platform</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Reddit logo" src="images/companies/reddit.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://reddit.com/" target="_blank" class="ui orange button"><i
-                                            class="reddit icon"></i>Website</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
                             <img alt="Scribd logo" src="images/companies/scribd.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
@@ -1035,13 +1139,11 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Pinterest logo" src="images/companies/pinterest.png" />
+                            <img alt="Reddit logo" src="images/companies/reddit.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://www.pinterest.com/" target="_blank" class="ui red button"><i
-                                            class="pinterest icon"></i>Website</a>
-                                    <a href="https://github.com/pinterest/gestalt" target="_blank"
-                                        class="ui black button"><i class="paint brush icon"></i>Gestalt</a>
+                                    <a href="https://reddit.com/" target="_blank" class="ui orange button"><i
+                                            class="reddit icon"></i>Website</a>
                                 </div>
                             </div>
                         </div>
@@ -1057,20 +1159,20 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Snapchat logo" src="images/companies/snapchat.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.snapchat.com/" target="_blank" class="ui blue button"><i
-                                            class="snapchat ghost icon"></i>Website</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
                             <img alt="Udemy logo" src="images/companies/udemy.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.udemy.com/" target="_blank" class="ui orange button"><i
                                             class="bullhorn icon"></i>Website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img alt="Intuit logo" src="images/companies/intuit.png" />
+                            <div class="ui popup">
+                                <div class="ui labeled icon small buttons">
+                                    <a href="https://myturbotax.intuit.com/" target="_blank" class="ui blue button"><i
+                                            class="user icon"></i>Web & Mobile Platform</a>
                                 </div>
                             </div>
                         </div>
@@ -1093,11 +1195,11 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Notion logo" src="images/companies/notion.png" />
+                            <img alt="AliExpress logo" src="images/companies/aliexpress.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://www.notion.so/" target="_blank" class="ui blue button"><i
-                                            class="archive icon"></i>Web-based App</a>
+                                    <a href="https://www.aliexpress.com" target="_blank" class="ui orange button"><i
+                                            class="cart icon"></i>AliExpress Website</a>
                                 </div>
                             </div>
                         </div>
@@ -1152,67 +1254,11 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Expedia logo" src="images/companies/expedia.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.expedia.com/" target="_blank" class="ui blue button"><i
-                                            class="fighter jet icon"></i>Web-based App</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
                             <img alt="OLX logo" src="images/companies/olx.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
                                     <a href="https://www.olx.com/" target="_blank" class="ui blue button"><i
                                             class="circle outline icon"></i>Website</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Grab logo" src="images/companies/grab.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://food.grab.com" target="_blank" class="ui green button"><i
-                                            class="utensils icon"></i>GrabFood Web</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Traveloka logo" src="images/companies/traveloka.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://www.traveloka.com" target="_blank" class="ui blue button"><i
-                                            class="plane icon"></i>Web-based App</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Shopee logo" src="images/companies/shopee.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://seller.shopee.co.id/" target="_blank" class="ui orange button"><i
-                                            class="shopping bag icon"></i>Seller Center</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Bukalapak logo" src="images/companies/bukalapak.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://bukalapak.com/" target="_blank" class="ui red button"><i
-                                            class="blogger b icon"></i>Web-based App</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <img alt="Tokopedia logo" src="images/companies/tokopedia.png" />
-                            <div class="ui popup">
-                                <div class="ui labeled icon small buttons">
-                                    <a href="https://tiket.tokopedia.com/" target="_blank" class="ui green button"><i
-                                            class="briefcase icon"></i>Ticket & Travel Page</a>
                                 </div>
                             </div>
                         </div>
@@ -1249,11 +1295,11 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             </div>
                         </div>
                         <div class="column">
-                            <img alt="Intuit logo" src="images/companies/intuit.png" />
+                            <img alt="Confluent logo" src="images/companies/confluent.png" />
                             <div class="ui popup">
                                 <div class="ui labeled icon small buttons">
-                                    <a href="https://myturbotax.intuit.com/" target="_blank" class="ui blue button"><i
-                                            class="user icon"></i>Web & Mobile Platform</a>
+                                    <a href="https://www.confluent.io/third_party_software_CP_v5_0/" target="_blank"
+                                        class="ui blue button"><i class="cube icon"></i>Confluent Platform</a>
                                 </div>
                             </div>
                         </div>
@@ -1340,6 +1386,323 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                 </div>
             </div>
         </div>
+        
+            <div class="ui horizontal divider">
+            DOWNLOAD: CHOOSE YOUR PACKAGE
+            </div>
+
+            <div class="ui tall stacked very padded segment" id="download">
+
+                <div class="ui basic centered segment">
+                    <h2 class="ui dividing header">
+                    <i class="codepen icon"></i>
+                        <div class="content">
+                            Package Options
+                            <div class="sub header">Pricing & comparison between editions</div>
+                        </div>
+                    </h2>
+                </div>
+
+                <div class="ui three stackable cards">
+
+                    <div class="card">
+                    <div class="content">
+                        <div class="header">PRO Personal</div>
+                        <div class="meta">$14 <span class="subtle">(one-time)</span></div>
+                    </div>
+                    <div class="content">
+                        <div class="ui sub header">Non-commercial usage</div>
+                        <div class="description">
+                        <ul class="ui list">
+                            <li>Full detection features</li>
+                            <li>npm & downloadable</li>
+                            <li>Non-commercial use</li>
+                            <li>Unlimited deployments</li>
+                            <li>1 year support</li>
+                            <li>Lifetime updates</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="extra content right aligned">
+                        <a href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43" 
+                        class="ui violet button" target="_blank">GET NOW<i class="icon arrow circle right"></i></a>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                    <div class="content">
+                        <div class="header">PRO Business</div>
+                        <div class="meta">$29 <span class="subtle">(one-time)</span></div>
+                    </div>
+                    <div class="content">
+                        <div class="ui sub header">1 End-Product per 1 License</div>
+                        <div class="description">
+                        <ul class="ui list">
+                            <li>Full detection features</li>
+                            <li>npm & downloadable</li>
+                            <li>Commercial rights</li>
+                            <li><span data-tooltip="This license allows you to deliver the end-product as 1 client work, or to host the end-product on 1 top-level domain">1 TLD per 1 license</span></li>
+                            <li>1 year support</li>
+                            <li>Lifetime updates</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="extra content right aligned">
+                        <a href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43" 
+                        class="ui violet button" target="_blank">GET NOW<i class="icon arrow circle right"></i></a>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                    <div class="content">
+                        <div class="header">PRO Enterprise</div>
+                        <div class="meta">$599 <span class="subtle">(one-time)</span></div>
+                    </div>
+                    <div class="content">
+                        <div class="ui sub header">Full usage rights</div>
+                        <div class="description">
+                        <ul class="ui list">
+                            <li>Full detection features</li>
+                            <li>npm & downloadable</li>
+                            <li>Commercial rights</li>
+                            <li>Unlimited deployments</li>
+                            <li>1 year support</li>
+                            <li>Lifetime updates</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="extra content right aligned">
+                        <a href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43" 
+                        class="ui violet button" target="_blank">GET NOW<i class="icon arrow circle right"></i></a>
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="ui styled fluid accordion" style="margin-top: 2em;">
+                    <div class="title">
+                    <i class="dropdown icon"></i>
+                    See Detailed Feature Comparison
+                    </div>
+                    <div class="content">
+                    <table class="ui center aligned collapsing very basic unstackable compact table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="2">OSS Editions</th>
+                                <th colspan="3">Commercial Editions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left aligned">License</td>
+                                <td>MIT (v1.0)</td>
+                                <td>AGPL (>=v2.0)</td>
+                                <td>PRO Personal</td>
+                                <td>PRO Business</td>
+                                <td>PRO Enterprise</td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Browser detection</td>
+                                <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">CPU detection</td>
+                                <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Device detection</td>
+                                <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Engine detection</td>
+                                <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">OS detection</td>
+                                <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Bot detection</td>
+                                <td class="negative"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">AI Bot detection</td>
+                                <td class="negative"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Extras (Apps, Libs, Emails, Media Players, etc) detection</td>
+                                <td class="negative"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Enhanced detection result</td>
+                                <td class="negative"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Client Hints support</td>
+                                <td class="negative"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">CommonJS support</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">ES modules support</td>
+                                <td class="negative"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">TypeScript declarations</td>
+                                <td class="warning" data-tooltip="Community version" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">npm module available</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Direct downloads available</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Allows commercial usage</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="negative" data-tooltip="Non-commercial use only (personal/educational/non-profit/etc)" data-inverted=""><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Permissive (non-copyleft) license</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="negative" data-tooltip="Copyleft license" data-inverted=""><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">No open-source obligations</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="negative" data-tooltip="Copyleft license" data-inverted=""><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Unlimited end-products</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="negative" data-tooltip="1 product per 1 license" data-inverted=""><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Unlimited deployments</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="warning" data-tooltip="Host on 1 top-level domain per 1 license" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">1-year product support</td>
+                                <td class="negative" data-tooltip="GitHub issue"><i class="large red minus circle icon"></i></td>
+                                <td class="negative" data-tooltip="GitHub issue"><i class="large red minus circle icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Lifetime updates</td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                                <td class="positive"><i class="large green checkmark icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="left aligned">Price (one-time fee)</td>
+                                <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
+                                <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
+                                <td data-tooltip="$14 (one-time fee)" data-inverted="">$14</td>
+                                <td data-tooltip="$29 (one-time fee)" data-inverted="">$29</td>
+                                <td data-tooltip="$599 (one-time fee)" data-inverted="">$599</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th class="right aligned" colspan="6">
+                                    <a target="_blank" class="ui icon right labeled violet huge button" href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43">GET NOW<i class="icon arrow circle right"></i></a>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+            $('.ui.accordion').accordion();
+            </script>
         <!--div class="ui horizontal divider">
             SUPPORTED BY THE AMAZING OPEN-SOURCE COMMUNITIES
         </div>
@@ -1375,327 +1738,19 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     <i class="github alternate icon"></i>GITHUB SPONSORS</a>
             </div>
         </div-->
-        <div class="ui horizontal divider">
-            CHOOSE YOUR PACKAGE
-        </div>
 
-        <div class="ui tall stacked segment" id="download">
-
-            <div class="ui basic centered segment">
-                <h2 class="ui dividing header">
-                Package Options
-                    <span class="sub header">Pricing & comparison between editions</span>
-                </h2>
-            </div>
-
-            <div class="ui three stackable cards">
-
-                <div class="card">
-                <div class="content">
-                    <div class="header">PRO Personal</div>
-                    <div class="meta">$14 <span class="subtle">(one-time)</span></div>
-                </div>
-                <div class="content">
-                    <div class="ui sub header">Non-commercial usage</div>
-                    <div class="description">
-                    <ul class="ui list">
-                        <li>Full detection features</li>
-                        <li>npm & downloadable</li>
-                        <li>Non-commercial use</li>
-                        <li>Unlimited deployments</li>
-                        <li>1 year support</li>
-                        <li>Lifetime updates</li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="extra content right aligned">
-                    <a href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43" 
-                    class="ui violet button" target="_blank">GET NOW<i class="icon arrow circle right"></i></a>
-                </div>
-                </div>
-
-                <div class="card">
-                <div class="content">
-                    <div class="header">PRO Business</div>
-                    <div class="meta">$29 <span class="subtle">(one-time)</span></div>
-                </div>
-                <div class="content">
-                    <div class="ui sub header">1 End-Product per 1 License</div>
-                    <div class="description">
-                    <ul class="ui list">
-                        <li>Full detection features</li>
-                        <li>npm & downloadable</li>
-                        <li>Commercial usage rights</li>
-                        <li><span data-tooltip="This license allows you to deliver the end-product as 1 client work, or to host the end-product on 1 top-level domain">1 TLD per 1 license</span></li>
-                        <li>1 year support</li>
-                        <li>Lifetime updates</li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="extra content right aligned">
-                    <a href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43" 
-                    class="ui violet button" target="_blank">GET NOW<i class="icon arrow circle right"></i></a>
-                </div>
-                </div>
-
-                <div class="card">
-                <div class="content">
-                    <div class="header">PRO Enterprise</div>
-                    <div class="meta">$599 <span class="subtle">(one-time)</span></div>
-                </div>
-                <div class="content">
-                    <div class="ui sub header">Full usage rights</div>
-                    <div class="description">
-                    <ul class="ui list">
-                        <li>Full detection features</li>
-                        <li>npm & downloadable</li>
-                        <li>Commercial usage rights</li>
-                        <li>Unlimited deployments</li>
-                        <li>1 year support</li>
-                        <li>Lifetime updates</li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="extra content right aligned">
-                    <a href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43" 
-                    class="ui violet button" target="_blank">GET NOW<i class="icon arrow circle right"></i></a>
-                </div>
-                </div>
-
-            </div>
-
-            <div class="ui styled fluid accordion" style="margin-top: 2em;">
-                <div class="title">
-                <i class="dropdown icon"></i>
-                See Detailed Feature Comparison
-                </div>
-                <div class="content">
-                <table class="ui center aligned collapsing very basic unstackable compact table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th colspan="2">OSS Editions</th>
-                            <th colspan="3">Commercial Editions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="left aligned">License</td>
-                            <td>MIT (v1.0)</td>
-                            <td>AGPL (>=v2.0)</td>
-                            <td>PRO Personal</td>
-                            <td>PRO Business</td>
-                            <td>PRO Enterprise</td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Browser detection</td>
-                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">CPU detection</td>
-                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Device detection</td>
-                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Engine detection</td>
-                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">OS detection</td>
-                            <td class="warning" data-tooltip="Basic detection" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Bot detection</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">AI Bot detection</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Extras (Apps, Libs, Emails, Media Players, etc) detection</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Enhanced detection result</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Client Hints support</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">CommonJS support</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">ES modules support</td>
-                            <td class="negative"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">TypeScript declarations</td>
-                            <td class="warning" data-tooltip="Community version" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">npm module available</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Direct downloads available</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Allows commercial usage</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="negative" data-tooltip="Non-commercial use only (personal/educational/non-profit/etc)" data-inverted=""><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Permissive (non-copyleft) license</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="negative" data-tooltip="Copyleft license" data-inverted=""><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">No open-source obligations</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="negative" data-tooltip="Copyleft license" data-inverted=""><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Unlimited end-products</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="negative" data-tooltip="1 product per 1 license" data-inverted=""><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Unlimited deployments</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="warning" data-tooltip="Host on 1 top-level domain per 1 license" data-inverted=""><i class="large yellow circle exclamation icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">1-year product support</td>
-                            <td class="negative" data-tooltip="GitHub issue"><i class="large red minus circle icon"></i></td>
-                            <td class="negative" data-tooltip="GitHub issue"><i class="large red minus circle icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Lifetime updates</td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                            <td class="positive"><i class="large green checkmark icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="left aligned">Price (one-time fee)</td>
-                            <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
-                            <td data-tooltip="Pay as you want" data-inverted="">FREE</td>
-                            <td data-tooltip="$14 (one-time fee)" data-inverted="">$14</td>
-                            <td data-tooltip="$29 (one-time fee)" data-inverted="">$29</td>
-                            <td data-tooltip="$599 (one-time fee)" data-inverted="">$599</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="right aligned" colspan="6">
-                                <a target="_blank" class="ui icon right labeled violet huge button" href="https://uaparserjs.lemonsqueezy.com/buy/e226f4da-2c89-428c-8e7a-dfdbdd48bf43">GET NOW<i class="icon arrow circle right"></i></a>
-                            </th>
-                        </tr>
-                    </tfoot>
-                </table>
-                </div>
-            </div>
-
-            </div>
-
-            <script>
-            $('.ui.accordion').accordion();
-            </script>
-
-
-        <div class="ui horizontal divider">
+        <!--div class="ui horizontal divider">
             New: UAParser @Cloud
         </div>
         <div class="ui tall stacked segment">
             <div class="ui basic centered segment" id="cloud">
-                <h2 class="ui dividing header">UAParser @Cloud<div class="floating ui red label">NEW</div><div class="sub header">Our @Cloud REST API / MCP service offers seamless integration with any tech stack or AI agent</div>
+                <h2 class="ui dividing header">
+                    <div class="floating ui red label">NEW</div>
+                    <i class="cloud download icon"></i>
+                    <div class="content">
+                        UAParser @Cloud
+                        <div class="sub header">Offers seamless integration with any tech stack or AI agent</div>
+                    </div>
                 </h2>
                 <a href="/cloud" target="_blank"><img alt="UAParser.js Illustration" class="ui centered image illustration" src="images/uap-cloud-api.png" /></a>
                 <pre><code># REST API Example
@@ -1710,10 +1765,10 @@ Authorization: Bearer YOUR_API_KEY
   }
 }</code></pre>
                 <div class="ui large buttons">
-                    <a href="/cloud" class="ui red large button" target="_blank">LEARN MORE <i class="icon arrow circle right"></i></a>
+                    <a href="/cloud" class="ui basic red large button" target="_blank">LEARN MORE <i class="icon arrow circle right"></i></a>
                 </div>
             </div>
-        </div>
+        </div-->
         <div class="ui hidden divider">
         </div>
     </div>
@@ -1728,8 +1783,8 @@ Authorization: Bearer YOUR_API_KEY
                 <div class="eleven wide column">
                     <div class="ui basic right aligned segment">
                         <div class="ui inverted link animated selection horizontal list">
-                            <a target="_blank" class="item" href="https://discord.gg/stt86vmr"><img
-                                alt="Discord invite" src="https://dcbadge.limes.pink/api/server/https://discord.gg/stt86vmr" /></a>
+                            <a target="_blank" class="item" href="https://discord.com/channels/1406959509087453236/"><img alt="Discord" src="https://img.shields.io/discord/1406959509087453236?style=for-the-badge&logo=discord&label=DISCORD&color=5865F2">
+</a>
                             <a target="_blank" class="item" href="https://github.com/faisalman/ua-parser-js"><img
                                 alt="GitHub stars badge" src="https://img.shields.io/github/stars/faisalman/ua-parser-js?color=yellow&logo=github&style=for-the-badge"></a>
                             <a target="_blank" class="item" href="https://www.npmjs.com/package/ua-parser-js"><img
@@ -1755,8 +1810,8 @@ Authorization: Bearer YOUR_API_KEY
                     </div>
                 </div>
             </div>
-            <div class="ui right aligned basic segment">
-                <p>UAParser.js is licensed under MIT / AGPLv3 / PRO licenses. Copyright (c) 2012-2024 Faisal Salman.</p>
+            <div class="ui center aligned basic segment">
+                <p>UAParser.js is licensed under MIT / AGPLv3 / PRO licenses. Copyright (c) 2012-2025 Faisal Salman.</p>
             </div>
         </div>
     </div>

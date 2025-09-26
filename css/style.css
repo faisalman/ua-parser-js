@@ -53,6 +53,20 @@ color: rgba(255, 255, 255, 0.3);
     margin: 2rem 0 5rem;
 }
 
+#featured .segment::before,
+#featured .segment::after,
+#featured .segment {
+    background: #ffffeb;
+}
+
+#featured h1 .headline {
+    font-family: "EB Garamond", "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: .85;
+}
+
 .instagram.masthead.inverted.segment {
     background: #6435c9;
     background-image: linear-gradient(to left top, #6435c9, #7143d0, #7e51d6, #8a5edd, #966ce3);

@@ -11,7 +11,7 @@ $(document)
         $('#demo-result').transition('zoom', function () {
             if (result.browser.name) {
                 var version = result.browser.version!==undefined?result.browser.version:'-';
-                $('#browser-txt').html('<span class="ui large green label">' + result.browser.name + '</span><span class="ui large blue label">' + version + '</span>');
+                $('#browser-txt').html('<span class="ui large basic violet label">' + result.browser.name + '</span><span class="ui large basic violet label">' + version + '</span>');
                 $('#browser-img').attr('src', 'images/browsers/' + result.browser.name.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/browsers/default.png');
                 });
@@ -21,7 +21,7 @@ $(document)
             }
             if (result.engine.name) {
                 var version = result.engine.version!==undefined?result.engine.version:'-';
-                $('#engine-txt').html('<span class="ui large green label">' + result.engine.name + '</span><span class="ui large blue label">' + version + '</span>');/*
+                $('#engine-txt').html('<span class="ui large basic violet label">' + result.engine.name + '</span><span class="ui large basic violet label">' + version + '</span>');/*
                 $('#engine-img').attr('src', 'images/engines/' + result.engine.name.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/engines/default.png');
                 });*/
@@ -31,7 +31,7 @@ $(document)
             }
             if (result.os.name) {
                 var version = result.os.version!==undefined?result.os.version:'-';
-                $('#os-txt').html('<span class="ui large green label">' + result.os.name + '</span><span class="ui large blue label">' + version + '</span>');
+                $('#os-txt').html('<span class="ui large basic violet label">' + result.os.name + '</span><span class="ui large basic violet label">' + version + '</span>');
                 $('#os-img').attr('src', 'images/os/' + result.os.name.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/os/default.png');
                 });
@@ -40,7 +40,7 @@ $(document)
                 $('#os-img').attr('src', 'images/os/default.png');
             }
             if (result.cpu.architecture) {
-                $('#cpu-txt').html('<span class="ui large green label">' + result.cpu.architecture + '</span>');
+                $('#cpu-txt').html('<span class="ui large basic violet label">' + result.cpu.architecture + '</span>');
                 $('#cpu-img').attr('src', 'images/cpu/' + result.cpu.architecture.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/cpu/default.png');
                 });
@@ -49,7 +49,7 @@ $(document)
                 $('#cpu-img').attr('src', 'images/cpu/default.png');
             }
             if (result.device.type) {
-                $('#type-txt').html('<span class="ui large green label">' + result.device.type + '</span>');
+                $('#type-txt').html('<span class="ui large basic violet label">' + result.device.type + '</span>');
                 $('#type-img').attr('src', 'images/types/' + result.device.type.toLowerCase() + '.png').on('error', function () {
                     $(this).attr('src', 'images/types/default.png');
                 });
@@ -60,7 +60,7 @@ $(document)
             if (result.device.vendor || result.device.model) {
                 var vendor = result.device.vendor!=undefined?result.device.vendor:'-';
                 var model = result.device.model!==undefined?result.device.model:'-';
-                $('#device-txt').html('<span class="ui large green label">' + vendor + '</span><span class="ui large blue label">' + model + '</span>');
+                $('#device-txt').html('<span class="ui large basic violet label">' + vendor + '</span><span class="ui large basic violet label">' + model + '</span>');
                 if (result.device.vendor) {
                     $('#device-img').attr('src', 'images/companies/' + result.device.vendor.toLowerCase() + '.png').on('error', function () {
                         $(this).attr('src', 'images/companies/default.png');
@@ -73,10 +73,10 @@ $(document)
                 $('#device-img').attr('src', 'images/companies/default.png');
             }
             if(result.browser.type) {
-                $('#category-txt').html('<span class="ui large green label">' + result.browser.type + '</span>');
+                $('#category-txt').html('<span class="ui large basic violet label">' + result.browser.type + '</span>');
             } else {
                 if (result.engine.name) {
-                    $('#category-txt').html('<span class="ui large green label">browser</span>');
+                    $('#category-txt').html('<span class="ui large basic violet label">browser</span>');
                 } else {
                     $('#category-txt').text('-');
                 }
@@ -84,12 +84,12 @@ $(document)
             if (isBot(result)) {
                 $('#isbot-txt').text('✅');
             } else {
-                $('#isbot-txt').text('-')
+                $('#isbot-txt').text('❌')
             }
             if (isAIBot(result)) {
                 $('#isaibot-txt').text('✅');
             } else {
-                $('#isaibot-txt').text('-');
+                $('#isaibot-txt').text('❌');
             }
 /*            if (result.gpu.vendor) {
                 var vendor = result.gpu.vendor!=undefined?result.gpu.vendor:'-';
@@ -114,11 +114,11 @@ $(document)
         qs = new URLSearchParams(window.location.search).get('ua');
     }
     if (qs) {
-        $('#ua-txt-info').html('What your browser tells you = 😵‍💫💢 😭💸 <span class="ui mini red label">Complex</span> <span class="ui mini red label">Costly</span> <span class="ui mini red label">Expensive</span>');
-        $('#demo-result').get(0).scrollIntoView();
-        updateDemo(UAParser(qs, [CLIs, Crawlers, Fetchers, Libraries, InApps]));
+        var extensions = [CLIs, Crawlers, Emails, ExtraDevices, Fetchers, Libraries, InApps, Vehicles];
+        $('#featured').get(0).scrollIntoView();
+        updateDemo(UAParser(qs, extensions));
     } else {
-        (UAParser([CLIs, Crawlers, Fetchers, Libraries, InApps]).withFeatureCheck()).withClientHints().then(function(result) {
+        (UAParser(extensions).withFeatureCheck()).withClientHints().then(function(result) {
             updateDemo(result);
         });
     }
