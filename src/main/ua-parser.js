@@ -568,9 +568,8 @@
             // Apple
             /(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i                          // iPod/iPhone
             ], [MODEL, [VENDOR, APPLE], [TYPE, MOBILE]], [
-            /\((ipad);[-\w\),; ]+apple/i,                                       // iPad
-            /applecoremedia\/[\w\.]+ \((ipad)/i,
-            /\b(ipad)\d\d?,\d\d?[;\]].+ios/i
+            /\b(?:ios|apple\w+)\/.+[\(\/](ipad)/i,                              // iPad
+            /\b(ipad)[\d,]*[;\] ].+(mac |i(pad)?)os/i
             ], [MODEL, [VENDOR, APPLE], [TYPE, TABLET]], [
             /(macintosh);/i
             ], [MODEL, [VENDOR, APPLE]], [
