@@ -162,6 +162,15 @@
         }
     },
     {
+        "desc": "iPhone using Spotify",
+        "ua": "Spotify/8.7.70 iOS/16.0 (iPhone15,3)",
+        "expect": {
+            "vendor": "Apple",
+            "model": "iPhone15,3",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "iPhone SE",
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone8,4;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]",
         "expect": {
