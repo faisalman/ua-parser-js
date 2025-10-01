@@ -1689,6 +1689,36 @@
         }
     },
     {
+        "desc"    : "Qwant",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) QwantMobile/6.7.6 Mobile/15E148 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Qwant",
+            "version" : "6.7.6",
+            "major"   : "6"
+        }
+    },
+    {
+        "desc"    : "Qwant",
+        "ua"      : "QwantMobile/2.0 (Android 8.0.0; Mobile; rv:59.0) Gecko/59.0 Firefox/59.0 QwantBrowser/59.0",
+        "expect"  :
+        {
+            "name"    : "Qwant",
+            "version" : "59.0",
+            "major"   : "59"
+        }
+    },
+    {
+        "desc"    : "Qwant",
+        "ua"      : "QwantMobile/2.0 (iPad; CPU OS 15_8_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) QwantiOS/2.7.0b1 Mobile/15E148 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Qwant",
+            "version" : "2.0",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "Rekonq 2",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) rekonq/2.2.1 Safari/537.21",
         "expect"  :

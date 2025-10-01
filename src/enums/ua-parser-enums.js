@@ -125,6 +125,7 @@ const BrowserName = Object.freeze({
     QUARK: 'Quark',
     QUPZILLA: 'QupZilla',
     QUTEBROWSER: 'qutebrowser',
+    QWANT: 'Qwant',
     REKONQ: 'rekonq',
     ROCKMELT: 'Rockmelt',
     SAFARI: 'Safari',
