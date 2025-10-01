@@ -63,8 +63,10 @@ const Crawlers = Object.freeze({
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SBIntuitionsBot - https://www.sbintuitions.co.jp/bot/
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
+            // SurdotlyBot - http://sur.ly/bot.html
+            // Swiftbot - https://swiftype.com/swiftbot
             // YepBot - https://yep.com/yepbot/
-            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|yep)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|surdotly|swift|yep)bot)\/([\w\.-]+)/i,
 
             // Algolia Crawler
             /(algolia crawler(?: renderscript)?)\/?([\w\.]*)/i,
@@ -98,7 +100,7 @@ const Crawlers = Object.freeze({
             /(oncrawl) mobile\/([\w\.]+)/i,
 
             // Qwantbot - https://help.qwant.com/bot
-            /(qwantbot)[-\w]*\/?([\w\.]*)/i,
+            /(qwantbot(?:-news)?)[-\w]*\/?([\w\.]*)/i,
 
             // SemrushBot - http://www.semrush.com/bot.html
             /((?:semrush|splitsignal)bot[-abcfimostw]*)\/?([\w\.-]*)/i,
