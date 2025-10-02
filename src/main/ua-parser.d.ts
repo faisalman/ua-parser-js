@@ -2,7 +2,6 @@
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
-import type { Headers } from "undici";
 import { BrowserType, CPUArch, DeviceType, EngineName } from "../enums/ua-parser-enums";
 
 declare namespace UAParser {
