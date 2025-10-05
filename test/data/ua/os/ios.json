@@ -1,5 +1,23 @@
 [
     {
+        "desc"    : "iOS 18.6",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "18.6"
+        }
+    },
+    {
+        "desc"    : "iOS 26",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "26.0"
+        }
+    },
+    {
         "desc"    : "iOS in App",
         "ua"      : "AppName/version CFNetwork/version Darwin/version",
         "expect"  :

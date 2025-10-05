@@ -1253,8 +1253,19 @@
             if (this.itemType != UA_RESULT) {
                 rgxMapper.call(this.data, this.ua, this.rgxMap);
             }
-            if (this.itemType == UA_BROWSER) {
-                this.set(MAJOR, majorize(this.get(VERSION)));
+            switch (this.itemType) {
+                case UA_BROWSER:
+                    this.set(MAJOR, majorize(this.get(VERSION)));
+                    break;
+                case UA_OS:
+                    if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
+                        // Based on the assumption that iOS version is tightly coupled with Safari version
+                        var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
+                        if (realVersion && parseInt(realVersion[1].substring(0,2), 10) >= 26) {
+                            this.set(VERSION, realVersion[1]);  // Set as iOS version
+                        }
+                    }
+                    break;
             }
             return this;
         };
