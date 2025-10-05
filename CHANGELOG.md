@@ -23,8 +23,12 @@
 - **Support for Custom/Predefined Extensions:**
   - Pass custom regexes or predefined extensions as a list to `UAParser()`
 
-- **Support for CLI Parsing:**
-  - Parse a user-agent directly from the command line using `npx ua-parser-js "[User-Agent]"`
+- **Support for CLI Processing:**
+  - Directly parse user-agent strings from the command line:
+    `npx ua-parser-js "<User-Agent>"`
+  - Process batch data from files: 
+    `npx ua-parser-js --input-file=log.txt >> result.json` or
+    `npx ua-parser-js --input-file=log.txt --output-file=result.json`
 
 - **Enhanced Detection with Client Hints:**
   - `withClientHints()`: Improves detection accuracy by leveraging client hints
