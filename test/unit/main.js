@@ -163,6 +163,14 @@ describe('Extending Regex', function () {
     assert.deepEqual(myParser3.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
 });
 
+describe('User-agent with trailing space', function () {
+    it ('trailing space will be trimmed', function () {
+        const uastring = '     Opera/9.21 (Windows NT 5.1; U; ru)     ';
+        const { ua } = UAParser(uastring);
+        assert.equal(ua, 'Opera/9.21 (Windows NT 5.1; U; ru)     ');
+    });
+});
+
 describe('User-agent length', function () {
     var UA_MAX_LENGTH = 500;
 

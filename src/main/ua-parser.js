@@ -206,10 +206,8 @@
             return strip(/\\?\"/g, str); 
         },
         trim = function (str, len) {
-            if (isString(str)) {
-                str = strip(/^\s\s*/, str);
-                return typeof len === TYPEOF.UNDEFINED ? str : str.substring(0, UA_MAX_LENGTH);
-            }
+            str = strip(/^\s\s*/, String(str));
+            return typeof len === TYPEOF.UNDEFINED ? str : str.substring(0, len);
     };
 
     ///////////////
@@ -1464,8 +1462,7 @@
             ['getResult', createItemFunc(RESULT)],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
-                if (isString(ua))
-                    userAgent = ua.length > UA_MAX_LENGTH ? trim(ua, UA_MAX_LENGTH) : ua;
+                if (isString(ua)) userAgent = trim(ua, UA_MAX_LENGTH);
                 return this;
             }]
         ])
