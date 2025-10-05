@@ -24,21 +24,21 @@
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
         UNKNOWN     = '?',
-
-        // typeof
-        FUNC_TYPE   = 'function',
-        UNDEF_TYPE  = 'undefined',
-        OBJ_TYPE    = 'object',
-        STR_TYPE    = 'string',
+        TYPEOF = {
+            FUNCTION    : 'function',
+            OBJECT      : 'object',
+            STRING      : 'string',
+            UNDEFINED   : 'undefined'
+        },
 
         // properties
-        UA_BROWSER  = 'browser',
-        UA_CPU      = 'cpu',
-        UA_DEVICE   = 'device',
-        UA_ENGINE   = 'engine',
-        UA_OS       = 'os',
-        UA_RESULT   = 'result',
-        
+        BROWSER     = 'browser',
+        CPU         = 'cpu',
+        DEVICE      = 'device',
+        ENGINE      = 'engine',
+        OS          = 'os',
+        RESULT      = 'result',
+
         NAME        = 'name',
         TYPE        = 'type',
         VENDOR      = 'vendor',
@@ -66,16 +66,16 @@
         PLATFORM    = 'platform',
         PLATFORMVER = 'platformVersion',
         BITNESS     = 'bitness',
-        CH_HEADER   = 'sec-ch-ua',
-        CH_HEADER_FULL_VER_LIST = CH_HEADER + '-full-version-list',
-        CH_HEADER_ARCH      = CH_HEADER + '-arch',
-        CH_HEADER_BITNESS   = CH_HEADER + '-' + BITNESS,
-        CH_HEADER_FORM_FACTORS = CH_HEADER + '-form-factors',
-        CH_HEADER_MOBILE    = CH_HEADER + '-' + MOBILE,
-        CH_HEADER_MODEL     = CH_HEADER + '-' + MODEL,
-        CH_HEADER_PLATFORM  = CH_HEADER + '-' + PLATFORM,
-        CH_HEADER_PLATFORM_VER = CH_HEADER_PLATFORM + '-version',
-        CH_ALL_VALUES       = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTORS, BITNESS],
+        CH          = 'sec-ch-ua',
+        CH_FULL_VER_LIST= CH + '-full-version-list',
+        CH_ARCH         = CH + '-arch',
+        CH_BITNESS      = CH + '-' + BITNESS,
+        CH_FORM_FACTORS = CH + '-form-factors',
+        CH_MOBILE       = CH + '-' + MOBILE,
+        CH_MODEL        = CH + '-' + MODEL,
+        CH_PLATFORM     = CH + '-' + PLATFORM,
+        CH_PLATFORM_VER = CH_PLATFORM + '-version',
+        CH_ALL_VALUES   = [BRANDS, FULLVERLIST, MOBILE, MODEL, PLATFORM, PLATFORMVER, ARCHITECTURE, FORMFACTORS, BITNESS],
 
         // device vendors
         AMAZON      = 'Amazon',
@@ -114,7 +114,7 @@
         // os
         WINDOWS     = 'Windows';
    
-    var isWindow            = typeof window !== UNDEF_TYPE,
+    var isWindow            = typeof window !== TYPEOF.UNDEFINED,
         NAVIGATOR           = (isWindow && window.navigator) ? 
                                 window.navigator : 
                                 undefined,
@@ -150,7 +150,7 @@
             return enums;
         },
         has = function (str1, str2) {
-            if (typeof str1 === OBJ_TYPE && str1.length > 0) {
+            if (typeof str1 === TYPEOF.OBJECT && str1.length > 0) {
                 for (var i in str1) {
                     if (lowerize(str2) == lowerize(str1[i])) return true;
                 }
@@ -164,7 +164,7 @@
             }
         },
         isString = function (val) {
-            return typeof val === STR_TYPE;
+            return typeof val === TYPEOF.STRING;
         },
         itemListToArray = function (header) {
             if (!header) return undefined;
@@ -191,7 +191,7 @@
                 if (!arr.hasOwnProperty(i)) continue;
 
                 var propName = arr[i];
-                if (typeof propName == OBJ_TYPE && propName.length == 2) {
+                if (typeof propName == TYPEOF.OBJECT && propName.length == 2) {
                     this[propName[0]] = propName[1];
                 } else {
                     this[propName] = undefined;
@@ -208,7 +208,7 @@
         trim = function (str, len) {
             if (isString(str)) {
                 str = strip(/^\s\s*/, str);
-                return typeof len === UNDEF_TYPE ? str : str.substring(0, UA_MAX_LENGTH);
+                return typeof len === TYPEOF.UNDEFINED ? str : str.substring(0, UA_MAX_LENGTH);
             }
     };
 
@@ -240,9 +240,9 @@
                             match = matches[++k];
                             q = props[p];
                             // check if given property is actually array
-                            if (typeof q === OBJ_TYPE && q.length > 0) {
+                            if (typeof q === TYPEOF.OBJECT && q.length > 0) {
                                 if (q.length === 2) {
-                                    if (typeof q[1] == FUNC_TYPE) {
+                                    if (typeof q[1] == TYPEOF.FUNCTION) {
                                         // assign modified match
                                         this[q[0]] = q[1].call(this, match);
                                     } else {
@@ -251,7 +251,7 @@
                                     }
                                 } else if (q.length >= 3) {
                                     // Check whether q[1] FUNCTION or REGEX
-                                    if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) {
+                                    if (typeof q[1] === TYPEOF.FUNCTION && !(q[1].exec && q[1].test)) {
                                         if (q.length > 3) {
                                             this[q[0]] = match ? q[1].apply(this, q.slice(2)) : undefined;
                                         } else {
@@ -283,7 +283,7 @@
 
             for (var i in map) {
                 // check if current value is array
-                if (typeof map[i] === OBJ_TYPE && map[i].length > 0) {
+                if (typeof map[i] === TYPEOF.OBJECT && map[i].length > 0) {
                     for (var j = 0; j < map[i].length; j++) {
                         if (has(map[i][j], str)) {
                             return (i === UNKNOWN) ? undefined : i;
@@ -1050,27 +1050,27 @@
     var defaultProps = (function () {
             var props = { init : {}, isIgnore : {}, isIgnoreRgx : {}, toString : {}};
             setProps.call(props.init, [
-                [UA_BROWSER, [NAME, VERSION, MAJOR, TYPE]],
-                [UA_CPU, [ARCHITECTURE]],
-                [UA_DEVICE, [TYPE, MODEL, VENDOR]],
-                [UA_ENGINE, [NAME, VERSION]],
-                [UA_OS, [NAME, VERSION]]
+                [BROWSER, [NAME, VERSION, MAJOR, TYPE]],
+                [CPU, [ARCHITECTURE]],
+                [DEVICE, [TYPE, MODEL, VENDOR]],
+                [ENGINE, [NAME, VERSION]],
+                [OS, [NAME, VERSION]]
             ]);
             setProps.call(props.isIgnore, [
-                [UA_BROWSER, [VERSION, MAJOR]],
-                [UA_ENGINE, [VERSION]],
-                [UA_OS, [VERSION]]
+                [BROWSER, [VERSION, MAJOR]],
+                [ENGINE, [VERSION]],
+                [OS, [VERSION]]
             ]);
             setProps.call(props.isIgnoreRgx, [
-                [UA_BROWSER, / ?browser$/i],
-                [UA_OS, / ?os$/i]
+                [BROWSER, / ?browser$/i],
+                [OS, / ?os$/i]
             ]);
             setProps.call(props.toString, [
-                [UA_BROWSER, [NAME, VERSION]],
-                [UA_CPU, [ARCHITECTURE]],
-                [UA_DEVICE, [VENDOR, MODEL]],
-                [UA_ENGINE, [NAME, VERSION]],
-                [UA_OS, [NAME, VERSION]]
+                [BROWSER, [NAME, VERSION]],
+                [CPU, [ARCHITECTURE]],
+                [DEVICE, [VENDOR, MODEL]],
+                [ENGINE, [NAME, VERSION]],
+                [OS, [NAME, VERSION]]
             ]);
             return props;
     })();
@@ -1114,14 +1114,14 @@
             return item.detectFeature().get();
         };
 
-        if (itemType != UA_RESULT) {
+        if (itemType != RESULT) {
             IData.prototype.is = function (strToCheck) {
                 var is = false;
                 for (var i in this) {
                     if (this.hasOwnProperty(i) && !has(is_ignoreProps, i) && lowerize(is_ignoreRgx ? strip(is_ignoreRgx, this[i]) : this[i]) == lowerize(is_ignoreRgx ? strip(is_ignoreRgx, strToCheck) : strToCheck)) {
                         is = true;
-                        if (strToCheck != UNDEF_TYPE) break;
-                    } else if (strToCheck == UNDEF_TYPE && is) {
+                        if (strToCheck != TYPEOF.UNDEFINED) break;
+                    } else if (strToCheck == TYPEOF.UNDEFINED && is) {
                         is = !is;
                         break;
                     }
@@ -1131,11 +1131,11 @@
             IData.prototype.toString = function () {
                 var str = EMPTY;
                 for (var i in toString_props) {
-                    if (typeof(this[toString_props[i]]) !== UNDEF_TYPE) {
+                    if (typeof(this[toString_props[i]]) !== TYPEOF.UNDEFINED) {
                         str += (str ? ' ' : EMPTY) + this[toString_props[i]];
                     }
                 }
-                return str || UNDEF_TYPE;
+                return str || TYPEOF.UNDEFINED;
             };
         }
 
@@ -1171,19 +1171,19 @@
         setProps.call(this, CH_ALL_VALUES);
         if (isHttpUACH) {
             setProps.call(this, [
-                [BRANDS, itemListToArray(uach[CH_HEADER])],
-                [FULLVERLIST, itemListToArray(uach[CH_HEADER_FULL_VER_LIST])],
-                [MOBILE, /\?1/.test(uach[CH_HEADER_MOBILE])],
-                [MODEL, stripQuotes(uach[CH_HEADER_MODEL])],
-                [PLATFORM, stripQuotes(uach[CH_HEADER_PLATFORM])],
-                [PLATFORMVER, stripQuotes(uach[CH_HEADER_PLATFORM_VER])],
-                [ARCHITECTURE, stripQuotes(uach[CH_HEADER_ARCH])],
-                [FORMFACTORS, itemListToArray(uach[CH_HEADER_FORM_FACTORS])],
-                [BITNESS, stripQuotes(uach[CH_HEADER_BITNESS])]
+                [BRANDS, itemListToArray(uach[CH])],
+                [FULLVERLIST, itemListToArray(uach[CH_FULL_VER_LIST])],
+                [MOBILE, /\?1/.test(uach[CH_MOBILE])],
+                [MODEL, stripQuotes(uach[CH_MODEL])],
+                [PLATFORM, stripQuotes(uach[CH_PLATFORM])],
+                [PLATFORMVER, stripQuotes(uach[CH_PLATFORM_VER])],
+                [ARCHITECTURE, stripQuotes(uach[CH_ARCH])],
+                [FORMFACTORS, itemListToArray(uach[CH_FORM_FACTORS])],
+                [BITNESS, stripQuotes(uach[CH_BITNESS])]
             ]);
         } else {
             for (var prop in uach) {
-                if(this.hasOwnProperty(prop) && typeof uach[prop] !== UNDEF_TYPE) this[prop] = uach[prop];
+                if(this.hasOwnProperty(prop) && typeof uach[prop] !== TYPEOF.UNDEFINED) this[prop] = uach[prop];
             }
         }
     }
@@ -1208,30 +1208,30 @@
         this.detectFeature = function () {
             if (NAVIGATOR && NAVIGATOR.userAgent == this.ua) {
                 switch (this.itemType) {
-                    case UA_BROWSER:
+                    case BROWSER:
                         // Brave-specific detection
-                        if (NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == FUNC_TYPE) {
+                        if (NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == TYPEOF.FUNCTION) {
                             this.set(NAME, 'Brave');
                         }
                         break;
-                    case UA_DEVICE:
+                    case DEVICE:
                         // Chrome-specific detection: check for 'mobile' value of navigator.userAgentData
                         if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
                             this.set(TYPE, MOBILE);
                         }
                         // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-                        if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== UNDEF_TYPE && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
+                        if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== TYPEOF.UNDEFINED && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
                             this.set(MODEL, 'iPad')
                                 .set(TYPE, TABLET);
                         }
                         break;
-                    case UA_OS:
+                    case OS:
                         // Chrome-specific detection: check for 'platform' value of navigator.userAgentData
                         if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
                             this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
                         }
                         break;
-                    case UA_RESULT:
+                    case RESULT:
                         var data = this.data;
                         var detect = function (itemType) {
                             return data[itemType]
@@ -1239,25 +1239,25 @@
                                     .detectFeature()
                                     .get();
                         };
-                        this.set(UA_BROWSER, detect(UA_BROWSER))
-                            .set(UA_CPU, detect(UA_CPU))
-                            .set(UA_DEVICE, detect(UA_DEVICE))
-                            .set(UA_ENGINE, detect(UA_ENGINE))
-                            .set(UA_OS, detect(UA_OS));
+                        this.set(BROWSER, detect(BROWSER))
+                            .set(CPU, detect(CPU))
+                            .set(DEVICE, detect(DEVICE))
+                            .set(ENGINE, detect(ENGINE))
+                            .set(OS, detect(OS));
                 }
             }
             return this;
         };
 
         this.parseUA = function () {
-            if (this.itemType != UA_RESULT) {
+            if (this.itemType != RESULT) {
                 rgxMapper.call(this.data, this.ua, this.rgxMap);
             }
             switch (this.itemType) {
-                case UA_BROWSER:
+                case BROWSER:
                     this.set(MAJOR, majorize(this.get(VERSION)));
                     break;
-                case UA_OS:
+                case OS:
                     if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
                         // Based on the assumption that iOS version is tightly coupled with Safari version
                         var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
@@ -1275,14 +1275,14 @@
                 rgxMap = this.rgxMap;
     
             switch (this.itemType) {
-                case UA_BROWSER:
-                case UA_ENGINE:
+                case BROWSER:
+                case ENGINE:
                     var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
                     if (brands) {
                         for (var i=0; i<brands.length; i++) {
                             var brandName = brands[i].brand || brands[i],
                                 brandVersion = brands[i].version;
-                            if (this.itemType == UA_BROWSER && 
+                            if (this.itemType == BROWSER && 
                                 !/not.a.brand/i.test(brandName) && 
                                 (!prevName || 
                                     (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
@@ -1297,20 +1297,20 @@
                                     }
                                     prevName = brandName;
                             }
-                            if (this.itemType == UA_ENGINE && brandName == CHROMIUM) {
+                            if (this.itemType == ENGINE && brandName == CHROMIUM) {
                                 this.set(VERSION, brandVersion);
                             }
                         }
                     }
                     break;
-                case UA_CPU:
+                case CPU:
                     var archName = uaCH[ARCHITECTURE];
                     if (archName) {
                         if (archName && uaCH[BITNESS] == '64') archName += '64';
                         rgxMapper.call(this.data, archName + ';', rgxMap);
                     }
                     break;
-                case UA_DEVICE:
+                case DEVICE:
                     if (uaCH[MOBILE]) {
                         this.set(TYPE, MOBILE);
                     }
@@ -1340,7 +1340,7 @@
                         this.set(TYPE, ff);
                     }
                     break;
-                case UA_OS:
+                case OS:
                     var osName = uaCH[PLATFORM];
                     if(osName) {
                         var osVersion = uaCH[PLATFORMVER];
@@ -1354,7 +1354,7 @@
                             .set(VERSION, undefined);
                     }           
                     break;
-                case UA_RESULT:
+                case RESULT:
                     var data = this.data;
                     var parse = function (itemType) {
                         return data[itemType]
@@ -1363,11 +1363,11 @@
                                 .parseCH()
                                 .get();
                     };
-                    this.set(UA_BROWSER, parse(UA_BROWSER))
-                        .set(UA_CPU, parse(UA_CPU))
-                        .set(UA_DEVICE, parse(UA_DEVICE))
-                        .set(UA_ENGINE, parse(UA_ENGINE))
-                        .set(UA_OS, parse(UA_OS));
+                    this.set(BROWSER, parse(BROWSER))
+                        .set(CPU, parse(CPU))
+                        .set(DEVICE, parse(DEVICE))
+                        .set(ENGINE, parse(ENGINE))
+                        .set(OS, parse(OS));
             }
             return this;
         };
@@ -1385,9 +1385,9 @@
 
     function UAParser (ua, extensions, headers) {
 
-        if (typeof ua === OBJ_TYPE) {
+        if (typeof ua === TYPEOF.OBJECT) {
             if (isExtensions(ua, true)) {
-                if (typeof extensions === OBJ_TYPE) {
+                if (typeof extensions === TYPEOF.OBJECT) {
                     headers = extensions;               // case UAParser(extensions, headers)           
                 }
                 extensions = ua;                        // case UAParser(extensions)
@@ -1396,13 +1396,13 @@
                 extensions = undefined;
             }
             ua = undefined;
-        } else if (typeof ua === STR_TYPE && !isExtensions(extensions, true)) {
+        } else if (typeof ua === TYPEOF.STRING && !isExtensions(extensions, true)) {
             headers = extensions;                       // case UAParser(ua, headers)
             extensions = undefined;
         }
 
         if (headers) {
-            if (typeof headers.append === FUNC_TYPE) {
+            if (typeof headers.append === TYPEOF.FUNCTION) {
                 // Convert Headers object into a plain object
                 var kv = {};
                 headers.forEach(function (v, k) { kv[String(k).toLowerCase()] = v; });
@@ -1423,7 +1423,7 @@
             return new UAParser(ua, extensions, headers).getResult();
         }
 
-        var userAgent = typeof ua === STR_TYPE ? ua :                                       // Passed user-agent string
+        var userAgent = typeof ua === TYPEOF.STRING ? ua :                                       // Passed user-agent string
                                 (headers && headers[USER_AGENT] ? headers[USER_AGENT] :     // User-Agent from passed headers
                                 ((NAVIGATOR && NAVIGATOR.userAgent) ? NAVIGATOR.userAgent : // navigator.userAgent
                                     EMPTY)),                                                // empty string
@@ -1434,15 +1434,15 @@
                         defaultRegexes,
 
             createItemFunc = function (itemType) {
-                if (itemType == UA_RESULT) {
+                if (itemType == RESULT) {
                     return function () {
                         return new UAItem(itemType, userAgent, regexMap, httpUACH)
                                     .set('ua', userAgent)
-                                    .set(UA_BROWSER, this.getBrowser())
-                                    .set(UA_CPU, this.getCPU())
-                                    .set(UA_DEVICE, this.getDevice())
-                                    .set(UA_ENGINE, this.getEngine())
-                                    .set(UA_OS, this.getOS())
+                                    .set(BROWSER, this.getBrowser())
+                                    .set(CPU, this.getCPU())
+                                    .set(DEVICE, this.getDevice())
+                                    .set(ENGINE, this.getEngine())
+                                    .set(OS, this.getOS())
                                     .get();
                     };
                 } else {
@@ -1456,12 +1456,12 @@
             
         // public methods
         setProps.call(this, [
-            ['getBrowser', createItemFunc(UA_BROWSER)],
-            ['getCPU', createItemFunc(UA_CPU)],
-            ['getDevice', createItemFunc(UA_DEVICE)],
-            ['getEngine', createItemFunc(UA_ENGINE)],
-            ['getOS', createItemFunc(UA_OS)],
-            ['getResult', createItemFunc(UA_RESULT)],
+            ['getBrowser', createItemFunc(BROWSER)],
+            ['getCPU', createItemFunc(CPU)],
+            ['getDevice', createItemFunc(DEVICE)],
+            ['getEngine', createItemFunc(ENGINE)],
+            ['getOS', createItemFunc(OS)],
+            ['getResult', createItemFunc(RESULT)],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
                 if (isString(ua))
@@ -1485,15 +1485,15 @@
     //////////
 
     // check js environment
-    if (typeof exports !== UNDEF_TYPE) {
+    if (typeof exports !== TYPEOF.UNDEFINED) {
         // nodejs env
-        if (typeof module !== UNDEF_TYPE && module.exports) {
+        if (typeof module !== TYPEOF.UNDEFINED && module.exports) {
             exports = module.exports = UAParser;
         }
         exports.UAParser = UAParser;
     } else {
         // requirejs env (optional)
-        if (typeof define === FUNC_TYPE && define.amd) {
+        if (typeof define === TYPEOF.FUNCTION && define.amd) {
             define(function () {
                 return UAParser;
             });
