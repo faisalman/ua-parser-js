@@ -658,7 +658,7 @@
             /(nokia) (t[12][01])/i
             ], [VENDOR, MODEL, [TYPE, TABLET]], [
             /(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i,
-            /nokia[-_ ]?(([-\w\. ]*))/i
+            /nokia[-_ ]?(([-\w\. ]*?))( bui|\)|;|\/)/i
             ], [[MODEL, /_/g, ' '], [TYPE, MOBILE], [VENDOR, 'Nokia']], [
 
             // Google
