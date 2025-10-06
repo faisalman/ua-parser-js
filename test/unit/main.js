@@ -10,7 +10,6 @@ var cpus        = require('../data/ua/cpu/cpu-all.json');
 var devices     = readJsonFiles('test/data/ua/device');
 var engines     = require('../data/ua/engine/engine-all.json');
 var os          = readJsonFiles('test/data/ua/os');
-var { Headers } = require('undici');
 
 function readJsonFiles(dir) {
     var list = [];
