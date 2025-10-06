@@ -546,6 +546,8 @@
             /((ppc|powerpc)(64)?)( mac|;|\))/i,                                 // PowerPC
             /(?:osf1|[freopnt]{3,4}bsd) (alpha)/i                               // Alpha
             ], [[ARCHITECTURE, /ower/, EMPTY, lowerize]], [
+            /mc680.0/i
+            ], [[ARCHITECTURE, '68k']], [
             /winnt.+\[axp/i
             ], [[ARCHITECTURE, 'alpha']]
         ],
