@@ -773,6 +773,7 @@
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
             /(oppo) ?([\w ]+) bui/i,                                            // OPPO
+            /(hisense) ([ehv][\w ]+)\)/i,                                       // Hisense
             /droid[^;]+; (philips)[_ ]([sv-x][\d]{3,4}[xz]?)/i                  // Philips
             ], [VENDOR, MODEL, [TYPE, MOBILE]], [
 

@@ -240,6 +240,7 @@ const DeviceVendor = Object.freeze({
     GEEKSPHONE: 'GeeksPhone',
     GENERIC: 'Generic',
     GOOGLE: 'Google',
+    HISENSE: 'Hisense',
     HMD: 'HMD',
     HP: 'HP',
     HTC: 'HTC',
