@@ -613,6 +613,16 @@
     },
     {
         "desc"    : "PaleMoon",
+        "ua"      : "(Windows NT 6.2; WOW64) KHTML/4.11 Gecko/20130308 Firefox/23.0 (PaleMoon/20.3)",
+        "expect"  :
+        {
+            "name"    : "PaleMoon",
+            "version" : "20.3",
+            "major"   : "20"
+        }
+    },
+    {
+        "desc"    : "PaleMoon",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:52.9) Gecko/20100101 Goanna/3.4 Firefox/52.9 PaleMoon/27.6.1",
         "expect"  :
         {
@@ -1336,6 +1346,16 @@
             "name"    : "Mozilla",
             "version" : "5.0",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Mozilla",
+        "ua"      : "Mozilla/2.02 [fr] (WinNT; I)",
+        "expect"  :
+        {
+            "name"    : "Mozilla",
+            "version" : "2.02",
+            "major"   : "2"
         }
     },
     {
