@@ -769,7 +769,8 @@
 
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
                                                                                 // BlackBerry/BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Meizu/Motorola/Polytron/Tecno/Micromax/Advan
-            /; (blu|hmd|imo|infinix|lava|oneplus|tcl)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,  // BLU/HMD/IMO/Infinix/Lava/OnePlus/TCL
+                                                                                // BLU/HMD/IMO/Infinix/Lava/OnePlus/TCL/Wiko
+            /; (blu|hmd|imo|infinix|lava|oneplus|tcl|wiko)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,
             /(hp) ([\w ]+\w)/i,                                                 // HP iPAQ
             /(microsoft); (lumia[\w ]+)/i,                                      // Microsoft Lumia
             /(oppo) ?([\w ]+) bui/i,                                            // OPPO

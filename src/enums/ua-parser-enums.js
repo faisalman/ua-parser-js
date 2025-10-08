@@ -289,6 +289,7 @@ const DeviceVendor = Object.freeze({
     VIVO: 'Vivo',
     VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
+    WIKO: 'Wiko',
     XBOX: 'Xbox',
     XIAOMI: 'Xiaomi',
     ZEBRA: 'Zebra',
