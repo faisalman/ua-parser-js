@@ -6,8 +6,8 @@ try {
     const { performance } = require('node:perf_hooks');
     const readline = require('node:readline');
     const { parseArgs } = require('node:util');
-    const UAParser = require('ua-parser-js');
-    const { Bots, Emails, ExtraDevices, InApps, Vehicles } = require('ua-parser-js/extensions');
+    const UAParser = require('../src/main/ua-parser');
+    const { Bots, Emails, ExtraDevices, InApps, Vehicles } = require('../src/extensions/ua-parser-extensions');
 
     if (!process.argv[2].startsWith('-')) {
 
