@@ -18,7 +18,7 @@
 <a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
 <a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
 <img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge">
-<a target="_blank" href="https://discord.gg/stt86vmr"><img alt="Discord invite" src="https://dcbadge.limes.pink/api/server/https://discord.gg/stt86vmr"></a>
+<a target="_blank" href="https://discord.com/channels/1406959509087453236/1406959509930381375"><img alt="Discord invite" src="https://dcbadge.limes.pink/api/server/https://discord.com/channels/1406959509087453236/1406959509930381375"></a>
 </p>
 
 # UAParser.js
@@ -58,7 +58,7 @@ see what's new & breaking.
             <td>PRO Enterprise</td>
         </tr>
         <tr>
-            <td>Browser detection</td>
+            <td>Browser Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -66,7 +66,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>CPU detection</td>
+            <td>CPU Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -74,7 +74,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Device detection</td>
+            <td>Device Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -82,7 +82,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Engine detection</td>
+            <td>Rendering Engine Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -98,7 +98,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Bot detection</td>
+            <td>Enhanced+ Accuracy</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -106,7 +106,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>AI Bot detection</td>
+            <td>Bot Detection</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -114,7 +114,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Extras (Apps, Libs, Emails, Media Players, etc) detection</td>
+            <td>AI Detection</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -122,7 +122,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Enhanced detection result</td>
+            <td>Extra Detections (Apps, Libs, Emails, Media Players, Crawlers, and more)</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -130,7 +130,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Client Hints support</td>
+            <td>Client Hints Support</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -138,7 +138,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>CommonJS support</td>
+            <td>CommonJS Support</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -146,7 +146,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>ES modules support</td>
+            <td>ESM Support</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -154,23 +154,15 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>TypeScript declarations</td>
-            <td><a href="#demo" title="Community version">⚠️</a></td>
+            <td>TypeScript Definitions</td>
+            <td><a href="#demo" title="Community version">✅</a></td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>npm module available</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>Direct downloads available</td>
+            <td>npm Module Available</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -178,7 +170,15 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Allows commercial usage</td>
+            <td>Direct Downloads Available</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Commercial Use Allowed</td>
             <td>✅</td>
             <td>✅</td>
             <td>❌</td>
@@ -186,7 +186,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Permissive (non-copyleft) license</td>
+            <td>Permissive (non-Copyleft) License</td>
             <td>✅</td>
             <td><strong title="Copyleft license">❌</strong></td>
             <td>✅</td>
@@ -194,7 +194,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>No open-source obligations</td>
+            <td>No Open-Source Obligations</td>
             <td>✅</td>
             <td><strong title="Copyleft license">❌</strong></td>
             <td>✅</td>
@@ -202,7 +202,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Unlimited end-products</td>
+            <td>Unlimited End-Products</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -210,7 +210,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Unlimited deployments</td>
+            <td>Unlimited Deployments</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -218,7 +218,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>1-year product support</td>
+            <td>1-year Product Support</td>
             <td>❌</td>
             <td>❌</td>
             <td>✅</td>
@@ -226,7 +226,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Lifetime updates</td>
+            <td>Lifetime Updates</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>

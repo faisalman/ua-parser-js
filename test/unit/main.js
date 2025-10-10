@@ -382,12 +382,15 @@ describe('Read user-agent data from req.headers', function () {
         assert.strictEqual(engine.name, "EdgeHTML");
     });
 
-    it('Fetch API\'s Header can be passed directly into headers', () => {
-        const reqHeaders = new Headers();
-        reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
-        const { browser } = UAParser(reqHeaders);
-        assert.strictEqual(browser.is('Midori'), true);
-    });
+    // Headers supported in node 18+ - https://developer.mozilla.org/en-US/docs/Web/API/Headers
+    if (typeof Headers !== 'undefined') {
+        it('Fetch API\'s Header can be passed directly into headers', () => {
+            const reqHeaders = new Headers();
+            reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
+            const { browser } = UAParser(reqHeaders);
+            assert.strictEqual(browser.is('Midori'), true);
+        });
+    }
 
     it('Headers field name should be case insensitive', function () {    
         const hEaDeRs = {

@@ -69,6 +69,20 @@
 
 --- 
 
+## Version 2.0.6
+- Add new CLI feature: processing batch user-agent data from file and output as JSON
+- Fix `setUA()`: trim leading space from user-agent string input
+- Replace `undici` dependency with node's internal `Headers`
+- Add new browser: Bing, Qwant
+- Add new device vendor: Hisense, Wiko
+- Improve browser detection: Mozilla, Pale Moon
+- Improve CPU detection: 68k
+- Improve device detection: Apple, BlackBerry, Huawei, Nokia, Xiaomi
+- Improve OS detection: iOS 26
+- `extensions` submodule:
+    - Add new fetcher: Discordbot, KeybaseBot, Slackbot, Slackbot-LinkExpanding, Slack-ImgProxy, Twitterbot
+    - Add new crawler: Qwantbot-news, SurdotlyBot, SwiftBot
+
 ## Version 2.0.5
 
 - Add new browser: Zalo
