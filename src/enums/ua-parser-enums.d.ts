@@ -211,7 +211,6 @@ export const CPU: typeof CPUArch;
 
 export const DeviceType: Readonly<{
     CONSOLE: 'console',
-    DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
