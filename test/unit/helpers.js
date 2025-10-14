@@ -57,12 +57,14 @@ describe('isBot', () => {
         const firefox = 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0';
         const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
         const thunderbird = 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0';
+        const headline = 'Mozilla/5.0 (compatible; ev-crawler/1.0; +https://headline.com/legal/crawler)';
 
         const botParser = new UAParser(firefox, { Bots, Emails });
         assert.equal(isBot(botParser.getResult()), false);
         assert.equal(isBot(botParser.setUA(ahrefsBot).getResult()), true);
         assert.equal(isBot(botParser.setUA(scrapy).getResult()), true);
         assert.equal(isBot(botParser.setUA(thunderbird).getResult()), false);
+        assert.equal(isBot(botParser.setUA(headline).getResult()), true);
 
         assert.equal(isBot(ahrefsBot), true);
         assert.equal(isBot(firefox), false);
