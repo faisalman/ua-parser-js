@@ -41,6 +41,24 @@ const files = [
         ]
     },
     {
+        src : 'src/bot-detection/bot-detection.js',
+        dest :'src/bot-detection/bot-detection.mjs',
+        title : 'Generated ESM version of ua-parser-js/bot-detection',
+        replacements : [...defaultReplacements.mjs]
+    },
+    {
+        src : 'src/browser-detection/browser-detection.js',
+        dest :'src/browser-detection/browser-detection.mjs',
+        title : 'Generated ESM version of ua-parser-js/browser-detection',
+        replacements : [...defaultReplacements.mjs]
+    },
+    {
+        src : 'src/device-detection/device-detection.js',
+        dest :'src/device-detection/device-detection.mjs',
+        title : 'Generated ESM version of ua-parser-js/device-detection',
+        replacements : [...defaultReplacements.mjs]
+    },
+    {
         src : 'src/enums/ua-parser-enums.js',
         dest :'src/enums/ua-parser-enums.mjs',
         title : 'Generated ESM version of ua-parser-js/enums',

@@ -190,6 +190,21 @@
       "import": "./src/main/ua-parser.mjs",
       "types": "./src/main/ua-parser.d.ts"
     },
+    "./bot-detection": {
+      "require": "./src/bot-detection/bot-detection.js",
+      "import": "./src/bot-detection/bot-detection.mjs",
+      "types": "./src/bot-detection/bot-detection.d.ts"
+    },
+    "./browser-detection": {
+      "require": "./src/browser-detection/browser-detection.js",
+      "import": "./src/browser-detection/browser-detection.mjs",
+      "types": "./src/browser-detection/browser-detection.d.ts"
+    },
+    "./device-detection": {
+      "require": "./src/device-detection/device-detection.js",
+      "import": "./src/device-detection/device-detection.mjs",
+      "types": "./src/device-detection/device-detection.d.ts"
+    },
     "./enums": {
       "require": "./src/enums/ua-parser-enums.js",
       "import": "./src/enums/ua-parser-enums.mjs",

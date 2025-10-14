@@ -12,166 +12,34 @@
 /*jshint esversion: 6 */ 
 
 import { UAParser } from '../main/ua-parser.mjs';
-import { CPUArch, OSName, EngineName, Extension, BrowserType } from '../enums/ua-parser-enums.mjs';
-import { Bots, Crawlers } from '../extensions/ua-parser-extensions.mjs';
+import { EngineName } from '../enums/ua-parser-enums.mjs';
+import { getDeviceVendor: _getDeviceVendor, isAppleSilicon: _isAppleSilicon } from '../device-detection/device-detection.mjs';
+import { isBot: _isBot, isAICrawler } from '../bot-detection/bot-detection.mjs';
 import { isFromEU } from 'detect-europe-js';
 import { isFrozenUA } from 'ua-is-frozen';
 import { isStandalonePWA } from 'is-standalone-pwa';
-const { Crawler } = Extension.BrowserName;
 
-const toResult = (value, head, ext) => typeof value === 'string' ? UAParser(value, head, ext) : value;
+/**
+ * @deprecated Moved to `device-detection` submodule
+ */
+const getDeviceVendor = _getDeviceVendor;
 
-const getDeviceVendor = (model) => UAParser(`Mozilla/5.0 (Linux; Android 10; ${model}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36`).device.vendor;
+/**
+ * @deprecated Moved to `device-detection` submodule
+ */
+const isAppleSilicon = _isAppleSilicon;
 
-const isAppleSilicon = (resultOrUA) => {
-    const res = toResult(resultOrUA);
-    if (res.os.is(OSName.MACOS)) {
-        if (res.cpu.is(CPUArch.ARM)) {
-            return true;
-        }
-        if (typeof resultOrUA !== 'string' && typeof window !== 'undefined') {
-            try {
-                const canvas = document.createElement('canvas');
-                const webgl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-                const debug = webgl.getExtension('WEBGL_debug_renderer_info');
-                const renderer = webgl.getParameter(debug.UNMASKED_RENDERER_WEBGL);
-                if (renderer.match(/apple m\d/i)) {
-                    return true;
-                }
-            } catch {
-                return false;
-            }
-        }
-    }
-    return false;
-}
+/**
+ * @deprecated Moved to `bot-detection` submodule
+ */
+const isAIBot = isAICrawler;
 
-const isAIBot = (resultOrUA) => [
+/**
+ * @deprecated Moved to `bot-detection` submodule
+ */
+const isBot = _isBot;
 
-    // AI2
-    Crawler.AI2_BOT,
-
-    // Amazon
-    Crawler.AMAZON_BOT,
-
-    // Anthropic
-    Crawler.ANTHROPIC_AI,
-    Crawler.ANTHROPIC_CLAUDE_BOT,
-    Crawler.ANTHROPIC_CLAUDE_SEARCHBOT,
-    Crawler.ANTHROPIC_CLAUDE_WEB,
-
-    // Apple
-    Crawler.APPLE_BOT,
-    Crawler.APPLE_BOT_EXTENDED,
-
-    // Brave
-    Crawler.BRAVE_BOT,
-
-    // ByteDance
-    Crawler.BYTEDANCE_BYTESPIDER,
-    Crawler.BYTEDANCE_TIKTOKSPIDER,
-
-    // Cohere
-    Crawler.COHERE_TRAINING_DATA_CRAWLER,
-
-    // Common Crawl
-    Crawler.COMMON_CRAWL_CCBOT,
-    
-    // Coveo
-    Crawler.COVEO_BOT,
-
-    // DataForSeo
-    Crawler.DATAFORSEO_BOT,
-
-    // DeepSeek
-    Crawler.DEEPSEEK_BOT,
-
-    // Diffbot
-    Crawler.DIFFBOT,
-
-    // Google
-    Crawler.GOOGLE_EXTENDED,
-    Crawler.GOOGLE_OTHER,
-    Crawler.GOOGLE_OTHER_IMAGE,
-    Crawler.GOOGLE_OTHER_VIDEO,
-    Crawler.GOOGLE_CLOUDVERTEXBOT,
-
-    // Hive AI
-    Crawler.HIVE_IMAGESIFTBOT,
-
-    // Huawei
-    Crawler.HUAWEI_PETALBOT,
-    Crawler.HUAWEI_PANGUBOT,
-
-    // Hugging Face
-    Crawler.HUGGINGFACE_BOT,
-
-    // Kangaroo
-    Crawler.KANGAROO_BOT,
-
-    // Mendable.ai
-    Crawler.FIRECRAWL_AGENT,
-
-    // Meta
-    Crawler.META_FACEBOOKBOT,
-    Crawler.META_EXTERNALAGENT,
-
-    // OpenAI
-    Crawler.OPENAI_GPTBOT,
-    Crawler.OPENAI_SEARCH_BOT,
-
-    // Perplexity
-    Crawler.PERPLEXITY_BOT,
-
-    // Replicate
-    Crawler.REPLICATE_BOT,
-
-    // Runpod
-    Crawler.RUNPOD_BOT,
-
-    // SB Intuitions
-    Crawler.SB_INTUITIONS_BOT,
-
-    // Semrush
-    Crawler.SEMRUSH_BOT_CONTENTSHAKE,
-
-    // Timpi
-    Crawler.TIMPI_BOT,
-
-    // Together AI
-    Crawler.TOGETHER_BOT,
-
-    // Velen.io
-    Crawler.HUNTER_VELENPUBLICWEBCRAWLER,
-
-    // Vercel
-    Crawler.VERCEL_V0BOT,
-
-    // Webz.io
-    Crawler.WEBZIO_OMGILI,
-    Crawler.WEBZIO_OMGILI_BOT,
-    Crawler.WEBZIO_EXTENDED,
-
-    // X
-    Crawler.XAI_BOT,
-
-    // You.com
-    Crawler.YOU_BOT,
-
-    // Zhipu AI
-    Crawler.ZHIPU_CHATGLM_SPIDER
-    ]
-    .map((s) => s.toLowerCase())
-    .includes(String(toResult(resultOrUA, Crawlers).browser.name).toLowerCase());
-
-const isBot = (resultOrUA) => [
-    BrowserType.CLI, 
-    BrowserType.CRAWLER, 
-    BrowserType.FETCHER, 
-    BrowserType.LIBRARY
-    ].includes(toResult(resultOrUA, Bots).browser.type);
-
-const isChromeFamily = (resultOrUA) => toResult(resultOrUA).engine.is(EngineName.BLINK);
+const isChromeFamily = val => !!((typeof val === 'string' ? new UAParser(val).getEngine() : val.engine)?.is(EngineName.BLINK));
 
 const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
                             / electron\//i.test(navigator?.userAgent));         // browser
