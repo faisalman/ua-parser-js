@@ -15,6 +15,7 @@ const BrowserName = Object.freeze({
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
     ARORA: 'Arora',
+    ATLAS: 'Atlas',
     AVANT: 'Avant',
     AVAST: 'Avast Secure Browser',
     AVG: 'AVG Secure Browser',
