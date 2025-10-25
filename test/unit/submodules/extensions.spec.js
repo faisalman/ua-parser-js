@@ -3,9 +3,9 @@ const assert = require('assert');
 const parseJS = require('@babel/parser').parse;
 const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
-const { UAParser } = require('../../src/main/ua-parser');
-const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries, Vehicles } = require('../../src/extensions/ua-parser-extensions');
-const { BrowserType, OSName, Extension } = require('../../src/enums/ua-parser-enums');
+const { UAParser } = require('../../../src/main/ua-parser');
+const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries, Vehicles } = require('../../../src/extensions/ua-parser-extensions');
+const { BrowserType, OSName, Extension } = require('../../../src/enums/ua-parser-enums');
 const { CLI, Crawler, Email, Fetcher, Library } = Extension.BrowserName;
 
 describe('Extensions', () => {
