@@ -19,7 +19,7 @@ describe('Extensions', () => {
         ['Vehicles', 'vehicle', Vehicles]
     ]
     .forEach(([desc, path, ext]) => {
-        const tests = require(`../data/ua/extension/${path}.json`);
+        const tests = require(`../../data/ua/extension/${path}.json`);
         describe(desc, () => {
             tests.forEach((test) => {
                 it(`Can detect ${test.desc}: "${test.ua}"`, () => {

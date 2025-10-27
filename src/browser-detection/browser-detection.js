@@ -8,6 +8,7 @@
 /*jshint esversion: 6 */ 
 
 const { UAParser } = require('../main/ua-parser');
+const { EngineName } = require('../enums/ua-parser-enums');
 const { isStandalonePWA } = require('is-standalone-pwa');
 const { isFromEU } = require('detect-europe-js');
 
@@ -17,8 +18,9 @@ const isChromeFamily = val => !!(
         val.engine
     )?.is(EngineName.BLINK));
 
-const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
-                            / electron\//i.test(navigator?.userAgent));         // browser
+const isElectron = () => !!(
+    process?.versions?.hasOwnProperty('electron') ||    // node.js
+    / electron\//i.test(navigator?.userAgent));         // browser
 
 module.exports = { 
     isChromeFamily,
