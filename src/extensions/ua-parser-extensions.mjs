@@ -3,7 +3,7 @@
 // Source: /src/extensions/ua-parser-extensions.js
 
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.5
+/*  Extensions for UAParser.js v2.0.6
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Business License */
@@ -67,8 +67,10 @@ const Crawlers = Object.freeze({
             // PerplexityBot - https://perplexity.ai/perplexitybot
             // SBIntuitionsBot - https://www.sbintuitions.co.jp/bot/
             // SeznamBot - http://napoveda.seznam.cz/seznambot-intro
+            // SurdotlyBot - http://sur.ly/bot.html
+            // Swiftbot - https://swiftype.com/swiftbot
             // YepBot - https://yep.com/yepbot/
-            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|yep)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|surdotly|swift|yep)bot)\/([\w\.-]+)/i,
 
             // Algolia Crawler
             /(algolia crawler(?: renderscript)?)\/?([\w\.]*)/i,
@@ -102,7 +104,7 @@ const Crawlers = Object.freeze({
             /(oncrawl) mobile\/([\w\.]+)/i,
 
             // Qwantbot - https://help.qwant.com/bot
-            /(qwantbot)[-\w]*\/?([\w\.]*)/i,
+            /(qwantbot(?:-news)?)[-\w]*\/?([\w\.]*)/i,
 
             // SemrushBot - http://www.semrush.com/bot.html
             /((?:semrush|splitsignal)bot[-abcfimostw]*)\/?([\w\.-]*)/i,
@@ -287,8 +289,8 @@ const Fetchers = Object.freeze({
         [NAME, VERSION, [TYPE, FETCHER]],
 
         [
-            // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / Snapchat / Vercelbot / Yandex Bots
-            /((?:better uptime |telegram|vercel)bot|chrome-lighthouse|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
+            // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / KeybaseBot / Snapchat / Vercelbot / Yandex Bots
+            /((?:better uptime |keybase|telegram|vercel)bot|chrome-lighthouse|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],

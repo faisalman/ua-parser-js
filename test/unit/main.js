@@ -10,7 +10,6 @@ var cpus        = require('../data/ua/cpu/cpu-all.json');
 var devices     = readJsonFiles('test/data/ua/device');
 var engines     = require('../data/ua/engine/engine-all.json');
 var os          = readJsonFiles('test/data/ua/os');
-var { Headers } = require('undici');
 
 function readJsonFiles(dir) {
     var list = [];
@@ -161,6 +160,14 @@ describe('Extending Regex', function () {
         device: myOwnListOfDevices 
     }]);
     assert.deepEqual(myParser3.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
+});
+
+describe('User-agent with trailing space', function () {
+    it ('trailing space will be trimmed', function () {
+        const uastring = '     Opera/9.21 (Windows NT 5.1; U; ru)     ';
+        const { ua } = UAParser(uastring);
+        assert.equal(ua, 'Opera/9.21 (Windows NT 5.1; U; ru)     ');
+    });
 });
 
 describe('User-agent length', function () {
@@ -375,12 +382,15 @@ describe('Read user-agent data from req.headers', function () {
         assert.strictEqual(engine.name, "EdgeHTML");
     });
 
-    it('Fetch API\'s Header can be passed directly into headers', () => {
-        const reqHeaders = new Headers();
-        reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
-        const { browser } = UAParser(reqHeaders);
-        assert.strictEqual(browser.is('Midori'), true);
-    });
+    // Headers supported in node 18+ - https://developer.mozilla.org/en-US/docs/Web/API/Headers
+    if (typeof Headers !== 'undefined') {
+        it('Fetch API\'s Header can be passed directly into headers', () => {
+            const reqHeaders = new Headers();
+            reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
+            const { browser } = UAParser(reqHeaders);
+            assert.strictEqual(browser.is('Midori'), true);
+        });
+    }
 
     it('Headers field name should be case insensitive', function () {    
         const hEaDeRs = {

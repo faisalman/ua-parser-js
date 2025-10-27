@@ -1,25 +1,25 @@
 {
   "title": "UAParser.js PRO Business",
   "name": "@ua-parser-js/pro-business",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
   "keywords": [
     "user-agent",
     "client-hints",
-    "parser",
     "browser",
     "engine",
     "os",
     "device",
     "cpu",
-    "jquery-plugin",
-    "ecosystem:jquery",
     "ua-parser-js",
     "browser-detection",
     "device-detection",
     "os-detection",
-    "bot-detection"
+    "bot-detection",
+    "ai-detection",
+    "app-detection",
+    "crawler-detection"
   ],
   "homepage": "https://uaparser.dev",
   "contributors": [
@@ -220,14 +220,13 @@
     "test:eslint": "eslint src && eslint script",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
-    "test:mocha": "mocha test/unit",
+    "test:mocha": "mocha --recursive test/unit",
     "test:playwright": "npx playwright install && playwright test test/e2e --browser all"
   },
   "dependencies": {
     "detect-europe-js": "^0.1.2",
     "is-standalone-pwa": "^0.1.1",
-    "ua-is-frozen": "^0.1.2",
-    "undici": "^7.12.0"
+    "ua-is-frozen": "^0.1.2"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",

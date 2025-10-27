@@ -965,7 +965,7 @@
         "ua"      : "Mozilla/5.0 (compatible; Qwantbot-news/2.0;  +https://help.qwant.com/bot/)",
         "expect"  :
         {
-            "name"    : "Qwantbot",
+            "name"    : "Qwantbot-news",
             "version" : "2.0",
             "type"    : "crawler"
         }
@@ -1097,6 +1097,26 @@
         {
             "name"    : "StartpagePrivateImageProxy",
             "version" : "3.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SurdotlyBot",
+        "ua"      : "Mozilla/5.0 (compatible; SurdotlyBot/1.0; +http://sur.ly/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SurdotlyBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Swiftbot",
+        "ua"      : "Swiftbot/1.0 (swiftype.com)",
+        "expect"  :
+        {
+            "name"    : "Swiftbot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
