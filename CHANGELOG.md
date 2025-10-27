@@ -23,8 +23,12 @@
 - **Support for Custom/Predefined Extensions:**
   - Pass custom regexes or predefined extensions as a list to `UAParser()`
 
-- **Support for CLI Parsing:**
-  - Parse a user-agent directly from the command line using `npx ua-parser-js "[User-Agent]"`
+- **Support for CLI Processing:**
+  - Directly parse user-agent strings from the command line:
+    `npx ua-parser-js "<User-Agent>"`
+  - Process batch data from files: 
+    `npx ua-parser-js --input-file=log.txt >> result.json` or
+    `npx ua-parser-js --input-file=log.txt --output-file=result.json`
 
 - **Enhanced Detection with Client Hints:**
   - `withClientHints()`: Improves detection accuracy by leveraging client hints
@@ -64,6 +68,20 @@
     - `isStandalonePWA()`: Detects if current window is a standalone PWA
 
 --- 
+
+## Version 2.0.6
+- Add new CLI feature: processing batch user-agent data from file and output as JSON
+- Fix `setUA()`: trim leading space from user-agent string input
+- Replace `undici` dependency with node's internal `Headers`
+- Add new browser: Bing, Qwant
+- Add new device vendor: Hisense, Wiko
+- Improve browser detection: Mozilla, Pale Moon
+- Improve CPU detection: 68k
+- Improve device detection: Apple, BlackBerry, Huawei, Nokia, Xiaomi
+- Improve OS detection: iOS 26
+- `extensions` submodule:
+    - Add new fetcher: Discordbot, KeybaseBot, Slackbot, Slackbot-LinkExpanding, Slack-ImgProxy, Twitterbot
+    - Add new crawler: Qwantbot-news, SurdotlyBot, SwiftBot
 
 ## Version 2.0.5
 

@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "Wiko Life 3",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Wiko U316AT) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5199.205 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Wiko",
+            "model": "U316AT",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Wiko Ride 3",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Wiko U614AS) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.181 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Wiko",
+            "model": "U614AS",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Wiko T10",
+        "ua": "Mozilla/5.0 (Linux; Android 11; WIKO T10 Build/RP1A.200720.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5304.62 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "WIKO",
+            "model": "T10",
+            "type": "mobile"
+        }
+    }
+]
