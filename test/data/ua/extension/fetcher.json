@@ -51,7 +51,7 @@
     },
     {
         "desc"    : "Blueno",
-        "ua"      : "acebookexternalhit/1.1 (compatible; Blueno/1.0; +http://naver.me/scrap)",
+        "ua"      : "facebookexternalhit/1.1 (compatible; Blueno/1.0; +http://naver.me/scrap)",
         "expect"  :
         {
             "name"    : "Blueno",
@@ -116,6 +116,16 @@
         {
             "name"    : "Cohere-AI",
             "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Discordbot",
+        "ua"      : "Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)",
+        "expect"  :
+        {
+            "name"    : "Discordbot",
+            "version" : "2.0",
             "type"    : "fetcher"
         }
     },
@@ -240,6 +250,16 @@
         }
     },
     {
+        "desc"    : "KeybaseBot",
+        "ua"      : "Mozilla/5.0 (compatible; KeybaseBot; +https://keybase.io)",
+        "expect"  :
+        {
+            "name"    : "KeybaseBot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Meta-ExternalFetcher",
         "ua"      : "meta-externalfetcher/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
         "expect"  :
@@ -310,6 +330,36 @@
         }
     },
     {
+        "desc"    : "Slack-ImgProxy",
+        "ua"      : "Slack-ImgProxy 0.19 (+https://api.slack.com/robots)",
+        "expect"  :
+        {
+            "name"    : "Slack-ImgProxy",
+            "version" : "0.19",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Slackbot",
+        "ua"      : "Slackbot 1.0 (+https://api.slack.com/robots)",
+        "expect"  :
+        {
+            "name"    : "Slackbot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Slackbot-LinkExpanding",
+        "ua"      : "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)",
+        "expect"  :
+        {
+            "name"    : "Slackbot-LinkExpanding",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Snap URL Preview",
         "ua"      : "Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots  ",
         "expect"  :
@@ -336,6 +386,16 @@
         {
             "name"    : "TelegramBot",
             "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Twitterbot",
+        "ua"      : "Twitterbot/1.0",
+        "expect"  :
+        {
+            "name"    : "Twitterbot",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     },

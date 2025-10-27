@@ -289,7 +289,15 @@
     },
     {
         "desc"    : "68k",
-        "ua"      : "'Mozilla/1.1 (Macintosh; U; 68K)'",
+        "ua"      : "Mozilla/1.1 (Macintosh; U; 68K)",
+        "expect"  : 
+        {
+            "architecture"  : "68k"
+        }
+    },
+    {
+        "desc"    : "MC680x0",
+        "ua"      : "AmigaVoyager/3.2 (AmigaOS/MC680x0)",
         "expect"  : 
         {
             "architecture"  : "68k"

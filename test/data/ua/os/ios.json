@@ -1,5 +1,23 @@
 [
     {
+        "desc"    : "iOS 18.6",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "18.6"
+        }
+    },
+    {
+        "desc"    : "iOS 26",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "26.0"
+        }
+    },
+    {
         "desc"    : "iOS in App",
         "ua"      : "AppName/version CFNetwork/version Darwin/version",
         "expect"  :
@@ -15,6 +33,15 @@
         {
             "name"    : "iOS",
             "version" : "5.1.1"
+        }
+    },
+    {
+        "desc"    : "iOS with DuckDuckGo",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1 Ddg/26.0",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "18.7"
         }
     },
     {
@@ -36,12 +63,66 @@
         }
     },
     {
+        "desc": "iOS with Instagram",
+        "ua": "Instagram 5.0.2 (iPhone5,1; iPhone OS 7_0_4; en_US; en) AppleWebKit/420+",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "7.0.4"
+        }
+    },
+    {
+        "desc": "iOS with MS Word App",
+        "ua": "Microsoft Office Word/2.44.1211 (iOS/13.7; Tablet; es-MX; AppStore; Apple/iPad11,3)",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "13.7"
+        }
+    },
+    {
+        "desc": "iOS with Quora App",
+        "ua": "Quora 8.4.30 rv:3230 env:prod (iPad11,3; iPadOS 17.7; en_GB) AppleWebKit",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "17.7"
+        }
+    },
+    {
         "desc": "iOS with Slack App",
         "ua": "com.tinyspeck.chatlyio/23.04.10 (iPhone; iOS 16.4.1; Scale/3.00)",
         "expect":
         {
             "name"    : "iOS",
             "version" : "16.4.1"
+        }
+    },
+    {
+        "desc": "iOS with Snapchat",
+        "ua": "Snapchat/12.12.1.40 (iPhone15,2; iOS 16.2; gzip)",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "16.2"
+        }
+    },
+    {
+        "desc": "iOS with Spotify App",
+        "ua": "Spotify/8.7.70 iOS/16.0 (iPhone15,3)",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "16.0"
+        }
+    },
+    {
+        "desc": "iOS with TuneIn Radio App",
+        "ua": "TuneIn Radio/27.1.0; iPad6,3; iPadOS/16.6",
+        "expect":
+        {
+            "name"    : "iOS",
+            "version" : "16.6"
         }
     },
     {

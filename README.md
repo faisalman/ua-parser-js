@@ -22,8 +22,12 @@ https://docs.uaparser.dev
 import { UAParser } from '@ua-parser-js/pro-personal';
 ```
 
+```js
+import { isFrozenUA } from '@ua-parser-js/pro-personal/helpers';
+```
+
 # License
 
 UAParser.js PRO Personal
 
-Copyright (c) 2023-2024 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2023-2025 Faisal Salman <<f@faisalman.com>>

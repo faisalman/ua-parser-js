@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Hisense E50 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Hisense E50 Lite) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.5249.126 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Hisense",
+            "model": "E50 Lite",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Hisense V40s",
+        "ua": "Mozilla/5.0 (Linux; Android 11; Hisense V40s) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.125 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Hisense",
+            "model": "V40s",
+            "type": "mobile"
+        }
+    }
+]

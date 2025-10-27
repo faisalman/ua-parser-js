@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.5
+/*  Enums for UAParser.js v2.0.6
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Personal License */
@@ -24,6 +24,7 @@ const BrowserName = Object.freeze({
     AVG: 'AVG Secure Browser',
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
+    BING: 'Bing',
     BLAZER: 'Blazer',
     BOLT: 'Bolt',
     BOWSER: 'Bowser',
@@ -129,6 +130,7 @@ const BrowserName = Object.freeze({
     QUARK: 'Quark',
     QUPZILLA: 'QupZilla',
     QUTEBROWSER: 'qutebrowser',
+    QWANT: 'Qwant',
     REKONQ: 'rekonq',
     ROCKMELT: 'Rockmelt',
     SAFARI: 'Safari',
@@ -243,6 +245,7 @@ const DeviceVendor = Object.freeze({
     GEEKSPHONE: 'GeeksPhone',
     GENERIC: 'Generic',
     GOOGLE: 'Google',
+    HISENSE: 'Hisense',
     HMD: 'HMD',
     HP: 'HP',
     HTC: 'HTC',
@@ -291,6 +294,7 @@ const DeviceVendor = Object.freeze({
     VIVO: 'Vivo',
     VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
+    WIKO: 'Wiko',
     XBOX: 'Xbox',
     XIAOMI: 'Xiaomi',
     ZEBRA: 'Zebra',
@@ -489,6 +493,7 @@ const Extension = Object.freeze({
             DUCKDUCKGO_BOT: 'DuckDuckBot',
             DUCKDUCKGO_FAVICONS_BOT: 'DuckDuckGo-Favicons-Bot',
             ELASTIC: 'Elastic',
+            ELASTIC_SWIFTYPE_BOT: 'Swiftbot',
             EXALEAD_EXABOT: 'Exabot',
             FIRECRAWL_AGENT: 'FirecrawlAgent',
             FREESPOKE: 'Freespoke',
@@ -538,6 +543,7 @@ const Extension = Object.freeze({
             PERPLEXITY_BOT: 'PerplexityBot',
             QIHOO_360_SPIDER: '360Spider',
             QWANT_BOT: 'Qwantbot',
+            QWANT_BOT_NEWS: 'Qwantbot-news',
             REPLICATE_BOT: 'Replicate-Bot',
             RUNPOD_BOT: 'RunPod-Bot',
             SB_INTUITIONS_BOT: 'SBIntuitionsBot',
@@ -551,6 +557,7 @@ const Extension = Object.freeze({
             SOGOU_PIC_SPIDER: 'Sogou Pic Spider',
             SOGOU_WEB_SPIDER: 'Sogou web spider',
             STARTPAGE: 'Startpage',
+            SURLY_BOT: 'SurdotlyBot',
             TIMPI_BOT: 'Timpibot',
             TOGETHER_BOT: 'Together-Bot',
             TURNITIN_BOT: 'TurnitinBot',
@@ -631,6 +638,7 @@ const Extension = Object.freeze({
             BLUESKY: 'Bluesky',
             BUFFER_LINKPREVIEWBOT: 'BufferLinkPreviewBot',
             COHERE_AI: 'Cohere-AI',
+            DISCORD_BOT: 'Discordbot',
             DUCKDUCKGO_ASSISTBOT: 'DuckAssistBot',
             GOOGLE_CHROME_LIGHTHOUSE: 'Chrome-Lighthouse',
             GOOGLE_FEEDFETCHER: 'FeedFetcher-Google',
@@ -643,6 +651,7 @@ const Extension = Object.freeze({
             HUBSPOT_PAGE_FETCHER: 'HubSpot Page Fetcher',
             IFRAMELY: 'Iframely',
             KAKAOTALK_SCRAP: 'kakaotalk-scrap',
+            KEYBASE_BOT: 'KeybaseBot',
             META_EXTERNALFETCHER: 'meta-externalfetcher',
             META_WHATSAPP: 'WhatsApp',
             MICROSOFT_BINGPREVIEW: 'BingPreview',
@@ -654,6 +663,9 @@ const Extension = Object.freeze({
             PERPLEXITY_USER: 'Perplexity-User',
             PINTEREST_BOT: 'Pinterestbot',
             SEMRUSH_SITEAUDITBOT: 'SiteAuditBot',
+            SLACK_BOT: 'Slackbot',
+            SLACK_BOT_LINKEXPANDING: 'Slackbot-LinkExpanding',
+            SLACK_IMGPROXY: 'Slack-ImgProxy',
             SNAP_URL_PREVIEW: 'Snap URL Preview',
             SKYPE_URIPREVIEW: 'SkypeUriPreview',
             TELEGRAM_BOT: 'TelegramBot',
@@ -663,6 +675,7 @@ const Extension = Object.freeze({
             VERCEL_BOT: 'Vercelbot',
             VERCEL_FLAGS: 'vercelflags',
             VERCEL_TRACING: 'verceltracing',
+            X_TWITTERBOT: 'Twitterbot',
             YANDEX_CALENDAR: 'YandexCalendar',
             YANDEX_DIRECT: 'YandexDirect',
             YANDEX_DIRECTDYN: 'YandexDirectDyn',
