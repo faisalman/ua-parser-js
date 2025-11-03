@@ -36,6 +36,9 @@ const BotTypes = new BotList(Bots, 'type', [
 
 const AIAssistants = new BotList(Fetchers, 'name', [
 
+    // Amazon
+    Fetcher.AMAZON_NOVA_ACT,
+
     // Anthropic
     Fetcher.ANTHROPIC_CLAUDE_USER,
 

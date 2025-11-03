@@ -290,6 +290,16 @@
         }
     },
     {
+        "desc"    : "NovaAct",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Agent-NovaAct/0.9",
+        "expect"  :
+        {
+            "name"    : "NovaAct",
+            "version" : "0.9",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Perplexity-User",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)",
         "expect"  :

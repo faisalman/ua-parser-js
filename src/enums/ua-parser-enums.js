@@ -628,6 +628,7 @@ const Extension = Object.freeze({
         },
         Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
+            AMAZON_NOVA_ACT: 'NovaAct',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
             BETTER_UPTIME_BOT: 'Better Uptime Bot',

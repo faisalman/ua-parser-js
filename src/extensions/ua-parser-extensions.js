@@ -258,7 +258,7 @@ const Emails = Object.freeze({
 const Fetchers = Object.freeze({
     browser : [
         [
-            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot / WhatsApp
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
@@ -268,19 +268,19 @@ const Fetchers = Object.freeze({
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
+
+            // Nova Act - https://github.com/aws/nova-act
+            /agent-(novaact)\/([\w\.]+)/i,
 
             // Skype
             /(skypeuripreview) preview\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
-            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
-            
-            // WhatsApp
-            /(whatsapp)\/([\w\.]+)/i
+            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
