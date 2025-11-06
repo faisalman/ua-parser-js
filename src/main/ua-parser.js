@@ -856,6 +856,8 @@
             ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
             /droid.+; (shield)( bui|\))/i                                       // Nvidia Portable
             ], [MODEL, [VENDOR, NVIDIA], [TYPE, CONSOLE]], [
+            /droid.+; (rgcube)\)/i                                              // Anbernic
+            ], [MODEL, [VENDOR, 'Anbernic'], [TYPE, CONSOLE]], [
 
             ///////////////////
             // WEARABLES
