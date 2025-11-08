@@ -256,6 +256,7 @@ const DeviceVendor = Object.freeze({
     LAVA: 'Lava',
     LENOVO: 'Lenovo',
     LG: 'LG',
+    LOGITECH: 'Logitech',
     MEIZU: 'Meizu',
     MICROMAX: 'Micromax',
     MICROSOFT: 'Microsoft',

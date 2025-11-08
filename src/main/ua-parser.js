@@ -852,12 +852,9 @@
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
             /(ouya)/i,                                                          // Ouya
             /(nintendo) (\w+)/i,                                                // Nintendo
-            /(retroid) (pocket ([^\)]+))/i                                      // Retroid Pocket
-            ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
-            /droid.+; (shield)( bui|\))/i                                       // Nvidia Portable
-            ], [MODEL, [VENDOR, NVIDIA], [TYPE, CONSOLE]], [
-            /droid.+; (rgcube)\)/i                                              // Anbernic
-            ], [MODEL, [VENDOR, 'Anbernic'], [TYPE, CONSOLE]], [
+            /(retroid) (pocket ([^\)]+))/i,                                     // Retroid Pocket
+            /droid.+; ((shield|rgcube|gr0006))( bui|\))/i                       // Nvidia Portable/Anbernic/Logitech
+            ], [[VENDOR, strMapper, { 'Nvidia': 'Shield', 'Anbernic': 'RGCUBE', 'Logitech': 'GR0006' }], MODEL, [TYPE, CONSOLE]], [
 
             ///////////////////
             // WEARABLES
