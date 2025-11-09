@@ -40,6 +40,36 @@
         }
     },
     {
+        "desc"    : "Bun",
+        "ua"      : "Bun/1.0.6",
+        "expect"  :
+        {
+            "name"    : "Bun",
+            "version" : "1.0.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Dart",
+        "ua"      : "Dart/3.5 (dart:io)",
+        "expect"  :
+        {
+            "name"    : "Dart",
+            "version" : "3.5",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Deno",
+        "ua"      : "Deno/2.1.7",
+        "expect"  :
+        {
+            "name"    : "Deno",
+            "version" : "2.1.7",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "go-http-client",
         "ua"      : "go-http-client/1.1",
         "expect"  :
@@ -56,6 +86,16 @@
         {
             "name"    : "got",
             "version" : "9.6.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "hackney",
+        "ua"      : "hackney/1.20.1",
+        "expect"  :
+        {
+            "name"    : "hackney",
+            "version" : "1.20.1",
             "type"    : "library"
         }
     },
@@ -130,6 +170,26 @@
         }
     },
     {
+        "desc"    : "Node.js",
+        "ua"      : "Node.js/22",
+        "expect"  :
+        {
+            "name"    : "Node.js",
+            "version" : "22",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "node-fetch",
+        "ua"      : "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+        "expect"  :
+        {
+            "name"    : "node-fetch",
+            "version" : "1.0",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Nutch",
         "ua"      : "AliyunSecBot/Nutch-1.21-SNAPSHOT",
         "expect"  :
@@ -146,16 +206,6 @@
         {
             "name"    : "okhttp",
             "version" : "3.2.0",
-            "type"    : "library"
-        }
-    },
-    {
-        "desc"    : "node-fetch",
-        "ua"      : "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
-        "expect"  :
-        {
-            "name"    : "node-fetch",
-            "version" : "1.0",
             "type"    : "library"
         }
     },
@@ -220,6 +270,16 @@
         }
     },
     {
+        "desc"    : "rest-client",
+        "ua"      : "rest-client/2.1.0 (linux-gnu x86_64) ruby/2.7.2p137",
+        "expect"  :
+        {
+            "name"    : "rest-client",
+            "version" : "2.1.0",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Scrapy",
         "ua"      : "Scrapy/1.5.0 (+https://scrapy.org)",
         "expect"  :
@@ -236,6 +296,16 @@
         {
             "name"    : "node-superagent",
             "version" : "5.0.2",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "undici",
+        "ua"      : "undici",
+        "expect"  :
+        {
+            "name"    : "undici",
+            "version" : "undefined",
             "type"    : "library"
         }
     }

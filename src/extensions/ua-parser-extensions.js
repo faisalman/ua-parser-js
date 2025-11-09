@@ -389,13 +389,15 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Apache-HttpClient/Axios/go-http-client/got/GuzzleHttp/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/Scrapy/superagent
         [
-            /^(apache-httpclient|axios|(?:go|java)-http-client|got|guzzlehttp|java|libwww-perl|lua-resty-http|needle|node-(?:fetch|superagent)|okhttp|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|scrapy)\/([\w\.]+)/i,
+            // Apache-HttpClient/Axios/Bun/Dart/go-http-client/got/GuzzleHttp/hackney/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/Node.js/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/rest-client/Scrapy/superagent
+            /^(apache-httpclient|axios|bun|dart|deno|(?:go|java)-http-client|got|guzzlehttp|hackney|java|libwww-perl|lua-resty-http|needle|node(?:\.js|-fetch|-superagent)|okhttp|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|rest-client|scrapy)\/([\w\.]+)/i,
             /(adobeair|aiohttp|jsdom)\/([\w\.]+)/i,
             /(nutch)-([\w\.-]+)(\(|$)/i,
             /\((java)\/([\w\.]+)/i
-        ], [NAME, VERSION, [TYPE, LIBRARY]]
+        ], [NAME, VERSION, [TYPE, LIBRARY]], [
+            /(node-fetch|undici)/i
+        ], [NAME, [TYPE, LIBRARY]]
     ]
 });
 
