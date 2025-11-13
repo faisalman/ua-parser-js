@@ -853,6 +853,7 @@
             /(ouya)/i,                                                          // Ouya
             /(nintendo) (\w+)/i,                                                // Nintendo
             /(retroid) (pocket ([^\)]+))/i,                                     // Retroid Pocket
+            /(valve).+(steam deck)/i,
             /droid.+; ((shield|rgcube|gr0006))( bui|\))/i                       // Nvidia Portable/Anbernic/Logitech
             ], [[VENDOR, strMapper, { 'Nvidia': 'Shield', 'Anbernic': 'RGCUBE', 'Logitech': 'GR0006' }], MODEL, [TYPE, CONSOLE]], [
 

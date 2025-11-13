@@ -290,6 +290,7 @@ const DeviceVendor = Object.freeze({
     TECNO: 'TECNO',
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
+    VALVE: 'Valve',
     VIVO: 'Vivo',
     VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
