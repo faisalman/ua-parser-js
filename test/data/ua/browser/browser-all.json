@@ -1960,6 +1960,36 @@
         }
     },
     {
+        "desc"    : "Steam Client",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Valve Steam Client/default/1705108172) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Steam Big Picture",
+        "ua"      : "Mozilla/5.0 (Linux; U; X11; en-US; Valve Steam Tenfoot/1660688177; ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Steam Overlay",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Valve Steam GameOverlay/default/1741737356) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.183 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
         "desc"    : "Swiftfox",
         "ua"      : "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/20061024 Firefox/2.0 (Swiftfox)",
         "expect"  :

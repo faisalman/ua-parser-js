@@ -432,7 +432,7 @@
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
             /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i   // QQ/2345
             ], [NAME, VERSION], [
-            /(lbbrowser|rekonq)/i                                               // LieBao Browser/Rekonq
+            /(lbbrowser|rekonq|steam(?= (clie|tenf|gameo)))/i                   // LieBao Browser/Rekonq/Steam
             ], [NAME], [
             /ome\/([\w\.]+) \w* ?(iron) saf/i,                                  // Iron
             /ome\/([\w\.]+).+qihu (360)[es]e/i                                  // 360

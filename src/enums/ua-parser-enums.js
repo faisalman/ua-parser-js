@@ -144,6 +144,7 @@ const BrowserName = Object.freeze({
     SNAPCHAT: 'Snapchat',
     SOGOU_EXPLORER: 'Sogou Explorer',
     SOGOU_MOBILE: 'Sogou Mobile',
+    STEAM: 'Steam',
     SURF: 'Surf',
     SWIFTFOX: 'Swiftfox',
     TESLA: 'Tesla',
