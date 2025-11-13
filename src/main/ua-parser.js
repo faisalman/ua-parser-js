@@ -1191,189 +1191,6 @@
     }
 
     function UAItem (itemType, ua, rgxMap, uaCH) {
-
-        this.get = function (prop) {
-            if (!prop) return this.data;
-            return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
-        };
-
-        this.set = function (prop, val) {
-            this.data[prop] = val;
-            return this;
-        };
-
-        this.setCH = function (ch) {
-            this.uaCH = ch;
-            return this;
-        };
-
-        this.detectFeature = function () {
-            if (NAVIGATOR && NAVIGATOR.userAgent == this.ua) {
-                switch (this.itemType) {
-                    case BROWSER:
-                        // Brave-specific detection
-                        if (NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == TYPEOF.FUNCTION) {
-                            this.set(NAME, 'Brave');
-                        }
-                        break;
-                    case DEVICE:
-                        // Chrome-specific detection: check for 'mobile' value of navigator.userAgentData
-                        if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
-                            this.set(TYPE, MOBILE);
-                        }
-                        // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-                        if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== TYPEOF.UNDEFINED && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
-                            this.set(MODEL, 'iPad')
-                                .set(TYPE, TABLET);
-                        }
-                        break;
-                    case OS:
-                        // Chrome-specific detection: check for 'platform' value of navigator.userAgentData
-                        if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
-                            this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
-                        }
-                        break;
-                    case RESULT:
-                        var data = this.data;
-                        var detect = function (itemType) {
-                            return data[itemType]
-                                    .getItem()
-                                    .detectFeature()
-                                    .get();
-                        };
-                        this.set(BROWSER, detect(BROWSER))
-                            .set(CPU, detect(CPU))
-                            .set(DEVICE, detect(DEVICE))
-                            .set(ENGINE, detect(ENGINE))
-                            .set(OS, detect(OS));
-                }
-            }
-            return this;
-        };
-
-        this.parseUA = function () {
-            if (this.itemType != RESULT) {
-                rgxMapper.call(this.data, this.ua, this.rgxMap);
-            }
-            switch (this.itemType) {
-                case BROWSER:
-                    this.set(MAJOR, majorize(this.get(VERSION)));
-                    break;
-                case OS:
-                    if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
-                        // Based on the assumption that iOS version is tightly coupled with Safari version
-                        var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
-                        if (realVersion && parseInt(realVersion[1].substring(0,2), 10) >= 26) {
-                            this.set(VERSION, realVersion[1]);  // Set as iOS version
-                        }
-                    }
-                    break;
-            }
-            return this;
-        };
-
-        this.parseCH = function () {
-            var uaCH = this.uaCH,
-                rgxMap = this.rgxMap;
-    
-            switch (this.itemType) {
-                case BROWSER:
-                case ENGINE:
-                    var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
-                    if (brands) {
-                        for (var i=0; i<brands.length; i++) {
-                            var brandName = brands[i].brand || brands[i],
-                                brandVersion = brands[i].version;
-                            if (this.itemType == BROWSER && 
-                                !/not.a.brand/i.test(brandName) && 
-                                (!prevName || 
-                                    (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
-                                    (prevName == EDGE && /WebView2/.test(brandName))
-                                )) {
-                                    brandName = strMapper(brandName, browserHintsMap);
-                                    prevName = this.get(NAME);
-                                    if (!(prevName && !/Chrom/.test(prevName) && /Chrom/.test(brandName))) {
-                                        this.set(NAME, brandName)
-                                            .set(VERSION, brandVersion)
-                                            .set(MAJOR, majorize(brandVersion));
-                                    }
-                                    prevName = brandName;
-                            }
-                            if (this.itemType == ENGINE && brandName == CHROMIUM) {
-                                this.set(VERSION, brandVersion);
-                            }
-                        }
-                    }
-                    break;
-                case CPU:
-                    var archName = uaCH[ARCHITECTURE];
-                    if (archName) {
-                        if (archName && uaCH[BITNESS] == '64') archName += '64';
-                        rgxMapper.call(this.data, archName + ';', rgxMap);
-                    }
-                    break;
-                case DEVICE:
-                    if (uaCH[MOBILE]) {
-                        this.set(TYPE, MOBILE);
-                    }
-                    if (uaCH[MODEL]) {
-                        this.set(MODEL, uaCH[MODEL]);
-                        if (!this.get(TYPE) || !this.get(VENDOR)) {
-                            var reParse = {};
-                            rgxMapper.call(reParse, 'droid 9; ' + uaCH[MODEL] + ')', rgxMap);
-                            if (!this.get(TYPE) && !!reParse.type) {
-                                this.set(TYPE, reParse.type);
-                            }
-                            if (!this.get(VENDOR) && !!reParse.vendor) {
-                                this.set(VENDOR, reParse.vendor);
-                            }
-                        }
-                    }
-                    if (uaCH[FORMFACTORS]) {
-                        var ff;
-                        if (typeof uaCH[FORMFACTORS] !== 'string') {
-                            var idx = 0;
-                            while (!ff && idx < uaCH[FORMFACTORS].length) {
-                                ff = strMapper(uaCH[FORMFACTORS][idx++], formFactorsMap);
-                            }
-                        } else {
-                            ff = strMapper(uaCH[FORMFACTORS], formFactorsMap);
-                        }
-                        this.set(TYPE, ff);
-                    }
-                    break;
-                case OS:
-                    var osName = uaCH[PLATFORM];
-                    if(osName) {
-                        var osVersion = uaCH[PLATFORMVER];
-                        if (osName == WINDOWS) osVersion = (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10');
-                        this.set(NAME, osName)
-                            .set(VERSION, osVersion);
-                    }
-                    // Xbox-Specific Detection
-                    if (this.get(NAME) == WINDOWS && uaCH[MODEL] == 'Xbox') {
-                        this.set(NAME, 'Xbox')
-                            .set(VERSION, undefined);
-                    }           
-                    break;
-                case RESULT:
-                    var data = this.data;
-                    var parse = function (itemType) {
-                        return data[itemType]
-                                .getItem()
-                                .setCH(uaCH)
-                                .parseCH()
-                                .get();
-                    };
-                    this.set(BROWSER, parse(BROWSER))
-                        .set(CPU, parse(CPU))
-                        .set(DEVICE, parse(DEVICE))
-                        .set(ENGINE, parse(ENGINE))
-                        .set(OS, parse(OS));
-            }
-            return this;
-        };
-
         setProps.call(this, [
             ['itemType', itemType],
             ['ua', ua],
@@ -1381,9 +1198,190 @@
             ['rgxMap', rgxMap],
             ['data', createIData(this, itemType)]
         ]);
-
         return this;
     }
+
+    UAItem.prototype.get = function (prop) {
+        if (!prop) return this.data;
+        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
+    };
+
+    UAItem.prototype.set = function (prop, val) {
+        this.data[prop] = val;
+        return this;
+    };
+
+    UAItem.prototype.setCH = function (ch) {
+        this.uaCH = ch;
+        return this;
+    };
+
+    UAItem.prototype.detectFeature = function () {
+        if (NAVIGATOR && NAVIGATOR.userAgent == this.ua) {
+            switch (this.itemType) {
+                case BROWSER:
+                    // Brave-specific detection
+                    if (NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == TYPEOF.FUNCTION) {
+                        this.set(NAME, 'Brave');
+                    }
+                    break;
+                case DEVICE:
+                    // Chrome-specific detection: check for 'mobile' value of navigator.userAgentData
+                    if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
+                        this.set(TYPE, MOBILE);
+                    }
+                    // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
+                    if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== TYPEOF.UNDEFINED && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
+                        this.set(MODEL, 'iPad')
+                            .set(TYPE, TABLET);
+                    }
+                    break;
+                case OS:
+                    // Chrome-specific detection: check for 'platform' value of navigator.userAgentData
+                    if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
+                        this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
+                    }
+                    break;
+                case RESULT:
+                    var data = this.data;
+                    var detect = function (itemType) {
+                        return data[itemType]
+                                .getItem()
+                                .detectFeature()
+                                .get();
+                    };
+                    this.set(BROWSER, detect(BROWSER))
+                        .set(CPU, detect(CPU))
+                        .set(DEVICE, detect(DEVICE))
+                        .set(ENGINE, detect(ENGINE))
+                        .set(OS, detect(OS));
+            }
+        }
+        return this;
+    };
+
+    UAItem.prototype.parseUA = function () {
+        if (this.itemType != RESULT) {
+            rgxMapper.call(this.data, this.ua, this.rgxMap);
+        }
+        switch (this.itemType) {
+            case BROWSER:
+                this.set(MAJOR, majorize(this.get(VERSION)));
+                break;
+            case OS:
+                if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
+                    // Based on the assumption that iOS version is tightly coupled with Safari version
+                    var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
+                    if (realVersion && parseInt(realVersion[1].substring(0,2), 10) >= 26) {
+                        this.set(VERSION, realVersion[1]);  // Set as iOS version
+                    }
+                }
+                break;
+        }
+        return this;
+    };
+
+    UAItem.prototype.parseCH = function () {
+        var uaCH = this.uaCH,
+            rgxMap = this.rgxMap;
+
+        switch (this.itemType) {
+            case BROWSER:
+            case ENGINE:
+                var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
+                if (brands) {
+                    for (var i=0; i<brands.length; i++) {
+                        var brandName = brands[i].brand || brands[i],
+                            brandVersion = brands[i].version;
+                        if (this.itemType == BROWSER && 
+                            !/not.a.brand/i.test(brandName) && 
+                            (!prevName || 
+                                (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
+                                (prevName == EDGE && /WebView2/.test(brandName))
+                            )) {
+                                brandName = strMapper(brandName, browserHintsMap);
+                                prevName = this.get(NAME);
+                                if (!(prevName && !/Chrom/.test(prevName) && /Chrom/.test(brandName))) {
+                                    this.set(NAME, brandName)
+                                        .set(VERSION, brandVersion)
+                                        .set(MAJOR, majorize(brandVersion));
+                                }
+                                prevName = brandName;
+                        }
+                        if (this.itemType == ENGINE && brandName == CHROMIUM) {
+                            this.set(VERSION, brandVersion);
+                        }
+                    }
+                }
+                break;
+            case CPU:
+                var archName = uaCH[ARCHITECTURE];
+                if (archName) {
+                    if (archName && uaCH[BITNESS] == '64') archName += '64';
+                    rgxMapper.call(this.data, archName + ';', rgxMap);
+                }
+                break;
+            case DEVICE:
+                if (uaCH[MOBILE]) {
+                    this.set(TYPE, MOBILE);
+                }
+                if (uaCH[MODEL]) {
+                    this.set(MODEL, uaCH[MODEL]);
+                    if (!this.get(TYPE) || !this.get(VENDOR)) {
+                        var reParse = {};
+                        rgxMapper.call(reParse, 'droid 9; ' + uaCH[MODEL] + ')', rgxMap);
+                        if (!this.get(TYPE) && !!reParse.type) {
+                            this.set(TYPE, reParse.type);
+                        }
+                        if (!this.get(VENDOR) && !!reParse.vendor) {
+                            this.set(VENDOR, reParse.vendor);
+                        }
+                    }
+                }
+                if (uaCH[FORMFACTORS]) {
+                    var ff;
+                    if (typeof uaCH[FORMFACTORS] !== 'string') {
+                        var idx = 0;
+                        while (!ff && idx < uaCH[FORMFACTORS].length) {
+                            ff = strMapper(uaCH[FORMFACTORS][idx++], formFactorsMap);
+                        }
+                    } else {
+                        ff = strMapper(uaCH[FORMFACTORS], formFactorsMap);
+                    }
+                    this.set(TYPE, ff);
+                }
+                break;
+            case OS:
+                var osName = uaCH[PLATFORM];
+                if(osName) {
+                    var osVersion = uaCH[PLATFORMVER];
+                    if (osName == WINDOWS) osVersion = (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10');
+                    this.set(NAME, osName)
+                        .set(VERSION, osVersion);
+                }
+                // Xbox-Specific Detection
+                if (this.get(NAME) == WINDOWS && uaCH[MODEL] == 'Xbox') {
+                    this.set(NAME, 'Xbox')
+                        .set(VERSION, undefined);
+                }           
+                break;
+            case RESULT:
+                var data = this.data;
+                var parse = function (itemType) {
+                    return data[itemType]
+                            .getItem()
+                            .setCH(uaCH)
+                            .parseCH()
+                            .get();
+                };
+                this.set(BROWSER, parse(BROWSER))
+                    .set(CPU, parse(CPU))
+                    .set(DEVICE, parse(DEVICE))
+                    .set(ENGINE, parse(ENGINE))
+                    .set(OS, parse(OS));
+        }
+        return this;
+    };
 
     function UAParser (ua, extensions, headers) {
 
