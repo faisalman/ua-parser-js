@@ -1143,25 +1143,25 @@
             };
         }
 
-        if (!NAVIGATOR_UADATA) {
-            IData.prototype.then = function (cb) { 
-                var that = this;
-                var IDataResolve = function () {
-                    for (var prop in that) {
-                        if (that.hasOwnProperty(prop)) {
-                            this[prop] = that[prop];
-                        }
+        IData.prototype.then = function (cb) { 
+            var that = this;
+            var IDataResolve = function () {
+                for (var prop in that) {
+                    if (that.hasOwnProperty(prop)) {
+                        this[prop] = that[prop];
                     }
-                };
-                IDataResolve.prototype = {
-                    is : IData.prototype.is,
-                    toString : IData.prototype.toString
-                };
-                var resolveData = new IDataResolve();
-                cb(resolveData);
-                return resolveData;
+                }
             };
-        }
+            IDataResolve.prototype = {
+                is : IData.prototype.is,
+                toString : IData.prototype.toString,
+                withClientHints : IData.prototype.withClientHints,
+                withFeatureCheck : IData.prototype.withFeatureCheck
+            };
+            var resolveData = new IDataResolve();
+            cb(resolveData);
+            return resolveData;
+        };
 
         return new IData();
     };

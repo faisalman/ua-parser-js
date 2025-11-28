@@ -414,3 +414,19 @@ describe('Identify vendor & type of device from given model name', () => {
         });
     });
 });
+
+describe('Chaining withClientHints() & withFeatureCheck() in server-side development', () => {
+    const headers = {
+        'user-agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15',
+        'sec-ch-ua-form-factors' : '"VR"'
+    };
+    const device = new UAParser(headers).getDevice();
+    it('Chain order: withFeatureCheck().withClientHints()', () => {  
+        const fc2ch = device.withFeatureCheck().withClientHints();
+        assert.strictEqual(fc2ch.type, "xr");
+    });
+    it('Chain order: withClientHints().withFeatureCheck()', () => {
+        const ch2fc = device.withClientHints().withFeatureCheck();
+        assert.strictEqual(ch2fc.type, "xr");
+    });
+});
