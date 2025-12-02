@@ -209,7 +209,6 @@ const CPU = CPUArch;
 
 const DeviceType = Object.freeze({
     CONSOLE: 'console',
-    DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
