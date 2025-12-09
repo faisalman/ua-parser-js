@@ -3,7 +3,7 @@
 // Source: /src/extensions/ua-parser-extensions.js
 
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.6
+/*  Extensions for UAParser.js v2.0.7
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -262,7 +262,7 @@ const Emails = Object.freeze({
 const Fetchers = Object.freeze({
     browser : [
         [
-            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot / WhatsApp
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
@@ -272,19 +272,19 @@ const Fetchers = Object.freeze({
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
+
+            // Nova Act - https://github.com/aws/nova-act
+            /agent-(novaact)\/([\w\.]+)/i,
 
             // Skype
             /(skypeuripreview) preview\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
-            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
-            
-            // WhatsApp
-            /(whatsapp)\/([\w\.]+)/i
+            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
@@ -393,13 +393,15 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Apache-HttpClient/Axios/go-http-client/got/GuzzleHttp/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/Scrapy/superagent
         [
-            /^(apache-httpclient|axios|(?:go|java)-http-client|got|guzzlehttp|java|libwww-perl|lua-resty-http|needle|node-(?:fetch|superagent)|okhttp|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|scrapy)\/([\w\.]+)/i,
+            // Apache-HttpClient/Axios/Bun/Dart/go-http-client/got/GuzzleHttp/hackney/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/Node.js/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/rest-client/Scrapy/superagent
+            /^(apache-httpclient|axios|bun|dart|deno|(?:go|java)-http-client|got|guzzlehttp|hackney|java|libwww-perl|lua-resty-http|needle|node(?:\.js|-fetch|-superagent)|okhttp|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|rest-client|scrapy)\/([\w\.]+)/i,
             /(adobeair|aiohttp|jsdom)\/([\w\.]+)/i,
             /(nutch)-([\w\.-]+)(\(|$)/i,
             /\((java)\/([\w\.]+)/i
-        ], [NAME, VERSION, [TYPE, LIBRARY]]
+        ], [NAME, VERSION, [TYPE, LIBRARY]], [
+            /(node-fetch|undici)/i
+        ], [NAME, [TYPE, LIBRARY]]
     ]
 });
 

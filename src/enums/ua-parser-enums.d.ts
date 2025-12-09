@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.6
+/*  Enums for UAParser.js v2.0.7
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -19,6 +19,7 @@ export const BrowserName: Readonly<{
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
     ARORA: 'Arora',
+    ATLAS: 'Atlas',
     AVANT: 'Avant',
     AVAST: 'Avast Secure Browser',
     AVG: 'AVG Secure Browser',
@@ -147,6 +148,7 @@ export const BrowserName: Readonly<{
     SNAPCHAT: 'Snapchat',
     SOGOU_EXPLORER: 'Sogou Explorer',
     SOGOU_MOBILE: 'Sogou Mobile',
+    STEAM: 'Steam',
     SURF: 'Surf',
     SWIFTFOX: 'Swiftfox',
     TESLA: 'Tesla',
@@ -228,8 +230,9 @@ export const DeviceVendor: Readonly<{
     ACER: 'Acer',
     ADVAN: 'Advan',
     ALCATEL: 'Alcatel',
-    APPLE: 'Apple',
     AMAZON: 'Amazon',
+    ANBERNIC: 'Anbernic',
+    APPLE: 'Apple',
     ARCHOS: 'Archos',
     ASUS: 'ASUS',
     ATT: 'AT&T',
@@ -258,6 +261,7 @@ export const DeviceVendor: Readonly<{
     LAVA: 'Lava',
     LENOVO: 'Lenovo',
     LG: 'LG',
+    LOGITECH: 'Logitech',
     MEIZU: 'Meizu',
     MICROMAX: 'Micromax',
     MICROSOFT: 'Microsoft',
@@ -291,6 +295,7 @@ export const DeviceVendor: Readonly<{
     TECNO: 'TECNO',
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
+    VALVE: 'Valve',
     VIVO: 'Vivo',
     VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
@@ -631,6 +636,7 @@ export const Extension: Readonly<{
         },
         Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
+            AMAZON_NOVA_ACT: 'NovaAct',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
             BETTER_UPTIME_BOT: 'Better Uptime Bot',
@@ -708,9 +714,13 @@ export const Extension: Readonly<{
             AIOHTTP: 'aiohttp',
             APACHE_HTTPCLIENT: 'Apache-HttpClient',
             AXIOS: 'axios',
+            BUN: 'Bun',
+            DART: 'Dart',
+            DENO: 'Deno',
             GO_HTTP_CLIENT: 'go-http-client',
             GOT: 'got',
             GUZZLEHTTP: 'GuzzleHttp',
+            HACKNEY: 'hackney',
             JAVA: 'Java',
             JAVA_HTTPCLIENT: 'Java-http-client',
             JSDOM: 'jsdom',
@@ -718,16 +728,19 @@ export const Extension: Readonly<{
             LUA_RESTY_HTTP: 'lua-resty-http',
             NEEDLE: 'Needle',
             NUTCH: 'Nutch',
-            OKHTTP: 'OkHttp',
             NODE_FETCH: 'node-fetch',
+            NODE_JS: 'Node.js',
             NODE_SUPERAGENT: 'node-superagent',
+            OKHTTP: 'OkHttp',
             PHP_SOAP: 'PHP-SOAP',
             POSTMAN_RUNTIME: 'PostmanRuntime',
             PYTHON_HTTPX: 'python-httpx',
             PYTHON_URLLIB: 'python-urllib',
             PYTHON_URLLIB3: 'python-urllib3',
             PYTHON_REQUESTS: 'python-requests',
-            SCRAPY: 'Scrapy'
+            REST_CLIENT: 'rest-client',
+            SCRAPY: 'Scrapy',
+            UNDICI: 'undici'
         }
     },
     DeviceVendor: {

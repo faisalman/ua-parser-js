@@ -3,7 +3,7 @@
 // Source: /src/helpers/ua-parser-helpers.js
 
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.6
+/*  Helpers for UAParser.js v2.0.7
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -15,9 +15,9 @@ import { UAParser } from '../main/ua-parser.mjs';
 import { EngineName } from '../enums/ua-parser-enums.mjs';
 import { getDeviceVendor: _getDeviceVendor, isAppleSilicon: _isAppleSilicon } from '../device-detection/device-detection.mjs';
 import { isBot: _isBot, isAICrawler } from '../bot-detection/bot-detection.mjs';
-import { isFromEU } from 'detect-europe-js';
+import { isChromeFamily: _isChromeFamily, isElectron: _isElectron, isStandalonePWA: _isStandalonePWA } from '../browser-detection/browser-detection.mjs';
+import { isFromEU: _isFromEU } from '../browser-detection/browser-detection.mjs';
 import { isFrozenUA } from 'ua-is-frozen';
-import { isStandalonePWA } from 'is-standalone-pwa';
 
 /**
  * @deprecated Moved to `device-detection` submodule
@@ -39,10 +39,25 @@ const isAIBot = isAICrawler;
  */
 const isBot = _isBot;
 
-const isChromeFamily = val => !!((typeof val === 'string' ? new UAParser(val).getEngine() : val.engine)?.is(EngineName.BLINK));
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+const isChromeFamily = _isChromeFamily;
 
-const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
-                            / electron\//i.test(navigator?.userAgent));         // browser
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+const isElectron = () => _isElectron;
+
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+const isFromEU = _isFromEU;
+
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+const isStandalonePWA = _isStandalonePWA;
 
 export { 
     getDeviceVendor,

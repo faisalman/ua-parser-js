@@ -12,8 +12,8 @@
 /*jshint esversion: 6 */ 
 
 import { UAParser } from '../main/ua-parser.mjs';
-import { Extension, BrowserType } from '../enums/ua-parser-enums.mjs';
 import { Bots, Crawlers, Fetchers } from '../extensions/ua-parser-extensions.mjs';
+import { BrowserType, Extension } from '../enums/ua-parser-enums.mjs';
 const { Crawler, Fetcher } = Extension.BrowserName;
 
 class BotList {
@@ -39,6 +39,9 @@ const BotTypes = new BotList(Bots, 'type', [
 ]);
 
 const AIAssistants = new BotList(Fetchers, 'name', [
+
+    // Amazon
+    Fetcher.AMAZON_NOVA_ACT,
 
     // Anthropic
     Fetcher.ANTHROPIC_CLAUDE_USER,

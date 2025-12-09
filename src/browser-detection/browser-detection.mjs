@@ -12,7 +12,9 @@
 /*jshint esversion: 6 */ 
 
 import { UAParser } from '../main/ua-parser.mjs';
+import { EngineName } from '../enums/ua-parser-enums.mjs';
 import { isStandalonePWA } from 'is-standalone-pwa';
+import { isFromEU } from 'detect-europe-js';
 
 const isChromeFamily = val => !!(
     (typeof val === 'string' ? 
@@ -20,11 +22,13 @@ const isChromeFamily = val => !!(
         val.engine
     )?.is(EngineName.BLINK));
 
-const isElectron = () => !!(process?.versions?.hasOwnProperty('electron') ||    // node.js
-                            / electron\//i.test(navigator?.userAgent));         // browser
+const isElectron = () => !!(
+    process?.versions?.hasOwnProperty('electron') ||    // node.js
+    / electron\//i.test(navigator?.userAgent));         // browser
 
 export { 
     isChromeFamily,
     isElectron,
+    isFromEU,
     isStandalonePWA
 }
