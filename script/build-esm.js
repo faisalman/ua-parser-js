@@ -4,6 +4,7 @@ const fs = require('fs');
 
 const defaultReplacements = {
     mjs: [
+        [/(?<=const.+)(:)(?=.+require)/ig, ' as'],
         [/const (.+?)\s*=\s*require\(\'\.(.+)\'\)/ig, 'import $1 from \'\.$2.mjs\''],
         [/const (.+?)\s*=\s*require\(\'(.+)\'\)/ig, 'import $1 from \'$2\''],
         [/module\.exports =/ig, 'export']
