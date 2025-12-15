@@ -312,6 +312,7 @@ const EngineName = Object.freeze({
     AMAYA: 'Amaya',
     ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
+    DILLO: 'Dillo',
     EDGEHTML: 'EdgeHTML',
     FLOW: 'Flow',
     GECKO: 'Gecko',
