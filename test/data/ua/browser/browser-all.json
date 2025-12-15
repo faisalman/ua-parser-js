@@ -1609,6 +1609,16 @@
         }
     },
     {
+        "desc"    : "Opera Neon",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36 MMS/1.0.2531.0",
+        "expect"  :
+        {
+            "name"    : "Opera Neon",
+            "version" : "1.0.2531.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Opera Tablet",
         "ua"      : "Opera/9.80 (Windows NT 6.1; Opera Tablet/15165; U; en) Presto/2.8.149 Version/11.1",
         "expect"  :

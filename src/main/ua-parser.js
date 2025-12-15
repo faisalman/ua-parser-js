@@ -404,7 +404,9 @@
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
-            /\bopt\/([\w\.]+)/i                                                 // Opera Touch
+            / mms\/([\w\.]+)$/i                                                 // Opera Neon
+            ], [VERSION, [NAME, OPERA+' Neon']], [
+            / opt\/([\w\.]+)$/i                                                 // Opera Touch
             ], [VERSION, [NAME, OPERA+' Touch']], [
             /coc_coc\w+\/([\w\.]+)/i                                            // Coc Coc Browser
             ], [VERSION, [NAME, 'Coc Coc']], [

@@ -112,6 +112,7 @@ const BrowserName = Object.freeze({
     OPERA_GX: 'Opera GX',
     OPERA_MINI: 'Opera Mini',
     OPERA_MOBI: 'Opera Mobi',
+    OPERA_NEON: 'Opera Neon',
     OPERA_TABLET: 'Opera Tablet',
     OPERA_TOUCH: 'Opera Touch',
     OTTER: 'Otter',
