@@ -1001,7 +1001,7 @@
             ], [VERSION, [NAME, BLACKBERRY]], [
             /(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i       // Symbian
             ], [VERSION, [NAME, 'Symbian']], [
-            /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
+            /mozilla\/[\d\.]+ \((?:mobile[;\w ]*|tablet|tv|[^\)]*(?:viera|lg(?:l25|-d300)|alcatel ?o.+|y300-f1)); rv:([\w\.]+)\).+gecko\//i // Firefox OS
             ], [VERSION, [NAME, FIREFOX+' OS']], [
             /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i,                             // WebOS
             /webos(?:[ \/]?|\.tv-20(?=2[2-9]))(\d[\d\.]*)/i
@@ -1017,7 +1017,6 @@
             ], [[NAME, "Chrome OS"], VERSION],[
 
             // Smart TVs
-            /panasonic;(viera)/i,                                               // Panasonic Viera
             /(netrange)mmh/i,                                                   // Netrange
             /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 
