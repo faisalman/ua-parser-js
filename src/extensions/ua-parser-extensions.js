@@ -41,8 +41,8 @@ const normalizeEmailName = function (str) {
 
 const CLIs = Object.freeze({
     browser : [
-        // wget / curl / Lynx / ELinks / HTTPie
-        [/(wget|curl|lynx|elinks|httpie)[\/ ]\(?([\w\.-]+)/i], [NAME, VERSION, [TYPE, CLI]]
+        // wget / curl / Lynx / ELinks / HTTPie / PowerShell
+        [/(wget|curl|lynx|elinks|httpie|powershell)[\/ ]\(?([\w\.-]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
 
