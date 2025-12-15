@@ -448,6 +448,7 @@ const Extension = Object.freeze({
             ELINKS: 'ELinks',
             HTTPIE: 'HTTPie',
             LYNX: 'Lynx',
+            POWERSHELL: 'PowerShell',
             WGET: 'Wget'
         },
         Crawler: {
