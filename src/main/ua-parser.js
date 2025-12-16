@@ -610,7 +610,7 @@
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
 
             // OnePlus
-            /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-k]\w[1m]10)\b/i,
+            /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-l]\w[1m]10)\b/i,
             /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i
             ], [MODEL, [VENDOR, ONEPLUS], [TYPE, MOBILE]], [
 
@@ -650,7 +650,7 @@
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, TABLET]], [
 
             // LG
-            /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
+            /\b(?:lg)?([vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
             /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch|webos))(\w+)/i,
