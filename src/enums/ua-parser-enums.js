@@ -62,6 +62,7 @@ const BrowserName = Object.freeze({
     GOOGLE_SEARCH: 'GSA',
     HELIO: 'Helio',
     HEYTAP: 'HeyTap',
+    HIBROWSER: 'HiBrowser',
     HONOR: 'Honor',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
