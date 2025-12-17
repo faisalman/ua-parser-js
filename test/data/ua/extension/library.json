@@ -90,6 +90,16 @@
         }
     },
     {
+        "desc"    : "GuzzleHttp",
+        "ua"      : "GuzzleHttp/6.5.5 curl/7.70.0 PHP/7.4.22",
+        "expect"  :
+        {
+            "name"    : "GuzzleHttp",
+            "version" : "6.5.5",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "hackney",
         "ua"      : "hackney/1.20.1",
         "expect"  :
@@ -100,12 +110,12 @@
         }
     },
     {
-        "desc"    : "GuzzleHttp",
-        "ua"      : "GuzzleHttp/6.5.5 curl/7.70.0 PHP/7.4.22",
+        "desc"    : "http.rb",
+        "ua"      : "http.rb/4.2.0",
         "expect"  :
         {
-            "name"    : "GuzzleHttp",
-            "version" : "6.5.5",
+            "name"    : "http.rb",
+            "version" : "4.2.0",
             "type"    : "library"
         }
     },
@@ -126,6 +136,16 @@
         {
             "name"    : "Java-http-client",
             "version" : "11.0.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Jetty",
+        "ua"      : "Jetty/11.0.13",
+        "expect"  :
+        {
+            "name"    : "Jetty",
+            "version" : "11.0.13",
             "type"    : "library"
         }
     },
@@ -196,6 +216,16 @@
         {
             "name"    : "Nutch",
             "version" : "1.21-SNAPSHOT",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "ocaml-cohttp",
+        "ua"      : "ocaml-cohttp/1.2.00",
+        "expect"  :
+        {
+            "name"    : "ocaml-cohttp",
+            "version" : "1.2.00",
             "type"    : "library"
         }
     },

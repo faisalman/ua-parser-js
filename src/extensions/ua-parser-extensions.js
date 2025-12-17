@@ -433,8 +433,8 @@ const MediaPlayers = Object.freeze({
 const Libraries = Object.freeze({
     browser : [
         [
-            // Apache-HttpClient/Axios/Bun/Dart/go-http-client/got/GuzzleHttp/hackney/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/Node.js/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/rest-client/Scrapy/superagent
-            /^(apache-httpclient|axios|bun|dart|deno|(?:go|java)-http-client|got|guzzlehttp|hackney|java|libwww-perl|lua-resty-http|needle|node(?:\.js|-fetch|-superagent)|okhttp|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|rest-client|scrapy)\/([\w\.]+)/i,
+            // Apache-HttpClient/Axios/Bun/Dart/go-http-client/got/GuzzleHttp/hackney/http.rb/Java[-HttpClient]/Jetty/jsdom/libwww-perl/lua-resty-http/Needle/Node.js/node-fetch/ocaml-cohttp/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/rest-client/Scrapy/superagent
+            /^((?:apache|go|java)-http-?client|axios|bun|dart|deno|got|(?:guzzle|lua-resty-|ocaml-co|ok)http|hackney|http\.rb|java|jetty|libwww-perl|needle|node(?:\.js|-fetch|-superagent)|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|rest-client|scrapy)\/([\w\.]+)/i,
             /(adobeair|aiohttp|jsdom)\/([\w\.]+)/i,
             /(nutch)-([\w\.-]+)(\(|$)/i,
             /\((java)\/([\w\.]+)/i
