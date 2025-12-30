@@ -455,7 +455,7 @@
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
-            /(?:musical_ly|trill)(?:.+app_?version\/|_)([\w\.]+)/i              // TikTok
+            /musical_ly(?:.+app_?version\/|_)([\w\.]+)/i                        // TikTok
             ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME, [TYPE, INAPP]], [
