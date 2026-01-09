@@ -38,17 +38,34 @@ describe('Extensions', () => {
         });
     });
 
+    // Existing test cases
     const outlook = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.9126; Microsoft Outlook 16.0.9126; ms-office; MSOffice 16)';
     const thunderbird = 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0';
     const axios = 'axios/1.3.5';
     const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
     const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
 
+    // New test cases for updated Regex logic
+    const macOutlook = 'MacOutlook/16.61.22041701 (Intel Mac OS X 10.15.7)';
+    const yahooMobile = 'YahooMobile/1.0 (mail; 3.0.5.1311380)';
+
     assert.equal(UAParser(scrapy, Bots).browser.name, Library.SCRAPY);
 
     const emailParser = new UAParser(Emails);
+    
+    // Verify Standard Outlook
     assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: Email.MICROSOFT_OUTLOOK, version: "16.0.9126", major: "16", type: BrowserType.EMAIL});
+    
+    // Verify Thunderbird
     assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: Email.THUNDERBIRD, version: "78.13.0", major: "78", type: BrowserType.EMAIL});
+
+    // Verify New MacOutlook Logic (Distinguishing it from Windows Outlook)
+    assert.deepEqual(emailParser.setUA(macOutlook).getBrowser(), {name: Email.MICROSOFT_OUTLOOK_MAC, version: "16.61.22041701", major: "16", type: BrowserType.EMAIL});
+
+    // Verify Yahoo Mobile Logic (Tightened Regex)
+    // Note: We access the string literal 'Yahoo' directly or via Enum if available. 
+    // Since we didn't add a specific YAHOO_MOBILE enum (mapped to generic Yahoo), we expect the Name to match the regex output.
+    assert.deepEqual(emailParser.setUA(yahooMobile).getBrowser(), {name: 'YahooMobile', version: "3.0.5.1311380", major: "3", type: BrowserType.EMAIL});
 
     const libraryParser = new UAParser(Libraries);
     assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: Library.AXIOS, version: "1.3.5", major: "1", type: BrowserType.LIBRARY});

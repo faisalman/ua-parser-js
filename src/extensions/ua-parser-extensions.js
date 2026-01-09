@@ -229,25 +229,46 @@ const ExtraDevices = Object.freeze({
     ]
 });
 
-///////////////
+/////////////
 // EMAIL APPS
-//////////////
+/////////////
 
 const Emails = Object.freeze({
     browser : [
-        [
-        // Evolution / Kontact/KMail[2] / [Microsoft/Mac] Outlook / Thunderbird
-        // Airmail / BlueMail / DaumMail / eMClient / Foxmail / NaverMailApp / Polymail
-        // ProtonMail / SparkDesktop / Sparrow / Yahoo! Mail / Zimbra / ZohoMail-Desktop
-        /((?:air|blue|daum|fox|poly|proton)mail|emclient|evolution|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|sparkdesktop|thunderbird|yahoo|zohomail-desktop)(?:m.+ail; |[\/ ])([\w\.]+)/i,
+        // 1. Specific Android Mail Rule
+        [/(android)\/([\w\.-]+email)/i], 
+        [NAME, VERSION, [TYPE, EMAIL]], 
 
-        // Apple's Mail
-        /(mail)\/([\w\.]+) cf/i
-        ], [NAME, VERSION, [TYPE, EMAIL]], [
-        
-        // Zimbra
-        /zdesktop\/([\w\.]+)/i
-        ], [VERSION, [NAME, 'Zimbra'], [TYPE, EMAIL]]
+        // 2. Standard Email Clients
+        [
+            new RegExp(
+                '(' +
+                // Clients ending in 'mail'
+                '(?:air|aqua|blue|claws|daum|fair|fox|k-9 ?|mac|nylas|pegasus|pocomail|poly|proton|r2|samsung|spice|squirrel|yahoo)mail(?:-desktop| app| bridge)?|' +
+                'yahoomobile|' +
+                // Microsoft & Outlook Variants
+                // Added 'macoutlook' explicitly here:
+                '(?:microsoft )?outlook(?:-express)?|macoutlook|windows-live-mail|' +
+                // Specific Clients
+                'alpine|balsa|barca|canary|emclient|eudora|evolution|geary|gnus|' +
+                'horde::imp|incredimail|kmail2?|kontact|lotus-notes|' +
+                'mail(?:bird|mate|spring)|mutt|navermailapp|newton|nine|postbox|' +
+                'rainloop|roundcube webmail|spar(?:row|kdesktop)|sylpheed|' +
+                'the bat!|thunderbird|trojita|turnpike|tutanota-desktop|wanderlust|' +
+                'zdesktop|zohomail-desktop' +
+                ')' +
+                // Separator
+                '(?:m.+ail; |[\\/ ])' +
+                // Version
+                '([\\w\\.]+)', 
+                'i'
+            )
+        ], 
+        [NAME, VERSION, [TYPE, EMAIL]],
+
+        // 3. Apple Mail Context
+        [/(mail)\/([\w\.]+) cf/i], 
+        [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
