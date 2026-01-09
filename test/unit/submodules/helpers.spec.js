@@ -30,4 +30,10 @@ describe('getOutlookEdition()', () => {
     it('returns original name for unknown inputs', () => {
         assert.equal(getOutlookEdition('Thunderbird', '91.0'), 'Thunderbird');
     });
+
+    it('handles New Outlook (OneOutlook) correctly', () => {
+        // New Outlook usually sends a browser UA, but if it sends "Outlook" without version info matches,
+        // it shouldn't trigger the Legacy/MSI logic.
+        assert.equal(getOutlookEdition('Microsoft Outlook', 'SomeRandomString'), 'Microsoft Outlook');
+    });
 });

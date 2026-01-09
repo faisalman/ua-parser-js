@@ -667,8 +667,8 @@ const Extension = Object.freeze({
             TUTANOTA: 'tutanota-desktop',
             WANDERLUST: 'Wanderlust',
             WINDOWS_LIVE_MAIL: 'Windows-Live-Mail',
-            YAHOO_MAIL: 'Yahoo',
-            YAHOO_MAIL_IOS: 'YahooMail',
+            YAHOO_MAIL: 'Yahoo Mail',
+            YAHOO_MAIL_IOS: 'Yahoo Mail',
             ZIMBRA: 'Zimbra',
             ZOHO_MAIL: 'ZohoMail-Desktop'
         },

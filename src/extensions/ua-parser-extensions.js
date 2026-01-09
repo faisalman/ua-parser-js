@@ -247,7 +247,6 @@ const Emails = Object.freeze({
                 '(?:air|aqua|blue|claws|daum|fair|fox|k-9 ?|mac|nylas|pegasus|pocomail|poly|proton|r2|samsung|spice|squirrel|yahoo)mail(?:-desktop| app| bridge)?|' +
                 'yahoomobile|' +
                 // Microsoft & Outlook Variants
-                // Added 'macoutlook' explicitly here:
                 '(?:microsoft )?outlook(?:-express)?|macoutlook|windows-live-mail|' +
                 // Specific Clients
                 'alpine|balsa|barca|canary|emclient|eudora|evolution|geary|gnus|' +
@@ -264,7 +263,16 @@ const Emails = Object.freeze({
                 'i'
             )
         ], 
-        [NAME, VERSION, [TYPE, EMAIL]],
+        [
+            [NAME, {
+                'YahooMobile': 'Yahoo Mail',
+                'YahooMail': 'Yahoo Mail',
+                'K-9': 'K-9 Mail',
+                'K-9 Mail': 'K-9 Mail'
+            }], 
+            VERSION, 
+            [TYPE, EMAIL]
+        ],
 
         // 3. Apple Mail Context
         [/(mail)\/([\w\.]+) cf/i], 
