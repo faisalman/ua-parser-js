@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/* Extensions for UAParser.js v2.0.7
+/*  Extensions for UAParser.js v2.0.7
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -242,9 +242,9 @@ const ExtraDevices = Object.freeze({
     ]
 });
 
-/////////////
+//////////////
 // EMAIL APPS
-/////////////
+//////////////
 
 const Emails = Object.freeze({
     browser : [
