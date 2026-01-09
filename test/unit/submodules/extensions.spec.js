@@ -63,9 +63,8 @@ describe('Extensions', () => {
     assert.deepEqual(emailParser.setUA(macOutlook).getBrowser(), {name: Email.MICROSOFT_OUTLOOK_MAC, version: "16.61.22041701", major: "16", type: BrowserType.EMAIL});
 
     // Verify Yahoo Mobile Logic (Tightened Regex)
-    // Note: We access the string literal 'Yahoo' directly or via Enum if available. 
-    // Since we didn't add a specific YAHOO_MOBILE enum (mapped to generic Yahoo), we expect the Name to match the regex output.
-    assert.deepEqual(emailParser.setUA(yahooMobile).getBrowser(), {name: 'YahooMobile', version: "3.0.5.1311380", major: "3", type: BrowserType.EMAIL});
+    // Note: We expect 'Yahoo Mail' (Email.YAHOO_MAIL) because of the normalization helper.
+    assert.deepEqual(emailParser.setUA(yahooMobile).getBrowser(), {name: Email.YAHOO_MAIL, version: "1.0", major: "1", type: BrowserType.EMAIL});
 
     const libraryParser = new UAParser(Libraries);
     assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: Library.AXIOS, version: "1.3.5", major: "1", type: BrowserType.LIBRARY});

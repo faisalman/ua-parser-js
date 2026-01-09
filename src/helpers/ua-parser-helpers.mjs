@@ -59,6 +59,50 @@ const isFromEU = _isFromEU;
  */
 const isStandalonePWA = _isStandalonePWA;
 
+/**
+ * Translates a raw Outlook User-Agent name/version into a 
+ * Developer-friendly Edition (e.g., "Outlook 2019 (Modern Word)").
+ */
+const getOutlookEdition = (name, version) => {
+    if (!name || !version) return name;
+    const cleanName = name.toLowerCase().replace(/microsoft\s+/, '');
+    
+    // 1. Handle Mac Separately (Different Rendering Engine)
+    if (cleanName === 'macoutlook') {
+        const major = parseInt(version.split('.')[0], 10);
+        if (major >= 16) return "Outlook for Mac (Modern)";
+        return "Outlook for Mac (Legacy)";
+    }
+
+    // 2. Handle Windows Outlook
+    if (cleanName === 'outlook') {
+        const parts = version.split('.').map(Number);
+        const major = parts[0];
+        const build = parts[2] || 0; // Build number is usually the 3rd part
+
+        // Pre-2016 Versions (Clear Major Version mapping)
+        if (major === 15) return "Outlook 2013";
+        if (major === 14) return "Outlook 2010";
+        if (major === 12) return "Outlook 2007";
+        if (major < 12)   return "Outlook (Legacy)";
+
+        // The Version 16.0 Confusion
+        if (major === 16) {
+            // Build < 10000 = MSI (Volume License 2016/2019)
+            // These render poorly (No SVG, older bugs)
+            if (build < 10000) {
+                return "Outlook 2016 (MSI / Volume License)";
+            }
+            // Build >= 10000 = Click-to-Run (Retail 2016 / 2019 / 365)
+            // These render well (SVG support, modern CSS)
+            return "Outlook 365 / 2019+ (Modern)";
+        }
+    }
+
+    // 3. Fallback for 'Outlook Express' or 'New Outlook' (Browser)
+    return name;
+};
+
 export { 
     getDeviceVendor,
     isAppleSilicon,
@@ -68,5 +112,6 @@ export {
     isElectron,
     isFromEU,
     isFrozenUA,
-    isStandalonePWA
+    isStandalonePWA,
+    getOutlookEdition
 }

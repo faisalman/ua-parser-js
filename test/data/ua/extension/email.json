@@ -40,7 +40,7 @@
         "ua": "AquaMail/1.16.0-1081 (build: 101600003)",
         "expect": {
             "name": "AquaMail",
-            "version": "1.16.0",
+            "version": "1.16.0-1081",
             "type": "email"
         }
     },
@@ -530,12 +530,12 @@
             "type": "email"
         }
     },
-    {
+{
         "desc": "Yahoo! Mail (Android)",
         "ua": "YahooMobile/1.0 (mail; 3.0.5.1311380); (Linux; U; Android 4.0.3; htc_runnymede Build/ICE_CREAM_SANDWICH_MR1);",
         "expect": {
             "name": "Yahoo Mail",
-            "version": "3.0.5.1311380",
+            "version": "1.0",
             "type": "email"
         }
     },
@@ -556,7 +556,7 @@
             "version": "1.0",
             "type": "email"
         }
-    }
+    },
     {
         "desc": "Zimbra",
         "ua": "Mozilla/5.0 (Windows; U; Windows NT 6.2; it; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.8",
