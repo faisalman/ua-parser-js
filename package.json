@@ -222,7 +222,7 @@
     }
   },
   "files": [
-    "dist",
+    "dist/*.?(m)js",
     "src"
   ],
   "bin": "./script/cli.js",
