@@ -2743,6 +2743,16 @@
             "type"    : "inapp"
         }
     },
+      {
+        "desc"     : "TikTok",
+        "ua"       : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari/604.1 trill_43.0.0 BytedanceWebview/d8a21c6",
+        "expect"   : {
+            "name"   : "TikTok",
+            "version": "43.0.0",
+            "major"  : "43",
+            "type"    : "inapp"
+        }
+    },
     {
         "desc"    : "Chrome Mobile",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36",
