@@ -26,6 +26,19 @@ const INAPP     = 'inapp';
 const MEDIAPLAYER = 'mediaplayer';
 const LIBRARY    = 'library';
 
+// Helper to normalize specific email client names
+const normalizeEmailName = function (str) {
+    const map = {
+        'YahooMobile': 'Yahoo Mail',
+        'YahooMail': 'Yahoo Mail',
+        'K-9': 'K-9 Mail',
+        'K-9 Mail': 'K-9 Mail',
+        'Zdesktop': 'Zimbra',
+        'zdesktop': 'Zimbra'
+    };
+    return map[str] || str;
+};
+
 //////////////////////
 // COMMAND LINE APPS
 /////////////////////
@@ -233,25 +246,55 @@ const ExtraDevices = Object.freeze({
     ]
 });
 
-///////////////
+//////////////
 // EMAIL APPS
 //////////////
 
 const Emails = Object.freeze({
     browser : [
-        [
-        // Evolution / Kontact/KMail[2] / [Microsoft/Mac] Outlook / Thunderbird
-        // Airmail / BlueMail / DaumMail / eMClient / Foxmail / NaverMailApp / Polymail
-        // ProtonMail / SparkDesktop / Sparrow / Yahoo! Mail / Zimbra / ZohoMail-Desktop
-        /((?:air|blue|daum|fox|poly|proton)mail|emclient|evolution|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|sparkdesktop|thunderbird|yahoo|zohomail-desktop)(?:m.+ail; |[\/ ])([\w\.]+)/i,
+        // 1. Specific Android Mail Rule
+        [/(android)\/([\w\.-]+email)/i], 
+        [NAME, VERSION, [TYPE, EMAIL]], 
 
-        // Apple's Mail
-        /(mail)\/([\w\.]+) cf/i
-        ], [NAME, VERSION, [TYPE, EMAIL]], [
+        // 2. Standard Email Clients
+        [
+            new RegExp(
+                '(' +
+                // Clients ending in 'mail' (Case 1: Prefix + optional space + [e]mail)
+                // Covers: AirMail, Claws Mail, FairEmail, SamsungEmail, Yahoo Mail, etc.
+                '(?:air|aqua|blue|claws|daum|fair|fox|k-9|mac|nylas|pegasus|poco|poly|proton|samsung|squirrel|yahoo) ?e?mail(?:-desktop| app| bridge)?|' +
+                // Standalone / Specific Names
+                'microsoft outlook|r2mail2|spicebird|turnpike|yahoomobile|' +
+                // Microsoft & Outlook Variants
+                '(?:microsoft )?outlook(?:-express)?|macoutlook|windows-live-mail|' +
+                // Specific Clients
+                'alpine|balsa|barca|canary|emclient|eudora|evolution|geary|gnus|' +
+                'horde::imp|incredimail|kmail2?|kontact|lotus-notes|' +
+                'mail(?:bird|mate|spring)|mutt|navermailapp|newton|nine|postbox|' +
+                'rainloop|roundcube webmail|spar(?:row|kdesktop)|sylpheed|' +
+                'the bat!|thunderbird|trojita|tutanota-desktop|wanderlust|' +
+                'zdesktop|zohomail-desktop' +
+                ')' +
+                // Separator
+                '(?:m.+ail; |[\\/ ])' +
+                // Version (Updated to allow hyphens for Turnpike)
+                '([\\w\\.-]+)', 
+                'i'
+            )
+        ], 
+        [
+            [NAME, normalizeEmailName], 
+            VERSION, 
+            [TYPE, EMAIL]
+        ],
+
+        // 3. Apple Mail Context
+        [/(mail)\/([\w\.]+) cf/i], 
+        [NAME, VERSION, [TYPE, EMAIL]],
         
-        // Zimbra
-        /zdesktop\/([\w\.]+)/i
-        ], [VERSION, [NAME, 'Zimbra'], [TYPE, EMAIL]]
+        // 4. Zimbra Server
+        [/(zimbra)\/([\w\.-]+)/i], 
+        [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
