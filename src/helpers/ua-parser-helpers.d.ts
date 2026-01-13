@@ -1,9 +1,10 @@
-// Type definitions for Helpers submodule of UAParser.js v2.0.5
+// Type definitions for Helpers submodule of UAParser.js v2.0.8
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import type { IResult } from "../main/ua-parser";
 
+export function getOutlookEdition(name: string, version: string): string;
 export function isFrozenUA(ua: string): boolean;
 
 /**

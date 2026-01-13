@@ -3,7 +3,7 @@
 // Source: /src/helpers/ua-parser-helpers.js
 
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.7
+/*  Helpers for UAParser.js v2.0.8
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -11,12 +11,10 @@
 
 /*jshint esversion: 6 */ 
 
-import { UAParser } from '../main/ua-parser.mjs';
-import { EngineName } from '../enums/ua-parser-enums.mjs';
-import { getDeviceVendor: _getDeviceVendor, isAppleSilicon: _isAppleSilicon } from '../device-detection/device-detection.mjs';
-import { isBot: _isBot, isAICrawler } from '../bot-detection/bot-detection.mjs';
-import { isChromeFamily: _isChromeFamily, isElectron: _isElectron, isStandalonePWA: _isStandalonePWA } from '../browser-detection/browser-detection.mjs';
-import { isFromEU: _isFromEU } from '../browser-detection/browser-detection.mjs';
+import { getDeviceVendor as _getDeviceVendor, isAppleSilicon as _isAppleSilicon } from '../device-detection/device-detection.mjs';
+import { isBot as _isBot, isAICrawler } from '../bot-detection/bot-detection.mjs';
+import { isChromeFamily as _isChromeFamily, isElectron as _isElectron, isStandalonePWA as _isStandalonePWA } from '../browser-detection/browser-detection.mjs';
+import { isFromEU as _isFromEU } from '../browser-detection/browser-detection.mjs';
 import { isFrozenUA } from 'ua-is-frozen';
 
 /**

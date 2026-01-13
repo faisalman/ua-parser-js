@@ -76,6 +76,21 @@
 
 --- 
 
+## Version 2.0.8
+
+- Resolve syntax error related to import renaming in ESM build
+- Add new browser: HiBrowser, Opera Neon
+- Add new engine: Dillo
+- Improve browser detection: Brave, TikTok
+- Improve device detection: OnePlus
+- Improve OS detection: Firefox OS
+- `extensions` submodule:
+    - Add new CLI: PowerShell
+    - Add new email: Alpine, Android, AquaMail, Balsa, Barca, Canary, Claws Mail, eM Client, Eudora, FairEmail, Geary, Gnus, Horde::IMP, Lotus-Notes, IncrediMail, K-9 Mail, Mailbird, MailMate, Mailspring, Mutt, Newton, Nine, NylasMail, Outlook-Express, Pegasus Mail, PocoMail, Postbox, ProtonMail Bridge, Quala, R2Mail2, Rainloop, Roundcube Webmail, SamsungEmail, Spicebird, SquirrelMail, Sylpheed, The Bat!, Trojita, Turnpike, tutanota-desktop, Wanderlust, Windows-Live-Mail
+    - Add new library: http.rb, Jetty, ocaml-cohttp
+- `helpers` submodule:
+    - Add new method: `getOutlookEdition()` to map Outlook versions to their marketing editions
+
 ## Version 2.0.7
 
 - Add support for chaining `withClientHints()` & `withFeatureCheck()`

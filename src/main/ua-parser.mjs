@@ -3,7 +3,7 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.7
+/* UAParser.js v2.0.8
    Copyright © 2012-2025 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -21,7 +21,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.7',
+    var LIBVERSION  = '2.0.8',
         UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
@@ -377,9 +377,10 @@
             /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i,        // Avant/IEMobile/SlimBrowser/SlimBoat/Slimjet
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
-            // Blink/Webkit/KHTML based                                         // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon/LG Browser/Otter/qutebrowser/Dooble/Palemoon
-            /(atlas|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon|otter|dooble|(?:lg |qute)browser|palemoon)\/([-\w\.]+)/i,
-                                                                                // Atlas/Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio/Dragon
+            // Blink/Webkit/KHTML based                                         // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon/LG Browser/Otter/qutebrowser/Dooble/Palemoon/HiBrowser
+            /(atlas|flock|rockmelt|midori|epiphany|silk|skyfire|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon|otter|dooble|(?:hi|lg |ovi|qute)browser|palemoon)\/v?([-\w\.]+)/i,
+                                                                                // Atlas/Rekonq/Puffin/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio/Dragon
+            /(brave)(?: chrome)?\/([\d\.]+)/i,                                  // Brave
             /(heytap|ovi|115|surf|qwant)browser\/([\d\.]+)/i,                   // HeyTap/Ovi/115/Surf
             /(qwant)(?:ios|mobile)\/([\d\.]+)/i,                                // Qwant
             /(ecosia|weibo)(?:__| \w+@)([\d\.]+)/i                              // Ecosia/Weibo
@@ -406,7 +407,9 @@
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
-            /\bopt\/([\w\.]+)/i                                                 // Opera Touch
+            / mms\/([\w\.]+)$/i                                                 // Opera Neon
+            ], [VERSION, [NAME, OPERA+' Neon']], [
+            / opt\/([\w\.]+)$/i                                                 // Opera Touch
             ], [VERSION, [NAME, OPERA+' Touch']], [
             /coc_coc\w+\/([\w\.]+)/i                                            // Coc Coc Browser
             ], [VERSION, [NAME, 'Coc Coc']], [
@@ -455,7 +458,7 @@
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
-            /musical_ly(?:.+app_?version\/|_)([\w\.]+)/i                        // TikTok
+            /(?:musical_ly|trill)(?:.+app_?version\/|_)([\w\.]+)/i              // TikTok
             ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME, [TYPE, INAPP]], [
@@ -610,7 +613,7 @@
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
 
             // OnePlus
-            /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-k]\w[1m]10)\b/i,
+            /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-l]\w[1m]10)\b/i,
             /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i
             ], [MODEL, [VENDOR, ONEPLUS], [TYPE, MOBILE]], [
 
@@ -650,7 +653,7 @@
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, TABLET]], [
 
             // LG
-            /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
+            /\b(?:lg)?([vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
             /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch|webos))(\w+)/i,
@@ -941,7 +944,7 @@
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna/Servo
             /ekioh(flow)\/([\w\.]+)/i,                                          // Flow
-            /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,                           // KHTML/Tasman/Links
+            /(khtml|tasman|links|dillo)[\/ ]\(?([\w\.]+)/i,                     // KHTML/Tasman/Links/Dillo
             /(icab)[\/ ]([23]\.[\d\.]+)/i,                                      // iCab
 
             /\b(libweb)/i                                                       // LibWeb
@@ -1003,7 +1006,7 @@
             ], [VERSION, [NAME, BLACKBERRY]], [
             /(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i       // Symbian
             ], [VERSION, [NAME, 'Symbian']], [
-            /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
+            /mozilla\/[\d\.]+ \((?:mobile[;\w ]*|tablet|tv|[^\)]*(?:viera|lg(?:l25|-d300)|alcatel ?o.+|y300-f1)); rv:([\w\.]+)\).+gecko\//i // Firefox OS
             ], [VERSION, [NAME, FIREFOX+' OS']], [
             /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i,                             // WebOS
             /webos(?:[ \/]?|\.tv-20(?=2[2-9]))(\d[\d\.]*)/i
@@ -1019,7 +1022,6 @@
             ], [[NAME, "Chrome OS"], VERSION],[
 
             // Smart TVs
-            /panasonic;(viera)/i,                                               // Panasonic Viera
             /(netrange)mmh/i,                                                   // Netrange
             /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 

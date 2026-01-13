@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.7
+/*  Helpers for UAParser.js v2.0.8
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -7,8 +7,6 @@
 
 /*jshint esversion: 6 */ 
 
-const { UAParser } = require('../main/ua-parser');
-const { EngineName } = require('../enums/ua-parser-enums');
 const { getDeviceVendor: _getDeviceVendor, isAppleSilicon: _isAppleSilicon } = require('../device-detection/device-detection');
 const { isBot: _isBot, isAICrawler } = require('../bot-detection/bot-detection');
 const { isChromeFamily: _isChromeFamily, isElectron: _isElectron, isStandalonePWA: _isStandalonePWA } = require('../browser-detection/browser-detection');

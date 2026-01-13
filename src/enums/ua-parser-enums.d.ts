@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.7
+/*  Enums for UAParser.js v2.0.8
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -66,6 +66,7 @@ export const BrowserName: Readonly<{
     GOOGLE_SEARCH: 'GSA',
     HELIO: 'Helio',
     HEYTAP: 'HeyTap',
+    HIBROWSER: 'HiBrowser',
     HONOR: 'Honor',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
@@ -116,6 +117,7 @@ export const BrowserName: Readonly<{
     OPERA_GX: 'Opera GX',
     OPERA_MINI: 'Opera Mini',
     OPERA_MOBI: 'Opera Mobi',
+    OPERA_NEON: 'Opera Neon',
     OPERA_TABLET: 'Opera Tablet',
     OPERA_TOUCH: 'Opera Touch',
     OTTER: 'Otter',
@@ -316,6 +318,7 @@ export const EngineName: Readonly<{
     AMAYA: 'Amaya',
     ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
+    DILLO: 'Dillo',
     EDGEHTML: 'EdgeHTML',
     FLOW: 'Flow',
     GECKO: 'Gecko',
@@ -451,6 +454,7 @@ export const Extension: Readonly<{
             ELINKS: 'ELinks',
             HTTPIE: 'HTTPie',
             LYNX: 'Lynx',
+            POWERSHELL: 'PowerShell',
             WGET: 'Wget'
         },
         Crawler: {
@@ -763,8 +767,10 @@ export const Extension: Readonly<{
             GOT: 'got',
             GUZZLEHTTP: 'GuzzleHttp',
             HACKNEY: 'hackney',
+            HTTP_RB: 'http.rb',
             JAVA: 'Java',
             JAVA_HTTPCLIENT: 'Java-http-client',
+            JETTY: 'Jetty',
             JSDOM: 'jsdom',
             LIBWWW_PERL: 'libwww-perl',
             LUA_RESTY_HTTP: 'lua-resty-http',
@@ -774,6 +780,7 @@ export const Extension: Readonly<{
             NODE_JS: 'Node.js',
             NODE_SUPERAGENT: 'node-superagent',
             OKHTTP: 'OkHttp',
+            OCAML_COHTTP: 'ocaml-cohttp',
             PHP_SOAP: 'PHP-SOAP',
             POSTMAN_RUNTIME: 'PostmanRuntime',
             PYTHON_HTTPX: 'python-httpx',
