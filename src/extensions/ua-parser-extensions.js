@@ -306,12 +306,13 @@ const Fetchers = Object.freeze({
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
+            // FlipboardProxy - https://about.flipboard.com/proxy-service/
             // Google Site Verifier / Meta / Yahoo! Japan
             // Iframely - https://iframely.com/docs/about
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|flipboardproxy|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,

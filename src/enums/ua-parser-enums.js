@@ -688,6 +688,7 @@ const Extension = Object.freeze({
             COHERE_AI: 'Cohere-AI',
             DISCORD_BOT: 'Discordbot',
             DUCKDUCKGO_ASSISTBOT: 'DuckAssistBot',
+            FLIPBOARD_PROXY: 'FlipboardProxy',
             GOOGLE_CHROME_LIGHTHOUSE: 'Chrome-Lighthouse',
             GOOGLE_FEEDFETCHER: 'FeedFetcher-Google',
             GOOGLE_GEMINI_DEEP_RESEARCH: 'Gemini-Deep-Research',

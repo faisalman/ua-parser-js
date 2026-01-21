@@ -140,6 +140,16 @@
         }
     },
     {
+        "desc"    : "FlipboardProxy",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko/20100101 Firefox/49.0 (FlipboardProxy/1.2; +http://flipboard.com/browserproxy)",
+        "expect"  :
+        {
+            "name"    : "FlipboardProxy",
+            "version" : "1.2",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Gemini-Deep-Research",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Gemini-Deep-Research; +https://gemini.google/overview/deep-research/) Chrome/135.0.0.0 Safari/537.36",
         "expect"  :
