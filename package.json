@@ -223,6 +223,7 @@
   },
   "files": [
     "dist/*.?(m)js",
+    "dist/icons",
     "src"
   ],
   "bin": "./script/cli.js",
