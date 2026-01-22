@@ -79,6 +79,9 @@ const AICrawlers = new BotList(Crawlers, 'name', [
     Crawler.APPLE_BOT,
     Crawler.APPLE_BOT_EXTENDED,
 
+    // Atlassian
+    Crawler.ATLASSIAN_BOT,
+
     // Brave
     Crawler.BRAVE_BOT,
 
@@ -109,6 +112,7 @@ const AICrawlers = new BotList(Crawlers, 'name', [
 
     // Google
     Crawler.GOOGLE_EXTENDED,
+    Crawler.GOOGLE_NOTEBOOKLM,
     Crawler.GOOGLE_OTHER,
     Crawler.GOOGLE_OTHER_IMAGE,
     Crawler.GOOGLE_OTHER_VIDEO,
@@ -152,6 +156,7 @@ const AICrawlers = new BotList(Crawlers, 'name', [
 
     // Semrush
     Crawler.SEMRUSH_BOT_CONTENTSHAKE,
+    Crawler.SEMRUSH_BOT_SWA,
 
     // Timpi
     Crawler.TIMPI_BOT,

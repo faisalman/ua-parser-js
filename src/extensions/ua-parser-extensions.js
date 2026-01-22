@@ -145,7 +145,7 @@ const Crawlers = Object.freeze({
 
         [
             // Google Bots
-            /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|safety))/i,
+            /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|notebooklm|safety))/i,
 
             // AI2Bot - https://allenai.org/crawler
             // DataForSeoBot - https://dataforseo.com/dataforseo-bot
@@ -156,7 +156,7 @@ const Crawlers = Object.freeze({
             // v0bot - https://vercel.com/docs/bot-management
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
             // Botify / Bytespider / DeepSeekBot / Qihoo 360Spider / SeekportBot / TikTokSpider
-            /\b((ai2|aspiegel|dataforseo|deepseek|imagesift|petal|seekport|turnitin|v0)bot|360spider-?(image|video)?|baidu-ads|botify|(byte|tiktok)spider|cohere-training-data-crawler|elastic(?=\/s)|marginalia|siteimprove(?=bot|\.com)|teoma|webzio|yahoo! slurp)/i
+            /\b((ai2|aspiegel|atlassian-|dataforseo|deepseek|imagesift|petal|seekport|turnitin|v0)bot|360spider-?(image|video)?|baidu-ads|botify|(byte|tiktok)spider|cohere-training-data-crawler|elastic(?=\/s)|marginalia|siteimprove(?=bot|\.com)|teoma|webzio|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
