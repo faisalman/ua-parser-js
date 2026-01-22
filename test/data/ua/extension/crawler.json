@@ -350,6 +350,16 @@
         }
     },
     {
+        "desc"    : "Cloudflare AutoRAG",
+        "ua"      : "Cloudflare-AutoRAG (https://developers.cloudflare.com/autorag; autorag@cloudflare.com)",
+        "expect"  :
+        {
+            "name"    : "Cloudflare-AutoRAG",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Coc Coc Bot (web)",
         "ua"      : "Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)",
         "expect"  :

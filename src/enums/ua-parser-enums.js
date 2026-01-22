@@ -482,6 +482,7 @@ const Extension = Object.freeze({
             BRAVE_BOT: 'Bravebot',
             BYTEDANCE_BYTESPIDER: 'Bytespider',
             BYTEDANCE_TIKTOKSPIDER: 'TikTokSpider',
+            CLOUDFLARE_AUTORAG: 'Cloudflare-AutoRAG',
             COMMON_CRAWL_CCBOT: 'CCBot',
             COCCOC_BOT_WEB: 'coccocbot-web',
             COCCOC_BOT_IMAGE: 'coccocbot-image',

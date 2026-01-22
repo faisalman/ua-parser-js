@@ -86,6 +86,9 @@ const AICrawlers = new BotList(Crawlers, 'name', [
     Crawler.BYTEDANCE_BYTESPIDER,
     Crawler.BYTEDANCE_TIKTOKSPIDER,
 
+    // Cloudflare
+    Crawler.CLOUDFLARE_AUTORAG,
+
     // Cohere
     Crawler.COHERE_TRAINING_DATA_CRAWLER,
 
