@@ -12,6 +12,7 @@ const BrowserName = Object.freeze({
     '2345': '2345',
     '360': '360',
     ALIPAY: 'Alipay',
+    ALOHA: 'Aloha',
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
     ARORA: 'Arora',
