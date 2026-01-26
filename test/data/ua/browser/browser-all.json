@@ -1097,6 +1097,16 @@
         }
     },
     {
+        "desc"    : "Luakit",
+        "ua"      : "Mozilla/5.0 (Linux x86_64) AppleWebKit/535.4+ (KHTML, like Gecko) WebKitGTK+/1.6.3 luakit",
+        "expect"  :
+        {
+            "name"    : "luakit",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
         "desc"    : "Otter",
         "ua"      : "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/602.1 (KHTML, like Gecko) Otter/1.0.81",
         "expect"  :

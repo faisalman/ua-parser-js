@@ -92,6 +92,7 @@ const BrowserName = Object.freeze({
     LINE: 'Line',
     LINKEDIN: 'LinkedIn',
     LINKS: 'Links',
+    LUAKIT: 'Luakit',
     LUNASCAPE: 'Lunascape',
     LYNX: 'Lynx',
     MAEMO: 'Maemo Browser',
