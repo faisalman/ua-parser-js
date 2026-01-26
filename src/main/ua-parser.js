@@ -1012,7 +1012,7 @@
             /web0s;.+?(?:chr[o0]me|safari)\/(\d+)/i
                                                                                 // https://webostv.developer.lge.com/develop/specifications/web-api-and-web-engine
             ], [[VERSION, strMapper, {'25':'120','24':'108','23':'94','22':'87','6':'79','5':'68','4':'53','3':'38','2':'538','1':'537','*':'TV'}], [NAME, 'webOS']], [                   
-            /watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i                              // watchOS
+            /watch(?: ?os[,\/ ]|\d,\d\/)([\d\.]+)/i                              // watchOS
             ], [VERSION, [NAME, 'watchOS']], [
 
             // Google ChromeOS
