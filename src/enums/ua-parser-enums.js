@@ -107,6 +107,7 @@ const BrowserName = Object.freeze({
     NETSCAPE: 'Netscape',
     NETSURF: 'Netsurf',
     NOKIA: 'Nokia Browser',
+    NORTON: 'Norton Private Browser',
     OBIGO: 'Obigo',
     OCULUS: 'Oculus Browser',
     OMNIWEB: 'OmniWeb',

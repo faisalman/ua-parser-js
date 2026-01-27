@@ -403,6 +403,8 @@
             ], [VERSION, [NAME, 'Smart ' + LENOVO + SUFFIX_BROWSER]], [
             /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
+            /norton\/([\w\.]+)/i                                                // Norton Private Browser
+            ], [VERSION, [NAME, 'Norton Private' + SUFFIX_BROWSER]], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
             / mms\/([\w\.]+)$/i                                                 // Opera Neon

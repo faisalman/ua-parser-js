@@ -140,6 +140,20 @@ const UACHTests = [
         }
     },
     {
+        desc: 'Norton Private Browser',
+        headers : {
+            'sec-ch-ua': '"Chromium";v="124", "Norton Private Browser";v="124", "Not-A.Brand";v="99"'
+        },
+        expect: {
+            browser : {
+                name : 'Norton Private Browser',
+                version : '124',
+                major : '124',
+                type : undefined
+            }
+        }
+    },
+    {
         desc: 'Oculus Browser',
         headers : {
             'sec-ch-ua': '"Chromium";v="130", "Oculus Browser";v="36", "Not?A_Brand";v="99"'
