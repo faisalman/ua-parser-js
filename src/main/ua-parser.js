@@ -57,6 +57,7 @@
         EMBEDDED    = 'embedded',
 
         // browser types
+        FETCHER     = 'fetcher',
         INAPP       = 'inapp',
 
         // client hints
@@ -439,8 +440,7 @@
             ], [NAME, VERSION], [
             /(lbbrowser|luakit|rekonq|steam(?= (clie|tenf|gameo)))/i            // LieBao Browser/Luakit/Rekonq/Steam
             ], [NAME], [
-            /ome\/([\w\.]+) \w* ?(iron) saf/i,                                  // Iron
-            /ome\/([\w\.]+).+qihu (360)[es]e/i                                  // 360
+            /ome\/([\w\.]+).+(iron(?= saf)|360(?=[es]e$))/i                     // Iron / 360
             ], [VERSION, NAME], [
 
             // WebView
@@ -467,6 +467,9 @@
 
             /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
             ], [NAME, VERSION], [
+
+            /ome-(lighthouse)$/i                                                // Chrome Lighthouse
+            ], [NAME, [TYPE, FETCHER]], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [

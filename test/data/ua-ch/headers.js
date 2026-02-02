@@ -126,6 +126,20 @@ const UACHTests = [
         }
     },
     {
+        desc: 'Lighthouse',
+        headers : {
+            'sec-ch-ua': '"Chromium";v="119", "Google Chrome";v="119", "Lighthouse";v="11.5.0"'
+        },
+        expect: {
+            browser : {
+                name : 'Lighthouse',
+                version : '11.5.0',
+                major : '11.5.0',
+                type : undefined
+            }
+        }
+    },
+    {
         desc: 'MIUI Browser',
         headers : {
             'sec-ch-ua': '"Miui Browser";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
