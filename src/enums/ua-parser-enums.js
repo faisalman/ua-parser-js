@@ -20,6 +20,7 @@ const BrowserName = Object.freeze({
     AVANT: 'Avant',
     AVAST: 'Avast Secure Browser',
     AVG: 'AVG Secure Browser',
+    AVIRA: 'Avira Secure Browser',
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
     BING: 'Bing',

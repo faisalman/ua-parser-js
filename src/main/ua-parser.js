@@ -402,7 +402,7 @@
             ], [VERSION, [NAME, 'Yandex']], [
             /slbrowser\/([\w\.]+)/i                                             // Smart Lenovo Browser
             ], [VERSION, [NAME, 'Smart ' + LENOVO + SUFFIX_BROWSER]], [
-            /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
+            /(av(?:ast|g|ira))\/([\w\.]+)/i                                     // Avast/AVG/Avira Secure Browser
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
             /norton\/([\w\.]+)/i                                                // Norton Private Browser
             ], [VERSION, [NAME, 'Norton Private' + SUFFIX_BROWSER]], [
