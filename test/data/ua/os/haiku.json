@@ -7,5 +7,32 @@
             "name"    : "Haiku",
             "version" : "R1"
         }
+    },
+    {
+        "desc"    : "Haiku",
+        "ua"      : "Mozilla/5.0 (X11; Haiku x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+        "expect"  :
+        {
+            "name"    : "Haiku",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Haiku",
+        "ua"      : "Mozilla/5.0 (Haiku; BeOS; rv:99.0) Gecko/20100101 Firefox/99.0",
+        "expect"  :
+        {
+            "name"    : "Haiku",
+            "version" : "undefined"
+        }
+    },
+    {
+        "desc"    : "Haiku",
+        "ua"      : "Mozilla/5.0 (X11; Haiku BePC) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.15.17 Chrome/87.0.4280.144 Safari/537.36 Dooble/2023.12.25 Dooble/2023.12.25",
+        "expect"  :
+        {
+            "name"    : "Haiku",
+            "version" : "undefined"
+        }
     }
 ]

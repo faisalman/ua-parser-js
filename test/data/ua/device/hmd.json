@@ -1,5 +1,23 @@
 [
     {
+        "desc": "HMD Barbie Phone",
+        "ua": "Mozilla/5.0 (Mobile; HMD Barbie Phone; rv:84.0) Gecko/84.0 Firefox/84.0 KAIOS/3.1",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Barbie Phone",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Fusion",
+        "ua": "Mozilla/5.0 (Linux; Android 14; HMD Fusion) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Fusion",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "HMD Pulse",
         "ua": "Mozilla/5.0 (Linux; Android 14; HMD Pulse) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
         "expect": {
@@ -23,6 +41,24 @@
         "expect": {
             "vendor": "HMD",
             "model": "Pulse Pro",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Skyline",
+        "ua": "Mozilla/5.0 (Linux; arm_64; Android 14; HMD Skyline) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.1804 YaApp_Android/24.120.1 YaSearchBrowser/24.120.1 BroPP/1.0 SA/3 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "HMD",
+            "model": "Skyline",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "HMD Vibe",
+        "ua": "Mozilla/5.0 (Linux; Android 14; N159V Build/UKQ1.231025.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/497.0.0.47.36;]",
+        "expect": {
+            "vendor": "HMD",
+            "model": "N159V",
             "type": "mobile"
         }
     }

@@ -1,5 +1,7 @@
 const assert = require('assert');
 const { UAParser } = require('../../src/main/ua-parser');
+const { BrowserName, CPUArch, DeviceType, DeviceVendor, EngineName, OSName } = require('../../src/enums/ua-parser-enums');
+const UACHTests = require('../data/ua-ch/headers');
 
 describe('Map UA-CH headers', () => {
 
@@ -25,27 +27,27 @@ describe('Map UA-CH headers', () => {
     it('Can read from client-hints headers using `withClientHints()`', () => {  
 
         assert.strictEqual(uap.ua, "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36");
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, "93.0.1.2");
         assert.strictEqual(uap.browser.major, "93");        
-        assert.strictEqual(browser.name, "Chrome");
+        assert.strictEqual(browser.name, BrowserName.CHROME);
         assert.strictEqual(browser.version, "93.0.1.2");
         assert.strictEqual(browser.major, "93");
-        assert.strictEqual(uap.cpu.architecture, "arm64");
-        assert.strictEqual(cpu.architecture, "arm64");
-        assert.strictEqual(uap.device.type, "mobile");
+        assert.strictEqual(uap.cpu.architecture, CPUArch.ARM_64);
+        assert.strictEqual(cpu.architecture, CPUArch.ARM_64);
+        assert.strictEqual(uap.device.type, DeviceType.MOBILE);
         assert.strictEqual(uap.device.model, "Pixel 99");
-        assert.strictEqual(uap.device.vendor, "Google");
-        assert.strictEqual(device.type, "mobile");
+        assert.strictEqual(uap.device.vendor, DeviceVendor.GOOGLE);
+        assert.strictEqual(device.type, DeviceType.MOBILE);
         assert.strictEqual(device.model, "Pixel 99");
-        assert.strictEqual(device.vendor, "Google");
-        assert.strictEqual(uap.engine.name, 'Blink');
+        assert.strictEqual(device.vendor, DeviceVendor.GOOGLE);
+        assert.strictEqual(uap.engine.name, EngineName.BLINK);
         assert.strictEqual(uap.engine.version, '93.0.1.2');
-        assert.strictEqual(engine.name, 'Blink');
+        assert.strictEqual(engine.name, EngineName.BLINK);
         assert.strictEqual(engine.version, '93.0.1.2');
-        assert.strictEqual(uap.os.name, "Windows");
+        assert.strictEqual(uap.os.name, OSName.WINDOWS);
         assert.strictEqual(uap.os.version, "11");
-        assert.strictEqual(os.name, "Windows");
+        assert.strictEqual(os.name, OSName.WINDOWS);
         assert.strictEqual(os.version, "11");
     });
 
@@ -58,16 +60,16 @@ describe('Map UA-CH headers', () => {
         engine = new UAParser(headers).getEngine();
         os = new UAParser(headers).getOS();
 
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, "110.0.0.0");
         assert.strictEqual(uap.browser.major, "110");
-        assert.strictEqual(uap.cpu.architecture, "amd64");
+        assert.strictEqual(uap.cpu.architecture, CPUArch.X86_64);
         assert.strictEqual(uap.device.type, undefined);
         assert.strictEqual(uap.device.model, undefined);
         assert.strictEqual(uap.device.vendor, undefined);
-        assert.strictEqual(uap.engine.name, 'Blink');
+        assert.strictEqual(uap.engine.name, EngineName.BLINK);
         assert.strictEqual(uap.engine.version, '110.0.0.0');
-        assert.strictEqual(uap.os.name, "Linux");
+        assert.strictEqual(uap.os.name, OSName.LINUX);
         assert.strictEqual(uap.os.version, undefined);
     });
 
@@ -80,16 +82,16 @@ describe('Map UA-CH headers', () => {
         
         uap = UAParser(headers2).withClientHints();
 
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, "110.0.0.0");
         assert.strictEqual(uap.browser.major, "110");
-        assert.strictEqual(uap.cpu.architecture, "amd64");
-        assert.strictEqual(uap.device.type, "mobile");
+        assert.strictEqual(uap.cpu.architecture, CPUArch.X86_64);
+        assert.strictEqual(uap.device.type, DeviceType.MOBILE);
         assert.strictEqual(uap.device.model, undefined);
         assert.strictEqual(uap.device.vendor, undefined);
-        assert.strictEqual(uap.engine.name, 'Blink');
+        assert.strictEqual(uap.engine.name, EngineName.BLINK);
         assert.strictEqual(uap.engine.version, '110.0.0.0');
-        assert.strictEqual(uap.os.name, "Linux");
+        assert.strictEqual(uap.os.name, OSName.LINUX);
         assert.strictEqual(uap.os.version, undefined);
     });
 
@@ -116,10 +118,10 @@ describe('Map UA-CH headers', () => {
                     }
             */
 
-            assert.strictEqual(ua.os.is("macOS"), true);
-            assert.strictEqual(ua.cpu.is("arm"), true);            
-            assert.strictEqual(ua.device.is("mobile"), false);
-            assert.strictEqual(ua.device.is("tablet"), false);
+            assert.strictEqual(ua.os.is(OSName.MACOS), true);
+            assert.strictEqual(ua.cpu.is(CPUArch.ARM), true);            
+            assert.strictEqual(ua.device.is(DeviceType.MOBILE), false);
+            assert.strictEqual(ua.device.is(DeviceType.TABLET), false);
         });
     });
 
@@ -138,11 +140,11 @@ describe('Map UA-CH headers', () => {
         };
         
         UAParser(FFVR).withClientHints().then(ua => {
-            assert.strictEqual(ua.device.type, 'xr');
+            assert.strictEqual(ua.device.type, DeviceType.XR);
         });
 
         UAParser(FFEInk).withClientHints().then(ua => {
-            assert.strictEqual(ua.device.type, 'tablet');
+            assert.strictEqual(ua.device.type, DeviceType.TABLET);
         });
 
 
@@ -168,7 +170,7 @@ describe('Map UA-CH headers', () => {
         
         uap = UAParser(headers2).withClientHints();
 
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, undefined);
         assert.strictEqual(uap.browser.major, undefined);
     });
@@ -195,245 +197,37 @@ describe('Map UA-CH headers', () => {
         };
         
         uap = UAParser(headers3a).withClientHints();
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, "120.0.6099.132");
 
         uap = UAParser(headers3b).withClientHints();
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, "120.0.6099.132");
 
         uap = UAParser(headers3c).withClientHints();
-        assert.strictEqual(uap.browser.name, "Chrome");
+        assert.strictEqual(uap.browser.name, BrowserName.CHROME);
         assert.strictEqual(uap.browser.version, "120.0.6099.132");
 
         uap = UAParser(headers3d).withClientHints();
-        assert.strictEqual(uap.browser.name, "Edge");
+        assert.strictEqual(uap.browser.name, BrowserName.EDGE);
         assert.strictEqual(uap.browser.version, "120.0.6099.133");
 
         uap = UAParser(headers3e).withClientHints();
-        assert.strictEqual(uap.browser.name, "Edge");
+        assert.strictEqual(uap.browser.name, BrowserName.EDGE);
         assert.strictEqual(uap.browser.version, "120.0.6099.133");
 
         uap = UAParser(headers3f).withClientHints();
-        assert.strictEqual(uap.browser.name, "Edge");
+        assert.strictEqual(uap.browser.name, BrowserName.EDGE);
         assert.strictEqual(uap.browser.version, "120.0.6099.133");
     });
 });
 
 describe('UA-CH Headers tests', () => {
-    [
-        {
-            headers : {
-                'sec-ch-ua': '"Avast Secure Browser";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
-            },
-            expect: {
-                browser : {
-                    name : 'Avast Secure Browser',
-                    version : '131',
-                    major : '131',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Brave";v="132"'
-            },
-            expect: {
-                browser : {
-                    name : 'Brave',
-                    version : '132',
-                    major : '132',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"'
-            },
-            expect: {
-                browser : {
-                    name : 'Chrome',
-                    version : '111',
-                    major : '111',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Chromium";v="124", "HeadlessChrome";v="124", "Not-A.Brand";v="99"'
-            },
-            expect: {
-                browser : {
-                    name : 'Chrome Headless',
-                    version : '124',
-                    major : '124',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Android WebView";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
-            },
-            expect: {
-                browser : {
-                    name : 'Chrome WebView',
-                    version : '123',
-                    major : '123',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"DuckDuckGo";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
-            },
-            expect : {
-                browser : {
-                    name : 'DuckDuckGo',
-                    version : '131',
-                    major : '131',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Microsoft Edge";v="120"'
-            },
-            expect: {
-                browser : {
-                    name : 'Edge',
-                    version : '120',
-                    major : '120',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "HuaweiBrowser";v="114"'
-            },
-            expect: {
-                browser : {
-                    name : 'Huawei Browser',
-                    version : '114',
-                    major : '114',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Miui Browser";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
-            },
-            expect: {
-                browser : {
-                    name : 'MIUI Browser',
-                    version : '123',
-                    major : '123',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Chromium";v="130", "Oculus Browser";v="36", "Not?A_Brand";v="99"'
-            },
-            expect: {
-                browser : {
-                    name : 'Oculus Browser',
-                    version : '36',
-                    major : '36',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Opera";v="116", "Chromium";v="131", "Not_A Brand";v="24"'
-            },
-            expect: {
-                browser : {
-                    name : 'Opera',
-                    version : '116',
-                    major : '116',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Opera GX";v="114"'
-            },
-            expect: {
-                browser : {
-                    name : 'Opera GX',
-                    version : '114',
-                    major : '114',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"OperaMobile";v="86", ";Not A Brand";v="99", "Opera";v="115", "Chromium";v="130"'
-            },
-            expect: {
-                browser : {
-                    name : 'Opera Mobi',
-                    version : '86',
-                    major : '86',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Chromium";v="132", "OperaMobile";v="87", "Opera";v="117", " Not A;Brand";v="99"'
-            },
-            expect: {
-                browser : {
-                    name : 'Opera Mobi',
-                    version : '87',
-                    major : '87',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Chromium";v="125", "Not.A/Brand";v="24", "Samsung Internet";v="27.0"'
-            },
-            expect: {
-                browser : {
-                    name : 'Samsung Internet',
-                    version : '27.0',
-                    major : '27',
-                    type : undefined
-                }
-            }
-        },
-        {
-            headers : {
-                'sec-ch-ua': '"Chromium";v="130", "YaBrowser";v="24.12", "Not?A_Brand";v="99", "Yowser";v="2.5"'
-            },
-            expect: {
-                browser : {
-                    name : 'Yandex',
-                    version : '24.12',
-                    major : '24',
-                    type : undefined
-                }
-            }
-        },
-    ]
-    .forEach(test => {
-        const { browser } = UAParser(test.headers).withClientHints();
-        assert.deepEqual(browser, test.expect.browser);
+    UACHTests.forEach(test => {
+        it(`Test for ${test.desc}`, () => {
+            const { browser } = UAParser(test.headers).withClientHints();
+            assert.deepEqual(browser, test.expect.browser);
+        });
     });
 });
 
@@ -442,169 +236,169 @@ describe('Identify vendor & type of device from given model name', () => {
         {
             model: '220733SG',
             expect: {
-                vendor : 'Xiaomi',
-                type : 'mobile'
+                vendor : DeviceVendor.XIAOMI,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: '5087Z',
             expect: {
-                vendor : 'TCL',
-                type : 'mobile'
+                vendor : DeviceVendor.TCL,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: '9137W',
             expect: {
-                vendor : 'TCL',
-                type : 'tablet'
+                vendor : DeviceVendor.TCL,
+                type : DeviceType.TABLET
             }
         },
         {
             model: 'BE2015',
             expect: {
-                vendor : 'OnePlus',
-                type : 'mobile'
+                vendor : DeviceVendor.ONEPLUS,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'CPH2389',
             expect: {
-                vendor : 'OPPO',
-                type : 'mobile'
+                vendor : DeviceVendor.ONEPLUS,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'Infinix X669C',
             expect: {
-                vendor : 'Infinix',
-                type : 'mobile'
+                vendor : DeviceVendor.INFINIX,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'itel L6502',
             expect: {
-                vendor : 'itel',
-                type : 'mobile'
+                vendor : DeviceVendor.ITEL,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'Lenovo TB-X606F',
             expect: {
-                vendor : 'Lenovo',
-                type : 'tablet'
+                vendor : DeviceVendor.LENOVO,
+                type : DeviceType.TABLET
             }
         },
         {
             model: 'LM-Q720',
             expect: {
-                vendor : 'LG',
-                type : 'mobile'
+                vendor : DeviceVendor.LG,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'M2003J15SC',
             expect: {
-                vendor : 'Xiaomi',
-                type : 'mobile'
+                vendor : DeviceVendor.XIAOMI,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'MAR-LX1A',
             expect: {
-                vendor : 'Huawei',
-                type : 'mobile'
+                vendor : DeviceVendor.HUAWEI,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'moto g(20)',
             expect: {
-                vendor : 'Motorola',
-                type : 'mobile'
+                vendor : DeviceVendor.MOTOROLA,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'Nokia C210',
             expect: {
-                vendor : 'Nokia',
-                type : 'mobile'
+                vendor : DeviceVendor.NOKIA,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'Pixel 8',
             expect: {
-                vendor : 'Google',
-                type : 'mobile'
+                vendor : DeviceVendor.GOOGLE,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'Redmi Note 9S',
             expect: {
-                vendor : 'Xiaomi',
-                type : 'mobile'
+                vendor : DeviceVendor.XIAOMI,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'RMX3830',
             expect: {
-                vendor : 'Realme',
-                type : 'mobile'
+                vendor : DeviceVendor.REALME,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'SM-S536DL',
             expect: {
-                vendor : 'Samsung',
-                type : 'mobile'
+                vendor : DeviceVendor.SAMSUNG,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'SM-S546VL',
             expect: {
-                vendor : 'Samsung',
-                type : 'mobile'
+                vendor : DeviceVendor.SAMSUNG,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'SM-T875',
             expect: {
-                vendor : 'Samsung',
-                type : 'tablet'
+                vendor : DeviceVendor.SAMSUNG,
+                type : DeviceType.TABLET
             }
         },
         {
             model: 'STK-L21',
             expect: {
-                vendor : 'Huawei',
-                type : 'mobile'
+                vendor : DeviceVendor.HUAWEI,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'T430W',
             expect: {
-                vendor : 'TCL',
-                type : 'mobile'
+                vendor : DeviceVendor.TCL,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'TECNO KI5k',
             expect: {
-                vendor : 'TECNO',
-                type : 'mobile'
+                vendor : DeviceVendor.TECNO,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'vivo 1820',
             expect: {
-                vendor : 'Vivo',
-                type : 'mobile'
+                vendor : DeviceVendor.VIVO,
+                type : DeviceType.MOBILE
             }
         },
         {
             model: 'Xbox',
             expect: {
-                vendor : 'Microsoft',
-                type : 'console'
+                vendor : DeviceVendor.MICROSOFT,
+                type : DeviceType.CONSOLE
             }
         }
     ]
@@ -618,5 +412,21 @@ describe('Identify vendor & type of device from given model name', () => {
             assert.strictEqual(device.vendor, test.expect.vendor);
             assert.strictEqual(device.type, test.expect.type);
         });
+    });
+});
+
+describe('Chaining withClientHints() & withFeatureCheck() in server-side development', () => {
+    const headers = {
+        'user-agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15',
+        'sec-ch-ua-form-factors' : '"VR"'
+    };
+    const device = new UAParser(headers).getDevice();
+    it('Chain order: withFeatureCheck().withClientHints()', () => {  
+        const fc2ch = device.withFeatureCheck().withClientHints();
+        assert.strictEqual(fc2ch.type, "xr");
+    });
+    it('Chain order: withClientHints().withFeatureCheck()', () => {
+        const ch2fc = device.withClientHints().withFeatureCheck();
+        assert.strictEqual(ch2fc.type, "xr");
     });
 });

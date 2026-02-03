@@ -10,12 +10,52 @@
         }
     },
     {
+        "desc"    : "Asana",
+        "ua"      : "Asana/1.4.0 WebsiteMetadataRetriever",
+        "expect"  :
+        {
+            "name"    : "Asana",
+            "version" : "1.4.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Better Uptime Bot",
+        "ua"      : "Better Uptime Bot Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Better Uptime Bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "BingPreview",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
         "expect"  :
         {
             "name"    : "BingPreview",
             "version" : "1.0b",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Bit.ly",
+        "ua"      : "bitlybot/3.0 (+http://bit.ly/)",
+        "expect"  :
+        {
+            "name"    : "bitlybot",
+            "version" : "3.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Blueno",
+        "ua"      : "facebookexternalhit/1.1 (compatible; Blueno/1.0; +http://naver.me/scrap)",
+        "expect"  :
+        {
+            "name"    : "Blueno",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     },
@@ -30,12 +70,62 @@
         }
     },
     {
+        "desc"    : "BufferLinkPreviewBot",
+        "ua"      : "BufferLinkPreviewBot/1.0 (+https://scraper.buffer.com/about/bots/link-preview-bot)",
+        "expect"  :
+        {
+            "name"    : "BufferLinkPreviewBot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "ChatGPT-User",
         "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
         "expect"  :
         {
             "name"    : "ChatGPT-User",
             "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Chrome-Lighthouse",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse",
+        "expect"  :
+        {
+            "name"    : "Lighthouse",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Claude-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-User/1.0; +Claude-User@anthropic.com)",
+        "expect"  :
+        {
+            "name"    : "Claude-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Cohere-AI",
+        "ua"      : "Mozilla/5.0 (compatible; Cohere-AI/1.0; +https://cohere.com/)",
+        "expect"  :
+        {
+            "name"    : "Cohere-AI",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Discordbot",
+        "ua"      : "Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)",
+        "expect"  :
+        {
+            "name"    : "Discordbot",
+            "version" : "2.0",
             "type"    : "fetcher"
         }
     },
@@ -50,11 +140,41 @@
         }
     },
     {
+        "desc"    : "FlipboardProxy",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko/20100101 Firefox/49.0 (FlipboardProxy/1.2; +http://flipboard.com/browserproxy)",
+        "expect"  :
+        {
+            "name"    : "FlipboardProxy",
+            "version" : "1.2",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Gemini-Deep-Research",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Gemini-Deep-Research; +https://gemini.google/overview/deep-research/) Chrome/135.0.0.0 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Gemini-Deep-Research",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Google FeedFetcher",
         "ua"      : "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
         "expect"  :
         {
             "name"    : "FeedFetcher-Google",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Google Image Proxy",
+        "ua"      : "Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)",
+        "expect"  :
+        {
+            "name"    : "GoogleImageProxy",
             "version" : "undefined",
             "type"    : "fetcher"
         }
@@ -80,6 +200,16 @@
         }
     },
     {
+        "desc"    : "Google Page Renderer",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 Google-PageRenderer Google (+https://developers.google.com/+/web/snippet/) ",
+        "expect"  :
+        {
+            "name"    : "Google-PageRenderer",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Google Publisher Center",
         "ua"      : "GoogleProducer; (+https://developers.google.com/search/docs/crawling-indexing/google-producer)",
         "expect"  :
@@ -100,12 +230,102 @@
         }
     },
     {
+        "desc"    : "HubSpot Page Fetcher",
+        "ua"      : "HubSpot Page Fetcher/1.0 http://www.hubspot.com/ web-crawlers@hubspot.com",
+        "expect"  :
+        {
+            "name"    : "HubSpot Page Fetcher",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Iframely",
+        "ua"      : "Iframely/1.3.1 (+https://iframely.com/docs/about)",
+        "expect"  :
+        {
+            "name"    : "Iframely",
+            "version" : "1.3.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "kakaotalk-scrap",
+        "ua"      : "facebookexternalhit/1.1; kakaotalk-scrap/1.0; +https://devtalk.kakao.com/t/scrap/33984",
+        "expect"  :
+        {
+            "name"    : "kakaotalk-scrap",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "KeybaseBot",
+        "ua"      : "Mozilla/5.0 (compatible; KeybaseBot; +https://keybase.io)",
+        "expect"  :
+        {
+            "name"    : "KeybaseBot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Meta-ExternalFetcher",
         "ua"      : "meta-externalfetcher/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
         "expect"  :
         {
             "name"    : "meta-externalfetcher",
             "version" : "1.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "MicrosoftPreview",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MicrosoftPreview/2.0; +https://aka.ms/MicrosoftPreview) Chrome/W.X.Y.Z Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "MicrosoftPreview",
+            "version" : "2.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "MistralAI-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-User/1.0; +https://docs.mistral.ai/robots)",
+        "expect"  :
+        {
+            "name"    : "MistralAI-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "NovaAct",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Agent-NovaAct/0.9",
+        "expect"  :
+        {
+            "name"    : "NovaAct",
+            "version" : "0.9",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Perplexity-User",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)",
+        "expect"  :
+        {
+            "name"    : "Perplexity-User",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Pinterestbot",
+        "ua"      : "Mozilla/5.0 (compatible; Pinterestbot/1.0; +http://www.pinterest.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "Pinterestbot",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     },
@@ -130,6 +350,76 @@
         }
     },
     {
+        "desc"    : "Slack-ImgProxy",
+        "ua"      : "Slack-ImgProxy 0.19 (+https://api.slack.com/robots)",
+        "expect"  :
+        {
+            "name"    : "Slack-ImgProxy",
+            "version" : "0.19",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Slackbot",
+        "ua"      : "Slackbot 1.0 (+https://api.slack.com/robots)",
+        "expect"  :
+        {
+            "name"    : "Slackbot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Slackbot-LinkExpanding",
+        "ua"      : "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)",
+        "expect"  :
+        {
+            "name"    : "Slackbot-LinkExpanding",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Snap URL Preview",
+        "ua"      : "Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots  ",
+        "expect"  :
+        {
+            "name"    : "Snap URL Preview",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "SkypeUriPreview",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5 skype-url-preview@microsoft.com",
+        "expect"  :
+        {
+            "name"    : "SkypeUriPreview",
+            "version" : "0.5",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "TelegramBot",
+        "ua"      : "TelegramBot (like TwitterBot)",
+        "expect"  :
+        {
+            "name"    : "TelegramBot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Twitterbot",
+        "ua"      : "Twitterbot/1.0",
+        "expect"  :
+        {
+            "name"    : "Twitterbot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "UptimeRobot",
         "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
         "expect"  :
@@ -140,12 +430,162 @@
         }
     },
     {
+        "desc"    : "vercel-favicon-bot",
+        "ua"      : "vercel-favicon-bot",
+        "expect"  :
+        {
+            "name"    : "vercel-favicon-bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "vercel-screenshot-bot",
+        "ua"      : "vercel-screenshot-bot",
+        "expect"  :
+        {
+            "name"    : "vercel-screenshot-bot",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Vercelbot",
         "ua"      : "Vercelbot (+https://vercel.com)",
         "expect"  :
         {
             "name"    : "Vercelbot",
             "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "vercelflags",
+        "ua"      : "vercelflags",
+        "expect"  :
+        {
+            "name"    : "vercelflags",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "verceltracing",
+        "ua"      : "verceltracing",
+        "expect"  :
+        {
+            "name"    : "verceltracing",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "WhatsApp",
+        "ua"      : "WhatsApp/2.23.20.0",
+        "expect"  :
+        {
+            "name"    : "WhatsApp",
+            "version" : "2.23.20.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YaDirectFetcher",
+        "ua"      : "Mozilla/5.0 (compatible; YaDirectFetcher/1.0; Dyatel; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YaDirectFetcher",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexCalendar",
+        "ua"      : "Mozilla/5.0 (compatible; YandexCalendar/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexCalendar",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexDirect",
+        "ua"      : "Mozilla/5.0 (compatible; YandexDirect/3.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexDirect",
+            "version" : "3.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexDirectDyn",
+        "ua"      : "Mozilla/5.0 (compatible; YandexDirectDyn/1.0; +http://yandex.com/bots",
+        "expect"  :
+        {
+            "name"    : "YandexDirectDyn",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexForDomain",
+        "ua"      : "Mozilla/5.0 (compatible; YandexForDomain/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexForDomain",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexPagechecker",
+        "ua"      : "Mozilla/5.0 (compatible; YandexPagechecker/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexPagechecker",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexSearchShop",
+        "ua"      : "Mozilla/5.0 (compatible; YandexSearchShop/1.0; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexSearchShop",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexSitelinks",
+        "ua"      : "Mozilla/5.0 (compatible; YandexSitelinks; Dyatel; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexSitelinks",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "YandexUserproxy",
+        "ua"      : "Mozilla/5.0 (compatible; YandexUserproxy; robot; +http://yandex.com/bots)",
+        "expect"  :
+        {
+            "name"    : "YandexUserproxy",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Zoombot",
+        "ua"      : "Mozilla/5.0 (compatible; Zoombot/1.0; +https://zoom.us; crawler@domain.com)",
+        "expect"  :
+        {
+            "name"    : "Zoombot",
+            "version" : "1.0",
             "type"    : "fetcher"
         }
     }

@@ -23,8 +23,12 @@
 - **Support for Custom/Predefined Extensions:**
   - Pass custom regexes or predefined extensions as a list to `UAParser()`
 
-- **Support for CLI Parsing:**
-  - Parse a user-agent directly from the command line using `npx ua-parser-js "[User-Agent]"`
+- **Support for CLI Processing:**
+  - Directly parse user-agent strings from the command line:
+    `npx ua-parser-js "<User-Agent>"`
+  - Process batch data from files: 
+    `npx ua-parser-js --input-file=log.txt >> result.json` or
+    `npx ua-parser-js --input-file=log.txt --output-file=result.json`
 
 - **Enhanced Detection with Client Hints:**
   - `withClientHints()`: Improves detection accuracy by leveraging client hints
@@ -50,20 +54,148 @@
     - `browser.name`, `browser.type`, `cpu.architecture`, `device.type`, `device.vendor`, `engine.name`, `os.name`
 
   - **`'ua-parser-js/extensions'`**: Predefined extensions for various use cases:
-    - `Bots`, `Crawlers`, `CLIs`, `Emails`, `ExtraDevices`, `Fetchers`, `InApps`, `Libraries`, `Mediaplayers`
+    - `Bots`, `Crawlers`, `CLIs`, `Emails`, `ExtraDevices`, `Fetchers`, `InApps`, `Libraries`, `Mediaplayers`, `Vehicles`
 
   - **`'ua-parser-js/helpers'`**: Provides utility methods to extend detection functionality:
-    - `getDeviceVendor()`: Guesses the device vendor based on its model name
-    - `isAppleSilicon()`: Detects Apple Silicon device properties
-    - `isAIBot()`: Checks if the user-agent is an AI bot
+    - `isFrozenUA()`: Checks if the user-agent matches a frozen/reduced user-agent pattern
+
+  - **`'ua-parser-js/bot-detection'`**:
+    - `isAIAssistant()`: Checks if the user-agent is an AI assistant
+    - `isAICrawler()`: Checks if the user-agent is an AI crawler
     - `isBot()`: Checks if the user-agent is a bot
+
+  - **`'ua-parser-js/browser-detection'`**:
     - `isChromeFamily()`: Checks if the browser is Chrome-based (uses Blink engine) — e.g., New Opera, New Edge, Vivaldi, Brave, Arc, etc.
     - `isElectron()`: Detects if current window is running within Electron
     - `isFromEU()`: Detects if current browser's timezone is from an EU country
-    - `isFrozenUA()`: Checks if the user-agent matches a frozen/reduced user-agent pattern
     - `isStandalonePWA()`: Detects if current window is a standalone PWA
 
+  - **`'ua-parser-js/device-detection'`**:
+    - `getDeviceVendor()`: Guesses the device vendor based on its model name
+    - `isAppleSilicon()`: Detects Apple Silicon device properties
+
 --- 
+
+## Version 2.0.8
+
+- Resolve syntax error related to import renaming in ESM build
+- Add new browser: HiBrowser, Opera Neon
+- Add new engine: Dillo
+- Improve browser detection: Brave, TikTok
+- Improve device detection: OnePlus
+- Improve OS detection: Firefox OS
+- `extensions` submodule:
+    - Add new CLI: PowerShell
+    - Add new email: Alpine, Android, AquaMail, Balsa, Barca, Canary, Claws Mail, eM Client, Eudora, FairEmail, Geary, Gnus, Horde::IMP, Lotus-Notes, IncrediMail, K-9 Mail, Mailbird, MailMate, Mailspring, Mutt, Newton, Nine, NylasMail, Outlook-Express, Pegasus Mail, PocoMail, Postbox, ProtonMail Bridge, Quala, R2Mail2, Rainloop, Roundcube Webmail, SamsungEmail, Spicebird, SquirrelMail, Sylpheed, The Bat!, Trojita, Turnpike, tutanota-desktop, Wanderlust, Windows-Live-Mail
+    - Add new library: http.rb, Jetty, ocaml-cohttp
+- `helpers` submodule:
+    - Add new method: `getOutlookEdition()` to map Outlook versions to their marketing editions
+
+## Version 2.0.7
+
+- Add support for chaining `withClientHints()` & `withFeatureCheck()`
+- Add new browser: Atlas, Steam
+- Add new device vendor: Anbernic, Logitech, Valve
+- Improve device detection: Xiaomi
+- Improve OS detection: iOS
+- Split `helpers` submodule into several new submodules:
+    - `bot-detection`:
+        - `isAIAssistant()`
+        - `isAICrawler()`
+        - `isBot()`
+    - `browser-detection`
+        - `isChromeFamily()`
+        - `isElectron()`
+        - `isFromEU()`
+        - `isStandalonePWA()`
+    - `device-detection`
+        - `getDeviceVendor()`
+        - `isAppleSilicon()`
+- Update `extensions` submodule:
+    - Add new fetcher: Nova Act
+    - Add new library: Bun, Dart, Deno, hackney, Node.js, rest-client, undici
+
+## Version 2.0.6
+- Add new CLI feature: processing batch user-agent data from file and output as JSON
+- Fix `setUA()`: trim leading space from user-agent string input
+- Replace `undici` dependency with node's internal `Headers`
+- Add new browser: Bing, Qwant
+- Add new device vendor: Hisense, Wiko
+- Improve browser detection: Mozilla, Pale Moon
+- Improve CPU detection: 68k
+- Improve device detection: Apple, BlackBerry, Huawei, Nokia, Xiaomi
+- Improve OS detection: iOS 26
+- `extensions` submodule:
+    - Add new fetcher: Discordbot, KeybaseBot, Slackbot, Slackbot-LinkExpanding, Slack-ImgProxy, Twitterbot
+    - Add new crawler: Qwantbot-news, SurdotlyBot, SwiftBot
+
+## Version 2.0.5
+
+- Add new browser: Zalo
+- Add new CPU arch: alpha
+- Add new device vendor: Philips
+- Improve device detection: Pico
+- Fix parsing error on pages with modified Array prototypes
+- Improve type declarations:
+    - Replace `node-fetch` dependency with `undici`
+    - Replace hardcoded string values with enum from `enum` submodule
+- `enums` submodule:
+    - Add `Extension` enum for `extensions` submodule
+    - Type declaration file now automatically generated using build script
+    - Naming adjustments:
+        - `Browser` => `BrowserName`
+        - `CPU` => `CPUArch`
+        - `Device` => `DeviceType`
+        - `Vendor` => `DeviceVendor`
+        - `Engine` => `EngineName`
+        - `OS` => `OSName`
+- `extensions` submodule:
+    - Add new crawlers: 
+        APIs-Google, Algolia Crawler, Algolia Crawler Renderscript, Baidu-ADS, BLEXBot, botify, Bravebot, Claude-Web, cohere-training-data-crawler, contxbot, Cotoyogi, Coveobot, CriteoBot, DeepSeekBot, DuckDuckGo-Favicons-Bot, Elastic, FirecrawlAgent, Freespoke, Google-CloudVertexBot, HuggingFace-Bot, Kagibot, Kangaroo Bot, marginalia, msnbot, OnCrawl, Replicate-Bot, RunPod-Bot, SBIntuitionsBot, SeekportBot, Siteimprove, Sogou Pic Spider, TikTokSpider, TwinAgent, v0bot, webzio, Webzio-Extended, xAI-Bot, YandexAccessibilityBot, YandexAdditionalBot, YandexAdNet, YandexBot MirrorDetector, YandexBlogs, YandexComBot, YandexFavicons, YandexImageResizer, YandexImages, YandexMarket, YandexMetrika, YandexMedia, YandexMobileBot, YandexMobileScreenShotBot, YandexNews, YandexOntoDB, YandexOntoDBAPI, YandexPartner, YandexRCA, YandexRenderResourcesBot, YandexScreenshotBot, YandexSpravBot, YandexTracker, YandexVertis, YandexVerticals, YandexVideo, YandexVideoParser, YandexWebmaster, YepBot, ZumBot
+    - Add new fetchers: 
+        Asana, bitlybot, Blueno, BufferLinkPreviewBot, Chrome-Lighthouse, Gemini-Deep-Research, HubSpot Page Fetcher, kakaotalk-scrap, vercel-favicon-bot, vercel-screenshot-bot, vercelflags, verceltracing, YaDirectFetcher, YandexCalendar, YandexDirect, YandexDirectDyn, YandexForDomain, YandexPagechecker, YandexSearchShop, YandexSitelinks, YandexUserproxy
+- `helpers` submodule:
+    - Add some crawler to `isAIBot()`: 
+        Bravebot, cohere-training-data-crawler, FirecrawlAgent, HuggingFace-Bot, Kangaroo Bot, PanguBot, Replicate-Bot, RunPod-Bot, TikTokSpider, Together-Bot, v0bot, xAI-Bot
+
+## Version 2.0.4
+
+- Add new browser: Edge WebView, Edge WebView2
+- Add new device vendor: Lava, Retroid, Vizio
+- Add new OS: ArcaOS, Knoppix, Xubuntu, Windows CE, Windows RT
+- Improve device detection: Google Pixel & Pixelbook Series, HMD, Infinix, LG WebOS TV, Motorola, Nothing, OnePlus, Sony, Tecno
+- Improve OS detection: AIX, Arch, Fuchsia, Haiku, HarmonyOS, Mint, MorphOS, Solaris, Windows
+- Improve `withClientHints()` browser naming adjustments: `Microsoft Edge WebView2` => `Edge WebView2`
+- Identify device that uses Firefox Reality / Wolvic as `xr`
+- Identify device with large screen as `smarttv`
+- Identify Windows CE & Windows RT as distinct OS variants
+- `extensions` submodule:
+    - Remove lookbehind assertion to ensure regex compatibility
+    - Add new crawlers: ChatGLM, Daum, iAskBot, Onespot, Qwantbot, Startpage
+    - Add new emails: Apple's Mail, DaumMail, Polymail, ProtonMail, SparkDesktop, Zimbra, ZohoMail-Desktop
+    - Add new fetchers: Iframely, MistralAI-User, Perplexity-User
+    - Add new inApps: Discord, Evernote, Figma, Flipboard, Mattermost, Notion, Postman, Rambox, Rocket.Chat, Microsoft Teams, TikTok Lite, VS Code
+    - Add new libraries: AdobeAIR, aiohttp, nutch, httpx, urllib3
+- `enum` submodule:
+    - Fix mistakenly placed `BLU` categorized as browser name instead of device vendor
+
+## Version 2.0.3
+
+- Add new browser: Dooble, Ecosia, LG Browser, Otter, qutebrowser, Surf
+- Add new device: BLU, Facebook Portal TV
+- Improve device detection: Archos, LG, Meta Quest
+- Remove jazzer.js fuzz test
+- Improve `withClientHints()`:
+    - Browser naming adjustments:
+        - `HuaweiBrowser` => `Huawei Browser`
+        - `Miui Browser` => `MIUI Browser`
+        - `OperaMobile` => `Opera Mobi`
+        - `YaBrowser` => `Yandex`
+- `extensions` submodule:
+    - Add new Crawler: AdIdxBot, Linespider, LinkedInBot, OpenAI Image Downloader, SemrushBot, Yahoo! Slurp
+    - Add new Fetcher: Better Uptime Bot, Google-PageRenderer, GoogleImageProxy, MicrosoftPreview, Snap URL Preview, SkypeUriPreview, TelegramBot
+    - Add new Vehicles: BMW, Jeep
+    - Add OS detection of WhatsApp user-agent
 
 ## Version 2.0.2
 
@@ -200,6 +332,16 @@
 - Initial work on new major version
 
 ---
+
+## Version 0.7.41 / 1.0.41
+- Add new browser: Daum, Ladybird
+- Add new device vendor: HMD
+- Add new engine: LibWeb
+- Add new os: Windows IoT, Ubuntu Touch
+- Improve cpu detection: ARM, x86
+- Improve device vendor detection: Apple, Archos, Generic, Google, Honor, Huawei, Infinix, Nvidia, Lenovo, Nokia, OnePlus, Xiaomi
+- Improve device type detection: smarttv, wearables
+- Improve os detection: Linux, Symbian
 
 ## Version 0.7.40 / 1.0.40
 - Add new browser: 115, LibreWolf, Slimboat, Slimjet

@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.2
+/*  Enums for UAParser.js v2.0.8
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -11,7 +11,7 @@
 
 /*jshint esversion: 6 */ 
 
-const Browser = Object.freeze({
+const BrowserName = Object.freeze({
     '115': '115',
     '2345': '2345',
     '360': '360',
@@ -19,11 +19,13 @@ const Browser = Object.freeze({
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
     ARORA: 'Arora',
+    ATLAS: 'Atlas',
     AVANT: 'Avant',
     AVAST: 'Avast Secure Browser',
     AVG: 'AVG Secure Browser',
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
+    BING: 'Bing',
     BLAZER: 'Blazer',
     BOLT: 'Bolt',
     BOWSER: 'Bowser',
@@ -41,10 +43,14 @@ const Browser = Object.freeze({
     DAUM: 'Daum',
     DILLO: 'Dillo',
     DOLPHIN: 'Dolphin',
+    DOOBLE: 'Dooble',
     DORIS: 'Doris',
     DRAGON: 'Dragon',
     DUCKDUCKGO: 'DuckDuckGo',
+    ECOSIA: 'Ecosia',
     EDGE: 'Edge',
+    EDGE_WEBVIEW: 'Edge WebView',
+    EDGE_WEBVIEW2: 'Edge WebView2',
     EPIPHANY: 'Epiphany',
     FACEBOOK: 'Facebook',
     FALKON: 'Falkon',
@@ -60,6 +66,7 @@ const Browser = Object.freeze({
     GOOGLE_SEARCH: 'GSA',
     HELIO: 'Helio',
     HEYTAP: 'HeyTap',
+    HIBROWSER: 'HiBrowser',
     HONOR: 'Honor',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
@@ -82,6 +89,7 @@ const Browser = Object.freeze({
     KINDLE: 'Kindle',
     LENOVO: 'Smart Lenovo Browser',
     LADYBIRD: 'Ladybird',
+    LG: 'LG Browser',
     LIBREWOLF: 'LibreWolf',
     LIEBAO: 'LBBROWSER',
     LINE: 'Line',
@@ -106,10 +114,13 @@ const Browser = Object.freeze({
     OMNIWEB: 'OmniWeb',
     OPERA: 'Opera',
     OPERA_COAST: 'Opera Coast',
+    OPERA_GX: 'Opera GX',
     OPERA_MINI: 'Opera Mini',
     OPERA_MOBI: 'Opera Mobi',
+    OPERA_NEON: 'Opera Neon',
     OPERA_TABLET: 'Opera Tablet',
     OPERA_TOUCH: 'Opera Touch',
+    OTTER: 'Otter',
     OVI: 'OviBrowser',
     PALEMOON: 'PaleMoon',
     PHANTOMJS: 'PhantomJS',
@@ -121,6 +132,8 @@ const Browser = Object.freeze({
     QQ_LITE: 'QQBrowserLite',
     QUARK: 'Quark',
     QUPZILLA: 'QupZilla',
+    QUTEBROWSER: 'qutebrowser',
+    QWANT: 'Qwant',
     REKONQ: 'rekonq',
     ROCKMELT: 'Rockmelt',
     SAFARI: 'Safari',
@@ -137,6 +150,8 @@ const Browser = Object.freeze({
     SNAPCHAT: 'Snapchat',
     SOGOU_EXPLORER: 'Sogou Explorer',
     SOGOU_MOBILE: 'Sogou Mobile',
+    STEAM: 'Steam',
+    SURF: 'Surf',
     SWIFTFOX: 'Swiftfox',
     TESLA: 'Tesla',
     TIKTOK: 'TikTok',
@@ -153,10 +168,15 @@ const Browser = Object.freeze({
     WEIBO: 'Weibo',
     WHALE: 'Whale',
     WOLVIC: 'Wolvic',
-    YANDEX: 'Yandex'
+    YANDEX: 'Yandex',
+    ZALO: 'Zalo'
 
     // TODO : test!
 });
+/**
+ * @deprecated Use `BrowserName` instead
+ */
+const Browser = BrowserName;
 
 const BrowserType = Object.freeze({
     CRAWLER: 'crawler',
@@ -168,8 +188,9 @@ const BrowserType = Object.freeze({
     LIBRARY: 'library'
 });
 
-const CPU = Object.freeze({
+const CPUArch = Object.freeze({
     '68K': '68k',
+    ALPHA: 'alpha',
     ARM : 'arm',
     ARM_64: 'arm64',
     ARM_HF: 'armhf',
@@ -187,8 +208,12 @@ const CPU = Object.freeze({
     X86: 'ia32',
     X86_64: 'amd64'
 });
+/**
+ * @deprecated Use `CPUArch` instead
+ */
+const CPU = CPUArch;
 
-const Device = Object.freeze({
+const DeviceType = Object.freeze({
     CONSOLE: 'console',
     DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
@@ -198,18 +223,24 @@ const Device = Object.freeze({
     WEARABLE: 'wearable',
     XR: 'xr'
 });
+/**
+ * @deprecated Use `DeviceType` instead
+ */
+const Device = DeviceType;
 
-const Vendor = Object.freeze({
+const DeviceVendor = Object.freeze({
     ACER: 'Acer',
     ADVAN: 'Advan',
     ALCATEL: 'Alcatel',
-    APPLE: 'Apple',
     AMAZON: 'Amazon',
+    ANBERNIC: 'Anbernic',
+    APPLE: 'Apple',
     ARCHOS: 'Archos',
     ASUS: 'ASUS',
     ATT: 'AT&T',
     BENQ: 'BenQ',
     BLACKBERRY: 'BlackBerry',
+    BLU: 'BLU',
     CAT: 'Cat',
     DELL: 'Dell',
     ENERGIZER: 'Energizer',
@@ -219,6 +250,7 @@ const Vendor = Object.freeze({
     GEEKSPHONE: 'GeeksPhone',
     GENERIC: 'Generic',
     GOOGLE: 'Google',
+    HISENSE: 'Hisense',
     HMD: 'HMD',
     HP: 'HP',
     HTC: 'HTC',
@@ -228,8 +260,10 @@ const Vendor = Object.freeze({
     ITEL: 'itel',
     JOLLA: 'Jolla',
     KOBO: 'Kobo',
+    LAVA: 'Lava',
     LENOVO: 'Lenovo',
     LG: 'LG',
+    LOGITECH: 'Logitech',
     MEIZU: 'Meizu',
     MICROMAX: 'Micromax',
     MICROSOFT: 'Microsoft',
@@ -245,9 +279,11 @@ const Vendor = Object.freeze({
     PALM: 'Palm',
     PANASONIC: 'Panasonic',
     PEBBLE: 'Pebble',
+    PHILIPS: 'Philips',
     PICO: 'Pico',
     POLYTRON: 'Polytron',
     REALME: 'Realme',
+    RETROID: 'Retroid',
     RIM: 'RIM',
     ROKU: 'Roku',
     SAMSUNG: 'Samsung',
@@ -258,11 +294,14 @@ const Vendor = Object.freeze({
     SPRINT: 'Sprint',
     TCL: 'TCL',
     TECHNISAT: 'TechniSAT',
-    TECNO: 'Tecno',
+    TECNO: 'TECNO',
     TESLA: 'Tesla',
     ULEFONE: 'Ulefone',
+    VALVE: 'Valve',
     VIVO: 'Vivo',
+    VIZIO: 'Vizio',
     VODAFONE: 'Vodafone',
+    WIKO: 'Wiko',
     XBOX: 'Xbox',
     XIAOMI: 'Xiaomi',
     ZEBRA: 'Zebra',
@@ -270,11 +309,16 @@ const Vendor = Object.freeze({
 
     // TODO : test!
 });
+/**
+ * @deprecated Use `DeviceVendor` instead
+ */
+const Vendor = DeviceVendor;
 
-const Engine = Object.freeze({
+const EngineName = Object.freeze({
     AMAYA: 'Amaya',
     ARKWEB: 'ArkWeb',
     BLINK: 'Blink',
+    DILLO: 'Dillo',
     EDGEHTML: 'EdgeHTML',
     FLOW: 'Flow',
     GECKO: 'Gecko',
@@ -293,12 +337,17 @@ const Engine = Object.freeze({
     W3M: 'w3m',
     WEBKIT: 'WebKit'
 });
+/**
+ * @deprecated Use `EngineName` instead
+ */
+const Engine = EngineName;
 
-const OS = Object.freeze({
+const OSName = Object.freeze({
     AIX: 'AIX',
     AMIGA_OS: 'Amiga OS',
     ANDROID: 'Android',
     ANDROID_X86: 'Android-x86',
+    ARCAOS: 'ArcaOS',
     ARCH: 'Arch',
     BADA: 'Bada',
     BEOS: 'BeOS',
@@ -329,6 +378,7 @@ const OS = Object.freeze({
     IOS: 'iOS',
     JOLI: 'Joli',
     KAIOS: 'KaiOS',
+    KNOPPIX: 'Knoppix',
     KUBUNTU: 'Kubuntu',
     LINPUS: 'Linpus',
     LINSPIRE: 'Linspire',
@@ -377,21 +427,396 @@ const OS = Object.freeze({
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',
+    WINDOWS_CE: 'Windows CE',
     WINDOWS_IOT: 'Windows IoT',
     WINDOWS_MOBILE: 'Windows Mobile',
     WINDOWS_PHONE: 'Windows Phone',
+    WINDOWS_RT: 'Windows RT',
     XBOX: 'Xbox',
+    XUBUNTU: 'Xubuntu',
     ZENWALK: 'Zenwalk'
 
     // TODO : test!
 });
+/**
+ * @deprecated Use `OSName` instead
+ */
+const OS = OSName;
+
+/*////////////////////////////////
+ * Enums for Extensions submodule
+ *///////////////////////////////
+
+const Extension = Object.freeze({
+    BrowserName: {
+        CLI: {
+            CURL: 'curl',
+            ELINKS: 'ELinks',
+            HTTPIE: 'HTTPie',
+            LYNX: 'Lynx',
+            POWERSHELL: 'PowerShell',
+            WGET: 'Wget'
+        },
+        Crawler: {
+            AHREFS_BOT: 'AhrefsBot',
+            AI2_BOT: 'AI2Bot',
+            AIHIT_BOT: 'aiHitBot',
+            ALGOLIA_CRAWLER: 'Algolia Crawler',
+            APPLE_BOT: 'Applebot',
+            APPLE_BOT_EXTENDED: 'Applebot-Extended',
+            ASK_TEOMA: 'Teoma',
+            AMAZON_BOT: 'Amazonbot',
+            AMAZON_CONTXBOT: 'contxbot',
+            ANTHROPIC_AI: 'anthropic-ai',
+            ANTHROPIC_CLAUDE_BOT: 'ClaudeBot',
+            ANTHROPIC_CLAUDE_SEARCHBOT: 'Claude-SearchBot',
+            ANTHROPIC_CLAUDE_WEB: 'Claude-Web',
+            ARCHIVEORG_BOT: 'archive.org_bot',
+            BAIDU_ADS: 'Baidu-ADS',
+            BAIDU_SPIDER: 'Baiduspider',
+            BAIDU_SPIDER_ADS: 'Baiduspider-ads',
+            BAIDU_SPIDER_CPRO: 'Baiduspider-cpro',
+            BAIDU_SPIDER_FAVO: 'Baiduspider-favo',
+            BAIDU_SPIDER_IMAGE: 'Baiduspider-image',
+            BAIDU_SPIDER_NEWS: 'Baiduspider-news',
+            BAIDU_SPIDER_RENDER: 'Baiduspider-render',
+            BAIDU_SPIDER_VIDEO: 'Baiduspider-video',
+            BLEX_BOT: 'BLEXBot',
+            BOTIFY: 'botify',
+            BRAVE_BOT: 'Bravebot',
+            BYTEDANCE_BYTESPIDER: 'Bytespider',
+            BYTEDANCE_TIKTOKSPIDER: 'TikTokSpider',
+            COMMON_CRAWL_CCBOT: 'CCBot',
+            COCCOC_BOT_WEB: 'coccocbot-web',
+            COCCOC_BOT_IMAGE: 'coccocbot-image',
+            COHERE_TRAINING_DATA_CRAWLER: 'cohere-training-data-crawler',
+            COTOYOGI: 'Cotoyogi',
+            COVEO_BOT: 'Coveobot',
+            CRITEO_BOT: 'CriteoBot',
+            DATAFORSEO_BOT: 'DataForSeoBot',
+            DAUM: 'Daum',
+            DAUM_DAUMOA: 'Daumoa',
+            DAUM_DAUMOA_IMAGE: 'Daumoa-image',
+            DEEPSEEK_BOT: 'DeepSeekBot',
+            DIFFBOT: 'Diffbot',
+            DUCKDUCKGO_BOT: 'DuckDuckBot',
+            DUCKDUCKGO_FAVICONS_BOT: 'DuckDuckGo-Favicons-Bot',
+            ELASTIC: 'Elastic',
+            ELASTIC_SWIFTYPE_BOT: 'Swiftbot',
+            EXALEAD_EXABOT: 'Exabot',
+            FIRECRAWL_AGENT: 'FirecrawlAgent',
+            FREESPOKE: 'Freespoke',
+            GOOGLE_ADSBOT: 'AdsBot-Google',
+            GOOGLE_ADSBOT_MOBILE: 'Adsbot-Google-Mobile',
+            GOOGLE_ADSENSE: 'AdSense',
+            GOOGLE_APIS: 'APIs-Google',
+            GOOGLE_BOT: 'Googlebot',
+            GOOGLE_BOT_IMAGE: 'Googlebot-Image',
+            GOOGLE_BOT_NEWS: 'Googlebot-News',
+            GOOGLE_BOT_VIDEO: 'Googlebot-Video',
+            GOOGLE_CLOUDVERTEXBOT: 'Google-CloudVertexBot',
+            GOOGLE_EXTENDED: 'Google-Extended',
+            GOOGLE_INSPECTIONTOOL: 'Google-InspectionTool',
+            GOOGLE_OTHER: 'GoogleOther',
+            GOOGLE_OTHER_IMAGE: 'GoogleOther-Image',
+            GOOGLE_OTHER_VIDEO: 'GoogleOther-Video',
+            GOOGLE_SAFETY: 'Google-Safety',
+            GOOGLE_STOREBOT: 'Storebot-Google',
+            HIVE_IMAGESIFTBOT: 'ImagesiftBot',
+            HUAWEI_PANGUBOT: 'PanguBot',
+            HUAWEI_PETALBOT: 'PetalBot',
+            HUGGINGFACE_BOT: 'HuggingFace-Bot',
+            HUNTER_VELENPUBLICWEBCRAWLER: 'VelenPublicWebCrawler',
+            IA_ARCHIVER: 'ia_archiver',
+            IASK_BOT: 'iAskBot',
+            KAGI_BOT: 'Kagibot',
+            KANGAROO_BOT: 'Kangaroo Bot',
+            LINE_SPIDER: 'Linespider',
+            LINKEDIN_BOT: 'LinkedInBot',
+            MAGPIE_CRAWLER: 'magpie-crawler',
+            MARGINALIA: 'marginalia',
+            META_EXTERNALAGENT: 'meta-externalagent',
+            META_FACEBOOKBOT: 'FacebookBot',
+            META_FACEBOOKCATALOG: 'facebookcatalog',
+            META_FACEBOOKEXTERNALHIT: 'facebookexternalhit',
+            MAJESTIC_MJ12BOT: 'MJ12bot',
+            MICROSOFT_BINGBOT: 'Bingbot',
+            MICROSOFT_MSNBOT: 'msnbot',
+            MICROSOFT_ADIDXBOT: 'adidxbot',
+            MOJEEK_BOT: 'MojeekBot',
+            MOZ_DOTBOT: 'DotBot',
+            ONCRAWL: 'OnCrawl',
+            ONESPOT_SCRAPERBOT: 'Onespot-ScraperBot',
+            OPENAI_GPTBOT: 'GPTBot',
+            OPENAI_SEARCH_BOT: 'OAI-SearchBot',
+            PERPLEXITY_BOT: 'PerplexityBot',
+            QIHOO_360_SPIDER: '360Spider',
+            QWANT_BOT: 'Qwantbot',
+            QWANT_BOT_NEWS: 'Qwantbot-news',
+            REPLICATE_BOT: 'Replicate-Bot',
+            RUNPOD_BOT: 'RunPod-Bot',
+            SB_INTUITIONS_BOT: 'SBIntuitionsBot',
+            SEEKPORT_BOT: 'SeekportBot',
+            SEMRUSH_BOT: 'SemrushBot',
+            SEMRUSH_BOT_BACKLINK: 'SemrushBot-BA',
+            SEMRUSH_BOT_CONTENTSHAKE: 'SemrushBot-OCOB',
+            SEMRUSH_BOT_SEO_CHECKER: 'SemrushBot-SI',
+            SEZNAM_BOT: 'SeznamBot',
+            SITEIMPROVE: 'Siteimprove',
+            SOGOU_PIC_SPIDER: 'Sogou Pic Spider',
+            SOGOU_WEB_SPIDER: 'Sogou web spider',
+            STARTPAGE: 'Startpage',
+            SURLY_BOT: 'SurdotlyBot',
+            TIMPI_BOT: 'Timpibot',
+            TOGETHER_BOT: 'Together-Bot',
+            TURNITIN_BOT: 'TurnitinBot',
+            TWIN_AGENT: 'TwinAgent',
+            VERCEL_V0BOT: 'v0bot',
+            WEBZIO: 'webzio',
+            WEBZIO_EXTENDED: 'Webzio-Extended',
+            WEBZIO_OMGILI: 'omgili',
+            WEBZIO_OMGILI_BOT: 'omgilibot',
+            XAI_BOT: 'xAI-Bot',
+            YAHOO_JAPAN: 'Y!J-BRW',
+            YAHOO_SLURP: 'Yahoo! Slurp',
+            YANDEX_ACCESSIBILITY_BOT: 'YandexAccessibilityBot',
+            YANDEX_ADDITIONAL_BOT: 'YandexAdditionalBot',
+            YANDEX_ADNET: 'YandexAdNet',
+            YANDEX_BLOGS: 'YandexBlogs',
+            YANDEX_BOT: 'YandexBot',
+            YANDEX_BOT_MIRRORDETECTOR: 'YandexBot MirrorDetector',
+            YANDEX_COMBOT: 'YandexComBot',
+            YANDEX_FAVICONS: 'YandexFavicons',
+            YANDEX_IMAGE_RESIZER: 'YandexImageResizer',
+            YANDEX_IMAGES: 'YandexImages',
+            YANDEX_MARKET: 'YandexMarket',
+            YANDEX_MEDIA: 'YandexMedia',
+            YANDEX_METRIKA: 'YandexMetrika',
+            YANDEX_MOBILE_BOT: 'YandexMobileBot',
+            YANDEX_MOBILE_SCREENSHOT_BOT: 'YandexMobileScreenShotBot',
+            YANDEX_NEWS: 'YandexNews',
+            YANDEX_ONTODB: 'YandexOntoDB',
+            YANDEX_ONTODB_API: 'YandexOntoDBAPI',
+            YANDEX_PARTNER: 'YandexPartner',
+            YANDEX_RCA: 'YandexRCA',
+            YANDEX_RENDERRESOURCES_BOT: 'YandexRenderResourcesBot',
+            YANDEX_SCREENSHOT_BOT: 'YandexScreenshotBot',
+            YANDEX_SPRAV_BOT: 'YandexSpravBot',
+            YANDEX_TRACKER: 'YandexTracker',
+            YANDEX_VERTICALS: 'YandexVerticals',
+            YANDEX_VERTIS: 'YandexVertis',
+            YANDEX_VIDEO: 'YandexVideo',
+            YANDEX_VIDEO_PARSER: 'YandexVideoParser',
+            YANDEX_WEBMASTER: 'YandexWebmaster',
+            YEP_BOT: 'YepBot',
+            YETI: 'Yeti',
+            YISOU_SPIDER: 'YisouSpider',
+            YOU_BOT: 'YouBot',
+            ZHIPU_CHATGLM_SPIDER: 'ChatGLM-Spider',
+            ZUM_BOT: 'ZumBot'
+        },
+        Email: {
+            AIRMAIL: 'Airmail',
+            ALPINE: 'Alpine',
+            ANDROID_MAIL: 'Android',
+            APPLE_MAIL: 'Mail',
+            AQUA_MAIL: 'AquaMail',
+            BALSA: 'Balsa',
+            BARCA: 'Barca',
+            BLUEMAIL: 'BlueMail',
+            CANARY: 'Canary',
+            CLAWS_MAIL: 'Claws Mail',
+            DAUM_MAIL: 'DaumMail',
+            EM_CLIENT: 'eM Client',
+            EUDORA: 'Eudora',
+            EVOLUTION: 'Evolution',
+            FAIR_EMAIL: 'FairEmail',
+            FOXMAIL: 'Foxmail',
+            GEARY: 'Geary',
+            GNUS: 'Gnus',
+            HORDE_IMP: 'Horde::IMP',
+            IBM_NOTES: 'Lotus-Notes',
+            INCREDIMAIL: 'IncrediMail',
+            K9_MAIL: 'K-9 Mail',
+            KMAIL: 'KMail',
+            KMAIL2: 'kmail2',
+            KONTACT: 'Kontact',
+            MAILBIRD: 'Mailbird',
+            MAILMATE: 'MailMate',
+            MAILSPRING: 'Mailspring',
+            MICROSOFT_OUTLOOK: 'Microsoft Outlook',
+            MICROSOFT_OUTLOOK_MAC: 'MacOutlook',
+            MUTT: 'Mutt',
+            NAVER_MAILAPP: 'NaverMailApp',
+            NEWTON: 'Newton',
+            NINE: 'Nine',
+            NYLAS_MAIL: 'NylasMail',
+            OUTLOOK_EXPRESS: 'Outlook-Express',
+            PEGASUS_MAIL: 'Pegasus Mail',
+            POCOMAIL: 'PocoMail',
+            POLYMAIL: 'Polymail',
+            POSTBOX: 'Postbox',
+            PROTON_MAIL: 'ProtonMail',
+            PROTON_MAIL_BRIDGE: 'ProtonMail Bridge',
+            QUALA_MAIL: 'Quala',
+            R2MAIL2: 'R2Mail2',
+            RAINLOOP: 'RainLoop',
+            ROUNDCUBE: 'Roundcube Webmail',
+            SAMSUNG_EMAIL: 'SamsungEmail',
+            SPARK_MAIL: 'SparkDesktop',
+            SPARROW: 'Sparrow',
+            SPICEBIRD: 'Spicebird',
+            SQUIRRELMAIL: 'SquirrelMail',
+            SYLPHEED: 'Sylpheed',
+            THE_BAT: 'The Bat!',
+            THUNDERBIRD: 'Thunderbird',
+            TROJITA: 'Trojita',
+            TURNPIKE: 'Turnpike',
+            TUTANOTA: 'tutanota-desktop',
+            WANDERLUST: 'Wanderlust',
+            WINDOWS_LIVE_MAIL: 'Windows-Live-Mail',
+            YAHOO_MAIL: 'Yahoo Mail',
+            YAHOO_MAIL_IOS: 'Yahoo Mail',
+            ZIMBRA: 'Zimbra',
+            ZOHO_MAIL: 'ZohoMail-Desktop'
+        },
+        Fetcher: {
+            AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
+            AMAZON_NOVA_ACT: 'NovaAct',
+            ANTHROPIC_CLAUDE_USER: 'Claude-User',
+            ASANA: 'Asana',
+            BETTER_UPTIME_BOT: 'Better Uptime Bot',
+            BITLY_BOT: 'bitlybot',
+            BLUESKY: 'Bluesky',
+            BUFFER_LINKPREVIEWBOT: 'BufferLinkPreviewBot',
+            COHERE_AI: 'Cohere-AI',
+            DISCORD_BOT: 'Discordbot',
+            DUCKDUCKGO_ASSISTBOT: 'DuckAssistBot',
+            GOOGLE_CHROME_LIGHTHOUSE: 'Chrome-Lighthouse',
+            GOOGLE_FEEDFETCHER: 'FeedFetcher-Google',
+            GOOGLE_GEMINI_DEEP_RESEARCH: 'Gemini-Deep-Research',
+            GOOGLE_IMAGEPROXY: 'GoogleImageProxy',
+            GOOGLE_PAGERENDERER: 'Google-PageRenderer',
+            GOOGLE_READ_ALOUD: 'Google-Read-Aloud',
+            GOOGLE_PRODUCER: 'GoogleProducer',
+            GOOGLE_SITE_VERIFICATION: 'Google-Site-Verification',
+            HUBSPOT_PAGE_FETCHER: 'HubSpot Page Fetcher',
+            IFRAMELY: 'Iframely',
+            KAKAOTALK_SCRAP: 'kakaotalk-scrap',
+            KEYBASE_BOT: 'KeybaseBot',
+            META_EXTERNALFETCHER: 'meta-externalfetcher',
+            META_WHATSAPP: 'WhatsApp',
+            MICROSOFT_BINGPREVIEW: 'BingPreview',
+            MICROSOFT_PREVIEW: 'MicrosoftPreview',
+            MISTRALAI_USER: 'MistralAI-User',
+            NAVER_BLUENO: 'Blueno',
+            ONCRAWL_ROGERBOT: 'rogerbot',
+            OPENAI_CHATGPT_USER: 'ChatGPT-User',
+            PERPLEXITY_USER: 'Perplexity-User',
+            PINTEREST_BOT: 'Pinterestbot',
+            SEMRUSH_SITEAUDITBOT: 'SiteAuditBot',
+            SLACK_BOT: 'Slackbot',
+            SLACK_BOT_LINKEXPANDING: 'Slackbot-LinkExpanding',
+            SLACK_IMGPROXY: 'Slack-ImgProxy',
+            SNAP_URL_PREVIEW: 'Snap URL Preview',
+            SKYPE_URIPREVIEW: 'SkypeUriPreview',
+            TELEGRAM_BOT: 'TelegramBot',
+            UPTIMEROBOT: 'UptimeRobot',
+            VERCEL_FAVICON_BOT: 'vercel-favicon-bot',
+            VERCEL_SCREENSHOT_BOT: 'vercel-screenshot-bot',
+            VERCEL_BOT: 'Vercelbot',
+            VERCEL_FLAGS: 'vercelflags',
+            VERCEL_TRACING: 'verceltracing',
+            X_TWITTERBOT: 'Twitterbot',
+            YANDEX_CALENDAR: 'YandexCalendar',
+            YANDEX_DIRECT: 'YandexDirect',
+            YANDEX_DIRECTDYN: 'YandexDirectDyn',
+            YANDEX_DIRECTFETCHER: 'YaDirectFetcher',
+            YANDEX_FORDOMAIN: 'YandexForDomain',
+            YANDEX_PAGECHECKER: 'YandexPagechecker',
+            YANDEX_SEARCHSHOP: 'YandexSearchShop',
+            YANDEX_SITELINKS: 'YandexSitelinks',
+            YANDEX_USERPROXY: 'YandexUserproxy',
+            ZOOMINFO_BOT: 'Zoombot'
+        },
+        InApp: {
+            DISCORD: 'Discord',
+            EVERNOTE: 'Evernote',
+            FIGMA: 'Figma',
+            FLIPBOARD: 'Flipboard',
+            MATTERMOST: 'Mattermost',
+            TEAMS: 'Teams',
+            NOTION: 'Notion',
+            POSTMAN: 'Postman',
+            RAMBOX: 'Rambox',
+            ROCKETCHAT: 'Rocket.Chat',
+            SLACK: 'Slack',
+            TIKTOK_LITE: 'TikTok Lite',
+            VSCODE: 'VS Code',
+            YAHOO_JAPAN: 'Yahoo! Japan'
+        },
+        Library: {
+            ADOBE_AIR: 'AdobeAIR',
+            AIOHTTP: 'aiohttp',
+            APACHE_HTTPCLIENT: 'Apache-HttpClient',
+            AXIOS: 'axios',
+            BUN: 'Bun',
+            DART: 'Dart',
+            DENO: 'Deno',
+            GO_HTTP_CLIENT: 'go-http-client',
+            GOT: 'got',
+            GUZZLEHTTP: 'GuzzleHttp',
+            HACKNEY: 'hackney',
+            HTTP_RB: 'http.rb',
+            JAVA: 'Java',
+            JAVA_HTTPCLIENT: 'Java-http-client',
+            JETTY: 'Jetty',
+            JSDOM: 'jsdom',
+            LIBWWW_PERL: 'libwww-perl',
+            LUA_RESTY_HTTP: 'lua-resty-http',
+            NEEDLE: 'Needle',
+            NUTCH: 'Nutch',
+            NODE_FETCH: 'node-fetch',
+            NODE_JS: 'Node.js',
+            NODE_SUPERAGENT: 'node-superagent',
+            OKHTTP: 'OkHttp',
+            OCAML_COHTTP: 'ocaml-cohttp',
+            PHP_SOAP: 'PHP-SOAP',
+            POSTMAN_RUNTIME: 'PostmanRuntime',
+            PYTHON_HTTPX: 'python-httpx',
+            PYTHON_URLLIB: 'python-urllib',
+            PYTHON_URLLIB3: 'python-urllib3',
+            PYTHON_REQUESTS: 'python-requests',
+            REST_CLIENT: 'rest-client',
+            SCRAPY: 'Scrapy',
+            UNDICI: 'undici'
+        }
+    },
+    DeviceVendor: {
+        Vehicle: {
+            BMW: 'BMW',
+            BYD: 'BYD',
+            JEEP: 'Jeep',
+            RIVIAN: 'Rivian',
+            TESLA: 'Tesla',
+            VOLVO: 'Volvo'
+        }
+    }
+});
 
 export { 
-    Browser,
+    Browser,// deprecated
+    CPU,    // deprecated
+    Device, // deprecated
+    Vendor, // deprecated
+    Engine, // deprecated
+    OS,     // deprecated
+    BrowserName,
     BrowserType, 
-    CPU, 
-    Device, 
-    Vendor,
-    Engine,
-    OS
+    CPUArch,
+    DeviceType, 
+    DeviceVendor,
+    EngineName,
+    OSName,
+    Extension
 };

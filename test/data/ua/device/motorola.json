@@ -1,28 +1,10 @@
 [
     {
-        "desc": "Motorola Moto X",
-        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; XT1097 Build/KXE21.187-38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.109 Mobile Safari/537.36",
+        "desc": "Motorola Defy XT",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; XT555C Build/V1.67D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
         "expect": {
             "vendor": "Motorola",
-            "model": "XT1097",
-            "type": "mobile"
-        }
-    },
-    {
-        "desc": "Motorola Moto Z3 Play",
-        "ua": "Mozilla/5.0 (Linux; Android 9; Moto Z3 Play) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
-        "expect": {
-            "vendor": "Motorola",
-            "model": "Moto Z3 Play",
-            "type": "mobile"
-        }
-    },
-    {
-        "desc": "Motorola Nexus 6",
-        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.20 Mobile Safari/537.36",
-        "expect": {
-            "vendor": "Motorola",
-            "model": "Nexus 6",
+            "model": "XT555C",
             "type": "mobile"
         }
     },
@@ -36,6 +18,42 @@
         }
     },
     {
+        "desc": "Motorola Edge 30 Pro",
+        "ua": "Mozilla/5.0 (Linux; Android 13; XT2201-1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2201-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Edge 30 Ultra",
+        "ua": "Mozilla/5.0 (Linux; Android 14; motorola edge 30 ultra Build/U1SQS34.52-21-1-13; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 M",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "edge 30 ultra",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Edge 40",
+        "ua": "Mozilla/5.0 (Linux; Android 14; motorola edge 40 Build/U1TL34.115-16-1-7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.104 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "edge 40",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Edge X30",
+        "ua": "Mozilla/5.0 (Linux; Android 14; XT2201-2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.6668.59 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2201-2",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Motorola RAZR 2019",
         "ua": "Mozilla/5.0 (Linux; Android 9; motorola razr) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
@@ -45,11 +63,65 @@
         }
     },
     {
-        "desc": "Moto X",
-        "ua": "Mozilla/5.0 (Linux; U; Android 4.2; xx-xx; XT1058 Build/13.9.0Q2.X-70-GHOST-ATT_LE-2) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "desc": "Motorola Moto 360",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4; Moto 360 Build/KNX01S) AppleWebKit/537.36 (KHTML, like Gecko) WIB/0.9.8 Mobile Safari/537.36",
         "expect": {
             "vendor": "Motorola",
-            "model": "XT1058",
+            "model": "Moto 360",
+            "type": "wearable"
+        }
+    },
+    {
+        "desc": "Motorola Moto E",
+        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Moto E (4) Build/NDQS26.69-64-11-7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "Moto E (4)",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto E6s",
+        "ua": "Mozilla/5.0 (Linux; Android 9; MOTOROLA E6S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "E6S",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto E7 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 10; moto e(7) plus Build/QPZS30.30-Q3-38-69-12; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.14 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "moto e(7) plus",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto E7 Plus",
+        "ua": "Mozilla/5.0 (Linux; Android 14; XT2081-1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Mobile Safari/537.36 OPR/102.0.4864.0",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2081-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto G 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; moto g 5G - 2023 Build/U1TPNS34.26-48-2-7; ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 EdgA/124.0.2478.64",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "moto g 5G - 2023",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto G 5G (2022)",
+        "ua": "Mozilla/5.0 (Linux; Android 12; moto g 5G (2022) Build/S1SAS32.47-77-9; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/402.0.0.11.101;]",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "moto g 5G (2022)",
             "type": "mobile"
         }
     },
@@ -72,21 +144,156 @@
         }
     },
     {
-        "desc": "Motorola Moto E",
-        "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Moto E (4) Build/NDQS26.69-64-11-7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36",
+        "desc": "Motorola Moto G10",
+        "ua": "Mozilla/5.0 (Linux; Android 12; XT2127-2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36",
         "expect": {
             "vendor": "Motorola",
-            "model": "Moto E (4)",
+            "model": "XT2127-2",
             "type": "mobile"
         }
     },
     {
-        "desc": "Motorola Moto 360",
-        "ua": "Mozilla/5.0 (Linux; Android 4.4; Moto 360 Build/KNX01S) AppleWebKit/537.36 (KHTML, like Gecko) WIB/0.9.8 Mobile Safari/537.36",
+        "desc": "Motorola Moto G24 Power",
+        "ua": "Mozilla/5.0 (Linux; U; Android 14; moto g24 power Build/UTAS34.82-97-1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/133.0.6943.138 Mobile Safari/537.36 OPR/89.0.2254.76420",
         "expect": {
             "vendor": "Motorola",
-            "model": "Moto 360",
-            "type": "wearable"
+            "model": "moto g24 power",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto G30",
+        "ua": "Mozilla/5.0 (Linux; Android 14; XT2129-3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2129-3",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto G54 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 14; moto g54 5G Build/U1TDS34.94-12-9-10-2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.122 Mobile Safari/537.36 OPX/2",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "moto g54 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto X",
+        "ua": "Mozilla/5.0 (Linux; Android 4.4.4; XT1097 Build/KXE21.187-38) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.109 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT1097",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto X",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2; xx-xx; XT1058 Build/13.9.0Q2.X-70-GHOST-ATT_LE-2) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT1058",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto X Force",
+        "ua": "Mozilla/5.0 (Linux; U; Android 7.0; XT1580 Build/NPKS25.200-12-9; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 OPR/32.0.2254.123747",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT1580",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto S30",
+        "ua": "Mozilla/5.0 (Linux; Android 13; XT2243-2 Build/T1SJC33.51-19-7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/97.0.4692.98 Mobile Safari/537.36 T7/13.30 SP-engine/2.53.0 matrixstyle/0 lite baiduboxapp/6.2.0.10 (Baidu; P1 13) NABar/1.0",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2243-2",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto X30 Pro",
+        "ua": "Mozilla/5.0 (Linux; U; Android 13; zh-CN; XT2241-1 Build/T1SQ33.111-12-19) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/16.1.3.1264 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2241-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto Z3 Play",
+        "ua": "Mozilla/5.0 (Linux; Android 9; Moto Z3 Play) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "Moto Z3 Play",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Moto Z4",
+        "ua": "Mozilla/5.0 (Linux; U; Android 10; moto z4 Build/QDF30.130-42-5-17; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 OPR/2.3.0",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "moto z4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Nexus 6",
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.20 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "Nexus 6",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola One 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; motorola one 5G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "one 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola P30",
+        "ua": "Mozilla/5.0 (Linux; Android 8.1.0; XT1943-1 Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/97.0.4692.98 Mobile Safari/537.36 T7/13.50 SP-engine/2.88.0 baiduboxapp/13.50.5.10 (Baidu; P1 8.1.0) NABar/1.0",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT1943-1",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Razr 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 12; motorola razr 5G Build/S2PS32.57-23-21; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.97 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/497.0.0.47.36;IABMV/1;]",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "razr 5G",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Razr 5G",
+        "ua": "Mozilla/5.0 (Linux; Android 11; XT2071-4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "XT2071-4",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Motorola Razr 50 Ultra",
+        "ua": "Mozilla/5.0 (Linux; Android 14; motorola razr 50 ultra Build/U3UX34.56-29-2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/131.0.6778.260 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Motorola",
+            "model": "razr 50 ultra",
+            "type": "mobile"
         }
     }
 ]

@@ -1,5 +1,14 @@
 [
     {
+        "desc": "Nokia 1",
+        "ua": "Mozilla/5.0 (Linux; Android 10; Nokia 1 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5304.15 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Nokia",
+            "model": "1",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Nokia3xx",
         "ua": "Nokia303/14.87 CLDC-1.1",
         "expect": {

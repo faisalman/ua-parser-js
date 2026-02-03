@@ -1,0 +1,32 @@
+[
+{
+    "ua": "Opera/9.25 (Windows NT 6.0; U; ru)",
+    "browser": {
+        "name": "Opera",
+        "version": "9.25",
+        "major": "9"
+    },
+    "cpu": {},
+    "device": {},
+    "engine": {},
+    "os": {
+        "name": "Windows",
+        "version": "Vista"
+    }
+},
+{
+    "ua": "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)",
+    "browser": {
+        "name": "IE",
+        "version": "5.5",
+        "major": "5"
+    },
+    "cpu": {},
+    "device": {},
+    "engine": {},
+    "os": {
+        "name": "Windows",
+        "version": "NT"
+    }
+}
+]

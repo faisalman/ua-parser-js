@@ -1,5 +1,25 @@
 [
     {
+        "desc"    : "AdobeAIR",
+        "ua"      : "Mozilla/5.0 (Windows; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/3.1",
+        "expect"  :
+        {
+            "name"    : "AdobeAIR",
+            "version" : "3.1",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "aiohttp",
+        "ua"      : "Python/3.9 aiohttp/3.8.1",
+        "expect"  :
+        {
+            "name"    : "aiohttp",
+            "version" : "3.8.1",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Apache-HttpClient",
         "ua"      : "Apache-HttpClient/4.5.14 (Java/17.0.12)",
         "expect"  :
@@ -16,6 +36,36 @@
         {
             "name"    : "axios",
             "version" : "1.7.2",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Bun",
+        "ua"      : "Bun/1.0.6",
+        "expect"  :
+        {
+            "name"    : "Bun",
+            "version" : "1.0.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Dart",
+        "ua"      : "Dart/3.5 (dart:io)",
+        "expect"  :
+        {
+            "name"    : "Dart",
+            "version" : "3.5",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Deno",
+        "ua"      : "Deno/2.1.7",
+        "expect"  :
+        {
+            "name"    : "Deno",
+            "version" : "2.1.7",
             "type"    : "library"
         }
     },
@@ -50,6 +100,26 @@
         }
     },
     {
+        "desc"    : "hackney",
+        "ua"      : "hackney/1.20.1",
+        "expect"  :
+        {
+            "name"    : "hackney",
+            "version" : "1.20.1",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "http.rb",
+        "ua"      : "http.rb/4.2.0",
+        "expect"  :
+        {
+            "name"    : "http.rb",
+            "version" : "4.2.0",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Java",
         "ua"      : "Java/1.6.0_14",
         "expect"  :
@@ -66,6 +136,16 @@
         {
             "name"    : "Java-http-client",
             "version" : "11.0.6",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Jetty",
+        "ua"      : "Jetty/11.0.13",
+        "expect"  :
+        {
+            "name"    : "Jetty",
+            "version" : "11.0.13",
             "type"    : "library"
         }
     },
@@ -110,12 +190,12 @@
         }
     },
     {
-        "desc"    : "OkHttp",
-        "ua"      : "okhttp/3.2.0",
+        "desc"    : "Node.js",
+        "ua"      : "Node.js/22",
         "expect"  :
         {
-            "name"    : "okhttp",
-            "version" : "3.2.0",
+            "name"    : "Node.js",
+            "version" : "22",
             "type"    : "library"
         }
     },
@@ -126,6 +206,36 @@
         {
             "name"    : "node-fetch",
             "version" : "1.0",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "Nutch",
+        "ua"      : "AliyunSecBot/Nutch-1.21-SNAPSHOT",
+        "expect"  :
+        {
+            "name"    : "Nutch",
+            "version" : "1.21-SNAPSHOT",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "ocaml-cohttp",
+        "ua"      : "ocaml-cohttp/1.2.00",
+        "expect"  :
+        {
+            "name"    : "ocaml-cohttp",
+            "version" : "1.2.00",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "OkHttp",
+        "ua"      : "okhttp/3.2.0",
+        "expect"  :
+        {
+            "name"    : "okhttp",
+            "version" : "3.2.0",
             "type"    : "library"
         }
     },
@@ -150,6 +260,16 @@
         }
     },
     {
+        "desc"    : "Python httpx",
+        "ua"      : "python-httpx/0.27.2",
+        "expect"  :
+        {
+            "name"    : "python-httpx",
+            "version" : "0.27.2",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Python urllib",
         "ua"      : "Python-urllib/2.6",
         "expect"  :
@@ -160,12 +280,32 @@
         }
     },
     {
+        "desc"    : "Python urllib3",
+        "ua"      : "python-urllib3/1.26.18",
+        "expect"  :
+        {
+            "name"    : "python-urllib3",
+            "version" : "1.26.18",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "Python requests",
         "ua"      : "python-requests/2.32",
         "expect"  :
         {
             "name"    : "python-requests",
             "version" : "2.32",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "rest-client",
+        "ua"      : "rest-client/2.1.0 (linux-gnu x86_64) ruby/2.7.2p137",
+        "expect"  :
+        {
+            "name"    : "rest-client",
+            "version" : "2.1.0",
             "type"    : "library"
         }
     },
@@ -186,6 +326,16 @@
         {
             "name"    : "node-superagent",
             "version" : "5.0.2",
+            "type"    : "library"
+        }
+    },
+    {
+        "desc"    : "undici",
+        "ua"      : "undici",
+        "expect"  :
+        {
+            "name"    : "undici",
+            "version" : "undefined",
             "type"    : "library"
         }
     }

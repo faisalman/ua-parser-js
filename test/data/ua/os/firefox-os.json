@@ -25,5 +25,59 @@
             "name"    : "Firefox OS",
             "version" : "44.0"
         }
+    },
+    {
+        "desc"    : "Firefox OS on Alcatel One Touch Fire",
+        "ua"      : "Mozilla/5.0 (Mobile; ALCATELOneTouch4012X; rv:18.1) Gecko/18.1 Firefox/18.1",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "18.1"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on Huawei Y300II",
+        "ua"      : "Mozilla/5.0 (Mobile; HUAWEIY300-F1; rv:18.1) Gecko/18.1 Firefox/18.1",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "18.1"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on LG Fireweb",
+        "ua"      : "Mozilla/5.0 (Mobile; LG-D300; rv:18.1) Gecko/18.1 Firefox/18.1",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "18.1"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on LG FX0",
+        "ua"      : "Mozilla/5.0 (Mobile; LGL25; rv:32.0) Gecko/32.0 Firefox/32.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "32.0"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on Panasonic Viera TV",
+        "ua"      : "Mozilla/5.0 (Linux; Viera; rv:34.0) Gecko/20100101 Firefox/34.0",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "34.0"
+        }
+    },
+    {
+        "desc"    : "Firefox OS on ZTE Open",
+        "ua"      : "Mozilla/5.0 (Mobile; ZTEOPEN; rv:18.1) Gecko/18.1 Firefox/18.1",
+        "expect"  :
+        {
+            "name"    : "Firefox OS",
+            "version" : "18.1"
+        }
     }
 ]

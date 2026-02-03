@@ -1,0 +1,202 @@
+[
+    {
+        "desc"    : "Discord on Linux",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.26 Chrome/108.0.5359.215 Electron/22.3.2 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "discord",
+            "version" : "0.0.26",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Discord on iPad",
+        "ua"      : "Discord/52.0 (iPad; iOS 14.4; Scale/2.00)",
+        "expect"  :
+        {
+            "name"    : "Discord",
+            "version" : "52.0",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Evernote on Windows",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Evernote Windows/306387 (pt-PT, DDL); Windows/6.1.0 (Win32); Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Evernote",
+            "version" : "undefined",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Figma on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_4_0) AppleWebKit/537.36 (KHTML, like Gecko) Figma/99.0.0 Chrome/89.0.4389.128 Electron/12.0.9 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Figma",
+            "version" : "99.0.0",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Flipboard on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.0.0; SM-A720F Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36 Flipboard/4.1.13/4342,4.1.13.4342",
+        "expect"  :
+        {
+            "name"    : "Flipboard",
+            "version" : "4.1.13",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Mattermost on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Mattermost/4.4.0 Chrome/76.0.3809.146 Electron/6.1.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Mattermost",
+            "version" : "4.4.0",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Mattermost on iPad",
+        "ua"      : "Mattermost/1.49.1 (iPad; iOS 15.3.1; Scale/2.00)",
+        "expect"  :
+        {
+            "name"    : "Mattermost",
+            "version" : "1.49.1",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Microsoft Teams on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_3_1) AppleWebKit/537.36 (KHTML, like Gecko) Teams/1.8.00.3758 Chrome/126.0.6478.261 Electron/31.7.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Teams",
+            "version" : "1.8.00.3758",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Microsoft Teams on iPad",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 TeamsMobile-iOS",
+        "expect"  :
+        {
+            "name"    : "Teams",
+            "version" : "undefined",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Microsoft Teams on iPhone",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 TeamsMobile-iOS",
+        "expect"  :
+        {
+            "name"    : "Teams",
+            "version" : "undefined",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Microsoft Teams on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 TeamsMobile-Android",
+        "expect"  :
+        {
+            "name"    : "Teams",
+            "version" : "undefined",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Notion on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Notion/2.0.23 Chrome/91.0.4472.164 Electron/13.6.9 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Notion",
+            "version" : "2.0.23",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Postman on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Postman/9.29.0 Chrome/94.0.4606.81 Electron/15.5.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Postman",
+            "version" : "9.29.0",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Rambox on mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Rambox/0.7.7 Chrome/78.0.3904.130 Electron/7.2.4 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Rambox",
+            "version" : "0.7.7",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Rocket.Chat on mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Rocket.Chat/3.8.16 Chrome/106.0.5249.199 Electron/21.3.3 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Rocket.Chat",
+            "version" : "3.8.16",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Slack on mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Slack/4.39.90 Chrome/127.0.6533.72 Electron/13.1.9 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Slack",
+            "version" : "4.39.90",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "TikTok Lite",
+        "ua"      : "Mozilla/5.0 (Linux; Android 8.0.0; SM-J400F Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36 Channel/release AppName/ultralite app_version/27.2.3 Region/ID ByteLocale/id-ID ByteFullLocale/id-ID",
+        "expect"  :
+        {
+            "name"    : "TikTok Lite",
+            "version" : "27.2.3",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "VS Code on Windows",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.85.1 Chrome/114.0.5735.289 Electron/25.9.7 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "VS Code",
+            "version" : "1.85.1",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Japan on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 13; SH-M20 Build/TKQ1.220915.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.163 Mobile Safari/537.36 YJApp-ANDROID jp.co.yahoo.android.yjtop/3.187.0",
+        "expect"  :
+        {
+            "name"    : "Yahoo! Japan",
+            "version" : "3.187.0",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Yahoo! Japan on iOS",
+        "ua"      : "Mozilla/5.0 (iPad; CPU OS 18_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 YJApp-IOS jp.co.yahoo.ipn.appli/4.131.0",
+        "expect"  :
+        {
+            "name"    : "Yahoo! Japan",
+            "version" : "4.131.0",
+            "type"    : "inapp"
+        }
+    }
+]

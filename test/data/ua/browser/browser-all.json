@@ -162,6 +162,16 @@
         }
     },
     {
+        "desc"    : "Aloha",
+        "ua"      : "Mozilla/5.0 (iPad; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Version/19.0 Safari/605.1.15 AlohaBrowser/7.5.1",
+        "expect"  :
+        {
+            "name"    : "Aloha",
+            "version" : "7.5.1",
+            "major"   : "7"
+        }
+    },
+    {
         "desc"    : "Arora",
         "ua"      : "Mozilla/5.0 (Windows; U; Windows NT 5.1; de-CH) AppleWebKit/523.15 (KHTML, like Gecko, Safari/419.3) Arora/0.2",
         "expect"  :
@@ -169,6 +179,16 @@
             "name"    : "Arora",
             "version" : "0.2",
             "major"   : "0"
+        }
+    },
+    {
+        "desc"    : "Atlas",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Atlas/1.0",
+        "expect"  :
+        {
+            "name"    : "Atlas",
+            "version" : "1.0",
+            "major"   : "1"
         }
     },
     {
@@ -269,6 +289,26 @@
             "name"    : "Baidu",
             "version" : "11.11.0.0",
             "major"   : "11"
+        }
+    },
+    {
+        "desc"    : "Bing",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/605.1.15 BingSapphire/31.8.430522001",
+        "expect"  :
+        {
+            "name"    : "Bing",
+            "version" : "31.8.430522001",
+            "major"   : "31"
+        }
+    },
+    {
+        "desc"    : "Bing",
+        "ua"      : "Mozilla/5.0 (Linux; Android 9; MIX 2 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4893.0 Mobile Safari/537.36 BingWeb/6.9.12",
+        "expect"  :
+        {
+            "name"    : "Bing",
+            "version" : "6.9.12",
+            "major"   : "6"
         }
     },
     {
@@ -512,6 +552,16 @@
         }
     },
     {
+        "desc"    : "Dooble",
+        "ua"      : "Mozilla/5.0 (X11; Haiku BePC) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.15.17 Chrome/87.0.4280.144 Safari/537.36 Dooble/2023.12.25 Dooble/2023.12.25",
+        "expect"  :
+        {
+            "name"    : "Dooble",
+            "version" : "2023.12.25",
+            "major"   : "2023"
+        }
+    },
+    {
         "desc"    : "Doris",
         "ua"      : "Doris/1.15 [en] (Symbian)",
         "expect"  :
@@ -539,6 +589,26 @@
             "name"    : "DuckDuckGo",
             "version" : "5",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Ecosia on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; SM-G975U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36 (Ecosia android@85.0.4183.127)",
+        "expect"  :
+        {
+            "name"    : "Ecosia",
+            "version" : "85.0.4183.127",
+            "major"   : "85"
+        }
+    },
+    {
+        "desc"    : "Ecosia on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 (Ecosia ios@3.0.1.533)",
+        "expect"  :
+        {
+            "name"    : "Ecosia",
+            "version" : "3.0.1.533",
+            "major"   : "3"
         }
     },
     {
@@ -579,6 +649,16 @@
             "name"    : "Waterfox",
             "version" : "55.2.2",
             "major"   : "55"
+        }
+    },
+    {
+        "desc"    : "PaleMoon",
+        "ua"      : "(Windows NT 6.2; WOW64) KHTML/4.11 Gecko/20130308 Firefox/23.0 (PaleMoon/20.3)",
+        "expect"  :
+        {
+            "name"    : "PaleMoon",
+            "version" : "20.3",
+            "major"   : "20"
         }
     },
     {
@@ -797,6 +877,16 @@
         }
     },
     {
+        "desc"    : "Hi Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 14; en; TECNO BG6m Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 HiBrowser/v2.25.6.3;lang=es;nation=DO;locale=es_DO UWS/ Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "HiBrowser",
+            "version" : "2.25.6.3",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "HuaweiBrowser",
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00；HMSCore/4.0.0 GMS/10.4 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
         "expect"  :
@@ -1007,6 +1097,46 @@
         }
     },
     {
+        "desc"    : "Lighthouse",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse",
+        "expect"  :
+        {
+            "name"    : "Lighthouse",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Luakit",
+        "ua"      : "Mozilla/5.0 (Linux x86_64) AppleWebKit/535.4+ (KHTML, like Gecko) WebKitGTK+/1.6.3 luakit",
+        "expect"  :
+        {
+            "name"    : "luakit",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Norton",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Norton/130.0.0.0",
+        "expect"  :
+        {
+            "name"    : "Norton Private Browser",
+            "version" : "130.0.0.0",
+            "major"   : "130"
+        }
+    },
+    {
+        "desc"    : "Otter",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/602.1 (KHTML, like Gecko) Otter/1.0.81",
+        "expect"  :
+        {
+            "name"    : "Otter",
+            "version" : "1.0.81",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "PicoBrowser",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Pico Neo3 Link OS5.8.4.0 like Quest) AppleWebKit/537.36 (KHTML, like Gecko) PicoBrowser/3.3.22 Chrome/105.0.5195.68 VR Safari/537.36",
         "expect"  :
@@ -1067,13 +1197,23 @@
         }
     },
     {
-        "desc"    : "LibreWolf",
-        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 LibreWolf/91.0",
+        "desc"    : "Surf Browser",
+        "ua"      : "Mozilla/5.0 (Android 6.0; HUAWEI ALE-L21) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 SurfBrowser/3.0",
         "expect"  :
         {
-            "name"    : "LibreWolf",
-            "version" : "91.0",
-            "major"   : "91"
+            "name"    : "Surf",
+            "version" : "3.0",
+            "major"   : "3"
+        }
+    },
+    {
+        "desc"    : "LG Browser",
+        "ua"      : "Mozilla/5.0 (Unknown; Linux armv7l) AppleWebKit/537.1+ (KHTML, like Gecko) Safari/537.1+ LG Browser/6.00.00(+mouse+3D+SCREEN+TUNER; LGE; 47LA621V-ZD; 04.28.17; 0x00000001;); LG NetCast.TV-2013 /04.28.17 (LG, 47LA621V-ZD, wired)",
+        "expect"  :
+        {
+            "name"    : "LG Browser",
+            "version" : "6.00.00",
+            "major"   : "6"
         }
     },
     {
@@ -1286,6 +1426,16 @@
             "name"    : "Mozilla",
             "version" : "5.0",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Mozilla",
+        "ua"      : "Mozilla/2.02 [fr] (WinNT; I)",
+        "expect"  :
+        {
+            "name"    : "Mozilla",
+            "version" : "2.02",
+            "major"   : "2"
         }
     },
     {
@@ -1509,6 +1659,16 @@
         }
     },
     {
+        "desc"    : "Opera Neon",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36 MMS/1.0.2531.0",
+        "expect"  :
+        {
+            "name"    : "Opera Neon",
+            "version" : "1.0.2531.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Opera Tablet",
         "ua"      : "Opera/9.80 (Windows NT 6.1; Opera Tablet/15165; U; en) Presto/2.8.149 Version/11.1",
         "expect"  :
@@ -1626,6 +1786,46 @@
             "name"    : "QupZilla",
             "version" : "1.8.9",
             "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "qutebrowser",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) qutebrowser/2.4.0 QtWebEngine/5.15.6 Chrome/95.0.4628.2 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "qutebrowser",
+            "version" : "2.4.0",
+            "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "Qwant",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) QwantMobile/6.7.6 Mobile/15E148 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Qwant",
+            "version" : "6.7.6",
+            "major"   : "6"
+        }
+    },
+    {
+        "desc"    : "Qwant",
+        "ua"      : "QwantMobile/2.0 (Android 8.0.0; Mobile; rv:59.0) Gecko/59.0 Firefox/59.0 QwantBrowser/59.0",
+        "expect"  :
+        {
+            "name"    : "Qwant",
+            "version" : "59.0",
+            "major"   : "59"
+        }
+    },
+    {
+        "desc"    : "Qwant",
+        "ua"      : "QwantMobile/2.0 (iPad; CPU OS 15_8_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) QwantiOS/2.7.0b1 Mobile/15E148 Safari/605.1.15",
+        "expect"  :
+        {
+            "name"    : "Qwant",
+            "version" : "2.0",
+            "major"   : "2"
         }
     },
     {
@@ -1817,6 +2017,36 @@
             "name"    : "Slimjet",
             "version" : "20.0.2.0",
             "major"   : "20"
+        }
+    },
+    {
+        "desc"    : "Steam Client",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Valve Steam Client/default/1705108172) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Steam Big Picture",
+        "ua"      : "Mozilla/5.0 (Linux; U; X11; en-US; Valve Steam Tenfoot/1660688177; ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Steam Overlay",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Valve Steam GameOverlay/default/1741737356) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.183 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
         }
     },
     {
@@ -2170,6 +2400,26 @@
         }
     },
     {
+        "desc"    : "Microsoft Edge WebView",
+        "ua"      : "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
+        "expect"  :
+        {
+            "name"    : "Edge WebView",
+            "version" : "18.17763",
+            "major"   : "18"
+        }
+    },
+    {
+        "desc"    : "Microsoft Edge WebView2",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; SM-G991B Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.120 Mobile Safari/537.36 EdgW/1.0",
+        "expect"  :
+        {
+            "name"    : "Edge WebView2",
+            "version" : "91.0.4472.120",
+            "major"   : "91"
+        }
+    },
+    {
         "desc"    : "Iridium",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Iridium/43.8 Safari/537.36 Chrome/43.0.2357.132",
         "expect"  :
@@ -2305,6 +2555,26 @@
         {
             "name"    : "QQBrowserLite",
             "version" : "1.1.0",
+            "major"   : "1"
+        }
+    },
+    {
+        "desc"    : "Brave",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; SM-T870) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/88.0.4324.96 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Brave",
+            "version" : "88.0.4324.96",
+            "major"   : "88"
+        }
+    },
+    {
+        "desc"    : "Brave",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; Samsung Galaxy F62 SM-E625F Build/SME625F512091028;) AppleWebKit/537.36 (KHTML, like Gecko) Brave/1.75.110 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Brave",
+            "version" : "1.75.110",
             "major"   : "1"
         }
     },
@@ -2553,6 +2823,16 @@
             "type"    : "inapp"
         }
     },
+      {
+        "desc"     : "TikTok",
+        "ua"       : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari/604.1 trill_43.0.0 BytedanceWebview/d8a21c6",
+        "expect"   : {
+            "name"   : "TikTok",
+            "version": "43.0.0",
+            "major"  : "43",
+            "type"    : "inapp"
+        }
+    },
     {
         "desc"    : "Chrome Mobile",
         "ua"      : "Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36",
@@ -2613,6 +2893,28 @@
             "name"    : "Twitter",
             "version" : "10.34",
             "major"   : "10",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Zalo on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Zalo/20.05.01 Mobile/15E148",
+        "expect"  :
+        {
+            "name"    : "Zalo",
+            "version" : "20.05.01",
+            "major"   : "20",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "Zalo on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 10; Vsmart Live Build/QKQ1.190918.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36 Zalo/20.04.02.r1",
+        "expect"  :
+        {
+            "name"    : "Zalo",
+            "version" : "20.04.02.r1",
+            "major"   : "20",
             "type"    : "inapp"
         }
     }

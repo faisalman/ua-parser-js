@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Anbernic",
+        "ua": "Mozilla/5.0 (Linux; Android 13; RGCUBE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Anbernic",
+            "model": "RGCUBE",
+            "type": "console"
+        }
+    }
+]

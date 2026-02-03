@@ -10,7 +10,6 @@ var cpus        = require('../data/ua/cpu/cpu-all.json');
 var devices     = readJsonFiles('test/data/ua/device');
 var engines     = require('../data/ua/engine/engine-all.json');
 var os          = readJsonFiles('test/data/ua/os');
-var { Headers } = require('node-fetch');
 
 function readJsonFiles(dir) {
     var list = [];
@@ -91,6 +90,34 @@ describe('Returns', function () {
         });
         done();
     });
+
+    it('works even when Array.prototype has been mangled', function(done) {
+        const result = withMangledArrayProto(() => new UAParser('').getResult());
+
+        function withMangledArrayProto(fn, key = 'isEmpty', value = function() { return this.length === 0; }) {
+            const originalValue = Array.prototype[key];
+            const restore = Object.hasOwnProperty.call(Array.prototype, key)
+                ? () => Array.prototype[key] = originalValue
+                : () => delete Array.prototype[key];
+
+            Array.prototype[key] = value;
+            const result = fn();
+            restore();
+
+            return result;
+        }
+
+        assert.deepEqual(result,
+            {
+                ua : '',
+                browser: { name: undefined, version: undefined, major: undefined, type: undefined },
+                cpu: { architecture: undefined },
+                device: { vendor: undefined, model: undefined, type: undefined },
+                engine: { name: undefined, version: undefined},
+                os: { name: undefined, version: undefined }
+        });
+        done();
+    });
 });
 
 describe('Extending Regex', function () {
@@ -133,6 +160,14 @@ describe('Extending Regex', function () {
         device: myOwnListOfDevices 
     }]);
     assert.deepEqual(myParser3.setUA(myUA2).getDevice(), {vendor: "MyTab", model: "14 Pro Max", type: "tablet"});
+});
+
+describe('User-agent with trailing space', function () {
+    it ('trailing space will be trimmed', function () {
+        const uastring = '     Opera/9.21 (Windows NT 5.1; U; ru)     ';
+        const { ua } = UAParser(uastring);
+        assert.equal(ua, 'Opera/9.21 (Windows NT 5.1; U; ru)     ');
+    });
 });
 
 describe('User-agent length', function () {
@@ -347,10 +382,27 @@ describe('Read user-agent data from req.headers', function () {
         assert.strictEqual(engine.name, "EdgeHTML");
     });
 
-    it('Fetch API\'s Header can be passed directly into headers', () => {
-        const reqHeaders = new Headers();
-        reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
-        const { browser } = UAParser(reqHeaders);
-        assert.strictEqual(browser.is('Midori'), true);
+    // Headers supported in node 18+ - https://developer.mozilla.org/en-US/docs/Web/API/Headers
+    if (typeof Headers !== 'undefined') {
+        it('Fetch API\'s Header can be passed directly into headers', () => {
+            const reqHeaders = new Headers();
+            reqHeaders.append('User-Agent', 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+');
+            const { browser } = UAParser(reqHeaders);
+            assert.strictEqual(browser.is('Midori'), true);
+        });
+    }
+
+    it('Headers field name should be case insensitive', function () {    
+        const hEaDeRs = {
+            'uSeR-aGenT' : 'Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+'
+        };
+        const { browser } = UAParser(hEaDeRs);
+        assert.strictEqual(browser.toString(), "Midori 0.2.2");
+    });
+
+    it('Empty headers should not raise any error', function () {    
+        const emptyHeaders = {};
+        const { browser } = UAParser(emptyHeaders);
+        assert.strictEqual(browser.toString(), "undefined");
     });
 });

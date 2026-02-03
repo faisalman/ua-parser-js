@@ -297,6 +297,15 @@
         }
     },
     {
+        "desc": "TCL 4056S",
+        "ua": "Mozilla/5.0 (Mobile; TCL 4056S; rv:84.0) Gecko/84.0 Firefox/84.0 KAIOS/3.0",
+        "expect": {
+            "vendor": "TCL",
+            "model": "4056S",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "TCL A3",
         "ua": "Mozilla/5.0 (Linux; Android 11; A509DL Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/101.0.4951.61 Mobile Safari/537.36 GSA/13.18.7.23.arm64",
         "expect": {

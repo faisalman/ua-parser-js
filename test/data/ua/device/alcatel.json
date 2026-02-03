@@ -1,6 +1,15 @@
 [
     {
-        "desc": "Alcatel",
+        "desc": "Alcatel 4056W",
+        "ua": "Mozilla/5.0 (Mobile; ALCATEL 4056W; rv:84.0) Gecko/84.0 Firefox/84.0 KAIOS/3.0",
+        "expect": {
+            "vendor": "ALCATEL",
+            "model": "4056W",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Alcatel A564C",
         "ua": "Mozilla/5.0 (Linux; Android 4.4.2; ALCATEL A564C Build/KVT49L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.133 Mobile Safari/537.36",
         "expect": {
             "vendor": "ALCATEL",

@@ -1,27 +1,41 @@
-// Type definitions for Helpers submodule of UAParser.js v2.0.2
+// Type definitions for Helpers submodule of UAParser.js v2.0.8
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import type { IResult } from "../main/ua-parser";
 
-declare function getDeviceVendor(model: string): string | undefined;
-declare function isAppleSilicon(resultOrUA: IResult | string): boolean;
-declare function isAIBot(resultOrUA: IResult | string): boolean;
-declare function isBot(resultOrUA: IResult | string): boolean;
-declare function isChromeFamily(resultOrUA: IResult | string): boolean;
-declare function isElectron(): boolean;
-declare function isFromEU(): boolean;
-declare function isFrozenUA(ua: string): boolean;
-declare function isStandalonePWA(): boolean;
+export function getOutlookEdition(name: string, version: string): string;
+export function isFrozenUA(ua: string): boolean;
 
-export {
-    getDeviceVendor,
-    isAppleSilicon,
-    isAIBot,
-    isBot,
-    isChromeFamily,
-    isElectron,
-    isFromEU,
-    isFrozenUA,
-    isStandalonePWA
-}
+/**
+ * @deprecated Moved to `device-detection` submodule
+ */
+export function getDeviceVendor(model: string): string | undefined;
+/**
+ * @deprecated Moved to `device-detection` submodule
+ */
+export function isAppleSilicon(resultOrUA: IResult | string): boolean;
+/**
+ * @deprecated Moved to `bot-detection` submodule
+ */
+export function isAIBot(resultOrUA: IResult | string): boolean;
+/**
+ * @deprecated Moved to `bot-detection` submodule
+ */
+export function isBot(resultOrUA: IResult | string): boolean;
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+export function isChromeFamily(resultOrUA: IResult | string): boolean;
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+export function isElectron(): boolean;
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+export function isFromEU(): boolean;
+/**
+ * @deprecated Moved to `browser-detection` submodule
+ */
+export function isStandalonePWA(): boolean;

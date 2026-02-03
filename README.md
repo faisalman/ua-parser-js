@@ -1,5 +1,11 @@
+#### Featured Sponsors
+
+[![https://ref.wisprflow.ai/Rxj3n8H](https://github.com/user-attachments/assets/e39fc98d-5d1b-4f7b-a355-4648e1f79a94)](https://ref.wisprflow.ai/Rxj3n8H)
+
+---
+
 [![https://uaparser.dev](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png)](https://uaparser.dev)
-[![https://uaparser.dev](https://github.com/user-attachments/assets/9f30f3d4-5cfe-441c-8f86-ead7c955f940)](https://uaparser.dev)
+[![https://uaparser.dev](https://github.com/user-attachments/assets/a626166c-17cc-45e3-8ff6-d7e948a5ded0)](https://uaparser.dev)
 [![https://uaparser.dev](https://github.com/user-attachments/assets/50da50fc-7c8a-46e3-a2bc-6a8249914372)](https://uaparser.dev)
 [![https://uaparser.dev](https://github.com/user-attachments/assets/9f2aaff0-a9b4-4ac9-bdf3-eea8081a2582)](https://uaparser.dev)
     
@@ -12,13 +18,12 @@
 <a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
 <a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
 <img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge">
+<a target="_blank" href="https://discord.com/channels/1406959509087453236/1406959509930381375"><img alt="Discord invite" src="https://dcbadge.limes.pink/api/server/https://discord.com/channels/1406959509087453236/1406959509930381375"></a>
 </p>
 
 # UAParser.js
 
-The most comprehensive, compact, & up-to-date isomorphic JavaScript library to detect 
-user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser 
-(client-side) or node.js (server-side).
+The most comprehensive, compact, and up-to-date JavaScript library to detect user's browser, OS, CPU, and device type/model. Also detect bots, apps, and more. Runs seamlessly in the browser (client-side) or Node.js (server-side).
 
 # Demo
 
@@ -33,7 +38,7 @@ user's Browser, Engine, OS, CPU, and Device type/model. Runs either in browser
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
 see what's new & breaking.
 
-# License Options
+# Package & Pricing
 
 <table>
     <thead>
@@ -46,14 +51,14 @@ see what's new & breaking.
     <tbody>
         <tr>
             <td>License options</td>
-            <td>MIT (v0.7~v1.0)</td>
-            <td>AGPL (&gt;=v2.0)</td>
+            <td>MIT (v1.x)</td>
+            <td>AGPL (v2.x)</td>
             <td>PRO Personal</td>
             <td>PRO Business</td>
             <td>PRO Enterprise</td>
         </tr>
         <tr>
-            <td>Browser detection</td>
+            <td>Browser Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -61,7 +66,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>CPU detection</td>
+            <td>CPU Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -69,7 +74,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Device detection</td>
+            <td>Device Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -77,7 +82,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Engine detection</td>
+            <td>Rendering Engine Detection</td>
             <td><a href="#demo" title="Basic detection">⚠️</a></td>
             <td>✅</td>
             <td>✅</td>
@@ -93,7 +98,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Bot detection</td>
+            <td>Enhanced+ Accuracy</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -101,7 +106,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>AI Bot detection</td>
+            <td>Bot Detection</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -109,7 +114,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Extras (Apps, Libs, Emails, Media Players, etc) detection</td>
+            <td>AI Detection</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -117,7 +122,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Enhanced detection result</td>
+            <td>Extra Detections (Apps, Libs, Emails, Media Players, Crawlers, and more)</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -125,7 +130,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Client Hints support</td>
+            <td>Client Hints Support</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -133,7 +138,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>CommonJS support</td>
+            <td>CommonJS Support</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -141,7 +146,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>ES modules support</td>
+            <td>ESM Support</td>
             <td>❌</td>
             <td>✅</td>
             <td>✅</td>
@@ -149,7 +154,15 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>npm module</td>
+            <td>TypeScript Definitions</td>
+            <td><a href="#demo" title="Community version">✅</a></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>npm Module Available</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -157,15 +170,15 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>TypeScript declarations</td>
-            <td><a href="#demo" title="Community version">⚠️</a></td>
+            <td>Direct Downloads Available</td>
+            <td>✅</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Allows commercial use</td>
+            <td>Commercial Use Allowed</td>
             <td>✅</td>
             <td>✅</td>
             <td>❌</td>
@@ -173,7 +186,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Permissive (non-copyleft) license</td>
+            <td>Permissive (non-Copyleft) License</td>
             <td>✅</td>
             <td><strong title="Copyleft license">❌</strong></td>
             <td>✅</td>
@@ -181,15 +194,31 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Unlimited use per 1 license</td>
+            <td>No Open-Source Obligations</td>
+            <td>✅</td>
+            <td><strong title="Copyleft license">❌</strong></td>
             <td>✅</td>
             <td>✅</td>
-            <td>✅</td>
-            <td><strong title="1 project per 1 license">❌</strong></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>1-year product support</td>
+            <td>Unlimited End-Products</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td><strong title="1 end-product per license">❌</strong></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Unlimited Deployments</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td><strong title="1 TLD or deliverable per license">❌</strong></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>1-year Product Support</td>
             <td>❌</td>
             <td>❌</td>
             <td>✅</td>
@@ -197,7 +226,7 @@ see what's new & breaking.
             <td>✅</td>
         </tr>
         <tr>
-            <td>Lifetime updates</td>
+            <td>Lifetime Updates</td>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
@@ -206,8 +235,8 @@ see what's new & breaking.
         </tr>
         <tr>
             <td>Price</td>
-            <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/1.0.x/license.md">License</a>)</strong></td>
-            <td><strong title="Pay as you want">FREE (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
+            <td><strong title="Pay as you want">FREE<sup>*</sup> (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/1.0.x/license.md">License</a>)</strong></td>
+            <td><strong title="Pay as you want">FREE<sup>*</sup> (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/master/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$14 (one-time fee)">$14 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-personal/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$29 (one-time fee)">$29 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-business/LICENSE.md">License</a>)</strong></td>
             <td><strong title="$599 (one-time fee)">$599 (<a target="_blank" href="https://raw.githubusercontent.com/faisalman/ua-parser-js/pro-enterprise/LICENSE.md">License</a>)</strong></td>
@@ -236,10 +265,7 @@ Made with [contributors-img](https://contrib.rocks).
 
 ## Backers & Sponsors
 
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
-
-You can support the open-source editions of UAParser.js through one of the following options:
+Support the **open-source editions** of UAParser.js through one of the following options:
 
 [![OpenCollective](https://img.shields.io/badge/OpenCollective-dddddd?style=for-the-badge&logo=opencollective&color=dddddd
 )](https://opencollective.com/ua-parser-js)
@@ -249,3 +275,6 @@ You can support the open-source editions of UAParser.js through one of the follo
 )](https://paypal.me/faisalman)
 [![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
 )](https://store.faisalman.com/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
+
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>

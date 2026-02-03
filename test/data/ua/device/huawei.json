@@ -702,6 +702,15 @@
         }
     },
     {
+        "desc": "Huawei P10 Lite",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; WAS-L03T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5199.205 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "WAS-L03T",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "Huawei P20 Lite",
         "ua": "Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36",
         "expect": {
@@ -725,6 +734,15 @@
         "expect": {
             "vendor": "Huawei",
             "model": "CLT-L29",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei P30",
+        "ua": "Mozilla/5.0 (Linux; Android 10; ELE-L04) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.109 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ELE-L04",
             "type": "mobile"
         }
     },
@@ -779,6 +797,15 @@
         "expect": {
             "vendor": "Huawei",
             "model": "CDY-AN90",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Nova",
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; HUAWEI CAN-L13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.5113.212 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "CAN-L13",
             "type": "mobile"
         }
     },
@@ -896,6 +923,15 @@
         "expect": {
             "vendor": "Huawei",
             "model": "AMN-LX3",
+            "type": "mobile"
+        }
+    },
+    {
+        "desc": "Huawei Y7p",
+        "ua": "Mozilla/5.0 (Linux; Android 10; ART-L28; HMSCore 6.8.0.311) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4476.0 HuaweiBrowser/12.1.2.312 Mobile Safari/537.36",
+        "expect": {
+            "vendor": "Huawei",
+            "model": "ART-L28",
             "type": "mobile"
         }
     },

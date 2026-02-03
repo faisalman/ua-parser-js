@@ -1,9 +1,8 @@
-// Type definitions for UAParser.js v2.0.2
+// Type definitions for UAParser.js v2.0.8
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
-import type { IncomingHttpHeaders } from 'http';
-import type { Headers as FetchAPIHeaders } from 'node-fetch';
+import { BrowserType, CPUArch, DeviceType, EngineName } from "../enums/ua-parser-enums";
 
 declare namespace UAParser {
     
@@ -18,21 +17,21 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
-        type?: 'crawler' | 'cli' | 'email' | 'fetcher' | 'inapp' | 'mediaplayer' | 'library';
+        type?: typeof BrowserType[keyof typeof BrowserType];
     }
 
     interface ICPU extends IData<ICPU> {
-        architecture?: 'ia32' | 'ia64' | 'amd64' | 'arm' | 'arm64' | 'armhf' | 'avr' | 'avr32' | 'irix' | 'irix64' | 'mips' | 'mips64' | '68k' | 'pa-risc' | 'ppc' | 'sparc' | 'sparc64';
+        architecture?: typeof CPUArch[keyof typeof CPUArch];
     }
 
     interface IDevice extends IData<IDevice> {
-        type?: 'mobile' | 'tablet' | 'console' | 'smarttv' | 'wearable' | 'xr' | 'embedded';
+        type?: typeof DeviceType[keyof typeof DeviceType];
         vendor?: string;
         model?: string;
     }
 
     interface IEngine extends IData<IEngine> {
-        name?: 'Amaya' | 'ArkWeb' | 'Blink' | 'EdgeHTML' | 'Flow' | 'Gecko' | 'Goanna' | 'iCab' | 'KHTML' | 'LibWeb' | 'Links' | 'Lynx' | 'NetFront' | 'NetSurf' | 'Presto' | 'Servo' | 'Tasman' | 'Trident' | 'w3m' | 'WebKit';
+        name?: typeof EngineName[keyof typeof EngineName];
         version?: string;
     }
 
@@ -53,7 +52,7 @@ declare namespace UAParser {
     type RegexMap = ((RegExp | string | (string | RegExp | Function)[])[])[];
     type UAParserProps = 'browser' | 'cpu' | 'device' | 'engine' | 'os';
     type UAParserExt = Partial<Record<UAParserProps, RegexMap>> | Partial<Record<UAParserProps, RegexMap>>[];
-    type UAParserHeaders = Record<string, string> | IncomingHttpHeaders | FetchAPIHeaders;
+    export type UAParserHeaders = Record<string, string | string[] | undefined> | Headers;
 
     export function UAParser(uastring?: string, extensions?: UAParserExt, headers?: UAParserHeaders): IResult;
     export function UAParser(uastring?: string, headers?: UAParserHeaders): IResult;

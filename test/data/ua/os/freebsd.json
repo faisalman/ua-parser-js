@@ -7,5 +7,14 @@
             "name"    : "FreeBSD",
             "version" : "undefined"
         }
+    },
+    {
+        "desc"    : "FreeBSD",
+        "ua"      : "Mozilla/5.0 (X11; FreeBSD; U; Viera; pl-PL) AppleWebKit/537.11 (KHTML, like Gecko) Viera/3.3.3 Chrome/23.0.1271.97 Safari/537.11",
+        "expect"  :
+        {
+            "name"    : "FreeBSD",
+            "version" : "undefined"
+        }
     }
 ]

@@ -1,162 +1,587 @@
 [
     {
-        "desc"    : "Airmail",
-        "ua"      : "Airmail 1.0 rv:148 (Macintosh; Mac OS X 10.8.3; en_BE)",
-        "expect"  :
-        {
-            "name"    : "Airmail",
-            "version" : "1.0",
-            "type"    : "email"
+        "desc": "Airmail",
+        "ua": "Airmail 1.0 rv:148 (Macintosh; Mac OS X 10.8.3; en_BE)",
+        "expect": {
+            "name": "Airmail",
+            "version": "1.0",
+            "type": "email"
         }
     },
     {
-        "desc"    : "BlueMail",
-        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) BlueMail/0.10.31 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36",
-        "expect"  :
-        {
-            "name"    : "BlueMail",
-            "version" : "0.10.31",
-            "type"    : "email"
+        "desc": "Alpine",
+        "ua": "Alpine/2.21 (Linux; x86_64)",
+        "expect": {
+            "name": "Alpine",
+            "version": "2.21",
+            "type": "email"
         }
     },
     {
-        "desc"    : "BlueMail",
-        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A405 BlueMail iOS",
-        "expect"  :
-        {
-            "name"    : "BlueMail",
-            "version" : "iOS",
-            "type"    : "email"
+        "desc": "Android Mail (AOSP)",
+        "ua": "Android/9-email",
+        "expect": {
+            "name": "Android",
+            "version": "9-email",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Evolution",
-        "ua"      : "Evolution/3.52.3",
-        "expect"  :
-        {
-            "name"    : "Evolution",
-            "version" : "3.52.3",
-            "type"    : "email"
+        "desc": "Apple Mail",
+        "ua": "Mail/3826.500.181.1.5 CFNetwork/3826.500.111.1.1 Darwin/24.4.0",
+        "expect": {
+            "name": "Mail",
+            "version": "3826.500.181.1.5",
+            "type": "email"
         }
     },
     {
-        "desc"    : "eM Client",
-        "ua"      : "eMClient/9.2.2157.0",
-        "expect"  :
-        {
-            "name"    : "eMClient",
-            "version" : "9.2.2157.0",
-            "type"    : "email"
+        "desc": "Aqua Mail",
+        "ua": "AquaMail/1.16.0-1081 (build: 101600003)",
+        "expect": {
+            "name": "AquaMail",
+            "version": "1.16.0-1081",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Foxmail",
-        "ua"      : "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 foxmail/7.2.15.80",
-        "expect"  :
-        {
-            "name"    : "foxmail",
-            "version" : "7.2.15.80",
-            "type"    : "email"
+        "desc": "Balsa",
+        "ua": "Balsa/2.6.4",
+        "expect": {
+            "name": "Balsa",
+            "version": "2.6.4",
+            "type": "email"
         }
     },
     {
-        "desc"    : "KMail",
-        "ua"      : "KMail/4.14.10 (FreeBSD/12.0-CURRENT; KDE/4.14.10; amd64; ; )",
-        "expect"  :
-        {
-            "name"    : "KMail",
-            "version" : "4.14.10",
-            "type"    : "email"
+        "desc": "Barca",
+        "ua": "Barca/2.8 (Windows NT 5.1)",
+        "expect": {
+            "name": "Barca",
+            "version": "2.8",
+            "type": "email"
         }
     },
     {
-        "desc"    : "KMail2",
-        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/5.7.3 Safari/534.34",
-        "expect"  :
-        {
-            "name"    : "kmail2",
-            "version" : "5.7.3",
-            "type"    : "email"
+        "desc": "BlueMail",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) BlueMail/0.10.31 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36",
+        "expect": {
+            "name": "BlueMail",
+            "version": "0.10.31",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Kontact",
-        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kontact/4.13.3 Safari/534.34",
-        "expect"  :
-        {
-            "name"    : "kontact",
-            "version" : "4.13.3",
-            "type"    : "email"
+        "desc": "BlueMail (iOS)",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A405 BlueMail iOS",
+        "expect": {
+            "name": "BlueMail",
+            "version": "iOS",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Microsoft Outlook",
-        "ua"      : "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.5431; Pro)",
-        "expect"  :
-        {
-            "name"    : "Microsoft Outlook",
-            "version" : "16.0.5431",
-            "type"    : "email"
+        "desc": "Canary Mail",
+        "ua": "Canary/413 (Macintosh; OS X 14.2.1)",
+        "expect": {
+            "name": "Canary",
+            "version": "413",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Microsoft Outlook for Mac",
-        "ua"      : "MacOutlook/14.7.1.161129 (Intel Mac OS X 10.9.6)",
-        "expect"  :
-        {
-            "name"    : "MacOutlook",
-            "version" : "14.7.1.161129",
-            "type"    : "email"
+        "desc": "Claws Mail",
+        "ua": "Claws Mail/3.17.5 (x86_64-pc-linux-gnu)",
+        "expect": {
+            "name": "Claws Mail",
+            "version": "3.17.5",
+            "type": "email"
         }
     },
     {
-        "desc"    : "NaverMailApp",
-        "ua"      : "NaverMailApp/2.1.23 (Android 10; SM-N960N)",
-        "expect"  :
-        {
-            "name"    : "NaverMailApp",
-            "version" : "2.1.23",
-            "type"    : "email"
+        "desc": "DaumMail",
+        "ua": "DaumMobileApp (LG-KU5400; U; Android 2.3.7|10; ko-kr) DaumMail/1.0.8 ",
+        "expect": {
+            "name": "DaumMail",
+            "version": "1.0.8",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Sparrow",
-        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Sparrow/1043.1",
-        "expect"  :
-        {
-            "name"    : "Sparrow",
-            "version" : "1043.1",
-            "type"    : "email"
+        "desc": "eM Client",
+        "ua": "eMClient/9.2.2157.0",
+        "expect": {
+            "name": "eMClient",
+            "version": "9.2.2157.0",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Thunderbird",
-        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0",
-        "expect"  :
-        {
-            "name"    : "Thunderbird",
-            "version" : "78.13.0",
-            "type"    : "email"
+        "desc": "Eudora OSE",
+        "ua": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.19) Gecko/20110420 Eudora/3.0.4",
+        "expect": {
+            "name": "Eudora",
+            "version": "3.0.4",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Yahoo! Mail",
-        "ua"      : "YahooMobile/1.0 (mail; 3.0.5.1311380); (Linux; U; Android 4.0.3; htc_runnymede Build/ICE_CREAM_SANDWICH_MR1);",
-        "expect"  :
-        {
-            "name"    : "Yahoo",
-            "version" : "3.0.5.1311380",
-            "type"    : "email"
+        "desc": "Evolution",
+        "ua": "Evolution/3.52.3",
+        "expect": {
+            "name": "Evolution",
+            "version": "3.52.3",
+            "type": "email"
         }
     },
     {
-        "desc"    : "Yahoo! Mail",
-        "ua"      : "YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90) ",
-        "expect"  :
-        {
-            "name"    : "Yahoo",
-            "version" : "1.3.10",
-            "type"    : "email"
+        "desc": "FairEmail",
+        "ua": "FairEmail/1.2066 (Android 13; Pixel 7)",
+        "expect": {
+            "name": "FairEmail",
+            "version": "1.2066",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Foxmail",
+        "ua": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 foxmail/7.2.15.80",
+        "expect": {
+            "name": "foxmail",
+            "version": "7.2.15.80",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Geary",
+        "ua": "Geary/40.0 (Linux; x86_64)",
+        "expect": {
+            "name": "Geary",
+            "version": "40.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Gnus",
+        "ua": "Gnus/5.13 (Gnus v5.13) Emacs/24.3 (gnu/linux)",
+        "expect": {
+            "name": "Gnus",
+            "version": "5.13",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Horde IMP",
+        "ua": "Horde::IMP/6.2.27 (Linux)",
+        "expect": {
+            "name": "Horde::IMP",
+            "version": "6.2.27",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "IBM Notes",
+        "ua": "Lotus-Notes/8.5.3",
+        "expect": {
+            "name": "Lotus-Notes",
+            "version": "8.5.3",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "IncrediMail",
+        "ua": "IncrediMail/6.29.5126",
+        "expect": {
+            "name": "IncrediMail",
+            "version": "6.29.5126",
+            "type": "email"
+        }
+    },
+{
+        "desc": "K-9 Mail",
+        "ua": "K-9 Mail/5.600",
+        "expect": {
+            "name": "K-9 Mail",
+            "version": "5.600",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "KMail",
+        "ua": "KMail/4.14.10 (FreeBSD/12.0-CURRENT; KDE/4.14.10; amd64; ; )",
+        "expect": {
+            "name": "KMail",
+            "version": "4.14.10",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "KMail2",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/5.7.3 Safari/534.34",
+        "expect": {
+            "name": "kmail2",
+            "version": "5.7.3",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Kontact",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kontact/4.13.3 Safari/534.34",
+        "expect": {
+            "name": "kontact",
+            "version": "4.13.3",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Mailbird",
+        "ua": "Mailbird/2.9.0.0",
+        "expect": {
+            "name": "Mailbird",
+            "version": "2.9.0.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "MailMate",
+        "ua": "MailMate/5663 (Macintosh; Intel Mac OS X 10.15.7)",
+        "expect": {
+            "name": "MailMate",
+            "version": "5663",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Mailspring",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Mailspring/1.7.8 Chrome/69.0.3497.128 Electron/4.2.12 Safari/537.36",
+        "expect": {
+            "name": "Mailspring",
+            "version": "1.7.8",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Microsoft Outlook",
+        "ua": "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.5431; Pro)",
+        "expect": {
+            "name": "Microsoft Outlook",
+            "version": "16.0.5431",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Microsoft Outlook for Mac",
+        "ua": "MacOutlook/14.7.1.161129 (Intel Mac OS X 10.9.6)",
+        "expect": {
+            "name": "MacOutlook",
+            "version": "14.7.1.161129",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Mutt",
+        "ua": "Mutt/1.5.21 (2010-09-15)",
+        "expect": {
+            "name": "Mutt",
+            "version": "1.5.21",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "NaverMailApp",
+        "ua": "NaverMailApp/2.1.23 (Android 10; SM-N960N)",
+        "expect": {
+            "name": "NaverMailApp",
+            "version": "2.1.23",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Newton Mail",
+        "ua": "Newton/10.0.52 (Android 10; K)",
+        "expect": {
+            "name": "Newton",
+            "version": "10.0.52",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Nine",
+        "ua": "Nine/4.5.3a",
+        "expect": {
+            "name": "Nine",
+            "version": "4.5.3a",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Nylas Mail",
+        "ua": "NylasMail/2.0.32 (Macintosh; OS X 10.12.6)",
+        "expect": {
+            "name": "NylasMail",
+            "version": "2.0.32",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Outlook Express",
+        "ua": "Outlook-Express/6.0 (MSIE 6.0; Windows NT 5.1; SV1)",
+        "expect": {
+            "name": "Outlook-Express",
+            "version": "6.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Pegasus Mail",
+        "ua": "Pegasus Mail/4.70",
+        "expect": {
+            "name": "Pegasus Mail",
+            "version": "4.70",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "PocoMail",
+        "ua": "PocoMail 4.8 (4320) - Licensed Version",
+        "expect": {
+            "name": "PocoMail",
+            "version": "4.8",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Polymail",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Polymail/2.3.12 Chrome/114.0.5735.134 Electron/25.2.0 Safari/537.36",
+        "expect": {
+            "name": "Polymail",
+            "version": "2.3.12",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Postbox",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Postbox/7.0.26",
+        "expect": {
+            "name": "Postbox",
+            "version": "7.0.26",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "ProtonMail",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ProtonMail/1.4.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36",
+        "expect": {
+            "name": "ProtonMail",
+            "version": "1.4.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "ProtonMail Bridge",
+        "ua": "ProtonMail Bridge/3.8.2 (Macintosh; Intel Mac OS X 10_15_7)",
+        "expect": {
+            "name": "ProtonMail Bridge",
+            "version": "3.8.2",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "R2Mail2",
+        "ua": "R2Mail2/2.50 (Android)",
+        "expect": {
+            "name": "R2Mail2",
+            "version": "2.50",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "RainLoop",
+        "ua": "RainLoop/1.17.0",
+        "expect": {
+            "name": "RainLoop",
+            "version": "1.17.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Roundcube Webmail",
+        "ua": "Roundcube Webmail/1.6.0",
+        "expect": {
+            "name": "Roundcube Webmail",
+            "version": "1.6.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Samsung Email",
+        "ua": "SamsungEmail/6.1.80.12",
+        "expect": {
+            "name": "SamsungEmail",
+            "version": "6.1.80.12",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "SparkDesktop",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) SparkDesktop/3.0.30 Chrome/102.0.5005.63 Electron/19.0.4 Safari/537.36",
+        "expect": {
+            "name": "SparkDesktop",
+            "version": "3.0.30",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Sparrow",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Sparrow/1043.1",
+        "expect": {
+            "name": "Sparrow",
+            "version": "1043.1",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Spicebird",
+        "ua": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.9pre) Gecko/20100216 Spicebird/0.8",
+        "expect": {
+            "name": "Spicebird",
+            "version": "0.8",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "SquirrelMail",
+        "ua": "SquirrelMail/1.4.23 [SVN]",
+        "expect": {
+            "name": "SquirrelMail",
+            "version": "1.4.23",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Sylpheed",
+        "ua": "Sylpheed/3.7.0 (MinGW32; Windows NT 6.1; x86_64)",
+        "expect": {
+            "name": "Sylpheed",
+            "version": "3.7.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "The Bat!",
+        "ua": "The Bat! 9.2.1",
+        "expect": {
+            "name": "The Bat!",
+            "version": "9.2.1",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Thunderbird",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0",
+        "expect": {
+            "name": "Thunderbird",
+            "version": "78.13.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Trojita",
+        "ua": "Trojita/0.7",
+        "expect": {
+            "name": "Trojita",
+            "version": "0.7",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Turnpike",
+        "ua": "Turnpike/6.07-U",
+        "expect": {
+            "name": "Turnpike",
+            "version": "6.07-U",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Tuta Desktop (Tutanota)",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) tutanota-desktop/3.110.1 Chrome/110.0.5481.179 Electron/23.1.3 Safari/537.36",
+        "expect": {
+            "name": "tutanota-desktop",
+            "version": "3.110.1",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Wanderlust",
+        "ua": "Wanderlust/2.15.9 (Almost Unreal) SEMI/1.14.6 (Maruoka) FLIM/1.14.9 (Gojō) APEL/10.8 Emacs/23.1 (i486-pc-linux-gnu) MULE/6.0 (HANACHIRUSATO)",
+        "expect": {
+            "name": "Wanderlust",
+            "version": "2.15.9",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Windows Live Mail",
+        "ua": "Windows-Live-Mail/15.4.3508.1109",
+        "expect": {
+            "name": "Windows-Live-Mail",
+            "version": "15.4.3508.1109",
+            "type": "email"
+        }
+    },
+{
+        "desc": "Yahoo! Mail (Android)",
+        "ua": "YahooMobile/1.0 (mail; 3.0.5.1311380); (Linux; U; Android 4.0.3; htc_runnymede Build/ICE_CREAM_SANDWICH_MR1);",
+        "expect": {
+            "name": "Yahoo Mail",
+            "version": "1.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Yahoo! Mail (Legacy)",
+        "ua": "YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90) ",
+        "expect": {
+            "name": "Yahoo Mail",
+            "version": "1.3.10",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Yahoo! Mail (iOS)",
+        "ua": "YahooMail/1.0 (iOS; 1.0.0; en_US)",
+        "expect": {
+            "name": "Yahoo Mail",
+            "version": "1.0",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Zimbra",
+        "ua": "Mozilla/5.0 (Windows; U; Windows NT 6.2; it; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.8",
+        "expect": {
+            "name": "Zimbra",
+            "version": "7.2.8",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "Zimbra (Server)",
+        "ua": "Zimbra/9.0.0_GA_4138",
+        "expect": {
+            "name": "Zimbra",
+            "version": "9.0.0_GA_4138",
+            "type": "email"
+        }
+    },
+    {
+        "desc": "ZohoMail",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) ZohoMail-Desktop/1.6.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36",
+        "expect": {
+            "name": "ZohoMail-Desktop",
+            "version": "1.6.3",
+            "type": "email"
         }
     }
 ]

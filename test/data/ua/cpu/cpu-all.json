@@ -88,6 +88,22 @@
         }
     },
     {
+        "desc"    : "Alpha",
+        "ua"      : "Mozilla/3.01 (WinNT; I) [AXP]",
+        "expect"  :
+        {
+            "architecture"  : "alpha"
+        }
+    },
+    {
+        "desc"    : "Alpha",
+        "ua"      : "Mozilla/5.0 (X11; OpenBSD alpha; rv:78.0) Gecko/20100101 Firefox/78.0",
+        "expect"  :
+        {
+            "architecture"  : "alpha"
+        }
+    },
+    {
         "desc"    : "ARM",
         "ua"      : "Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537",
         "expect"  :
@@ -273,7 +289,15 @@
     },
     {
         "desc"    : "68k",
-        "ua"      : "'Mozilla/1.1 (Macintosh; U; 68K)'",
+        "ua"      : "Mozilla/1.1 (Macintosh; U; 68K)",
+        "expect"  : 
+        {
+            "architecture"  : "68k"
+        }
+    },
+    {
+        "desc"    : "MC680x0",
+        "ua"      : "AmigaVoyager/3.2 (AmigaOS/MC680x0)",
         "expect"  : 
         {
             "architecture"  : "68k"
