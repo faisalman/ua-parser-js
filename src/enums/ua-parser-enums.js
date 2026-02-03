@@ -425,6 +425,7 @@ const OSName = Object.freeze({
     UBUNTU_TOUCH: 'Ubuntu Touch',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
+    VEGAOS: 'Vega OS',
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',

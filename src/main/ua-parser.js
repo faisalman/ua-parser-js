@@ -1021,10 +1021,12 @@
             ], [VERSION, [NAME, 'watchOS']], [
 
             // Google ChromeOS
-            /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
-            ], [[NAME, "Chrome OS"], VERSION],[
+            /cros [\w]+(?:\)| ([\w\.]+)\b)/i                                    // Chromium OS
+            ], [VERSION, [NAME, 'Chrome OS']],[
 
             // Smart TVs
+            /kepler ([\w\.]+); (aft|aeo)/i                                      // Vega OS
+            ], [VERSION, [NAME, 'Vega OS']],[
             /(netrange)mmh/i,                                                   // Netrange
             /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 
