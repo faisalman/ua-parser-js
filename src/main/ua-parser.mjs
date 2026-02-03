@@ -3,8 +3,8 @@
 // Source: /src/main/ua-parser.js
 
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.8
-   Copyright © 2012-2025 Faisal Salman <f@faisalman.com>
+/* UAParser.js v2.0.9
+   Copyright © 2012-2026 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
@@ -21,7 +21,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.8',
+    var LIBVERSION  = '2.0.9',
         UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
@@ -59,6 +59,7 @@
         EMBEDDED    = 'embedded',
 
         // browser types
+        FETCHER     = 'fetcher',
         INAPP       = 'inapp',
 
         // client hints
@@ -381,7 +382,7 @@
             /(atlas|flock|rockmelt|midori|epiphany|silk|skyfire|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon|otter|dooble|(?:hi|lg |ovi|qute)browser|palemoon)\/v?([-\w\.]+)/i,
                                                                                 // Atlas/Rekonq/Puffin/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio/Dragon
             /(brave)(?: chrome)?\/([\d\.]+)/i,                                  // Brave
-            /(heytap|ovi|115|surf|qwant)browser\/([\d\.]+)/i,                   // HeyTap/Ovi/115/Surf
+            /(aloha|heytap|ovi|115|surf|qwant)browser\/([\d\.]+)/i,             // Aloha/HeyTap/Ovi/115/Surf
             /(qwant)(?:ios|mobile)\/([\d\.]+)/i,                                // Qwant
             /(ecosia|weibo)(?:__| \w+@)([\d\.]+)/i                              // Ecosia/Weibo
             ], [NAME, VERSION], [
@@ -403,8 +404,10 @@
             ], [VERSION, [NAME, 'Yandex']], [
             /slbrowser\/([\w\.]+)/i                                             // Smart Lenovo Browser
             ], [VERSION, [NAME, 'Smart ' + LENOVO + SUFFIX_BROWSER]], [
-            /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
+            /(av(?:ast|g|ira))\/([\w\.]+)/i                                     // Avast/AVG/Avira Secure Browser
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
+            /norton\/([\w\.]+)/i                                                // Norton Private Browser
+            ], [VERSION, [NAME, 'Norton Private' + SUFFIX_BROWSER]], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
             / mms\/([\w\.]+)$/i                                                 // Opera Neon
@@ -437,10 +440,9 @@
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
             /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i   // QQ/2345
             ], [NAME, VERSION], [
-            /(lbbrowser|rekonq|steam(?= (clie|tenf|gameo)))/i                   // LieBao Browser/Rekonq/Steam
+            /(lbbrowser|luakit|rekonq|steam(?= (clie|tenf|gameo)))/i            // LieBao Browser/Luakit/Rekonq/Steam
             ], [NAME], [
-            /ome\/([\w\.]+) \w* ?(iron) saf/i,                                  // Iron
-            /ome\/([\w\.]+).+qihu (360)[es]e/i                                  // 360
+            /ome\/([\w\.]+).+(iron(?= saf)|360(?=[es]e$))/i                     // Iron / 360
             ], [VERSION, NAME], [
 
             // WebView
@@ -467,6 +469,9 @@
 
             /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
             ], [NAME, VERSION], [
+
+            /ome-(lighthouse)$/i                                                // Chrome Lighthouse
+            ], [NAME, [TYPE, FETCHER]], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
@@ -1014,14 +1019,16 @@
             /web0s;.+?(?:chr[o0]me|safari)\/(\d+)/i
                                                                                 // https://webostv.developer.lge.com/develop/specifications/web-api-and-web-engine
             ], [[VERSION, strMapper, {'25':'120','24':'108','23':'94','22':'87','6':'79','5':'68','4':'53','3':'38','2':'538','1':'537','*':'TV'}], [NAME, 'webOS']], [                   
-            /watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i                              // watchOS
+            /watch(?: ?os[,\/ ]|\d,\d\/)([\d\.]+)/i                              // watchOS
             ], [VERSION, [NAME, 'watchOS']], [
 
             // Google ChromeOS
-            /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
-            ], [[NAME, "Chrome OS"], VERSION],[
+            /cros [\w]+(?:\)| ([\w\.]+)\b)/i                                    // Chromium OS
+            ], [VERSION, [NAME, 'Chrome OS']],[
 
             // Smart TVs
+            /kepler ([\w\.]+); (aft|aeo)/i                                      // Vega OS
+            ], [VERSION, [NAME, 'Vega OS']],[
             /(netrange)mmh/i,                                                   // Netrange
             /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 

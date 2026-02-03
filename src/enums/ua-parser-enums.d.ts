@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.8
+/*  Enums for UAParser.js v2.0.9
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -16,6 +16,7 @@ export const BrowserName: Readonly<{
     '2345': '2345',
     '360': '360',
     ALIPAY: 'Alipay',
+    ALOHA: 'Aloha',
     AMAYA: 'Amaya',
     ANDROID: 'Android Browser',
     ARORA: 'Arora',
@@ -23,6 +24,7 @@ export const BrowserName: Readonly<{
     AVANT: 'Avant',
     AVAST: 'Avast Secure Browser',
     AVG: 'AVG Secure Browser',
+    AVIRA: 'Avira Secure Browser',
     BAIDU: 'Baidu Browser',
     BASILISK: 'Basilisk',
     BING: 'Bing',
@@ -92,9 +94,11 @@ export const BrowserName: Readonly<{
     LG: 'LG Browser',
     LIBREWOLF: 'LibreWolf',
     LIEBAO: 'LBBROWSER',
+    LIGHTHOUSE: 'Lighthouse',
     LINE: 'Line',
     LINKEDIN: 'LinkedIn',
     LINKS: 'Links',
+    LUAKIT: 'Luakit',
     LUNASCAPE: 'Lunascape',
     LYNX: 'Lynx',
     MAEMO: 'Maemo Browser',
@@ -109,6 +113,7 @@ export const BrowserName: Readonly<{
     NETSCAPE: 'Netscape',
     NETSURF: 'Netsurf',
     NOKIA: 'Nokia Browser',
+    NORTON: 'Norton Private Browser',
     OBIGO: 'Obigo',
     OCULUS: 'Oculus Browser',
     OMNIWEB: 'OmniWeb',
@@ -424,6 +429,7 @@ export const OSName: Readonly<{
     UBUNTU_TOUCH: 'Ubuntu Touch',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
+    VEGA_OS: 'Vega OS',
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',
@@ -471,6 +477,7 @@ export const Extension: Readonly<{
             ANTHROPIC_CLAUDE_BOT: 'ClaudeBot',
             ANTHROPIC_CLAUDE_SEARCHBOT: 'Claude-SearchBot',
             ANTHROPIC_CLAUDE_WEB: 'Claude-Web',
+            ATLASSIAN_BOT: 'atlassian-bot',
             ARCHIVEORG_BOT: 'archive.org_bot',
             BAIDU_ADS: 'Baidu-ADS',
             BAIDU_SPIDER: 'Baiduspider',
@@ -486,6 +493,7 @@ export const Extension: Readonly<{
             BRAVE_BOT: 'Bravebot',
             BYTEDANCE_BYTESPIDER: 'Bytespider',
             BYTEDANCE_TIKTOKSPIDER: 'TikTokSpider',
+            CLOUDFLARE_AUTORAG: 'Cloudflare-AutoRAG',
             COMMON_CRAWL_CCBOT: 'CCBot',
             COCCOC_BOT_WEB: 'coccocbot-web',
             COCCOC_BOT_IMAGE: 'coccocbot-image',
@@ -517,6 +525,7 @@ export const Extension: Readonly<{
             GOOGLE_CLOUDVERTEXBOT: 'Google-CloudVertexBot',
             GOOGLE_EXTENDED: 'Google-Extended',
             GOOGLE_INSPECTIONTOOL: 'Google-InspectionTool',
+            GOOGLE_NOTEBOOKLM: 'Google-NotebookLM',
             GOOGLE_OTHER: 'GoogleOther',
             GOOGLE_OTHER_IMAGE: 'GoogleOther-Image',
             GOOGLE_OTHER_VIDEO: 'GoogleOther-Video',
@@ -561,6 +570,7 @@ export const Extension: Readonly<{
             SEMRUSH_BOT_BACKLINK: 'SemrushBot-BA',
             SEMRUSH_BOT_CONTENTSHAKE: 'SemrushBot-OCOB',
             SEMRUSH_BOT_SEO_CHECKER: 'SemrushBot-SI',
+            SEMRUSH_BOT_SWA: 'SemrushBot-SWA',
             SEZNAM_BOT: 'SeznamBot',
             SITEIMPROVE: 'Siteimprove',
             SOGOU_PIC_SPIDER: 'Sogou Pic Spider',
@@ -692,7 +702,8 @@ export const Extension: Readonly<{
             COHERE_AI: 'Cohere-AI',
             DISCORD_BOT: 'Discordbot',
             DUCKDUCKGO_ASSISTBOT: 'DuckAssistBot',
-            GOOGLE_CHROME_LIGHTHOUSE: 'Chrome-Lighthouse',
+            FLIPBOARD_PROXY: 'FlipboardProxy',
+            GOOGLE_CHROME_LIGHTHOUSE: 'Lighthouse',
             GOOGLE_FEEDFETCHER: 'FeedFetcher-Google',
             GOOGLE_GEMINI_DEEP_RESEARCH: 'Gemini-Deep-Research',
             GOOGLE_IMAGEPROXY: 'GoogleImageProxy',

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////
-/*  browser-detection submodule of UAParser.js v2.0.8
+/*  browser-detection submodule of UAParser.js v2.0.9
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */

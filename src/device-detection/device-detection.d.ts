@@ -1,4 +1,4 @@
-// Type definitions for device-detection submodule of UAParser.js v2.0.8
+// Type definitions for device-detection submodule of UAParser.js v2.0.9
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 

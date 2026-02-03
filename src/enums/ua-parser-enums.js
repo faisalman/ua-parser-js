@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.8
+/*  Enums for UAParser.js v2.0.9
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -425,7 +425,7 @@ const OSName = Object.freeze({
     UBUNTU_TOUCH: 'Ubuntu Touch',
     UNIX: 'Unix',
     VECTORLINUX: 'VectorLinux',
-    VEGAOS: 'Vega OS',
+    VEGA_OS: 'Vega OS',
     WATCHOS: 'watchOS',
     WEBOS: 'WebOS',
     WINDOWS: 'Windows',

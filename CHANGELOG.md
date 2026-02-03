@@ -76,6 +76,15 @@
 
 --- 
 
+## Version 2.0.9
+- Restore icons directory
+- Add new browser: Aloha Browser, Avira Secure Browser, Lighthouse, Luakit, Norton Private Browser
+- Add new OS: Vega OS
+- Improve OS detection: watchOS
+- `extensions` submodule:
+    - Add new crawler: atlassian-bot, Cloudflare-AutoRAG, Google-NotebookLM, SemrushBot-SWA
+    - Add new fetcher: FlipboardProxy
+
 ## Version 2.0.8
 
 - Resolve syntax error related to import renaming in ESM build
