@@ -245,7 +245,7 @@ see what's new & breaking.
     <tfoot>
         <tr>
             <th align="right" colspan="6">
-                <h3><a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a></h3>
+                <h3><a target="_blank" href="https://uaparserjs.lemonsqueezy.com/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a></h3>
             </th>
         </tr>
     </tfoot>
