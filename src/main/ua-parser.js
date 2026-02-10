@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.6
+/* UAParser.js v2.0.9
    Copyright © 2012-2025 Faisal Salman <f@faisalman.com>
    UAParser.js PRO Business License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -19,7 +19,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.6',
+    var LIBVERSION  = '2.0.9',
         UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
@@ -57,6 +57,7 @@
         EMBEDDED    = 'embedded',
 
         // browser types
+        FETCHER     = 'fetcher',
         INAPP       = 'inapp',
 
         // client hints
@@ -375,10 +376,11 @@
             /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i,        // Avant/IEMobile/SlimBrowser/SlimBoat/Slimjet
             /(?:ms|\()(ie) ([\w\.]+)/i,                                         // Internet Explorer
 
-            // Blink/Webkit/KHTML based                                         // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon/LG Browser/Otter/qutebrowser/Dooble/Palemoon
-            /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon|otter|dooble|(?:lg |qute)browser|palemoon)\/([-\w\.]+)/i,
-                                                                                // Rekonq/Puffin/Brave/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio/Dragon
-            /(heytap|ovi|115|surf|qwant)browser\/([\d\.]+)/i,                   // HeyTap/Ovi/115/Surf
+            // Blink/Webkit/KHTML based                                         // Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt/Iron/Iridium/PhantomJS/Bowser/QupZilla/Falkon/LG Browser/Otter/qutebrowser/Dooble/Palemoon/HiBrowser
+            /(atlas|flock|rockmelt|midori|epiphany|silk|skyfire|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon|otter|dooble|(?:hi|lg |ovi|qute)browser|palemoon)\/v?([-\w\.]+)/i,
+                                                                                // Atlas/Rekonq/Puffin/Whale/QQBrowserLite/QQ//Vivaldi/DuckDuckGo/Klar/Helio/Dragon
+            /(brave)(?: chrome)?\/([\d\.]+)/i,                                  // Brave
+            /(aloha|heytap|ovi|115|surf|qwant)browser\/([\d\.]+)/i,             // Aloha/HeyTap/Ovi/115/Surf
             /(qwant)(?:ios|mobile)\/([\d\.]+)/i,                                // Qwant
             /(ecosia|weibo)(?:__| \w+@)([\d\.]+)/i                              // Ecosia/Weibo
             ], [NAME, VERSION], [
@@ -400,11 +402,15 @@
             ], [VERSION, [NAME, 'Yandex']], [
             /slbrowser\/([\w\.]+)/i                                             // Smart Lenovo Browser
             ], [VERSION, [NAME, 'Smart ' + LENOVO + SUFFIX_BROWSER]], [
-            /(avast|avg)\/([\w\.]+)/i                                           // Avast/AVG Secure Browser
+            /(av(?:ast|g|ira))\/([\w\.]+)/i                                     // Avast/AVG/Avira Secure Browser
             ], [[NAME, /(.+)/, '$1 Secure' + SUFFIX_BROWSER], VERSION], [
+            /norton\/([\w\.]+)/i                                                // Norton Private Browser
+            ], [VERSION, [NAME, 'Norton Private' + SUFFIX_BROWSER]], [
             /\bfocus\/([\w\.]+)/i                                               // Firefox Focus
             ], [VERSION, [NAME, FIREFOX+' Focus']], [
-            /\bopt\/([\w\.]+)/i                                                 // Opera Touch
+            / mms\/([\w\.]+)$/i                                                 // Opera Neon
+            ], [VERSION, [NAME, OPERA+' Neon']], [
+            / opt\/([\w\.]+)$/i                                                 // Opera Touch
             ], [VERSION, [NAME, OPERA+' Touch']], [
             /coc_coc\w+\/([\w\.]+)/i                                            // Coc Coc Browser
             ], [VERSION, [NAME, 'Coc Coc']], [
@@ -432,10 +438,9 @@
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,                   // Tesla
             /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i   // QQ/2345
             ], [NAME, VERSION], [
-            /(lbbrowser|rekonq)/i                                               // LieBao Browser/Rekonq
+            /(lbbrowser|luakit|rekonq|steam(?= (clie|tenf|gameo)))/i            // LieBao Browser/Luakit/Rekonq/Steam
             ], [NAME], [
-            /ome\/([\w\.]+) \w* ?(iron) saf/i,                                  // Iron
-            /ome\/([\w\.]+).+qihu (360)[es]e/i                                  // 360
+            /ome\/([\w\.]+).+(iron(?= saf)|360(?=[es]e$))/i                     // Iron / 360
             ], [VERSION, NAME], [
 
             // WebView
@@ -453,7 +458,7 @@
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
-            /musical_ly(?:.+app_?version\/|_)([\w\.]+)/i                        // TikTok
+            /(?:musical_ly|trill)(?:.+app_?version\/|_)([\w\.]+)/i              // TikTok
             ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME, [TYPE, INAPP]], [
@@ -462,6 +467,9 @@
 
             /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
             ], [NAME, VERSION], [
+
+            /ome-(lighthouse)$/i                                                // Chrome Lighthouse
+            ], [NAME, [TYPE, FETCHER]], [
 
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
@@ -598,17 +606,17 @@
             /\b(?:xiao)?((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i               // Mi Pad tablets
             ],[[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, TABLET]], [
 
-            /\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i,                  // Xiaomi POCO
             /\b; (\w+) build\/hm\1/i,                                           // Xiaomi Hongmi 'numeric' models
             /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,                             // Xiaomi Hongmi
-            /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,                   // Xiaomi Redmi
-            /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i,        // Xiaomi Redmi 'numeric' models
-            /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note|max|cc)?[_ ]?(?:\d{0,2}\w?)[_ ]?(?:plus|se|lite|pro)?( 5g|lte)?)(?: bui|\))/i, // Xiaomi Mi
+                                                                                // Xiaomi Redmi / POCO / Black Shark / Qin
+            /oid[^\)]+; (redmi[\-_ ]?(?:note|k)?[\w_ ]+|m?[12]\d[01]\d\w{3,6}|poco[\w ]+|(shark )?\w{3}-[ah]0|qin ?[1-3](s\+|ultra| pro)?)( bui|; wv|\))/i,
+                                                                                // Xiaomi Mi
+            /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note|max|cc)?[_ ]?(?:\d{0,2}\w?)[_ ]?(?:plus|se|lite|pro)?( 5g|lte)?)(?: bui|\))/i,
             / ([\w ]+) miui\/v?\d/i
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
 
             // OnePlus
-            /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-k]\w[1m]10)\b/i,
+            /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-l]\w[1m]10)\b/i,
             /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i
             ], [MODEL, [VENDOR, ONEPLUS], [TYPE, MOBILE]], [
 
@@ -648,7 +656,7 @@
             ], [MODEL, [VENDOR, MOTOROLA], [TYPE, TABLET]], [
 
             // LG
-            /((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
+            /\b(?:lg)?([vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i
             ], [MODEL, [VENDOR, LG], [TYPE, TABLET]], [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
             /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch|webos))(\w+)/i,
@@ -852,10 +860,10 @@
             ], [MODEL, [VENDOR, MICROSOFT], [TYPE, CONSOLE]], [
             /(ouya)/i,                                                          // Ouya
             /(nintendo) (\w+)/i,                                                // Nintendo
-            /(retroid) (pocket ([^\)]+))/i                                      // Retroid Pocket
-            ], [VENDOR, MODEL, [TYPE, CONSOLE]], [
-            /droid.+; (shield)( bui|\))/i                                       // Nvidia Portable
-            ], [MODEL, [VENDOR, NVIDIA], [TYPE, CONSOLE]], [
+            /(retroid) (pocket ([^\)]+))/i,                                     // Retroid Pocket
+            /(valve).+(steam deck)/i,
+            /droid.+; ((shield|rgcube|gr0006))( bui|\))/i                       // Nvidia Portable/Anbernic/Logitech
+            ], [[VENDOR, strMapper, { 'Nvidia': 'Shield', 'Anbernic': 'RGCUBE', 'Logitech': 'GR0006' }], MODEL, [TYPE, CONSOLE]], [
 
             ///////////////////
             // WEARABLES
@@ -864,7 +872,7 @@
             /\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i                       // Samsung Galaxy Watch
             ], [MODEL, [VENDOR, SAMSUNG], [TYPE, WEARABLE]], [
             /((pebble))app/i,                                                   // Pebble
-            /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i        // Asus ZenWatch / LG Watch / Pixel Watch
+            /(asus|google|lg|oppo|xiaomi) ((pixel |zen)?watch[\w ]*)( bui|\))/i // Asus ZenWatch / LG Watch / Pixel Watch / Xiaomi Watch
             ], [VENDOR, MODEL, [TYPE, WEARABLE]], [
             /(ow(?:19|20)?we?[1-3]{1,3})/i                                      // Oppo Watch
             ], [MODEL, [VENDOR, OPPO], [TYPE, WEARABLE]], [
@@ -939,7 +947,7 @@
             /(presto)\/([\w\.]+)/i,                                             // Presto
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m/Goanna/Servo
             /ekioh(flow)\/([\w\.]+)/i,                                          // Flow
-            /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,                           // KHTML/Tasman/Links
+            /(khtml|tasman|links|dillo)[\/ ]\(?([\w\.]+)/i,                     // KHTML/Tasman/Links/Dillo
             /(icab)[\/ ]([23]\.[\d\.]+)/i,                                      // iCab
 
             /\b(libweb)/i                                                       // LibWeb
@@ -968,7 +976,8 @@
 
             // iOS/macOS
             /[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i,             // iOS
-            /(?:ios;fbsv|ios(?=.+ip(?:ad|hone))|ip(?:ad|hone)(?: |.+i(?:pad)?)os)[\/ ]([\w\.]+)/i,
+            /(?:ios;fbsv|ios(?=.+ip(?:ad|hone)|.+apple ?tv)|ip(?:ad|hone)(?: |.+i(?:pad)?)os|apple ?tv.+ios)[\/ ]([\w\.]+)/i,
+            /\btvos ?([\w\.]+)/i,
             /cfnetwork\/.+darwin/i
             ], [[VERSION, /_/g, '.'], [NAME, 'iOS']], [
             /(mac os x) ?([\w\. ]*)/i,
@@ -1000,7 +1009,7 @@
             ], [VERSION, [NAME, BLACKBERRY]], [
             /(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i       // Symbian
             ], [VERSION, [NAME, 'Symbian']], [
-            /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i // Firefox OS
+            /mozilla\/[\d\.]+ \((?:mobile[;\w ]*|tablet|tv|[^\)]*(?:viera|lg(?:l25|-d300)|alcatel ?o.+|y300-f1)); rv:([\w\.]+)\).+gecko\//i // Firefox OS
             ], [VERSION, [NAME, FIREFOX+' OS']], [
             /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i,                             // WebOS
             /webos(?:[ \/]?|\.tv-20(?=2[2-9]))(\d[\d\.]*)/i
@@ -1008,15 +1017,16 @@
             /web0s;.+?(?:chr[o0]me|safari)\/(\d+)/i
                                                                                 // https://webostv.developer.lge.com/develop/specifications/web-api-and-web-engine
             ], [[VERSION, strMapper, {'25':'120','24':'108','23':'94','22':'87','6':'79','5':'68','4':'53','3':'38','2':'538','1':'537','*':'TV'}], [NAME, 'webOS']], [                   
-            /watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i                              // watchOS
+            /watch(?: ?os[,\/ ]|\d,\d\/)([\d\.]+)/i                              // watchOS
             ], [VERSION, [NAME, 'watchOS']], [
 
             // Google ChromeOS
-            /(cros) [\w]+(?:\)| ([\w\.]+)\b)/i                                  // Chromium OS
-            ], [[NAME, "Chrome OS"], VERSION],[
+            /cros [\w]+(?:\)| ([\w\.]+)\b)/i                                    // Chromium OS
+            ], [VERSION, [NAME, 'Chrome OS']],[
 
             // Smart TVs
-            /panasonic;(viera)/i,                                               // Panasonic Viera
+            /kepler ([\w\.]+); (aft|aeo)/i                                      // Vega OS
+            ], [VERSION, [NAME, 'Vega OS']],[
             /(netrange)mmh/i,                                                   // Netrange
             /(nettv)\/(\d+\.[\w\.]+)/i,                                         // NetTV
 
@@ -1142,25 +1152,25 @@
             };
         }
 
-        if (!NAVIGATOR_UADATA) {
-            IData.prototype.then = function (cb) { 
-                var that = this;
-                var IDataResolve = function () {
-                    for (var prop in that) {
-                        if (that.hasOwnProperty(prop)) {
-                            this[prop] = that[prop];
-                        }
+        IData.prototype.then = function (cb) { 
+            var that = this;
+            var IDataResolve = function () {
+                for (var prop in that) {
+                    if (that.hasOwnProperty(prop)) {
+                        this[prop] = that[prop];
                     }
-                };
-                IDataResolve.prototype = {
-                    is : IData.prototype.is,
-                    toString : IData.prototype.toString
-                };
-                var resolveData = new IDataResolve();
-                cb(resolveData);
-                return resolveData;
+                }
             };
-        }
+            IDataResolve.prototype = {
+                is : IData.prototype.is,
+                toString : IData.prototype.toString,
+                withClientHints : IData.prototype.withClientHints,
+                withFeatureCheck : IData.prototype.withFeatureCheck
+            };
+            var resolveData = new IDataResolve();
+            cb(resolveData);
+            return resolveData;
+        };
 
         return new IData();
     };
@@ -1192,189 +1202,6 @@
     }
 
     function UAItem (itemType, ua, rgxMap, uaCH) {
-
-        this.get = function (prop) {
-            if (!prop) return this.data;
-            return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
-        };
-
-        this.set = function (prop, val) {
-            this.data[prop] = val;
-            return this;
-        };
-
-        this.setCH = function (ch) {
-            this.uaCH = ch;
-            return this;
-        };
-
-        this.detectFeature = function () {
-            if (NAVIGATOR && NAVIGATOR.userAgent == this.ua) {
-                switch (this.itemType) {
-                    case BROWSER:
-                        // Brave-specific detection
-                        if (NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == TYPEOF.FUNCTION) {
-                            this.set(NAME, 'Brave');
-                        }
-                        break;
-                    case DEVICE:
-                        // Chrome-specific detection: check for 'mobile' value of navigator.userAgentData
-                        if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
-                            this.set(TYPE, MOBILE);
-                        }
-                        // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
-                        if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== TYPEOF.UNDEFINED && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
-                            this.set(MODEL, 'iPad')
-                                .set(TYPE, TABLET);
-                        }
-                        break;
-                    case OS:
-                        // Chrome-specific detection: check for 'platform' value of navigator.userAgentData
-                        if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
-                            this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
-                        }
-                        break;
-                    case RESULT:
-                        var data = this.data;
-                        var detect = function (itemType) {
-                            return data[itemType]
-                                    .getItem()
-                                    .detectFeature()
-                                    .get();
-                        };
-                        this.set(BROWSER, detect(BROWSER))
-                            .set(CPU, detect(CPU))
-                            .set(DEVICE, detect(DEVICE))
-                            .set(ENGINE, detect(ENGINE))
-                            .set(OS, detect(OS));
-                }
-            }
-            return this;
-        };
-
-        this.parseUA = function () {
-            if (this.itemType != RESULT) {
-                rgxMapper.call(this.data, this.ua, this.rgxMap);
-            }
-            switch (this.itemType) {
-                case BROWSER:
-                    this.set(MAJOR, majorize(this.get(VERSION)));
-                    break;
-                case OS:
-                    if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
-                        // Based on the assumption that iOS version is tightly coupled with Safari version
-                        var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
-                        if (realVersion && parseInt(realVersion[1].substring(0,2), 10) >= 26) {
-                            this.set(VERSION, realVersion[1]);  // Set as iOS version
-                        }
-                    }
-                    break;
-            }
-            return this;
-        };
-
-        this.parseCH = function () {
-            var uaCH = this.uaCH,
-                rgxMap = this.rgxMap;
-    
-            switch (this.itemType) {
-                case BROWSER:
-                case ENGINE:
-                    var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
-                    if (brands) {
-                        for (var i=0; i<brands.length; i++) {
-                            var brandName = brands[i].brand || brands[i],
-                                brandVersion = brands[i].version;
-                            if (this.itemType == BROWSER && 
-                                !/not.a.brand/i.test(brandName) && 
-                                (!prevName || 
-                                    (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
-                                    (prevName == EDGE && /WebView2/.test(brandName))
-                                )) {
-                                    brandName = strMapper(brandName, browserHintsMap);
-                                    prevName = this.get(NAME);
-                                    if (!(prevName && !/Chrom/.test(prevName) && /Chrom/.test(brandName))) {
-                                        this.set(NAME, brandName)
-                                            .set(VERSION, brandVersion)
-                                            .set(MAJOR, majorize(brandVersion));
-                                    }
-                                    prevName = brandName;
-                            }
-                            if (this.itemType == ENGINE && brandName == CHROMIUM) {
-                                this.set(VERSION, brandVersion);
-                            }
-                        }
-                    }
-                    break;
-                case CPU:
-                    var archName = uaCH[ARCHITECTURE];
-                    if (archName) {
-                        if (archName && uaCH[BITNESS] == '64') archName += '64';
-                        rgxMapper.call(this.data, archName + ';', rgxMap);
-                    }
-                    break;
-                case DEVICE:
-                    if (uaCH[MOBILE]) {
-                        this.set(TYPE, MOBILE);
-                    }
-                    if (uaCH[MODEL]) {
-                        this.set(MODEL, uaCH[MODEL]);
-                        if (!this.get(TYPE) || !this.get(VENDOR)) {
-                            var reParse = {};
-                            rgxMapper.call(reParse, 'droid 9; ' + uaCH[MODEL] + ')', rgxMap);
-                            if (!this.get(TYPE) && !!reParse.type) {
-                                this.set(TYPE, reParse.type);
-                            }
-                            if (!this.get(VENDOR) && !!reParse.vendor) {
-                                this.set(VENDOR, reParse.vendor);
-                            }
-                        }
-                    }
-                    if (uaCH[FORMFACTORS]) {
-                        var ff;
-                        if (typeof uaCH[FORMFACTORS] !== 'string') {
-                            var idx = 0;
-                            while (!ff && idx < uaCH[FORMFACTORS].length) {
-                                ff = strMapper(uaCH[FORMFACTORS][idx++], formFactorsMap);
-                            }
-                        } else {
-                            ff = strMapper(uaCH[FORMFACTORS], formFactorsMap);
-                        }
-                        this.set(TYPE, ff);
-                    }
-                    break;
-                case OS:
-                    var osName = uaCH[PLATFORM];
-                    if(osName) {
-                        var osVersion = uaCH[PLATFORMVER];
-                        if (osName == WINDOWS) osVersion = (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10');
-                        this.set(NAME, osName)
-                            .set(VERSION, osVersion);
-                    }
-                    // Xbox-Specific Detection
-                    if (this.get(NAME) == WINDOWS && uaCH[MODEL] == 'Xbox') {
-                        this.set(NAME, 'Xbox')
-                            .set(VERSION, undefined);
-                    }           
-                    break;
-                case RESULT:
-                    var data = this.data;
-                    var parse = function (itemType) {
-                        return data[itemType]
-                                .getItem()
-                                .setCH(uaCH)
-                                .parseCH()
-                                .get();
-                    };
-                    this.set(BROWSER, parse(BROWSER))
-                        .set(CPU, parse(CPU))
-                        .set(DEVICE, parse(DEVICE))
-                        .set(ENGINE, parse(ENGINE))
-                        .set(OS, parse(OS));
-            }
-            return this;
-        };
-
         setProps.call(this, [
             ['itemType', itemType],
             ['ua', ua],
@@ -1382,9 +1209,190 @@
             ['rgxMap', rgxMap],
             ['data', createIData(this, itemType)]
         ]);
-
         return this;
     }
+
+    UAItem.prototype.get = function (prop) {
+        if (!prop) return this.data;
+        return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
+    };
+
+    UAItem.prototype.set = function (prop, val) {
+        this.data[prop] = val;
+        return this;
+    };
+
+    UAItem.prototype.setCH = function (ch) {
+        this.uaCH = ch;
+        return this;
+    };
+
+    UAItem.prototype.detectFeature = function () {
+        if (NAVIGATOR && NAVIGATOR.userAgent == this.ua) {
+            switch (this.itemType) {
+                case BROWSER:
+                    // Brave-specific detection
+                    if (NAVIGATOR.brave && typeof NAVIGATOR.brave.isBrave == TYPEOF.FUNCTION) {
+                        this.set(NAME, 'Brave');
+                    }
+                    break;
+                case DEVICE:
+                    // Chrome-specific detection: check for 'mobile' value of navigator.userAgentData
+                    if (!this.get(TYPE) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[MOBILE]) {
+                        this.set(TYPE, MOBILE);
+                    }
+                    // iPadOS-specific detection: identified as Mac, but has some iOS-only properties
+                    if (this.get(MODEL) == 'Macintosh' && NAVIGATOR && typeof NAVIGATOR.standalone !== TYPEOF.UNDEFINED && NAVIGATOR.maxTouchPoints && NAVIGATOR.maxTouchPoints > 2) {
+                        this.set(MODEL, 'iPad')
+                            .set(TYPE, TABLET);
+                    }
+                    break;
+                case OS:
+                    // Chrome-specific detection: check for 'platform' value of navigator.userAgentData
+                    if (!this.get(NAME) && NAVIGATOR_UADATA && NAVIGATOR_UADATA[PLATFORM]) {
+                        this.set(NAME, NAVIGATOR_UADATA[PLATFORM]);
+                    }
+                    break;
+                case RESULT:
+                    var data = this.data;
+                    var detect = function (itemType) {
+                        return data[itemType]
+                                .getItem()
+                                .detectFeature()
+                                .get();
+                    };
+                    this.set(BROWSER, detect(BROWSER))
+                        .set(CPU, detect(CPU))
+                        .set(DEVICE, detect(DEVICE))
+                        .set(ENGINE, detect(ENGINE))
+                        .set(OS, detect(OS));
+            }
+        }
+        return this;
+    };
+
+    UAItem.prototype.parseUA = function () {
+        if (this.itemType != RESULT) {
+            rgxMapper.call(this.data, this.ua, this.rgxMap);
+        }
+        switch (this.itemType) {
+            case BROWSER:
+                this.set(MAJOR, majorize(this.get(VERSION)));
+                break;
+            case OS:
+                if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
+                    // Based on the assumption that iOS version is tightly coupled with Safari version
+                    var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
+                    if (realVersion && parseInt(realVersion[1].substring(0,2), 10) >= 26) {
+                        this.set(VERSION, realVersion[1]);  // Set as iOS version
+                    }
+                }
+                break;
+        }
+        return this;
+    };
+
+    UAItem.prototype.parseCH = function () {
+        var uaCH = this.uaCH,
+            rgxMap = this.rgxMap;
+
+        switch (this.itemType) {
+            case BROWSER:
+            case ENGINE:
+                var brands = uaCH[FULLVERLIST] || uaCH[BRANDS], prevName;
+                if (brands) {
+                    for (var i=0; i<brands.length; i++) {
+                        var brandName = brands[i].brand || brands[i],
+                            brandVersion = brands[i].version;
+                        if (this.itemType == BROWSER && 
+                            !/not.a.brand/i.test(brandName) && 
+                            (!prevName || 
+                                (/Chrom/.test(prevName) && brandName != CHROMIUM) || 
+                                (prevName == EDGE && /WebView2/.test(brandName))
+                            )) {
+                                brandName = strMapper(brandName, browserHintsMap);
+                                prevName = this.get(NAME);
+                                if (!(prevName && !/Chrom/.test(prevName) && /Chrom/.test(brandName))) {
+                                    this.set(NAME, brandName)
+                                        .set(VERSION, brandVersion)
+                                        .set(MAJOR, majorize(brandVersion));
+                                }
+                                prevName = brandName;
+                        }
+                        if (this.itemType == ENGINE && brandName == CHROMIUM) {
+                            this.set(VERSION, brandVersion);
+                        }
+                    }
+                }
+                break;
+            case CPU:
+                var archName = uaCH[ARCHITECTURE];
+                if (archName) {
+                    if (archName && uaCH[BITNESS] == '64') archName += '64';
+                    rgxMapper.call(this.data, archName + ';', rgxMap);
+                }
+                break;
+            case DEVICE:
+                if (uaCH[MOBILE]) {
+                    this.set(TYPE, MOBILE);
+                }
+                if (uaCH[MODEL]) {
+                    this.set(MODEL, uaCH[MODEL]);
+                    if (!this.get(TYPE) || !this.get(VENDOR)) {
+                        var reParse = {};
+                        rgxMapper.call(reParse, 'droid 9; ' + uaCH[MODEL] + ')', rgxMap);
+                        if (!this.get(TYPE) && !!reParse.type) {
+                            this.set(TYPE, reParse.type);
+                        }
+                        if (!this.get(VENDOR) && !!reParse.vendor) {
+                            this.set(VENDOR, reParse.vendor);
+                        }
+                    }
+                }
+                if (uaCH[FORMFACTORS]) {
+                    var ff;
+                    if (typeof uaCH[FORMFACTORS] !== 'string') {
+                        var idx = 0;
+                        while (!ff && idx < uaCH[FORMFACTORS].length) {
+                            ff = strMapper(uaCH[FORMFACTORS][idx++], formFactorsMap);
+                        }
+                    } else {
+                        ff = strMapper(uaCH[FORMFACTORS], formFactorsMap);
+                    }
+                    this.set(TYPE, ff);
+                }
+                break;
+            case OS:
+                var osName = uaCH[PLATFORM];
+                if(osName) {
+                    var osVersion = uaCH[PLATFORMVER];
+                    if (osName == WINDOWS) osVersion = (parseInt(majorize(osVersion), 10) >= 13 ? '11' : '10');
+                    this.set(NAME, osName)
+                        .set(VERSION, osVersion);
+                }
+                // Xbox-Specific Detection
+                if (this.get(NAME) == WINDOWS && uaCH[MODEL] == 'Xbox') {
+                    this.set(NAME, 'Xbox')
+                        .set(VERSION, undefined);
+                }           
+                break;
+            case RESULT:
+                var data = this.data;
+                var parse = function (itemType) {
+                    return data[itemType]
+                            .getItem()
+                            .setCH(uaCH)
+                            .parseCH()
+                            .get();
+                };
+                this.set(BROWSER, parse(BROWSER))
+                    .set(CPU, parse(CPU))
+                    .set(DEVICE, parse(DEVICE))
+                    .set(ENGINE, parse(ENGINE))
+                    .set(OS, parse(OS));
+        }
+        return this;
+    };
 
     function UAParser (ua, extensions, headers) {
 

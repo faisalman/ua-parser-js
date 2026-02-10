@@ -1,7 +1,7 @@
 {
   "title": "UAParser.js PRO Business",
   "name": "@ua-parser-js/pro-business",
-  "version": "2.0.6",
+  "version": "2.0.9",
   "author": "Faisal Salman <f@faisalman.com> (http://faisalman.com)",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment",
   "keywords": [
@@ -190,6 +190,21 @@
       "import": "./src/main/ua-parser.mjs",
       "types": "./src/main/ua-parser.d.ts"
     },
+    "./bot-detection": {
+      "require": "./src/bot-detection/bot-detection.js",
+      "import": "./src/bot-detection/bot-detection.mjs",
+      "types": "./src/bot-detection/bot-detection.d.ts"
+    },
+    "./browser-detection": {
+      "require": "./src/browser-detection/browser-detection.js",
+      "import": "./src/browser-detection/browser-detection.mjs",
+      "types": "./src/browser-detection/browser-detection.d.ts"
+    },
+    "./device-detection": {
+      "require": "./src/device-detection/device-detection.js",
+      "import": "./src/device-detection/device-detection.mjs",
+      "types": "./src/device-detection/device-detection.d.ts"
+    },
     "./enums": {
       "require": "./src/enums/ua-parser-enums.js",
       "import": "./src/enums/ua-parser-enums.mjs",
@@ -207,7 +222,8 @@
     }
   },
   "files": [
-    "dist",
+    "dist/*.?(m)js",
+    "dist/icons",
     "src"
   ],
   "bin": "./script/cli.js",
@@ -217,9 +233,9 @@
     "fuzz": "jazzer ./test/fuzz/redos.js --sync",
     "test": "./script/test-all.sh",
     "test:dts-lint": "tsd --typings src/main/ua-parser.d.ts --files test/static/dts-lint.ts",
-    "test:eslint": "eslint src && eslint script",
+    "test:eslint": "eslint --no-config-lookup src",
     "test:jshint": "jshint src/main",
-    "test:lockfile-lint": "npx lockfile-lint -p package-lock.json",
+    "test:lockfile-lint": "lockfile-lint -p package-lock.json",
     "test:mocha": "mocha --recursive test/unit",
     "test:playwright": "npx playwright install && playwright test test/e2e --browser all"
   },
@@ -231,8 +247,10 @@
   "devDependencies": {
     "@babel/parser": "7.15.8",
     "@babel/traverse": "7.23.2",
-    "@playwright/test": "^1.49.0",
+    "@playwright/test": "^1.57.0",
+    "eslint": "^9.39.1",
     "jshint": "~2.13.6",
+    "lockfile-lint": "^4.14.1",
     "mocha": "~8.2.0",
     "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",

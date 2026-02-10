@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Extensions for UAParser.js v2.0.6
+/*  Extensions for UAParser.js v2.0.9
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     UAParser.js PRO Business License */
@@ -22,14 +22,27 @@ const INAPP     = 'inapp';
 const MEDIAPLAYER = 'mediaplayer';
 const LIBRARY    = 'library';
 
+// Helper to normalize specific email client names
+const normalizeEmailName = function (str) {
+    const map = {
+        'YahooMobile': 'Yahoo Mail',
+        'YahooMail': 'Yahoo Mail',
+        'K-9': 'K-9 Mail',
+        'K-9 Mail': 'K-9 Mail',
+        'Zdesktop': 'Zimbra',
+        'zdesktop': 'Zimbra'
+    };
+    return map[str] || str;
+};
+
 //////////////////////
 // COMMAND LINE APPS
 /////////////////////
 
 const CLIs = Object.freeze({
     browser : [
-        // wget / curl / Lynx / ELinks / HTTPie
-        [/(wget|curl|lynx|elinks|httpie)[\/ ]\(?([\w\.-]+)/i], [NAME, VERSION, [TYPE, CLI]]
+        // wget / curl / Lynx / ELinks / HTTPie / PowerShell
+        [/(wget|curl|lynx|elinks|httpie|powershell)[\/ ]\(?([\w\.-]+)/i], [NAME, VERSION, [TYPE, CLI]]
     ]
 });
 
@@ -117,10 +130,10 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Algolia Crawler / BLEXBot / Diffbot / FirecrawlAgent / HuggingFace-Bot / Linespider / MSNBot / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / PanguBot / Replicate-Bot / RunPod-Bot / Webzio-Extended / Screaming Frog SEO Spider / Startpage / Timpibot / Together-Bot / VelenPublicWebCrawler / xAI-Bot / YisouSpider / YouBot / ZumBot
+            // aiHitBot / Algolia Crawler / BLEXBot / Cloudflare AutoRAG / Diffbot / FirecrawlAgent / HuggingFace-Bot / Linespider / MSNBot / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / PanguBot / Replicate-Bot / RunPod-Bot / Webzio-Extended / Screaming Frog SEO Spider / Startpage / Timpibot / Together-Bot / VelenPublicWebCrawler / xAI-Bot / YisouSpider / YouBot / ZumBot
             // Cotoyogi - https://ds.rois.ac.jp/en_center8/en_crawler/
             // Freespoke - https://docs.freespoke.com/search/bot/
-            /((?:aihit|blex|diff|huggingface-|msn|pangu|replicate-|runpod-|timpi|together-|xai-|you|zum)bot|(?:magpie-|velenpublicweb)crawler|(?:chatglm-|line|screaming frog seo |yisou)spider|cotoyogi|firecrawlagent|freespoke|omgili(?:bot)?|openai image downloader|startpageprivateimageproxy|twinagent|webzio-extended)\/?([\w\.]*)/i
+            /((?:aihit|blex|diff|huggingface-|msn|pangu|replicate-|runpod-|timpi|together-|xai-|you|zum)bot|(?:magpie-|velenpublicweb)crawler|(?:chatglm-|line|screaming frog seo |yisou)spider|cloudflare-autorag|cotoyogi|(?:firecrawl|twin)agent|freespoke|omgili(?:bot)?|openai image downloader|startpageprivateimageproxy|webzio-extended)\/?([\w\.]*)/i
         ],
         [NAME, VERSION, [TYPE, CRAWLER]],
 
@@ -132,7 +145,7 @@ const Crawlers = Object.freeze({
 
         [
             // Google Bots
-            /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|safety))/i,
+            /((?:adsbot|apis|mediapartners)-google(?:-mobile)?|google-?(?:other|cloudvertexbot|extended|notebooklm|safety))/i,
 
             // AI2Bot - https://allenai.org/crawler
             // DataForSeoBot - https://dataforseo.com/dataforseo-bot
@@ -143,7 +156,7 @@ const Crawlers = Object.freeze({
             // v0bot - https://vercel.com/docs/bot-management
             // Yahoo! Slurp - http://help.yahoo.com/help/us/ysearch/slurp
             // Botify / Bytespider / DeepSeekBot / Qihoo 360Spider / SeekportBot / TikTokSpider
-            /\b((ai2|aspiegel|dataforseo|deepseek|imagesift|petal|seekport|turnitin|v0)bot|360spider-?(image|video)?|baidu-ads|botify|(byte|tiktok)spider|cohere-training-data-crawler|elastic(?=\/s)|marginalia|siteimprove(?=bot|\.com)|teoma|webzio|yahoo! slurp)/i
+            /\b((ai2|aspiegel|atlassian-|dataforseo|deepseek|imagesift|petal|seekport|turnitin|v0)bot|360spider-?(image|video)?|baidu-ads|botify|(byte|tiktok)spider|cohere-training-data-crawler|elastic(?=\/s)|marginalia|siteimprove(?=bot|\.com)|teoma|webzio|yahoo! slurp)/i
         ], 
         [NAME, [TYPE, CRAWLER]]
     ]
@@ -229,25 +242,55 @@ const ExtraDevices = Object.freeze({
     ]
 });
 
-///////////////
+//////////////
 // EMAIL APPS
 //////////////
 
 const Emails = Object.freeze({
     browser : [
-        [
-        // Evolution / Kontact/KMail[2] / [Microsoft/Mac] Outlook / Thunderbird
-        // Airmail / BlueMail / DaumMail / eMClient / Foxmail / NaverMailApp / Polymail
-        // ProtonMail / SparkDesktop / Sparrow / Yahoo! Mail / Zimbra / ZohoMail-Desktop
-        /((?:air|blue|daum|fox|poly|proton)mail|emclient|evolution|kmail2?|kontact|(?:microsoft |mac)?outlook(?:-express)?|navermailapp|(?!chrom.+)sparrow|sparkdesktop|thunderbird|yahoo|zohomail-desktop)(?:m.+ail; |[\/ ])([\w\.]+)/i,
+        // 1. Specific Android Mail Rule
+        [/(android)\/([\w\.-]+email)/i], 
+        [NAME, VERSION, [TYPE, EMAIL]], 
 
-        // Apple's Mail
-        /(mail)\/([\w\.]+) cf/i
-        ], [NAME, VERSION, [TYPE, EMAIL]], [
+        // 2. Standard Email Clients
+        [
+            new RegExp(
+                '(' +
+                // Clients ending in 'mail' (Case 1: Prefix + optional space + [e]mail)
+                // Covers: AirMail, Claws Mail, FairEmail, SamsungEmail, Yahoo Mail, etc.
+                '(?:air|aqua|blue|claws|daum|fair|fox|k-9|mac|nylas|pegasus|poco|poly|proton|samsung|squirrel|yahoo) ?e?mail(?:-desktop| app| bridge)?|' +
+                // Standalone / Specific Names
+                'microsoft outlook|r2mail2|spicebird|turnpike|yahoomobile|' +
+                // Microsoft & Outlook Variants
+                '(?:microsoft )?outlook(?:-express)?|macoutlook|windows-live-mail|' +
+                // Specific Clients
+                'alpine|balsa|barca|canary|emclient|eudora|evolution|geary|gnus|' +
+                'horde::imp|incredimail|kmail2?|kontact|lotus-notes|' +
+                'mail(?:bird|mate|spring)|mutt|navermailapp|newton|nine|postbox|' +
+                'rainloop|roundcube webmail|spar(?:row|kdesktop)|sylpheed|' +
+                'the bat!|thunderbird|trojita|tutanota-desktop|wanderlust|' +
+                'zdesktop|zohomail-desktop' +
+                ')' +
+                // Separator
+                '(?:m.+ail; |[\\/ ])' +
+                // Version (Updated to allow hyphens for Turnpike)
+                '([\\w\\.-]+)', 
+                'i'
+            )
+        ], 
+        [
+            [NAME, normalizeEmailName], 
+            VERSION, 
+            [TYPE, EMAIL]
+        ],
+
+        // 3. Apple Mail Context
+        [/(mail)\/([\w\.]+) cf/i], 
+        [NAME, VERSION, [TYPE, EMAIL]],
         
-        // Zimbra
-        /zdesktop\/([\w\.]+)/i
-        ], [VERSION, [NAME, 'Zimbra'], [TYPE, EMAIL]]
+        // 4. Zimbra Server
+        [/(zimbra)\/([\w\.-]+)/i], 
+        [NAME, VERSION, [TYPE, EMAIL]]
     ]
 });
 
@@ -258,35 +301,36 @@ const Emails = Object.freeze({
 const Fetchers = Object.freeze({
     browser : [
         [
-            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot
+            // Asana / Bitlybot / Better Uptime / BingPreview / Blueno / Cohere-AI / HubSpot Page Fetcher / kakaotalk-scrap / Mastodon / MicrosoftPreview / Pinterestbot / Redditbot / Rogerbot / SiteAuditBot / Telegrambot / Twitterbot / UptimeRobot / WhatsApp
             // AhrefsSiteAudit - https://ahrefs.com/robot/site-audit
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
+            // FlipboardProxy - https://about.flipboard.com/proxy-service/
             // Google Site Verifier / Meta / Yahoo! Japan
             // Iframely - https://iframely.com/docs/about
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|flipboardproxy|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
+
+            // Nova Act - https://github.com/aws/nova-act
+            /agent-(novaact)\/([\w\.]+)/i,
 
             // Skype
             /(skypeuripreview) preview\/([\w\.]+)/i,
 
             // Slackbot - https://api.slack.com/robots
-            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i,
-            
-            // WhatsApp
-            /(whatsapp)\/([\w\.]+)/i
+            /(slack(?:bot)?(?:-imgproxy|-linkexpanding)?) ([\w\.]+)/i
         ], 
         [NAME, VERSION, [TYPE, FETCHER]],
 
         [
             // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / KeybaseBot / Snapchat / Vercelbot / Yandex Bots
-            /((?:better uptime |keybase|telegram|vercel)bot|chrome-lighthouse|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
+            /((?:better uptime |keybase|telegram|vercel)bot|lighthouse$|feedfetcher-google|gemini-deep-research|google(?:imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],
@@ -389,13 +433,15 @@ const MediaPlayers = Object.freeze({
 
 const Libraries = Object.freeze({
     browser : [
-        // Apache-HttpClient/Axios/go-http-client/got/GuzzleHttp/Java[-HttpClient]/jsdom/libwww-perl/lua-resty-http/Needle/node-fetch/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/Scrapy/superagent
         [
-            /^(apache-httpclient|axios|(?:go|java)-http-client|got|guzzlehttp|java|libwww-perl|lua-resty-http|needle|node-(?:fetch|superagent)|okhttp|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|scrapy)\/([\w\.]+)/i,
+            // Apache-HttpClient/Axios/Bun/Dart/go-http-client/got/GuzzleHttp/hackney/http.rb/Java[-HttpClient]/Jetty/jsdom/libwww-perl/lua-resty-http/Needle/Node.js/node-fetch/ocaml-cohttp/OkHttp/PHP-SOAP/PostmanRuntime/python-urllib/python-requests/rest-client/Scrapy/superagent
+            /^((?:apache|go|java)-http-?client|axios|bun|dart|deno|got|(?:guzzle|lua-resty-|ocaml-co|ok)http|hackney|http\.rb|java|jetty|libwww-perl|needle|node(?:\.js|-fetch|-superagent)|php-soap|postmanruntime|python-(?:httpx|urllib[23]?|requests)|rest-client|scrapy)\/([\w\.]+)/i,
             /(adobeair|aiohttp|jsdom)\/([\w\.]+)/i,
             /(nutch)-([\w\.-]+)(\(|$)/i,
             /\((java)\/([\w\.]+)/i
-        ], [NAME, VERSION, [TYPE, LIBRARY]]
+        ], [NAME, VERSION, [TYPE, LIBRARY]], [
+            /(node-fetch|undici)/i
+        ], [NAME, [TYPE, LIBRARY]]
     ]
 });
 

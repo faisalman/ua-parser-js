@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Logitech",
+        "ua": "Dalvik/2.1.0 (Linux; U; Android 11; GR0006 Build/SQ02K.00.0018)",
+        "expect": {
+            "vendor": "Logitech",
+            "model": "GR0006",
+            "type": "console"
+        }
+    }
+]

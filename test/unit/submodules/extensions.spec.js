@@ -3,9 +3,9 @@ const assert = require('assert');
 const parseJS = require('@babel/parser').parse;
 const traverse = require('@babel/traverse').default;
 const safe = require('safe-regex');
-const { UAParser } = require('../../src/main/ua-parser');
-const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries, Vehicles } = require('../../src/extensions/ua-parser-extensions');
-const { BrowserType, OSName, Extension } = require('../../src/enums/ua-parser-enums');
+const { UAParser } = require('../../../src/main/ua-parser');
+const { Bots, CLIs, Crawlers, Emails, Fetchers, InApps, Libraries, Vehicles } = require('../../../src/extensions/ua-parser-extensions');
+const { BrowserType, OSName, Extension } = require('../../../src/enums/ua-parser-enums');
 const { CLI, Crawler, Email, Fetcher, Library } = Extension.BrowserName;
 
 describe('Extensions', () => {
@@ -19,7 +19,7 @@ describe('Extensions', () => {
         ['Vehicles', 'vehicle', Vehicles]
     ]
     .forEach(([desc, path, ext]) => {
-        const tests = require(`../data/ua/extension/${path}.json`);
+        const tests = require(`../../data/ua/extension/${path}.json`);
         describe(desc, () => {
             tests.forEach((test) => {
                 it(`Can detect ${test.desc}: "${test.ua}"`, () => {
@@ -38,17 +38,33 @@ describe('Extensions', () => {
         });
     });
 
+    // Existing test cases
     const outlook = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.9126; Microsoft Outlook 16.0.9126; ms-office; MSOffice 16)';
     const thunderbird = 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Thunderbird/78.13.0';
     const axios = 'axios/1.3.5';
     const jsdom = 'Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/20.0.3';
     const scrapy = 'Scrapy/1.5.0 (+https://scrapy.org)';
 
+    // New test cases for updated Regex logic
+    const macOutlook = 'MacOutlook/16.61.22041701 (Intel Mac OS X 10.15.7)';
+    const yahooMobile = 'YahooMobile/1.0 (mail; 3.0.5.1311380)';
+
     assert.equal(UAParser(scrapy, Bots).browser.name, Library.SCRAPY);
 
     const emailParser = new UAParser(Emails);
+    
+    // Verify Standard Outlook
     assert.deepEqual(emailParser.setUA(outlook).getBrowser(), {name: Email.MICROSOFT_OUTLOOK, version: "16.0.9126", major: "16", type: BrowserType.EMAIL});
+    
+    // Verify Thunderbird
     assert.deepEqual(emailParser.setUA(thunderbird).getBrowser(), {name: Email.THUNDERBIRD, version: "78.13.0", major: "78", type: BrowserType.EMAIL});
+
+    // Verify New MacOutlook Logic (Distinguishing it from Windows Outlook)
+    assert.deepEqual(emailParser.setUA(macOutlook).getBrowser(), {name: Email.MICROSOFT_OUTLOOK_MAC, version: "16.61.22041701", major: "16", type: BrowserType.EMAIL});
+
+    // Verify Yahoo Mobile Logic (Tightened Regex)
+    // Note: We expect 'Yahoo Mail' (Email.YAHOO_MAIL) because of the normalization helper.
+    assert.deepEqual(emailParser.setUA(yahooMobile).getBrowser(), {name: Email.YAHOO_MAIL, version: "1.0", major: "1", type: BrowserType.EMAIL});
 
     const libraryParser = new UAParser(Libraries);
     assert.deepEqual(libraryParser.setUA(axios).getBrowser(), {name: Library.AXIOS, version: "1.3.5", major: "1", type: BrowserType.LIBRARY});

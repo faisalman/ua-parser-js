@@ -162,6 +162,16 @@
         }
     },
     {
+        "desc"    : "Aloha",
+        "ua"      : "Mozilla/5.0 (iPad; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Version/19.0 Safari/605.1.15 AlohaBrowser/7.5.1",
+        "expect"  :
+        {
+            "name"    : "Aloha",
+            "version" : "7.5.1",
+            "major"   : "7"
+        }
+    },
+    {
         "desc"    : "Arora",
         "ua"      : "Mozilla/5.0 (Windows; U; Windows NT 5.1; de-CH) AppleWebKit/523.15 (KHTML, like Gecko, Safari/419.3) Arora/0.2",
         "expect"  :
@@ -169,6 +179,16 @@
             "name"    : "Arora",
             "version" : "0.2",
             "major"   : "0"
+        }
+    },
+    {
+        "desc"    : "Atlas",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Atlas/1.0",
+        "expect"  :
+        {
+            "name"    : "Atlas",
+            "version" : "1.0",
+            "major"   : "1"
         }
     },
     {
@@ -199,6 +219,16 @@
             "name"    : "AVG Secure Browser",
             "version" : "72.0.719.123",
             "major"   : "72"
+        }
+    },
+    {
+        "desc"    : "Avira Secure Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Avira/129.0.0.0",
+        "expect"  :
+        {
+            "name"    : "Avira Secure Browser",
+            "version" : "129.0.0.0",
+            "major"   : "129"
         }
     },
     {
@@ -857,6 +887,16 @@
         }
     },
     {
+        "desc"    : "Hi Browser",
+        "ua"      : "Mozilla/5.0 (Linux; Android 14; en; TECNO BG6m Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 HiBrowser/v2.25.6.3;lang=es;nation=DO;locale=es_DO UWS/ Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "HiBrowser",
+            "version" : "2.25.6.3",
+            "major"   : "2"
+        }
+    },
+    {
         "desc"    : "HuaweiBrowser",
         "ua"      : "Mozilla/5.0 (Linux; Android 6.0.1; LYA-AL00；HMSCore/4.0.0 GMS/10.4 ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.102 Mobile Safari/537.36",
         "expect"  :
@@ -1064,6 +1104,36 @@
             "name"    : "Konqueror",
             "version" : "5.0.97",
             "major"   : "5"
+        }
+    },
+    {
+        "desc"    : "Lighthouse",
+        "ua"      : "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse",
+        "expect"  :
+        {
+            "name"    : "Lighthouse",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Luakit",
+        "ua"      : "Mozilla/5.0 (Linux x86_64) AppleWebKit/535.4+ (KHTML, like Gecko) WebKitGTK+/1.6.3 luakit",
+        "expect"  :
+        {
+            "name"    : "luakit",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Norton",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Norton/130.0.0.0",
+        "expect"  :
+        {
+            "name"    : "Norton Private Browser",
+            "version" : "130.0.0.0",
+            "major"   : "130"
         }
     },
     {
@@ -1599,6 +1669,16 @@
         }
     },
     {
+        "desc"    : "Opera Neon",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36 MMS/1.0.2531.0",
+        "expect"  :
+        {
+            "name"    : "Opera Neon",
+            "version" : "1.0.2531.0",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Opera Tablet",
         "ua"      : "Opera/9.80 (Windows NT 6.1; Opera Tablet/15165; U; en) Presto/2.8.149 Version/11.1",
         "expect"  :
@@ -1947,6 +2027,36 @@
             "name"    : "Slimjet",
             "version" : "20.0.2.0",
             "major"   : "20"
+        }
+    },
+    {
+        "desc"    : "Steam Client",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64; Valve Steam Client/default/1705108172) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Steam Big Picture",
+        "ua"      : "Mozilla/5.0 (Linux; U; X11; en-US; Valve Steam Tenfoot/1660688177; ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
+        }
+    },
+    {
+        "desc"    : "Steam Overlay",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Valve Steam GameOverlay/default/1741737356) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.183 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Steam",
+            "version" : "undefined",
+            "major"   : "undefined"
         }
     },
     {
@@ -2459,6 +2569,26 @@
         }
     },
     {
+        "desc"    : "Brave",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; SM-T870) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/88.0.4324.96 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Brave",
+            "version" : "88.0.4324.96",
+            "major"   : "88"
+        }
+    },
+    {
+        "desc"    : "Brave",
+        "ua"      : "Mozilla/5.0 (Linux; Android 11; Samsung Galaxy F62 SM-E625F Build/SME625F512091028;) AppleWebKit/537.36 (KHTML, like Gecko) Brave/1.75.110 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Brave",
+            "version" : "1.75.110",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Brave Browser",
         "ua"      : "Brave/4.5.16 CFNetwork/893.13.1 Darwin/17.3.0 (x86_64)",
         "expect"  :
@@ -2700,6 +2830,16 @@
             "name"   : "TikTok",
             "version": "28.3.4",
             "major"  : "28",
+            "type"    : "inapp"
+        }
+    },
+      {
+        "desc"     : "TikTok",
+        "ua"       : "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari/604.1 trill_43.0.0 BytedanceWebview/d8a21c6",
+        "expect"   : {
+            "name"   : "TikTok",
+            "version": "43.0.0",
+            "major"  : "43",
             "type"    : "inapp"
         }
     },
