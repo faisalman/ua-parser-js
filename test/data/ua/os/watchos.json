@@ -25,5 +25,14 @@
             "name"    : "watchOS",
             "version" : "5.3.8"
         }
+    },
+    {
+        "desc"    : "watchOS",
+        "ua"      : "BBCNewsUKWatchApp/4.3.0 (Watch2,4; watchOS 3.2.2)",
+        "expect"  :
+        {
+            "name"    : "watchOS",
+            "version" : "3.2.2"
+        }
     }
 ]

@@ -54,20 +54,75 @@
     - `browser.name`, `browser.type`, `cpu.architecture`, `device.type`, `device.vendor`, `engine.name`, `os.name`
 
   - **`'ua-parser-js/extensions'`**: Predefined extensions for various use cases:
-    - `Bots`, `Crawlers`, `CLIs`, `Emails`, `ExtraDevices`, `Fetchers`, `InApps`, `Libraries`, `Mediaplayers`
+    - `Bots`, `Crawlers`, `CLIs`, `Emails`, `ExtraDevices`, `Fetchers`, `InApps`, `Libraries`, `Mediaplayers`, `Vehicles`
 
   - **`'ua-parser-js/helpers'`**: Provides utility methods to extend detection functionality:
-    - `getDeviceVendor()`: Guesses the device vendor based on its model name
-    - `isAppleSilicon()`: Detects Apple Silicon device properties
-    - `isAIBot()`: Checks if the user-agent is an AI bot
+    - `isFrozenUA()`: Checks if the user-agent matches a frozen/reduced user-agent pattern
+
+  - **`'ua-parser-js/bot-detection'`**:
+    - `isAIAssistant()`: Checks if the user-agent is an AI assistant
+    - `isAICrawler()`: Checks if the user-agent is an AI crawler
     - `isBot()`: Checks if the user-agent is a bot
+
+  - **`'ua-parser-js/browser-detection'`**:
     - `isChromeFamily()`: Checks if the browser is Chrome-based (uses Blink engine) — e.g., New Opera, New Edge, Vivaldi, Brave, Arc, etc.
     - `isElectron()`: Detects if current window is running within Electron
     - `isFromEU()`: Detects if current browser's timezone is from an EU country
-    - `isFrozenUA()`: Checks if the user-agent matches a frozen/reduced user-agent pattern
     - `isStandalonePWA()`: Detects if current window is a standalone PWA
 
+  - **`'ua-parser-js/device-detection'`**:
+    - `getDeviceVendor()`: Guesses the device vendor based on its model name
+    - `isAppleSilicon()`: Detects Apple Silicon device properties
+
 --- 
+
+## Version 2.0.9
+- Restore icons directory
+- Add new browser: Aloha Browser, Avira Secure Browser, Lighthouse, Luakit, Norton Private Browser
+- Add new OS: Vega OS
+- Improve OS detection: watchOS
+- `extensions` submodule:
+    - Add new crawler: atlassian-bot, Cloudflare-AutoRAG, Google-NotebookLM, SemrushBot-SWA
+    - Add new fetcher: FlipboardProxy
+
+## Version 2.0.8
+
+- Resolve syntax error related to import renaming in ESM build
+- Add new browser: HiBrowser, Opera Neon
+- Add new engine: Dillo
+- Improve browser detection: Brave, TikTok
+- Improve device detection: OnePlus
+- Improve OS detection: Firefox OS
+- `extensions` submodule:
+    - Add new CLI: PowerShell
+    - Add new email: Alpine, Android, AquaMail, Balsa, Barca, Canary, Claws Mail, eM Client, Eudora, FairEmail, Geary, Gnus, Horde::IMP, Lotus-Notes, IncrediMail, K-9 Mail, Mailbird, MailMate, Mailspring, Mutt, Newton, Nine, NylasMail, Outlook-Express, Pegasus Mail, PocoMail, Postbox, ProtonMail Bridge, Quala, R2Mail2, Rainloop, Roundcube Webmail, SamsungEmail, Spicebird, SquirrelMail, Sylpheed, The Bat!, Trojita, Turnpike, tutanota-desktop, Wanderlust, Windows-Live-Mail
+    - Add new library: http.rb, Jetty, ocaml-cohttp
+- `helpers` submodule:
+    - Add new method: `getOutlookEdition()` to map Outlook versions to their marketing editions
+
+## Version 2.0.7
+
+- Add support for chaining `withClientHints()` & `withFeatureCheck()`
+- Add new browser: Atlas, Steam
+- Add new device vendor: Anbernic, Logitech, Valve
+- Improve device detection: Xiaomi
+- Improve OS detection: iOS
+- Split `helpers` submodule into several new submodules:
+    - `bot-detection`:
+        - `isAIAssistant()`
+        - `isAICrawler()`
+        - `isBot()`
+    - `browser-detection`
+        - `isChromeFamily()`
+        - `isElectron()`
+        - `isFromEU()`
+        - `isStandalonePWA()`
+    - `device-detection`
+        - `getDeviceVendor()`
+        - `isAppleSilicon()`
+- Update `extensions` submodule:
+    - Add new fetcher: Nova Act
+    - Add new library: Bun, Dart, Deno, hackney, Node.js, rest-client, undici
 
 ## Version 2.0.6
 - Add new CLI feature: processing batch user-agent data from file and output as JSON

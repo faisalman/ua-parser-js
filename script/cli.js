@@ -11,7 +11,7 @@ try {
 
     if (!process.argv[2].startsWith('-')) {
 
-        const results = process.argv.slice(2).map(ua => UAParser(ua));
+        const results = process.argv.slice(2).map(ua => UAParser(ua, [Bots, Emails, ExtraDevices, InApps, Vehicles]));
         console.log(JSON.stringify(results, null, 4));
         process.exit(0);
 

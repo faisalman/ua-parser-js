@@ -94,7 +94,7 @@
         "ua"      : "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse",
         "expect"  :
         {
-            "name"    : "Chrome-Lighthouse",
+            "name"    : "Lighthouse",
             "version" : "undefined",
             "type"    : "fetcher"
         }
@@ -135,6 +135,16 @@
         "expect"  :
         {
             "name"    : "DuckAssistBot",
+            "version" : "1.2",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "FlipboardProxy",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko/20100101 Firefox/49.0 (FlipboardProxy/1.2; +http://flipboard.com/browserproxy)",
+        "expect"  :
+        {
+            "name"    : "FlipboardProxy",
             "version" : "1.2",
             "type"    : "fetcher"
         }
@@ -286,6 +296,16 @@
         {
             "name"    : "MistralAI-User",
             "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "NovaAct",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Agent-NovaAct/0.9",
+        "expect"  :
+        {
+            "name"    : "NovaAct",
+            "version" : "0.9",
             "type"    : "fetcher"
         }
     },

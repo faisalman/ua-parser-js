@@ -160,6 +160,16 @@
         }
     },
     {
+        "desc"    : "atlassian-bot",
+        "ua"      : "atlassian-bot",
+        "expect"  :
+        {
+            "name"    : "atlassian-bot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Baidu ADS",
         "ua"      : "Baidu-ADS",
         "expect"  :
@@ -346,6 +356,16 @@
         {
             "name"    : "Claude-Web",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Cloudflare AutoRAG",
+        "ua"      : "Cloudflare-AutoRAG (https://developers.cloudflare.com/autorag; autorag@cloudflare.com)",
+        "expect"  :
+        {
+            "name"    : "Cloudflare-AutoRAG",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -700,6 +720,16 @@
         }
     },
     {
+        "desc"    : "Google-NotebookLM",
+        "ua"      : "Google-NotebookLM",
+        "expect"  :
+        {
+            "name"    : "Google-NotebookLM",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Google-Safety",
         "ua"      : "Google-Safety",
         "expect"  :
@@ -1047,6 +1077,16 @@
         {
             "name"    : "SemrushBot-OCOB",
             "version" : "1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "SemrushBot for SEO Writing Assistant tool",
+        "ua"      : "Mozilla/5.0 (compatible; SemrushBot-SWA/0.1; +http://www.semrush.com/bot.html)",
+        "expect"  :
+        {
+            "name"    : "SemrushBot-SWA",
+            "version" : "0.1",
             "type"    : "crawler"
         }
     },

@@ -152,3 +152,45 @@ test.describe('request.headers can be passed in form of a Headers object', () =>
         expect(uap.ua).toBe('myBrowser/1.0');
     });
 });
+
+test.describe('Chaining withFeatureCheck() & withClientHints() in client-side development', () => {
+
+    test('Chain', async ({ page, browserName }) => {   
+        await page.addInitScript((browserName) => {
+            Object.defineProperty(navigator, 'userAgent', {
+                value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15'
+            });
+            Object.defineProperty(navigator, 'standalone', {
+                value: true
+            });
+            Object.defineProperty(navigator, 'maxTouchPoints', {
+                value: 3
+            });
+            if (browserName == 'chromium') {
+                Object.defineProperty(navigator, 'userAgentData', {
+                    value: {
+                        brands: [],
+                        platform: '',
+                        mobile: false,
+                        getHighEntropyValues: () => {
+                            return Promise.resolve({
+                                formFactors: 'VR'
+                            });
+                        }
+                    }
+                });
+            }
+        }, browserName);
+        await page.goto(localHtml);
+        // @ts-ignore
+        const fc2ch = await page.evaluate(async () => await UAParser().withFeatureCheck().then(res => res.withClientHints()));
+        const ch2fc = await page.evaluate(async () => await UAParser().withClientHints().then(res => res.withFeatureCheck()));
+        if (browserName == 'chromium') {
+            expect(fc2ch).toHaveProperty('device.type', 'xr');      // overwrite by client hints
+            expect(ch2fc).toHaveProperty('device.type', 'tablet');  // overwrite by feature check
+        } else {
+            expect(fc2ch).toHaveProperty('device.type', 'tablet');  // no client hints found
+            expect(ch2fc).toHaveProperty('device.type', 'tablet');
+        }
+    });
+});
