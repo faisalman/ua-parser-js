@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Valve",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; Valve Steam Client/Steam Deck [Steam Deck Beta]/default/0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.183 Safari/537.36",
+        "expect": {
+            "vendor": "Valve",
+            "model": "Steam Deck",
+            "type": "console"
+        }
+    }
+]

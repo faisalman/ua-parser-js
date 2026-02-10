@@ -142,5 +142,41 @@
             "name"    : "iOS",
             "version" : "11.2.5"
         }
+    },
+    {
+        "desc": "iOS",
+        "ua": "iPlayTV/3.3.9 (Apple TV; iOS 16.1; Scale/1.00)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "16.1"
+        }
+    },
+    {
+        "desc": "iOS",
+        "ua": "itunesstored/1.0 iOS/8.4.4 AppleTV/7.8 model/AppleTV3,2 build/12H937 (3; dt:12)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "8.4.4"
+        }
+    },
+    {
+        "desc": "tvOS",
+        "ua": "iMPlayer/1.6.1 (tvOS 26.0.1)",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "26.0.1"
+        }
+    },
+    {
+        "desc": "tvOS",
+        "ua": "otg/1.5.1 (AppleTv Apple TV 4; tvOS16.2; appletv.client) libcurl/7.58.0 OpenSSL/1.0.2o zlib/1.2.11 clib/1.8.56",
+        "expect"  :
+        {
+            "name"    : "iOS",
+            "version" : "16.2"
+        }
     }
 ]

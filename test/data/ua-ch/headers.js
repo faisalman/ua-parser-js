@@ -14,6 +14,34 @@ const UACHTests = [
         }
     },
     {
+        desc: 'AVG Secure Browser',
+        headers : {
+            'sec-ch-ua': '"AVG Secure Browser";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
+        },
+        expect: {
+            browser : {
+                name : 'AVG Secure Browser',
+                version : '123',
+                major : '123',
+                type : undefined
+            }
+        }
+    },
+    {
+        desc: 'Avira Secure Browser',
+        headers : {
+            'sec-ch-ua': '"Chromium";v="124", "Avira Secure Browser";v="124", "Not-A.Brand";v="99"'
+        },
+        expect: {
+            browser : {
+                name : 'Avira Secure Browser',
+                version : '124',
+                major : '124',
+                type : undefined
+            }
+        }
+    },
+    {
         desc: 'Brave',
         headers : {
             'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Brave";v="132"'
@@ -126,6 +154,20 @@ const UACHTests = [
         }
     },
     {
+        desc: 'Lighthouse',
+        headers : {
+            'sec-ch-ua': '"Chromium";v="119", "Google Chrome";v="119", "Lighthouse";v="11.5.0"'
+        },
+        expect: {
+            browser : {
+                name : 'Lighthouse',
+                version : '11.5.0',
+                major : '11',
+                type : undefined
+            }
+        }
+    },
+    {
         desc: 'MIUI Browser',
         headers : {
             'sec-ch-ua': '"Miui Browser";v="123", "Not:A-Brand";v="8", "Chromium";v="123"'
@@ -135,6 +177,20 @@ const UACHTests = [
                 name : 'MIUI Browser',
                 version : '123',
                 major : '123',
+                type : undefined
+            }
+        }
+    },
+    {
+        desc: 'Norton Private Browser',
+        headers : {
+            'sec-ch-ua': '"Chromium";v="124", "Norton Private Browser";v="124", "Not-A.Brand";v="99"'
+        },
+        expect: {
+            browser : {
+                name : 'Norton Private Browser',
+                version : '124',
+                major : '124',
                 type : undefined
             }
         }
