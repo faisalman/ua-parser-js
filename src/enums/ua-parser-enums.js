@@ -243,6 +243,7 @@ const DeviceVendor = Object.freeze({
     BLACKBERRY: 'BlackBerry',
     BLU: 'BLU',
     CAT: 'Cat',
+    CUBOT: 'CUBOT',
     DELL: 'Dell',
     ENERGIZER: 'Energizer',
     ESSENTIAL: 'Essential',
