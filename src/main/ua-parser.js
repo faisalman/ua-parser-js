@@ -767,6 +767,11 @@
             /; (ac[3-6]\d\w{2,8})( b|\))/i 
             ], [MODEL, [VENDOR, 'Archos'], [TYPE, MOBILE]], [
 
+            // Blackview
+            /blackview ([-\w ]+)( b|\))/i,
+            /; (bv\d{4}[-\w ]*)( b|\))/i
+            ], [MODEL, [VENDOR, 'Blackview'], [TYPE, MOBILE]], [
+
             // HMD
             /; (n159v)/i
             ], [MODEL, [VENDOR, 'HMD'], [TYPE, MOBILE]], [

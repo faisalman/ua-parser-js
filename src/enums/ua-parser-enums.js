@@ -241,6 +241,7 @@ const DeviceVendor = Object.freeze({
     ATT: 'AT&T',
     BENQ: 'BenQ',
     BLACKBERRY: 'BlackBerry',
+    BLACKVIEW: 'Blackview',
     BLU: 'BLU',
     CAT: 'Cat',
     CUBOT: 'CUBOT',
