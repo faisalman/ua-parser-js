@@ -750,6 +750,16 @@
         }
     },
     {
+        "desc"    : "Headline",
+        "ua"      : "Mozilla/5.0 (compatible; ev-crawler/1.0; +https://headline.com/legal/crawler)",
+        "expect"  :
+        {
+            "name"    : "Headline",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "HuggingFace-Bot",
         "ua"      : "Mozilla/5.0 (compatible; HuggingFace-Bot/1.0; +https://huggingface.co/)",
         "expect"  :

@@ -528,6 +528,7 @@ const Extension = Object.freeze({
             GOOGLE_OTHER_VIDEO: 'GoogleOther-Video',
             GOOGLE_SAFETY: 'Google-Safety',
             GOOGLE_STOREBOT: 'Storebot-Google',
+            HEADLINE: 'Headline',
             HIVE_IMAGESIFTBOT: 'ImagesiftBot',
             HUAWEI_PANGUBOT: 'PanguBot',
             HUAWEI_PETALBOT: 'PetalBot',
