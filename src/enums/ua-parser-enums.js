@@ -244,6 +244,7 @@ const DeviceVendor = Object.freeze({
     BLACKVIEW: 'Blackview',
     BLU: 'BLU',
     CAT: 'Cat',
+    COOLPAD: 'Coolpad',
     CUBOT: 'CUBOT',
     DELL: 'Dell',
     ENERGIZER: 'Energizer',
