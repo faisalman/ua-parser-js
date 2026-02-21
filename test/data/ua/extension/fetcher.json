@@ -160,6 +160,16 @@
         }
     },
     {
+        "desc"    : "Google Docs",
+        "ua"      : "Mozilla/5.0 (compatible; GoogleDocs; apps-spreadsheets; +http://docs.google.com)",
+        "expect"  :
+        {
+            "name"    : "GoogleDocs",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Google FeedFetcher",
         "ua"      : "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
         "expect"  :

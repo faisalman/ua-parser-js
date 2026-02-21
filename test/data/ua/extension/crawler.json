@@ -981,6 +981,16 @@
         }
     },
     {
+        "desc"    : "Proximic",
+        "ua"      : "Mozilla/5.0 (compatible; proximic; +https://www.comscore.com/Web-Crawler)",
+        "expect"  :
+        {
+            "name"    : "proximic",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Qwantbot",
         "ua"      : "Mozilla/5.0 (compatible; Qwantbot/1.0_12345; +https://help.qwant.com/bot/)",
         "expect"  :
@@ -1277,6 +1287,16 @@
         {
             "name"    : "Webzio-Extended",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YaCy",
+        "ua"      : "yacybot (/global; amd64 FreeBSD 14.3-STABLE; java 19.0.2; Europe/en) https://yacy.net/bot.html",
+        "expect"  :
+        {
+            "name"    : "yacybot",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
