@@ -227,6 +227,7 @@
     "src"
   ],
   "bin": "./script/cli.js",
+  "sideEffects": false,
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-esm.js",
     "build+test": "npm run build && npm run test",
