@@ -55,6 +55,7 @@ const Crawlers = Object.freeze({
         [
             // AhrefsBot - https://ahrefs.com/robot
             // Amazonbot - https://developer.amazon.com/amazonbot
+            // Awario - https://awario.com/bots.html
             // Bingbot / AdIdxBot - https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
             // Bravebot - https://search.brave.com/help/brave-search-crawler
             // CCBot - https://commoncrawl.org/faq
@@ -79,7 +80,7 @@ const Crawlers = Object.freeze({
             // SurdotlyBot - http://sur.ly/bot.html
             // Swiftbot - https://swiftype.com/swiftbot
             // YepBot - https://yep.com/yepbot/
-            /((?:adidx|ahrefs|amazon|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|surdotly|swift|yep)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|awario(?:smart|rss)?|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|surdotly|swift|yep)bot)\/([\w\.-]+)/i,
 
             // Algolia Crawler
             /(algolia crawler(?: renderscript)?)\/?([\w\.]*)/i,
@@ -96,8 +97,8 @@ const Crawlers = Object.freeze({
             // Coc Coc Bot - https://help.coccoc.com/en/search-engine
             /(coccocbot-(?:image|web))\/([\w\.]+)/i, 
 
-            // Daum
-            /(daum(?:oa)?(?:-image)?)[ \/]([\w\.]+)/i,
+            // Daum / HubSpot Crawler
+            /(daum(?:oa)?(?:-image)?|hubspot crawler)[ \/]([\w\.]+)/i,
 
             // Facebook / Meta 
             // https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
@@ -130,10 +131,10 @@ const Crawlers = Object.freeze({
             // Yeti (Naver)
             /(yeti)\/([\w\.]+)/i,
 
-            // aiHitBot / Algolia Crawler / BLEXBot / Cloudflare AutoRAG / Diffbot / FirecrawlAgent / HuggingFace-Bot / Linespider / MSNBot / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / PanguBot / Replicate-Bot / RunPod-Bot / Webzio-Extended / Screaming Frog SEO Spider / Startpage / Timpibot / Together-Bot / VelenPublicWebCrawler / xAI-Bot / YisouSpider / YouBot / ZumBot
+            // aiHitBot / Algolia Crawler / Audisto Crawler / BLEXBot / BrightEdge Crawler / Cloudflare AutoRAG / Diffbot / FirecrawlAgent / HuggingFace-Bot / Linespider / MSNBot / Magpie-Crawler / Omgilibot / OpenAI Image Downloader / PanguBot / Replicate-Bot / RunPod-Bot / Webzio-Extended / Screaming Frog SEO Spider / Startpage / Timpibot / Together-Bot / VelenPublicWebCrawler / xAI-Bot / YisouSpider / YouBot / ZumBot
             // Cotoyogi - https://ds.rois.ac.jp/en_center8/en_crawler/
             // Freespoke - https://docs.freespoke.com/search/bot/
-            /((?:aihit|blex|diff|huggingface-|msn|pangu|replicate-|runpod-|timpi|together-|xai-|you|zum)bot|(?:magpie-|velenpublicweb)crawler|(?:chatglm-|line|screaming frog seo |yisou)spider|cloudflare-autorag|cotoyogi|(?:firecrawl|twin)agent|freespoke|omgili(?:bot)?|openai image downloader|startpageprivateimageproxy|webzio-extended)\/?([\w\.]*)/i
+            /((?:aihit|blex|diff|huggingface-|msn|pangu|replicate-|runpod-|timpi|together-|xai-|you|zum)bot|(?:audisto |brightedge |magpie-|velenpublicweb)crawler|(?:chatglm-|line|screaming frog seo |yisou)spider|cloudflare-autorag|cotoyogi|(?:firecrawl|twin)agent|freespoke|omgili(?:bot)?|openai image downloader|startpageprivateimageproxy|webzio-extended)\/?([\w\.]*)/i
         ],
         [NAME, VERSION, [TYPE, CRAWLER]],
 
@@ -312,16 +313,20 @@ const Fetchers = Object.freeze({
             // Buffer Link Preview Bot - https://scraper.buffer.com/about/bots/link-preview-bot
             // ChatGPT-User - https://platform.openai.com/docs/plugins/bot
             // DuckAssistBot - https://duckduckgo.com/duckassistbot/
+            // Feedly - https://feedly.com/fetcher.html
             // FlipboardProxy - https://about.flipboard.com/proxy-service/
             // Google Site Verifier / Meta / Yahoo! Japan
             // Iframely - https://iframely.com/docs/about
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|flipboardproxy|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptimero|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|flipboardproxy|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptime(?:ro)?|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,
+
+            // Feedly
+            /(feedly)(?:bot)?\/([\w\.]+)/i,
 
             // Nova Act - https://github.com/aws/nova-act
             /agent-(novaact)\/([\w\.]+)/i,
@@ -336,7 +341,7 @@ const Fetchers = Object.freeze({
 
         [
             // Google Bots / Chrome-Lighthouse / Gemini-Deep-Research / KeybaseBot / Snapchat / Vercelbot / Yandex Bots
-            /((?:better uptime |keybase|telegram|vercel)bot|lighthouse$|feedfetcher-google|gemini-deep-research|google(?:docs|imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|yandex(?:sitelinks|userproxy))/i
+            /((?:better uptime |keybase|telegram|vercel)bot|lighthouse$|feedfetcher-google|gemini-deep-research|google(?:docs|imageproxy|-read-aloud|-pagerenderer|producer)|snap url preview|vercel(flags|tracing|-(favicon|screenshot)-bot)|virustotal(?=cloud)|yandex(?:sitelinks|userproxy))/i
         ], 
         [NAME, [TYPE, FETCHER]],
     ],

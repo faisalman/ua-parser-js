@@ -170,6 +170,76 @@
         }
     },
     {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (mobile; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (desktop; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (mobile; essential; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (desktop; essential; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AwarioBot",
+        "ua"      : "Mozilla/5.0 (compatible; AwarioBot/1.0; +https://awario.com/bots.html)",
+        "expect"  :
+        {
+            "name"    : "AwarioBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AwarioSmartBot",
+        "ua"      : "AwarioSmartBot/1.0 (+https://awario.com/bots.html; bots@awario.com)",
+        "expect"  :
+        {
+            "name"    : "AwarioSmartBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AwarioRssBot",
+        "ua"      : "AwarioRssBot/1.0 (+https://awario.com/bots.html; bots@awario.com)",
+        "expect"  :
+        {
+            "name"    : "AwarioRssBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Baidu ADS",
         "ua"      : "Baidu-ADS",
         "expect"  :
@@ -295,6 +365,16 @@
         "expect"  :
         {
             "name"    : "Bravebot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "BrightEdge Crawler",
+        "ua"      : "BrightEdge Crawler/1.0 (crawler@brightedge.com)",
+        "expect"  :
+        {
+            "name"    : "BrightEdge Crawler",
             "version" : "1.0",
             "type"    : "crawler"
         }
@@ -755,6 +835,16 @@
         "expect"  :
         {
             "name"    : "Headline",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "HubSpot Crawler",
+        "ua"      : "HubSpot Crawler 1.0 http://www.hubspot.com/",
+        "expect"  :
+        {
+            "name"    : "HubSpot Crawler",
             "version" : "1.0",
             "type"    : "crawler"
         }

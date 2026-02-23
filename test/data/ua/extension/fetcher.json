@@ -140,6 +140,26 @@
         }
     },
     {
+        "desc"    : "Feedly",
+        "ua"      : "Feedly/1.0 (+http://www.feedly.com/fetcher.html; 1 subscribers; like FeedFetcher-Google)",
+        "expect"  :
+        {
+            "name"    : "Feedly",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "Feedly",
+        "ua"      : "FeedlyBot/1.0 (http://feedly.com)",
+        "expect"  :
+        {
+            "name"    : "Feedly",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "FlipboardProxy",
         "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko/20100101 Firefox/49.0 (FlipboardProxy/1.2; +http://flipboard.com/browserproxy)",
         "expect"  :
@@ -430,6 +450,16 @@
         }
     },
     {
+        "desc"    : "UptimeBot",
+        "ua"      : "UptimeBot/1.0 EU-1 (+https://uptime.bot/hello)",
+        "expect"  :
+        {
+            "name"    : "UptimeBot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "UptimeRobot",
         "ua"      : "Mozilla/5.0 (compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)",
         "expect"  :
@@ -485,6 +515,16 @@
         "expect"  :
         {
             "name"    : "verceltracing",
+            "version" : "undefined",
+            "type"    : "fetcher"
+        }
+    },
+    {
+        "desc"    : "VirusTotal",
+        "ua"      : "AppEngine-Google; (+http://code.google.com/appengine; appid: s~virustotalcloud)",
+        "expect"  :
+        {
+            "name"    : "virustotal",
             "version" : "undefined",
             "type"    : "fetcher"
         }
