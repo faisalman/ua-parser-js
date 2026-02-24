@@ -950,6 +950,26 @@
         }
     },
     {
+        "desc"    : "Meta-ExternalAds",
+        "ua"      : "meta-externalads/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-externalads",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Meta-WebIndexer",
+        "ua"      : "meta-webindexer/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-webindexer",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "MJ12bot",
         "ua"      : "Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)",
         "expect"  :

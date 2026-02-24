@@ -102,7 +102,7 @@ const Crawlers = Object.freeze({
 
             // Facebook / Meta 
             // https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
-            /(facebook(?:externalhit|catalog)|meta-externalagent)\/([\w\.]+)/i,
+            /(facebook(?:externalhit|catalog)|meta-(?:externalagent|externalads|webindexer))\/([\w\.]+)/i,
 
             // Googlebot - http://www.google.com/bot.html
             /(google(?:bot|other|-inspectiontool)(?:-image|-video|-news)?|storebot-google)\/?([\w\.]*)/i, 
