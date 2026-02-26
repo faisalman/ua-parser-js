@@ -1285,11 +1285,17 @@
                 this.set(MAJOR, majorize(this.get(VERSION)));
                 break;
             case OS:
-                if (this.get(NAME) == 'iOS' && this.get(VERSION) == '18.6') {
-                    // Based on the assumption that iOS version is tightly coupled with Safari version
-                    var realVersion = /\) Version\/([\d\.]+)/.exec(this.ua); // Get Safari version
-                    if (realVersion && parseInt(realVersion[1].substring(0,2), 10) >= 26) {
-                        this.set(VERSION, realVersion[1]);  // Set as iOS version
+                // Since iOS 26, Safari's UA reports the OS version as frozen at 18:
+                // https://webkit.org/blog/17333/webkit-features-in-safari-26-0/#update-to-ua-string
+                if (this.get(NAME) == 'iOS' && this.get(VERSION)) {
+                    // Only perform this if iOS version is 18/19
+                    if (/^1[89][^\d]/.exec(this.get(VERSION))) {
+                        // Based on the assumption that "iOS" version is tightly coupled with "Safari" version
+                        var realVersion = /\) Version\/((\d+)[\d\.]*)/.exec(this.ua);
+                        if (realVersion && parseInt(realVersion[2], 10) >= 26) {
+                            // iOS version = Safari version
+                            this.set(VERSION, realVersion[1]);
+                        }
                     }
                 }
                 break;
