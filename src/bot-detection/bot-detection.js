@@ -137,6 +137,7 @@ const AICrawlers = new BotList(Crawlers, 'name', [
     // Meta
     Crawler.META_FACEBOOKBOT,
     Crawler.META_EXTERNALAGENT,
+    Crawler.META_WEBINDEXER,
 
     // OpenAI
     Crawler.OPENAI_GPTBOT,
