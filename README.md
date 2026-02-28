@@ -274,7 +274,7 @@ Support the **open-source editions** of UAParser.js through one of the following
 [![PayPal](https://img.shields.io/badge/Paypal-003087?style=for-the-badge&logo=paypal&color=003087
 )](https://paypal.me/faisalman)
 [![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
-)](https://store.faisalman.com/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
+)](https://uaparserjs.lemonsqueezy.com/checkout/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
 
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
