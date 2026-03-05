@@ -278,6 +278,10 @@
             }
         },
 
+        strTest = function (str, map) {
+            return map.test.test(str) ? map.ifTrue : map.ifFalse;
+        },
+
         strMapper = function (str, map) {
 
             for (var i in map) {
@@ -775,6 +779,10 @@
             // HMD
             /; (n159v)/i
             ], [MODEL, [VENDOR, 'HMD'], [TYPE, MOBILE]], [
+
+            // T-Mobile
+            /((revvl[ \w\+]+|tm(?:rv|af)\w*[45]g(?:tb)?))( b|\))/i
+            ], [MODEL, [TYPE, strTest, { 'test': /ta?b/i, 'ifTrue': TABLET, 'ifFalse': MOBILE }], [VENDOR, 'T-Mobile']], [
 
             // MIXED
             /(imo) (tab \w+)/i,                                                 // IMO
