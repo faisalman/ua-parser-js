@@ -1,3 +1,7 @@
+import { UAParser } from '../src/main/ua-parser.mjs';
+import { CLIs, Crawlers, Emails, ExtraDevices, Fetchers, Libraries, InApps, Vehicles } from '../src/extensions/ua-parser-extensions.mjs';
+import { isBot, isAICrawler } from '../src/bot-detection/bot-detection.mjs';
+
 $(document)
   .ready(function() {
 
@@ -86,7 +90,7 @@ $(document)
             } else {
                 $('#isbot-txt').text('❌')
             }
-            if (isAIBot(result)) {
+            if (isAICrawler(result)) {
                 $('#isaibot-txt').text('✅');
             } else {
                 $('#isaibot-txt').text('❌');
@@ -110,11 +114,11 @@ $(document)
     }
     
     var qs;
+    var extensions = [CLIs, Crawlers, Emails, ExtraDevices, Fetchers, Libraries, InApps, Vehicles];
     if (URLSearchParams) {
         qs = new URLSearchParams(window.location.search).get('ua');
     }
     if (qs) {
-        var extensions = [CLIs, Crawlers, Emails, ExtraDevices, Fetchers, Libraries, InApps, Vehicles];
         $('#featured').get(0).scrollIntoView();
         updateDemo(UAParser(qs, extensions));
     } else {
