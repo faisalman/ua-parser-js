@@ -1459,9 +1459,7 @@
                                     EMPTY)),                                                // empty string
 
             httpUACH = new UACHData(headers, true),
-            regexMap = extensions ? 
-                        extend(defaultRegexes, extensions) : 
-                        defaultRegexes,
+            regexMap = defaultRegexes,
 
             createItemFunc = function (itemType) {
                 if (itemType == RESULT) {
@@ -1496,9 +1494,14 @@
             ['setUA', function (ua) {
                 if (isString(ua)) userAgent = trim(ua, UA_MAX_LENGTH);
                 return this;
+            }],
+            ['useExtension', function (exts) {
+                if (exts) regexMap = extend(regexMap, exts);
+                return this;
             }]
         ])
-        .setUA(userAgent);
+        .setUA(userAgent)
+        .useExtension(extensions);
 
         return this;
     }

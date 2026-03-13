@@ -105,6 +105,7 @@ declare namespace UAParser {
         getOS(): IOS;
         getResult(): IResult;
         setUA(uastring: string): UAParser;
+        useExtension(extensions: UAParserExt): UAParser;
     }
 }
 

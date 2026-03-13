@@ -5,6 +5,8 @@ var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
 var {UAParser}  = require('../../src/main/ua-parser');
+var {CLIs}      = require('../../src/extensions/ua-parser-extensions');
+var {Extension} = require('../../src/enums/ua-parser-enums');
 var browsers    = require('../data/ua/browser/browser-all.json');
 var cpus        = require('../data/ua/cpu/cpu-all.json');
 var devices     = readJsonFiles('test/data/ua/device');
@@ -117,6 +119,35 @@ describe('Returns', function () {
                 os: { name: undefined, version: undefined }
         });
         done();
+    });
+});
+
+
+describe('setExtension()', () => {
+    
+    it('Extends default parser', () => {
+        const uap = new UAParser();
+        uap.setUA('Mozilla/5.0 (Windows NT; Windows NT 10.0; de-DE) WindowsPowerShell/5.1.19041.5737');
+
+        // before useExtension()
+        assert.strictEqual(uap.getBrowser().name, undefined);           
+        
+        // after useExtension()
+        uap.useExtension(CLIs);
+        assert.strictEqual(uap.getBrowser().name, Extension.BrowserName.CLI.POWERSHELL);
+    });
+
+    it('Prioritize last input', () => {
+        const ext1 = { browser : [[/MyBrowzer/], [[UAParser.BROWSER.NAME, 'Foo']]] };
+        const ext2 = { browser : [[/MyBrowzer/], [[UAParser.BROWSER.NAME, 'Bar']]] };
+        const uap = new UAParser();
+
+        uap
+          .setUA('MyBrowzer')
+          .useExtension(ext1)
+          .useExtension(ext2);
+        
+        assert.strictEqual(uap.getBrowser().name, 'Bar');
     });
 });
 
