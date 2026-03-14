@@ -221,7 +221,11 @@ const DeviceType = Object.freeze({
     SMARTTV: 'smarttv',
     TABLET: 'tablet',
     WEARABLE: 'wearable',
-    XR: 'xr'
+    XR: 'xr',
+    /**
+     * @deprecated UAParser doesn't support `desktop` type, see https://docs.uaparser.dev/info/device/type
+     */
+    DESKTOP: 'desktop'
 });
 /**
  * @deprecated Use `DeviceType` instead
