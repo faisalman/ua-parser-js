@@ -468,7 +468,8 @@
         {
             "name"    : "Chrome WebView",
             "version" : "43.0.2357.65",
-            "major"   : "43"
+            "major"   : "43",
+            "type"    : "inapp"
         }
     },
     {
@@ -2416,7 +2417,8 @@
         {
             "name"    : "Edge WebView",
             "version" : "18.17763",
-            "major"   : "18"
+            "major"   : "18",
+            "type"    : "inapp"
         }
     },
     {
@@ -2426,7 +2428,8 @@
         {
             "name"    : "Edge WebView2",
             "version" : "91.0.4472.120",
-            "major"   : "91"
+            "major"   : "91",
+            "type"    : "inapp"
         }
     },
     {

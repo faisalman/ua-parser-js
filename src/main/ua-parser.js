@@ -352,7 +352,7 @@
             /\b(?:crmo|crios)\/([\w\.]+)/i                                      // Chrome for Android/iOS
             ], [VERSION, [NAME, PREFIX_MOBILE + 'Chrome']], [
             /webview.+edge\/([\w\.]+)/i                                         // Microsoft Edge
-            ], [VERSION, [NAME, EDGE+' WebView']], [
+            ], [VERSION, [NAME, EDGE+' WebView'], [TYPE, INAPP]], [
             /edg(?:e|ios|a)?\/([\w\.]+)/i                                       
             ], [VERSION, [NAME, 'Edge']], [
 
@@ -479,10 +479,10 @@
             ], [VERSION, [NAME, CHROME+' Headless']], [
 
             /wv\).+chrome\/([\w\.]+).+edgw\//i                                  // Edge WebView2
-            ], [VERSION, [NAME, EDGE+' WebView2']], [
+            ], [VERSION, [NAME, EDGE+' WebView2'], [TYPE, INAPP]], [
 
-            / wv\).+(chrome)\/([\w\.]+)/i                                       // Chrome WebView
-            ], [[NAME, CHROME+' WebView'], VERSION], [
+            /; wv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
+            ], [[NAME, CHROME+' WebView'], VERSION, [TYPE, INAPP]], [
 
             /droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i           // Android Browser
             ], [VERSION, [NAME, 'Android' + SUFFIX_BROWSER]], [
