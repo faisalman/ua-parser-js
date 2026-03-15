@@ -1,6 +1,7 @@
 import { UAParser } from '../src/main/ua-parser.mjs';
 import { CLIs, Crawlers, Emails, ExtraDevices, Fetchers, Libraries, InApps, Vehicles } from '../src/extensions/ua-parser-extensions.mjs';
 import { isBot, isAICrawler } from '../src/bot-detection/bot-detection.mjs';
+import { isChromeFamily } from '../src/browser-detection/browser-detection.mjs';
 
 $(document)
   .ready(function() {
@@ -84,6 +85,11 @@ $(document)
                 } else {
                     $('#category-txt').text('-');
                 }
+            }
+            if (isChromeFamily(result)) {
+                $('#ischrome-txt').text('✅');
+            } else {
+                $('#ischrome-txt').text('❌')
             }
             if (isBot(result)) {
                 $('#isbot-txt').text('✅');

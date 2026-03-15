@@ -13,8 +13,8 @@
 
 import { UAParser } from '../main/ua-parser.mjs';
 import { EngineName } from '../enums/ua-parser-enums.mjs';
-import { isStandalonePWA } from 'is-standalone-pwa';
-import { isFromEU } from 'detect-europe-js';
+//import { isStandalonePWA } from 'is-standalone-pwa';
+//import { isFromEU } from 'detect-europe-js';
 
 const isChromeFamily = val => !!(
     (typeof val === 'string' ? 
@@ -29,6 +29,6 @@ const isElectron = () => !!(
 export { 
     isChromeFamily,
     isElectron,
-    isFromEU,
-    isStandalonePWA
+//    isFromEU,
+//    isStandalonePWA
 }
