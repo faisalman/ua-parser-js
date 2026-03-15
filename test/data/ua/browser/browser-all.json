@@ -2101,6 +2101,16 @@
         }
     },
     {
+        "desc"    : "UC Browser on Windows - Issue #811",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 UCPC/1.1.0.12",
+        "expect"  :
+        {
+            "name"    : "UCBrowser",
+            "version" : "1.1.0.12",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "UC Browser",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 UBrowser/5.6.12860.7 Safari/537.36",
         "expect"  :
