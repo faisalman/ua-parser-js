@@ -32,7 +32,7 @@ The most comprehensive, compact, and up-to-date JavaScript library to detect use
 
 # Documentation
 
-  * `version 1.x` : https://github.com/faisalman/ua-parser-js/tree/1.0.x#documentation
+  * `version 1.x` : https://docs.uaparser.dev/v1
   * `version 2.x` : https://docs.uaparser.dev
 
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
