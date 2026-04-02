@@ -19,8 +19,11 @@ const isChromeFamily = val => !!(
     )?.is(EngineName.BLINK));
 
 const isElectron = () => !!(
-    process?.versions?.hasOwnProperty('electron') ||    // node.js
-    / electron\//i.test(navigator?.userAgent));         // browser
+    // in node.js environment
+    (typeof process !== 'undefined' && process.versions?.hasOwnProperty('electron')) ||
+    // in browser environment
+    (typeof navigator !== 'undefined' && / electron\//i.test(navigator.userAgent))
+);
 
 module.exports = { 
     isChromeFamily,
