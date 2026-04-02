@@ -41,7 +41,7 @@ const isChromeFamily = _isChromeFamily;
 /**
  * @deprecated Moved to `browser-detection` submodule
  */
-const isElectron = () => _isElectron;
+const isElectron = _isElectron;
 
 /**
  * @deprecated Moved to `browser-detection` submodule
