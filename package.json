@@ -237,6 +237,7 @@
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "lockfile-lint -p package-lock.json",
     "test:mocha": "mocha --recursive test/unit",
+    "test:nyc": "nyc --include=src/**/*.js npm run test",
     "test:playwright": "npx playwright install && playwright test test/e2e --browser all"
   },
   "dependencies": {
@@ -252,6 +253,7 @@
     "jshint": "~2.13.6",
     "lockfile-lint": "^4.14.1",
     "mocha": "~8.2.0",
+    "nyc": "^18.0.0",
     "requirejs": "2.3.2",
     "safe-regex": "^2.1.1",
     "tsd": "^0.29.0",
