@@ -77,6 +77,14 @@ describe('UAParser get*() methods', () => {
             });
         });
     });
+
+    describe('getUA()', () => {
+        it('Should return the user agent string', () => {
+            const ua = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
+            const parser = new UAParser(ua);
+            assert.strictEqual(parser.getUA(), ua);
+        });
+    });
 });
 
 describe('Returns', function () {
