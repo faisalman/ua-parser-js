@@ -476,6 +476,7 @@ const Extension = Object.freeze({
             ASK_TEOMA: 'Teoma',
             AMAZON_BOT: 'Amazonbot',
             AMAZON_CONTXBOT: 'contxbot',
+            AMAZON_SEARCHBOT: 'Amzn-SearchBot',
             ANTHROPIC_AI: 'anthropic-ai',
             ANTHROPIC_CLAUDE_BOT: 'ClaudeBot',
             ANTHROPIC_CLAUDE_SEARCHBOT: 'Claude-SearchBot',
@@ -707,6 +708,7 @@ const Extension = Object.freeze({
         Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
             AMAZON_NOVA_ACT: 'NovaAct',
+            AMAZON_USER: 'Amzn-User',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
             BETTER_UPTIME_BOT: 'Better Uptime Bot',

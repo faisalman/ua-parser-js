@@ -80,7 +80,7 @@ const Crawlers = Object.freeze({
             // SurdotlyBot - http://sur.ly/bot.html
             // Swiftbot - https://swiftype.com/swiftbot
             // YepBot - https://yep.com/yepbot/
-            /((?:adidx|ahrefs|amazon|awario(?:smart|rss)?|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|oai-search|onespot-scraper|perplexity|sbintuitions|semrush|seznam|surdotly|swift|yep)bot)\/([\w\.-]+)/i,
+            /((?:adidx|ahrefs|amazon|(?:amzn|oai)-search|awario(?:smart|rss)?|bing|brave|cc|contx|coveo|criteo|dot|duckduck(?:go-favicons-)?|exa|facebook|gpt|iask|kagi|kangaroo |linkedin|mj12|mojeek|onespot-scraper|perplexity|sbintuitions|semrush|seznam|surdotly|swift|yep)bot)\/([\w\.-]+)/i,
 
             // Algolia Crawler
             /(algolia crawler(?: renderscript)?)\/?([\w\.]*)/i,
@@ -320,7 +320,7 @@ const Fetchers = Object.freeze({
             // Perplexity-User - https://docs.perplexity.ai/guides/bots
             // MistralAI-User - https://docs.mistral.ai/robots/
             // Yandex Bots - https://yandex.com/bots
-            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:chatgpt|claude|mistralai|perplexity)-user|cohere-ai|flipboardproxy|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptime(?:ro)?|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
+            /(asana|ahrefssiteaudit|(?:bing|microsoft)preview|blueno|(?:amzn|chatgpt|claude|mistralai|perplexity)-user|cohere-ai|flipboardproxy|hubspot page fetcher|mastodon|(?:bitly|bufferlinkpreview|discord|duckassist|linkedin|pinterest|reddit|roger|siteaudit|twitter|uptime(?:ro)?|zoom)bot|google-site-verification|iframely|kakaotalk-scrap|meta-externalfetcher|y!?j-dlc|yandex(?:calendar|direct(?:dyn)?|fordomain|pagechecker|searchshop)|yadirectfetcher|whatsapp)\/([\w\.]+)/i,
 
             // Bluesky
             /(bluesky) cardyb\/([\w\.]+)/i,

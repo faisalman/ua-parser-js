@@ -10,6 +10,16 @@
         }
     },
     {
+        "desc"    : "Amzn-User",
+        "ua"      : " Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-User/0.1) Chrome/119.0.6045.214 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Amzn-User",
+            "version" : "0.1",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "Asana",
         "ua"      : "Asana/1.4.0 WebsiteMetadataRetriever",
         "expect"  :

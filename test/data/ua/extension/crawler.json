@@ -130,6 +130,16 @@
         }
     },
     {
+        "desc"    : "Amzn-SearchBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-SearchBot/0.1) Chrome/119.0.6045.214 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Amzn-SearchBot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Anthropic AI",
         "ua"      : "anthropic-ai",
         "expect"  :
