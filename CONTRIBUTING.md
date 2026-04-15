@@ -42,6 +42,10 @@ Thank you for your interest in contributing to UAParser.js! This document covers
   npm run build
   ```
 
+### Adding New Detection Rules
+
+When adding a new detection rule, make sure to also update the enums in `/src/enums/ua-parser-enum.js`.
+
 ### Adding or Updating Regex Patterns
 
 - Add patterns to the relevant section inside `/src/main/ua-parser.js` or `/src/extensions/ua-parser-extensions.js`.

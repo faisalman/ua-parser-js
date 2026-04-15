@@ -255,13 +255,15 @@ see what's new & breaking.
 
 ## Contributors
 
-Please read [CONTRIBUTING](CONTRIBUTING.md) guide first for the instruction details.
+This project wouldn't be possible without all the amazing people in the open-source community. Thanks to everyone who contributed, reported issues, and shared feedback.
 
 <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
+
+Contributions are welcome! Please read the [CONTRIBUTING GUIDE](CONTRIBUTING.md) first for detailed contribution instructions.
 
 ## Backers & Sponsors
 
