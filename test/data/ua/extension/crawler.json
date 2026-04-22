@@ -130,6 +130,16 @@
         }
     },
     {
+        "desc"    : "Amzn-SearchBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-SearchBot/0.1) Chrome/119.0.6045.214 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Amzn-SearchBot",
+            "version" : "0.1",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Anthropic AI",
         "ua"      : "anthropic-ai",
         "expect"  :
@@ -166,6 +176,76 @@
         {
             "name"    : "atlassian-bot",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (mobile; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (desktop; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (mobile; essential; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Audisto Crawler",
+        "ua"      : "Audisto Crawler (desktop; essential; +https://audisto.com/bot)",
+        "expect"  :
+        {
+            "name"    : "Audisto Crawler",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AwarioBot",
+        "ua"      : "Mozilla/5.0 (compatible; AwarioBot/1.0; +https://awario.com/bots.html)",
+        "expect"  :
+        {
+            "name"    : "AwarioBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AwarioSmartBot",
+        "ua"      : "AwarioSmartBot/1.0 (+https://awario.com/bots.html; bots@awario.com)",
+        "expect"  :
+        {
+            "name"    : "AwarioSmartBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "AwarioRssBot",
+        "ua"      : "AwarioRssBot/1.0 (+https://awario.com/bots.html; bots@awario.com)",
+        "expect"  :
+        {
+            "name"    : "AwarioRssBot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -295,6 +375,16 @@
         "expect"  :
         {
             "name"    : "Bravebot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "BrightEdge Crawler",
+        "ua"      : "BrightEdge Crawler/1.0 (crawler@brightedge.com)",
+        "expect"  :
+        {
+            "name"    : "BrightEdge Crawler",
             "version" : "1.0",
             "type"    : "crawler"
         }
@@ -750,6 +840,26 @@
         }
     },
     {
+        "desc"    : "Headline",
+        "ua"      : "Mozilla/5.0 (compatible; ev-crawler/1.0; +https://headline.com/legal/crawler)",
+        "expect"  :
+        {
+            "name"    : "Headline",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "HubSpot Crawler",
+        "ua"      : "HubSpot Crawler 1.0 http://www.hubspot.com/",
+        "expect"  :
+        {
+            "name"    : "HubSpot Crawler",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "HuggingFace-Bot",
         "ua"      : "Mozilla/5.0 (compatible; HuggingFace-Bot/1.0; +https://huggingface.co/)",
         "expect"  :
@@ -845,6 +955,26 @@
         "expect"  :
         {
             "name"    : "meta-externalagent",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Meta-ExternalAds",
+        "ua"      : "meta-externalads/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-externalads",
+            "version" : "1.1",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Meta-WebIndexer",
+        "ua"      : "meta-webindexer/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",
+        "expect"  :
+        {
+            "name"    : "meta-webindexer",
             "version" : "1.1",
             "type"    : "crawler"
         }
@@ -966,6 +1096,16 @@
         "expect"  :
         {
             "name"    : "PetalBot",
+            "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Proximic",
+        "ua"      : "Mozilla/5.0 (compatible; proximic; +https://www.comscore.com/Web-Crawler)",
+        "expect"  :
+        {
+            "name"    : "proximic",
             "version" : "undefined",
             "type"    : "crawler"
         }
@@ -1267,6 +1407,16 @@
         {
             "name"    : "Webzio-Extended",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "YaCy",
+        "ua"      : "yacybot (/global; amd64 FreeBSD 14.3-STABLE; java 19.0.2; Europe/en) https://yacy.net/bot.html",
+        "expect"  :
+        {
+            "name"    : "yacybot",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },

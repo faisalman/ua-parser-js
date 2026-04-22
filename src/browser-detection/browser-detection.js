@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////
-/*  browser-detection submodule of UAParser.js v2.0.8
+/*  browser-detection submodule of UAParser.js v2.0.9
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -19,8 +19,11 @@ const isChromeFamily = val => !!(
     )?.is(EngineName.BLINK));
 
 const isElectron = () => !!(
-    process?.versions?.hasOwnProperty('electron') ||    // node.js
-    / electron\//i.test(navigator?.userAgent));         // browser
+    // in node.js environment
+    (typeof process !== 'undefined' && process.versions?.hasOwnProperty('electron')) ||
+    // in browser environment
+    (typeof navigator !== 'undefined' && / electron\//i.test(navigator.userAgent))
+);
 
 module.exports = { 
     isChromeFamily,

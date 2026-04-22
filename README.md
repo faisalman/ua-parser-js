@@ -32,7 +32,7 @@ The most comprehensive, compact, and up-to-date JavaScript library to detect use
 
 # Documentation
 
-  * `version 1.x` : https://github.com/faisalman/ua-parser-js/tree/1.0.x#documentation
+  * `version 1.x` : https://docs.uaparser.dev/v1
   * `version 2.x` : https://docs.uaparser.dev
 
 Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
@@ -245,7 +245,7 @@ see what's new & breaking.
     <tfoot>
         <tr>
             <th align="right" colspan="6">
-                <h3><a target="_blank" href="https://store.faisalman.com/checkout/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a></h3>
+                <h3><a target="_blank" href="https://uaparserjs.lemonsqueezy.com/buy/e236ea87-9b2b-400e-9683-24367f731b35"> GET THE PRO PACKAGES 📥</a></h3>
             </th>
         </tr>
     </tfoot>
@@ -255,13 +255,15 @@ see what's new & breaking.
 
 ## Contributors
 
-Please read [CONTRIBUTING](CONTRIBUTING.md) guide first for the instruction details.
+This project wouldn't be possible without all the amazing people in the open-source community. Thanks to everyone who contributed, reported issues, and shared feedback.
 
 <a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
+
+Contributions are welcome! Please read the [CONTRIBUTING GUIDE](CONTRIBUTING.md) first for detailed contribution instructions.
 
 ## Backers & Sponsors
 
@@ -274,7 +276,7 @@ Support the **open-source editions** of UAParser.js through one of the following
 [![PayPal](https://img.shields.io/badge/Paypal-003087?style=for-the-badge&logo=paypal&color=003087
 )](https://paypal.me/faisalman)
 [![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
-)](https://store.faisalman.com/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
+)](https://uaparserjs.lemonsqueezy.com/checkout/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
 
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
 <a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>

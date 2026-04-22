@@ -52,14 +52,5 @@
             "model": "BBE100-1",
             "type": "mobile"
         }
-    },
-    {
-        "desc": "Blackview 4900Pro",
-        "ua": "Mozilla/5.0 (Linux; Android 12; BV4900Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
-        "expect": {
-            "vendor": "undefined",
-            "model": "BV4900Pro",
-            "type": "mobile"
-        }
     }
 ]

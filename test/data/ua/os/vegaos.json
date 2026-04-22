@@ -1,0 +1,20 @@
+[
+    {
+        "desc"    : "Vega OS",
+        "ua"      : "Mozilla/5.0 (Linux; Kepler 1.1; AFTCA002 user/1234; wv) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Chrome/130.0.6723.192 Safari/537.36'",
+        "expect"  :
+        {
+            "name"    : "Vega OS",
+            "version" : "1.1"
+        }
+    },
+    {
+        "desc"    : "Vega OS",
+        "ua"      : "Mozilla/5.0 (Linux; Kepler 1.1; AEOHP userdebug/TOT; wv) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Chrome/128.0.6613.194 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "Vega OS",
+            "version" : "1.1"
+        }
+    }
+]

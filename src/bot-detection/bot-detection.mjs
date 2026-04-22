@@ -3,7 +3,7 @@
 // Source: /src/bot-detection/bot-detection.js
 
 //////////////////////////////////////////////////
-/*  bot-detection submodule of UAParser.js v2.0.8
+/*  bot-detection submodule of UAParser.js v2.0.9
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -83,12 +83,18 @@ const AICrawlers = new BotList(Crawlers, 'name', [
     Crawler.APPLE_BOT,
     Crawler.APPLE_BOT_EXTENDED,
 
+    // Atlassian
+    Crawler.ATLASSIAN_BOT,
+
     // Brave
     Crawler.BRAVE_BOT,
 
     // ByteDance
     Crawler.BYTEDANCE_BYTESPIDER,
     Crawler.BYTEDANCE_TIKTOKSPIDER,
+
+    // Cloudflare
+    Crawler.CLOUDFLARE_AUTORAG,
 
     // Cohere
     Crawler.COHERE_TRAINING_DATA_CRAWLER,
@@ -110,6 +116,7 @@ const AICrawlers = new BotList(Crawlers, 'name', [
 
     // Google
     Crawler.GOOGLE_EXTENDED,
+    Crawler.GOOGLE_NOTEBOOKLM,
     Crawler.GOOGLE_OTHER,
     Crawler.GOOGLE_OTHER_IMAGE,
     Crawler.GOOGLE_OTHER_VIDEO,
@@ -153,6 +160,7 @@ const AICrawlers = new BotList(Crawlers, 'name', [
 
     // Semrush
     Crawler.SEMRUSH_BOT_CONTENTSHAKE,
+    Crawler.SEMRUSH_BOT_SWA,
 
     // Timpi
     Crawler.TIMPI_BOT,

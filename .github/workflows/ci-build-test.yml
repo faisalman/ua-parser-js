@@ -1,4 +1,4 @@
-name: UAParser.js CI-Test
+name: "CI: Build & Test"
 
 on: [push, pull_request]
 
@@ -7,6 +7,7 @@ permissions:
 
 jobs:
   run-test:
+    name: "CI: Build & Test"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,8 +17,8 @@ jobs:
           - arch: ppc64le
             node-version: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with: 
           node-version:  ${{ matrix.node-version }}
       - name: Run the test
@@ -25,4 +26,4 @@ jobs:
           echo "Running on ubuntu-latest-${{ matrix.arch }} with node version set as ${{ matrix.node-version }}"
           npm ci
           npx playwright install --with-deps
-          npm test
+          npm run build+test

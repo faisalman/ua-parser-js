@@ -222,6 +222,16 @@
         }
     },
     {
+        "desc"    : "Avira Secure Browser",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Avira/129.0.0.0",
+        "expect"  :
+        {
+            "name"    : "Avira Secure Browser",
+            "version" : "129.0.0.0",
+            "major"   : "129"
+        }
+    },
+    {
         "desc"    : "Baidu",
         "ua"      : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; baidubrowser 1.x)",
         "expect"  :
@@ -458,7 +468,8 @@
         {
             "name"    : "Chrome WebView",
             "version" : "43.0.2357.65",
-            "major"   : "43"
+            "major"   : "43",
+            "type"    : "inapp"
         }
     },
     {
@@ -884,6 +895,16 @@
             "name"    : "HiBrowser",
             "version" : "2.25.6.3",
             "major"   : "2"
+        }
+    },
+    {
+        "desc"    : "HuaweiBrowser",
+        "ua"      : "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 HBPC/11.0.2.302",
+        "expect"  :
+        {
+            "name"    : "Huawei Browser",
+            "version" : "11.0.2.302",
+            "major"   : "11"
         }
     },
     {
@@ -2090,6 +2111,16 @@
         }
     },
     {
+        "desc"    : "UC Browser on Windows - Issue #811",
+        "ua"      : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 UCPC/1.1.0.12",
+        "expect"  :
+        {
+            "name"    : "UCBrowser",
+            "version" : "1.1.0.12",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "UC Browser",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 UBrowser/5.6.12860.7 Safari/537.36",
         "expect"  :
@@ -2406,7 +2437,8 @@
         {
             "name"    : "Edge WebView",
             "version" : "18.17763",
-            "major"   : "18"
+            "major"   : "18",
+            "type"    : "inapp"
         }
     },
     {
@@ -2416,7 +2448,8 @@
         {
             "name"    : "Edge WebView2",
             "version" : "91.0.4472.120",
-            "major"   : "91"
+            "major"   : "91",
+            "type"    : "inapp"
         }
     },
     {

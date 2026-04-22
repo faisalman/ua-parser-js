@@ -1,10 +1,15 @@
-// Type definitions for UAParser.js v2.0.8
+// Type definitions for UAParser.js v2.0.9
 // Project: https://github.com/faisalman/ua-parser-js
 // Definitions by: Faisal Salman <https://github.com/faisalman>
 
 import { BrowserType, CPUArch, DeviceType, EngineName } from "../enums/ua-parser-enums";
 
 declare namespace UAParser {
+
+    type BrowserTypes = typeof BrowserType[keyof typeof BrowserType];
+    type CPUArchs = typeof CPUArch[keyof typeof CPUArch];
+    type DeviceTypes = typeof DeviceType[keyof typeof DeviceType];
+    type EngineNames = typeof EngineName[keyof typeof EngineName];
     
     interface IData<T> {
         is(val: string): boolean;
@@ -17,21 +22,21 @@ declare namespace UAParser {
         name?: string;
         version?: string;
         major?: string;
-        type?: typeof BrowserType[keyof typeof BrowserType];
+        type?: BrowserTypes;
     }
 
     interface ICPU extends IData<ICPU> {
-        architecture?: typeof CPUArch[keyof typeof CPUArch];
+        architecture?: CPUArchs;
     }
 
     interface IDevice extends IData<IDevice> {
-        type?: typeof DeviceType[keyof typeof DeviceType];
+        type?: DeviceTypes;
         vendor?: string;
         model?: string;
     }
 
     interface IEngine extends IData<IEngine> {
-        name?: typeof EngineName[keyof typeof EngineName];
+        name?: EngineNames;
         version?: string;
     }
 
@@ -105,6 +110,7 @@ declare namespace UAParser {
         getOS(): IOS;
         getResult(): IResult;
         setUA(uastring: string): UAParser;
+        useExtension(extensions: UAParserExt): UAParser;
     }
 }
 
