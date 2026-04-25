@@ -244,10 +244,10 @@
   "scripts": {
     "build": "./script/build-dist.sh && ./script/build-esm.js",
     "build+test": "npm run build && npm run test",
-    "fuzz": "jazzer ./test/fuzz/redos.js --sync",
     "test": "./script/test-all.sh",
     "test:dts-lint": "tsd --typings src/main/ua-parser.d.ts --files test/static/dts-lint.ts",
     "test:eslint": "eslint --no-config-lookup src",
+    "test:fuzz": "jazzer ./test/fuzz/redos.js --sync",
     "test:jshint": "jshint src/main",
     "test:lockfile-lint": "lockfile-lint -p package-lock.json",
     "test:mocha": "mocha --recursive test/unit",
@@ -262,6 +262,7 @@
   "devDependencies": {
     "@babel/parser": "7.15.8",
     "@babel/traverse": "7.23.2",
+    "@jazzer.js/core": "^4.0.0",
     "@playwright/test": "^1.57.0",
     "eslint": "^9.39.1",
     "jshint": "~2.13.6",
