@@ -194,6 +194,28 @@
   ],
   "type": "commonjs",
   "types": "src/main/ua-parser.d.ts",
+  "typesVersions": {
+    "*": {
+      "bot-detection": [
+        "src/bot-detection/bot-detection.d.ts"
+      ],
+      "browser-detection": [
+        "src/browser-detection/browser-detection.d.ts"
+      ],
+      "device-detection": [
+        "src/device-detection/device-detection.d.ts"
+      ],
+      "enums": [
+        "src/enums/ua-parser-enums.d.ts"
+      ],
+      "extensions": [
+        "src/extensions/ua-parser-extensions.d.ts"
+      ],
+      "helpers": [
+        "src/helpers/ua-parser-helpers.d.ts"
+      ]
+    }
+  },
   "main": "src/main/ua-parser.js",
   "module": "src/main/ua-parser.mjs",
   "browser": "dist/ua-parser.pack.js",
