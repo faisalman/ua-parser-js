@@ -17,7 +17,14 @@ jobs:
        with:
          node-version: '18.x'
          registry-url: 'https://registry.npmjs.org'
-     - run: npm install -g npm
+     # setup-node must be called twice to correctly cache corepack-managed npm.
+     # See: https://github.com/actions/setup-node/issues/531#issuecomment-3335630863
+     - name: Enable Corepack
+       shell: bash
+       run: corepack enable npm
+     - uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
+       with:
+         cache: npm
      - run: npm ci
      - run: npm publish --provenance --access public
        env:

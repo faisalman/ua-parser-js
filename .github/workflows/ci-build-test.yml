@@ -19,8 +19,16 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
-        with: 
-          node-version:  ${{ matrix.node-version }}
+        with:
+          node-version: ${{ matrix.node-version }}
+      # setup-node must be called twice to correctly cache corepack-managed npm.
+      # See: https://github.com/actions/setup-node/issues/531#issuecomment-3335630863
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable npm
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          cache: npm
       - name: Run the test
         run: |
           echo "Running on ubuntu-latest-${{ matrix.arch }} with node version set as ${{ matrix.node-version }}"
