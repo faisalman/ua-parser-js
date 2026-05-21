@@ -76,7 +76,23 @@
 
 --- 
 
+## Version 2.0.10
+
+- Fix ReDoS vulnerability by limiting Client Hints input length (GHSA-9h5v-pfqq-x599)
+- Add new method `useExtension()` in UAParser to extend custom detection rules
+- Add new device vendor: Blackview, Coolpad, CUBOT, T-Mobile
+- Improve browser detection: Huawei Browser, UCBrowser
+- Improve OS detection: iOS
+- Identify WebView user-agent as `inapp` browser
+- `extensions` submodule:
+    - Add new crawler: atlassian-bot, Audisto Crawler, AwarioBot, AwarioRssBot, AwarioSmartBot, BrightEdge Crawler, HubSpot Crawler, Meta-ExternalAds, Meta-WebIndexer, proximic, yacybot
+    - Add new fetcher: Feedly, GoogleDocs, UptimeBot, virustotal
+    - Add new library: phpcrawl
+- `helpers` submodule:
+    - Fix `isElectron()` function return itself
+
 ## Version 2.0.9
+
 - Restore icons directory
 - Add new browser: Aloha Browser, Avira Secure Browser, Lighthouse, Luakit, Norton Private Browser
 - Add new OS: Vega OS
@@ -125,6 +141,7 @@
     - Add new library: Bun, Dart, Deno, hackney, Node.js, rest-client, undici
 
 ## Version 2.0.6
+
 - Add new CLI feature: processing batch user-agent data from file and output as JSON
 - Fix `setUA()`: trim leading space from user-agent string input
 - Replace `undici` dependency with node's internal `Headers`
@@ -343,6 +360,7 @@
 ---
 
 ## Version 0.7.41 / 1.0.41
+
 - Add new browser: Daum, Ladybird
 - Add new device vendor: HMD
 - Add new engine: LibWeb
@@ -353,6 +371,7 @@
 - Improve os detection: Linux, Symbian
 
 ## Version 0.7.40 / 1.0.40
+
 - Add new browser: 115, LibreWolf, Slimboat, Slimjet
 - Add new device: Advan, Cat, Energizer, IMO, Micromax, Smartfren
 - Add new engine: ArkWeb, Servo
@@ -362,6 +381,7 @@
 - Fix Python Request mistakenly identified as Meta Quest
 
 ## Version 0.7.39 / 1.0.39
+
 - Add new feature: executable command using `npx ua-parser-js "[INSERT-UA-HERE]"`
 - Add new browser: Helio, Pico Browser, Wolvic
 - Add new device vendor: itel, Nothing, TCL
@@ -370,12 +390,14 @@
 - Removed from browser: Viera
   
 ## Version 0.7.38 / 1.0.38
+
 - Fix error on getOS() when userAgentData.platform is undefined
 - Add new browser: Opera GX, Twitter
 - Improve browser detection: DuckDuckGo
 - Improve device detection: OPPO Pad, Oculus Quest
 
 ## Version 0.7.37 / 1.0.37
+
 - Fix misidentified WebView token as device model
 - Increase UA_MAX_LENGTH to 500
 - Add new browser: Alipay, Klarna, Smart Lenovo Browser, Vivo Browser
@@ -384,12 +406,14 @@
 - Rename browser: Avant, Baidu, Samsung Internet, Sogou Explorer, Sogou Mobile, WeChat
 
 ## Version 0.7.36 / 1.0.36
+
 - Add new browser: Snapchat
 - Add new devices: Infinix, Tecno
 - Improve device detection: Amazon Fire TV, Xiaomi POCO 
 - Improve OS detection: iOS
 
 ## Version 0.7.35 / 1.0.35
+
 - Fix result from user-supplied user-agent being altered
 - Add new browser: Heytap, TikTok
 - Add new engine: LibWeb
@@ -399,6 +423,7 @@
 - Improve OS detection: iOS
 
 ## Version 0.7.34 / 1.0.34
+
 - Fix Sharp Mobile detected as Huawei Tablet
 - Fix IE8 bug
 - Add new devices : Kobo e-Reader, Apple Watch, and some new SmartTV devices

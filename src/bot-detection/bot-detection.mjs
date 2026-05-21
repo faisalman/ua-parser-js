@@ -3,7 +3,7 @@
 // Source: /src/bot-detection/bot-detection.js
 
 //////////////////////////////////////////////////
-/*  bot-detection submodule of UAParser.js v2.0.9
+/*  bot-detection submodule of UAParser.js v2.0.10
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -141,6 +141,7 @@ const AICrawlers = new BotList(Crawlers, 'name', [
     // Meta
     Crawler.META_FACEBOOKBOT,
     Crawler.META_EXTERNALAGENT,
+    Crawler.META_WEBINDEXER,
 
     // OpenAI
     Crawler.OPENAI_GPTBOT,
