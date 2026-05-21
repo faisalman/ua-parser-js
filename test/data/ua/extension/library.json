@@ -240,6 +240,16 @@
         }
     },
     {
+        "desc"    : "PHPCrawl",
+        "ua"      : "phpcrawl",
+        "expect"  :
+        {
+            "name"    : "phpcrawl",
+            "version" : "undefined",
+            "type"    : "library"
+        }
+    },
+    {
         "desc"    : "PHP-SOAP",
         "ua"      : "PHP-SOAP/7.4.33",
         "expect"  :

@@ -30,4 +30,4 @@ import { isFrozenUA } from '@ua-parser-js/pro-personal/helpers';
 
 UAParser.js PRO Personal
 
-Copyright (c) 2023-2025 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2023-2026 Faisal Salman <<f@faisalman.com>>
