@@ -252,7 +252,10 @@
     "test:lockfile-lint": "lockfile-lint -p package-lock.json",
     "test:mocha": "mocha --recursive test/unit",
     "test:nyc": "nyc --timeout=50000 --include=src/**/*.js npm run test",
-    "test:playwright": "npx playwright install && playwright test test/e2e --browser all"
+    "test:playwright": "npx playwright install && playwright test test/e2e --browser all",
+    "build-windows": "powershell -File ./script/build-dist.ps1 && node ./script/build-esm.js",
+    "build+test-windows": "npm run build-windows && npm run test-windows",
+    "test-windows": "powershell -File ./script/test-all.ps1"
   },
   "dependencies": {
     "detect-europe-js": "^0.1.2",
