@@ -19,9 +19,15 @@ jobs:
          registry-url: 'https://registry.npmjs.org'
      # setup-node must be called twice to correctly cache corepack-managed npm.
      # See: https://github.com/actions/setup-node/issues/531#issuecomment-3335630863
+     # A recent corepack must be installed before `corepack enable npm` to
+     # avoid signature verification errors against rotated npm registry keys
+     # (the corepack bundled with Node 18 still trusts the old keyset).
+     # See: https://github.com/nodejs/corepack/issues/612
      - name: Enable Corepack
        shell: bash
-       run: corepack enable npm
+       run: |
+         npm install --global corepack@0.35.0
+         corepack enable npm
      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
        with:
          cache: npm
