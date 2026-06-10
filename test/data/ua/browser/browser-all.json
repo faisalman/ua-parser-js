@@ -372,6 +372,16 @@
         }
     },
     {
+        "desc"    : "ChatGPT",
+        "ua"      : "ChatGPT/1.2024.348 (iOS 16.7.12; iPhone10,5; build 12643679358)",
+        "expect"  :
+        {
+            "name"    : "ChatGPT",
+            "version" : "1.2024.348",
+            "major"   : "1"
+        }
+    },
+    {
         "desc"    : "Chimera",
         "ua"      : "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; pl-PL; rv:1.0.1) Gecko/20021111 Chimera/0.6",
         "expect"  :

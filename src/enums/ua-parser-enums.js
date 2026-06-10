@@ -29,6 +29,7 @@ const BrowserName = Object.freeze({
     BOWSER: 'Bowser',
     BRAVE: 'Brave',
     CAMINO: 'Camino',
+    CHATGPT: 'ChatGPT',
     CHIMERA: 'Chimera',
     CHROME: 'Chrome',
     CHROME_HEADLESS: 'Chrome Headless',

@@ -452,15 +452,15 @@
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
             ], [[NAME, FACEBOOK], VERSION, [TYPE, INAPP]], [
-            /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
+                                                                                // ChatGPT/Instagram/Kakao/Klarna/Snapchat
+            /(^chatgpt|instagram|kakao(?:talk|story)|klarna|snapchat)[\/ ]([-\w\.]+)/i,
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /(daum)apps[\/ ]([\w\.]+)/i,                                        // Daum App
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(bing)(?:web|sapphire)\/([\w\.]+)/i,                               // Bing
-            /(instagram|snapchat|klarna)[\/ ]([-\w\.]+)/i                       // Instagram/Snapchat/Klarna
+            /(bing)(?:web|sapphire)\/([\w\.]+)/i                                // Bing
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
