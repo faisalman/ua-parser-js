@@ -687,7 +687,7 @@
             ], [VENDOR, MODEL], [
 
             // Sony
-            /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
+            /droid.+; (a?\d{3}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
             ], [MODEL, [VENDOR, SONY], [TYPE, MOBILE]], [
             /sony tablet [ps]/i,
             /\b(?:sony)?sgp\w+(?: bui|\))/i
@@ -736,7 +736,7 @@
             ], [[VENDOR, lowerize], MODEL, [TYPE, strMapper, { 'tablet' : ['p10001l', 'w7001'], '*' : 'mobile' }]], [
 
             // Acer
-            /droid.+; ([ab][1-7]-?[0178a]\d\d?)/i
+            /droid.+; ([ab][1-7]-?[0178a]\d\d?)( bui|\))/i
             ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
             // Meizu
@@ -776,7 +776,7 @@
 
             // Blackview
             /blackview ([-\w ]+)( b|\))/i,
-            /; (bv\d{4}[-\w ]*)( b|\))/i
+            /; (a200 pro|bv\d{4}[-\w ]*)( b|\))/i
             ], [MODEL, [VENDOR, 'Blackview'], [TYPE, MOBILE]], [
 
             // HMD
