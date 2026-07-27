@@ -360,6 +360,16 @@
         }
     },
     {
+        "desc"    : "BorderxBot",
+        "ua"      : "Mozilla/5.0 (compatible; BorderxBot/1.0; +https://www.nubestore.ai/borderxbot.html)",
+        "expect"  :
+        {
+            "name"    : "BorderxBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "botify",
         "ua"      : "Desktop: Mozilla/5.0 (compatible; botify; http://botify.com)",
         "expect"  :
@@ -456,6 +466,16 @@
         {
             "name"    : "Cloudflare-AutoRAG",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "Cloudflare Crawler",
+        "ua"      : "CloudflareBrowserRenderingCrawler/1.0",
+        "expect"  :
+        {
+            "name"    : "CloudflareBrowserRenderingCrawler",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },
@@ -676,6 +696,16 @@
         {
             "name"    : "FirecrawlAgent",
             "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "FishBot",
+        "ua"      : "FishBot",
+        "expect"  :
+        {
+            "name"    : "FishBot",
+            "version" : "undefined",
             "type"    : "crawler"
         }
     },
@@ -930,6 +960,16 @@
         }
     },
     {
+        "desc"    : "LinerBot",
+        "ua"      : "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; LinerBot/1.0; +https://docs.getliner.com/docs/linerbot)",
+        "expect"  :
+        {
+            "name"    : "LinerBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Linespider",
         "ua"      : "Mozilla/5.0 (compatible; Linespider/1.1; +https://lin.ee/4dwXkTH)",
         "expect"  :
@@ -1127,6 +1167,16 @@
         {
             "name"    : "proximic",
             "version" : "undefined",
+            "type"    : "crawler"
+        }
+    },
+    {
+        "desc"    : "QualifiedBot",
+        "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.6668.29 QualifiedBot/1.0 +https://www.qualified.com/legal/qualified-crawler-user-agent Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "QualifiedBot",
+            "version" : "1.0",
             "type"    : "crawler"
         }
     },

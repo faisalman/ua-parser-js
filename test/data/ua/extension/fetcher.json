@@ -560,6 +560,16 @@
         }
     },
     {
+        "desc"    : "WARDBot",
+        "ua"      : "Mozilla/5.0 (compatible; WARDBot/1.0; http://ward.ai/robot)",
+        "expect"  :
+        {
+            "name"    : "WARDBot",
+            "version" : "1.0",
+            "type"    : "fetcher"
+        }
+    },
+    {
         "desc"    : "YaDirectFetcher",
         "ua"      : "Mozilla/5.0 (compatible; YaDirectFetcher/1.0; Dyatel; +http://yandex.com/bots)",
         "expect"  :
