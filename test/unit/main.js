@@ -421,6 +421,23 @@ describe('Read user-agent data from req.headers', function () {
         assert.strictEqual(engine.name, "EdgeHTML");
     });
 
+    it('Client hints headers represented as an array', function () {
+        const req = {
+            headers : {
+                'sec-ch-ua' : [
+                    '"Chromium";v="126"',
+                    '"Google Chrome";v="126"',
+                    '"Not:A-Brand";v="99"',
+                    '"Custom Browser";v="99"'
+                ]
+            }
+        };
+
+        const { browser } = UAParser(req.headers).withClientHints();
+        assert.strictEqual(browser.name, 'Custom Browser');
+        assert.strictEqual(browser.version, '99');
+    });
+
     // Headers supported in node 18+ - https://developer.mozilla.org/en-US/docs/Web/API/Headers
     if (typeof Headers !== 'undefined') {
         it('Fetch API\'s Header can be passed directly into headers', () => {

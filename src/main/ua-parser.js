@@ -1442,7 +1442,8 @@
                 var normalized = {};
                 for (var header in headers) {
                     if (headers.hasOwnProperty(header)) {
-                        normalized[String(header).toLowerCase()] = headers[header];
+                        var value = headers[header];
+                        normalized[String(header).toLowerCase()] = Array.isArray(value) ? value.join(', ') : value;
                     }
                 }
                 headers = normalized;
