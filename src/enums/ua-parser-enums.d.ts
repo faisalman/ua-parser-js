@@ -3,7 +3,7 @@
 // Source: /src/enums/ua-parser-enums.js
 
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.9
+/*  Enums for UAParser.js v2.0.10
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -220,13 +220,16 @@ export const CPU: typeof CPUArch;
 
 export const DeviceType: Readonly<{
     CONSOLE: 'console',
-    DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
     TABLET: 'tablet',
     WEARABLE: 'wearable',
-    XR: 'xr'
+    XR: 'xr',
+    /**
+     * @deprecated UAParser doesn't support `desktop` type, see https://docs.uaparser.dev/info/device/type
+     */
+    DESKTOP: 'desktop'
 }>;
 /**
  * @deprecated Use `DeviceType` instead
@@ -245,8 +248,11 @@ export const DeviceVendor: Readonly<{
     ATT: 'AT&T',
     BENQ: 'BenQ',
     BLACKBERRY: 'BlackBerry',
+    BLACKVIEW: 'Blackview',
     BLU: 'BLU',
     CAT: 'Cat',
+    COOLPAD: 'Coolpad',
+    CUBOT: 'CUBOT',
     DELL: 'Dell',
     ENERGIZER: 'Energizer',
     ESSENTIAL: 'Essential',
@@ -301,6 +307,7 @@ export const DeviceVendor: Readonly<{
     TECHNISAT: 'TechniSAT',
     TECNO: 'TECNO',
     TESLA: 'Tesla',
+    T_MOBILE: 'T-Mobile',
     ULEFONE: 'Ulefone',
     VALVE: 'Valve',
     VIVO: 'Vivo',
@@ -473,12 +480,17 @@ export const Extension: Readonly<{
             ASK_TEOMA: 'Teoma',
             AMAZON_BOT: 'Amazonbot',
             AMAZON_CONTXBOT: 'contxbot',
+            AMAZON_SEARCHBOT: 'Amzn-SearchBot',
             ANTHROPIC_AI: 'anthropic-ai',
             ANTHROPIC_CLAUDE_BOT: 'ClaudeBot',
             ANTHROPIC_CLAUDE_SEARCHBOT: 'Claude-SearchBot',
             ANTHROPIC_CLAUDE_WEB: 'Claude-Web',
-            ATLASSIAN_BOT: 'atlassian-bot',
             ARCHIVEORG_BOT: 'archive.org_bot',
+            ATLASSIAN_BOT: 'atlassian-bot',
+            AUDISTO_CRAWLER: 'Audisto Crawler',
+            AWARIO_BOT: 'AwarioBot',
+            AWARIO_SMARTBOT: 'AwarioSmartBot',
+            AWARIO_RSSBOT: 'AwarioRssBot',
             BAIDU_ADS: 'Baidu-ADS',
             BAIDU_SPIDER: 'Baiduspider',
             BAIDU_SPIDER_ADS: 'Baiduspider-ads',
@@ -491,6 +503,7 @@ export const Extension: Readonly<{
             BLEX_BOT: 'BLEXBot',
             BOTIFY: 'botify',
             BRAVE_BOT: 'Bravebot',
+            BRIGHTEDGE_CRAWLER: 'BrightEdge Crawler',
             BYTEDANCE_BYTESPIDER: 'Bytespider',
             BYTEDANCE_TIKTOKSPIDER: 'TikTokSpider',
             CLOUDFLARE_AUTORAG: 'Cloudflare-AutoRAG',
@@ -498,6 +511,7 @@ export const Extension: Readonly<{
             COCCOC_BOT_WEB: 'coccocbot-web',
             COCCOC_BOT_IMAGE: 'coccocbot-image',
             COHERE_TRAINING_DATA_CRAWLER: 'cohere-training-data-crawler',
+            COMSCORE_PROXIMIC: 'proximic',
             COTOYOGI: 'Cotoyogi',
             COVEO_BOT: 'Coveobot',
             CRITEO_BOT: 'CriteoBot',
@@ -531,9 +545,11 @@ export const Extension: Readonly<{
             GOOGLE_OTHER_VIDEO: 'GoogleOther-Video',
             GOOGLE_SAFETY: 'Google-Safety',
             GOOGLE_STOREBOT: 'Storebot-Google',
+            HEADLINE: 'Headline',
             HIVE_IMAGESIFTBOT: 'ImagesiftBot',
             HUAWEI_PANGUBOT: 'PanguBot',
             HUAWEI_PETALBOT: 'PetalBot',
+            HUBSPOT_CRAWLER: 'HubSpot Crawler',
             HUGGINGFACE_BOT: 'HuggingFace-Bot',
             HUNTER_VELENPUBLICWEBCRAWLER: 'VelenPublicWebCrawler',
             IA_ARCHIVER: 'ia_archiver',
@@ -544,10 +560,12 @@ export const Extension: Readonly<{
             LINKEDIN_BOT: 'LinkedInBot',
             MAGPIE_CRAWLER: 'magpie-crawler',
             MARGINALIA: 'marginalia',
+            META_EXTERNALADS: 'meta-externalads',
             META_EXTERNALAGENT: 'meta-externalagent',
             META_FACEBOOKBOT: 'FacebookBot',
             META_FACEBOOKCATALOG: 'facebookcatalog',
             META_FACEBOOKEXTERNALHIT: 'facebookexternalhit',
+            META_WEBINDEXER: 'meta-webindexer',
             MAJESTIC_MJ12BOT: 'MJ12bot',
             MICROSOFT_BINGBOT: 'Bingbot',
             MICROSOFT_MSNBOT: 'msnbot',
@@ -587,6 +605,7 @@ export const Extension: Readonly<{
             WEBZIO_OMGILI: 'omgili',
             WEBZIO_OMGILI_BOT: 'omgilibot',
             XAI_BOT: 'xAI-Bot',
+            YACY_BOT: 'yacybot',
             YAHOO_JAPAN: 'Y!J-BRW',
             YAHOO_SLURP: 'Yahoo! Slurp',
             YANDEX_ACCESSIBILITY_BOT: 'YandexAccessibilityBot',
@@ -693,6 +712,7 @@ export const Extension: Readonly<{
         Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
             AMAZON_NOVA_ACT: 'NovaAct',
+            AMAZON_USER: 'Amzn-User',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
             BETTER_UPTIME_BOT: 'Better Uptime Bot',
@@ -702,8 +722,10 @@ export const Extension: Readonly<{
             COHERE_AI: 'Cohere-AI',
             DISCORD_BOT: 'Discordbot',
             DUCKDUCKGO_ASSISTBOT: 'DuckAssistBot',
+            FEEDLY: 'Feedly',
             FLIPBOARD_PROXY: 'FlipboardProxy',
             GOOGLE_CHROME_LIGHTHOUSE: 'Lighthouse',
+            GOOGLE_DOCS: 'GoogleDocs',
             GOOGLE_FEEDFETCHER: 'FeedFetcher-Google',
             GOOGLE_GEMINI_DEEP_RESEARCH: 'Gemini-Deep-Research',
             GOOGLE_IMAGEPROXY: 'GoogleImageProxy',
@@ -733,11 +755,13 @@ export const Extension: Readonly<{
             SKYPE_URIPREVIEW: 'SkypeUriPreview',
             TELEGRAM_BOT: 'TelegramBot',
             UPTIMEROBOT: 'UptimeRobot',
+            UPTIMEBOT: 'UptimeBot',
             VERCEL_FAVICON_BOT: 'vercel-favicon-bot',
             VERCEL_SCREENSHOT_BOT: 'vercel-screenshot-bot',
             VERCEL_BOT: 'Vercelbot',
             VERCEL_FLAGS: 'vercelflags',
             VERCEL_TRACING: 'verceltracing',
+            VIRUSTOTAL: 'virustotal',
             X_TWITTERBOT: 'Twitterbot',
             YANDEX_CALENDAR: 'YandexCalendar',
             YANDEX_DIRECT: 'YandexDirect',
@@ -792,6 +816,7 @@ export const Extension: Readonly<{
             NODE_SUPERAGENT: 'node-superagent',
             OKHTTP: 'OkHttp',
             OCAML_COHTTP: 'ocaml-cohttp',
+            PHP_CRAWL: 'phpcrawl',
             PHP_SOAP: 'PHP-SOAP',
             POSTMAN_RUNTIME: 'PostmanRuntime',
             PYTHON_HTTPX: 'python-httpx',

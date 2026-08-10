@@ -3,7 +3,7 @@
 // Source: /src/helpers/ua-parser-helpers.js
 
 ///////////////////////////////////////////////
-/*  Helpers for UAParser.js v2.0.9
+/*  Helpers for UAParser.js v2.0.10
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -45,7 +45,7 @@ const isChromeFamily = _isChromeFamily;
 /**
  * @deprecated Moved to `browser-detection` submodule
  */
-const isElectron = () => _isElectron;
+const isElectron = _isElectron;
 
 /**
  * @deprecated Moved to `browser-detection` submodule

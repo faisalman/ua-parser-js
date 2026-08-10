@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////
-/*  Enums for UAParser.js v2.0.9
+/*  Enums for UAParser.js v2.0.10
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
@@ -21,7 +21,7 @@ const BrowserName = Object.freeze({
     AVAST: 'Avast Secure Browser',
     AVG: 'AVG Secure Browser',
     AVIRA: 'Avira Secure Browser',
-    BAIDU: 'Baidu Browser',
+    BAIDU: 'Baidu',
     BASILISK: 'Basilisk',
     BING: 'Bing',
     BLAZER: 'Blazer',
@@ -29,6 +29,7 @@ const BrowserName = Object.freeze({
     BOWSER: 'Bowser',
     BRAVE: 'Brave',
     CAMINO: 'Camino',
+    CHATGPT: 'ChatGPT',
     CHIMERA: 'Chimera',
     CHROME: 'Chrome',
     CHROME_HEADLESS: 'Chrome Headless',
@@ -65,7 +66,6 @@ const BrowserName = Object.freeze({
     HELIO: 'Helio',
     HEYTAP: 'HeyTap',
     HIBROWSER: 'HiBrowser',
-    HONOR: 'Honor',
     HUAWEI: 'Huawei Browser',
     ICAB: 'iCab',
     ICE: 'ICE Browser',
@@ -216,13 +216,16 @@ const CPU = CPUArch;
 
 const DeviceType = Object.freeze({
     CONSOLE: 'console',
-    DESKTOP: 'desktop',
     EMBEDDED: 'embedded',
     MOBILE: 'mobile',
     SMARTTV: 'smarttv',
     TABLET: 'tablet',
     WEARABLE: 'wearable',
-    XR: 'xr'
+    XR: 'xr',
+    /**
+     * @deprecated UAParser doesn't support `desktop` type, see https://docs.uaparser.dev/info/device/type
+     */
+    DESKTOP: 'desktop'
 });
 /**
  * @deprecated Use `DeviceType` instead
@@ -256,6 +259,7 @@ const DeviceVendor = Object.freeze({
     GOOGLE: 'Google',
     HISENSE: 'Hisense',
     HMD: 'HMD',
+    HONOR: 'Honor',
     HP: 'HP',
     HTC: 'HTC',
     HUAWEI: 'Huawei',
@@ -473,6 +477,7 @@ const Extension = Object.freeze({
             ASK_TEOMA: 'Teoma',
             AMAZON_BOT: 'Amazonbot',
             AMAZON_CONTXBOT: 'contxbot',
+            AMAZON_SEARCHBOT: 'Amzn-SearchBot',
             ANTHROPIC_AI: 'anthropic-ai',
             ANTHROPIC_CLAUDE_BOT: 'ClaudeBot',
             ANTHROPIC_CLAUDE_SEARCHBOT: 'Claude-SearchBot',
@@ -493,12 +498,14 @@ const Extension = Object.freeze({
             BAIDU_SPIDER_RENDER: 'Baiduspider-render',
             BAIDU_SPIDER_VIDEO: 'Baiduspider-video',
             BLEX_BOT: 'BLEXBot',
+            BORDERX_BOT: 'BorderxBot',
             BOTIFY: 'botify',
             BRAVE_BOT: 'Bravebot',
             BRIGHTEDGE_CRAWLER: 'BrightEdge Crawler',
             BYTEDANCE_BYTESPIDER: 'Bytespider',
             BYTEDANCE_TIKTOKSPIDER: 'TikTokSpider',
             CLOUDFLARE_AUTORAG: 'Cloudflare-AutoRAG',
+            CLOUDFLARE_CRAWLER: 'CloudflareBrowserRenderingCrawler',
             COMMON_CRAWL_CCBOT: 'CCBot',
             COCCOC_BOT_WEB: 'coccocbot-web',
             COCCOC_BOT_IMAGE: 'coccocbot-image',
@@ -519,6 +526,7 @@ const Extension = Object.freeze({
             ELASTIC_SWIFTYPE_BOT: 'Swiftbot',
             EXALEAD_EXABOT: 'Exabot',
             FIRECRAWL_AGENT: 'FirecrawlAgent',
+            FISH_BOT: 'FishBot',
             FREESPOKE: 'Freespoke',
             GOOGLE_ADSBOT: 'AdsBot-Google',
             GOOGLE_ADSBOT_MOBILE: 'Adsbot-Google-Mobile',
@@ -549,6 +557,7 @@ const Extension = Object.freeze({
             KAGI_BOT: 'Kagibot',
             KANGAROO_BOT: 'Kangaroo Bot',
             LINE_SPIDER: 'Linespider',
+            LINER_BOT: 'LinerBot',
             LINKEDIN_BOT: 'LinkedInBot',
             MAGPIE_CRAWLER: 'magpie-crawler',
             MARGINALIA: 'marginalia',
@@ -563,6 +572,8 @@ const Extension = Object.freeze({
             MICROSOFT_MSNBOT: 'msnbot',
             MICROSOFT_ADIDXBOT: 'adidxbot',
             MOJEEK_BOT: 'MojeekBot',
+            MOONSHOT_KIMIBOT: 'KimiBot',
+            MOONSHOT_KIMI_SEARCHBOT: 'Kimi-SearchBot',
             MOZ_DOTBOT: 'DotBot',
             ONCRAWL: 'OnCrawl',
             ONESPOT_SCRAPERBOT: 'Onespot-ScraperBot',
@@ -570,6 +581,7 @@ const Extension = Object.freeze({
             OPENAI_SEARCH_BOT: 'OAI-SearchBot',
             PERPLEXITY_BOT: 'PerplexityBot',
             QIHOO_360_SPIDER: '360Spider',
+            QUALIFIED_BOT: 'QualifiedBot',
             QWANT_BOT: 'Qwantbot',
             QWANT_BOT_NEWS: 'Qwantbot-news',
             REPLICATE_BOT: 'Replicate-Bot',
@@ -704,6 +716,7 @@ const Extension = Object.freeze({
         Fetcher: {
             AHREFS_SITEAUDIT: 'AhrefsSiteAudit',
             AMAZON_NOVA_ACT: 'NovaAct',
+            AMAZON_USER: 'Amzn-User',
             ANTHROPIC_CLAUDE_USER: 'Claude-User',
             ASANA: 'Asana',
             BETTER_UPTIME_BOT: 'Better Uptime Bot',
@@ -733,6 +746,7 @@ const Extension = Object.freeze({
             MICROSOFT_BINGPREVIEW: 'BingPreview',
             MICROSOFT_PREVIEW: 'MicrosoftPreview',
             MISTRALAI_USER: 'MistralAI-User',
+            MOONSHOT_KIMI_USER: 'Kimi-User',
             NAVER_BLUENO: 'Blueno',
             ONCRAWL_ROGERBOT: 'rogerbot',
             OPENAI_CHATGPT_USER: 'ChatGPT-User',
@@ -753,6 +767,7 @@ const Extension = Object.freeze({
             VERCEL_FLAGS: 'vercelflags',
             VERCEL_TRACING: 'verceltracing',
             VIRUSTOTAL: 'virustotal',
+            WARD_BOT: 'WARDBot',
             X_TWITTERBOT: 'Twitterbot',
             YANDEX_CALENDAR: 'YandexCalendar',
             YANDEX_DIRECT: 'YandexDirect',

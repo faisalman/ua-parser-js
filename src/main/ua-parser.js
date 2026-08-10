@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v2.0.9
+/* UAParser.js v2.0.10
    Copyright © 2012-2026 Faisal Salman <f@faisalman.com>
    AGPLv3 License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
@@ -19,7 +19,7 @@
     // Constants
     /////////////
 
-    var LIBVERSION  = '2.0.9',
+    var LIBVERSION  = '2.0.10',
         UA_MAX_LENGTH = 500,
         USER_AGENT  = 'user-agent',
         EMPTY       = '',
@@ -170,7 +170,7 @@
         itemListToArray = function (header) {
             if (!header) return undefined;
             var arr = [];
-            var tokens = strip(/\\?\"/g, header).split(',');
+            var tokens = normalizeHeaderValue(header).split(',');
             for (var i = 0; i < tokens.length; i++) {
                 if (tokens[i].indexOf(';') > -1) {
                     var token = trim(tokens[i]).split(';v=');
@@ -187,6 +187,9 @@
         majorize = function (version) {
             return isString(version) ? strip(/[^\d\.]/g, version).split('.')[0] : undefined;
         },
+        normalizeHeaderValue = function (str) {
+            return isString(str) ? trim(strip(/\\?\"/g, str), UA_MAX_LENGTH) : undefined;
+        },
         setProps = function (arr) {
             for (var i in arr) {
                 if (!arr.hasOwnProperty(i)) continue;
@@ -202,9 +205,6 @@
         },
         strip = function (pattern, str) {
             return isString(str) ? str.replace(pattern, EMPTY) : str;
-        },
-        stripQuotes = function (str) {
-            return strip(/\\?\"/g, str); 
         },
         trim = function (str, len) {
             str = strip(/^\s\s*/, String(str));
@@ -352,7 +352,7 @@
             /\b(?:crmo|crios)\/([\w\.]+)/i                                      // Chrome for Android/iOS
             ], [VERSION, [NAME, PREFIX_MOBILE + 'Chrome']], [
             /webview.+edge\/([\w\.]+)/i                                         // Microsoft Edge
-            ], [VERSION, [NAME, EDGE+' WebView']], [
+            ], [VERSION, [NAME, EDGE+' WebView'], [TYPE, INAPP]], [
             /edg(?:e|ios|a)?\/([\w\.]+)/i                                       
             ], [VERSION, [NAME, 'Edge']], [
 
@@ -392,7 +392,7 @@
             ], [VERSION, [NAME, 'Quark']], [
             /\bddg\/([\w\.]+)/i                                                 // DuckDuckGo
             ], [VERSION, [NAME, 'DuckDuckGo']], [
-            /(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i                 // UCBrowser
+            /(?:\buc? ?browser|(?:juc.+)ucweb| ucpc)[\/ ]?([\w\.]+)/i           // UCBrowser
             ], [VERSION, [NAME, 'UCBrowser']], [
             /microm.+\bqbcore\/([\w\.]+)/i,                                     // WeChat Desktop for Windows Built-in Browser
             /\bqbcore\/([\w\.]+).+microm/i,
@@ -431,7 +431,9 @@
             /\b(qq)\/([\w\.]+)/i                                                // QQ
             ], [[NAME, /(.+)/, '$1Browser'], VERSION], [
             /(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i
-            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/HuaweiBrowser/VivoBrowser/PicoBrowser
+            ], [[NAME, /(.+)/, '$1' + SUFFIX_BROWSER], VERSION], [              // Oculus/Sailfish/VivoBrowser/PicoBrowser
+            / HBPC\/([\w\.]+)/                                                  // Huawei Browser
+            ], [VERSION, [NAME, HUAWEI + SUFFIX_BROWSER]], [
             /samsungbrowser\/([\w\.]+)/i                                        // Samsung Internet
             ], [VERSION, [NAME, SAMSUNG + ' Internet']], [
             /metasr[\/ ]?([\d\.]+)/i                                            // Sogou Explorer
@@ -444,21 +446,22 @@
             ], [NAME, VERSION], [
             /(lbbrowser|luakit|rekonq|steam(?= (clie|tenf|gameo)))/i            // LieBao Browser/Luakit/Rekonq/Steam
             ], [NAME], [
+            /version\/([\d\.]+) .+ (brave)$/i,                                  // Brave
             /ome\/([\w\.]+).+(iron(?= saf)|360(?=[es]e$))/i                     // Iron / 360
             ], [VERSION, NAME], [
 
             // WebView
             /((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i       // Facebook App for iOS & Android
             ], [[NAME, FACEBOOK], VERSION, [TYPE, INAPP]], [
-            /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,                             // Kakao App
+                                                                                // ChatGPT/Instagram/Kakao/Klarna/Snapchat
+            /(^chatgpt|instagram|kakao(?:talk|story)|klarna|snapchat)[\/ ]([-\w\.]+)/i,
             /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
             /(daum)apps[\/ ]([\w\.]+)/i,                                        // Daum App
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(bing)(?:web|sapphire)\/([\w\.]+)/i,                               // Bing
-            /(instagram|snapchat|klarna)[\/ ]([-\w\.]+)/i                       // Instagram/Snapchat/Klarna
+            /(bing)(?:web|sapphire)\/([\w\.]+)/i                                // Bing
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
@@ -479,10 +482,10 @@
             ], [VERSION, [NAME, CHROME+' Headless']], [
 
             /wv\).+chrome\/([\w\.]+).+edgw\//i                                  // Edge WebView2
-            ], [VERSION, [NAME, EDGE+' WebView2']], [
+            ], [VERSION, [NAME, EDGE+' WebView2'], [TYPE, INAPP]], [
 
-            / wv\).+(chrome)\/([\w\.]+)/i                                       // Chrome WebView
-            ], [[NAME, CHROME+' WebView'], VERSION], [
+            /; wv\).+(chrome)\/([\w\.]+)/i                                      // Chrome WebView
+            ], [[NAME, CHROME+' WebView'], VERSION, [TYPE, INAPP]], [
 
             /droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i           // Android Browser
             ], [VERSION, [NAME, 'Android' + SUFFIX_BROWSER]], [
@@ -616,7 +619,7 @@
             /oid[^\)]+; (redmi[\-_ ]?(?:note|k)?[\w_ ]+|m?[12]\d[01]\d\w{3,6}|poco[\w ]+|(shark )?\w{3}-[ah]0|qin ?[1-3](s\+|ultra| pro)?)( bui|; wv|\))/i,
                                                                                 // Xiaomi Mi
             /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note|max|cc)?[_ ]?(?:\d{0,2}\w?)[_ ]?(?:plus|se|lite|pro)?( 5g|lte)?)(?: bui|\))/i,
-            / ([\w ]+) miui\/v?\d/i
+            /; ([\w ]+) miui\/v?\d/i
             ], [[MODEL, /_/g, ' '], [VENDOR, XIAOMI], [TYPE, MOBILE]], [
 
             // OnePlus
@@ -684,7 +687,7 @@
             ], [VENDOR, MODEL], [
 
             // Sony
-            /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
+            /droid.+; (a?\d{3}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i
             ], [MODEL, [VENDOR, SONY], [TYPE, MOBILE]], [
             /sony tablet [ps]/i,
             /\b(?:sony)?sgp\w+(?: bui|\))/i
@@ -733,7 +736,7 @@
             ], [[VENDOR, lowerize], MODEL, [TYPE, strMapper, { 'tablet' : ['p10001l', 'w7001'], '*' : 'mobile' }]], [
 
             // Acer
-            /droid.+; ([ab][1-7]-?[0178a]\d\d?)/i
+            /droid.+; ([ab][1-7]-?[0178a]\d\d?)( bui|\))/i
             ], [MODEL, [VENDOR, 'Acer'], [TYPE, TABLET]], [
 
             // Meizu
@@ -773,7 +776,7 @@
 
             // Blackview
             /blackview ([-\w ]+)( b|\))/i,
-            /; (bv\d{4}[-\w ]*)( b|\))/i
+            /; (a200 pro|bv\d{4}[-\w ]*)( b|\))/i
             ], [MODEL, [VENDOR, 'Blackview'], [TYPE, MOBILE]], [
 
             // HMD
@@ -1200,12 +1203,12 @@
                 [BRANDS, itemListToArray(uach[CH])],
                 [FULLVERLIST, itemListToArray(uach[CH_FULL_VER_LIST])],
                 [MOBILE, /\?1/.test(uach[CH_MOBILE])],
-                [MODEL, stripQuotes(uach[CH_MODEL])],
-                [PLATFORM, stripQuotes(uach[CH_PLATFORM])],
-                [PLATFORMVER, stripQuotes(uach[CH_PLATFORM_VER])],
-                [ARCHITECTURE, stripQuotes(uach[CH_ARCH])],
+                [MODEL, normalizeHeaderValue(uach[CH_MODEL])],
+                [PLATFORM, normalizeHeaderValue(uach[CH_PLATFORM])],
+                [PLATFORMVER, normalizeHeaderValue(uach[CH_PLATFORM_VER])],
+                [ARCHITECTURE, normalizeHeaderValue(uach[CH_ARCH])],
                 [FORMFACTORS, itemListToArray(uach[CH_FORM_FACTORS])],
-                [BITNESS, stripQuotes(uach[CH_BITNESS])]
+                [BITNESS, normalizeHeaderValue(uach[CH_BITNESS])]
             ]);
         } else {
             for (var prop in uach) {
@@ -1295,15 +1298,12 @@
             case OS:
                 // Since iOS 26, Safari's UA reports the OS version as frozen at 18:
                 // https://webkit.org/blog/17333/webkit-features-in-safari-26-0/#update-to-ua-string
-                if (this.get(NAME) == 'iOS' && this.get(VERSION)) {
-                    // Only perform this if iOS version is 18/19
-                    if (/^1[89][^\d]/.exec(this.get(VERSION))) {
-                        // Based on the assumption that "iOS" version is tightly coupled with "Safari" version
-                        var realVersion = /\) Version\/((\d+)[\d\.]*)/.exec(this.ua);
-                        if (realVersion && parseInt(realVersion[2], 10) >= 26) {
-                            // iOS version = Safari version
-                            this.set(VERSION, realVersion[1]);
-                        }
+                if (this.get(NAME) == 'iOS' && this.get(VERSION) && /^1[89][^\d]/.exec(this.get(VERSION))) {
+                    // Based on the assumption that "iOS" version is tightly coupled with "Safari" version
+                    var realVersion = /\) Version\/((\d+)[\d\.]*)/.exec(this.ua);
+                    if (realVersion && parseInt(realVersion[2], 10) >= 26) {
+                        // iOS version = Safari version
+                        this.set(VERSION, realVersion[1]);
                     }
                 }
                 break;
@@ -1442,7 +1442,8 @@
                 var normalized = {};
                 for (var header in headers) {
                     if (headers.hasOwnProperty(header)) {
-                        normalized[String(header).toLowerCase()] = headers[header];
+                        var value = headers[header];
+                        normalized[String(header).toLowerCase()] = Array.isArray(value) ? value.join(', ') : value;
                     }
                 }
                 headers = normalized;
@@ -1459,9 +1460,7 @@
                                     EMPTY)),                                                // empty string
 
             httpUACH = new UACHData(headers, true),
-            regexMap = extensions ? 
-                        extend(defaultRegexes, extensions) : 
-                        defaultRegexes,
+            regexMap = defaultRegexes,
 
             createItemFunc = function (itemType) {
                 if (itemType == RESULT) {
@@ -1496,9 +1495,14 @@
             ['setUA', function (ua) {
                 if (isString(ua)) userAgent = trim(ua, UA_MAX_LENGTH);
                 return this;
+            }],
+            ['useExtension', function (exts) {
+                if (exts) regexMap = extend(regexMap, exts);
+                return this;
             }]
         ])
-        .setUA(userAgent);
+        .setUA(userAgent)
+        .useExtension(extensions);
 
         return this;
     }

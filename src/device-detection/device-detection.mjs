@@ -3,7 +3,7 @@
 // Source: /src/device-detection/device-detection.js
 
 /////////////////////////////////////////////////////
-/*  device-detection submodule of UAParser.js v2.0.9
+/*  device-detection submodule of UAParser.js v2.0.10
     https://github.com/faisalman/ua-parser-js
     Author: Faisal Salman <f@faisalman.com>
     AGPLv3 License */
