@@ -1,38 +1,30 @@
-[![https://uaparser.dev](https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png)](https://uaparser.dev)
-[![https://uaparser.dev](https://github.com/user-attachments/assets/a626166c-17cc-45e3-8ff6-d7e948a5ded0)](https://uaparser.dev)
-[![https://uaparser.dev](https://github.com/user-attachments/assets/50da50fc-7c8a-46e3-a2bc-6a8249914372)](https://uaparser.dev)
-[![https://uaparser.dev](https://github.com/user-attachments/assets/9f2aaff0-a9b4-4ac9-bdf3-eea8081a2582)](https://uaparser.dev)
-    
+<p><a href="https://uaparser.dev"><img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/uap-header.png" alt="UAParser.js" width="100%"></a></p>
 <p align="center">
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js?color=red&logo=npm&label=NPM%20DOWNLOADS&style=for-the-badge"></a>
-<a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://img.shields.io/jsdelivr/gh/hw/faisalman/ua-parser-js?logo=jsdelivr&style=for-the-badge"></a>
-<a href="https://github.com/faisalman/ua-parser-js"><img src="https://img.shields.io/github/stars/faisalman/ua-parser-js?color=yellow&logo=github&style=for-the-badge"></a>
-<a href="https://bundlephobia.com/package/ua-parser-js@1.0.35"><img src="https://img.shields.io/bundlephobia/minzip/ua-parser-js?logo=hackthebox&logoColor=white&style=for-the-badge"/></a>
-<a href="https://github.com/faisalman/ua-parser-js/graphs/contributors"><img src="https://img.shields.io/github/contributors/faisalman/ua-parser-js?color=purple&logo=githubsponsors&style=for-the-badge"></a>
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg?logo=npm&color=red&style=for-the-badge"></a>
-<a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg?color=orange&style=for-the-badge"></a>
-<img src="https://img.shields.io/ossf-scorecard/github.com/faisalman/ua-parser-js?label=openssf%20scorecard&style=for-the-badge">
-<a target="_blank" href="https://discord.com/channels/1406959509087453236/1406959509930381375"><img alt="Discord invite" src="https://dcbadge.limes.pink/api/server/https://discord.com/channels/1406959509087453236/1406959509930381375"></a>
+    <a href="https://uaparser.dev"><img src="https://github.com/user-attachments/assets/a626166c-17cc-45e3-8ff6-d7e948a5ded0" alt="UAParser.js" width="33%"></a>
+    <a href="https://uaparser.dev"><img src="https://github.com/user-attachments/assets/50da50fc-7c8a-46e3-a2bc-6a8249914372" alt="UAParser.js" width="33%"></a>
+    <a href="https://uaparser.dev"><img src="https://github.com/user-attachments/assets/9f2aaff0-a9b4-4ac9-bdf3-eea8081a2582" alt="UAParser.js" width="33%"></a>
 </p>
 
 # UAParser.js
 
-The most comprehensive, compact, and up-to-date JavaScript library to detect user's browser, OS, CPU, and device type/model. Also detect bots, apps, and more. Runs seamlessly in the browser (client-side) or Node.js (server-side).
+Powerful User-Agent detection in a compact, ES5-friendly, dependency-free JavaScript library.
+
+* ✅ **Comprehensive detection**: Identify various kind of browsers, OS, devices, bots, apps, AI crawlers, and more
+* ✅ **Battle-tested at scale**: Backed by an actively maintained, extensive detection database, trusted by leading tech companies
+* ✅ **Runs everywhere**: Use seamlessly in browsers, Node.js, and modern JavaScript runtimes
 
 # Demo
 
   * Live demo: https://uaparser.dev
-
 
 # Documentation
 
   * `version 1.x` : https://docs.uaparser.dev/v1
   * `version 2.x` : https://docs.uaparser.dev
 
-Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to 
-see what's new & breaking.
+Before upgrading from `v0.7` / `v1.0`, please read [CHANGELOG](CHANGELOG.md) to see what's new & breaking.
 
-# Package & Pricing
+# Package Options
 
 <table>
     <thead>
@@ -245,6 +237,18 @@ see what's new & breaking.
     </tfoot>
 </table>
 
+## NEW: Managed REST API
+
+Skip the installation, use the User-Agent API in any application:
+
+<a href="https://uaparser.dev/#rest-api"><img src="https://uaparser.dev/images/uap-cloud-api.png" width="50%"></a>
+
+* ✅ **Works everywhere**: Integrate with JavaScript, Python, PHP, Java, or any HTTP client
+* ✅ **Production-ready**: Powered by UAParser.js and continuously updated
+* ✅ **Zero maintenance**: We manage the packages, parser updates, device data, and infrastructure for you
+
+Learn more and start building at [uaparser.dev/#rest-api](https://uaparser.dev/#rest-api)
+
 # Development
 
 ## Contributors
@@ -261,6 +265,9 @@ Contributions are welcome! Please read the [CONTRIBUTING GUIDE](CONTRIBUTING.md)
 
 ## Backers & Sponsors
 
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
+<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
+
 Support the **open-source editions** of UAParser.js through one of the following options:
 
 [![OpenCollective](https://img.shields.io/badge/OpenCollective-dddddd?style=for-the-badge&logo=opencollective&color=dddddd
@@ -269,8 +276,5 @@ Support the **open-source editions** of UAParser.js through one of the following
 )](https://github.com/sponsors/faisalman)
 [![PayPal](https://img.shields.io/badge/Paypal-003087?style=for-the-badge&logo=paypal&color=003087
 )](https://paypal.me/faisalman)
-[![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
+[![WeChat/Alipay](https://img.shields.io/badge/Other_Payment_Methods-Including_Alipay_/_WeChat_Pay-09b83e?style=for-the-badge&logo=mastercard&color=09b83e
 )](https://uaparserjs.lemonsqueezy.com/checkout/buy/3d71f2f3-cf4d-473c-892a-9d4497c890be)
-
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
