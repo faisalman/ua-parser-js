@@ -8,6 +8,12 @@ $(document)
 
     var updateDemo = function (result) {
         if(!result) return;
+        $('#hero-ua').text(result.ua);
+        var heroCode = $('#hero-result').text(JSON.stringify(result, null, '  ')).get(0);
+        if (window.hljs && heroCode) {
+            heroCode.removeAttribute('data-highlighted');
+            hljs.highlightElement(heroCode);
+        }
         $('#ua-txt').transition('zoom', function () {
             $(this).text(result.ua);
             $(this).transition('zoom');

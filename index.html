@@ -1,21 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>UAParser.js: JavaScript User-Agent Parser &amp; Device Detector</title>
+    <meta name="description" content="Detect browsers, operating systems, devices, CPU architectures, apps, bots, and AI crawlers from User-Agent strings and Client Hints with UAParser.js.">
     <meta name="keywords"
-        content="browser detection, user-agent, javascript, detect os, mobile, tablet, detect device, cpu, javascript, nodejs, jquery, typescript, client hints, bots, iphone, ipad, android" />
-    <meta name="description" content="UAParser.js is the most comprehensive, compact, & up-to-date isomorphic JavaScript library to detect visitor's Browser, Engine, OS, CPU, and Device type/model.">
+        content="user-agent parser, browser detection, device detection, operating system detection, JavaScript, TypeScript, Node.js, Client Hints, bot detection, AI crawler detection" />
     <meta name="application-name" content="UAParser.js">
-    <meta property="og:title" content="UAParser.js">
+    <meta name="author" content="UAParser.js">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#171426">
+    <link rel="canonical" href="https://uaparser.dev/">
+    <meta property="og:title" content="UAParser.js: JavaScript User-Agent Parser &amp; Device Detector">
+    <meta property="og:description" content="Identify browsers, platforms, devices, apps, bots, AI crawlers, and more from User-Agent strings and Client Hints.">
     <meta property="og:url" content="https://uaparser.dev/">
     <meta property="og:image" content="https://uaparser.dev/images/uap-header.png">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="UAParser.js User-Agent detection library">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Abstract away the hassle of user-agent detection">
+    <meta property="og:site_name" content="UAParser.js">
     <meta property="og:locale" content="en_US">
-    <title>UAParser.js | Detect Browser, Engine, OS, CPU, and Device type/model.</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UAParser.js: JavaScript User-Agent Parser &amp; Device Detector">
+    <meta name="twitter:description" content="Identify browsers, platforms, devices, apps, bots, AI crawlers, and more from User-Agent strings and Client Hints.">
+    <meta name="twitter:image" content="https://uaparser.dev/images/uap-header.png">
+    <meta name="twitter:image:alt" content="UAParser.js User-Agent detection library">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/srcery.min.css">
     <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.css">
@@ -29,22 +45,113 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
     <script src="//code.tidio.co/hu6mx7fw2r6llmfzxj5llesd5l51q5dv.js" async></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "UAParser.js",
+        "url": "https://uaparser.dev/",
+        "image": "https://uaparser.dev/images/uap-header.png",
+        "description": "JavaScript library for detecting browsers, operating systems, devices, CPU architectures, apps, bots, and AI crawlers from User-Agent strings and Client Hints.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Cross-platform",
+        "softwareVersion": "2.0.10",
+        "downloadUrl": "https://www.npmjs.com/package/ua-parser-js",
+        "codeRepository": "https://github.com/faisalman/ua-parser-js",
+        "license": "https://github.com/faisalman/ua-parser-js/blob/master/LICENSE.md"
+    }
+    </script>
 </head>
 
 <body>
 
     <div class="pusher">
-        <div class="ui inverted instagram vertical masthead center aligned segment">
-            <div class="ui text container">
-                <a href="https://uaparser.dev"><h1>UAParser.js</h1></a>
-                <h2>Take the Hassle Out of User-Agent Detection. Identify Browsers, Platforms, Devices, Apps, Bots, AI Crawlers and more.</h2>
-                        <a href="#demo" class="ui violet large button"><i class="magic icon"></i>Demo</a>
-                        <a href="#download" class="ui teal large button"><i class="download icon"></i>Download</a>
-                        <!--a href="#cloud" class="ui blue large button"><i class="cloud icon"></i>@Cloud API / MCP</a-->
-                        <a href="https://docs.uaparser.dev" class="ui green large button" target="_blank"><i class="book icon"></i>Docs  <i class="icon arrow circle right"></i></a>
+        <header class="site-header">
+            <div class="site-nav">
+                <a class="site-brand" href="https://uaparser.dev" aria-label="UAParser.js home">
+                    <img src="images/uap-logo.png" alt="">
+                    <span>UAParser.js</span>
+                </a>
+                <nav class="site-links" aria-label="Primary navigation">
+                    <a href="#demo">PLAYGROUND</a>
+                    <a href="#features">FEATURES</a>
+                    <a href="#showcase">SHOWCASE</a>
+                    <a href="#download">DOWNLOAD</a>
+                    <a href="#rest-api">REST-API</a>
+                </nav>
+                <div class="site-actions">
+                    <a class="nav-docs" href="https://docs.uaparser.dev" target="_blank" rel="noopener">DOCS</a>
+                    <a class="github-link" href="https://github.com/faisalman/ua-parser-js" target="_blank" rel="noopener" aria-label="UAParser.js on GitHub">
+                        <i class="github icon"></i>
+                    </a>
+                    <a class="nav-cta" href="#demo">TRY IT LIVE</a>
+                </div>
             </div>
-            <img alt="UAParser.js Illustration" class="ui centered image illustration" src="images/uap-illustrations.png" />
-        </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <div class="hero-badge"><span>v2.0.10</span> Take the Hassle Out of User-Agent Detection.</div>
+                    <h1>Know your traffic.<br><span>Make every visit count.</span></h1>
+                    <p>Identify Browsers, Platforms, Devices, Apps, Bots, AI Crawlers and more.</p>
+                    <div class="hero-actions">
+                        <a href="#demo" class="hero-primary"><i class="magic icon"></i>TRY IT LIVE<i class="icon arrow circle down"></i></a>
+                        <a href="#rest-api" class="ui red button hero-secondary"><i class="cloud icon"></i>USE REST-API<i class="icon arrow circle down"></i></a>
+                        <a href="https://docs.uaparser.dev" class="ui green button hero-secondary" target="_blank" rel="noopener"><i class="book icon"></i>READ DOCS<i class="icon arrow circle right"></i></a>
+                    </div>
+                    <div class="install-command" aria-label="npm install command">
+                        <span class="prompt">$</span>
+                        <code>npm install ua-parser-js</code>
+                        <span class="install-note">~11.9 kB Minified + Gzipped</span>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-label="Example UAParser.js result">
+                    <div class="visual-bar">
+                        <span class="visual-dots"><i></i><i></i><i></i></span>
+                        <span>ua-parser.js</span>
+                        <span class="visual-live"><i></i> user-agent detected</span>
+                    </div>
+                    <div class="visual-input">
+                        <div class="visual-label">
+                            <span>Raw client signals</span>
+                            <span>input</span>
+                        </div>
+                        <code id="hero-ua">Mozilla/5.0 (compatible; device and browser identifiers...)</code>
+                    </div>
+                    <div class="visual-transform">
+                        <span></span>
+                        <div><img src="images/uap-logo.png" alt=""> Detect User-Agent ...</div>
+                        <i class="arrow down icon"></i>
+                        <span></span>
+                    </div>
+                    <div class="visual-label visual-output-label">
+                        <span>Structured client insights</span>
+                        <span>output</span>
+                    </div>
+                    <pre><code id="hero-result" class="language-json"><span class="json-key">"browser"</span>: {
+  <span class="json-key">"name"</span>: <span class="json-value">"Chrome"</span>,
+  <span class="json-key">"version"</span>: <span class="json-value">"139.0.0.0"</span>
+},
+<span class="json-key">"os"</span>: {
+  <span class="json-key">"name"</span>: <span class="json-value">"macOS"</span>,
+  <span class="json-key">"version"</span>: <span class="json-value">"15.6"</span>
+},
+<span class="json-key">"device"</span>: {
+  <span class="json-key">"type"</span>: <span class="json-value">"desktop"</span>
+}</code></pre>
+                    <div class="visual-chip-row">
+                        <span><i class="check icon"></i> Client-side</span>
+                        <span><i class="check icon"></i> Server-side</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div><strong>12+</strong><span>years maintained on GitHub</span></div>
+                <div><strong>124+ MILLION</strong><span>monthly downloads on npm</span></div>
+                <div><strong>Browsers & Node.js</strong><span>Single API for all environments</span></div>
+            </div>
+        </section>
 
 
         <div id="featured" class="ui text container">
@@ -75,7 +182,7 @@
 
         <div class="ui container">
             <div id="demo" class="ui horizontal divider">
-                DEMO: USER-AGENT PLAYGROUND
+                DEMO: USER-AGENT PLAYGROUND.
             </div>
             <div class="ui tall stacked very padded segment">
                 <div class="ui basic segment">
@@ -95,7 +202,7 @@
                         <div class="column">
                             <div class="ui basic segment">
                                 <h2 class="ui header">
-                                    UAParser.js identified result:
+                                    Identified by UAParser.js:
                                 </h2>                           
                             </div>
                             <div class="ui basic segment">
@@ -195,7 +302,7 @@
                         <div class="column">
                             <div class="ui large label">
                                 <i class="mobile alternate icon"></i>
-                                Device Model
+                                Device Vendor & Model
                             </div>
                             <div class="ui basic segment">
                                 <img alt="detected device vendor icon" class="ui tiny centered image" id="device-img" src="">
@@ -305,7 +412,7 @@
         </div>
         <div class="ui text container">
             <div class="ui horizontal divider">
-                FEATURES
+                FEATURES: COMPLETE DETECTION. MINIMAL OVERHEAD.
             </div>
             <div id="features" class="ui piled very padded segment">
                 <div class="ui equal width stackable grid">
@@ -325,7 +432,7 @@
                                     <i class="orange bolt icon"></i>
                                     <div class="content">Wide Coverage</div>
                                 </h3>
-                                <p>Detects various devices, browsers, bots, apps, and more.</p>
+                                <p>Detects various devices, browsers, platforms, bots, apps, and more.</p>
                             </div>
                         </div>
                         <div class="column">
@@ -357,7 +464,7 @@
                                 <h3 class="ui header">
                                     <i class="red npm icon"></i>
                                     <div class="content">
-                                        npm-Ready Package
+                                        npm-ready Package
                                     </div>
                                 </h3>
                                 <p>Easily integrates into your existing workflow.</p>
@@ -642,7 +749,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     </div>
                 </div-->
             <div class="ui horizontal divider">
-                TESTIMONIALS: LOVED BY DEVELOPERS WORLDWIDE
+                TESTIMONIALS: LOVED BY THOSE WHO BUILD THE WEB.
             </div>
             <div class="ui tall stacked very padded segment">
                 <div class="ui equal width stackable divided grid">
@@ -733,7 +840,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                 </div>
             </div>
                 <div class="ui horizontal divider">
-                    SHOWCASE: TRUSTED BY LEADING TECH COMPANIES
+                    SHOWCASE: FROM STARTUPS TO GLOBAL BRANDS.
                 </div>
             <div class="ui tall stacked very padded segment" id="showcase">
                 <div class="ui basic centered segment">
@@ -743,6 +850,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                             Case Studies<div class="sub header">Discover how leading companies use UAParser.js</div>
                         </div>
                     </h2>
+                    <p class="showcase-hint"><i class="mouse pointer icon"></i>Project details on hover</p>
                 </div>
                 <div class="ui basic centered segment">
                     <div class="ui equal width stackable grid">
@@ -1399,7 +1507,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
         </div>
         
             <div class="ui horizontal divider">
-            DOWNLOAD: CHOOSE YOUR PACKAGE
+            DOWNLOAD: SIMPLE LICENSING. FLEXIBLE DEPLOYMENT.
             </div>
 
             <div class="ui tall stacked very padded segment" id="download">
@@ -1409,7 +1517,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     <i class="codepen icon"></i>
                         <div class="content">
                             Package Options
-                            <div class="sub header">Pricing & comparison between editions</div>
+                            <div class="sub header">Pricing & feature comparison</div>
                         </div>
                     </h2>
                 </div>
@@ -1713,7 +1821,7 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
 
             
             <div class="ui horizontal divider">
-            MANAGED SERVICE: UAParser.js X RESTCountries.com
+            MANAGED SERVICE: UAParser.js × RESTCountries.com
             </div>
 
             <div class="ui tall stacked very padded segment" id="rest-api">
@@ -1723,23 +1831,17 @@ $ npx ua-parser-js "Flock/2.16 (Zenwalk 7.3; es_PR;)" >> log.txt
                     <i class="cloud icon"></i>
                         <div class="content">
                             REST API
-                            <div class="sub header">Skip the installation, use the User-Agent API</div>
+                            <div class="sub header">Skip the installation. Use the User-Agent API</div>
                         </div>
                     </h2>
-                    <img class="ui centered image" src="https://uaparser.dev/images/uap-cloud-api.png"/>
-<pre><code class="bash">curl https://api.restcountries.com/user-agent/v1 \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "User-Agent: Mozilla/5.0 ..."
-</code>
-</pre>
-
-                    <ol class="ui list">
-                        <li value="✔">Any stack. Any platform (JS, Python, PHP, Java, etc.)</li>
+                    <div class="ui basic segment"><img class="ui centered image" src="images/uap-cloud-api.png"/></div>
+                    <div class="ui basic segment"><ol class="ui list">
+                        <li value="✔">Any stack. Any platform (JS, Python, PHP, Java, Go, etc.)</li>
+                        <li value="✔">No servers to maintain or parser updates periodically</li>
                         <li value="✔">Integrate in minutes with a simple REST API powered by UAParser.js</li>
-                        <li value="✔">No servers or parser updates to maintain periodically</li>
                     </ol>
-                    
-                    <a target="_blank" class="ui icon right labeled violet large button" href="https://app.uaparser.dev/api/restcountries">START BUILDING FOR FREE<i class="icon arrow circle right"></i></a>
+                    </div>
+                    <a target="_blank" class="ui icon right labeled red large button" href="https://app.uaparser.dev/api/restcountries">START BUILDING FOR FREE<i class="icon arrow circle right"></i></a>
                     
                 </div>
             </div>
@@ -1853,7 +1955,7 @@ Authorization: Bearer YOUR_API_KEY
                 </div>
             </div>
             <div class="ui center aligned basic segment">
-                <p>Copyright (c) 2012-2026 UAParser.js. Licensed under MIT / AGPLv3 / PRO licenses.</p>
+                <p>Copyright © 2012-2026 UAParser.js. Licensed under MIT / AGPLv3 / PRO licenses.</p>
             </div>
         </div>
     </div>
