@@ -172,6 +172,7 @@ export const BrowserName: Readonly<{
     WECHAT: 'WeChat',
     WEIBO: 'Weibo',
     WHALE: 'Whale',
+    WHATSAPP: 'WhatsApp',
     WOLVIC: 'Wolvic',
     YANDEX: 'Yandex',
     ZALO: 'Zalo'

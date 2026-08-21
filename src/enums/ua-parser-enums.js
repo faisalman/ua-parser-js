@@ -168,6 +168,7 @@ const BrowserName = Object.freeze({
     WECHAT: 'WeChat',
     WEIBO: 'Weibo',
     WHALE: 'Whale',
+    WHATSAPP: 'WhatsApp',
     WOLVIC: 'Wolvic',
     YANDEX: 'Yandex',
     ZALO: 'Zalo'
