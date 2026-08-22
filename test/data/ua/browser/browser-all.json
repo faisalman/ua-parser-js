@@ -2970,5 +2970,27 @@
             "major"   : "20",
             "type"    : "inapp"
         }
+    },
+    {
+        "desc"    : "WhatsApp on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 16; 2311DRK48G Build/BP2A.250605.031.A3; ) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/151.0.7922.83 Mobile Safari/537.36 WA4A/2.26.30.97",
+        "expect"  :
+        {
+            "name"    : "WhatsApp",
+            "version" : "2.26.30.97",
+            "major"   : "2",
+            "type"    : "inapp"
+        }
+    },
+    {
+        "desc"    : "WhatsApp on iOS",
+        "ua"      : "Mozilla/5.0 (iPhone; CPU iPhone OS 26_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6 Mobile/15E148 Safari/604.1 [WAiOS/2.26.31]",
+        "expect"  :
+        {
+            "name"    : "WhatsApp",
+            "version" : "2.26.31",
+            "major"   : "2",
+            "type"    : "inapp"
+        }
     }
 ]
