@@ -464,8 +464,6 @@
             /(bing)(?:web|sapphire)\/([\w\.]+)/i,                               // Bing
             /(instagram|snapchat|klarna)[\/ ]([-\w\.]+)/i                       // Instagram/Snapchat/Klarna
             ], [NAME, VERSION, [TYPE, INAPP]], [
-            /\bwa(?:4a|ios)[\/ ]([\w\.]+)/i                                     // WhatsApp App for iOS & Android
-            ], [VERSION, [NAME, 'WhatsApp'], [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
             /(?:musical_ly|trill)(?:.+app_?version\/|_)([\w\.]+)/i              // TikTok
