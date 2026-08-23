@@ -169,6 +169,158 @@ $(document)
 //    }
 
     $('.ui.rating').rating();
+
+    const showcaseUseCases = {
+        'https://github.com/microsoft/accessibility-insights-web': {
+            category: 'Compatibility',
+            description: 'Blocks unsupported browsers and selects the right extension adapter.'
+        },
+        'https://github.com/httptoolkit/httptoolkit-ui': {
+            category: 'Traffic inspection',
+            description: 'Identifies browsers, devices, and apps in intercepted requests.'
+        },
+        'https://github.com/gitpod-io/gitpod': {
+            category: 'Adaptive UI',
+            description: 'Links users to the right browser extension store.'
+        },
+        'https://github.com/aws/amazon-chime-sdk-js': {
+            category: 'Analytics',
+            description: 'Adds browser, OS, device, and engine data to SDK telemetry.'
+        },
+        'https://github.com/facebook/fbjs/tree/main/packages/fbjs': {
+            category: 'Compatibility',
+            description: 'Exposes browser, platform, engine, and device checks for feature gating.'
+        },
+        'https://github.com/pinterest/gestalt': {
+            category: 'Adaptive UI',
+            description: 'Renders the Gestalt docs for mobile or desktop.'
+        },
+        'https://github.com/Automattic/wp-calypso/tree/trunk/client': {
+            category: 'Logging',
+            description: 'Adds normalized browser details to request logs.'
+        },
+        'https://github.com/amplitude/Amplitude-JavaScript': {
+            category: 'Analytics',
+            description: 'Adds OS and browser data to analytics events.'
+        },
+        'https://github.com/optimizely/javascript-sdk': {
+            category: 'Analytics',
+            description: 'Adds OS and device data to Optimizely Data Platform events.'
+        },
+        'https://github.com/Shopify/quilt/tree/%40shopify/react-form%400.12.0/packages/browser': {
+            category: 'Adaptive UI',
+            description: 'Historically exposed browser and device helpers for adaptive UI.'
+        },
+        'https://github.com/Shopify/blockchain-components/tree/main/packages/connect-wallet': {
+            category: 'Compatibility',
+            description: 'Selects wallet links and Safari-specific navigation.'
+        },
+        'https://github.com/google/tachometer': {
+            category: 'Testing',
+            description: 'Labels benchmark results by browser and version.'
+        },
+        'https://github.com/vercel/next.js': {
+            category: 'Framework API',
+            description: 'Powers the userAgent API for Middleware and Edge requests.'
+        },
+        'https://github.com/ProtonMail/WebClients': {
+            category: 'Compatibility',
+            description: 'Adapts behavior by browser, OS, device, and desktop app.'
+        },
+        'https://github.com/mozilla/addons-frontend': {
+            category: 'Compatibility',
+            description: 'Gates add-on installs by Firefox platform and version.'
+        },
+        'https://github.com/livechat/emoji-keyboard': {
+            category: 'Adaptive UI',
+            description: 'Historically linked to OS-specific emoji guidance.'
+        },
+        'https://github.com/RocketChat/Rocket.Chat': {
+            category: 'Security & UI',
+            description: 'Supports compatibility checks, login alerts, and visitor details.'
+        },
+        'https://github.com/8thwall/8thwall': {
+            category: 'Compatibility',
+            description: 'Gates WebAR by device, browser, and in-app capabilities.'
+        },
+        'https://github.com/heremaps/harp.gl/tree/master/%40here/harp-test-utils': {
+            category: 'Testing',
+            description: 'Historically labeled visual baselines by browser and platform.'
+        },
+        'https://github.com/SalesforceCommerceCloud/pwa-kit/tree/v2.11.0': {
+            category: 'Adaptive UI',
+            description: 'Classifies devices for SSR rendering and cache keys.'
+        }
+    };
+    const showcaseCategoryColors = {
+        'Compatibility': 'orange',
+        'Traffic inspection': 'red',
+        'Adaptive UI': 'teal',
+        'Analytics': 'violet',
+        'Logging': 'grey',
+        'Testing': 'blue',
+        'Framework API': 'black',
+        'Security & UI': 'red',
+        'Attribution': 'olive',
+        'Historical': 'grey'
+    };
+    const attributionPattern = /(acknowledgements|credits|dependenc|legal-notices|licenses|open-source|third.party|thanks)/i;
+
+    $('#showcase .column').each(function () {
+        const $column = $(this);
+        const $image = $column.children('img');
+        const $popup = $column.children('.ui.popup');
+
+        if (!$image.length || !$popup.length) {
+            return;
+        }
+
+        const company = $image.attr('alt').replace(/ logo$/i, '');
+        const $list = $('<div class="ui relaxed divided list showcase-projects"></div>');
+
+        $popup.find('a').each(function () {
+            const $link = $(this);
+            const href = $link.attr('href');
+            const project = $link.text().replace(/\s+/g, ' ').trim();
+            const useCase = showcaseUseCases[href] || (attributionPattern.test(href) ? {
+                category: 'Attribution',
+                description: 'Its open-source notices confirm UAParser.js usage.'
+            } : {
+                category: 'Undocumented',
+                description: 'UAParser.js was found in this product.'
+            });
+            const color = showcaseCategoryColors[useCase.category] || '';
+            const $icon = $link.find('i').first().detach().addClass('large middle aligned');
+            const $content = $('<div class="content"></div>');
+            const $header = $('<div class="header"></div>').text(project);
+            const $description = $('<div class="description"></div>');
+            const $label = $('<span class="ui mini label"></span>')
+                .addClass(color)
+                .text(useCase.category);
+
+            if (useCase.category !== 'Attribution' && useCase.category !== 'Undocumented') {
+                $header.append($label);
+            }
+            if (useCase.description) {
+                $description.append(document.createTextNode(useCase.description));
+            }
+            $content.append($header, $description);
+            $link
+                .empty()
+                .removeClass()
+                .addClass('item')
+                .attr('rel', 'noopener')
+                .append($icon, $content);
+            $list.append($link);
+        });
+
+        $popup
+            .empty()
+            .addClass('inverted')
+            .append($('<div class="ui tiny header showcase-company"></div>').text(company))
+            .append($list);
+    });
+
     $('#showcase img').popup({
         inline: true,
         hoverable  : true,
