@@ -18,18 +18,18 @@ Thank you for your interest in contributing to UAParser.js! This document covers
 ## Getting Started
 
 1. Fork this repository and clone your fork:
-   ```bash
-   git clone https://github.com/<your-username>/ua-parser-js.git
-   cd ua-parser-js
-   ```
+```bash
+git clone https://github.com/<your-username>/ua-parser-js.git
+cd ua-parser-js
+```
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 3. Verify everything works before making changes:
-   ```bash
-   npm run build+test
-   ```
+```bash
+npm run build+test
+```
 
 ---
 
@@ -38,9 +38,9 @@ Thank you for your interest in contributing to UAParser.js! This document covers
 - Source files are under `/src` directory.
 - Test files are under `/test` directory.
 - After editing source files, rebuild the distribution bundles:
-  ```bash
-  npm run build
-  ```
+```bash
+npm run build
+```
 
 ### Adding New Detection Rules
 
@@ -51,9 +51,9 @@ When adding a new detection rule, make sure to also update the enums in `/src/en
 - Add patterns to the relevant section inside `/src/main/ua-parser.js` or `/src/extensions/ua-parser-extensions.js`.
 - Every new pattern must have a corresponding unit test.
 - Run `safe-regex` checks to confirm no new pattern introduces catastrophic backtracking by running:
-   ```bash
-   npm run test
-   ```
+```bash
+npm run test
+```
 - Keep in mind that UA strings are capped at 500 characters at parse time.
 
 ---
@@ -116,17 +116,22 @@ BREAKING CHANGE: getUA() has been renamed to getUserAgent() for clarity.
 ## Submitting a Pull Request
 
 1. Create a feature branch from `master`:
-   ```bash
-   git checkout -b fix/my-improvement
-   ```
+```bash
+git checkout -b fix/my-improvement
+```
 2. Make your changes, with tests.
 3. Run the full suite:
-   ```bash
-   npm run build+test
-   ```
-4. Push and open a Pull Request against `master`.
-5. Don't forget to check the CLA acknowledgement in the PR submission form.
-6. A maintainer will review your PR. Please be responsive to feedback.
+```bash
+npm run build+test
+```
+4. Do not commit generated files. This includes:
+   * Generated JS files under `/dist` directory
+   * Generated `.mjs` files
+   * Generated type declarations such as `/src/enums/ua-parser-enums.d.ts`
+   * And any file marked `DO NOT EDIT`.
+5. Push and open a Pull Request against `master`.
+6. Don't forget to check the CLA acknowledgement in the PR submission form.
+7. A maintainer will review your PR. Please be responsive to feedback.
 
 ---
 
