@@ -361,6 +361,10 @@ const Fetchers = Object.freeze({
 
 const InApps = Object.freeze({
     browser : [[
+        // ChatGPT
+        /\bcodex\/([\w\.]+).+electron\//i],
+        [VERSION, [NAME, 'ChatGPT'], [TYPE, INAPP]], [
+
         // Discord/Figma/Flipboard/Mattermost/Notion/Postman/Rambox/Rocket.Chat/Slack/Teams
         /\b(discord|figma|mattermost|notion|postman|rambox|rocket.chat|slack|teams)\/([\w\.]+).+(electron\/|; ios)/i,
         /(flipboard)\/([\w\.]+)/i

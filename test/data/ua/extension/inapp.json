@@ -1,5 +1,15 @@
 [
     {
+        "desc"    : "ChatGPT on Mac",
+        "ua"      : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Codex/26.513.31313 Chrome/148.0.7778.97 Electron/42.0.1 Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "ChatGPT",
+            "version" : "26.513.31313",
+            "type"    : "inapp"
+        }
+    },
+    {
         "desc"    : "Discord on Linux",
         "ua"      : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.26 Chrome/108.0.5359.215 Electron/22.3.2 Safari/537.36",
         "expect"  :
