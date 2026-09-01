@@ -782,6 +782,7 @@ const Extension = Object.freeze({
             ZOOMINFO_BOT: 'Zoombot'
         },
         InApp: {
+            CHATGPT: 'ChatGPT',
             DISCORD: 'Discord',
             EVERNOTE: 'Evernote',
             FIGMA: 'Figma',
