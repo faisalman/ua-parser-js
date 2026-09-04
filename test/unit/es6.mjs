@@ -4,14 +4,16 @@ import * as assert from 'assert';
 
 describe('Returns', () => {
     it('getResult() should returns object', () => {
-        assert.deepEqual(new UAParser('').getResult(), 
+        const emptyResult = new UAParser('').getResult();
+        assert.deepEqual(emptyResult,
             {
                 ua : '',
                 browser: { name: undefined, version: undefined, major: undefined, type: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},
-                os: { name: undefined, version: undefined }
+                os: { name: undefined, version: undefined },
+                fingerprint: emptyResult.fingerprint
         });
     });
 });
