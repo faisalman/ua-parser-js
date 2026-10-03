@@ -115,7 +115,10 @@
         SUFFIX_BROWSER = ' Browser',
 
         // os
-        WINDOWS     = 'Windows';
+        WINDOWS     = 'Windows',
+
+        // fingerprint
+        FINGERPRINT = 'fingerprint';
    
     var isWindow            = typeof window !== TYPEOF.UNDEFINED,
         NAVIGATOR           = (isWindow && window.navigator) ? 
@@ -211,6 +214,49 @@
         trim = function (str, len) {
             str = strip(/^\s\s*/, String(str));
             return typeof len === TYPEOF.UNDEFINED ? str : str.substring(0, len);
+        },
+        djb2 = function (str) {
+            var hash = 5381, i = 0;
+            str = String(str);
+            for (; i < str.length; i++) {
+                hash = ((hash << 5) + hash) ^ str.charCodeAt(i);
+            }
+            return hash >>> 0;
+        },
+        generateFingerprint = function (ua, result) {
+            var bar = '|', nav = NAVIGATOR, scr = isWindow && window.screen,
+                tz = '', plugins = '', i;
+
+            try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
+
+            if (nav && nav.plugins) {
+                var plist = [];
+                for (i = 0; i < nav.plugins.length; i++) { plist.push(nav.plugins[i].name); }
+                plugins = plist.join(',');
+            }
+
+            var key = [
+                ua,
+                result[BROWSER][NAME],
+                result[BROWSER][MAJOR],
+                result[CPU][ARCHITECTURE],
+                result[DEVICE][TYPE],
+                result[DEVICE][VENDOR],
+                result[DEVICE][MODEL],
+                result[ENGINE][NAME],
+                result[OS][NAME],
+                result[OS][VERSION],
+                scr  ? scr.width + 'x' + scr.height + 'x' + scr.colorDepth : '',
+                plugins,
+                isWindow && typeof window.localStorage  !== TYPEOF.UNDEFINED ? '1' : '0',
+                isWindow && typeof window.sessionStorage !== TYPEOF.UNDEFINED ? '1' : '0',
+                tz,
+                nav  ? nav.language       || '' : '',
+                nav  ? nav.systemLanguage || '' : '',
+                nav  && typeof nav.cookieEnabled !== TYPEOF.UNDEFINED ? (nav.cookieEnabled ? '1' : '0') : ''
+            ].join(bar);
+
+            return djb2(key);
     };
 
     ///////////////
@@ -1468,13 +1514,25 @@
             createItemFunc = function (itemType) {
                 if (itemType == RESULT) {
                     return function () {
+                        var browser = this.getBrowser(),
+                            cpu     = this.getCPU(),
+                            device  = this.getDevice(),
+                            engine  = this.getEngine(),
+                            os      = this.getOS();
                         return new UAItem(itemType, userAgent, regexMap, httpUACH)
                                     .set('ua', userAgent)
-                                    .set(BROWSER, this.getBrowser())
-                                    .set(CPU, this.getCPU())
-                                    .set(DEVICE, this.getDevice())
-                                    .set(ENGINE, this.getEngine())
-                                    .set(OS, this.getOS())
+                                    .set(BROWSER, browser)
+                                    .set(CPU, cpu)
+                                    .set(DEVICE, device)
+                                    .set(ENGINE, engine)
+                                    .set(OS, os)
+                                    .set(FINGERPRINT, generateFingerprint(userAgent, {
+                                        browser : browser,
+                                        cpu     : cpu,
+                                        device  : device,
+                                        engine  : engine,
+                                        os      : os
+                                    }))
                                     .get();
                     };
                 } else {
@@ -1494,6 +1552,7 @@
             ['getEngine', createItemFunc(ENGINE)],
             ['getOS', createItemFunc(OS)],
             ['getResult', createItemFunc(RESULT)],
+            ['getFingerprint', function () { return this.getResult()[FINGERPRINT]; }],
             ['getUA', function () { return userAgent; }],
             ['setUA', function (ua) {
                 if (isString(ua)) userAgent = trim(ua, UA_MAX_LENGTH);
