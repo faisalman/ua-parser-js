@@ -754,8 +754,8 @@ const Extension = Object.freeze({
             MICROSOFT_PREVIEW: 'MicrosoftPreview',
             MISTRALAI_USER: 'MistralAI-User',
             MOONSHOT_KIMI_USER: 'Kimi-User',
+            MOZ_ROGERBOT: 'rogerbot',
             NAVER_BLUENO: 'Blueno',
-            ONCRAWL_ROGERBOT: 'rogerbot',
             OPENAI_CHATGPT_USER: 'ChatGPT-User',
             PERPLEXITY_USER: 'Perplexity-User',
             PINTEREST_BOT: 'Pinterestbot',
@@ -785,7 +785,7 @@ const Extension = Object.freeze({
             YANDEX_SEARCHSHOP: 'YandexSearchShop',
             YANDEX_SITELINKS: 'YandexSitelinks',
             YANDEX_USERPROXY: 'YandexUserproxy',
-            ZOOMINFO_BOT: 'Zoombot'
+            ZOOM_BOT: 'Zoombot'
         },
         InApp: {
             CHATGPT: 'ChatGPT',
