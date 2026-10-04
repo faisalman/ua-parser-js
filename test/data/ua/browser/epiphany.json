@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Epiphany",
+        "ua": "Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.7) Gecko/20040628 Epiphany/1.2.6",
+        "expect": {
+            "name": "Epiphany",
+            "version": "1.2.6",
+            "major": "1"
+        }
+    }
+]

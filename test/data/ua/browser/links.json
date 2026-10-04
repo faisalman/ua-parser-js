@@ -1,0 +1,38 @@
+[
+    {
+        "desc": "Links in Linux",
+        "ua": "Links (2.xpre7; Linux 2.4.18 i586; x)",
+        "expect": {
+            "name": "Links",
+            "version": "2.xpre7",
+            "major": "2"
+        }
+    },
+    {
+        "desc": "Links in Mac",
+        "ua": "Links (2.1pre33; Darwin 8.11.0 Power Macintosh; 169x55)",
+        "expect": {
+            "name": "Links",
+            "version": "2.1pre33",
+            "major": "2"
+        }
+    },
+    {
+        "desc": "Links in NetBSD",
+        "ua": "Links (2.29; NetBSD 10.0 i386; GNU C 10.5; x)",
+        "expect": {
+            "name": "Links",
+            "version": "2.29",
+            "major": "2"
+        }
+    },
+    {
+        "desc": "Links in FreeBSD",
+        "ua": "Links (2.1pre15; FreeBSD 5.3-RELEASE i386; 196x84)",
+        "expect": {
+            "name": "Links",
+            "version": "2.1pre15",
+            "major": "2"
+        }
+    }
+]

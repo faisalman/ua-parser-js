@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Opera Mini",
+        "ua": "Opera/9.80 (J2ME/MIDP; Opera Mini/5.1.21214/19.916; U; en) Presto/2.5.25",
+        "expect": {
+            "name": "Opera Mini",
+            "version": "5.1.21214",
+            "major": "5"
+        }
+    },
+    {
+        "desc": "Opera Mini 8 above on iPhone",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) OPiOS/12.1.1.98980 Mobile/13C75 Safari/9537.53",
+        "expect": {
+            "name": "Opera Mini",
+            "version": "12.1.1.98980",
+            "major": "12"
+        }
+    }
+]

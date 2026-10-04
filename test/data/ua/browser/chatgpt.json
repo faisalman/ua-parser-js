@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "ChatGPT",
+        "ua": "ChatGPT/1.2024.348 (iOS 16.7.12; iPhone10,5; build 12643679358)",
+        "expect": {
+            "name": "ChatGPT",
+            "version": "1.2024.348",
+            "major": "1"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "NetFront",
+        "ua": "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
+        "expect": {
+            "name": "NetFront",
+            "version": "3.0",
+            "major": "3"
+        }
+    }
+]

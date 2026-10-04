@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Go Browser",
+        "ua": "NokiaE66/GoBrowser/2.0.297",
+        "expect": {
+            "name": "GoBrowser",
+            "version": "2.0.297",
+            "major": "2"
+        }
+    },
+    {
+        "desc": "GoBrowser",
+        "ua": "Nokia5700XpressMusic/GoBrowser/1.6.91",
+        "expect": {
+            "name": "GoBrowser",
+            "version": "1.6.91",
+            "major": "1"
+        }
+    }
+]

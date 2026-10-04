@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "w3m",
+        "ua": "w3m/0.5.1",
+        "expect": {
+            "name": "w3m",
+            "version": "0.5.1",
+            "major": "0"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "ICEBrowser",
+        "ua": "Mozilla/5.0 (Java 1.6.0_01; Windows XP 5.1 x86; en) ICEbrowser/v6_1_2",
+        "expect": {
+            "name": "ICEbrowser",
+            "version": "6.1.2",
+            "major": "6"
+        }
+    }
+]

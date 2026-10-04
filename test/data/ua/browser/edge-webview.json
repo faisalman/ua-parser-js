@@ -1,0 +1,12 @@
+[
+    {
+        "desc": "Microsoft Edge WebView",
+        "ua": "Mozilla/5.0 (Windows IoT 10.0; Android 6.0.1; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Mobile Safari/537.36 Edge/18.17763",
+        "expect": {
+            "name": "Edge WebView",
+            "version": "18.17763",
+            "major": "18",
+            "type": "inapp"
+        }
+    }
+]

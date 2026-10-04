@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "SlimBoat",
+        "ua": "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/534.34 (KHTML, like Gecko) SlimBoat/1.1.23 Chrome/11.0.696.7 Version/5.1 Safari/534.34",
+        "expect": {
+            "name": "SlimBoat",
+            "version": "1.1.23",
+            "major": "1"
+        }
+    }
+]

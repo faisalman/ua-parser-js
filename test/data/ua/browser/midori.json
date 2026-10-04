@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Midori",
+        "ua": "Midori/0.2.2 (X11; Linux i686; U; en-us) WebKit/531.2+",
+        "expect": {
+            "name": "Midori",
+            "version": "0.2.2",
+            "major": "0"
+        }
+    }
+]

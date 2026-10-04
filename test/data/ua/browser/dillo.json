@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Dillo",
+        "ua": "Dillo/2.2",
+        "expect": {
+            "name": "Dillo",
+            "version": "2.2",
+            "major": "2"
+        }
+    }
+]

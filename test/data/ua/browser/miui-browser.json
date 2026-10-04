@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "MIUI Browser on Xiaomi Hongmi WCDMA (HM2013023)",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.2.2; ru-ru; 2013023 Build/HM2013023) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30 XiaoMi/MiuiBrowser/1.0",
+        "expect": {
+            "name": "MIUI Browser",
+            "version": "1.0",
+            "major": "1"
+        }
+    }
+]

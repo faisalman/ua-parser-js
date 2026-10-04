@@ -1,0 +1,74 @@
+[
+    {
+        "desc": "UC Browser 15 on Android",
+        "ua": "Mozilla/5.0 (Linux; Android 16; en-US; SM-S918B Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.80 UCMobile/15.0.7.1383 Mobile Safari/537.36",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "15.0.7.1383",
+            "major": "15"
+        }
+    },
+    {
+        "desc": "UC Browser on Windows - Issue #811",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 UCPC/1.1.0.12",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "1.1.0.12",
+            "major": "1"
+        }
+    },
+    {
+        "desc": "UC Browser",
+        "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 UBrowser/5.6.12860.7 Safari/537.36",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "5.6.12860.7",
+            "major": "5"
+        }
+    },
+    {
+        "desc": "UC Browser",
+        "ua": "Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; Lenovo P2a42 Build/MMB29M) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.2.0.915 U3/0.8.0 Mobile Safari/534.30",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "11.2.0.915",
+            "major": "11"
+        }
+    },
+    {
+        "desc": "UC Browser on Samsung",
+        "ua": "Mozilla/5.0 (Java; U; Pt-br; samsung-gt-s5620) UCBrowser8.2.1.144/69/352/UCWEB Mobile UNTRUSTED/1.0",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "8.2.1.144",
+            "major": "8"
+        }
+    },
+    {
+        "desc": "UC Browser on Nokia",
+        "ua": "Mozilla/5.0 (S60V3; U; en-in; NokiaN73)/UC Browser8.4.0.159/28/351/UCWEB Mobile",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "8.4.0.159",
+            "major": "8"
+        }
+    },
+    {
+        "desc": "UC Browser J2ME",
+        "ua": "UCWEB/2.0 (MIDP-2.0; U; zh-CN; HTC EVO 3D X515m) U2/1.0.0 UCBrowser/10.4.0.558 U2/1.0.0 Mobile",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "10.4.0.558",
+            "major": "10"
+        }
+    },
+    {
+        "desc": "UC Browser J2ME 2",
+        "ua": "JUC (Linux; U; 2.3.5; zh-cn; GT-I9100; 480*800) UCWEB7.9.0.94/139/800",
+        "expect": {
+            "name": "UCBrowser",
+            "version": "7.9.0.94",
+            "major": "7"
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "Netscape on Windows ME",
+        "ua": "Mozilla/5.0 (Windows; U; Win 9x 4.90; en-US; rv:1.8.1.8pre) Gecko/20071015 Firefox/2.0.0.7 Navigator/9.0",
+        "expect": {
+            "name": "Netscape",
+            "version": "9.0",
+            "major": "9"
+        }
+    },
+    {
+        "desc": "Netscape on Windows 2000",
+        "ua": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.5) Gecko/20050519 Netscape/8.0.1",
+        "expect": {
+            "name": "Netscape",
+            "version": "8.0.1",
+            "major": "8"
+        }
+    },
+    {
+        "desc": "Netscape 6",
+        "ua": "Mozilla/5.0 (Windows; U; Win95; de-DE; rv:0.9.2) Gecko/20010726 Netscape6/6.1",
+        "expect": {
+            "name": "Netscape",
+            "version": "6.1",
+            "major": "6"
+        }
+    }
+]

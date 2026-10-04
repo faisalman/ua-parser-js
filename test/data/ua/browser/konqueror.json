@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Konqueror",
+        "ua": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux; X11; x86_64) KHTML/3.5.6 (like Gecko) (Kubuntu)",
+        "expect": {
+            "name": "Konqueror",
+            "version": "3.5",
+            "major": "3"
+        }
+    },
+    {
+        "desc": "Konqueror",
+        "ua": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) konqueror/5.0.97 Safari/534.34",
+        "expect": {
+            "name": "Konqueror",
+            "version": "5.0.97",
+            "major": "5"
+        }
+    }
+]

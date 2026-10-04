@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "NetSurf in Plan9",
+        "ua": "Mozilla/5.0 (Plan9) NetSurf/3.12",
+        "expect": {
+            "name": "NetSurf",
+            "version": "3.12",
+            "major": "3"
+        }
+    },
+    {
+        "desc": "NetSurf in Linux",
+        "ua": "NetSurf/3.10 (Linux; Arch Linux)",
+        "expect": {
+            "name": "NetSurf",
+            "version": "3.10",
+            "major": "3"
+        }
+    }
+]

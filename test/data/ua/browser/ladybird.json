@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Ladybird",
+        "ua": "Mozilla/5.0 (Linux; x86_64) Ladybird/1.0",
+        "expect": {
+            "name": "Ladybird",
+            "version": "1.0",
+            "major": "1"
+        }
+    }
+]

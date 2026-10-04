@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "iCab",
+        "ua": "iCab/2.9.5 (Macintosh; U; PPC; Mac OS X)",
+        "expect": {
+            "name": "iCab",
+            "version": "2.9.5",
+            "major": "2"
+        }
+    }
+]

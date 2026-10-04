@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "360 Browser on iOS",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/607.3.9 (KHTML, like Gecko) Mobile/16G102 QHBrowser/317 QihooBrowser/4.0.10",
+        "expect": {
+            "name": "360",
+            "version": "4.0.10",
+            "major": "4"
+        }
+    },
+    {
+        "desc": "360 Secure Browser on Windows 10",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 QIHU 360SE",
+        "expect": {
+            "name": "360",
+            "version": "86.0.4240.198",
+            "major": "86"
+        }
+    },
+    {
+        "desc": "360 Speed Browser on Windows 10",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 QIHU 360EE",
+        "expect": {
+            "name": "360",
+            "version": "86.0.4240.198",
+            "major": "86"
+        }
+    }
+]

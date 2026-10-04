@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "IceApe",
+        "ua": "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.19) Gecko/20110817 Iceape/2.0.14",
+        "expect": {
+            "name": "Iceape",
+            "version": "2.0.14",
+            "major": "2"
+        }
+    }
+]

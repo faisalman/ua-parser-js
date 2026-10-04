@@ -1,0 +1,56 @@
+[
+    {
+        "desc": "Chrome",
+        "ua": "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6",
+        "expect": {
+            "name": "Chrome",
+            "version": "20.0.1090.0",
+            "major": "20"
+        }
+    },
+    {
+        "desc": "Chrome",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4758.102 Safari/537.36",
+        "expect": {
+            "name": "Chrome",
+            "version": "100.0.4758.102",
+            "major": "100"
+        }
+    },
+    {
+        "desc": "Chrome 112.0 on Win10",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+        "expect": {
+            "name": "Chrome",
+            "version": "112.0.0.0",
+            "major": "112"
+        }
+    },
+    {
+        "desc": "Chrome 112.0 on macOS",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+        "expect": {
+            "name": "Chrome",
+            "version": "112.0.0.0",
+            "major": "112"
+        }
+    },
+    {
+        "desc": "Chrome 111.0 on Linux",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        "expect": {
+            "name": "Chrome",
+            "version": "111.0.0.0",
+            "major": "111"
+        }
+    },
+    {
+        "desc": "Chrome 111.0 on ChromeOS",
+        "ua": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        "expect": {
+            "name": "Chrome",
+            "version": "111.0.0.0",
+            "major": "111"
+        }
+    }
+]

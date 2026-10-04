@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Mozilla",
+        "ua": "Mozilla/5.0 (X11; U; SunOS sun4u; en-US; rv:1.7) Gecko/20070606",
+        "expect": {
+            "name": "Mozilla",
+            "version": "5.0",
+            "major": "5"
+        }
+    },
+    {
+        "desc": "Mozilla",
+        "ua": "Mozilla/2.02 [fr] (WinNT; I)",
+        "expect": {
+            "name": "Mozilla",
+            "version": "2.02",
+            "major": "2"
+        }
+    }
+]

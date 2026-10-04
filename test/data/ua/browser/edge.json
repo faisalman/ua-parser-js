@@ -1,0 +1,65 @@
+[
+    {
+        "desc": "Microsoft Edge 0.1",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0",
+        "expect": {
+            "name": "Edge",
+            "version": "12.0",
+            "major": "12"
+        }
+    },
+    {
+        "desc": "Microsoft Edge 42",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134",
+        "expect": {
+            "name": "Edge",
+            "version": "17.17134",
+            "major": "17"
+        }
+    },
+    {
+        "desc": "Microsoft Edge 44",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763",
+        "expect": {
+            "name": "Edge",
+            "version": "18.17763",
+            "major": "18"
+        }
+    },
+    {
+        "desc": "Microsoft Edge 100",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1108.55 Safari/537.36 Edg/100.0.1108.55",
+        "expect": {
+            "name": "Edge",
+            "version": "100.0.1108.55",
+            "major": "100"
+        }
+    },
+    {
+        "desc": "Microsoft Edge on iOS",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 EdgiOS/42.1.1.0 Mobile/15F79 Safari/605.1.15",
+        "expect": {
+            "name": "Edge",
+            "version": "42.1.1.0",
+            "major": "42"
+        }
+    },
+    {
+        "desc": "Microsoft Edge on Android",
+        "ua": "Mozilla/5.0 (Linux; Android 8.0.0; G8441 Build/47.1.A.12.270) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.123 Mobile Safari/537.36 EdgA/42.0.0.2529",
+        "expect": {
+            "name": "Edge",
+            "version": "42.0.0.2529",
+            "major": "42"
+        }
+    },
+    {
+        "desc": "Microsoft Edge Chromium",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.48 Safari/537.36 Edg/74.1.96.24",
+        "expect": {
+            "name": "Edge",
+            "version": "74.1.96.24",
+            "major": "74"
+        }
+    }
+]

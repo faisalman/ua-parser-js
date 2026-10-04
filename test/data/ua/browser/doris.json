@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Doris",
+        "ua": "Doris/1.15 [en] (Symbian)",
+        "expect": {
+            "name": "Doris",
+            "version": "1.15",
+            "major": "1"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "IceCat",
+        "ua": "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008092921 IceCat/3.0.3-g1",
+        "expect": {
+            "name": "IceCat",
+            "version": "3.0.3-g1",
+            "major": "3"
+        }
+    }
+]

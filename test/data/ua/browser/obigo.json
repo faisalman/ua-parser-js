@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Obigo",
+        "ua": "LG-GS290/V100 Obigo/WAP2.0 Profile/MIDP-2.1 Configuration/CLDC-1.1",
+        "expect": {
+            "name": "Obigo",
+            "version": "WAP2.0",
+            "major": "2"
+        }
+    },
+    {
+        "desc": "Obigo",
+        "ua": "LG/KU990i/v10a Browser/Obigo-Q05A/3.6 MMS/LG-MMS-V1.0/1.2 Java/ASVM/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+        "expect": {
+            "name": "Obigo",
+            "version": "Q05A",
+            "major": "05"
+        }
+    }
+]

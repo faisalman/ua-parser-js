@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Tizen Browser",
+        "ua": "Mozilla/5.0 (Linux; U; Tizen/1.0 like Android; en-us; AppleWebKit/534.46 (KHTML, like Gecko) Tizen Browser/1.0 Mobile",
+        "expect": {
+            "name": "Tizen Browser",
+            "version": "1.0",
+            "major": "1"
+        }
+    }
+]

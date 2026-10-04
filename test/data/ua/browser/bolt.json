@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Bolt",
+        "ua": "Mozilla/5.0 (X11; 78; CentOS; US-en) AppleWebKit/527+ (KHTML, like Gecko) Bolt/0.862 Version/3.0 Safari/523.15",
+        "expect": {
+            "name": "Bolt",
+            "version": "0.862",
+            "major": "0"
+        }
+    }
+]

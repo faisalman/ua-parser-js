@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "OmniWeb",
+        "ua": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US) AppleWebKit/85 (KHTML, like Gecko) OmniWeb/v558.48",
+        "expect": {
+            "name": "OmniWeb",
+            "version": "558.48",
+            "major": "558"
+        }
+    }
+]

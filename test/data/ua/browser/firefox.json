@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "Firefox",
+        "ua": "Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20120716 Firefox/15.0a2",
+        "expect": {
+            "name": "Firefox",
+            "version": "15.0a2",
+            "major": "15"
+        }
+    },
+    {
+        "desc": "Firefox",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0",
+        "expect": {
+            "name": "Firefox",
+            "version": "100.0",
+            "major": "100"
+        }
+    },
+    {
+        "desc": "Firefox-based browser",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0 AppName/1.0",
+        "expect": {
+            "name": "Firefox",
+            "version": "80.0",
+            "major": "80"
+        }
+    }
+]

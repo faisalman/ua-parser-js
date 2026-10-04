@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Opera Tablet",
+        "ua": "Opera/9.80 (Windows NT 6.1; Opera Tablet/15165; U; en) Presto/2.8.149 Version/11.1",
+        "expect": {
+            "name": "Opera Tablet",
+            "version": "11.1",
+            "major": "11"
+        }
+    }
+]

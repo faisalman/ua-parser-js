@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Whale Browser",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.146 Whale/2.6.90.14 Safari/537.36",
+        "expect": {
+            "name": "Whale",
+            "version": "2.6.90.14",
+            "major": "2"
+        }
+    }
+]

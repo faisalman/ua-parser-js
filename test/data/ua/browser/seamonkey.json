@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "SeaMonkey",
+        "ua": "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1b4pre) Gecko/20090405 SeaMonkey/2.0b1pre",
+        "expect": {
+            "name": "SeaMonkey",
+            "version": "2.0b1pre",
+            "major": "2"
+        }
+    },
+    {
+        "desc": "SeaMonkey on Mac",
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1",
+        "expect": {
+            "name": "SeaMonkey",
+            "version": "2.7.1",
+            "major": "2"
+        }
+    }
+]

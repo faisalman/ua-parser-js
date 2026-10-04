@@ -1,0 +1,11 @@
+[
+    {
+        "desc": "Aloha",
+        "ua": "Mozilla/5.0 (iPad; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Version/19.0 Safari/605.1.15 AlohaBrowser/7.5.1",
+        "expect": {
+            "name": "Aloha",
+            "version": "7.5.1",
+            "major": "7"
+        }
+    }
+]
