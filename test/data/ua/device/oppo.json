@@ -90,6 +90,15 @@
         }
     },
     {
+        "desc": "OPPO Reno7 5G",
+        "ua": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; PFJM10 Build/RKQ1.211119.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.92 Mobile Safari/537.36 HeyTapBrowser/40.8.9.1",
+        "expect": {
+            "vendor": "OPPO",
+            "model": "PFJM10",
+            "type": "mobile"
+        }
+    },
+    {
         "desc": "OPPO Reno5 A",
         "ua": "Mozilla/5.0 (Linux; Android 11; A101OP) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36",
         "expect": {

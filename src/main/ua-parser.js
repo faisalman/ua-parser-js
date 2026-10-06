@@ -631,7 +631,7 @@
 
             // OPPO
             /; (\w+) bui.+ oppo/i,
-            /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i
+            /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar]|f\w)[mt]\d0|x9007|a101op)\b/i
             ], [MODEL, [VENDOR, OPPO], [TYPE, MOBILE]], [
             /\b(opd2(\d{3}a?))(?: bui|\))/i
             ], [MODEL, [VENDOR, strMapper, { 'OnePlus' : ['203', '304', '403', '404', '413', '415'], '*' : OPPO }], [TYPE, TABLET]], [
