@@ -2131,6 +2131,16 @@
         }
     },
     {
+        "desc"    : "UC Browser 15 on Android",
+        "ua"      : "Mozilla/5.0 (Linux; Android 16; en-US; SM-S918B Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.80 UCMobile/15.0.7.1383 Mobile Safari/537.36",
+        "expect"  :
+        {
+            "name"    : "UCBrowser",
+            "version" : "15.0.7.1383",
+            "major"   : "15"
+        }
+    },
+    {
         "desc"    : "UC Browser",
         "ua"      : "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 UBrowser/5.6.12860.7 Safari/537.36",
         "expect"  :
