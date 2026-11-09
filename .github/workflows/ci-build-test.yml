@@ -8,7 +8,7 @@ permissions:
 jobs:
   run-test:
     name: "CI: Build & Test"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     strategy:
       matrix:
@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         timeout-minutes: 10
         run: |
-          echo "Running on ubuntu-latest-${{ matrix.arch }} with node version set as ${{ matrix.node-version }}"
+          echo "Running on ubuntu-24.04-${{ matrix.arch }} with node version set as ${{ matrix.node-version }}"
           npm ci
       - name: Install Playwright browsers
         timeout-minutes: 10
