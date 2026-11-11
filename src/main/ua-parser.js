@@ -1338,6 +1338,9 @@
                                 brandName = strMapper(brandName, browserHintsMap);
                                 prevName = this.get(NAME);
                                 if (!(prevName && !/Chrom/.test(prevName) && /Chrom/.test(brandName))) {
+                                    if (brandName == CHROME && uaCH[MOBILE]) {
+                                        brandName = PREFIX_MOBILE + CHROME;
+                                    }
                                     this.set(NAME, brandName)
                                         .set(VERSION, brandVersion)
                                         .set(MAJOR, majorize(brandVersion));

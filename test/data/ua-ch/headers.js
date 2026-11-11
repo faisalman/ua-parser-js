@@ -1,5 +1,22 @@
 const UACHTests = [
     {
+        desc: 'Mobile Chrome on Android keeps "Mobile" prefix - Issue #849',
+        headers : {
+            'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36',
+            'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+            'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-platform': '"Android"'
+        },
+        expect: {
+            browser : {
+                name : 'Mobile Chrome',
+                version : '142',
+                major : '142',
+                type : undefined
+            }
+        }
+    },
+    {
         desc: 'Avast Secure Browser',
         headers : {
             'sec-ch-ua': '"Avast Secure Browser";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
