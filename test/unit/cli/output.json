@@ -12,7 +12,8 @@
     "os": {
         "name": "Windows",
         "version": "Vista"
-    }
+    },
+    "fingerprint": 876954392
 },
 {
     "ua": "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)",
@@ -27,6 +28,7 @@
     "os": {
         "name": "Windows",
         "version": "NT"
-    }
+    },
+    "fingerprint": 1820266961
 }
 ]

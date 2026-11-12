@@ -136,6 +136,37 @@ test.describe('withFeatureCheck() tests', () => {
     });
 });
 
+test.describe('fingerprint tests', () => {
+
+    test('fingerprint is an unsigned 32-bit integer', async ({ page }) => {
+        await page.goto(localHtml);
+        // @ts-ignore
+        const fp = await page.evaluate(() => UAParser().fingerprint);
+        expect(typeof fp).toBe('number');
+        expect(fp).toBeGreaterThanOrEqual(0);
+        expect(fp).toBeLessThanOrEqual(0xffffffff);
+    });
+
+    test('fingerprint is stable across calls in the same browser context', async ({ page }) => {
+        await page.goto(localHtml);
+        // @ts-ignore
+        const [fp1, fp2] = await page.evaluate(() => [UAParser().fingerprint, UAParser().fingerprint]);
+        expect(fp1).toBe(fp2);
+    });
+
+    test('fingerprint changes when browser language signal differs', async ({ browser }) => {
+        const pageA = await (await browser.newContext({ locale: 'en-US' })).newPage();
+        const pageB = await (await browser.newContext({ locale: 'fr-FR' })).newPage();
+        await pageA.goto(localHtml);
+        await pageB.goto(localHtml);
+        // @ts-ignore
+        const fpA = await pageA.evaluate(() => UAParser().fingerprint);
+        // @ts-ignore
+        const fpB = await pageB.evaluate(() => UAParser().fingerprint);
+        expect(fpA).not.toBe(fpB);
+    });
+});
+
 test.describe('request.headers can be passed in form of a Headers object', () => {
 
     test('Headers automatically converted into a plain key-value object', async ({ page }) => {

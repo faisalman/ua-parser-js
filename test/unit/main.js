@@ -89,14 +89,16 @@ describe('UAParser get*() methods', () => {
 
 describe('Returns', function () {
     it('getResult() should returns JSON', function(done) {
-        assert.deepEqual(new UAParser('').getResult(), 
+        var emptyResult = new UAParser('').getResult();
+        assert.deepEqual(emptyResult,
             {
                 ua : '',
                 browser: { name: undefined, version: undefined, major: undefined, type: undefined },
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},
-                os: { name: undefined, version: undefined }
+                os: { name: undefined, version: undefined },
+                fingerprint: emptyResult.fingerprint
         });
         done();
     });
@@ -124,12 +126,48 @@ describe('Returns', function () {
                 cpu: { architecture: undefined },
                 device: { vendor: undefined, model: undefined, type: undefined },
                 engine: { name: undefined, version: undefined},
-                os: { name: undefined, version: undefined }
+                os: { name: undefined, version: undefined },
+                fingerprint: result.fingerprint
         });
         done();
     });
 });
 
+
+describe('getFingerprint()', function () {
+    const ua1 = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+    const ua2 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
+
+    it('should return a number', function () {
+        assert.strictEqual(typeof new UAParser(ua1).getFingerprint(), 'number');
+    });
+
+    it('should return an unsigned 32-bit integer', function () {
+        const fp = new UAParser(ua1).getFingerprint();
+        assert.ok(fp >= 0 && fp <= 0xffffffff);
+    });
+
+    it('should be deterministic — same UA produces same fingerprint', function () {
+        const parser = new UAParser(ua1);
+        assert.strictEqual(parser.getFingerprint(), parser.getFingerprint());
+    });
+
+    it('should differ for different user-agent strings', function () {
+        assert.notStrictEqual(new UAParser(ua1).getFingerprint(), new UAParser(ua2).getFingerprint());
+    });
+
+    it('should match getResult().fingerprint', function () {
+        const parser = new UAParser(ua1);
+        assert.strictEqual(parser.getFingerprint(), parser.getResult().fingerprint);
+    });
+
+    it('should update after setUA()', function () {
+        const parser = new UAParser(ua1);
+        const fp1 = parser.getFingerprint();
+        parser.setUA(ua2);
+        assert.notStrictEqual(parser.getFingerprint(), fp1);
+    });
+});
 
 describe('useExtension()', () => {
     
