@@ -770,7 +770,7 @@
 
             // Archos
             /; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i,
-            /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i
+            /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d[\w ]*)( b|\))/i
             ], [MODEL, [VENDOR, 'Archos'], [TYPE, TABLET]], [
             /archos ([\w ]+)( b|\))/i,
             /; (ac[3-6]\d\w{2,8})( b|\))/i 
