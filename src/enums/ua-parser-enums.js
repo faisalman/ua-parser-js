@@ -23,6 +23,7 @@ const BrowserName = Object.freeze({
     AVIRA: 'Avira Secure Browser',
     BAIDU: 'Baidu',
     BASILISK: 'Basilisk',
+    BERTINA: 'Bertina',
     BING: 'Bing',
     BLAZER: 'Blazer',
     BOLT: 'Bolt',
