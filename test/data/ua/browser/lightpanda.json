@@ -1,0 +1,20 @@
+[
+    {
+        "desc": "Lightpanda",
+        "ua": "Lightpanda/1.0",
+        "expect": {
+            "name": "Lightpanda",
+            "version": "1.0",
+            "major": "1"
+        }
+    },
+    {
+        "desc": "Lightpanda with custom suffix",
+        "ua": "Lightpanda/1.0 MyBot/2.1",
+        "expect": {
+            "name": "Lightpanda",
+            "version": "1.0",
+            "major": "1"
+        }
+    }
+]

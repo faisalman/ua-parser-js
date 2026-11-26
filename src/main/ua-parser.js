@@ -483,6 +483,9 @@
             /headlesschrome(?:\/([\w\.]+)| )/i                                  // Chrome Headless
             ], [VERSION, [NAME, CHROME+' Headless']], [
 
+            /(lightpanda)\/([\w\.]+)/i                                          // Lightpanda
+            ], [NAME, VERSION], [
+
             /wv\).+chrome\/([\w\.]+).+edgw\//i                                  // Edge WebView2
             ], [VERSION, [NAME, EDGE+' WebView2'], [TYPE, INAPP]], [
 
@@ -958,6 +961,9 @@
             ], [VERSION, [NAME, EDGE+'HTML']], [
 
             /(arkweb)\/([\w\.]+)/i                                              // ArkWeb
+            ], [NAME, VERSION], [
+
+            /(lightpanda)\/([\w\.]+)/i                                          // Lightpanda
             ], [NAME, VERSION], [
 
             /webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i                         // Blink

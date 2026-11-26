@@ -90,6 +90,24 @@
         }
     },
     {
+        "desc"    : "Lightpanda",
+        "ua"      : "Lightpanda/1.0",
+        "expect"  :
+        {
+            "name"    : "Lightpanda",
+            "version" : "1.0"
+        }
+    },
+    {
+        "desc"    : "Lightpanda with custom suffix",
+        "ua"      : "Lightpanda/1.0 MyBot/2.1",
+        "expect"  :
+        {
+            "name"    : "Lightpanda",
+            "version" : "1.0"
+        }
+    },
+    {
         "desc"    : "NetFront",
         "ua"      : "Mozilla/4.0 (PDA; Windows CE/1.0.1) NetFront/3.0",
         "expect"  :
