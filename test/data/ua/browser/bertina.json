@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "Bertina Browser on Linux",
+        "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Bertina/158.0.0.0 Safari/537.36",
+        "expect": {
+            "name": "Bertina",
+            "version": "158.0.0.0",
+            "major": "158"
+        }
+    },
+    {
+        "desc": "Bertina Browser on Windows",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Bertina/158.0.0.0 Safari/537.36",
+        "expect": {
+            "name": "Bertina",
+            "version": "158.0.0.0",
+            "major": "158"
+        }
+    },
+    {
+        "desc": "Bertina Browser on Android",
+        "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Bertina/158.0.0.0 Mobile Safari/537.36",
+        "expect": {
+            "name": "Bertina",
+            "version": "158.0.0.0",
+            "major": "158"
+        }
+    }
+]
