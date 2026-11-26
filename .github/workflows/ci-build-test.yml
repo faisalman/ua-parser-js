@@ -9,7 +9,7 @@ jobs:
   run-test:
     name: "CI: Build & Test"
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 45
     strategy:
       matrix:
         arch: [amd64]
@@ -36,7 +36,7 @@ jobs:
           echo "Running on ubuntu-24.04-${{ matrix.arch }} with node version set as ${{ matrix.node-version }}"
           npm ci
       - name: Install Playwright browsers
-        timeout-minutes: 10
+        timeout-minutes: 20
         run: npx playwright install --with-deps
       - name: Run the test suite
         timeout-minutes: 10
