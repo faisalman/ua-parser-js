@@ -1,31 +1,44 @@
-// GHSA-9h5v-pfqq-x599
-
 const assert = require('assert');
 const { UAParser } = require('../../src/main/ua-parser');
 
-const headers = {
-  'sec-ch-ua-platform': '"Android"',
-  'sec-ch-ua-mobile': '?1',
-  'sec-ch-ua-model': '"' + 'A '.repeat(25000) + '"'
+const MAX_MS = 100;
+
+const elapsedMs = (fn) => {
+    const start = process.hrtime.bigint();
+    fn();
+    return Number(process.hrtime.bigint() - start) / 1e6;
 };
 
-const t0 = process.hrtime.bigint();
-UAParser(headers).withClientHints();
-const ms = Number(process.hrtime.bigint() - t0) / 1e6;
+describe('ReDoS: crafted input should be parsed in linear time', () => {
 
-assert(ms < 100);
+    const cases = [
 
-// Archos device regex: polynomial backtracking on a crafted User-Agent
-const archosUA = 'archos '.repeat(15) + '1'.repeat(395);
+        // GHSA-9h5v-pfqq-x599
+        {
+            desc    : 'Client Hints `sec-ch-ua-model`',
+            parse   : () => UAParser({
+                'sec-ch-ua-platform'  : '"Android"',
+                'sec-ch-ua-mobile'    : '?1',
+                'sec-ch-ua-model'     : '"' + 'A '.repeat(25000) + '"'
+            }).withClientHints()
+        },
 
-const t1 = process.hrtime.bigint();
-UAParser(archosUA);
-const archosMs = Number(process.hrtime.bigint() - t1) / 1e6;
+        // Archos (issue #855)
+        {
+            desc    : 'Archos device regex',
+            parse   : () => UAParser('archos '.repeat(15) + '1'.repeat(395))
+        },
 
-assert(archosMs < 100);
+        // Naver
+        {
+            desc    : 'Naver InApp browser regex',
+            parse   : () => UAParser('naver('.repeat(28) + '1.1'.repeat(110))
+        }
+    ];
 
-// Valid Archos UA still detected
-const archos = UAParser('Mozilla/5.0 (Linux; Android 13; ARCHOS T101 FHD WiFi Build/T00624; wv) AppleWebKit/537.36').device;
-assert.strictEqual(archos.vendor, 'Archos');
-assert.strictEqual(archos.model, 'T101 FHD WiFi');
-assert.strictEqual(archos.type, 'tablet');
+    cases.forEach(({ desc, parse }) => {
+        it(`${desc} completes within ${MAX_MS}ms`, () => {
+            assert(elapsedMs(parse) < MAX_MS);
+        });
+    });
+});

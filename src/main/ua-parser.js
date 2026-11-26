@@ -455,7 +455,7 @@
             ], [[NAME, FACEBOOK], VERSION, [TYPE, INAPP]], [
                                                                                 // ChatGPT/Instagram/Kakao/Klarna/Snapchat
             /(^chatgpt|instagram|kakao(?:talk|story)|klarna|snapchat)[\/ ]([-\w\.]+)/i,
-            /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,                                  // Naver InApp
+            /(naver)\([^)]*?\b(\d+\.[\w\.]+)/i,                                 // Naver InApp
             /(daum)apps[\/ ]([\w\.]+)/i,                                        // Daum App
             /safari (line)\/([\w\.]+)/i,                                        // Line App for iOS
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
