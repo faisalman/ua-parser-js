@@ -142,6 +142,12 @@ const Crawlers = Object.freeze({
         [NAME, VERSION, [TYPE, CRAWLER]],
 
         [
+            // CookieRocksBot - https://cookierocks.com/bot/
+            /(cookierocksbot)\/([\w\.]+)/i
+        ],
+        [NAME, VERSION, [TYPE, CRAWLER]],
+
+        [
             // Headline - https://headline.com/legal/crawler
             /(ev-crawler)\/([\w\.]+)/i
         ],

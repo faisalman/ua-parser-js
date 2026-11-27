@@ -520,6 +520,16 @@
         }
     },
     {
+        "desc"    : "CookieRocksBot",
+        "ua"      : "CookieRocksBot/1.0 (+https://cookierocks.com/bot/)",
+        "expect"  :
+        {
+            "name"    : "CookieRocksBot",
+            "version" : "1.0",
+            "type"    : "crawler"
+        }
+    },
+    {
         "desc"    : "Cotoyogi",
         "ua"      : "Mozilla/5.0 (compatible; Cotoyogi/4.0; +https://ds.rois.ac.jp/center8/crawler/)",
         "expect"  :
